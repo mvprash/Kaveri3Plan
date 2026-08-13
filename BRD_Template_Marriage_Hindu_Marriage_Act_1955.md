@@ -24,7 +24,8 @@
 | Version | Date | Author | Summary of change | Approver |
 |---------|------|--------|-------------------|----------|
 | 0.1 | [Date] | [BA] | Initial template / discovery draft | [PO] |
-| | | | | |
+| 0.2 | [Date] | [BA] | Added detailed non-functional requirements (§13.1–13.11) | [PO] |
+| 0.3 | [Date] | [BA] | **Aligned To-Be process with approved Hindu Marriage Online & Offline process diagrams** — channel model, eSign, appointment, printout, DEO role, two-stage SR verification, payment-after-approval (§4, §5, §7, §8.14–8.19, §9, §10, §11, §12, §13, §15, §16) | [PO] |
 
 **Distribution:** [Confluence space / SharePoint link]
 
@@ -34,7 +35,7 @@
 |----|--------|------|
 | BRD-K3-MRG-HMA-001 | This document | |
 | PROC-K3-MRG-HMA-ASIS-001 | As-Is process (Hindu registration) | [TBD] |
-| PROC-K3-MRG-HMA-TOBE-001 | To-Be process flows | [TBD] |
+| PROC-K3-MRG-HMA-TOBE-001 | To-Be process flows | `ProcessDiagrams/Hindu_Marriage_Online.png`, `ProcessDiagrams/Hindu_Marriage_Offline.png` |
 | RTM-K3-MRG-HMA-001 | Requirements traceability matrix | [TBD] |
 | DEC-K3-MRG-001 | Decision log | [TBD] |
 | BRD-K3-MRG-SMA-001 | Special Marriage (separate BRD) | Out of scope for this template unless merged |
@@ -64,6 +65,7 @@
 - Jurisdiction: marriage place **or** ordinary residence of bride/bridegroom (per Karnataka Rule 4, as amended).
 - Parties: bride, bridegroom, **three witnesses** (memorandum signed by three witnesses per Rule 4(3)).
 - Citizen portal + SRO desk workflows: apply, pay fee, scrutiny, approve/reject, register, issue certificate, reprint/corrected extract (per rules).
+- **Two processing channels per approved process diagrams (§7):** *Hindu Marriage Online* (citizen eSign, single SR verification) and *Hindu Marriage Offline* (payment + appointment, printout of Form I / II / 1A, physical signature, Data Entry Operator upload, two-stage SR verification).
 - Integrations: [payment, Aadhaar/eKYC, DigiLocker, SMS — mark TBD per PO].
 - Bilingual UI: English + Kannada (labels, certificate text where mandated).
 - Audit trail, role-based access, MIS/reporting for department.
@@ -152,19 +154,22 @@
 
 ## 4. Stakeholders and actors
 
-| Actor | Description | Primary goals | Channels |
-|-------|-------------|---------------|----------|
-| Citizen (applicant) | Bride and/or bridegroom | Submit accurate application, pay fee, receive certificate | Web portal / mobile [TBD] |
-| Bride / Bridegroom | Parties to marriage | Sign declarations, provide documents | Portal / SRO counter |
-| Witness (×3) | Present at solemnization | Identity, address, signature on memorandum | Portal e-KYC [TBD] / counter |
-| Marriage Registrar / Sub-Registrar | Statutory registrar | Scrutiny, register, endorse, refuse with order | SRO desk |
-| IGSR / senior office | Oversight | Monitoring, escalations | Admin console |
-| Treasury / payment gateway | Fee collection | Reconciliation | Integration |
-| Registrar-General | State-level register | Receive Form III duplicates | Batch/export |
+| Actor | Description | Primary goals | Channel involvement |
+|-------|-------------|---------------|---------------------|
+| Citizen (applicant) | Bride and/or bridegroom | Submit accurate application, pay fee, receive certificate | Online + Offline (portal login is common to both) |
+| Bride / Bridegroom | Parties to marriage | Sign declarations, provide documents | Online: eSign; Offline: physical signature on printed Form I / II / 1A |
+| Witness (×3) | Present at solemnization | Identity, address, signature on memorandum | Online: eSign / e-KYC [TBD]; Offline: physical signature |
+| Marriage Registrar / Sub-Registrar (SR) | Statutory registrar | Verification, register, digital signature, refuse with order | Online: single verification; Offline: **two** verification stages |
+| **Data Entry Operator (DEO)** | SRO-office operator handling physically signed forms | Check signatures on printed Form I / II / 1A and upload to portal | **Offline only** |
+| Appointment / front-office desk | Slot management at SRO | Schedule and manage citizen visit | Offline only |
+| IGSR / senior office | Oversight | Monitoring, escalations | Both |
+| Treasury / payment gateway | Fee collection | Reconciliation | Both (payment triggered after first SR approval) |
+| eSign / DSC service provider | Digital signing | Citizen eSign (online), SR digital signature (both) | Both |
+| Registrar-General | State-level register | Receive Form III duplicates | Both (batch/export) |
 | Domain Expert | Validation | Sign-off on rules and forms | Review workshops |
 | CSG / Kaveri 2.0 support | Legacy reference | As-is behaviour | KT sessions |
 
-**RACI (summary):** [TBD matrix for key process steps]
+**RACI (summary):** [TBD matrix for key process steps — must now cover DEO upload and the two-stage SR verification in the Offline channel]
 
 ---
 
@@ -178,7 +183,15 @@
 | Solemnization | Performance of customary rites (Section 7) | HMA 1955 |
 | Ordinary residence | [Define operational rule for jurisdiction] | DE / Rule 4 |
 | Sapinda / prohibited relationship | As Section 3 | HMA 1955 |
-| [TBD] | | |
+| **Prerequisite page** | Mandatory read-and-continue screen listing eligibility, documents and channel implications before application entry | Process diagram (both channels) |
+| **Hindu Marriage Online** | Channel where declarations and Form 1A are submitted with **citizen eSign**; no physical form submission | `ProcessDiagrams/Hindu_Marriage_Online.png` |
+| **Hindu Marriage Offline** | Channel where the portal captures data, citizen takes **printout of Form I, II and 1A**, signs physically, and DEO uploads at the SRO | `ProcessDiagrams/Hindu_Marriage_Offline.png` |
+| **eSign** | Electronic signature applied by citizen on Form 1A / declarations in the Online channel | Process diagram; legal validity per OQ-002 |
+| **SR digital signature (DSC)** | Digital signature applied by Sub-Registrar before certificate issuance (both channels) | Process diagram |
+| **SR Verification** | Sub-Registrar scrutiny decision (Approve / Reject). Offline has **two** occurrences: pre-payment data verification and post-upload signed-form verification | Process diagram |
+| **Data Entry Operator (DEO)** | SRO-office role that checks signatures on the printed forms and uploads them to the portal (Offline only) | Process diagram (Offline swimlane) |
+| **Appointment** | Scheduled SRO visit slot booked by the citizen together with payment in the Offline channel | Process diagram (Offline) |
+| **Channel** | Online or Offline processing route chosen by the citizen after the prerequisite page | Process diagram |
 
 ---
 
@@ -209,43 +222,128 @@
 
 ## 7. Future state (To-Be)
 
-### 7.1 To-Be process overview
+> **Source of truth for this section:** approved process diagrams  
+> `ProcessDiagrams/Hindu_Marriage_Online.png` and `ProcessDiagrams/Hindu_Marriage_Offline.png`.  
+> Swimlanes in the diagrams are **Citizens**, **System**, **Sub Registrar**, and (Offline only) **Data Entry Operator**.
 
-**Happy path (MVP):**
+### 7.1 Channel model
 
-1. Citizen selects **Hindu Marriage Registration** (post-solemnization).
-2. Declarations (Section 5, 7, 8 / Form IA text).
-3. Capture marriage details (date, place, jurisdiction).
-4. Capture bride, bridegroom, three witnesses.
-5. Upload documents (joint photo, age proof, address, [TBD]).
-6. Pay statutory fee → receipt (Form VI equivalent).
-7. Application routed to **Registrar** for jurisdiction.
-8. SRO **scrutinises**; may request correction; may **refuse** with brief written order (Rule 4).
-9. On approval: assign **serial no. / page / volume**; generate **Form II** endorsement; update register; issue **Form II-A**.
-10. Citizen downloads certificate; optional certified extract request later (Rule 8).
+After logging in and reading the prerequisite page, the citizen chooses one of **two channels**. Both channels share the same intake steps and both end with an SR digital signature and certificate issuance; they differ in **how signatures are obtained** and **how many SR verification stages** occur.
 
-**Diagram:** [Insert To-Be BPMN]
+| Channel | Signature method | SR verification stages | Physical visit | DEO involved | MVP? |
+|---------|------------------|------------------------|----------------|--------------|------|
+| **Hindu Marriage Online** | Citizen **eSign** on Form 1A / declarations | 1 | No | No | Yes |
+| **Hindu Marriage Offline** | **Physical signature** on printed Form I, II & 1A | 2 (data, then signed forms) | Yes — scheduled appointment | Yes (checks signature, uploads) | Yes |
 
-### 7.2 Application channels
+**Channel selection is a fork, not a fallback:** the diagrams show a single decision point after the prerequisite screen. Switching channel after selection is **[TBD — PO decision, see OQ-005]**.
 
-| Channel | Description | MVP? |
-|---------|-------------|------|
-| Online (citizen self-service) | Full digital flow | Yes [TBD] |
-| SRO-assisted (counter) | Data entry on behalf of citizen | [TBD] |
-| Hybrid | Online apply + physical document verification | [TBD] |
+### 7.2 Common intake steps (both channels)
 
-### 7.3 Application status model
+Identical in both diagrams (Citizens and System lanes):
 
-| Status | Description | Actor | Next states |
-|--------|-------------|-------|-------------|
-| Draft | Saved not submitted | Citizen | Submitted |
-| Submitted | Awaiting payment | Citizen | Paid / Cancelled |
-| Paid | Awaiting scrutiny | System | Under scrutiny |
-| Query raised | Defect / incomplete | SRO | Resubmitted |
-| Rejected | Refusal order issued | SRO | Closed |
-| Registered | Entered in register | SRO | Certificate issued |
-| Certificate issued | Form II-A delivered | System | Closed |
-| [TBD] | | | |
+1. **START** — citizen initiates the service.
+2. **LogOn to Portal** — authenticated citizen session.
+3. **Start a new Application**.
+4. Select **Marriage Registration** service.
+5. **Read and continue with Prerequisite for marriage** — mandatory acknowledgement screen.
+6. **Select channel:** *Hindu Marriage Online* **or** *Hindu Marriage Offline*.
+7. **Read, Select and continue with Declaration** — statutory declarations (Section 5, 7, 8 / Form IA text).
+8. **Enter Marriage details, Bride details, Bridegroom details, Witness details** — persisted to the application record. This step is the **re-entry point for every rejection loop** in both diagrams.
+
+### 7.3 To-Be process — Hindu Marriage **Online**
+
+![Hindu Marriage Online process](ProcessDiagrams/Hindu_Marriage_Online.png)
+
+**Flow (continuing from §7.2 step 8):**
+
+| # | Step | Lane | Notes |
+|---|------|------|-------|
+| 9 | **Select Sub-Registrar office** and **review summary** of updated information | System | Jurisdiction routing per Rule 4 |
+| 10 | **Select Declaration and submit Form 1A** | System | Form 1A generated for the selected office |
+| 11 | **Proceed with eSign** | System / Citizen | Citizen eSign on Form 1A and declarations |
+| 12 | **SR Verification** (decision) | Sub Registrar | Approve or Reject |
+| 12a | **Reject** → return to **Enter Marriage / Bride / Bridegroom / Witness details** | Sub Registrar → System | Citizen corrects and resubmits; refusal reason recorded |
+| 13 | **Proceed for Online Payment** | System | **Payment occurs after SR approval** |
+| 14 | **SR Digitally signs** | Sub Registrar | DSC applied |
+| 15 | **Marriage certificate Issued** | Sub Registrar / System | Form II-A available for download |
+
+**Key characteristics:** no printout, no appointment, no DEO, single verification stage, fully digital signature chain.
+
+### 7.4 To-Be process — Hindu Marriage **Offline**
+
+![Hindu Marriage Offline process](ProcessDiagrams/Hindu_Marriage_Offline.png)
+
+**Flow (continuing from §7.2 step 8):**
+
+| # | Step | Lane | Notes |
+|---|------|------|-------|
+| 9 | **SR Verification — Stage 1** (decision) on captured application data | Sub Registrar | Approve or Reject |
+| 9a | **Reject** → return to **Enter Marriage / Bride / Bridegroom / Witness details** | Sub Registrar → System | Citizen corrects and resubmits |
+| 10 | **Makes Payment and schedule appointment** | System / Citizen | Payment **and** slot booking in one step, after Stage 1 approval |
+| 11 | **Printout taken on Form-1, II & 1A** | System / Citizen | Citizen prints the statutory forms |
+| 12 | Parties and witnesses **sign physically**; citizen attends the SRO on the appointment date | Citizen (offline activity) | Not a system step; precondition for step 13 |
+| 13 | **Check the form on signature and uploads on portal** | **Data Entry Operator** | DEO verifies signatures are present/complete, scans and uploads |
+| 14 | **SR Verification — Stage 2** (decision) on the uploaded signed forms | Sub Registrar | Approve or Reject |
+| 14a | **Reject** → return to **DEO check / upload** step | Sub Registrar → DEO | Re-check or re-upload; does **not** go back to citizen data entry |
+| 15 | **SR Digitally Signs** | Sub Registrar | DSC applied |
+| 16 | **Marriage certificate Issued** | Sub Registrar / System | Form II-A issued |
+
+**Key characteristics:** two SR verification stages with **different rejection targets** (Stage 1 → citizen data entry; Stage 2 → DEO upload), appointment scheduling bundled with payment, and physical signature evidence retained as an uploaded artefact.
+
+### 7.5 Channel comparison (step-by-step)
+
+| Stage | Online | Offline |
+|-------|--------|---------|
+| Intake (steps 1–8) | Same | Same |
+| Office selection & summary review | Explicit step before Form 1A submission | [TBD — confirm whether shown implicitly; diagram routes straight to SR verification] |
+| Form 1A submission | Submitted digitally | Printed after payment |
+| Signature | Citizen **eSign** | **Physical** signature on Form I, II & 1A |
+| Payment trigger | After SR approval | After **SR Verification Stage 1** approval, with appointment |
+| Appointment | Not required | Required |
+| DEO step | None | Signature check + upload |
+| SR verification | 1 stage | 2 stages |
+| Rejection re-entry | Citizen data entry | Stage 1 → citizen data entry; Stage 2 → DEO upload |
+| Certificate | After SR DSC | After SR DSC |
+
+### 7.6 Application status model (channel-aware)
+
+| Status | Description | Channel | Actor | Next states |
+|--------|-------------|---------|-------|-------------|
+| Draft | Saved not submitted | Both | Citizen | Prerequisite acknowledged |
+| Prerequisite acknowledged | Read-and-continue completed | Both | Citizen | Channel selected |
+| Channel selected | Online or Offline chosen | Both | Citizen | Declarations accepted |
+| Declarations accepted | Statutory declarations confirmed | Both | Citizen | Details captured |
+| Details captured | Marriage / bride / bridegroom / witness details saved | Both | Citizen | Office selected (Online) / Pending SR verification (Offline) |
+| Office selected & summary reviewed | SRO office chosen, summary confirmed | Online | Citizen | Form 1A submitted |
+| Form 1A submitted | Declaration selected and Form 1A submitted | Online | Citizen | eSign pending |
+| eSign pending | Awaiting citizen eSign | Online | Citizen | Pending SR verification |
+| Pending SR verification | Awaiting SR scrutiny | Online / Offline (Stage 1) | SR | Approved for payment / Rejected — data |
+| Rejected — data correction | Sent back to citizen data entry | Both | SR | Details captured |
+| Approved for payment | SR approved; fee payable | Both | SR | Payment completed |
+| Payment completed | Fee paid, receipt issued | Both | System | Pending SR digital signature (Online) / Appointment scheduled (Offline) |
+| Appointment scheduled | SRO visit slot booked | Offline | Citizen | Forms printed |
+| Forms printed | Form I, II & 1A printout taken | Offline | Citizen | Awaiting signed-form upload |
+| Awaiting signed-form upload | Physically signed forms pending at SRO | Offline | Citizen / DEO | Signed forms uploaded |
+| Signed forms uploaded | DEO checked signatures and uploaded | Offline | DEO | Pending SR verification — Stage 2 |
+| Pending SR verification — Stage 2 | Awaiting SR scrutiny of signed forms | Offline | SR | Pending SR digital signature / Rejected — upload |
+| Rejected — upload | Sent back to DEO for re-check / re-upload | Offline | SR | Signed forms uploaded |
+| Pending SR digital signature | Awaiting DSC | Both | SR | Registered |
+| Registered | Serial / page / volume assigned, Form II endorsed | Both | SR | Certificate issued |
+| Certificate issued | Form II-A issued / downloadable | Both | System | Closed |
+| Closed | No further action | Both | System | — |
+
+### 7.7 Process changes introduced by the new diagrams
+
+| # | Change vs earlier BRD draft | Impact |
+|---|------------------------------|--------|
+| C-01 | **Payment now occurs after SR approval**, not before scrutiny | Reverses earlier "Paid → Under scrutiny" sequence; affects status model, fee reconciliation, and abandoned-application handling |
+| C-02 | Explicit **Online vs Offline channel fork** after prerequisite page | New channel attribute on the application; channel-specific screens and SLAs |
+| C-03 | **Citizen eSign** introduced (Online) | New eSign integration; legal validity to be confirmed (OQ-002) |
+| C-04 | **Two-stage SR verification** (Offline) | Two distinct decision records, reasons and rejection targets |
+| C-05 | New **Data Entry Operator** role and portal upload console | New role, RBAC entry, audit events, and training need |
+| C-06 | **Appointment scheduling** bundled with payment (Offline) | Slot management, capacity, reschedule / no-show rules [TBD] |
+| C-07 | **Printout of Form I, II & 1A** as a citizen step (Offline) | Print templates must be legally exact; Form II printed *before* SR endorsement — sequencing to be confirmed (OQ-006) |
+| C-08 | Rejection loops return to **specific** re-entry points | Workflow engine must support targeted rework, not generic "resubmit" |
 
 ---
 
@@ -335,6 +433,10 @@
 | FR-HMA-090 | Apply fee per Karnataka Rules Schedule + applicable notifications | Must | |
 | FR-HMA-091 | Issue payment receipt equivalent to Form VI; credit to government account | Must | |
 | FR-HMA-092 | Waive search fee when certified copy requested with marriage application (Rule 8 proviso) | Should | |
+| FR-HMA-093 | System shall enable the payment step **only after SR approval** (Online: SR Verification; Offline: SR Verification Stage 1) | Must | Payment blocked while status is *Pending SR verification* |
+| FR-HMA-094 | Offline channel: payment and **appointment scheduling** shall be completed as a single guided step | Must | Both recorded against the application |
+| FR-HMA-095 | System shall not permit certificate issuance unless payment is successfully reconciled | Must | |
+| FR-HMA-096 | Handle payment failure / timeout with retry without re-triggering SR verification | Must | Application remains *Approved for payment* |
 
 ### 8.10 SRO scrutiny and registration
 
@@ -369,6 +471,91 @@
 | FR-HMA-131 | Pending scrutiny aging | Should | |
 | FR-HMA-132 | Fee collection reconciliation report | Must | |
 | FR-HMA-133 | Monthly duplicate memoranda bundle for Registrar-General (Form III) | Should | |
+| FR-HMA-134 | **Channel-wise** MIS: volumes, approval / rejection rates and cycle time split by Online vs Offline | Should | |
+| FR-HMA-135 | Offline appointment MIS: booked, honoured, no-show, reschedule counts per office | Should | |
+| FR-HMA-136 | Rejection analysis by stage (SR Stage 1 vs Stage 2) and reason code | Should | |
+
+### 8.14 Channel selection and prerequisite acknowledgement
+
+*(Ref: §7.2 steps 5–6 — both diagrams)*
+
+| Req ID | Requirement | Priority | Acceptance criteria |
+|--------|-------------|----------|---------------------|
+| FR-HMA-140 | System shall display a **Prerequisite for marriage** screen (eligibility, documents, channel implications) that the citizen must read and explicitly continue from | Must | Acknowledgement timestamped and audited |
+| FR-HMA-141 | System shall present a channel choice: **Hindu Marriage Online** or **Hindu Marriage Offline** | Must | Selection stored on the application |
+| FR-HMA-142 | System shall explain the practical difference at the point of choice (eSign vs printout + physical signature + SRO appointment) | Must | Bilingual EN/KN |
+| FR-HMA-143 | Selected channel shall drive all subsequent screens, statuses, SLAs and notifications | Must | No cross-channel screen leakage |
+| FR-HMA-144 | Channel change after selection | [TBD — OQ-005] | Define whether permitted before payment, and whether data is retained |
+| FR-HMA-145 | Both channels shall reuse the same declaration and data-capture screens (§7.2 steps 7–8) | Must | Single source of validation logic |
+
+### 8.15 Online channel — office selection, Form 1A submission and eSign
+
+*(Ref: §7.3 steps 9–11)*
+
+| Req ID | Requirement | Priority | Acceptance criteria |
+|--------|-------------|----------|---------------------|
+| FR-HMA-150 | Citizen shall select the **Sub-Registrar office** and view a **summary of all updated information** before submission | Must | Summary shows marriage, bride, bridegroom, witness data |
+| FR-HMA-151 | Citizen shall be able to return and edit any section from the summary screen | Must | No data loss |
+| FR-HMA-152 | System shall generate and allow submission of **Form 1A** with the selected declaration | Must | Form 1A addressed to the selected office |
+| FR-HMA-153 | System shall support **eSign** on Form 1A / declarations by the required signatories | Must | Signatory set per OQ-002 (parties, witnesses) |
+| FR-HMA-154 | eSign artefacts (signed PDF, signature metadata, timestamp) shall be stored and rendered immutable | Must | Retrievable for audit and SR review |
+| FR-HMA-155 | System shall handle eSign failure / abandonment with resumable retry | Must | Status remains *eSign pending* |
+| FR-HMA-156 | Application shall move to SR verification only after eSign is complete | Must | Hard gate |
+
+### 8.16 Offline channel — printout, physical signature and DEO upload
+
+*(Ref: §7.4 steps 10–13)*
+
+| Req ID | Requirement | Priority | Acceptance criteria |
+|--------|-------------|----------|---------------------|
+| FR-HMA-160 | On Stage 1 approval, citizen shall pay the fee and **schedule an appointment** at the selected SRO | Must | Slot, date, time, office recorded |
+| FR-HMA-161 | System shall provide appointment slot availability, confirmation, and reschedule / cancel rules | Should | Rules [TBD — OQ-007] |
+| FR-HMA-162 | System shall generate a **printout of Form I, Form II and Form 1A** with exact statutory wording | Must | Legal sign-off on templates; Kannada rendering correct |
+| FR-HMA-163 | Printout shall carry application reference, appointment details and a machine-readable identifier (barcode / QR) for retrieval at the counter | Should | Enables DEO lookup |
+| FR-HMA-164 | Printout shall support the **duplicate** memorandum requirement (original + duplicate) | Must | Rule 4(2) |
+| FR-HMA-165 | **DEO** shall retrieve the application, **check that the printed forms are signed** (parties and three witnesses) and upload the scanned forms to the portal | Must | Checklist-driven; per-form confirmation |
+| FR-HMA-166 | DEO shall record a signature-completeness checklist outcome, not merely attach a file | Must | Each required signature ticked |
+| FR-HMA-167 | System shall validate uploads (file type, size, legibility guidance, page count) | Must | Reject malformed uploads |
+| FR-HMA-168 | DEO shall be able to replace / re-upload documents when SR rejects at Stage 2 | Must | Version history retained |
+| FR-HMA-169 | All DEO actions shall be attributed to the individual operator and audited | Must | Links to NFR-HMA-AUD-001 |
+| FR-HMA-170 | DEO access shall be restricted to applications of their own SRO office | Must | Jurisdiction-scoped RBAC |
+
+### 8.17 SR verification (channel-aware)
+
+*(Ref: §7.3 step 12; §7.4 steps 9 and 14)*
+
+| Req ID | Requirement | Priority | Acceptance criteria |
+|--------|-------------|----------|---------------------|
+| FR-HMA-180 | **Online:** SR shall verify the eSigned application in a **single** verification stage | Must | Approve / Reject with reason |
+| FR-HMA-181 | **Offline Stage 1:** SR shall verify captured application data **before** payment and appointment | Must | Approve / Reject with reason |
+| FR-HMA-182 | **Offline Stage 2:** SR shall verify the **uploaded physically signed** Form I, II & 1A | Must | Approve / Reject with reason |
+| FR-HMA-183 | Rejection at Online SR verification and at Offline Stage 1 shall return the application to the **citizen data-entry** step | Must | Editable sections, reason visible to citizen |
+| FR-HMA-184 | Rejection at Offline Stage 2 shall return the application to the **DEO upload** step, **not** to citizen data entry | Must | Citizen data remains locked |
+| FR-HMA-185 | Every verification decision shall record actor, timestamp, stage, decision and reason code + free text | Must | Immutable audit |
+| FR-HMA-186 | Refusal shall be issued as a brief **written order** communicated to the parties (Rule 4) | Must | PDF + notification |
+| FR-HMA-187 | System shall cap / track rework loops and expose aging per stage | Should | Feeds FR-HMA-136 |
+| FR-HMA-188 | SR queue shall clearly distinguish Online, Offline Stage 1 and Offline Stage 2 work items | Must | Filter + count by stage |
+
+### 8.18 Digital signature and certificate issuance
+
+*(Ref: §7.3 steps 14–15; §7.4 steps 15–16)*
+
+| Req ID | Requirement | Priority | Acceptance criteria |
+|--------|-------------|----------|---------------------|
+| FR-HMA-190 | SR shall **digitally sign** using a valid DSC before the certificate is issued, in both channels | Must | Signature verifiable on the PDF |
+| FR-HMA-191 | System shall block certificate generation if DSC is unavailable / expired, with a clear operator message | Must | No unsigned certificate leaves the system |
+| FR-HMA-192 | On SR digital signature: assign **serial no., page, volume**, generate **Form II** endorsement, update register, then issue **Form II-A** | Must | Ref FR-HMA-103 / 104 |
+| FR-HMA-193 | Certificate shall be issued and made available per channel: Online — portal download; Offline — counter hand-over and/or download | Must | Delivery mode recorded |
+| FR-HMA-194 | Certificate shall carry integrity features (QR / digital seal) per NFR-HMA-SEC-007 | Must | Verifiable |
+
+### 8.19 Workflow, notifications and audit for the new steps
+
+| Req ID | Requirement | Priority | Acceptance criteria |
+|--------|-------------|----------|---------------------|
+| FR-HMA-200 | Workflow engine shall support **targeted rework** — returning an application to a specific prior step per §7.7 C-08 | Must | Configurable per stage |
+| FR-HMA-201 | Citizen shall see a channel-specific progress tracker mirroring the diagram steps | Should | Current step highlighted |
+| FR-HMA-202 | Notifications shall cover: prerequisite/channel confirmation, SR approval, payment due, appointment confirmation & reminder, printout reminder, DEO upload done, Stage 2 outcome, certificate issued | Should | EN + KN templates |
+| FR-HMA-203 | Every channel-specific transition in §7.6 shall raise an audit event | Must | Ref NFR-HMA-AUD-001 |
 
 ---
 
@@ -384,6 +571,16 @@
 | BR-HMA-006 | Jurisdiction routing per Rule 4(1) | Rules 1966 | Office master |
 | BR-HMA-007 | Refusal must be in writing | Rule 4(3) scrutiny clause | Rejection letter PDF |
 | BR-HMA-008 | [Custom / sapinda exception handling] | Sec. 5(iv)(v) | Manual SRO override [TBD] |
+| BR-HMA-010 | Prerequisite screen must be acknowledged before data entry begins | Process diagram (both) | Hard gate at step 5 |
+| BR-HMA-011 | Exactly one channel (Online / Offline) applies to an application at a time | Process diagram (both) | Channel attribute mandatory |
+| BR-HMA-012 | **Fee is payable only after SR approval** — no payment before the first SR verification | Process diagram (both) | Payment action disabled until *Approved for payment* |
+| BR-HMA-013 | Online: application cannot reach SR verification without completed **eSign** | Online diagram | Hard stop |
+| BR-HMA-014 | Offline: printout of Form I, II & 1A is available only after payment and appointment booking | Offline diagram | Print action gated |
+| BR-HMA-015 | Offline: forms may be uploaded only by a **DEO** of the same SRO office, after signature check | Offline diagram | RBAC + checklist |
+| BR-HMA-016 | Offline Stage 2 rejection returns work to the DEO, never directly to the citizen | Offline diagram | Workflow routing rule |
+| BR-HMA-017 | Certificate is issued only after the **SR digital signature** in both channels | Both diagrams | DSC pre-condition |
+| BR-HMA-018 | Offline: an appointment is mandatory before signed forms can be uploaded | Offline diagram | Upload gated on appointment record |
+| BR-HMA-019 | Rejected applications retain full history of prior submissions and decisions | Audit / Rule 4 | Versioned records |
 
 ---
 
@@ -406,31 +603,69 @@
 
 ### 10.2 Starter backlog (MVP)
 
-| Story ID | As a… | I want… | So that… | Priority |
-|----------|-------|---------|----------|----------|
-| US-HMA-01 | Citizen | to start Hindu marriage registration online | I can register my solemnized marriage | Must |
-| US-HMA-02 | Citizen | to complete Form I/IA data and declarations | my application is legally complete | Must |
-| US-HMA-03 | Citizen | to pay the registration fee online | my application moves to SRO scrutiny | Must |
-| US-HMA-04 | SRO | to scrutinize and approve/reject applications | only valid marriages enter the register | Must |
-| US-HMA-05 | SRO | to assign register serial and issue Form II-A | parties receive statutory certificate | Must |
-| US-HMA-06 | Citizen | to download Form II-A certificate | I have proof of registration | Must |
+| Story ID | As a… | I want… | So that… | Priority | Channel |
+|----------|-------|---------|----------|----------|---------|
+| US-HMA-01 | Citizen | to start Hindu marriage registration online | I can register my solemnized marriage | Must | Both |
+| US-HMA-02 | Citizen | to complete Form I/IA data and declarations | my application is legally complete | Must | Both |
+| US-HMA-03 | Citizen | to pay the registration fee after SR approval | I pay only once my application is found in order | Must | Both |
+| US-HMA-04 | SRO | to scrutinize and approve/reject applications | only valid marriages enter the register | Must | Both |
+| US-HMA-05 | SRO | to assign register serial and issue Form II-A | parties receive statutory certificate | Must | Both |
+| US-HMA-06 | Citizen | to download Form II-A certificate | I have proof of registration | Must | Both |
+| US-HMA-07 | Citizen | to read the prerequisites and then choose Online or Offline | I pick the route that suits my situation | Must | Both |
+| US-HMA-08 | Citizen | to select the Sub-Registrar office and review a summary before submitting | I can correct mistakes before it goes to the SR | Must | Online |
+| US-HMA-09 | Citizen | to eSign Form 1A and the declarations | I can complete registration without visiting the office | Must | Online |
+| US-HMA-10 | Citizen | to pay and book an appointment together | I know exactly when to visit the SRO | Must | Offline |
+| US-HMA-11 | Citizen | to print Form I, II and 1A | the parties and witnesses can sign them physically | Must | Offline |
+| US-HMA-12 | Data Entry Operator | to check signatures on the printed forms and upload them | only properly signed forms reach the Sub-Registrar | Must | Offline |
+| US-HMA-13 | SRO | to verify the uploaded signed forms as a separate second stage | the physical evidence is validated before signing | Must | Offline |
+| US-HMA-14 | SRO | to digitally sign before issuing the certificate | the certificate is legally authenticated | Must | Both |
+| US-HMA-15 | Citizen | to see clearly why my application was rejected and what to fix | I can correct it without visiting the office | Must | Both |
+| US-HMA-16 | SRO | to see Online, Offline Stage 1 and Offline Stage 2 items separately in my queue | I can manage my workload by type | Must | Both |
+| US-HMA-17 | Citizen | to track my application against the published process steps | I know what happens next | Should | Both |
+| US-HMA-18 | IGSR | to compare Online vs Offline volumes and cycle times | I can drive adoption of the digital channel | Should | Both |
+
+### 10.3 Channel-specific use cases to be detailed
+
+| Use case ID | Name | Primary actor | Channel | Diagram ref |
+|-------------|------|---------------|---------|-------------|
+| UC-HMA-010 | Acknowledge prerequisites and select channel | Citizen | Both | §7.2 steps 5–6 |
+| UC-HMA-011 | Capture declarations and application details | Citizen | Both | §7.2 steps 7–8 |
+| UC-HMA-012 | Select office, review summary, submit Form 1A | Citizen | Online | §7.3 steps 9–10 |
+| UC-HMA-013 | eSign Form 1A | Citizen | Online | §7.3 step 11 |
+| UC-HMA-014 | SR verification (single stage) | SR | Online | §7.3 step 12 |
+| UC-HMA-015 | SR verification Stage 1 (data) | SR | Offline | §7.4 step 9 |
+| UC-HMA-016 | Pay fee and schedule appointment | Citizen | Offline | §7.4 step 10 |
+| UC-HMA-017 | Take printout of Form I, II & 1A | Citizen | Offline | §7.4 step 11 |
+| UC-HMA-018 | Check signatures and upload signed forms | DEO | Offline | §7.4 step 13 |
+| UC-HMA-019 | SR verification Stage 2 (signed forms) | SR | Offline | §7.4 step 14 |
+| UC-HMA-020 | SR digital signature and certificate issuance | SR | Both | §7.3 steps 14–15 / §7.4 steps 15–16 |
 
 ---
 
 ## 11. User interface (high-level)
 
-| Screen / step | Purpose | Statutory alignment | Notes |
-|---------------|---------|---------------------|-------|
-| Mode selection | Online vs counter | | Prototype: hindu-marriage-mode |
-| Declarations | Form IA declarations | Sec. 5, 7, 8 | hindu-marriage-online |
-| Marriage details | Date, place, jurisdiction | Form I §1–2 | hindu-marriage-details |
-| Bride / Bridegroom | Party particulars | Form I §3–4 | hindu-marriage-bride(groom) |
-| Witnesses (×3) | Witness particulars | Form I §5–7 | hindu-marriage-witnesses |
-| Review summary | Confirm before pay | | |
-| Document upload | Joint photo, proofs | Form I | |
-| Payment | Fee | Form VI | |
-| SRO workbench | Scrutiny, register, refuse | Form II, register | |
-| Certificate view | Form II-A | Rule 4(5) | |
+| Screen / step | Purpose | Channel | Statutory alignment | Notes |
+|---------------|---------|---------|---------------------|-------|
+| Login / start application | Authenticated entry, new application | Both | | §7.2 steps 2–3 |
+| Service selection | Choose Marriage Registration | Both | | §7.2 step 4 |
+| **Prerequisite for marriage** | Read-and-continue eligibility & document guidance | Both | Sec. 5, 7, 8 | Mandatory acknowledgement, FR-HMA-140 |
+| **Channel selection** | Hindu Marriage **Online** vs **Offline** | Both | | Replaces old "Mode selection"; FR-HMA-141 |
+| Declarations | Form IA declarations | Both | Sec. 5, 7, 8 | hindu-marriage-online |
+| Marriage details | Date, place, jurisdiction | Both | Form I §1–2 | hindu-marriage-details |
+| Bride / Bridegroom | Party particulars | Both | Form I §3–4 | hindu-marriage-bride(groom) |
+| Witnesses (×3) | Witness particulars | Both | Form I §5–7 | hindu-marriage-witnesses |
+| Document upload | Joint photo, proofs | Both | Form I | |
+| **Office selection + review summary** | Choose SRO, review all captured data | Online | Rule 4 | FR-HMA-150 |
+| **Form 1A submission** | Select declaration and submit | Online | Form IA | FR-HMA-152 |
+| **eSign** | Citizen electronic signature | Online | Form IA signatures | FR-HMA-153 |
+| Payment | Fee, after SR approval | Both | Form VI | FR-HMA-093 |
+| **Appointment scheduling** | Book SRO visit slot with payment | Offline | | FR-HMA-160/161 |
+| **Printout — Form I, II & 1A** | Generate printable statutory forms | Offline | Form I, II, IA | Exact wording; FR-HMA-162 |
+| **DEO upload console** | Signature checklist + upload of signed forms | Offline | Rule 4(3) | FR-HMA-165/166 |
+| SRO workbench | Verification queue (Online / Offline Stage 1 / Stage 2), register, refuse | Both | Form II, register | FR-HMA-188 |
+| **SR digital signature** | Apply DSC before issuance | Both | Rule 4(5) | FR-HMA-190 |
+| Certificate view | Form II-A | Both | Rule 4(5) | Download (Online) / counter + download (Offline) |
+| Application tracker | Channel-specific progress against diagram steps | Both | | FR-HMA-201 |
 
 **Wireframe links:** [Figma / prototype URLs]
 
@@ -440,15 +675,19 @@
 
 ## 12. Integrations
 
-| Integration | Direction | Purpose | Owner | Status |
-|-------------|-----------|---------|-------|--------|
-| Payment gateway / Treasury | Outbound | Registration fee | | TBD |
-| Aadhaar / e-KYC | Outbound | Witness/party identity | | TBD |
-| DigiLocker | Outbound/Inbound | Document fetch | | TBD |
-| SMS gateway | Outbound | Alerts | | TBD |
-| Existing Kaveri master data | Inbound | Districts, SRO offices | | TBD |
+| Integration | Direction | Purpose | Channel | Owner | Status |
+|-------------|-----------|---------|---------|-------|--------|
+| Payment gateway / Treasury | Outbound | Registration fee (post-approval) | Both | | TBD |
+| **eSign service provider** | Outbound | Citizen eSign on Form 1A / declarations | Online | | TBD |
+| **DSC / signing service** | Outbound | SR digital signature before certificate issuance | Both | | TBD |
+| Aadhaar / e-KYC | Outbound | Witness/party identity | Both | | TBD |
+| DigiLocker | Outbound/Inbound | Document fetch; certificate push [TBD] | Both | | TBD |
+| SMS / email gateway | Outbound | Alerts incl. appointment confirmation & reminder | Both | | TBD |
+| **Appointment / slot service** | Internal | SRO visit slot availability and booking | Offline | | TBD |
+| **Document / scan store** | Inbound | DEO-uploaded signed Form I, II & 1A | Offline | | TBD |
+| Existing Kaveri master data | Inbound | Districts, SRO offices, holiday calendar (for slots) | Both | | TBD |
 
-**Interface requirements:** [API list TBD by Architect]
+**Interface requirements:** [API list TBD by Architect — must now include eSign, DSC signing, appointment slots and scan upload]
 
 ---
 
@@ -475,6 +714,10 @@
 | NFR-HMA-PERF-003 | Peak transaction volumes (applications submitted, payments, certificate issues per hour/day) | [Baseline from Kaveri 2.0 marriage stats + growth — TBD] | PO, Arch |
 | NFR-HMA-PERF-004 | Batch jobs (Form III monthly duplicate bundle) complete within defined window | [e.g. by 05th of month + buffer — TBD] | Arch, DBA |
 | NFR-HMA-PERF-005 | Performance / load test gate before go-live | Pass criteria TBD; Perf & Security Test Lead owns | Perf Lead |
+| NFR-HMA-PERF-006 | **eSign** round-trip time and provider timeout handling | [e.g. ≤30s; graceful retry — TBD] | Arch, Integration Eng |
+| NFR-HMA-PERF-007 | **Printout generation** (Form I, II & 1A with Kannada) response time | [e.g. ≤10s — TBD] | Arch |
+| NFR-HMA-PERF-008 | **DEO scan upload** throughput at peak counter hours per office | [Files/hr + max file size — TBD] | Arch, SDC |
+| NFR-HMA-PERF-009 | Appointment slot search / booking response time under contention | [e.g. ≤2s, no double-booking — TBD] | Arch |
 
 ### 13.3 Scalability
 
@@ -498,6 +741,10 @@
 | NFR-HMA-SEC-006 | Vulnerability management: periodic scans, patch SLA, third-party / CERT-In / STQC audits | Scan cadence + severity SLAs TBD | Security, Perf Lead |
 | NFR-HMA-SEC-007 | Certificate integrity: QR / digital seal / anti-tamper on Form II-A | Mechanism TBD | Arch, Security |
 | NFR-HMA-SEC-008 | Aadhaar / eKYC usage only as approved; UIDAI-compliant handling | Compliance checklist | Security, Legal |
+| NFR-HMA-SEC-009 | **eSign** integrity: signed artefact tamper-evident, signature verifiable, audit-linked to signatory | Per eSign provider standard — TBD | Security, Arch |
+| NFR-HMA-SEC-010 | **DSC** custody for Sub-Registrars: issuance, storage, expiry monitoring, revocation on transfer | Process + monitoring TBD | Security, Ops |
+| NFR-HMA-SEC-011 | **DEO** role separation: DEO can upload and check, but cannot approve, register or sign | Enforced in RBAC | Security, PO |
+| NFR-HMA-SEC-012 | Malware scanning of DEO-uploaded scans before storage / SR viewing | AV scan on upload | Security, DevOps |
 
 ### 13.5 Privacy
 
@@ -518,6 +765,11 @@
 | NFR-HMA-AUD-003 | Login / privilege / config-change audit for admin and SRO accounts | Retain per security policy — TBD | Security |
 | NFR-HMA-AUD-004 | Audit evidence available for departmental / AG / security audits | Export / report format TBD | Ops, Security |
 | NFR-HMA-AUD-005 | Audit log retention and reporting cadence (MIS + on-demand) | Retention TBD; MIS ownership TBD | DBA, PO |
+| NFR-HMA-AUD-006 | Audit of **channel selection** and any channel change | Actor + timestamp | Arch |
+| NFR-HMA-AUD-007 | Audit of **eSign** and **SR DSC** events (who, when, on which artefact version) | Signature audit trail | Security, Arch |
+| NFR-HMA-AUD-008 | Audit of **DEO** signature-check outcome and each upload / re-upload version | Operator-attributed | Arch, Security |
+| NFR-HMA-AUD-009 | Audit of **both** SR verification stages separately, incl. rejection reason and rework target | Stage-tagged records | Arch |
+| NFR-HMA-AUD-010 | Audit of appointment booking, reschedule, cancellation and no-show | Offline channel | Arch, Ops |
 
 ### 13.7 Disaster recovery (DR)
 
@@ -577,6 +829,10 @@
 | NFR-OP-06 | Certificate QR / digital seal approach | Product + Security | Arch, PO | |
 | NFR-OP-07 | L1/L2/L3 hours and incident SLAs | Support model | Ops, PM | |
 | NFR-OP-08 | Capacity numbers for go-live sizing | Infra worksheet | Arch, SDC, DBA | |
+| NFR-OP-09 | eSign provider selection, SLA and fallback when unavailable | Integration + contingency | Arch, Security, PO | |
+| NFR-OP-10 | DSC provisioning and expiry monitoring for all Sub-Registrars | Ops process | Security, Ops | |
+| NFR-OP-11 | Storage growth from DEO-uploaded scans (Offline volumes) | Capacity model | DBA, Arch | |
+| NFR-OP-12 | SLA per verification stage (Online, Offline Stage 1, Offline Stage 2) | Service standard | PO, Ops | |
 
 ---
 
@@ -606,6 +862,18 @@
 | FR-HMA-003 | Sec. 5(iii) | Age validation | UC-HMA-002 | Bride/groom | TC- | Draft |
 | FR-HMA-070 | Form IA | Declarations | UC-HMA-001 | Declarations | TC- | Draft |
 | FR-HMA-104 | Rule 4(5) | Form II-A issue | UC-HMA-005 | Certificate | TC- | Draft |
+| FR-HMA-140 | Process diagram (both) | Prerequisite acknowledgement | UC-HMA-010 | Prerequisite | TC- | Draft |
+| FR-HMA-141 | Process diagram (both) | Online / Offline channel selection | UC-HMA-010 | Channel selection | TC- | Draft |
+| FR-HMA-150 | Rule 4 | Office selection + summary review | UC-HMA-012 | Office selection + review | TC- | Draft |
+| FR-HMA-153 | Form IA signatures | Citizen eSign | UC-HMA-013 | eSign | TC- | Draft |
+| FR-HMA-093 | Process diagram (both) | Payment only after SR approval | UC-HMA-014 / 015 | Payment | TC- | Draft |
+| FR-HMA-160 | Process diagram (Offline) | Payment + appointment scheduling | UC-HMA-016 | Appointment | TC- | Draft |
+| FR-HMA-162 | Form I, II, IA | Printout of statutory forms | UC-HMA-017 | Printout | TC- | Draft |
+| FR-HMA-165 | Rule 4(3) | DEO signature check and upload | UC-HMA-018 | DEO console | TC- | Draft |
+| FR-HMA-181 | Rule 4 | SR verification Stage 1 (data) | UC-HMA-015 | SRO workbench | TC- | Draft |
+| FR-HMA-182 | Rule 4 | SR verification Stage 2 (signed forms) | UC-HMA-019 | SRO workbench | TC- | Draft |
+| FR-HMA-184 | Process diagram (Offline) | Stage 2 rejection returns to DEO | UC-HMA-019 | SRO workbench | TC- | Draft |
+| FR-HMA-190 | Rule 4(5) | SR digital signature before issuance | UC-HMA-020 | SR digital signature | TC- | Draft |
 
 ---
 
@@ -616,15 +884,29 @@
 | Q ID | Question | Raised by | Needed from | Due |
 |------|----------|-----------|-------------|-----|
 | OQ-001 | Exact fee amounts post RD48 notification | BA | Treasury / DE | |
-| OQ-002 | e-Sign validity for Form I/IA vs physical signature | BA | Legal / DE | |
+| OQ-002 | e-Sign validity for Form I/IA vs physical signature — and **who** must eSign (parties only, or parties + three witnesses) | BA | Legal / DE | |
 | OQ-003 | Automated sapinda / prohibited relationship checks | BA | DE | |
 | OQ-004 | Ordinary residence definition for jurisdiction | BA | DE | |
+| OQ-005 | Can a citizen **switch channel** after selection? If yes, until which status, and is data retained? | BA | PO / DE | |
+| OQ-006 | Offline: **Form II is printed before SR endorsement** in the diagram — confirm whether the printout is a blank/pre-endorsement copy or the endorsement is added later | BA | DE / Legal | |
+| OQ-007 | Appointment rules: slot capacity per office, reschedule / cancellation window, no-show handling and refund policy | BA | PO / SRO | |
+| OQ-008 | Payment **after** SR approval — confirm refund / reversal treatment if the application later fails at Offline Stage 2 | BA | Treasury / PO | |
+| OQ-009 | Offline: is the physical signing done before the appointment or at the SRO in the presence of the DEO/SR? | BA | DE / SRO | |
+| OQ-010 | Are the **original** physically signed forms retained at the SRO after scanning, and for how long? | BA | DE / Legal | |
+| OQ-011 | Does the Offline channel also require document upload by the citizen, or only the DEO-uploaded signed forms? | BA | PO / DE | |
+| OQ-012 | Online channel: is Sub-Registrar office selection also required in Offline (diagram shows it only for Online)? | BA | DE | |
+| OQ-013 | SLA targets per verification stage and channel | BA | PO / Ops | |
+| OQ-014 | Who acts as DEO — existing SRO staff or dedicated resource; and backup during absence? | BA | SRO / PO | |
 
 ### 16.2 Decisions
 
 | Dec ID | Decision | Date | Approver | Impact |
 |--------|----------|------|----------|--------|
 | DEC-001 | Phase 1 scope = Hindu registration only | | PO | |
+| DEC-002 | Two channels in MVP: **Hindu Marriage Online** (eSign) and **Hindu Marriage Offline** (printout + physical signature + DEO upload), per approved process diagrams | | PO | §7.1–7.4 |
+| DEC-003 | Fee is collected **after** the first SR approval in both channels | | PO | §7.7 C-01, FR-HMA-093 |
+| DEC-004 | Offline channel has **two** SR verification stages with different rejection targets | | PO | §7.4, FR-HMA-181/182/184 |
+| DEC-005 | **Data Entry Operator** introduced as a distinct role in the Offline channel | | PO | §4, FR-HMA-165–170 |
 
 ---
 
@@ -678,6 +960,8 @@
 - Registration of Hindu Marriage (Karnataka) Rules, 1966 — `Marriage/REGISTRATIONOFHINDUMARRIAGE_KARNATAKARULES_1966.docx`
 - Statutory forms — `Marriage/hindu marriage forms.pdf`, `Marriage/Form1.pdf`
 - Marriage fee / process notification — `Marriage/RD48MNMU2023-Notification-marriage.pdf` (validate)
+- **Approved process diagram — Hindu Marriage Online** — `ProcessDiagrams/Hindu_Marriage_Online.png`
+- **Approved process diagram — Hindu Marriage Offline** — `ProcessDiagrams/Hindu_Marriage_Offline.png`
 - Kaveri 3.0 Marriage prototype (UI reference only, not legal source) — `MarriageRegistrationProtoTypeDesign/templates/hindu-marriage-*.html`
 
 ---
