@@ -1,0 +1,1217 @@
+
+
+===== PAGE 1 =====
+ 
+ 
+ 
+ 
+ 
+Functional Requirement Specification 
+User Management Module 
+ 
+KAVERI 2.0 Online Services  
+For  
+Department of Stamps & Registration 
+Government of Karnataka 
+ 
+ 
+ 
+Prepared by 
+Centre For Smart Governance (CSG) 
+2nd Floor, TTMC Yeshwanthapura, BMTC Bus station 
+Bangalore - 560022 
+ 
+ 
+ 
+ 
+
+
+===== PAGE 2 =====
+User Management FRS for KAVERI 2.0  
+2 | P a g e  
+ 
+Table of Contents 
+About User Management ....................................................................................................................... 3 
+1.User Management Admins .................................................................................................................. 4 
+2.Basic User Management Functions ..................................................................................................... 5 
+3.Flow Diagrams & UI For Each Function ................................................................................................ 7 
+3.1. Create Office type ........................................................................................................................ 7 
+3.2. Create Office ................................................................................................................................ 9 
+3.3. Add Post ..................................................................................................................................... 13 
+3.4. Add Role ..................................................................................................................................... 15 
+3.5. View/Edit Role ............................................................................................................................ 17 
+3.6. Map Role to Modules/Sub Modules/Functions. ........................................................................ 19 
+3.7. Add User ..................................................................................................................................... 21 
+3.8. View /Edit User .......................................................................................................................... 25 
+3.9. Create Group .............................................................................................................................. 27 
+3.10. View/Edit Group ....................................................................................................................... 29 
+3.11. Map Group to Modules/Sub Modules/Functions. ................................................................... 31 
+3.12. Add Modules/Sub Modules/Functions .................................................................................... 33 
+3.12.1 Add Modules ...................................................................................................................... 33 
+3.12.2 Add Sub Modules ............................................................................................................... 35 
+3.12.3 Add Functions .................................................................................................................... 37 
+4.Inspector General of Registration Office (IGRO) ............................... Error! Bookmark not defined. 
+5.District Registrar Office (DRO) .......................................................... Error! Bookmark not defined. 
+6.Sub-Registrar Office (SRO) ................................................................ Error! Bookmark not defined. 
+7. CSG Developer’s Login ..................................................................... Error! Bookmark not defined. 
+ 
+ 
+ 
+
+
+===== PAGE 3 =====
+User Management FRS for KAVERI 2.0  
+3 | P a g e  
+ 
+About User Management 
+ 
+A user management module KAVERI 2 allows administrators to manage user accounts linked 
+to application. It typically provides functionality to create, edit, delete, and search for user 
+accounts, as well as manage user roles, permissions, and access control. 
+This module helps administrators to efficiently manage large numbers of users, organize 
+them into groups, and assign appropriate permissions to each group and user. 
+Some common features of a user management module include user authentication, 
+password management, user registration and activation, office creation and management, 
+Roles, post creation and management. Overall, the user management module is a critical 
+component of Kaveri 2 applications and helps ensure the security and integrity of user data 
+and resources. 
+ 
+ 
+ 
+ 
+ 
+
+
+===== PAGE 4 =====
+User Management FRS for KAVERI 2.0  
+4 | P a g e  
+ 
+1.User Management Admins 
+ 
+The user management module will be handled by following Roles 
+1. Super Admin (KPMU) 
+The super admin is responsible for creating users, roles, groups and granting privileges 
+and access of different functionalities of the Kaveri 2.0 application. KPMU will have the 
+responsibility of user administration of all department users of the entire state. 
+ 
+2. Department Admin 
+IGR of the Department of Stamps & Registration will be Department admin. The 
+department admin will be a super admin for administrative approvals. Department 
+admin will perform the same action as KPMU and will assign DIGR/AIGR roles to 
+respective users.   
+ 
+3. DIGR Admin 
+ 
+DIGR Admin will assign the roles to DR/HQA/SR/FDA/SDA/DEO users. 
+ 
+4. District Admin 
+District Admin will be District Registrar will be head of respective district, will handle 
+the mapping of roles and access to HQA/SR/FDA/SDA/DEO users of their respective 
+jurisdiction. 
+ 
+5. Sub-registrar office Admin 
+Sub registrar office Admin will be Sub Registrar, will head of the  sub-registrar office 
+and he/she would be approving authority to personnel reporting directly to him/her. 
+SR admin will handle the mapping of roles and access to FDA/SDA/DEO users of his 
+office. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+===== PAGE 5 =====
+User Management FRS for KAVERI 2.0  
+5 | P a g e  
+ 
+2.Basic User Management Functions  
+ 
+1. Creates Office Type -  Various office types likes IGRO/DRO/SRO/Additional 
+DRO/Additional SRO will be created using this functionality 
+2. Create Office – Offices like SRO Gandhinagar, DRO Mysore etc., will be created using 
+this functionality 
+ 
+3. Add Post – Using this functionality number of post and type of post in each office 
+can be described. 
+ 
+4. Add  Role -  Roles like IGR/DIGR Law & Administration/DIGR Audit/DIGR 
+Intelligence/DIGR Vigilance/DIGR CVC/DIGR Enforcement/AIGR Computers/AIGR 
+Administration/AIGR Audit/Law Officer/Accounts Superintendent/Superintendent 
+Audit/Statistical Inspector/SR Administration/SR Computers/FDA/SDA/DR/SR will be 
+created using this functionality. 
+ 
+5. View/Edit Role -  This functionality will display list of Role and further provisions an 
+edit option to change role name or enable/disable role. The privilege of view and edit 
+can be set in Modules/Sub module/Functions mapping 
+ 
+6. Mapping of Roles to Modules / Sub Modules / Functions – This option shall be used 
+to define access to role with respect to Module, Sub module and Functions. This will 
+be important functionality which will govern all kind of privileges to user/role. 
+ 
+7. Add user – This functionality will be used create new departmental user to whom 
+application access to be provided . 
+ 
+8. View/Edit user – This functionality lists all the user or specific to DRO/SRO. Further 
+based on the privilege Edit User functionality would be provided  
+ 
+9. Create Group - A Group can be created using this functionality and roles can be 
+assigned to this group. Group can be  like IGR office, DR Office, SR Office. Group 
+privilege will over ride role privilege. 
+ 
+10. View/Edit Group – This functionality lists the groups created. Further if the user has 
+privilege edit option wherein group name can be changed, or enable/disable group 
+option will be provided.  
+ 
+11. Map Group to Modules/Sub Modules/ Functions - This option shall be used to define 
+access to group with respect to Module, Sub module and Functions. This will be 
+important functionality which will govern all kind of privileges to user/role. Privilege 
+set here shall over ride role privilege.  
+
+
+===== PAGE 6 =====
+User Management FRS for KAVERI 2.0  
+6 | P a g e  
+ 
+ 
+12. Add Module/Sub Module/Function – All modules, sub modules shall be added using 
+this option. Functions can be view, print, scan, download etc. This would be done by 
+development team (CSG) 
+ 
+ 
+ 
+
+
+===== PAGE 7 =====
+User Management FRS for KAVERI 2.0  
+7 | P a g e  
+ 
+3.Flow Diagrams & UI For Each Function 
+3.1. Create Office type  
+ 
+Functional Step-by-Step Process 
+ 
+Here we create each office of the Department of Stamps & registration to use the Kaveri 
+2.0 online services. All office types must be created in the following hierarchy. 
+IGRO followed by DRO & additional DRO(if any) which will be followed by SRO.  
+1. Admin logs in to Kaveri 2.0 application. 
+2. Admin selects the “User Management->Office->Create office type” option. 
+3. Office Type id: Office type id is autogenerated. 
+4. Office Type: Office type can be IGRO/DRO/SRO/Additional DRO/Additional SRO. 
+5. Office Type Description (English): Description of the Office type in English  
+
+
+===== PAGE 8 =====
+User Management FRS for KAVERI 2.0  
+8 | P a g e  
+ 
+Case:  Sub Registrar Office. 
+6. Office Type Description (Kannada): Description of office type in Kannada  (This 
+shall be used for Kannada label display in application) 
+ 
+ 
+ 
+©2021, Department of Stamps and Registration, Karnataka
+Kaveri Online Services
+Department of Stamps and Registration,Government of Karnataka
+Logout
+Welcome, Tanmay Sharma
+KPMU ADMI N
+Office Type
+Office Type Description (English)
+Office Type Description (Kannada)
+Save & Submit
+Add Office Type
+Back
+User Management
+Dashboard
+Office Type
+Office Type ID
+Office Type Description(English)
+Office Type Description(Kannada)
+IGRO
+IGRO Office
+DRO
+District Registrar Office
+Sub Registrar Office
+SRO
+Auto Genrated
+Auto Genrated
+Auto Genrated
+
+
+===== PAGE 9 =====
+User Management FRS for KAVERI 2.0  
+9 | P a g e  
+ 
+3.2. Create Office 
+ 
+ 
+ 
+Functional Step by Step Process 
+ 
+Here we create each office of Department of Stamps & registration to use the Kaveri 2.0 
+online services. All offices must be created initially in following hierarchy. 
+IGRO followed by all DRO then SRO under each DRO.  
+Once existing Offices are created any new office can be added as per its jurisdiction 
+1. Admin login to Kaveri application 
+2. Admin selects “User Management->Office->Add office” option. 
+3. Scans & uploads Government Order to Create new office. This would be 
+mandatory going forward if any new office is created other than existing 298 
+offices. 
+
+
+===== PAGE 10 =====
+User Management FRS for KAVERI 2.0  
+10 | P a g e  
+ 
+4. Office Type: Select the office type from the list IGRO/DRO/SRO/Additional 
+DRO/Additional SRO. This is mandatory field and list would be auto populated 
+based on Office type created in previous functionality. Based on the office type 
+selected it would ask for jurisdiction it belongs to. Further if any DRO or SRO is 
+created DDO code (used for Khajane II payment) needs to be added. This will be 
+mandatory field incase of DRO and SRO. Same DDO code will be used to pass to 
+Khajane II API for payment specific to this office 
+ 
+Case 1: 
+If we are creating SRO Yeshwanthapura, List of all DRO’s should appear here select 
+appropriate DRO, when we select DRO Rajajinagar, office id of this DRO will be 
+jurisdiction id of SRO Yeshwanthapura. 
+ 
+Case 2:  
+Creating IGRO does not require selection of jurisdiction ID automatically current 
+officeid will jurisdiction id. 
+ 
+Case 3: 
+In case DRO needs to be created then IGRO will be the jurisdiction and DDO code 
+specific to this office needs to be added 
+ 
+5. DDO Code: For existing offices we need to map these from khajane mapping table. 
+For new offices this needs to be entered. This is mandatory. Only for “DRO” and 
+“SRO”. 
+6. Office Name (English): This is the name of the office. Office Name shall be entered 
+in English. This is mandatory. 
+ 
+Example:  If we are creating an SRO of Yeshwanthapura, we can input as “SRO 
+Yeshwanthapura”. 
+7. Office Name (Kannada): Enter the office name in Kannada. This is mandatory and 
+it would be used where ever kannada name of office is required.  
+8. Short Name (English): A three-character o 4 character(in rare scenarios) short 
+name shall be entered. This will be mandatory field. This short name will be used 
+to create triplet code in final registration number. 
+9. Office address: We can input the office address where the office is located. 
+Office address shall be entered in Address text box.  This will be mandatory field 
+10. Phone:  Enter landline Number as point of contact. This will be mandatory field 
+11. District: Select the District from the drop down. This is mandatory. 
+12. Pin code:  Enter the pin code. This will be mandatory field. 
+13. Is active: To Enable or disable office. This is only for office type SRO and it is 
+mandatory 
+
+
+===== PAGE 11 =====
+User Management FRS for KAVERI 2.0  
+11 | P a g e  
+ 
+14. Anywhere Registration: This will be applicable only to SRO, incase anywhere 
+registration is enabled then corresponding rules will be applied to this office. 
+Incase anywhere registration is enabled for a particular SRO under a DRO then a 
+message to be shown that anywhere registration would be enabled for 
+remaining SRO under same DRO 
+15. Then Click on “Save & Submit”. On successful creation of message to be 
+displayed 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+===== PAGE 12 =====
+User Management FRS for KAVERI 2.0  
+12 | P a g e  
+ 
+ 
+ 
+ 
+ 
+
+
+===== PAGE 13 =====
+User Management FRS for KAVERI 2.0  
+13 | P a g e  
+ 
+3.3. Add Post 
+ 
+Functional Step by Step Process 
+ 
+1. Here we create posts of Department of Stamps & registration to use the 
+Kaveri 2.0 online services. All posts under each of offices must be created 
+in following hierarchy. 
+IGR/DIGR Law & Administration/DIGR Audit/DIGR Intelligence/DIGR 
+Vigilance/DIGR 
+CVC/DIGR 
+Enforcement/AIGR 
+Computers/AIGR 
+Administration/AIGR Audit/Law Officer/SR/DR/FDA/SDA etc. 
+2. Admin logs in to Kaveri 2.0 application. 
+3. Admin selects “User Management -> Office -> Add Post” option. 
+4. Scans & uploads Government Order to Create new Post. This will be non-
+mandatory field 
+
+
+===== PAGE 14 =====
+User Management FRS for KAVERI 2.0  
+14 | P a g e  
+ 
+5. Post ID: Post ID will be autogenerated.  
+6. Office type: Office type will be selected from the drop down. This is 
+mandatory. Office type can be IGRO/DRO/SRO. 
+7. Office Name: Drop down displays all the SRO’s present under the 
+selected district. Select office name from drop down. Office Names can 
+be “SRO Yeshwanthapura”, “SRO Chincholi”. This is mandatory. 
+8. Role: Select the Role from drop down. Roles can be “FDA”, “SDA”. This is 
+mandatory. 
+9. Post Description: Role+OfficeName autogenerated. This can be “FDA SRO 
+Chincholi”. 
+10. Then Click on “Save & Submit”. 
+ 
+ 
+ 
+ 
+
+
+===== PAGE 15 =====
+User Management FRS for KAVERI 2.0  
+15 | P a g e  
+ 
+3.4. Add Role 
+ 
+Functional Step by Step Process 
+ 
+1. It is very important to update all the Roles of Kaveri 2.0 in the user management 
+module. This is required to define the Role of the user based on the functionality of 
+the user. 
+ 
+Example : 
+ 
+— Some of the Roles can be IGR/DIGR/AIGR/DR/SR/FDA/SDA/AIGR 
+Computers/SR Administration 
+ 
+  
+
+
+===== PAGE 16 =====
+User Management FRS for KAVERI 2.0  
+16 | P a g e  
+ 
+2. Department admin logs in to the Kaveri 2.0. 
+3. System displays Admin Console and Admin Dash Board. 
+4. Admin selects User Management ->Role ->Add Role option. 
+5. Role id will be autogenerated. 
+6. Role Name: Some of the Role Names will be IGR/DIGR/AIGR/DR/SR/FDA/SDA/AIGR 
+Computers/SR Administration  
+7. Role Description: Enter the short description of roles. 
+8. Is active: To Enable or disable Role. 
+9. Then click on “Save & Submit”. 
+ 
+ 
+ 
+ 
+
+
+===== PAGE 17 =====
+User Management FRS for KAVERI 2.0  
+17 | P a g e  
+ 
+3.5. View/Edit Role 
+ 
+Functional Step by Step Process 
+1. This option allows the admin to Enable/Disable created Roles in Kaveri 2.0.  
+2. Department admin logs in to the Kaveri 2.0. 
+3. System displays Admin Console and Admin Dash Board. 
+4. Admin selects User Management -> Role ->View/Edit Roles option. 
+5. On click on View/Edit roles it displays all roles. 
+6. If Role need to be edited Click on Edit under Action. 
+7. When clicked on Edit-> Role name and Is Active can be editable. 
+8. Edit Role option will be available according to the privileges given by the admin 
+to particular Role. 
+9. Then click on “Update & Submit”. 
+10. In case User does not want to edit then will be redirected to View /Edit Roles 
+screen. 
+
+
+===== PAGE 18 =====
+User Management FRS for KAVERI 2.0  
+18 | P a g e  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+===== PAGE 19 =====
+User Management FRS for KAVERI 2.0  
+19 | P a g e  
+ 
+3.6. Map Role to Modules/Sub Modules/Functions. 
+ 
+Functional Step by Step Process 
+1. Admin logs in to the Kaveri 2.0. 
+2. Admin selects User Management option. 
+3. Admin Selects “Role” option 
+4. On Select of “Map Role to Module/Sub Module/Function”. 
+5. Select the Role from drop down. 
+6. System Displays existing privileges given to the selected Role 
+7. Click on “Edit” to map new modules/sub modules/functions or remove existing 
+privileges given to the selected Role. 
+8. Click on “Save & Submit” 
+9. We can refer to Annexure- 1 for Role and module mapping  
+ 
+
+
+===== PAGE 20 =====
+User Management FRS for KAVERI 2.0  
+20 | P a g e  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+©2021, Department of Stamps and Registration, Karnataka
+Kaveri Online Services
+Department of Stamps and Registration,Government of Karnataka
+Logout
+Welcome, Tanmay Sharma
+KPMU ADMI N
+Map Modules/SubModules/Functions
+Back
+Search
+Save and Submit
+Sub Registrar
+Role
+Details
+Role ID
+Role Name
+R001
+DIGR
+Module 234
+Module 234
+Module 234
+Module 234
+(Edit)
+User Management
+Dashboard
+Module 1
+121231
+Module 2
+121231
+Module 3
+121231
+Module 4
+121231
+Module 5
+121231
+Sub Modules
+Modules
+Functions
+Sub Module 1
+Function 1
+Sub Module 2
+Function 2
+Sub Module 3
+Function 3
+Main Module: Module 1
+Sub Module: Sub Module 3
+Cancel
+Save
+
+
+===== PAGE 21 =====
+User Management FRS for KAVERI 2.0  
+21 | P a g e  
+ 
+3.7. Add User  
+ 
+ 
+Functional Step by Step Process 
+1. Here we create each user working under IGR office of Department of Stamps & 
+registration to use the Kaveri 2.0 application.  
+2. Admin selects “User Management -> User -> Add User” option. 
+3. User Type: Select the user type from the list Government Appointed/Contract. 
+4. Role ID: Selected from drop down. It can be FDA/SDA/DEO. This is mandatory. 
+5. KGID: KGID number shall be entered, it is mandatory for all government appointed 
+users. This is mandatory for Govt Appointee. 
+
+
+===== PAGE 22 =====
+User Management FRS for KAVERI 2.0  
+22 | P a g e  
+ 
+6. Official Email ID: Official email id shall be entered as login name. System checks 
+whether login name (Official email id) exists, if yes, displays message as user exists 
+else proceed with adding as new user. This is mandatory. 
+7. Office Name: Assign office to the user, jurisdiction id is automatically assigned. 
+Based on the office id data access has be restricted to only for that office for all SRO. 
+Based on the Jurisdiction ID data access has to be restricted to only for their 
+Jurisdiction.  
+8. First Name, Middle Name & Last Name:  Need to enter name of the User. First 
+Name is mandatory. 
+9. Phone No: Enter contact number. 
+10. Date of Joining: Enter date of joining only for govt appointee 
+11. Service Expiry date: Update service expiry date only for govt appointee 
+12. Id Proof type: Select Id proof from the drop-down list. This is mandatory. 
+Id Proof Description 
+PAN 
+Passport 
+Driving license 
+Bank pass book 
+Matriculation certificate 
+Degree of a recognised educational institution 
+Ration card 
+Aadhar Number 
+Voter ID (EPIC Card) 
+ 
+Validation as per the standard format for ID proof document number. 
+ 
+13. ID proof No: Enter ID proof No. This is mandatory. 
+14. Upload ID proof: Scan & upload id proof. This is mandatory. 
+15. Pan No: Is not mandatory, if entered it must be verified with PAN API. 
+16. Whether biometric authentication required if yes then scan both thumb impression. 
+17. Capture user photo 
+18. Click on “Save & Submit”. 
+19. Is Active: Select Enable to activate user and disable to deactivate user. By default it 
+will be enabled. 
+20.  When user is created, password created, Login name & password will be sent to 
+user by SMS. 
+ 
+ 
+ 
+ 
+ 
+
+
+===== PAGE 23 =====
+User Management FRS for KAVERI 2.0  
+23 | P a g e  
+ 
+For Govt Appointee 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+===== PAGE 24 =====
+User Management FRS for KAVERI 2.0  
+24 | P a g e  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+©2021, Department of Stamps and Registration, Karnataka
+Kaveri Online Services
+Department of Stamps and Registration,Government of Karnataka
+Logout
+Welcome, Tanmay Sharma
+KPMU ADMI N
+XD Index
+XD Index
+Add User
+Back
+Is Active
+Enable
+Disable
+Capture Photo
+Thumb Scan (Right)
+Thumb Scan (Left)
+Pan No.
+ID proof Number*
+Upload ID proof*
+Identity Proof*
+Save & Submit
+User Management
+Dashboard
+
+
+===== PAGE 25 =====
+User Management FRS for KAVERI 2.0  
+25 | P a g e  
+ 
+3.8. View /Edit User 
+ 
+Functional Step by Step Process 
+1. Admin logs in to Kaveri 2.0.  
+2. Admin selects User Management -> User -> View/Edit User. 
+3. Office type: If IGRO is selected all department users will be displayed. If Admin 
+selects “DRO”, Admin will be prompted to select office from the drop down. 
+Then list of users from selected DRO office including SRO users under the 
+selected DRO will be displayed. If admin selects SRO admin shall select particular 
+office from the drop down and only the selected SRO users will be displayed. 
+4. Click on particular user where details to be edited. 
+5. Edit button will be available based on the privileges given to user 
+6. Displays First Name, Middle Name & Last name which cannot be edited. 
+7. Phone number, Role ID and Is Active are enabled for editing. 
+8.  Click on “Update and Submit” to go back to previous menu. 
+ 
+ 
+
+
+===== PAGE 26 =====
+User Management FRS for KAVERI 2.0  
+26 | P a g e  
+ 
+View User 
+ 
+ 
+On Selecting Edit  
+ 
+ 
+ 
+
+
+===== PAGE 27 =====
+User Management FRS for KAVERI 2.0  
+27 | P a g e  
+ 
+3.9. Create Group  
+ 
+Functional Step by Step Process 
+ 
+1. Groups of Kaveri 2.0 users can be created here. This is required to define the 
+Group for set of users. 
+2. Admin logs in to the Kaveri 2.0. 
+3. System displays Admin Console and Admin Dash Board. 
+4. Admin selects User Management/User /Create Group option. 
+5.  Group id will be autogenerated. 
+6. Enter the Group Name like “IGR Office/DR Office/ SR Office”. It is mandatory. 
+7. Enter the Group description This can be small information about the group.  
+8. Also, Role need to be assigned to Group by selected from drop down. This is 
+mandatory. 
+9. Is active: Enable or disable the Group if it is not assigned to any of the user 
+10. Then click on “Save & Submit”. 
+11. We can refer to UserMapping_v0.1_Annexure document. 
+
+
+===== PAGE 28 =====
+User Management FRS for KAVERI 2.0  
+28 | P a g e  
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+===== PAGE 29 =====
+User Management FRS for KAVERI 2.0  
+29 | P a g e  
+ 
+3.10. View/Edit Group 
+ 
+Functional Step by Step Process 
+1. This option allows the admin to Enable/Disable created Roles in Kaveri 2.0.  
+2. Department admin logs in to the Kaveri 2.0. 
+3. System displays Admin Console and Admin Dash Board. 
+4. Admin selects User Management/User/View -Edit Group option. 
+5. Displays all Group. 
+6. If Group need to be edited Click on Edit under Action. 
+7. When clicked on Edit-> Group name, Group Description Roles and Is Active can 
+be editable. 
+8. Edit Group option will be available according to the privileges given by the admin 
+to particular Role. 
+9. Then click on “Update & Submit”. 
+10. In case User does not want to edit then will be redirected to View /Edit Group 
+screen. 
+
+
+===== PAGE 30 =====
+User Management FRS for KAVERI 2.0  
+30 | P a g e  
+ 
+ 
+On Click of Edit Following screen will be populated. 
+ 
+
+
+===== PAGE 31 =====
+User Management FRS for KAVERI 2.0  
+31 | P a g e  
+ 
+ 
+3.11. Map Group to Modules/Sub Modules/Functions. (This module will be handled by 
+development team) 
+ 
+ 
+Functional Step by Step Process 
+1. Admin logs in to the Kaveri 2.0. 
+2. System displays Admin Console and Admin Dash Board. 
+3. Admin selects User Management option. 
+4. Admin Selects “User” option 
+5. Select “Map Group to Module/Sub Module/Function”. 
+6. Select the Group from drop down. 
+7. System Displays existing privileges given to the selected Group. 
+8. Click on “Edit” to map new modules/sub modules/functions or remove existing 
+privileges given to the selected Role. 
+9. Click on “Save & Submit” 
+10. We can refer to Annexure- 1 for Group and module mapping. 
+ 
+
+
+===== PAGE 32 =====
+User Management FRS for KAVERI 2.0  
+32 | P a g e  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Kaveri Online Services
+Department of Stamps and Registration,Government of Karnataka
+Logout
+Welcome, Tanmay Sharma
+KPMU ADMI N
+XD Index
+Map Modules/SubModules/Functions
+Back
+Search
+Save and Submit
+IGR Office
+Group
+Details
+Group ID
+Group Name
+IGR001
+IGR Office
+Module 234
+Module 234
+Module 234
+Module 234
+(Edit)
+Dashboard
+MIS
+Document Registration
+User Management
+Office
+Role
+User
+Add User
+View User
+Edit User
+Create Group
+Map Group to
+Modules/Sub Module
+/Functions
+Miscellaneous
+©2021, Department of Stamps and Registration, Karnataka
+Module 1
+121231
+Module 2
+121231
+Module 3
+121231
+Module 4
+121231
+Module 5
+121231
+Sub Modules
+Modules
+Functions
+Sub Module 1
+Function 1
+Sub Module 2
+Function 2
+Sub Module 3
+Function 3
+Main Module: Module 1
+Sub Module: Sub Module 3
+Cancel
+Save
+
+
+===== PAGE 33 =====
+User Management FRS for KAVERI 2.0  
+33 | P a g e  
+ 
+3.12. Add Modules/Sub Modules/Functions 
+3.12.1 Add Modules 
+ 
+Functional Step by Step Process 
+1. It is very important update all the modules of Kaveri 2.0 in the user management 
+module. This is required to give access to the user based on the functionality of the 
+user. 
+Case 1: 
+— Some of the Modules are MIS Reports, CVC Module. 
+2. CSG Developers logs in to the Kaveri 2.0. 
+3. System displays Admin Console and User Management/Miscellaneous. 
+4. Admin selects Add Module option. 
+5. Enter module id,  
+
+
+===== PAGE 34 =====
+User Management FRS for KAVERI 2.0  
+34 | P a g e  
+ 
+6. System checks whether this Main or sub module already exists, if yes system displays 
+“Module Already exists” and displays the details else system allows to enter the 
+name of the Module. 
+7. Then click on “Save & Submit”. 
+8. We can refer to UserMapping_v0.1_Annexure document. 
+ 
+ 
+ 
+ 
+Kaveri Online Services
+Department of Stamps and Registration,Government of Karnataka
+Logout
+Welcome, Tanmay Sharma
+KPMU ADMI N
+XD Index
+Value
+Module Name
+Value
+Module ID
+Save
+Save & Submit
+Add Module
+Back
+Module ID
+Module Name
+Dashboard
+MIS
+Document Registration
+User Management
+Office
+Role
+User
+Miscellaneous
+Add Module
+Sub Module
+Functions
+©2021, Department of Stamps and Registration, Karnataka
+
+
+===== PAGE 35 =====
+User Management FRS for KAVERI 2.0  
+35 | P a g e  
+ 
+ 
+3.12.2 Add Sub Modules 
+ 
+Functional Step by Step Process 
+ 
+1. It is very important update all the modules of Kaveri 2.0 in the user 
+management sub module. This is required to give access to the user based on 
+the functionality of the user. 
+Case 1: 
+— Some of the Modules are MIS Reports,  
+— Sub modules are Statutory Reports. 
+ 
+
+
+===== PAGE 36 =====
+User Management FRS for KAVERI 2.0  
+36 | P a g e  
+ 
+2. CSG Developer logs in to the Kaveri 2.0. 
+3. System displays Admin Console and User Management/Miscellaneous. 
+4. Admin selects Add Sub Module option. 
+5. Select the module. 
+6. If we want to add sub module enter Sub module id ,  
+7. System checks sub module already exists, if yes system displays “Sub Module 
+Already exists” and displays the details else system allows to enter the Name 
+of the Sub Module. 
+8. Enter Sub Module name. 
+9. Select Module from the drop down. 
+10. Then click on “Save & Submit”. 
+11. We can refer to UserMapping_v0.1_Annexure document. 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Kaveri Online Services
+Department of Stamps and Registration,Government of Karnataka
+Logout
+Welcome, Tanmay Sharma
+KPMU ADMI N
+XD Index
+Add Function
+Back
+Value
+Function Name
+Value
+Module
+Value
+Sub Module
+Value
+Function ID
+Save & Submit
+Function ID
+Function Name
+Module
+Sub Module
+Dashboard
+MIS
+Document Registration
+User Management
+Office
+Role
+User
+Miscellaneous
+Add Module
+Sub Module
+Functions
+©2021, Department of Stamps and Registration, Karnataka
+
+
+===== PAGE 37 =====
+User Management FRS for KAVERI 2.0  
+37 | P a g e  
+ 
+ 
+3.12.3 Add Functions 
+ 
+Functional Step by Step Process 
+1. It is very important update all the modules of Kaveri 2.0 in the user 
+management functions under module and sub modules and functions. This is 
+required to give access to the user based on the functionality of the user. 
+Case 1: 
+— Some of the Modules are MIS Reports,  
+— Sub modules are Statutory Reports 
+— Functions can be View, Print, Download etc. 
+ 
+
+
+===== PAGE 38 =====
+User Management FRS for KAVERI 2.0  
+38 | P a g e  
+ 
+2. CSG Developer logs in to the Kaveri 2.0. 
+3. System displays Admin Console and User Management/Miscellaneous. 
+4. Admin selects Add Function option. 
+5. Enter function id, System checks Function already exists, if yes system 
+displays “Function Already exists” and displays the details else system allows 
+to enter the Name of the Function. 
+6. Select Module & Sub module for which function belongs. 
+7. Then click on “Save & Submit”. 
+ 
+ 
+ 
+Kaveri Online Services
+Department of Stamps and Registration,Government of Karnataka
+Logout
+Welcome, Tanmay Sharma
+KPMU ADMI N
+XD Index
+Add Function
+Back
+Value
+Function Name
+Value
+Module
+Value
+Sub Module
+Value
+Function ID
+Save & Submit
+Function ID
+Function Name
+Module
+Sub Module
+Dashboard
+MIS
+Document Registration
+User Management
+Office
+Role
+User
+Miscellaneous
+Add Module
+Sub Module
+Functions
+©2021, Department of Stamps and Registration, Karnataka
+
+
+===== PAGE 39 =====
+User Management FRS for KAVERI 2.0  
+39 | P a g e  
+ 
+Inspector General of Registration Office (IGRO) 
+1. Super Admin (KPMU) 
+Super admin will perform all the basic functions listed above and will have privilege 
+as per the UserMapping_v0.1_Annexure document. 
+ 
+2. Department Admin 
+IGR of the Department of Stamps & Registration will be Department admin. The 
+department admin will be a super admin for administrative approvals. Department 
+admin will perform the same action as KPMU and will assign DIGR/AIGR roles to 
+respective users and will have privilege as per the UserMapping_v0.1_Annexure 
+document. 
+Following Basic functionalities will be available in Department Admin IGR login to 
+assign DIGR/AIGR to their respective roles. 
+SRNO. 
+Actions 
+1 
+View List of All Users 
+2 
+View User privileges 
+3 
+Change group of users 
+4 
+Change role of users 
+5 
+Change the User privileges 
+6 
+Deactivate Users 
+7 
+Add Users 
+8 
+Assigning the groups 
+9 
+Assigning the roles 
+10 
+View Group 
+11 
+Edit Group 
+12 
+Add Group 
+13 
+View Roles 
+14 
+Edit Roles 
+15 
+Add Role 
+ 
+ 
+ 
+
+
+===== PAGE 40 =====
+User Management FRS for KAVERI 2.0  
+40 | P a g e  
+ 
+ 
+ 
+3. DIGR Admin 
+DIGR / AIGR will have following functionalities will map DR/HQA/SR/FDA/SDA/DEO  to 
+respective district and will have privilege as per the UserMapping_v0.1_Annexure 
+document. 
+SRNO. 
+Actions 
+1 
+View List of  
+2 
+View User privileges  
+3 
+Change group of users 
+4 
+Change role of users  
+5 
+Change the User privileges  
+6 
+Deactivate Users  
+7 
+Add Users  
+8 
+Assigning the groups  
+9 
+Assigning the roles  
+10 
+View Group  
+11 
+View Roles  
+ 
+ 
+ 
+
+
+===== PAGE 41 =====
+User Management FRS for KAVERI 2.0  
+41 | P a g e  
+ 
+ 
+ 
+5.District Registrar Office (DRO) 
+District Admin will be District Registrar will be head of respective district, will handle 
+the mapping of roles and access to HQA/SR/FDA/SDA/DEO users of their respective 
+jurisdiction 
+District Registrar will be having following functionalities and will map HQA for their 
+respective districts. SR and DEO also assigned to respective SRO in their jurisdiction 
+and will have privilege as per the UserMapping_v0.1_Annexure document. 
+ 
+Sno. 
+Actions 
+1 
+View List of users 
+2 
+View User privileges  
+3 
+Deactivate users 
+4 
+Add user 
+5 
+Assigning the groups 
+6 
+Assigning the roles  
+Actions will be available only for their respective jurisdiction. 
+ 
+ 
+
+
+===== PAGE 42 =====
+User Management FRS for KAVERI 2.0  
+42 | P a g e  
+ 
+ 
+ 
+6.Sub-Registrar Office (SRO) 
+Sub Registrar will be having following functionalities and will map FDA/SDA/DEO for 
+their respective SRO and will have privilege as per the UserMapping_v0.1_Annexure 
+document. 
+SRNO. 
+Actions 
+1 
+View List users 
+2 
+View User privileges  
+ 
+  
+Actions will be enabled only for actions on FDA/SDA/DEO respective jurisdiction users. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

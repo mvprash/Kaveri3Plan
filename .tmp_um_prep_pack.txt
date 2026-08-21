@@ -1,0 +1,163 @@
+BR Discussion Prep Pack — User Management
+Kaveri 3.0 Requirements Discussion
+Discussion date: 24 August 2026  |  Schedule Sr. 10–11  |  Version 1.0
+Purpose: Brief the committee before the User Management discussion with (a) current Kaveri 2.0 pain points evidenced from ServiceDesk, (b) what the department already proposed in the Kaveri 2.0 User Management FRS, and (c) focused discussion / decision points for Kaveri 3.0.
+
+0. Prerequisites before starting the discussion
+Complete / confirm the following before the 24-Aug session starts:
+Circulate this Prep Pack + the Kaveri 2.0 User Management FRS (v0.3) as pre-read.
+Confirm which admin roles will speak for KPMU / IGR / DIGR / DR / SR on access hierarchy.
+Bring current live Kaveri 2.0 screens (or walkthrough) for: Add User, Role–Module mapping, Office/Post master, In-charge / transfer handling (if any).
+Confirm whether UserMapping_v0.1_Annexure (referenced in FRS) is available — it defines role/module privileges and is repeatedly cited but not attached to the FRS PDF.
+List open Marriage carry-forward items that depend on User Management (e.g. DEO allocation, SR digital-sign identity, role-login step visibility).
+Decide whether citizen authentication is in scope for this session or deferred (FRS v0.3 focuses on departmental user administration).
+Agree meeting outputs: decisions log, OQ list, and BRD section outline for User Management.
+1. Pain points in the current Kaveri 2.0 system
+Note on evidence: ServiceDesk OverallList and Categorized sheets do not have a dedicated “User Management” subcategory. User-administration defects surface inside other modules (Firm, Digital Sign, 68(2), Dashboard, Fruits, Liability, etc.). OverallList ticket subjects analysed below are predominantly 2023–Feb 2024; Categorized sheet carries the later curated / repeated themes (ticket IDs in the 78k–95k range).
+1.1 Priority pain points (latest / repeated — discussion focus)
+
+1.2 Related ServiceDesk themes that depend on User Management
+These are not pure “create user” defects, but they repeatedly fail because of role, office, or identity binding — and should be acknowledged in the UM discussion.
+
+1.3 Observation for the committee
+There is no dedicated User Management issue taxonomy in ServiceDesk — recommend creating one in Kaveri 3.0 support operations.
+Highest-signal operational failures for UM are: login failures, missing officer names in allocation dropdowns, in-charge not selectable, wrong jurisdiction visibility, and incomplete user relieve/deactivate.
+Many “X not reflecting in SR/DEO/FDA login” tickets are workflow bugs, but a subset is caused by incorrect user–role–office assignment — need triage rule during BRD.
+2. What the department proposed (Kaveri 2.0 User Management FRS v0.3)
+Source: Functional Requirement Specification — User Management Module, KAVERI 2.0 Online Services (CSG), v0.3. This is the department’s stated target capability for departmental user administration and is the baseline proposal to validate / extend for Kaveri 3.0.
+2.1 Admin hierarchy proposed
+
+2.2 Basic functions proposed
+
+2.3 Key business rules stated in FRS (to confirm for 3.0)
+Office hierarchy must be created as IGRO → DRO (+ Additional DRO) → SRO (+ Additional SRO).
+Data access restricted by Office ID (SRO users) and Jurisdiction ID (district-scoped roles).
+Official email ID is the login name; duplicate login rejected.
+KGID mandatory for Government Appointed users.
+On user create: password generated and Login + Password sent by SMS.
+Group privileges override role privileges.
+Enable/Disable (Is Active) used to activate or deactivate users/roles/groups.
+Privilege matrices deferred to UserMapping_v0.1_Annexure (must be retrieved / rebuilt for 3.0).
+2.4 Gaps / risks visible in the FRS proposal itself
+TOC sections for IGRO/DRO/SRO/CSG Developer login show “Error! Bookmark not defined.” — incomplete packaging.
+SRO Admin powers in §6 list only View users / View privileges, while §1 says SR handles FDA/SDA/DEO mapping — inconsistency to resolve.
+No explicit Transfer / Relieving / In-charge / additional charge workflow in the FRS — yet ServiceDesk shows these as real pain points (UM-PP-03, UM-PP-05).
+No password reset / unlock / MFA / session policy detail beyond initial SMS password.
+No audit trail / maker-checker for privilege changes described in the FRS body.
+Citizen user management / eKYC identity is out of this FRS — confirm boundary for 24-Aug discussion.
+3. Discussion agenda — 24 August 2026
+3.1 Suggested session flow
+
+3.2 Decision questions (must close or park with owner)
+
+4. Pain point → proposed capability mapping
+Use this table in the meeting to check whether FRS v0.3 already covers the pain point, or whether Kaveri 3.0 must add new requirements.
+
+5. Expected outputs of 24–25 August sessions
+Agreed scope statement for User Management BRD (in / out).
+Confirmed admin hierarchy and per-role actions matrix (replace / supersede FRS annexure).
+Decision log for DQ-01…DQ-12 (decided / deferred with owner + date).
+Prioritised Kaveri 3.0 requirements list: Keep from FRS + New (transfer/in-charge/reset/audit/DSC bind).
+List of masters needed: Office Type, Office, Post, Role, Group, Module catalogue, Privilege matrix.
+ServiceDesk taxonomy recommendation: add User Management category/subcategories for future tracking.
+Handoff note into Sr. 12 Document Registration discussions (user/role dependencies).
+6. References
+Requirement Discussions/Kaveri2.0/User Management KAVERI 2.0_v0.3.pdf — Functional Requirement Specification, User Management Module (CSG).
+Requirement Discussions/ServiceDesk Issues/ServiceDeskIssuesList.xlsx — sheets OverallList and Categorized.
+Project_Plan_Kaveri_3.0_Programme_v0.4 — BR discussion calendar Sr. 10–11 (24–25 Aug 2026).
+UserMapping_v0.1_Annexure — referenced by FRS; locate or rebuild before Sr. 11 BRD drafting.
+7. Document control
+
+— End of Prep Pack —  For discussion use on 24 August 2026; update Decision column live in session —
+
+--- TABLE 1 ---
+Field | Value
+Document type | BR Discussion Prep Pack (Agenda + Prerequisites + Inputs)
+Module | User Management (Schedule Sr. 10–11)
+Planned dates | 24-08-2026 to 25-08-2026 (discussion + BRD capture)
+Primary inputs | ServiceDeskIssuesList.xlsx (OverallList + Categorized); User Management KAVERI 2.0_v0.3.pdf (FRS)
+Attendees (per programme plan) | Committee, AIGR Comp, Kaveri IT Cell, KPMU, Domain Expert / BA / PO
+Prior progress | Sr. 1–8 Marriage topics completed (from 17-08-2026). Discussions resume 24-08-2026 with User Management.
+Related FRS | Requirement Discussions/Kaveri2.0/User Management KAVERI 2.0_v0.3.pdf
+ServiceDesk source | Requirement Discussions/ServiceDesk Issues/ServiceDeskIssuesList.xlsx
+
+--- TABLE 2 ---
+ID | Pain Point | Evidence / References | Why it matters for UM
+UM-PP-01 | Repeated “Login issue” for departmental users | OverallList: 7 tickets with subject “Login issue” (27806, 28657, 29440, 29765, 30215, 30337, 30342) — HO Bangalore & multiple SROs, Jan–Feb 2024 | Authentication / account unlock / credential lifecycle is unstable or poorly supported.
+UM-PP-02 | DEO names not reflecting in DR login dropdown (allocation) | Categorized → Firm: tickets 92889, 91889, 91184, 91030 | User–office–role master incomplete; cannot allocate work to valid DEO users.
+UM-PP-03 | In-Charge SR names not reflecting in DR login to select | Categorized → 68(2): ticket 78456; OverallList related: 21311 (“Incharge Name is not reflecting while summary approve”) | In-charge / temporary charge not modelled correctly in user–post mapping.
+UM-PP-04 | Current Sub-Registrar name not displayed for digital sign (Step 9) | Categorized → Digital Sign: 27050; also Step allocation 95322 (Digital Sign option not reflecting in SR login STEP 9) | Active SR identity / DSC binding not resolved from user session + office post.
+UM-PP-05 | User removal / deactivation from office login incomplete | OverallList: 11243 — “Removal of DEO -Deepika from SRO Udupi Login” | No reliable relieve / deactivate / revoke-access flow when staff leave an office.
+UM-PP-06 | SRO / office code not mapped — access & integration failures | OverallList repeated: 24581, 25905, 27404 (“SRO CODE NOT MAPPED”); Categorized → Fruits same theme | Office master / jurisdiction mapping gaps break module access and external feeds.
+UM-PP-07 | Wrong office / wrong district users or queues visible | Categorized: Liability 95242 (wrong district SRO names in DR login); Village/Road 86121 (Hanur EC reflected in Kollegala login); MIS 20687 (other-district SR offices in MIS) | Jurisdiction-scoped data access not enforced consistently by role + office.
+UM-PP-08 | Work allocated to a role login but not visible / stuck in another login | Categorized: Step allocation 31958 (allocated to DEO — not in DEO login); rescanning 30840/30827/30863; Document Summary 28388; Dashboard 85826 (old registered apps still in FDA & SDA login) | Role inbox / step assignment depends on fragile user–role–office assignment.
+UM-PP-09 | OTP not delivered / not verifying for departmental actions (FDA) | Categorized → Court Order: 94903, 93570, 91300; 95596, 93179, 76780, 31287 | Officer identity / mobile / contact master used for OTP is unreliable.
+UM-PP-10 | Generic “Mapping issue / Mapping Request” without self-service path | OverallList: 18858, 24367, 31943 | Admins raise ServiceDesk for mapping changes instead of controlled UM workflows.
+
+--- TABLE 3 ---
+Theme | Sample Categorized evidence | UM dependency
+Digital sign not available / popup not opening in SR login | 95349, 93957, 92267, 85981, 30966; Marriage 92861 | SR user ↔ DSC / certificate mapping; active post holder.
+Unable to search / act in FDA–SDA department login (EC) | 94995, 94990, 94986, 94957, 89785 (pending count high) | Role privileges for FDA/SDA on EC module functions.
+Sakala cleared but still reflecting in SR login | 95572, 94849 (pending 18) | User/office pendency identity vs Sakala officer mapping.
+Citizen vs department login visibility mismatches | Multiple EC/CC/Marriage/Firm categorized items | Clear separation of citizen auth vs departmental RBAC (scope check).
+
+--- TABLE 4 ---
+Admin role | Who | Proposed responsibility (FRS)
+Super Admin (KPMU) | KPMU | Create users, roles, groups; grant privileges statewide; full user administration.
+Department Admin | IGR | Same actions as KPMU for administrative approvals; assign DIGR/AIGR roles.
+DIGR Admin | DIGR / AIGR | Map DR / HQA / SR / FDA / SDA / DEO to respective district; manage users/roles/groups per privilege annexure.
+District Admin | District Registrar | Map roles/access for HQA / SR / FDA / SDA / DEO in own jurisdiction; assign SR & DEO to SROs.
+SRO Admin | Sub-Registrar | Approving authority for personnel reporting to SR; map roles/access for FDA / SDA / DEO of that office (FRS SRO section lists View users / View privileges — confirm if Add/Assign was intended).
+
+--- TABLE 5 ---
+# | Function | Department intent (summary)
+1 | Create Office Type | IGRO / DRO / SRO / Additional DRO / Additional SRO hierarchy.
+2 | Create Office | Concrete offices (e.g., SRO Gandhinagar, DRO Mysore).
+3 | Add Post | Post count/type per office; GO upload optional; Role + Office → Post description.
+4 | Add Role | Roles such as IGR, DIGR (Law/Audit/Intelligence/Vigilance/CVC/Enforcement), AIGR (Computers/Administration/Audit), Law Officer, Accounts/Audit Superintendents, Statistical Inspector, SR Admin/Computers, FDA, SDA, DR, SR.
+5 | View / Edit Role | Rename; enable/disable role; edit controlled by mapping privileges.
+6 | Map Role → Module / Sub-module / Function | Core RBAC — governs privileges (view/print/scan/download etc.).
+7 | Add User | Govt Appointed / Contract; Role; KGID (mandatory for Govt); official email as login; office → jurisdiction restriction; name/phone; joining & service expiry (Govt); ID proof + upload; optional PAN API; optional biometric thumbs; photo; Is Active; SMS of login & password on create.
+8 | View / Edit User | Filter by IGRO/DRO/SRO; edit phone, Role ID, Is Active (name locked).
+9–11 | Create / Edit Group & Map Group → Module/Sub/Function | Groups (IGR/DR/SR Office); roles assigned to group; group privilege overrides role privilege.
+12 | Add Module / Sub-module / Function | Catalogue maintained by development team (CSG) for privilege mapping.
+
+--- TABLE 6 ---
+Block | Time (indicative) | Focus
+A | 0–15 min | Prerequisites check; confirm scope boundary (dept users vs citizen auth).
+B | 15–40 min | Walk ServiceDesk pain points UM-PP-01 to UM-PP-10; validate with IT Cell / field experience.
+C | 40–75 min | Walk FRS proposed model (admins, office/post/role/user/group, RBAC). Mark Keep / Change / Drop.
+D | 75–100 min | Close open design decisions (section 3.2). Capture owners.
+E | 100–120 min | Agree BRD outline for Sr. 11; list annexures needed (privilege matrix, org master).
+
+--- TABLE 7 ---
+DQ# | Discussion point | Options / notes | Decision
+DQ-01 | Retain FRS admin hierarchy (KPMU / IGR / DIGR / DR / SR) for Kaveri 3.0? | Keep as-is / simplify / add AIGR Computers as statewide IT admin | 
+DQ-02 | What can SR Admin do — only view, or also add/map FDA–SDA–DEO? | Resolve FRS §1 vs §6 contradiction | 
+DQ-03 | How are Transfer, Relieving, In-charge, Additional charge handled? | New UM workflows vs HRMS integration vs manual KPMU ticket | 
+DQ-04 | Login identity: official email only, or KGID / mobile / SSO (Seva Sindhu / State SSO)? | Impacts UM-PP-01 and OTP (UM-PP-09) | 
+DQ-05 | Password / unlock / reset policy (self-service vs admin reset vs SMS OTP)? | Must address repeated Login issue tickets | 
+DQ-06 | Group privilege override of Role — keep, reverse, or remove groups? | FRS says group overrides role; confirm governance | 
+DQ-07 | Is DEO a Role, a Post, or both? How linked to SRO for allocation dropdowns? | Directly addresses UM-PP-02 / UM-PP-08 | 
+DQ-08 | DSC / eSign certificate binding to active SR post holder — rules on charge change? | Addresses UM-PP-04 and digital-sign failures | 
+DQ-09 | Jurisdiction enforcement: hard filter by office/jurisdiction for all modules? | Addresses UM-PP-06 / UM-PP-07 | 
+DQ-10 | Maker-checker + audit for Add User / Role map / privilege change? | Not in FRS; recommend for 3.0 NFR/compliance | 
+DQ-11 | Scope of 24–25 Aug BRD: departmental UM only, or include citizen account lifecycle? | Citizen items appear heavily in ServiceDesk “login” noise | 
+DQ-12 | Do we rebuild UserMapping annexure as a controlled privilege matrix in BRD? | Required reference; missing from packaged PDF | 
+
+--- TABLE 8 ---
+Pain point | Covered by FRS v0.3? | Proposed 3.0 discussion stance
+UM-PP-01 Login failures | Partial (create + SMS password only) | Add reset/unlock/MFA/session policy.
+UM-PP-02 DEO missing in dropdown | Partial (Add User + office assign) | Enforce active post→office sync; allocation reads same master.
+UM-PP-03 In-charge SR missing | Not covered | New In-charge / additional charge workflow.
+UM-PP-04 SR name not on digital sign | Not covered | Bind DSC to active post holder; show legal name from UM.
+UM-PP-05 Remove / deactivate user | Partial (Is Active) | Add relieve date, office unmap, access cut-off, history.
+UM-PP-06 SRO code not mapped | Partial (Create Office) | Mandatory office codes; integration mapping validation.
+UM-PP-07 Wrong jurisdiction visibility | Stated rule (office/jurisdiction restrict) | Make hard RBAC+data filter; test across modules.
+UM-PP-08 Allocation vs login mismatch | Indirect (role/office) | Unified work-queue identity from UM assignment.
+UM-PP-09 OTP to officer fails | Partial (phone on Add User) | Mandatory verified mobile; update path; OTP audit.
+UM-PP-10 Mapping via ServiceDesk | Partial (admin map screens) | Self-service within admin hierarchy + SLA; reduce tickets.
+
+--- TABLE 9 ---
+Version | Date | Author | Summary
+1.0 | 21-Aug-2026 | BA / KPMU prep | Initial Prep Pack for 24-Aug User Management discussion: ServiceDesk pain points + FRS proposal + agenda/DQs.
