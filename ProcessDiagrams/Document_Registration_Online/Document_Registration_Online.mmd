@@ -1,0 +1,130 @@
+---
+title: Document Registration – Online (Swimlane)
+---
+flowchart LR
+
+    subgraph lane_citizen["Citizen"]
+        direction LR
+        start(("Start"))
+        login["Log on to department Portal"]
+        serviceType["Select Service Type"]
+        sro["Identify the SRO where property belongs"]
+        sroOffice["Identify the Sub-Registrar Office where to apply"]
+        readForm["Read Instructions and Enter Details in the displayed form"]
+        bookSlot["Book available date and time"]
+        submitPay["Submit Form & pay Fees"]
+        visitSR["Visits SR"]
+        kiosk["Marks his presence in kiosk"]
+        presentDoc["Present document to SR"]
+        collectReceipt["Collect Receipt"]
+        signThumbCopy["Sign Thumb Impression copy"]
+        signForm6061["Signs Form 60.61; Sign declaration"]
+        partiesSign["Parties and witnesses Sign Endorsement"]
+        signSummaryCitizen["Signs Summary Report"]
+        errorCheck{"Error?"}
+        receiveDoc["Receives original document with print of scanned copy and EC"]
+        endSuccess(("End"))
+    end
+
+    subgraph lane_system["System"]
+        direction LR
+        recordPayment["Record payment, generate receipt"]
+        validApp{"Valid Application?"}
+        optionChange{"Option for change"}
+        forwardSR["Forward application to SR and intimate applicant to visit SR on appointed date"]
+        minuteBook["Enter the reason in minute book"]
+        genPending["Generate pending no."]
+        printIntimation["Print Intimation"]
+        endReject(("End"))
+        updateStatus["Update status in system as ready for presentation"]
+        recordRegister["Record in appropriate Register"]
+        updateAReg["Update A Register, Index register, Gen. J Slip"]
+        genRegNo["Generate Registration No."]
+        printSummary["Print summary report"]
+        scanDoc["Scan the Document"]
+        printIndexII["Print the document and Index II record"]
+        stop(("Stop"))
+    end
+
+    subgraph lane_sr["SR"]
+        direction LR
+        form6061["Accept Form 60/61 if PAN not given; Print declaration"]
+        callsParties["Calls parties to present"]
+        srExamine["SR examines the document and SD/RF"]
+        fullSDRF{"Full SD/RF paid?"}
+        referDR["Refer case to DR for MV/Impound"]
+        voluntaryExec{"Voluntary execution and Valid Application?"}
+        refusalReason["Enter refusal reason in system"]
+        admitDoc["Admit document and enter payment detail in system"]
+        attachEndorse["Attaches signed and sealed endorsement to Document"]
+        signSummarySR["Signs summary Report"]
+        genSummary["Generate Summary Report"]
+        checkRegister["Check and Register"]
+        srCorrect["SR corrects data"]
+        srSignEndorse["Signs Endorsement"]
+    end
+
+    subgraph lane_fda["FDA/SDA"]
+        direction LR
+        captureBio["Capture photograph and thumb impression"]
+        printThumb["Print Thumb Impression"]
+        printEndorse["Prints Endorsement"]
+        fileThumbReg["File in Thumb Register"]
+    end
+
+    start --> login
+    login --> serviceType
+    serviceType --> sro
+    sro --> sroOffice
+    sroOffice --> readForm
+    readForm --> bookSlot
+    bookSlot --> submitPay
+    submitPay --> recordPayment
+    submitPay --> validApp
+    recordPayment --> form6061
+    form6061 --> forwardSR
+    validApp -->|No| optionChange
+    validApp -->|Yes| forwardSR
+    optionChange -->|Yes| readForm
+    optionChange -->|No| minuteBook
+    minuteBook --> genPending
+    genPending --> printIntimation
+    printIntimation --> endReject
+    forwardSR --> updateStatus
+    forwardSR --> visitSR
+    visitSR --> kiosk
+    kiosk --> updateStatus
+    updateStatus --> callsParties
+    callsParties --> presentDoc
+    presentDoc --> srExamine
+    srExamine --> fullSDRF
+    fullSDRF -->|No| referDR
+    fullSDRF -->|Yes| voluntaryExec
+    voluntaryExec -->|No| refusalReason
+    voluntaryExec -->|Yes| admitDoc
+    refusalReason --> stop
+    admitDoc --> recordRegister
+    admitDoc --> captureBio
+    captureBio --> printThumb
+    printThumb --> collectReceipt
+    collectReceipt --> signForm6061
+    signForm6061 --> signThumbCopy
+    signThumbCopy --> updateAReg
+    updateAReg --> genRegNo
+    genRegNo --> attachEndorse
+    attachEndorse --> partiesSign
+    partiesSign --> signSummaryCitizen
+    signSummaryCitizen --> errorCheck
+    errorCheck -->|Yes| srCorrect
+    errorCheck -->|No| printSummary
+    srCorrect --> genSummary
+    genSummary --> checkRegister
+    printSummary --> signSummarySR
+    signSummarySR --> checkRegister
+    checkRegister --> printEndorse
+    checkRegister --> scanDoc
+    printEndorse --> srSignEndorse
+    srSignEndorse --> fileThumbReg
+    scanDoc --> printIndexII
+    printIndexII --> receiveDoc
+    receiveDoc --> endSuccess
