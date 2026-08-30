@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="P-04_Departmental_Mobile_Change" id="0">
+    <mxGraphModel dx="905" dy="478" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2350" pageHeight="752" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="frame" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="720" width="2318" x="16" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="lane0" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=54;fontStyle=1;" value="OFFICER" vertex="1">
+          <mxGeometry height="210" width="2318" x="16" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="lane1" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=54;fontStyle=1;" value="SYSTEM" vertex="1">
+          <mxGeometry height="230" width="2318" x="16" y="226" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=54;fontStyle=1;" value="ADMINISTRATOR" vertex="1">
+          <mxGeometry height="280" width="2318" x="16" y="456" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="Reports lost / changed&#xa;mobile off-system" vertex="1">
+          <mxGeometry height="60" width="210" x="100" y="91" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="Locate user by KGID&#xa;(authorised admin only)" vertex="1">
+          <mxGeometry height="65" width="220" x="390" y="507.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="shape=parallelogram;whiteSpace=wrap;html=1;fixedSize=1;" value="Enter new mobile&#xa;+ mandatory reason&#xa;(FR-65)" vertex="1">
+          <mxGeometry height="70" width="230" x="680" y="622.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="OTP to new&#xa;number" vertex="1">
+          <mxGeometry height="65" width="200" x="990" y="308.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;" value="Save; audit; official&#xa;email notify (FR-65, FR-13)" vertex="1">
+          <mxGeometry height="100" width="230" x="1280" y="504" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="Login: KGID + Captcha&#xa;+ OTP + Biometrics (FR-06/07)" vertex="1">
+          <mxGeometry height="70" width="240" x="1600" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=0.5;entryX=0.5;entryY=0.5;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="205" y="329.25" />
+              <mxPoint x="500" y="329.25" />
+            </Array>
+            <mxPoint x="205" y="151" as="sourcePoint" />
+            <mxPoint x="500" y="507.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=0.5;entryX=0.5;entryY=0.5;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="597.55" />
+              <mxPoint x="795" y="597.55" />
+            </Array>
+            <mxPoint x="500" y="572.5" as="sourcePoint" />
+            <mxPoint x="795" y="622.6" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=0.5;entryX=0.5;entryY=0.5;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="795" y="498.05" />
+              <mxPoint x="1090" y="498.05" />
+            </Array>
+            <mxPoint x="795" y="622.6" as="sourcePoint" />
+            <mxPoint x="1090" y="373.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="n5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=1;exitY=0.5;entryX=0.5;entryY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1210" y="341" />
+              <mxPoint x="1210" y="373.5" />
+              <mxPoint x="1220" y="373.5" />
+              <mxPoint x="1220" y="410" />
+              <mxPoint x="1395" y="410" />
+            </Array>
+            <mxPoint x="1090" y="373.5" as="sourcePoint" />
+            <mxPoint x="1395" y="504" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="n6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=1;exitY=0.5;entryX=0.5;entryY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1520" y="554" />
+              <mxPoint x="1520" y="330" />
+              <mxPoint x="1720" y="330" />
+            </Array>
+            <mxPoint x="1395" y="504" as="sourcePoint" />
+            <mxPoint x="1720" y="156" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
