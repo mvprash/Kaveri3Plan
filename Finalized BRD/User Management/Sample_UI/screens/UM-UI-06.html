@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UM-UI-06 — Lost / Changed Mobile Number</title>
+  <link rel="stylesheet" href="../styles/kaveri-ui.css">
+</head>
+<body class="citizen">
+  <header class="app-header">
+    <div class="brand">KAVERI 3.0</div>
+    <div class="meta">User Management · UM-UI-06 · Citizen</div>
+  </header>
+  <main class="layout">
+    
+    <section class="content">
+      <h1>Lost / Changed Mobile Number</h1>
+      <p class="subtitle">Citizen account recovery — security questions + email PIN</p>
+      <p class="refs">Actor: Citizen · FR-UM-056, FR-UM-065</p>
+      
+      
+      
+      <form class="form"><label class="field"><span class="label">Username<span class="kn">ಬಳಕೆದಾರ ಹೆಸರು</span> *</span><input type="text" value="" placeholder="" required></label><label class="field"><span class="label">Captcha<span class="kn">ಕ್ಯಾಪ್ಚಾ</span> *</span><div class="captcha-box">A7K9M</div><input type="text" placeholder="Enter captcha"></label><label class="field"><span class="label">Security question (1 of 3 shown)<span class="kn">ಪ್ರಶ್ನೆ</span></span><input type="text" value="What is your mother&#x27;s maiden name?" readonly></label><label class="field"><span class="label">Answer<span class="kn">ಉತ್ತರ</span> *</span><input type="text" value="" placeholder="" required></label><label class="field"><span class="label">PIN (sent to registered email)<span class="kn">PIN</span> *</span><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"></label><label class="field"><span class="label">New mobile number<span class="kn">ಹೊಸ ಮೊಬೈಲ್</span> *</span><input type="text" value="" placeholder="" required></label><label class="field"><span class="label">OTP to new mobile<span class="kn">OTP</span> *</span><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"></label></form>
+      
+      <ul class='notes'><li>Citizens only — departmental users use admin path (FR-UM-065)</li><li>Three of five questions selected at random (FR-UM-056)</li></ul>
+      <div class="actions"><button type="button" class="btn primary">Verify Questions</button><button type="button" class="btn">Send PIN</button><button type="button" class="btn">Update Mobile &amp; Login</button></div>
+    </section>
+  </main>
+  <footer class="app-footer">Sample UI for BRD v4.16 — not production. Labels bilingual per GIGW.</footer>
+</body>
+</html>

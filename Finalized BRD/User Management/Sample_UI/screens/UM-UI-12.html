@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UM-UI-12 — Transfer Out / Relieving</title>
+  <link rel="stylesheet" href="../styles/kaveri-ui.css">
+</head>
+<body class="admin">
+  <header class="app-header">
+    <div class="brand">KAVERI 3.0</div>
+    <div class="meta">User Management · UM-UI-12 · Admin</div>
+  </header>
+  <main class="layout">
+    <nav class="sidebar"><ul><li class="">Users</li><li class="active">Transfer Out</li><li class="">Transfer In</li><li class="">Occupancy</li></ul></nav>
+    <section class="content">
+      <h1>Transfer Out / Relieving</h1>
+      <p class="subtitle">Superior relieves subordinate from post occupancy</p>
+      <p class="refs">Actor: Hierarchy Superior · FR-UM-057, FR-UM-058, FR-UM-059</p>
+      
+      
+      
+      <form class="form"><label class="field"><span class="label">Office (within span)<span class="kn">ಕಚೇರಿ</span> *</span><select required><option>SRO Bangalore South</option></select></label><label class="field"><span class="label">Officer / Post occupancy<span class="kn">ಅಧಿಕಾರಿ</span> *</span><select required><option>FDA — Kumar R — SRO Bangalore South</option></select></label><label class="field"><span class="label">Relieving date<span class="kn">ವಿಮುಕ್ತಿ ದಿನಾಂಕ</span> *</span><input type="text" value="2026-09-15" placeholder="2026-09-15" required></label><label class="field"><span class="label">Relieving order number<span class="kn">ಆದೇಶ ಸಂ.</span> *</span><input type="text" value="" placeholder="" required></label><label class="field"><span class="label">Upload relieving order<span class="kn">ಆದೇಶ ಫೈಲ್</span></span><input type="file"></label></form>
+      
+      <ul class='notes'><li>Lists only offices in actor&#x27;s span (FR-UM-059)</li><li>Occupancy active until end of relieving date (FR-UM-058)</li></ul>
+      <div class="actions"><button type="button" class="btn primary">Confirm Relieving</button></div>
+    </section>
+  </main>
+  <footer class="app-footer">Sample UI for BRD v4.16 — not production. Labels bilingual per GIGW.</footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UM-UI-11 — Add Other Department User</title>
+  <link rel="stylesheet" href="../styles/kaveri-ui.css">
+</head>
+<body class="admin">
+  <header class="app-header">
+    <div class="brand">KAVERI 3.0</div>
+    <div class="meta">User Management · UM-UI-11 · Admin</div>
+  </header>
+  <main class="layout">
+    <nav class="sidebar"><ul><li class="">Users</li><li class="active">Add Other Dept User</li><li class="">Masters</li></ul></nav>
+    <section class="content">
+      <h1>Add Other Department User</h1>
+      <p class="subtitle">Parent department officer with single role assignment</p>
+      <p class="refs">Actor: Authorised Administrator · FR-UM-003, FR-UM-029, FR-UM-034</p>
+      
+      
+      
+      <form class="form"><label class="field"><span class="label">KGID (Username)<span class="kn">KGID</span> *</span><input type="text" value="" placeholder="" required></label><label class="field"><span class="label">Full name<span class="kn">ಹೆಸರು</span> *</span><input type="text" value="" placeholder="" required></label><label class="field"><span class="label">Official email (parent dept)<span class="kn">ಇಮೇಲ್</span> *</span><input type="text" value="" placeholder="" required></label><label class="field"><span class="label">Mobile<span class="kn">ಮೊಬೈಲ್</span> *</span><input type="text" value="" placeholder="" required></label><label class="field"><span class="label">Parent department<span class="kn">ಇಲಾಖೆ</span> *</span><select required><option>Revenue Department</option></select></label><label class="field"><span class="label">Designation<span class="kn">ಹುದ್ದೆ</span> *</span><input type="text" value="" placeholder="" required></label><label class="field"><span class="label">Role (Other Department category)<span class="kn">ಪಾತ್ರ</span> *</span><select required><option>Treasury Approver</option></select></label><label class="field"><span class="label">Account end date (optional)<span class="kn">ಅಂತಿಮ ದಿನಾಂಕ</span></span><input type="text" value="" placeholder=""></label><label class="field"><span class="label">Authorisation letter / NOC<span class="kn">NOC</span></span><input type="file"></label></form>
+      
+      <ul class='notes'><li>Exactly one role mandatory (FR-UM-029)</li><li>No sanctioned posts for Other Department users (FR-UM-034)</li></ul>
+      <div class="actions"><button type="button" class="btn primary">Save User</button></div>
+    </section>
+  </main>
+  <footer class="app-footer">Sample UI for BRD v4.16 — not production. Labels bilingual per GIGW.</footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UM-UI-16 — Sanctioned Posts Occupancy</title>
+  <link rel="stylesheet" href="../styles/kaveri-ui.css">
+</head>
+<body class="admin">
+  <header class="app-header">
+    <div class="brand">KAVERI 3.0</div>
+    <div class="meta">User Management · UM-UI-16 · Admin</div>
+  </header>
+  <main class="layout">
+    <nav class="sidebar"><ul><li class="">Masters</li><li class="active">Sanctioned Posts</li><li class="">Posts Master</li><li class="">Office Hierarchy</li></ul></nav>
+    <section class="content">
+      <h1>Sanctioned Posts Occupancy</h1>
+      <p class="subtitle">Strength, occupied count, and vacancy per Post + Office</p>
+      <p class="refs">Actor: Administrator / Application Admin · FR-UM-048, FR-UM-066, FR-UM-027</p>
+      
+      
+      
+      <form class="form"></form>
+      <table><thead><tr><th>Post</th><th>Office</th><th>Sanctioned</th><th>Occupied</th><th>Available</th><th>Wholly vacant?</th></tr></thead><tbody><tr><td>Sub Registrar</td><td>BLR-S-001</td><td>1</td><td>1</td><td>0</td><td>No</td></tr><tr><td>FDA</td><td>BLR-S-001</td><td>2</td><td>1</td><td>1</td><td>Yes</td></tr><tr><td>SDA</td><td>BLR-S-001</td><td>1</td><td>0</td><td>1</td><td>Yes</td></tr><tr><td>DR</td><td>MYS-N-002</td><td>1</td><td>1</td><td>0</td><td>No</td></tr></tbody></table>
+      <ul class='notes'><li>Two vacancy tests: capacity vs wholly unoccupied (FR-UM-066)</li><li>Counts refreshed by midnight job (FR-UM-068)</li></ul>
+      <div class="actions"><button type="button" class="btn primary">Export</button><button type="button" class="btn">Refresh</button></div>
+    </section>
+  </main>
+  <footer class="app-footer">Sample UI for BRD v4.16 — not production. Labels bilingual per GIGW.</footer>
+</body>
+</html>

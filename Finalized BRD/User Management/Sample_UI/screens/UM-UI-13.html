@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UM-UI-13 — Transfer In</title>
+  <link rel="stylesheet" href="../styles/kaveri-ui.css">
+</head>
+<body class="admin">
+  <header class="app-header">
+    <div class="brand">KAVERI 3.0</div>
+    <div class="meta">User Management · UM-UI-13 · Admin</div>
+  </header>
+  <main class="layout">
+    <nav class="sidebar"><ul><li class="">Users</li><li class="">Transfer Out</li><li class="active">Transfer In</li></ul></nav>
+    <section class="content">
+      <h1>Transfer In</h1>
+      <p class="subtitle">Assign officer to vacant or reserved post under superior span</p>
+      <p class="refs">Actor: Hierarchy Superior · FR-UM-060, FR-UM-061, FR-UM-067</p>
+      
+      
+      
+      <form class="form"><label class="field"><span class="label">Target Post + Office<span class="kn">ಗುರಿ ಪದ</span> *</span><select required><option>Sub Registrar — SRO Mysuru North</option></select></label><label class="field"><span class="label">Capacity status<span class="kn">ಸಾಮರ್ಥ್ಯ</span></span><input type="text" value="1 vacancy available" readonly></label><label class="field"><span class="label">Officer (DSR user)<span class="kn">ಅಧಿಕಾರಿ</span> *</span><select required><option>2345678 — Ramesh K</option></select></label><label class="field"><span class="label">Transfer / Reporting order<span class="kn">ಆದೇಶ</span> *</span><input type="text" value="" placeholder="" required></label><label class="field"><span class="label">Joining date<span class="kn">ಸೇರುವ ದಿನಾಂಕ</span> *</span><input type="text" value="2026-09-20" placeholder="2026-09-20" required></label><label class="field"><span class="label">Upload order<span class="kn">ಆದೇಶ ಫೈಲ್</span></span><input type="file"></label></form>
+      
+      <ul class='notes'><li>Login blocked until 12:00 AM IST of joining date if future (FR-UM-061)</li><li>Reserved occupancy when at full strength + pending relieving (FR-UM-067)</li></ul>
+      <div class="actions"><button type="button" class="btn primary">Confirm Transfer In</button></div>
+    </section>
+  </main>
+  <footer class="app-footer">Sample UI for BRD v4.16 — not production. Labels bilingual per GIGW.</footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UM-UI-04 — Citizen Self-Registration</title>
+  <link rel="stylesheet" href="../styles/kaveri-ui.css">
+</head>
+<body class="citizen">
+  <header class="app-header">
+    <div class="brand">KAVERI 3.0</div>
+    <div class="meta">User Management · UM-UI-04 · Citizen</div>
+  </header>
+  <main class="layout">
+    
+    <section class="content">
+      <h1>Citizen Self-Registration</h1>
+      <p class="subtitle">Step 2 — Dual OTP verification</p>
+      <p class="refs">Actor: Citizen / System · FR-UM-063, FR-UM-055</p>
+      
+      <ol class="steps"><li class=""><span>1</span>Details</li><li class="active"><span>2</span>Verify OTP</li><li class=""><span>3</span>Security Q</li><li class=""><span>4</span>Complete</li></ol>
+      
+      <form class="form"><label class="field"><span class="label">Email OTP<span class="kn">ಇಮೇಲ್ OTP</span> *</span><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"></label><label class="field"><span class="label">Mobile OTP<span class="kn">ಮೊಬೈಲ್ OTP</span> *</span><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"><input type="text" maxlength="1" class="otp"></label></form>
+      
+      <ul class='notes'><li>Both OTPs must verify before account creation (FR-UM-063)</li><li>6-digit OTP; 3 attempts; 30s cooldown (FR-UM-070–072)</li></ul>
+      <div class="actions"><button type="button" class="btn primary">Resend email OTP</button><button type="button" class="btn">Resend mobile OTP</button><button type="button" class="btn">Verify &amp; Continue</button></div>
+    </section>
+  </main>
+  <footer class="app-footer">Sample UI for BRD v4.16 — not production. Labels bilingual per GIGW.</footer>
+</body>
+</html>

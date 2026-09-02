@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UM-UI-10 — Add DSR Department User</title>
+  <link rel="stylesheet" href="../styles/kaveri-ui.css">
+</head>
+<body class="admin">
+  <header class="app-header">
+    <div class="brand">KAVERI 3.0</div>
+    <div class="meta">User Management · UM-UI-10 · Admin</div>
+  </header>
+  <main class="layout">
+    <nav class="sidebar"><ul><li class="">Users</li><li class="active">Add DSR User</li><li class="">Transfer</li><li class="">Masters</li><li class="">Reports</li></ul></nav>
+    <section class="content">
+      <h1>Add DSR Department User</h1>
+      <p class="subtitle">Admin creates officer with sanctioned post assignment</p>
+      <p class="refs">Actor: Authorised Administrator · FR-UM-002, FR-UM-017, FR-UM-030, FR-UM-045, FR-UM-066(a)</p>
+      
+      
+      
+      <form class="form"><label class="field"><span class="label">KGID (becomes Username)<span class="kn">KGID</span> *</span><input type="text" value="2345678" placeholder="2345678" required></label><label class="field"><span class="label">Full name<span class="kn">ಹೆಸರು</span> *</span><input type="text" value="" placeholder="" required></label><label class="field"><span class="label">Official email ID<span class="kn">ಅಧಿಕೃತ ಇಮೇಲ್</span> *</span><input type="text" value="officer@karnataka.gov.in" placeholder="officer@karnataka.gov.in" required></label><label class="field"><span class="label">Mobile number<span class="kn">ಮೊಬೈಲ್</span> *</span><input type="text" value="" placeholder="" required></label><label class="field"><span class="label">Sanctioned post + Office<span class="kn">ಪದ + ಕಚೇರಿ</span> *</span><select required><option>Sub Registrar — SRO Bangalore South</option></select></label><label class="field"><span class="label">Deputation end date (optional)<span class="kn">ಅಂತಿಮ ದಿನಾಂಕ</span></span><input type="text" value="" placeholder=""></label><label class="field"><span class="label">Deputation reason<span class="kn">ಕಾರಣ</span></span><select><option>— Select —</option></select></label><label class="field"><span class="label">Approval letter<span class="kn">ಆದೇಶ</span></span><input type="file"></label><label class="field"><span class="label">Biometric capture<span class="kn">ಬೈಯೋಮೆಟ್ರಿಕ್</span> *</span><input type="text" value="Both thumbs captured" readonly></label></form>
+      
+      <ul class='notes'><li>At least one post with available capacity required (FR-UM-030)</li><li>KGID validated and unique (FR-UM-064)</li></ul>
+      <div class="actions"><button type="button" class="btn primary">Add another post</button><button type="button" class="btn">Save User</button></div>
+    </section>
+  </main>
+  <footer class="app-footer">Sample UI for BRD v4.16 — not production. Labels bilingual per GIGW.</footer>
+</body>
+</html>

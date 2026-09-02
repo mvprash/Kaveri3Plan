@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UM-UI-17 — Role — Module — Function Mapping</title>
+  <link rel="stylesheet" href="../styles/kaveri-ui.css">
+</head>
+<body class="admin">
+  <header class="app-header">
+    <div class="brand">KAVERI 3.0</div>
+    <div class="meta">User Management · UM-UI-17 · Admin</div>
+  </header>
+  <main class="layout">
+    <nav class="sidebar"><ul><li class="">RBAC</li><li class="active">Role Mapping</li><li class="">Module Master</li><li class="">Resource Master</li></ul></nav>
+    <section class="content">
+      <h1>Role — Module — Function Mapping</h1>
+      <p class="subtitle">Application Admin maps privileges via tree UI</p>
+      <p class="refs">Actor: Application Admin · FR-UM-038, FR-UM-041, FR-UM-042</p>
+      
+      
+      
+      <form class="form"><label class="field"><span class="label">Role<span class="kn">ಪಾತ್ರ</span> *</span><select required><option>Sub Registrar</option></select></label></form>
+      <table><thead><tr><th>Module</th><th>Function</th><th>Granted</th></tr></thead><tbody><tr><td>Marriage Registration</td><td>FN-MAR-ADD</td><td>Yes</td></tr><tr><td>Marriage Registration</td><td>FN-MAR-APPROVE</td><td>Yes</td></tr><tr><td>Certified Copy</td><td>FN-CC-VIEW</td><td>Yes</td></tr><tr><td>User Management</td><td>FN-UM-ADMIN</td><td>No</td></tr></tbody></table>
+      <ul class='notes'><li>Runtime enforcement via session claims (FR-UM-041)</li><li>UI hides unauthorised menus (S-03)</li></ul>
+      <div class="actions"><button type="button" class="btn primary">Save Mapping</button><button type="button" class="btn">Add Function</button></div>
+    </section>
+  </main>
+  <footer class="app-footer">Sample UI for BRD v4.16 — not production. Labels bilingual per GIGW.</footer>
+</body>
+</html>

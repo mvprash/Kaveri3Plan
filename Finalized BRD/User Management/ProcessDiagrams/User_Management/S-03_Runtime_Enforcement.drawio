@@ -1,13 +1,70 @@
-<mxfile host="app.diagrams.net"><diagram name="S-03_Runtime_Enforcement"><mxGraphModel dx="800" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageWidth="2100" pageHeight="560" math="0" shadow="0"><root><mxCell id="0"/>
-<mxCell id="1" parent="0"/>
-<mxCell id="n2" value="Request&#10;(API / URL)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="60" y="220" width="260" height="90" as="geometry"/></mxCell>
-<mxCell id="n3" value="Resource Master&#10;(Path/URL pattern,&#10;Is Public — FR-41)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="400" y="220" width="320" height="90" as="geometry"/></mxCell>
-<mxCell id="n4" value="Role–Module–Function&#10;(session roles → claims&#10;FR-38, FR-50)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="800" y="220" width="340" height="90" as="geometry"/></mxCell>
-<mxCell id="n5" value="Allow — Module Function&#10;matched (FR-41)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="1220" y="140" width="320" height="80" as="geometry"/></mxCell>
-<mxCell id="n6" value="Deny by default — HTTP 403&#10;(audit the attempt)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="1220" y="300" width="320" height="80" as="geometry"/></mxCell>
-<mxCell id="n7" value="Is Public = Yes →&#10;allow without authentication" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="1620" y="300" width="340" height="80" as="geometry"/></mxCell>
-<mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="320" y="265.0" as="sourcePoint"/><mxPoint x="400" y="265.0" as="targetPoint"/></mxGeometry></mxCell>
-<mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="720" y="265.0" as="sourcePoint"/><mxPoint x="800" y="265.0" as="targetPoint"/></mxGeometry></mxCell>
-<mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1140" y="265.0" as="sourcePoint"/><mxPoint x="1220" y="180.0" as="targetPoint"/><Array as="points"><mxPoint x="1180.0" y="265.0"/><mxPoint x="1180.0" y="180.0"/></Array></mxGeometry></mxCell>
-<mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1140" y="265.0" as="sourcePoint"/><mxPoint x="1220" y="340.0" as="targetPoint"/><Array as="points"><mxPoint x="1180.0" y="265.0"/><mxPoint x="1180.0" y="340.0"/></Array></mxGeometry></mxCell>
-<mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="560.0" y="310" as="sourcePoint"/><mxPoint x="1790.0" y="300" as="targetPoint"/><Array as="points"><mxPoint x="560.0" y="305.0"/><mxPoint x="1790.0" y="305.0"/></Array></mxGeometry></mxCell></root></mxGraphModel></diagram></mxfile>
+<mxfile host="app.diagrams.net">
+  <diagram name="S-03_Runtime_Enforcement" id="0">
+    <mxGraphModel dx="1178" dy="619" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2100" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Request&#xa;(API / URL)" vertex="1">
+          <mxGeometry height="90" width="260" x="60" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Resource Master&#xa;(Path/URL pattern,&#xa;Is Public — FR-41)" vertex="1">
+          <mxGeometry height="90" width="320" x="400" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Role–Module–Function&#xa;(session roles → claims&#xa;FR-38, FR-50)" vertex="1">
+          <mxGeometry height="90" width="340" x="800" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Allow — Module Function&#xa;matched (FR-41)" vertex="1">
+          <mxGeometry height="80" width="320" x="1220" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Deny by default — HTTP 403&#xa;(audit the attempt)" vertex="1">
+          <mxGeometry height="80" width="320" x="1220" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Is Public = Yes →&#xa;allow without authentication" vertex="1">
+          <mxGeometry height="80" width="340" x="1620" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="265" as="sourcePoint" />
+            <mxPoint x="400" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="265" as="sourcePoint" />
+            <mxPoint x="800" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1180" y="265" />
+              <mxPoint x="1180" y="180" />
+            </Array>
+            <mxPoint x="1140" y="265" as="sourcePoint" />
+            <mxPoint x="1220" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1180" y="265" />
+              <mxPoint x="1180" y="340" />
+            </Array>
+            <mxPoint x="1140" y="265" as="sourcePoint" />
+            <mxPoint x="1220" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="n7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="450" />
+              <mxPoint x="1790" y="450" />
+            </Array>
+            <mxPoint x="560" y="310" as="sourcePoint" />
+            <mxPoint x="1790" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
