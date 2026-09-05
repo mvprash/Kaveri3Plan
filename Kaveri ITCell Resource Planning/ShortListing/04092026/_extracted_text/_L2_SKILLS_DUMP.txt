@@ -1,0 +1,561 @@
+================================================================================
+L2_Support_Engineer__Keerthana_K_Resume_(1).txt
+KEERTHANA K
+Full Stack Developer  |  Java  Spring Boot  React.js  MySQL
+Tumkur, Karnataka    +91 6364769271    keerthanakanthraj0063@gmail.com    LinkedIn    Portfolio
+PROFESSIONAL SUMMARY
+Full Stack Developer with ~3 years of experience building secure, scalable web applications for Government of Karnataka projects
+at Centre for Smart Governance (CSG). Hands-on expertise in React.js, Java, Spring Boot, RESTful APIs, MySQL, and MVC
+architecture. Delivered across full SDLC with strong skills in JWT authentication, role-based access control, SQL optimization, and
+schema design for enterprise systems serving multiple government departments.
+TECHNICAL SKILLS
+Languages: Java, JavaScript (ES6+), SQL, HTML5, CSS3
+Frontend: React.js, React Hooks, Redux, JavaScript ES6+, HTML5, CSS3, Bootstrap, Responsive UI, Cross-browser Compatibility,
+Axios, REST API Integration
+Backend: Java, Spring Boot, Spring MVC, RESTful APIs, Microservices, Hibernate, JPA, MVC Architecture, JWT Authentication
+Database: MySQL, SQL Query Optimization, Schema Design, Joins, Indexes
+Tools & Practices: Git, GitHub, Postman, Maven, Eclipse, VS Code, PuTTY, Linux, Agile, Scrum, Code Review, Unit Testing
+Domain: Government Tech — secure data handling, role-based access control, multi-department workflows, audit compliance
+WORK EXPERIENCE
+Associate Software Engineer  —  Centre for Smart Governance (CSG), Bengaluru
+Oct 2023 – Present
+Built and maintained 3 full-stack enterprise web applications using React.js, Java, and Spring Boot, following MVC architecture
+across multiple government departments.
+Designed and deployed 40+ RESTful APIs with Spring Boot, enabling real-time data exchange between internal modules and
+external government services.
+Developed responsive, cross-browser compatible UIs using React.js, JavaScript ES6+, HTML5, CSS3, and Bootstrap across web
+portals serving multiple departments.
+Designed and optimized MySQL schemas (30+ tables) and complex SQL queries, reducing report generation time and
+improving system reliability.
+Implemented role-based access control (RBAC) and JWT-based authentication, protecting sensitive government data;
+collaborated in Agile/Scrum team across full SDLC.
+KEY PROJECTS
+Employee Management System (EMS)   React.js · Spring Boot · MySQL · REST API
+Built full-stack EMS handling attendance tracking, payroll processing, resource allocation, and multi-level approval workflows for
+government employees across departments.
+Designed optimized MySQL schema with normalized tables and compliance modules ensuring accurate, audit-ready records;
+integrated automated reporting reducing manual reporting effort.
+IT Equipment Management System   React.js · Spring Boot · MySQL · Barcode Generation
+Developed asset-tracking platform managing 500+ equipment items and 200+ asset requests across departments, with
+purchase order processing and vendor invoice handling.
+Implemented automated barcode generation and assignment workflows, eliminating manual asset tagging errors; built real-time
+procurement dashboards in React.js consuming live REST APIs.
+Housing Allotment & Quarter Management System   React.js · Spring Boot · MySQL · Workflow Automation
+Designed government web application for housing quarter allotment, with NOC generation, applicant records, availability tracking,
+and multi-level approval workflows.
+Automated manual approval processes with role-based dashboards for applicants, officers, and approvers; secure document
+upload/download, reducing processing time and improving compliance.
+CERTIFICATIONS & EDUCATION
+Certifications:   Advanced React and Redux — Udemy (Verified)    Master Microservices with Spring Boot & Spring Cloud —
+Udemy (Verified)
+B.E. — Computer Science & Engineering, Sri Siddhartha Institute of Technology, Tumkur   (2019 – 2023  |  CGPA: 8.3 / 10)
+
+
+================================================================================
+L2_Support_Engineer__Naukri_BSampurna[2y_8m].txt
+May 2026 - Present
+Oct 2025 - Apr 2026
+Dec 2023 - Sep 2025
+B Sampurna
+Fullstack Developer
++91-9347827116 | 
+sampurnab33@gmail.com | 
+Bengaluru, INDIA | Experience: 2 Years 7 Months
+Results-driven Software Engineer with 2.7 years of experience in designing and developing scalable, high-
+performance web applications. Strong expertise in frontend development using Node.js, React.js, TypeScript,
+Redux, and modern UI frameworks. Proven experience in building reusable, responsive components,
+integrating REST APIs, and optimizing application performance. Skilled in collaborating with cross-functional
+teams in Agile/Scrum environments and owning features end-to-end from development to deployment. Actively
+seeking opportunities to contribute to impactful products while continuously enhancing technical and problem-
+solving skills.
+SKILLS
+Javascript
+MongoDB
+Github
+Redux
+HTML
+Less
+Agile
+Problem Solving
+React.js
+Bootstrap
+JIRA
+Restfull API
+CSS
+RESTful API
+Responsive Web Design
+Collaboration
+Node.js
+Sass / Less
+GIT
+Postman API
+Sass
+TypeScript
+UI/UX Design
+Material UI
+WORK EXPERIENCE
+Fullstack Developer - ClinoGenesis Research Institute
+End-to-End LMS Development: Architected and maintained a scalable Learning Management System portal to manage
+students, courses, assessments, and workflows.
+Frontend Engineering: Built responsive, mobile-first UI using React.js, TypeScript, Redux, and modern CSS libraries for
+seamless user experience.
+Backend & API Architecture: Designed secure RESTful APIs handling student enrollment, auth (JWT/OAuth), notifications,
+and progress tracking.
+Database & Performance Optimization: Managed SQL/NoSQL schemas for student records and grades, optimizing queries
+for low latency and high concurrency.
+Integrations & Delivery: Integrated third-party APIs/gateways and collaborated in Agile/Scrum environments from feature
+design to production deployment.
+Software Engineer - My teknoland Software Pvt Ltd
+- Engineered scalable, high-performance frontend applications using React.js, TypeScript, and Redux. 
+- Developed reusable, modular UI components to enhance user experience and accelerate development cycles. 
+- Implemented robust state management strategies to maintain application consistency and reliability. 
+- Integrated RESTful APIs to optimize data flow and enrich application capabilities. 
+- Enhanced rendering efficiency, achieving significant gains in application speed and user engagement. 
+- Led feature development from initial concept through deployment, collaborating closely with cross-functional Agile teams. 
+- Delivered production-ready, maintainable solutions adhering strictly to best practices and coding standards.
+Software Engineer - UNIFIED POINT TECH Pvt. Ltd.
+– Developed mobile-first, responsive web applications using React.js, JavaScript, HTML5, and CSS3.
+– Built reusable UI components and efficiently managed application state using Redux and Redux Thunk.
+– Integrated RESTful APIs with structured error handling, improving data consistency and UI reliability.
+– Enhanced application performance and responsiveness through rendering optimization and code refactoring.
+6 Months
+20 Months
+4 Months
+– Actively participated in Agile ceremonies, code reviews, and production deployments.
+Projects
+PROJECTS
+Jewellery POS & Inventory System
+- Architected and developed a comprehensive Jewellery Point of Sale (POS) system for retail operations, enhancing sales
+and inventory management.
+- Engineered modular and reusable UI components using React.js and TypeScript, ensuring a consistent and responsive
+user experience across various devices.
+- Implemented centralized state management with Redux, optimizing cart workflows and enhancing pricing calculations for
+real-time updates.
+- Integrated RESTful APIs for diverse functionalities, including product catalog, customer data management, and order
+processing.
+- Improved application stability through structured validation and error handling, leading to optimized rendering and
+enhanced performance. 
+- Utilized technologies such as Material UI, HTML5, CSS3, JavaScript, React.js, Node.js and Git to deliver a robust solution.
+Fidium
+- Developed high-performance service ordering interfaces for Fidium, ensuring real-time serviceability checks and plan
+customization.
+- Implemented secure authentication workflows, incorporating SMS-based two-factor authentication and robust validation
+logic.
+- Built responsive scheduling and checkout flows featuring dynamic form validation to enhance the user journey.
+- Improved user experience through accessibility enhancements, UI optimization, and thorough edge-case handling.
+- Utilized a tech stack that included React, TypeScript, Redux, Material UI, HTML5, CSS3, JavaScript, React js, Node.js, REST
+APIs, Git, and Azure to deliver innovative solutions.
+Learning Management System (LMS)
+- Architected and developed an end-to-end Learning Management System (LMS) portal for managing students, course
+enrollments, assessments, and progress tracking.
+- Built responsive, intuitive user interfaces using React.js, TypeScript, and Material UI to deliver a seamless experience
+across desktop and mobile devices.
+- Engineered secure RESTful APIs using Node.js/Express for user authentication (JWT/OAuth), student profiles, and real-
+time notifications.
+- Designed and optimized database schemas to efficiently query student records, grades, and system activity with low
+latency.
+- Integrated state management via Redux and implemented third-part
+
+================================================================================
+L2_Support_Engineer__Naukri_GayatriSajjan[4y_0m].txt
+GAYATRI  SAJJAN  
+Dynamic  and  detail -oriented  Frontend  development  at Infosys  with  proven  skills  in , UI/UX design,  and  API integration, targeting  
+opportunities in Bengaluru, Chennai, and Hyderabad to leverage expertise in creating innovative web solutions.  
+gayatrisajjan1@gmail.com  +91-9113655498  LinkedIn  GitHub  
+ 
+ 
+CORE  COMPETENCIES  
+Frontend  Development  
+UI/UX  Design & Optimization 
+Web  Application  Performance 
+API Integration  
+Agile Development & DevOps 
+Security & Compliance Standards 
+Cross -Functional  Collaboration 
+Software  Engineering  Best  Practices 
+Cloud Technologies & Ver sion 
+Control  
+Scalability  & Responsive  Design  
+TECHNICAL  SKILLS  
+Programming  Languages:  
+JavaScript, TypeScript  
+Frontend  Technologies: React.js, 
+HTML, CSS, Bootstrap  
+Database  Management:  MySQL 
+Version  Control  & DevOps:  Git, 
+GitHub, Azure DevOps  
+Testing  & Debugging:  Jest,  Cypress, 
+Postman  
+Development  Tools  & IDEs:  Visual 
+Studio, VS Code  
+EDUCATION  
+Bachelor  of Engineering  (B.E.) 
+in Computer Science & 
+Engineering  
+SJC Institute of Technology, 
+Karnataka  
+June  2017  – August  2021  
+ 
+NOTABLE  ACHIEVEMENTS  
+Developed and  deployed scalable 
+web applications, leading to a 30% 
+increase in user retention.  
+Insta Award(Sep  2024)  – Recognized 
+for contribution to macy’s platform.   PROFILE  SUMMARY   
+ 
+Over  4 years  of experience  in the technology  sector , specializing  in frontend 
+development and user interface design , with a strong commitment to 
+delivering high -quality, scalable software solutions.  
+Proficient  in frontend  technologies,  API integration,  and user  experience 
+design , while continuously refining skills in Agile methodolo gies and 
+DevOps  practices . 
+Boosted user engagement by 30% through the  creation of responsive web 
+applications , significantly enhancing overall user experience and 
+satisfaction . 
+Expert in security protocols and compliance standards, developing 
+applications that adhere to government regulations and industry best 
+practices . 
+Played  a key role  in optimizing  web  application  performance,  leading  to 30% 
+improvement in operational efficiency , reinforcing a commitment to 
+continuous enhancement and excellence . 
+Deep understanding of modern web technologies and frameworks , 
+enabling the creation of scalable, future -ready applications tailored to 
+business needs.  
+ 
+ WORK  EXPERIENCE   
+Senior System Engineer                                      March  2022  – March 2026  
+Infosys Limited | Bangalore, India  
+Key  Result  Areas:  
+Spearheading the development and maintenance of responsive web 
+applications,  which  has led to a significant  increase  in user  engagement  and 
+satisfaction  metrics.  
+Enhancing application performance through rigorous optimization 
+techniques , resulting in a notable reduction in page load times and 
+improved user experience.  
+Ensuring  the implementation  of robust  security  measures  and  compliance 
+protocols , thereby safeguarding sensitive user data and adhering to 
+government  regulations.  
+Integrating RESTful API s to facilitate real -time tax calculations and status 
+tracking, streamlining the user experience and operational efficiency.  
+Project:  Macy’s  -Ecommerce  Platform  
+Increased  page  load  speed  by 35% , leading  to improved  SEO  rankings  and 
+higher customer retention.  
+Enhanced  mobile  responsiveness , resulting  in a 25%  increase  in mobile 
+user  engagement . 
+Streamlined  cart  and  checkout  UI, contributing  to a 20%  improvement 
+in checkout conversion rates . 
+Reduced frontend c ode redundancy by 30% through reusable component 
+architecture.  
+Improved  product  filtering/search  experience,  which  led to a 15%  increase 
+in user session time . 
+Contributed  to a 40%  reduction  in frontend  bugs  post -deployment  by 
+implementing robust unit and integration testing using Jest and Cypress. 
+Actively  participated  in Agile  ceremonies  and supported CI/CD  workflows 
+with GitHub and Azure DevOps.  
+ 
+Designed and integrated modern UI 
+components, elevating application 
+aesthetics and user experience.  
+Led the successful development and 
+launch of a secure online tax filing 
+system for the Income Tax 
+Department.  
+ 
+Implemented DevOps best practices, 
+optimizing code deployment 
+efficiency and workflow automation.  
+ 
+ 
+PERSONAL  DETAILS  
+Date  of Birth:  1st June  1999  
+Address:  Bangalore,  KA 
+Languages  Known:  English,  Kannada, 
+Telugu and Hindi  Key  Highlights:  
+ Successfully led projects that resulted in a 40% increase in user 
+engagement  by implementing  innovative  frontend  solutions  and optimizing 
+existing applications.  
+ Achieved  a 30%  reduction  in operational  costs  through  the integration  of 
+efficient API services, streamlining processes and enhancing productivity.  
+ Developed a comprehensive testing strategy that improved application 
+reliability, res ulting in a 40% decrease in post -deployment issues.  
+ 
+ PERSONAL  PROJECTS   
+Portfolio  Website  
+Live Demo  
+ Designed  and developed  a personal  portfolio  website  to highlight  projects, 
+skills, and achievements.  
+ Utilized  React.js,  TypeScript , and Tailwind  CSS to create  a modern, 
+responsive  interface.  
+ Implemented  React  Router , ensuring  smooth  navigation  across  different 
+sections.  
+ Integrated  a dynamic  contact  form  and real -time  content  updates , 
+enhancing user interaction and engagement.  
+ 
+
+================================================================================
+L2_Support_Engineer__Naukri_satyabhama[1y_5m].txt
+SATYABHAMA
+Software Developer
++91 8217635060 satyabhamakorke@gmail.com linkedin.com/in/satyabhama-korke
+OBJECTIVE
+Software Developer with experience in building web applications, developing and integrating APIs, and delivering
+scalable software solutions using ReactJS, Flask, Python, and MongoDB. Skilled in problem-solving, debugging, and
+collaborating across teams to build reliable and user-focused applications. Passionate about learning new technologies
+and contributing to innovative software products.
+TECHNICAL SKILLS
+•Frontend Development: React.js, JavaScript, TypeScript, Redux, HTML, CSS
+•Backend Development: FastAPI, Flask, Python
+•API Testing & Tools: REST APIs, Postman, Swagger, JSON, XML, API Integration
+•Web Optimization: Technical SEO, On-Page Optimization, Website Performance Tuning
+•Database Management: MongoDB, MySQL
+•Version Control: Git, GitHub
+•AI-Assisted Development: Prompt Engineering, LLM Tools, AI Debugging, Workflow Optimization
+•Soft Skills: Communication, Problem Solving, Analytical Thinking, Adaptability, Quick Learner, Teamwork
+EXPERIENCE
+Software Developer
+Ample Enterprise Technologies Pvt. Ltd. , Pune August 2025 – Present
+•Contributed to the development and enhancement of enterprise web applications and product-based platforms
+using React.js, JavaScript, HTML, and CSS .
+•Built responsive user interfaces, reusable frontend components, and scalable application features with a focus
+on performance and user experience.
+•Worked extensively on the iReqruit platform, contributing to platform modules, frontend integrations, Com-
+mand Centre features, and application enhancements.
+•Developed modern UI systems, animations, responsive layouts, and user-centric workflows across multiple web
+applications.
+•Delivered frontend solutions for 7+ enterprise websites , ensuring responsive design, maintainable UI archi-
+tecture, and optimized performance.
+•Developed and maintained 200+ ATS-friendly resume and portfolio templates with reusable design
+systems, responsive layouts, and scalable frontend implementations.
+•Implemented API integrations, dynamic rendering workflows, and real-time frontend functionalities across en-
+terprise applications.
+•Contributed to Technical SEO, website optimization, and overall application usability improvements.
+•Leveraged AI-assisted development workflows and LLM-powered productivity tools to accelerate debugging, UI
+engineering, and feature delivery.
+•Collaborated within agile teams to deliver scalable and production-ready frontend solutions.
+Full Stack Developer Intern
+VHU Technologies and Solutions Pvt. Ltd. , Bengaluru June 2024 – May 2025
+•Developed a full-stack account management system for group savings, handling user contributions, loans, repay-
+ments, and transaction tracking.
+•Designed and developed RESTful APIs using Flask and implemented business logic for repayment schedules and
+contribution cycles.
+•Implemented JWT-based authentication and Role-Based Access Control (RBAC) for secure user management.
+•Designed MongoDB schemas and optimized database queries to improve data management and application
+performance.
+•Built responsive dashboards using ReactJS with API integrations, pagination, filtering, and dynamic data ren-
+dering.
+•Collaborated in testing, debugging, and resolving application issues to ensure reliable system functionality and
+seamless user experience.
+ACADEMIC PROJECTS
+Fire and Smoke Detection for Wildfire (YOLOv5)
+•Built an AI-based object detection model using YOLOv5.
+•Project published on IEEE platform.
+Text Recognition App
+•Developed a mobile application using OCR to extract text from images.
+Shortest Job Next Scheduling Algorithm
+•Simulated CPU scheduling concepts.
+Pharmacy Management System
+•Built a web application for inventory and sales management.
+EDUCATION
+BE in Computer Science and Engineering 2020 – 2024
+Acharya Institute of Technology, Bengaluru CGPA: 7.56
+PUC – Pre-University Education 2019 – 2020
+Vision Girls PU College, Bengaluru 77.16%
+SSLC – Secondary Education 2017 – 2018
+Sri Basaveshwara EM High School, Basavakalyan 75.52%
+LANGUAGES
+English, Kannada, Hindi, Marathi, Telugu
+CERTIFICATIONS
+•IEEE Publication: Fire and Smoke Detection for Wildfire – CSEIJ Journal
+
+================================================================================
+L2_Support_Engineer__Priyanka_AcharResume.txt
+Priyanka SEmail: priyankaachar003@gmail.com
+Mobile: +91 8861552099
+LinkedIn: linkedin.com/in/priyanka-s-620734256/
+GitHub: github.com/priyanka2003476
+Portfolio: Portfolio Website
+Professional Summary
+Full Stack .NET Developer with 1.5 years of experience in designing, developing, and maintaining enterprise web
+applications using ASP.NET Core, C#, Blazor Server, SQL Server, and RESTful APIs. Proficient in backend
+development, database design, JWT-based authentication, and building responsive user interfaces. Experienced in Agile
+development environments with hands-on exposure to Power BI reporting, SQL-based data analysis, application
+support, and system monitoring. Strong problem-solving skills with a focus on delivering scalable, secure, and
+high-performance business solutions while adhering to clean coding and software development best practices.
+Experience
+•Aspire Software Consultancy Onsite
+Full Stack .NET Developer (Full-time) Mar 2026 – Present
+◦Full Stack Development: Working on NEXORA, a Smart Workforce Automation Platform built using ASP.NET
+Core, Blazor, and SQL Server while following Clean Architecture and Repository Pattern principles.
+◦API Development: Developing RESTful APIs for workforce automation modules including user management, task
+tracking, and approval workflows.
+◦Frontend Development: Building reusable and responsive UI components using Blazor and Radzen UI with form
+validation and seamless data binding.
+◦Database Management: Designing and optimizing SQL Server database objects and queries to support scalable
+application performance.
+•Sasken Technologies Hybrid
+Junior Full Stack .NET Developer (Full-time) Feb 2025 – Jan 2026
+◦Enterprise Application Development: Developed and maintained an Access Request Management Portal using
+ASP.NET Core, Blazor Server, and SQL Server with multi-level approval workflows and role-based access control.
+◦Backend API Development: Designed and implemented RESTful APIs for user management, request processing, and
+approval workflows, improving operational efficiency.
+◦Authentication & Security: Implemented JWT-based authentication and authorization mechanisms to ensure secure
+access across application modules.
+◦Reporting & Analytics: Created Power BI dashboards and reports to monitor request trends, approval metrics, and
+operational performance.
+Technical Skills
+•Programming Languages: C#, SQL, TypeScript
+•Frameworks & Technologies: ASP.NET Core, Blazor Server, Entity Framework, LINQ, Repository Pattern
+•Web & API Development: REST APIs, Web APIs, JWT Authentication, Role-Based Authorization
+•Frontend: HTML, CSS, Bootstrap, Angular, Blazor, Radzen UI
+•Database: SQL Server
+•Tools & Platforms: Visual Studio, VS Code, SSMS, GitLab, Postman, Power BI, LabWare LIMS
+•LIMS & Laboratory Informatics: LabWare LIMS (Basic), Laboratory Workflows, LIMS Lifecycle Processes
+Projects
+•Access Request Management Portal(Professional Project): Tech Stack: ASP.NET Core, Blazor Server, SQL Server,
+REST APIs, JWT Authentication. Developed an internal portal to manage employee access requests with a secure three-level
+approval workflow and role-based access control. Built backend APIs, designed the database schema, and implemented JWT
+authentication to streamline request processing and improve operational efficiency.
+•NEXORA – Smart Workforce Automation Platform(Professional Project): Tech Stack: ASP.NET Core Web API,
+Blazor, Radzen UI, SQL Server, Entity Framework Core, JWT Authentication, Clean Architecture. Building a full-stack HR
+automation platform to simplify employee management and automate organizational workflows. Implemented Clean
+Architecture with Repository Pattern, role-based authorization, and modular API design. Planned enhancements include an
+AI-powered HR chatbot and smart analytics dashboard for improved workforce insights and automation.
+Education
+•Bapuji Institute of Engineering and Technology
+Bachelor of Engineering - Information Science; CGPA: 7.8 2021 - 2024
+•DRR Government Polytechnic College
+Diploma - Computer Science and Engineering; Percentage: 77% 2018 - 2021
+Certifications
+•Complete ASP.NET Core 9 Course for Busy Developers
+•Blazor Deep Dive - Beginner to Advanced (.NET 8)
+Soft Skills
+•Problem Solving: Ability to analyze technical issues and implement effective solutions in software development.
+•Team Collaboration: Experienced in working with cross-functional teams in Agile environments to deliver project
+requirements.
+•Communication: Strong verbal and written communication skills for effective collaboration and documentation.
+
+================================================================================
+L2_Support_Engineer__Rohit_Laveti_CV.txt
+                                           ROHIT LAVETI  
+                                                                                   Entry -Level Full Stack Developer  
+                                             masterrohit94391@gmail.c om  |  +91 96684 43829  | Github   | LinkedIn  | Portfolio  
+PROFESSIONAL SUMMARY   
+Aspiring Software Engineer with strong foundations in Java Full Stack and MERN Stack development, experienced in building 
+scalable , end -to-end web applications through full -time and internship experience. Proficient in object -oriented programming, 
+data str uctures, algorithms, REST APIs, and SQL/NoSQL databases, with hands -on exposure to SDLC, Agile methodologies, 
+debugging, testing, and code reviews. A quick learner with strong problem -solving skills and a collaborative mindset.  
+EXPERIENCE   
+Full Stack Developer  August 2025 – August 2026  
+DevSkillZ   private Limited , Remote, India  
+● Developed and delivered  multiple full -stack applications  including an  EdTech learning platform , Student Management 
+System , and  Admin/Employee portals  using the  MERN stack (MongoDB, Express.js, React.js, Node.js) . 
+● Engineered  role-based authentication (RBAC)  and secure login systems, building customized dashboards for  100+ daily 
+active users  across different user roles  
+● Desi gned and implemented scalable RESTful APIs  for core modules including user management, course workflows, and 
+administrative operations, while managing and optimizing 500+ user records , improving data retrieval efficiency and 
+reducing API response times by 20–30% .  
+● Integrated  Razorpay payment gateway  for secure transactions within the learning platform, achieving  ~99% uptime  
+during testing  
+● Built responsive and dynamic frontend interfaces using React.js  while enhancing overall system performance through 
+optimized database queries, modular architecture, and efficient state management , ensuring a consistent and high -
+performance user experience across web and mobile devices.  
+● Collaborated in an Agile environment , contributing to end -to-end development, testing, and deployment of multiple 
+features across projects.  
+Java Full Stack Intern  March 2024 – August 2024  
+Digital Lync, Hyderabad, India  
+Learning Management System (LMS) Portal:   
+● Developed and enhanced web application features, improving system performance, scalability, and user experie nce 
+for 200+ users . 
+● Followed  SDLC practices and coding standards , using Git for version control, contributing to  maintainable and high -
+quality code across 10+ modules  
+● Participated in  code reviews, debugging, and defect resolution , reducing reported issues  by 20–25%  and improving 
+release stability . 
+● Optimized application performance by identifying and resolving bottlenecks, improving page load time by  15–20% . 
+Human Resource Management System (HRMS):   
+● Designed and developed a  microservices -oriented HRMS application  using  Spring Boot, React.js, and My SQL, 
+supporting  employee data management for 100+ records . 
+● Built and integrated  RESTful APIs and frontend components , enabling seamless communication between services 
+and improving system responsiveness . 
+● Implemented  CRUD operations and database management , ensuring efficient data handling and reducing query 
+execution time by  15% . 
+● Supported  unit and functional testing, debugging, and QA processes , contributing to a  25% reduction in defects  
+and improved application reliability . 
+SKILLS  
+Programming Languages: Java, JavaScript (Node.js), TypeScript, Python, C/C++  
+Core Concepts: Data Structures, Algorithms, OOP, DBMS, OS  
+Web Development: React.js, Node.js, Express.js, Spring Boot, REST APIs, Django, FastAPI, Pandas, Chart.js, HTML, CSS  
+Databases: MySQL, MongoDB, SQLite   
+Cloud & DevOps: AWS (basic), CI/CD (basic), Build Tools (Maven, Gradle – basic exposure)  
+Tools & Practices: Git, VS Code, Eclipse, Agile, SDLC, Debugging, Unit Testing  
+Other: API Integration, System Design Basics, Performance Optimization  
+Soft Skills: Problem Solving, Communication, Team Collaboration  
+PROJECTS  
+Stock Data Intelligence Dashboard | Python, FastAPI, SQLite, Panda s, Chart.js  
+● Built a full -stack financial data platform fetching 1 year of real NSE stock data for 14 companies using the Yahoo 
+Finance API and Pandas, storing 3,486 rows of OHLCV data in SQLite via SQLAlchemy ORM.  
+● Designed and exposed 5  REST API endpoints using FastAPI with auto -generated Swagger documentation, covering 
+company listing, OHLCV data, 52 -week summary, and stock comparison.  
+● Computed financial metrics including daily return, 7 -day moving average, 52 -week high/low, and a custom annualised 
+volatility score (30 -day std × √252) using Pandas and NumPy.  
+● Built an interactive dark -themed dashboard with Chart.js featuring real -time sto ck charts, top gainers/losers panel, 
+two-stock correlation comparison, and date range filters (30D / 90D / 180D).  
+             GitHub: github.com/LavetiRohitkumar/stock -dashboard    
+Event Ticket Booking Application  | MERN Stack   
+● Developed a full -stack  event ticket booking application  using the MERN stack, enabling users to browse events, select  
+seats, and book tickets seamlessly . 
+● Implemented  real-time seat selection and temporary reservation logic , preventing double booking and ensuring a 
+smooth user experience . 
+● Integrated secure  payment workflow  and booking confirmation sy
+
+================================================================================
+L2_Support_Engineer__suraj_updated_5118.txt
+SURAJ MUGALE 
+Technical Assistant  
+Mobile: +91-8495091474 | Email: surajmugale14@gmail.com  
+Location:  Basaveshwar Nagar, Bengaluru – 560079 
+ 
+PROFESSIONAL SUMMARY 
+ 
+Technical professional with 2+ years of experience supporting Government of Karnataka 
+departments, with hands-on experience in e-Governance applications, e-Marukatte system, SQL 
+database handling, data management, technical support, troubleshooting and networking. 
+Experienced in handling application issues, database queries, data verification and providing 
+technical support to government officials and field users. 
+ 
+WORK EXPERIENCE 
+Technical Assistant – Department of Sericulture, Govt. of Karnataka 
+Through: Nila Mantek | 1.9 Years  
+ Provided technical support for the e-Marukatte application . 
+ Handled front-end issues and SQL database queries . 
+ Performed data verification, correction and database management. 
+ Supported computers, printers, software and network-related issues. 
+ Coordinated with users and technical teams for issue resolution. 
+ Prepared technical reports, documentation and presentations. 
+ Supported digital records and departmental e-Governance activities. 
+Technical Engineer – Directorate of Economics & Statistics, Govt. of Karnataka 
+Through: Avani Info-soft Pvt. Ltd. | 6 Months  
+ Provided technical support to field officers across Karnataka. 
+ Handled data management, verification and analysis . 
+ Performed hardware/software installation and troubleshooting. 
+ Supported networking and system-related issues. 
+ Maintained departmental records and databases. 
+ Assisted users in resolving application and technical issues. 
+ 
+EDUCATION 
+MCA – 8.1 CGPA 
+Visvesvaraya Technological University (VTU), Kalaburagi – 2022 
+ 
+TECHNICAL SKILLS 
+SQL | MS Word | MS Excel | MS PowerPoint | Hardware & Software Troubleshooting  
+ 
+CERTIFICATION 
+ Java Software Certificate – Kodnest, Bengaluru  
+ 
+KEY STRENGTHS 
+Problem Solving | Data Accuracy | Technical Support | Team Coordination | Communication | Time 
+Management | Confidential Data Handling  
+ 
+DECLARATION 
+I hereby declare that the information provided above is true and correct to the best of my knowledge. 
+Place: Bengaluru 
+Date: 18-08-2026 

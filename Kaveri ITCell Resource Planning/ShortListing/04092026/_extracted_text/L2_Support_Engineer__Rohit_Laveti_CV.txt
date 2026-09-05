@@ -1,0 +1,83 @@
+                                           ROHIT LAVETI  
+                                                                                   Entry -Level Full Stack Developer  
+                                             masterrohit94391@gmail.c om  |  +91 96684 43829  | Github   | LinkedIn  | Portfolio  
+PROFESSIONAL SUMMARY   
+Aspiring Software Engineer with strong foundations in Java Full Stack and MERN Stack development, experienced in building 
+scalable , end -to-end web applications through full -time and internship experience. Proficient in object -oriented programming, 
+data str uctures, algorithms, REST APIs, and SQL/NoSQL databases, with hands -on exposure to SDLC, Agile methodologies, 
+debugging, testing, and code reviews. A quick learner with strong problem -solving skills and a collaborative mindset.  
+EXPERIENCE   
+Full Stack Developer  August 2025 – August 2026  
+DevSkillZ   private Limited , Remote, India  
+● Developed and delivered  multiple full -stack applications  including an  EdTech learning platform , Student Management 
+System , and  Admin/Employee portals  using the  MERN stack (MongoDB, Express.js, React.js, Node.js) . 
+● Engineered  role-based authentication (RBAC)  and secure login systems, building customized dashboards for  100+ daily 
+active users  across different user roles  
+● Desi gned and implemented scalable RESTful APIs  for core modules including user management, course workflows, and 
+administrative operations, while managing and optimizing 500+ user records , improving data retrieval efficiency and 
+reducing API response times by 20–30% .  
+● Integrated  Razorpay payment gateway  for secure transactions within the learning platform, achieving  ~99% uptime  
+during testing  
+● Built responsive and dynamic frontend interfaces using React.js  while enhancing overall system performance through 
+optimized database queries, modular architecture, and efficient state management , ensuring a consistent and high -
+performance user experience across web and mobile devices.  
+● Collaborated in an Agile environment , contributing to end -to-end development, testing, and deployment of multiple 
+features across projects.  
+Java Full Stack Intern  March 2024 – August 2024  
+Digital Lync, Hyderabad, India  
+Learning Management System (LMS) Portal:   
+● Developed and enhanced web application features, improving system performance, scalability, and user experie nce 
+for 200+ users . 
+● Followed  SDLC practices and coding standards , using Git for version control, contributing to  maintainable and high -
+quality code across 10+ modules  
+● Participated in  code reviews, debugging, and defect resolution , reducing reported issues  by 20–25%  and improving 
+release stability . 
+● Optimized application performance by identifying and resolving bottlenecks, improving page load time by  15–20% . 
+Human Resource Management System (HRMS):   
+● Designed and developed a  microservices -oriented HRMS application  using  Spring Boot, React.js, and My SQL, 
+supporting  employee data management for 100+ records . 
+● Built and integrated  RESTful APIs and frontend components , enabling seamless communication between services 
+and improving system responsiveness . 
+● Implemented  CRUD operations and database management , ensuring efficient data handling and reducing query 
+execution time by  15% . 
+● Supported  unit and functional testing, debugging, and QA processes , contributing to a  25% reduction in defects  
+and improved application reliability . 
+SKILLS  
+Programming Languages: Java, JavaScript (Node.js), TypeScript, Python, C/C++  
+Core Concepts: Data Structures, Algorithms, OOP, DBMS, OS  
+Web Development: React.js, Node.js, Express.js, Spring Boot, REST APIs, Django, FastAPI, Pandas, Chart.js, HTML, CSS  
+Databases: MySQL, MongoDB, SQLite   
+Cloud & DevOps: AWS (basic), CI/CD (basic), Build Tools (Maven, Gradle – basic exposure)  
+Tools & Practices: Git, VS Code, Eclipse, Agile, SDLC, Debugging, Unit Testing  
+Other: API Integration, System Design Basics, Performance Optimization  
+Soft Skills: Problem Solving, Communication, Team Collaboration  
+PROJECTS  
+Stock Data Intelligence Dashboard | Python, FastAPI, SQLite, Panda s, Chart.js  
+● Built a full -stack financial data platform fetching 1 year of real NSE stock data for 14 companies using the Yahoo 
+Finance API and Pandas, storing 3,486 rows of OHLCV data in SQLite via SQLAlchemy ORM.  
+● Designed and exposed 5  REST API endpoints using FastAPI with auto -generated Swagger documentation, covering 
+company listing, OHLCV data, 52 -week summary, and stock comparison.  
+● Computed financial metrics including daily return, 7 -day moving average, 52 -week high/low, and a custom annualised 
+volatility score (30 -day std × √252) using Pandas and NumPy.  
+● Built an interactive dark -themed dashboard with Chart.js featuring real -time sto ck charts, top gainers/losers panel, 
+two-stock correlation comparison, and date range filters (30D / 90D / 180D).  
+             GitHub: github.com/LavetiRohitkumar/stock -dashboard    
+Event Ticket Booking Application  | MERN Stack   
+● Developed a full -stack  event ticket booking application  using the MERN stack, enabling users to browse events, select  
+seats, and book tickets seamlessly . 
+● Implemented  real-time seat selection and temporary reservation logic , preventing double booking and ensuring a 
+smooth user experience . 
+● Integrated secure  payment workflow  and booking confirmation system, allowing users to reserve and confirm tickets 
+efficiently . 
+Github: github.com/LavetiRohitkumar/Event -Ticket -Booking  
+ 
+EDUCATION  
+B.E. || Computer Science  
+Rungta College of Engineering & Technology — 8.0 CGPA  
+12th || APBIE || PCM  
+Sri Chaita nya Junior College — 84%  
+10th || CBSE  
+Centurion Public School — 9.2 CGPA  
+CERTIFICATIONS  
+● Java Full Stack Internship Certification | Digital Lync | 2024  
+● Java Full Stack Training Certification | Digital Lync | 2024  

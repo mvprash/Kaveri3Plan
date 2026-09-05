@@ -1,0 +1,127 @@
+SRINIVAS GURURAJ MUTALIK  
+Contact : +91 -9632937336  | Email:  shrinivas.mutalik@gmail.com  | LinkedIn :  linkedin.com/in/srinivas -mutalik31ba0117b  
+ 
+ 
+ 
+Softw are Testing professional with 5  years of 
+experience in manual testing across Agile projects, 
+seeking roles in Manual Testing/QA and Test 
+Automation (Selenium with Java) to deliver 
+high‑quality, reliable applications . Preferred 
+location: Bengaluru,  Mysuru . 
+ 
+ 
+• Quality Assurance  
+• Software Development Lifecycle  
+• Manual Testing  
+• Agile Project Management  
+• Defect Management  
+• Test Case Design and Execution  
+• Performance Testing  
+• User Acceptance Testing  
+• Risk Assessment and Mitigation  
+• Stakeholder Engagement  
+ 
+• Selenium  
+• TestNG  
+• Decipher XML  
+• Azure DevOps  
+• SQL 
+• ALM 
+• Jira 
+ 
+   
+• Life Sphere  Regulatory Product : 
+Functional Testing of requirements leading to the 
+defect free development.  Improved the overall web -
+application’s functionalities.  Involved in development of 
+Test cases , Test Planning and overall SDLC activities.  
+ 
+• PMT Project (Manual Tester):  
+Executed functional testing and test planning activities, 
+developed detailed test cases, and validated 
+requirements to ensure defect‑free development and 
+improved overall web application functionality . 
+   
+ 
+• Manual & Automation Testing course from 
+QSpiders  
+ 
+  
+• 2020: B.E. (Electronics) | Instrumentation from 
+RNS Institute of Technology, VTU, Bengaluru, 
+Karnataka  
+ 
+• Date of Birth: 2nd October 1997  
+• Languages Known: English, Hindi, and 
+Kannada   
+ 
+• Highly skilled in test case design, execution, and defect lifecycle management, ensuring 
+accurate coverage, early defect identification, and stable releases.  Additionally involved 
+in management of test cases  using ALM tool. 
+• Demonstrated expertise in SDLC and STLC processes, including requirement analysis, 
+sanity & smoke testing, black‑box testing, and validation across web‑based and 
+enterprise applications.  
+• Proficient in automation fundamentals and tools such as Selenium with Java, TestNG, 
+SQL, and Azure DevOps, supporting continuous quality improvement initiatives.  
+• Recognized for independently driving testing activities across multiple releases, 
+improving release confidence, and ensuring defect‑free deployments.  
+• Added long‑term value through strong cross‑functional collaboration, mentoring new 
+team members, and proactively improving test efficiency and overall application 
+reliability , negotiation and relationship building skills . 
+ 
+       
+ 
+Jun’25 -Jun’26: ArisGlobal, Bengaluru as Quality Engineer -2 
+• Test Planning, Design & Execution  - Analyzed software requirements, prepared 
+detailed test scenarios and test cases, and executed Functional, Regression, 
+Integration,  and End -to-End testing using  ALM across multiple platforms and 
+environments to ensure comprehensive test coverage and software quality.  
+• Defect Management & Release Validation  - Managed defect lifecycle by l ogging 
+and tracking issues in ALM and JIRA with clear documentation and supporting evidence, 
+while performing Smoke and Sanity Testing post -deployment to verify application 
+stability and release readiness.  
+• Quality Ownership & Team Enablement  - Independently led testing activities 
+across multiple releases, including requirement estimation, test execution, defect 
+tracking, and troubleshooting, while collaborating in an Agile environment for Life 
+Sciences products and mentoring new team members through technical knowledge -
+sharing sessions.  
+ 
+Highlights  
+• Focused on learning Python automation and optimized review processes and ticket 
+formats, reducing overall project delivery time by 30%.  
+• Built expertise in Web Automation and successfully drove end -to-end quality assurance 
+initiatives, independently leading testing efforts across releases while ensuring timely 
+and high -quality product delivery.  
+ 
+Mar’22 -May’25 : Umlaut (Part of Accenture), Bengaluru as Junior Software 
+Engineer  
+• Analyzing  requirements and designed detailed test scenarios and test cases, ensuring 
+comprehensive coverage across Functional, Regression, Integration, and End‑to‑End 
+testing for multiple releases.  
+• Executing  manual test cases and performed smoke, sanity,  platform‑wide testing to 
+validate applicati on functionality, stability,  readiness across environments.  
+• Managing  defect lifecycle activities, including logging, documentation, tracking, 
+troubleshooting, and coordination with development teams within Agile/Scrum 
+Aerospace projects.  
+ 
+Highlights  
+• Independently led testing efforts across four releases, owning testing deliverables 
+end‑to‑end and ensuring quality outcomes from the testing perspective.  
+• Expanded technical capability in web automation using Selenium and Java, while 
+mentoring and training new team members to improve overall testing efficiency and 
+team performance.  
+ 
+Apr’21 -Mar’22: Border less Access, Bengaluru as Survey Programmer  
+ 
+• Designed and deployed low‑ to mid‑complexity surveys, ensuring accurate data 
+capture, structured logic, and alignment with client requirements.  
+• Maintained data quality and reporting standards by validating survey flows, testing 
+logic, and supporting reliable data analysis for client deliverables.  
+ 
+Highlight  
+ 
+• Streamlined client data collection processes by efficiently launching error‑free surveys, 
+contributing to improved turnaround time and high data accuracy.  
+ PERSONAL DETAILS  ACADEMIC HIGHLIGHTS  CERTIFICATIONS  PROJECT  IT SKILLS  CORE COMPETENCIES  JOB OBJECTIVE  
+WORK EXPERIENCE  PROFESSIONAL  SUMMARY  

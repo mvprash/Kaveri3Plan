@@ -1,0 +1,58 @@
+NARENDRA SINGH  
+Solution Architect | Enterprise Architect | Cloud Architect | AI/LLM | 13+ Years  
+New Delhi, India | +91 9811569198 | narendra.singh.tech01@gmail.com | linkedin.com/in/narendrasingh -architect  
+PROFESSIONAL SUMMARY  
+Solution Architect with 13+ years architecting, modernizing, and governing cloud -native, distributed enterprise systems across 
+Healthcare, BFSI, Retail, SaaS, and Government. Expert in C#/.NET Core, Microservices, Event -Driven Architecture, AWS/Azure, 
+Kubernetes, and CI/CD, with hand s-on AI/LLM platform experience — RAG, MCP, and multi -agent orchestration. Proven leader in 
+architecture governance, cloud modernization, and production readiness across SLA/RPO/RTO, security, and cost optimization.  
+KEY ACHIEVEMENTS  
+● Architected high -volume  cloud platforms supporting millions of transactions per month, ensuring 99.9% availability and 
+meeting defined SLA/SLO targets.  
+● Modernized legacy monolithic platforms into event -driven microservices across AWS and Azure, including mission -critical 
+mortgag e processing systems, boosting scalability and transaction throughput 2 -3x while improving resilience and 
+maintainability.  
+● Delivered an enterprise AI knowledge platform using VectorDB, RAG pipelines, and Gemini API — improving developer 
+onboarding efficien cy by 40%.  
+CORE COMPETENCIES  
+Solution & Enterprise Architecture (.NET/C#) | Cloud Architecture (AWS/Azure) | Microservices & Event -Driven Architecture | AI/LLM 
+Architecture (RAG, MCP, Agents) | High Availability & DR | Cloud Governance & FinOps | IAM & Sec urity (OAuth2, RBAC, Zero 
+Trust, Entra ID/Azure AD, SSO, SCIM) | Enterprise AI Assistants (ChatGPT Enterprise, Claude Enterprise, Microsoft Copilot, Gi tHub 
+Copilot) | AI SaaS License & Consumption Management | Responsible AI & AI Governance | DevOps & CI/C D (GitHub Actions, Azure 
+DevOps) | Containerization (Docker, Kubernetes) | API & Integration Architecture  
+PROFESSIONAL EXPERIE NCE  
+Independent Solution Architect | Artificial Wit  May 2026 – Present  
+● Architected Artificial Wit AI, an enterprise AI enablement platform wrapping legacy ERPs, CRMs, and internal APIs (SAP, 
+Oracle, Salesforce, Dynamics) into a unified layer usable by any LLM via a native MCP client/server with OAuth and role -based 
+access control.  
+● Designed a multi -agent orchestration engine (Sequenti al, Parallel, and Loop topologies) and generative UI artifacts — live 
+dashboards and text -to-SQL analytics — for grounded, cited RAG -driven enterprise assistants.  
+● Worked hands -on with ChatGPT Enterprise, Claude Enterprise, Microsoft Copilot, and GitHub Cop ilot, evaluating each for 
+enterprise LLM integration patterns and feeding the findings into the Artificial Wit platform design.  
+● Implemented SSO for the platform using Entra ID (Azure AD), with SCIM -based user provisioning layered on top of the 
+existing OAu th and role -based access control.  
+● Built license and consumption tracking for AI SaaS tools into the Artificial Wit platform, monitoring per -user and per -agent 
+usage across integrated LLM services to manage cost and license allocation.  
+● Extended the platform 's AI governance beyond architecture and security to include Responsible AI practices: grounding, source 
+citation, and audit logging for RAG -driven assistant outputs.  
+Technical Architect | ARCS Group Ltd, Delhi  Mar 2024 – Dec 2025  
+● Architected CI/CD pipelin es using GitHub Actions and Azure DevOps with automated quality gates, reducing deployment 
+issues by 80%.  
+● Architected an enterprise AI knowledge platform using Python, VectorDB, embedding workflows, Gemini API, and real -time 
+synchronization — improving dev eloper productivity by 40%.  
+● Applied Responsible AI principles — data grounding, access control, and audit logging — to the enterprise AI knowledge 
+platform, extending its architecture and security governance into AI compliance and risk considerations.  
+Tech nical Manager | Sriggle Tech Pvt. Ltd.  Jun 2023 – Jan 2024  
+● Led cloud modernization initiatives, decomposing monolithic applications into event -driven microservices on AWS and Azure 
+using .NET Core.  
+Senior System Analyst / Technical Architect | SitusAMC  India Pvt. Ltd., Gurgaon  Aug 2017 – Feb 2023  
+● Modernized mission -critical mortgage processing platforms from legacy monoliths to AWS -based microservices using C#/.NET 
+Core, improving scalability, resilience, and maintainability.  
+Project Lead | LiveCareer I ndia Pvt. Ltd., NCR (Aug 2013 – Jul 2017) | Sr. Technical Consultant | Coforge (formerly NIIT 
+Technologies), New Delhi (Oct 2007 – Jul 2013)  
+EDUCATION  
+Master of Information Technology — Annamalai University (2007) | Bachelor of Arts (Economics) — Shaheed Bhagat Singh College, 
+Delhi (2002)  
+CERTIFICATIONS  
+TOGAF 9.2 Certified — The Open Group | AWS Solutions Architect Training — Simplilearn | Azure Cloud Architecture Training — 
+Simplilearn  

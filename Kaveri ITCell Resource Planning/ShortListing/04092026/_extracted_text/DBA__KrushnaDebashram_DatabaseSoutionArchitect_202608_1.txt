@@ -1,0 +1,149 @@
+KRUSHNA CHANDRA DEBASHRAM  
+Database Solution Architect  
+Design | Development | Scalability  | High Availability |Performance Tuning  
+Mobile :  +91-9874634162     e-mail :  krushnha_deb@rediffmail.com        Place : Bengaluru, India  
+Professional Summary  
+Database  solution architect with 1 7+ years’ experience in MSSQL  Database designing and 
+delivering scalable, secure, highly available, and high -performance database solutions across 
+enterprise environments. Expertise in database architecture, design, administration,  
+security , high availability HA/DR, performance optimization , data migration, 
+modernization, cloud adoption and operation.  
+Worked across large scale G overnment, Insurance,  Financial,  ALM, Logistic  & shipping,  
+LMS, Integration  Tool and enterprise environments . 
+Strong experience in leading critical incidents, stakeholder communication  and b uilding  high-
+performing global DBA teams and supporting mission -critical enterprise environments with 
+24x7 operational.  
+Core Competencies   
+Leadership & Strategy  
+• Database Stra tegy                             • 24×7 Global Database Operations     
+• Root Cause Analysis (RCA)                • Capacity planning                   
+• Team Leadership                                       • Team  Mentoring  
+• Cross -Functional Leadership                  • Availability Management                                                                                            
+Database Platforms  
+• Microsoft SQL Server (2008 –2022)   • PostgreSQL  
+• Azure SQL Database      • MongoDB  
+SQL Server Engineering  
+• Database Architect                                  • Database Design  
+• Database Development                             • High availability (Always On Availability Groups)                 
+• Read -Only Secondary Replicas            • Database Migration  
+• Enterprise Backup & Recovery                 • Log shipping  
+High Avai lability, Disaster Recovery   
+• Alway s on Availability Groups (AOAG)  • Failover Cluster Instances (FCI)  
+• Log Shipping        • Transactional Replication  
+• Backup & Recovery Solutions      • Disaster Recovery Testin g 
+ 
+Database Security  
+• Database Securit y Hardening     • TLS 
+• Transparent Data Encryption (TDE)   • Always Encrypted  
+• Row -Level Security                    • Dynamic Data Masking   
+• Database Auditing & Monitoring      • Vulnerability Assessment & Remediation                 
+• Role -Based Acces s Control (RBAC)     • Privileged Access Management   
+Performance, Scalability & Optimization  
+• Database Performance Tuning          • Query & Index Optimization  
+• Table  Partitioning                                 • Data Compression  
+• Data Archiving & Retention Strategy   • Capacity Planning     
+Automation, Monitoring   
+• PowerShell Script            • Python & Golang Scripting  
+• SQL Server Agent Automation           • DB Alert  
+• DataDog DB Health Monitoring tool     • Extended events  
+• Diagnostics & RCA                              • Trace, Audit
+  
+Cloud Database Solutions  
+• Azure SQL Managed Instance             • Azure SQL Database  
+• Azure Virtual Machines (IaaS)             • Hybrid Cloud Architecture  
+• Cloud Migration & Modernization     • Hybrid Disaster Recovery Solutions  
+Other Technical Skills   
+• BI, Reporting & Analytics: SSIS, SSRS, Power BI, Tableau  
+• Programming & Scripting: Python,  Golang, C# , T-SQL, PowerShell  
+• Big Data: Knowledge on Hadoop, Hive, Pig and Data  
+  
+Career Timeline  
+ Mar 2026 – Present | Database Architect |EpicMinds IT Pvt. Ltd.|  Bengaluru,India  
+ Nov 2023 – Feb 2026|Senior Manager -Database Services|ESDS Software Solution Ltd.|Bengaluru  
+ Nov 2020 – Nov 2023|Database Architect|Cygnet Infotech Pvt. Ltd.|Ahmedabad  
+ Jun 2019 – Apr 2020  |Database Architect|Mapps IT Services Pvt. Ltd.|Kolkata  
+ Oct 2013 – May 2019|Database Architect|Kovair Software Pvt. Ltd.|Kolkata  
+ Mar 2013 – Sep 2013|SQL Architec      |InRhythm Solutions Pvt. Ltd.|Hyderabad  
+ Aug 2011 – Feb 2013|Database Architect|Kovair Software Pvt. Ltd.|Kolkata  
+ Sep 2008 – Aug 2011|Advisory Sys tem Analyst|IBM India Pvt. Ltd.|Kolkata  
+ Oct 2005 – Sep 2008  |Senior Software Engineer|NIIT Limited|New Delhi  
+ Mar 1998 – Sep 2005|Programmer -IT Executive|Sentinels Security Pvt. Ltd.|New Delhi  
+ Jan 1997 – Feb 1998  |System Administrator|First Flight Couriers Ltd.|New Delhi  
+Notable Accomplishments  
+In EpicMinds Technologies for Centre for e -Governance   
+ Supporting state data centre Database team for multiple mission -critical Government 
+applications, ensuring platform stability, scalability, and high service a vailability.  
+ Provided database architecture and performance optimization support to various 
+department application. Improved the performance by 40%.  
+ Led financial data analysis assignment  for the Finance Department, including data 
+acquisition, cleansing, transformation, and report generation.  
+ Successfully resolved high -priority escalations related to database performance, scalability, 
+and availability across enterprise applications.  
+In ESDS Software Solution for Centre  for e -Governance   
+ Supporting state data centre Database team for multiple mission -critical Government 
+applications, ensuring platform stability, scalability, and high service availability.  
+ Provided  enterprise database m aintenance, auditing, monitoring, and performance 
+optimization frameworks.  
+ Led complex heterogeneous database migration programs including Oracle -to-SQL Server, 
+Oracle -to-PostgreSQL, and MySQL -to-MongoDB migrations  using Python.  
+ Improved database  performance of various applications  by data archival, code  optimization ,   
+database maintenance by 30%.  
+ Led the resolution of highly critical and escalated database issues through cross -functional 
+collaboration, ensuring rapid service restoration and long -term stability  
+ Did the capacity planning  by analy zing the resources utilization and recommended for the 
+upgradation of server /cpu/ram/storage/vm core etc.  
+In Cygnet Infotech  for Sou thAfrica Insurance  project  
+ Architected and executed database scalabilit y initiatives that enhanced application 
+performance  by 30% , fault tolerance, and transaction processing capacity.  
+ Led enterprise -wide database performance optimization programs through query tuning, 
+indexing strategies, and infrastructure modernization.  
+ Implemented data archival and capacity  planning . 
+ Did the Azure migration . 
+Mapps IT Solution  
+ Improved production database reliability through proactive monitoring, code optimization, 
+and preventive maintenance practices.  
+ Designed and delivered database modernization initiatives, upgrading legacy SQL Server 
+2012 environments to SQL Server 2017, enhancing security, performance, and 
+supportability.  
+ Developed enterprise data warehouse solutions using SSIS, enabling centralized reporting 
+and business analytics.  
+Kovair Software  
+ Implemented scalable Data Lake and database archit ectures supporting enterprise analytics 
+and long -term business growth.  
+ Served as Database Solutions Architect and SQL Server SME, implementing data archival 
+strategies that improved application performance and governance compliance.  
+ Increased ALM  product  platform scalability from approximately 50 to over 300 concurrent 
+users through database redesign, performance tuning, and workload optimization.  
+In IBM India  for MAERSK shipping and transport  project  
+ Served as Database Technical Lead for enterprise application modernization initiatives.  
+ Led end -to-end database architecture, design, and migration from DB2 to SQL Server, 
+ensuring data integrity and seamless business continuity.  
+NIIT Ltd. for Campusview project  
+ Delive red multiple enterprise database migration projects, modernizing legacy platforms 
+and enabling successful adoption of SQL Server technologies.  
+ Ensured high data quality, migration accuracy, and minimal operational disruption during 
+transition programs.  
+Education   
+ MCA from Guru Jambheswar University, Hissar in the  year 2009.  
+ Bachelor’s degree in Physics (Honors ) from University of Ranchi in the year 1994  
+Certifications  
+ Executive Diploma in Leadership and Management  from Udemy in year 2025.  
+ Operational Management for business, key  techniques  from Udemy in year 2025  
+ Data Loss prevention from Udemy in year 2025  
+ Data  Security  Strategy  for organization from Udemy in year 2024  
+ Data Engineering on Microsoft Azure 2022 from Udemy in year 2023  
+ Power BI Desktop & Services from Udemy in year 2023  
+ Python, Tableau from Udemy in Oct 2020  
+ Online course on Big Data and Hadoop from AcardGlid in year 2016  
+ Diploma in Web Programming using JAVA &Advanced Web technology from SSIS in year 2003  
+ Diploma in Computer Application and Data Processing from Lakhotia Computer in year 1996  
+ Diploma in Total Information System Management from Lakhotia Computer in year 1996  
+ 
+ 
+ 
+ 
+ 
+Best regards,  
+Krushna Chandra Debashram  
+Bengaluru, Karnataka  
++91-9874634162 | krushna_deb@rediffmail.com  

@@ -1,0 +1,1743 @@
+================================================================================
+Data_Migration_Specialist__Naukri_ANSHULPHULKE[7y_0m].txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+HEAD:
+  ANSHUL PHULKE
+  Data Migration Specialist | Salesforce & ETL Systems
+  Bengaluru, India | +91-7773097274 | anshul.phulke@gmail.com | linkedin.com/in/anshul-phulke-386aa15a
+  PROFESSIONAL SUMMARY
+  Salesforce CRM Data Migration Specialist with 4 years of combined experience across ETL, Salesforce data migration, and data analysis, including hands-on Data Loader-driven migrati
+  Proven track record executing Salesforce data migration initiatives using DBsync and Workbench, consistently delivering 100 % data accuracy and on-time project completion.
+  Data Analyst with 3+ years collecting, cleaning, and interpreting large datasets using SQL, Python (Pandas, NumPy), and Power BI to support data-driven business decisions.
+  ASP.NET MVC Developer background in designing, developing, and debugging web applications using MVC 5.0, Razor View Engine, and SQL Server.
+  Skilled in cloud-based data integration using AWS (RDS, S3), with hands-on experience across SQL Server, MySQL, Oracle, and PostgreSQL.
+  Effective cross-functional collaborator, partnering with engineering, product, and business stakeholders to deliver migration and analytics projects on schedule.
+  CORE TECHNICAL SKILLS
+  Programming: Python, ASP.NET MVC, SQL
+  Databases: SQL Server, MySQL, Oracle, PostgreSQL, Sybase SQL Anywhere
+  Salesforce: Data Loader, Sales Cloud, Service Cloud, Health Cloud, Salesforce Lightning, Salesforce Administration, Salesforce Reporting & Dashboards, Data Mapping, Workbench, DBsy
+  ETL & Data: ETL Development, ETL Testing, Data Migration, Data Integration, Data Analysis, Data Mining
+  Cloud & DevOps: AWS (RDS, S3), Jira, Slack, Git
+  Analytics & BI: Pandas, NumPy, Jupyter, Power BI, Google Charts, Statistical Analysis
+  Tools: MS Excel, MS Office, Google Workspace, FileZilla, SFTP, OmniStudio
+  PROFESSIONAL EXPERIENCE
+  DATA MIGRATION ASSOCIATE
+  Target Recruit | Bangalore, India Apr 2022 – Feb 2026
+  Led Salesforce data migration projects using Data Loader across Sales Cloud and Service Cloud, covering extraction, transformation, and loading of records from legacy systems, achi
+  Implemented ETL workflows using DBsync and Data Loader, reducing manual data-loading time by approximately 90%.
+  Defined legacy-to-Salesforce field mapping and transformation logic in collaboration with solution architects and client teams, ensuring accurate source-to-target alignment and fin
+  Wrote and optimized complex SQL and advanced SQL queries for data validation, cutting data-error rates by 90%.
+  Conducted end-to-end ETL testing across 30+ migration projects, ensuring data integrity prior to go-live.
+  Integrated AWS (RDS, S3) for cloud-based storage and processing, supporting datasets of 2 Million+ records.
+  Administered Salesforce.com environments, including user provisioning, and designed custom reports and dashboards to track key business KPIs across Sales Cloud, Service Cloud, and 
+  Delivered training and ongoing support to Salesforce end users, improving adoption and reducing recurring data-entry errors.
+  Recommended and implemented process improvements based on Salesforce best practices, streamlining data validation and reducing rework across migration cycles.
+  Partnered with cross-functional teams via Slack and Jira to deliver migration milestones on schedule.
+  Authored migration runbooks and process documentation adopted as the team standard for future projects.
+  SOFTWARE DEVELOPER
+  Town & Country Planning, Haryana | Chandigarh, India Jun 2021 – Mar 2022
+  Developed and maintained an in-house Project Monitoring Tool using ASP.NET MVC and SQL Server ADO.NET, used by 500+ internal stakeholders.
+  Owned full SDLC — analysis, design, coding, testing, and implementation — for government urban-planning web applications.
+  Built and tuned SQL Server stored procedures and functions, improving query performance by 70%.
+  Interfaced with databases via ADO.NET DataSet, DataReader, DataAdapter, and DataGrid components.
+  Documented bugs, design decisions, and testing outcomes to support handover and maintenance.
+  DATA ANALYST
+  TekOptimize Software India Pvt Ltd | Hyderabad, India Apr 2019 – May 2021
+  Collected and analyzed data from multiple sources, building a data-analytical database from complex financial source data.
+  Wrote SQL scripts to automate data loads and extracts, reducing manual processing time by 50%.
+  Performed statistical analysis and data mining using Python (NumPy, Pandas) across datasets.
+  Partnered with engineering and product teams to validate data accuracy and resolve client data issues.
+  Delivered qualitative and quantitative reporting to clients and internal stakeholders on a recurring basis.
+  DATA ASSOCIATE
+  TekOptimize Software India Pvt Ltd | Hyderabad, India Oct 2017 – Mar 2019
+  Collaborated with product management and development teams to capture and document customer feedback requests.
+  Redesigned workflow documentation, contributing to a 50% reduction in average handling time.
+
+================================================================================
+Data_Migration_Specialist__Naukri_ASHISHSAHOO[7y_0m].txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  ensure data accuracy, governance, and compliance across large-scale pipelines. Currently leading a team delivering
+  Senior Data Engineer July 2024 - Present
+
+================================================================================
+Data_Migration_Specialist__Naukri_MadhanMohanS[12y_0m].txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  Present Address
+HEAD:
+  Madhan Mohan.S
+  +91 9500791916
+  madhanlead15@gmail.com
+  CAREER OBJECTIVE: -
+  To prove myself as Database Administrator in a progressive managed organization that gives me scope to apply
+  my knowledge and skills. I would like to be with team, which dynamically works towards success and growth of
+  the organization and achieve the set goals.
+  PROFESSIONAL EXPERIENCE: -
+  Worked as a Senior Database Administrator with Rakuten Trade,Malaysia. Nov 2025 – June 2026
+  Worked as a Technical lead with Wipro Limited. May 2024 – OCT 2025
+  OTHER WORK EXPERIENCE AND CERTIFICATION: -
+  Worked as a Technical Lead with, HCL Technologies Bangalore from Jan 2022 - Aug 2024.
+  Worked as Senior Consultant in Affluent Global Services Aug 2021 - Dec 2021.
+  Worked as Senior Consultant in Future Focus Infotech Pvt Ltd from Nov 2020 - July 2021.
+  Worked as a Lead Database Administrator in Lucida Technologies Pvt Ltd from July 2019 -Oct 2020
+  Worked as a PostgreSQL Database Administrator in Appscore Solutions from June 2014 –May 2019.
+  PROFESSIONAL SUMMARY: -
+  A dynamic professional with 12+ years of experience in PostgreSQL DB on Linux/Unix and Windows
+  Platform respectively.
+  5+ years of experience in Mongo DB Installation, configuration and upgradation MongoDB
+  Community and Enterprise editions on Linux servers.
+  Create and manage MongoDB databases, collections, and indexes.
+  Monitor database health, performance, and resource utilization.
+  Perform backup and restore using mongodump, mongorestore, and snapshot backups.
+  Configure and manage Replica Sets for High Availability.
+  Set up and maintain MongoDB Sharding for horizontal scaling.
+  Experience in PostgreSQL Installation 9.3, 9.4, 9.5,9.6.X, 10 and 11(beta -DEV) Production support.
+  Experience in PostgreSQL , MongoDB and Oracle Installation and Configuration, Database
+  Backup and Recovery, SQL Tuning, User maintenance, Tablespaces management, Hot Standby and
+  Replication, PITTR and Up -gradation.
+  Experience in Installation and creating Hot Streaming Replication (Master and Slave).
+  Proficient in PostgreSQL DBA activities including configuration settings, database index creation and
+  maintained and Query optimization.
+  Experienced in Backup & Recovery using PG_DUMP and PG_DUMPALL, setting up WAL archiving,
+  Point in time recovery.
+  Patch Upgrade from 9.2.3 to 9.2.4 in production and Testing Environment.
+  Install and Configure Backup and Recovery Tool (BART) and configure Prod and Testing Server.
+  Monitor the Disk space and Database growth more than 10 Servers.
+  Involving and handling in sql-tuning and Stored -Procedure –Tuning in PT of Production and Testing
+  Server.
+  Creating index and monitoring index using Explain Plan to make better Performance of Queries.
+  Experience in VACUUM and REINDEX in Production Database for Maintenance Activities.
+  Installing and working tools & clients like pg admin , pg agent pg web client , Putty and Toad.
+  Basic knowledge in adding and deleting Database in a clone in Replication environment
+  Configured and Database installation creating tables, schemas, roles and accessed PostgreSQL.conf
+  files using client Request.
+  2
+  Implementing and maintaining database security (create and maintain users, roles and assign
+  privileges).
+  Monitoring the production PostgreSQL alert logs for database errors. Configuration of PEM server,
+
+================================================================================
+Data_Migration_Specialist__Naukri_NoorussabaAsifAli[7y_0m].txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  Ernst & Young (EY) | Bangalore, India | Senior Data Engineer | Nov 2021 – Present
+  UK Insurance Project - Senior Data Engineer/Data Modeler | Oct 2024 – Present
+
+================================================================================
+Data_Migration_Specialist__Naukri_ShreyaRamakrishnaPandit[8y_0m].txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  IBM, India | Feb 2023 – Present
+  Telco AT&T, USA | Apr 2023 – Present (Assignment History)
+
+================================================================================
+DBA__KrushnaDebashram_DatabaseSoutionArchitect_202608_1.txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+   Mar 2026 – Present | Database Architect |EpicMinds IT Pvt. Ltd.| Bengaluru,India
+HEAD:
+  KRUSHNA CHANDRA DEBASHRAM
+  Database Solution Architect
+  Design | Development | Scalability | High Availability |Performance Tuning
+  Mobile : +91-9874634162 e-mail : krushnha_deb@rediffmail.com Place : Bengaluru, India
+  Professional Summary
+  Database solution architect with 1 7+ years’ experience in MSSQL Database designing and
+  delivering scalable, secure, highly available, and high -performance database solutions across
+  enterprise environments. Expertise in database architecture, design, administration,
+  security , high availability HA/DR, performance optimization , data migration,
+  modernization, cloud adoption and operation.
+  Worked across large scale G overnment, Insurance, Financial, ALM, Logistic & shipping,
+  LMS, Integration Tool and enterprise environments .
+  Strong experience in leading critical incidents, stakeholder communication and b uilding high-
+  performing global DBA teams and supporting mission -critical enterprise environments with
+  24x7 operational.
+  Core Competencies
+  Leadership & Strategy
+  • Database Stra tegy • 24×7 Global Database Operations
+  • Root Cause Analysis (RCA) • Capacity planning
+  • Team Leadership • Team Mentoring
+  • Cross -Functional Leadership • Availability Management
+  Database Platforms
+  • Microsoft SQL Server (2008 –2022) • PostgreSQL
+  • Azure SQL Database • MongoDB
+  SQL Server Engineering
+  • Database Architect • Database Design
+  • Database Development • High availability (Always On Availability Groups)
+  • Read -Only Secondary Replicas • Database Migration
+  • Enterprise Backup & Recovery • Log shipping
+  High Avai lability, Disaster Recovery
+  • Alway s on Availability Groups (AOAG) • Failover Cluster Instances (FCI)
+  • Log Shipping • Transactional Replication
+  • Backup & Recovery Solutions • Disaster Recovery Testin g
+  Database Security
+  • Database Securit y Hardening • TLS
+  • Transparent Data Encryption (TDE) • Always Encrypted
+  • Row -Level Security • Dynamic Data Masking
+  • Database Auditing & Monitoring • Vulnerability Assessment & Remediation
+  • Role -Based Acces s Control (RBAC) • Privileged Access Management
+  Performance, Scalability & Optimization
+  • Database Performance Tuning • Query & Index Optimization
+  • Table Partitioning • Data Compression
+  • Data Archiving & Retention Strategy • Capacity Planning
+  Automation, Monitoring
+  • PowerShell Script • Python & Golang Scripting
+  • SQL Server Agent Automation • DB Alert
+  • DataDog DB Health Monitoring tool • Extended events
+  • Diagnostics & RCA • Trace, Audit
+  Cloud Database Solutions
+  • Azure SQL Managed Instance • Azure SQL Database
+
+================================================================================
+DBA__SHRIKANT_BAMNE_RESUME-DBA-Aug_2026.txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  PostgreSQL DBA | Epic Minds | Mar 2026 – Present
+HEAD:
+  Shrikant N. Bamne
+  Bengaluru, Karnataka | snbamne@gmail.com | +91 -8898724340
+  Senior PostgreSQL DBA | High Availability | Performance Tuning |
+  Upgradation | Migration | DR
+  Senior Database Administrator with 16+ years of overall professional experience, including 4.6+
+  years of hands -on expertise in PostgreSQL administration across large -scale government and
+  enterprise environments. Proven experience in database architecture, high availability,
+  replication, performance tuning, backup and disaster recovery, cloud/on -prem migrations, and
+  production support. Strong experience in leading critical incidents, stakeholder communication,
+  SOP creation, and mentoring junior teams.
+  Recognized as Star Performer of the Year (2023) for delivering high -impact database solutions,
+  product ion stability, and operational excellence.
+  Core Competencies
+  • PostgreSQL Administration (Installation, Configuration, Upgrades)
+  • PostgreSQL High Availability: Patroni, Replication, Failover Planning
+  • Performance Tuning: Query optimization, VACUUM, REINDEX, AN ALYZE, Memory tuning
+  • Backup & Recovery: Logical / Physical backups, Barman, pgBackRest , PITR
+  • Replication: Streaming Replication, Logical Replication, troubleshooting
+  • Database Migrations: On -prem to Cloud / Cloud to On -prem .
+  • Security: User management, Roles, Access controls, pg_hba.conf
+  • Table Partitioning and Database Optimization
+  • Linux Administration and Cron Automation
+  • MySQL Administration
+  • Backup Tools: Commvault, Veeam
+  • Cloud Exposure: AWS, Azure, VMware, Hyper -V
+  • Client Management and Incident Handling
+  • SOP / Documentation / Team Mentoring
+  Professional Experience
+  PostgreSQL DBA | Epic Minds | Mar 2026 – Present
+  Project: Karnataka Government Database Environment
+  • Managing production PostgreSQL databases for mission -critical government
+  applications.
+  • Closely working with the depa rtmental expert team on designing, reviewing, and
+  supporting Patroni -based high availability architecture and failover readiness.
+  • Supporting HA setup validation, node health review, replication monitoring, and failover
+  preparedness for production resilienc e.
+  • Performing database security hardening, user and role management, and access
+  controls.
+  • Leading production backup automation, restore validation, and recovery readiness
+  activities.
+  • Managing production -to-staging refreshes and cloud migration activities based on client
+  requirements.
+  • Performing memory tuning, query optimization, partitioning, and routine maintenance
+  for improved performance.
+  • Supporting PostgreSQL FDW / DB link integrations across environments.
+  • Coordinating deployment support, production ch anges, and client reporting.
+  • Contributing to environment planning for enterprise PostgreSQL / EDB deployments.
+  • Postgres server version upgrades.
+  PostgreSQL DBA | ESDS Software Solutions Ltd | Dec 2021 – Feb 2026
+  • Administered PostgreSQL production environments for multiple enterprise and
+
+================================================================================
+Full_Stack_Developer__Binduraj_C_Resume_(1).txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  11/2023 - Present
+HEAD:
+  Bindu Raj.C
+  Software Engineer
+  Around 7 years of experience as a Software Engineer in
+  development and implementation of web and client server
+  applications using Microsoft Technologies. Ability to learn &
+  develop using new technologies. Excellent Communication &
+  interpersonal skills with strong background working.
+  binduraj94@gmail.com
+  9663151636
+  Bengaluru, India
+  Alternative Mail-id : cbinduraj6@gmail.com
+  WORK EXPERIENCE
+  Senior Engineer - Software
+  SLK Software Pvt. Ltd.
+  11/2023 - Present
+  ,
+  Bengaluru
+  Senior Software Engineer
+  Canarys Automations Pvt. Ltd
+  12/2022 - 08/2023
+  ,
+  Bengaluru
+  Software Engineer
+  JOY Infotech Consulting Pvt Ltd
+  10/2021 - 07/2022
+  ,
+  Bengaluru
+  Software Engineer
+  Vagi Data systems
+  08/2018 - 10/2021
+  ,
+  Bengaluru
+  Intern/Trainee
+  Uttara InfoSolutions Pvt Ltd
+  01/2018 - 06/2018
+  ,
+  6 months Internship
+  EDUCATION
+  Master of Computer Applications[MCA]
+  Cambridge Institute of Technology(VTU)
+  05/2016 - 08/2018
+  ,
+  6.8 CGPA ,Bengaluru,India
+  Bachelor of Computer Applications[BCA]
+  Seshadripuram ﬁrst grade college
+  Bengaluru,india
+  PUC [PCME]
+  Soundarya composite pre university college
+  bengaluru,India
+  10th [SSLC]
+
+================================================================================
+Full_Stack_Developer__Mahipal_Thakur.txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+HEAD:
+  Mahipal
+  Thakur
+  Senior
+  Full
+  Stack
+  Software
+  Engineer
+  |
+  .NET
+  |
+  Azure
+  |
+  Angular
+  |
+  Cloud-Native
+  Phone:
+  9330458772
+  |
+  Email:
+  themahipalthakur@gmail.com
+  |
+  Location:
+  Bangalore,
+  KA
+  LinkedIn:
+  in/mahipal-thakur
+  |
+  GitHub:
+  https://github.com/themahipalt
+  |
+  LeetCode:
+  /themahipalthakur
+  PROFILE
+  Senior
+  .NET
+  Full-Stack
+  Developer
+  with
+  6
+  years
+  building
+  cloud-native
+  enterprise
+  applications
+  on
+  Azure,
+  AWS,
+  and
+  GCP.
+  At
+
+================================================================================
+Full_Stack_Developer__Sameer_Kumar_Baral.txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  Brisa Technologies Pvt. Ltd. (Client - Viatris) | May 2024 - Present
+HEAD:
+  SAMEER KUMAR BARAL
+  CONTACT
+  +91 7008143010
+  kumarsameerbaral@gmail.com
+  Bengaluru, India
+  TECHNICAL SKILLS
+  • C#
+  • .NET Core (6, 7, 8, 9)
+  • .NET Framework (3.5, 4.8)
+  • ASP.NET Core Web API
+  • ASP.NET Core MVC
+  • Angular (16 - 19)
+  • JavaScript
+  • SQL Server
+  • Oracle 19C
+  • Entity Framework Core
+  • LINQ
+  • REST APIs
+  • Clean Architecture
+  • MediatR
+  • CQRS
+  • Agile / Scrum
+  EDUCATION
+  Bachelor of Computer Science
+  Engineering
+  Nalanda Institute of Technology, BPUT
+  2014 - 2018 | CGPA: 6.91.NET Full-Stack Developer
+  .NET Full-Stack Developer with 7+ years of experience at Brisa Technologies
+  (Client - Viatris), Anthology, and UMSM Technology. Skilled in building
+  scalable web applications using C#, .NET Core/MVC, Angular, REST APIs,
+  and SQL Server. Experienced across SDLC, Scrum, clean architecture, and
+  problem-solving, focused on delivering high-quality, business-driven solutions.
+  WORK EXPERIENCE
+  Senior Software Developer
+  Brisa Technologies Pvt. Ltd. (Client - Viatris) | May 2024 - Present
+  ●Led full-stack development of enterprise applications using Angular
+  16+, .NET Core 7/9 and SQL Server.
+  ●Built CSM (Cloud Server Management) , enabling automated server
+  up/down control, and independently developed the complete EMS
+  application end-to-end; contributed to AMS and V-Coach, improving
+  workflow automation.
+  ●Implemented Clean Architecture, MediatR , reusable components
+  and high-performance REST APIs within Scrum teams.
+  ●Resolved security vulnerabilities in AMS and EMS systems,
+  improving system stability.
+  Senior Associate Software Developer
+  Anthology International Pvt. Ltd. | Nov 2021 - Apr 2024
+  ●Developed REST APIs, MVC applications, and Angular modules for
+  Connect - University Management Platform .
+  ●Designed CRUD features, stored procedures and optimised database
+
+================================================================================
+Full_Stack_Developer__Swetha_Sri_TS.txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  BNP Paribas Oct 2024 - Present
+HEAD:
+  SWETHA SRI T S
+  +91 7871766565⋄Bangalore, Karnataka
+  swethasri1707@gmail.com⋄https://www.linkedin.com/in/swetha-sri-suresh
+  PROFILE SUMMARY
+  Results-driven Full Stack .NET Developer with 5+ years of experience building scalable web and enterprise appli-
+  cations for Financial Services and E-commerce, using C#, ASP.NET Core, Microservices, SQL Server/PostgreSQL,
+  and Angular. Skilled in SOLID principles, design patterns, unit testing (XUnit, NUnit, Moq), and Azure Cloud,
+  with a track record of optimizing performance, resolving production issues, and mentoring developers in Agile/Scrum
+  teams.
+  EDUCATION
+  BE Computer Science and Engineering, SSN College of Engineering 2017 - 2021
+  CGPA - 8.42
+  SKILLS
+  LanguagesC#, SQL, TypeScript, JavaScript, HTML5, CSS3, Python
+  Frameworks & LibrariesASP.NET Core, ASP.NET MVC, Web API, Entity Framework, ADO.NET,
+  Angular, RxJS, Bootstrap, jQuery
+  ArchitectureMicroservices, RESTful APIs, SOLID Principles, Design Patterns
+  DatabaseSQL Server, PostgreSQL, LINQ, Stored Procedures, SSIS, SSRS
+  TestingNUnit, Moq, XUnit, Unit Testing, Test-Driven Development (TDD)
+  Cloud & DevOpsAzure Cloud, Azure Service Bus, CI/CD, Jenkins, GIT, Bitbucket
+  Tools & IDEsVisual Studio, VS Code
+  MethodologiesAgile, Scrum, Sprint Planning
+  Soft SkillsCommunication, Problem Solving, Analytical Thinking, Mentoring
+  EXPERIENCE
+  BNP Paribas Oct 2024 - Present
+  Software Engineer
+  •Developed and maintained business-critical financial web applications usingASP.NET MVC, C#, HTML,
+  CSS, and jQuery, delivering secure and high-performance solutions for users.
+  •Optimized SQL Server stored procedures and added targeted indexes on high-traffic tables, reducing average
+  query execution time by30-40%and eliminating timeout errors on the reporting dashboard.
+  •Built a.NET Corebackground service, hosted as a Windows Service on a configurable schedule, to automati-
+  cally process files up to 2GB for parsing and staging data into SQL Server tables to generate a report, eliminating
+  manual, on-demand processing that previously required users to trigger runs via UI button clicks.
+  •Refactored legacy modules to followSOLID principlesandDependency Injection patterns, improving
+  testability and enabling unit test coverage with XUnit and Moq.
+  •Designed and developed an internal utility application usingAngular and Web APIthat communicates with
+  SharePoint to identify unused files and clear storage, reducing SharePoint storage usage by 50% and eliminating
+  5-6 hours of manual cleanup effort.
+  •Integrated AI-assisted tools into daily development workflow to generate boilerplate, refactor legacy code, and
+  accelerate feature delivery by20%, while maintaining code quality through peer review standards.
+  •Built and maintained CI/CD pipelines in Jenkins to automate build, test, and deployment processes, streamlining
+  release cycles and reducing manual deployment effort.
+  •Mentored junior developerson .NET Core best practices and code review standards, reducing production
+  defects from their code.
+  •Worked in Agile/Scrum environments, actively participating in sprint planning, estimation, backlog refinement,
+  and release activities.
+  LTIMindtree Nov 2021 - Oct 2024
+  Software Engineer
+  •Developed new features for contract-processing web application using C#, ASP.NET Core,Microservices,
+  supporting 5k daily active users processing1000 transactions per day.
+
+================================================================================
+Full_Stack_Developer__Vijay_Bhaskar_Resume_Latest_2026.txt
+KYNDRYL_MENTION: YES
+  KY: CAREER SUMMARY S.No. Company Designation Duration  1. Kyndryl Solutions Lead II, Application Architecture Sep 2021 – till date  2. IBM I
+  KY: =========================================================== Kyndryl, Bangalore Sep 2021 – till date Project: University Management Sys
+PRESENT/CURRENT lines:
+  Sep 2021 – till date
+  Kyndryl, Bangalore Sep 2021 – till date
+
+================================================================================
+L2_Support_Engineer__Keerthana_K_Resume_(1).txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  Oct 2023 – Present
+HEAD:
+  KEERTHANA K
+  Full Stack Developer | Java  Spring Boot  React.js  MySQL
+  Tumkur, Karnataka  +91 6364769271  keerthanakanthraj0063@gmail.com  LinkedIn  Portfolio
+  PROFESSIONAL SUMMARY
+  Full Stack Developer with ~3 years of experience building secure, scalable web applications for Government of Karnataka projects
+  at Centre for Smart Governance (CSG). Hands-on expertise in React.js, Java, Spring Boot, RESTful APIs, MySQL, and MVC
+  architecture. Delivered across full SDLC with strong skills in JWT authentication, role-based access control, SQL optimization, and
+  schema design for enterprise systems serving multiple government departments.
+  TECHNICAL SKILLS
+  Languages: Java, JavaScript (ES6+), SQL, HTML5, CSS3
+  Frontend: React.js, React Hooks, Redux, JavaScript ES6+, HTML5, CSS3, Bootstrap, Responsive UI, Cross-browser Compatibility,
+  Axios, REST API Integration
+  Backend: Java, Spring Boot, Spring MVC, RESTful APIs, Microservices, Hibernate, JPA, MVC Architecture, JWT Authentication
+  Database: MySQL, SQL Query Optimization, Schema Design, Joins, Indexes
+  Tools & Practices: Git, GitHub, Postman, Maven, Eclipse, VS Code, PuTTY, Linux, Agile, Scrum, Code Review, Unit Testing
+  Domain: Government Tech — secure data handling, role-based access control, multi-department workflows, audit compliance
+  WORK EXPERIENCE
+  Associate Software Engineer — Centre for Smart Governance (CSG), Bengaluru
+  Oct 2023 – Present
+  Built and maintained 3 full-stack enterprise web applications using React.js, Java, and Spring Boot, following MVC architecture
+  across multiple government departments.
+  Designed and deployed 40+ RESTful APIs with Spring Boot, enabling real-time data exchange between internal modules and
+  external government services.
+  Developed responsive, cross-browser compatible UIs using React.js, JavaScript ES6+, HTML5, CSS3, and Bootstrap across web
+  portals serving multiple departments.
+  Designed and optimized MySQL schemas (30+ tables) and complex SQL queries, reducing report generation time and
+  improving system reliability.
+  Implemented role-based access control (RBAC) and JWT-based authentication, protecting sensitive government data;
+  collaborated in Agile/Scrum team across full SDLC.
+  KEY PROJECTS
+  Employee Management System (EMS) React.js · Spring Boot · MySQL · REST API
+  Built full-stack EMS handling attendance tracking, payroll processing, resource allocation, and multi-level approval workflows for
+  government employees across departments.
+  Designed optimized MySQL schema with normalized tables and compliance modules ensuring accurate, audit-ready records;
+  integrated automated reporting reducing manual reporting effort.
+  IT Equipment Management System React.js · Spring Boot · MySQL · Barcode Generation
+  Developed asset-tracking platform managing 500+ equipment items and 200+ asset requests across departments, with
+  purchase order processing and vendor invoice handling.
+  Implemented automated barcode generation and assignment workflows, eliminating manual asset tagging errors; built real-time
+  procurement dashboards in React.js consuming live REST APIs.
+  Housing Allotment & Quarter Management System React.js · Spring Boot · MySQL · Workflow Automation
+  Designed government web application for housing quarter allotment, with NOC generation, applicant records, availability tracking,
+  and multi-level approval workflows.
+  Automated manual approval processes with role-based dashboards for applicants, officers, and approvers; secure document
+  upload/download, reducing processing time and improving compliance.
+  CERTIFICATIONS & EDUCATION
+  Certifications: Advanced React and Redux — Udemy (Verified)  Master Microservices with Spring Boot & Spring Cloud —
+  Udemy (Verified)
+  B.E. — Computer Science & Engineering, Sri Siddhartha Institute of Technology, Tumkur (2019 – 2023 | CGPA: 8.3 / 10)
+
+================================================================================
+L2_Support_Engineer__Naukri_BSampurna[2y_8m].txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  May 2026 - Present
+HEAD:
+  May 2026 - Present
+  Oct 2025 - Apr 2026
+  Dec 2023 - Sep 2025
+  B Sampurna
+  Fullstack Developer
+  +91-9347827116 |
+  sampurnab33@gmail.com |
+  Bengaluru, INDIA | Experience: 2 Years 7 Months
+  Results-driven Software Engineer with 2.7 years of experience in designing and developing scalable, high-
+  performance web applications. Strong expertise in frontend development using Node.js, React.js, TypeScript,
+  Redux, and modern UI frameworks. Proven experience in building reusable, responsive components,
+  integrating REST APIs, and optimizing application performance. Skilled in collaborating with cross-functional
+  teams in Agile/Scrum environments and owning features end-to-end from development to deployment. Actively
+  seeking opportunities to contribute to impactful products while continuously enhancing technical and problem-
+  solving skills.
+  SKILLS
+  Javascript
+  MongoDB
+  Github
+  Redux
+  HTML
+  Less
+  Agile
+  Problem Solving
+  React.js
+  Bootstrap
+  JIRA
+  Restfull API
+  CSS
+  RESTful API
+  Responsive Web Design
+  Collaboration
+  Node.js
+  Sass / Less
+  GIT
+  Postman API
+  Sass
+  TypeScript
+  UI/UX Design
+  Material UI
+  WORK EXPERIENCE
+  Fullstack Developer - ClinoGenesis Research Institute
+  End-to-End LMS Development: Architected and maintained a scalable Learning Management System portal to manage
+  students, courses, assessments, and workflows.
+  Frontend Engineering: Built responsive, mobile-first UI using React.js, TypeScript, Redux, and modern CSS libraries for
+  seamless user experience.
+  Backend & API Architecture: Designed secure RESTful APIs handling student enrollment, auth (JWT/OAuth), notifications,
+  and progress tracking.
+  Database & Performance Optimization: Managed SQL/NoSQL schemas for student records and grades, optimizing queries
+  for low latency and high concurrency.
+
+================================================================================
+L2_Support_Engineer__Naukri_GayatriSajjan[4y_0m].txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+HEAD:
+  GAYATRI SAJJAN
+  Dynamic and detail -oriented Frontend development at Infosys with proven skills in , UI/UX design, and API integration, targeting
+  opportunities in Bengaluru, Chennai, and Hyderabad to leverage expertise in creating innovative web solutions.
+  gayatrisajjan1@gmail.com +91-9113655498 LinkedIn GitHub
+  CORE COMPETENCIES
+  Frontend Development
+  UI/UX Design & Optimization
+  Web Application Performance
+  API Integration
+  Agile Development & DevOps
+  Security & Compliance Standards
+  Cross -Functional Collaboration
+  Software Engineering Best Practices
+  Cloud Technologies & Ver sion
+  Control
+  Scalability & Responsive Design
+  TECHNICAL SKILLS
+  Programming Languages:
+  JavaScript, TypeScript
+  Frontend Technologies: React.js,
+  HTML, CSS, Bootstrap
+  Database Management: MySQL
+  Version Control & DevOps: Git,
+  GitHub, Azure DevOps
+  Testing & Debugging: Jest, Cypress,
+  Postman
+  Development Tools & IDEs: Visual
+  Studio, VS Code
+  EDUCATION
+  Bachelor of Engineering (B.E.)
+  in Computer Science &
+  Engineering
+  SJC Institute of Technology,
+  Karnataka
+  June 2017 – August 2021
+  NOTABLE ACHIEVEMENTS
+  Developed and deployed scalable
+  web applications, leading to a 30%
+  increase in user retention.
+  Insta Award(Sep 2024) – Recognized
+  for contribution to macy’s platform. PROFILE SUMMARY
+  Over 4 years of experience in the technology sector , specializing in frontend
+  development and user interface design , with a strong commitment to
+  delivering high -quality, scalable software solutions.
+  Proficient in frontend technologies, API integration, and user experience
+  design , while continuously refining skills in Agile methodolo gies and
+  DevOps practices .
+  Boosted user engagement by 30% through the creation of responsive web
+  applications , significantly enhancing overall user experience and
+  satisfaction .
+
+================================================================================
+L2_Support_Engineer__Naukri_satyabhama[1y_5m].txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  Ample Enterprise Technologies Pvt. Ltd. , Pune August 2025 – Present
+HEAD:
+  SATYABHAMA
+  Software Developer
+  +91 8217635060 satyabhamakorke@gmail.com linkedin.com/in/satyabhama-korke
+  OBJECTIVE
+  Software Developer with experience in building web applications, developing and integrating APIs, and delivering
+  scalable software solutions using ReactJS, Flask, Python, and MongoDB. Skilled in problem-solving, debugging, and
+  collaborating across teams to build reliable and user-focused applications. Passionate about learning new technologies
+  and contributing to innovative software products.
+  TECHNICAL SKILLS
+  •Frontend Development: React.js, JavaScript, TypeScript, Redux, HTML, CSS
+  •Backend Development: FastAPI, Flask, Python
+  •API Testing & Tools: REST APIs, Postman, Swagger, JSON, XML, API Integration
+  •Web Optimization: Technical SEO, On-Page Optimization, Website Performance Tuning
+  •Database Management: MongoDB, MySQL
+  •Version Control: Git, GitHub
+  •AI-Assisted Development: Prompt Engineering, LLM Tools, AI Debugging, Workflow Optimization
+  •Soft Skills: Communication, Problem Solving, Analytical Thinking, Adaptability, Quick Learner, Teamwork
+  EXPERIENCE
+  Software Developer
+  Ample Enterprise Technologies Pvt. Ltd. , Pune August 2025 – Present
+  •Contributed to the development and enhancement of enterprise web applications and product-based platforms
+  using React.js, JavaScript, HTML, and CSS .
+  •Built responsive user interfaces, reusable frontend components, and scalable application features with a focus
+  on performance and user experience.
+  •Worked extensively on the iReqruit platform, contributing to platform modules, frontend integrations, Com-
+  mand Centre features, and application enhancements.
+  •Developed modern UI systems, animations, responsive layouts, and user-centric workflows across multiple web
+  applications.
+  •Delivered frontend solutions for 7+ enterprise websites , ensuring responsive design, maintainable UI archi-
+  tecture, and optimized performance.
+  •Developed and maintained 200+ ATS-friendly resume and portfolio templates with reusable design
+  systems, responsive layouts, and scalable frontend implementations.
+  •Implemented API integrations, dynamic rendering workflows, and real-time frontend functionalities across en-
+  terprise applications.
+  •Contributed to Technical SEO, website optimization, and overall application usability improvements.
+  •Leveraged AI-assisted development workflows and LLM-powered productivity tools to accelerate debugging, UI
+  engineering, and feature delivery.
+  •Collaborated within agile teams to deliver scalable and production-ready frontend solutions.
+  Full Stack Developer Intern
+  VHU Technologies and Solutions Pvt. Ltd. , Bengaluru June 2024 – May 2025
+  •Developed a full-stack account management system for group savings, handling user contributions, loans, repay-
+  ments, and transaction tracking.
+  •Designed and developed RESTful APIs using Flask and implemented business logic for repayment schedules and
+  contribution cycles.
+  •Implemented JWT-based authentication and Role-Based Access Control (RBAC) for secure user management.
+  •Designed MongoDB schemas and optimized database queries to improve data management and application
+  performance.
+  •Built responsive dashboards using ReactJS with API integrations, pagination, filtering, and dynamic data ren-
+  dering.
+  •Collaborated in testing, debugging, and resolving application issues to ensure reliable system functionality and
+
+================================================================================
+L2_Support_Engineer__Priyanka_AcharResume.txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  Full Stack .NET Developer (Full-time) Mar 2026 – Present
+HEAD:
+  Priyanka SEmail: priyankaachar003@gmail.com
+  Mobile: +91 8861552099
+  LinkedIn: linkedin.com/in/priyanka-s-620734256/
+  GitHub: github.com/priyanka2003476
+  Portfolio: Portfolio Website
+  Professional Summary
+  Full Stack .NET Developer with 1.5 years of experience in designing, developing, and maintaining enterprise web
+  applications using ASP.NET Core, C#, Blazor Server, SQL Server, and RESTful APIs. Proficient in backend
+  development, database design, JWT-based authentication, and building responsive user interfaces. Experienced in Agile
+  development environments with hands-on exposure to Power BI reporting, SQL-based data analysis, application
+  support, and system monitoring. Strong problem-solving skills with a focus on delivering scalable, secure, and
+  high-performance business solutions while adhering to clean coding and software development best practices.
+  Experience
+  •Aspire Software Consultancy Onsite
+  Full Stack .NET Developer (Full-time) Mar 2026 – Present
+  ◦Full Stack Development: Working on NEXORA, a Smart Workforce Automation Platform built using ASP.NET
+  Core, Blazor, and SQL Server while following Clean Architecture and Repository Pattern principles.
+  ◦API Development: Developing RESTful APIs for workforce automation modules including user management, task
+  tracking, and approval workflows.
+  ◦Frontend Development: Building reusable and responsive UI components using Blazor and Radzen UI with form
+  validation and seamless data binding.
+  ◦Database Management: Designing and optimizing SQL Server database objects and queries to support scalable
+  application performance.
+  •Sasken Technologies Hybrid
+  Junior Full Stack .NET Developer (Full-time) Feb 2025 – Jan 2026
+  ◦Enterprise Application Development: Developed and maintained an Access Request Management Portal using
+  ASP.NET Core, Blazor Server, and SQL Server with multi-level approval workflows and role-based access control.
+  ◦Backend API Development: Designed and implemented RESTful APIs for user management, request processing, and
+  approval workflows, improving operational efficiency.
+  ◦Authentication & Security: Implemented JWT-based authentication and authorization mechanisms to ensure secure
+  access across application modules.
+  ◦Reporting & Analytics: Created Power BI dashboards and reports to monitor request trends, approval metrics, and
+  operational performance.
+  Technical Skills
+  •Programming Languages: C#, SQL, TypeScript
+  •Frameworks & Technologies: ASP.NET Core, Blazor Server, Entity Framework, LINQ, Repository Pattern
+  •Web & API Development: REST APIs, Web APIs, JWT Authentication, Role-Based Authorization
+  •Frontend: HTML, CSS, Bootstrap, Angular, Blazor, Radzen UI
+  •Database: SQL Server
+  •Tools & Platforms: Visual Studio, VS Code, SSMS, GitLab, Postman, Power BI, LabWare LIMS
+  •LIMS & Laboratory Informatics: LabWare LIMS (Basic), Laboratory Workflows, LIMS Lifecycle Processes
+  Projects
+  •Access Request Management Portal(Professional Project): Tech Stack: ASP.NET Core, Blazor Server, SQL Server,
+  REST APIs, JWT Authentication. Developed an internal portal to manage employee access requests with a secure three-level
+  approval workflow and role-based access control. Built backend APIs, designed the database schema, and implemented JWT
+  authentication to streamline request processing and improve operational efficiency.
+  •NEXORA – Smart Workforce Automation Platform(Professional Project): Tech Stack: ASP.NET Core Web API,
+  Blazor, Radzen UI, SQL Server, Entity Framework Core, JWT Authentication, Clean Architecture. Building a full-stack HR
+  automation platform to simplify employee management and automate organizational workflows. Implemented Clean
+  Architecture with Repository Pattern, role-based authorization, and modular API design. Planned enhancements include an
+
+================================================================================
+L2_Support_Engineer__Rohit_Laveti_CV.txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+HEAD:
+  ROHIT LAVETI
+  Entry -Level Full Stack Developer
+  masterrohit94391@gmail.c om | +91 96684 43829 | Github | LinkedIn | Portfolio
+  PROFESSIONAL SUMMARY
+  Aspiring Software Engineer with strong foundations in Java Full Stack and MERN Stack development, experienced in building
+  scalable , end -to-end web applications through full -time and internship experience. Proficient in object -oriented programming,
+  data str uctures, algorithms, REST APIs, and SQL/NoSQL databases, with hands -on exposure to SDLC, Agile methodologies,
+  debugging, testing, and code reviews. A quick learner with strong problem -solving skills and a collaborative mindset.
+  EXPERIENCE
+  Full Stack Developer August 2025 – August 2026
+  DevSkillZ private Limited , Remote, India
+  ● Developed and delivered multiple full -stack applications including an EdTech learning platform , Student Management
+  System , and Admin/Employee portals using the MERN stack (MongoDB, Express.js, React.js, Node.js) .
+  ● Engineered role-based authentication (RBAC) and secure login systems, building customized dashboards for 100+ daily
+  active users across different user roles
+  ● Desi gned and implemented scalable RESTful APIs for core modules including user management, course workflows, and
+  administrative operations, while managing and optimizing 500+ user records , improving data retrieval efficiency and
+  reducing API response times by 20–30% .
+  ● Integrated Razorpay payment gateway for secure transactions within the learning platform, achieving ~99% uptime
+  during testing
+  ● Built responsive and dynamic frontend interfaces using React.js while enhancing overall system performance through
+  optimized database queries, modular architecture, and efficient state management , ensuring a consistent and high -
+  performance user experience across web and mobile devices.
+  ● Collaborated in an Agile environment , contributing to end -to-end development, testing, and deployment of multiple
+  features across projects.
+  Java Full Stack Intern March 2024 – August 2024
+  Digital Lync, Hyderabad, India
+  Learning Management System (LMS) Portal:
+  ● Developed and enhanced web application features, improving system performance, scalability, and user experie nce
+  for 200+ users .
+  ● Followed SDLC practices and coding standards , using Git for version control, contributing to maintainable and high -
+  quality code across 10+ modules
+  ● Participated in code reviews, debugging, and defect resolution , reducing reported issues by 20–25% and improving
+  release stability .
+  ● Optimized application performance by identifying and resolving bottlenecks, improving page load time by 15–20% .
+  Human Resource Management System (HRMS):
+  ● Designed and developed a microservices -oriented HRMS application using Spring Boot, React.js, and My SQL,
+  supporting employee data management for 100+ records .
+  ● Built and integrated RESTful APIs and frontend components , enabling seamless communication between services
+  and improving system responsiveness .
+  ● Implemented CRUD operations and database management , ensuring efficient data handling and reducing query
+  execution time by 15% .
+  ● Supported unit and functional testing, debugging, and QA processes , contributing to a 25% reduction in defects
+  and improved application reliability .
+  SKILLS
+  Programming Languages: Java, JavaScript (Node.js), TypeScript, Python, C/C++
+  Core Concepts: Data Structures, Algorithms, OOP, DBMS, OS
+  Web Development: React.js, Node.js, Express.js, Spring Boot, REST APIs, Django, FastAPI, Pandas, Chart.js, HTML, CSS
+  Databases: MySQL, MongoDB, SQLite
+  Cloud & DevOps: AWS (basic), CI/CD (basic), Build Tools (Maven, Gradle – basic exposure)
+
+================================================================================
+L2_Support_Engineer__suraj_updated_5118.txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+HEAD:
+  SURAJ MUGALE
+  Technical Assistant
+  Mobile: +91-8495091474 | Email: surajmugale14@gmail.com
+  Location: Basaveshwar Nagar, Bengaluru – 560079
+  PROFESSIONAL SUMMARY
+  Technical professional with 2+ years of experience supporting Government of Karnataka
+  departments, with hands-on experience in e-Governance applications, e-Marukatte system, SQL
+  database handling, data management, technical support, troubleshooting and networking.
+  Experienced in handling application issues, database queries, data verification and providing
+  technical support to government officials and field users.
+  WORK EXPERIENCE
+  Technical Assistant – Department of Sericulture, Govt. of Karnataka
+  Through: Nila Mantek | 1.9 Years
+   Provided technical support for the e-Marukatte application .
+   Handled front-end issues and SQL database queries .
+   Performed data verification, correction and database management.
+   Supported computers, printers, software and network-related issues.
+   Coordinated with users and technical teams for issue resolution.
+   Prepared technical reports, documentation and presentations.
+   Supported digital records and departmental e-Governance activities.
+  Technical Engineer – Directorate of Economics & Statistics, Govt. of Karnataka
+  Through: Avani Info-soft Pvt. Ltd. | 6 Months
+   Provided technical support to field officers across Karnataka.
+   Handled data management, verification and analysis .
+   Performed hardware/software installation and troubleshooting.
+   Supported networking and system-related issues.
+   Maintained departmental records and databases.
+   Assisted users in resolving application and technical issues.
+  EDUCATION
+  MCA – 8.1 CGPA
+  Visvesvaraya Technological University (VTU), Kalaburagi – 2022
+  TECHNICAL SKILLS
+  SQL | MS Word | MS Excel | MS PowerPoint | Hardware & Software Troubleshooting
+  CERTIFICATION
+   Java Software Certificate – Kodnest, Bengaluru
+  KEY STRENGTHS
+  Problem Solving | Data Accuracy | Technical Support | Team Coordination | Communication | Time
+  Management | Confidential Data Handling
+  DECLARATION
+  I hereby declare that the information provided above is true and correct to the best of my knowledge.
+  Place: Bengaluru
+  Date: 18-08-2026
+
+================================================================================
+Performance_and_Security_Test_Lead__Naukri_PranayKumbhare[7y_8m].docx.txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  RPA & Micr osoft Copilot: No direct production RPA implemen tation to date; strong automa tion-scrip ting founda tion
+HEAD:
+  PRANAY KUMBHARE
+  AI Valida tion Tester | GxP & Comput er System Valida tion (CSV) | Pharmaceutic al Manuf acturing | AI/LLM Quality
+  Engineering
+  Pune, India | +91 8149120948 | pranaykumbhare1204@gmail.com | 7.8+ Years Experience
+  PROFESSIONAL SUMMARY
+  Senior SDET / AI Valida tion Tester with 7.8+ years of Functional, Automa tion, and AI/LLM Testing experience, including direct
+  exposur e
+  to
+  GxP-regula ted
+  pharmaceutic al
+  environmen ts.
+  Curr ently
+  valida ting
+  a
+  cloud-based
+  AI/Da ta
+  platform
+  for
+  Takeda
+  Pharmaceutic al
+  (OneDa ta
+  Platform)
+  across
+  4
+  GxP
+  environmen ts,
+  and
+  previously
+  valida ted
+  an
+  AI
+  Clinic al
+  Content
+  Gener ation
+  platform
+  for
+  Roche
+  Diagnos tics
+  against
+  regula tory
+  and
+  compliance
+  requir emen ts.
+  Skilled
+  in
+  transla ting
+  business,
+  NFR,
+  and
+  AI/regula tory
+
+================================================================================
+Performance_and_Security_Test_Lead__Naukri_SakshamKumar[10y_1m].docx.txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  Currently working as, a Test Lead in at Morgan Stanley, Bengaluru from Apr 2026 to till date.
+  Current Project: Corporate Retirement Portal (Nov 2022 – Till Date) at Morgan Stanley Role: Test Lead Note: Earlier working as Consultant now as Full time employee. Testing Strategy: Service level Testing, UI Testing, Pl
+
+================================================================================
+Performance_and_Security_Test_Lead__Naukri_SayyadTouseefHussaini[8y_0m].txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  Currently employed as a Senior Security Consultant at EMIDS TECHNOLOGIES PVT
+HEAD:
+  Sayyad Touseef Hussaini
+  Senior Cyber Security & VAPT
+  Consultant, Penetration Tester
+  Email : Touseef90@yahoo.com
+  Contact No : +91 8951750565
+  LinkedIn : sayyad -touseef -huusaini
+  PROFESSIONAL SUMMARY
+  To be Dedicated and detail -oriented Cyber security professional with 8 years of
+  experience in the Vulnerability Assessment and Penetration Testing (VAPT) domain.
+  Currently employed as a Senior Security Consultant at EMIDS TECHNOLOGIES PVT
+  LTD, specializing in VAPT Gove rnance, Bug Bounty Program, Network VAPT, Web
+  Applications, Android, iOS, API, Secure Configuration Review, Phishing Campaigns,
+  Cloud Security and source code review. Seeking opportunities to leverage my
+  expertise and contribute to the cyber security field while continuing to learn and
+  grow.
+  CAREER TIMELINE
+  Emids Technologies Pvt Ltd
+  Senior Security Consultant
+  PROTIVITI INDIA MEMBER
+  PRIVATE LIMITED.
+  Senior Cyber Security
+  Consultant,
+  Veave Technologies Pvt Ltd.
+  Cyber Security Analyst,
+  Penetration Tester
+  Digital Age Strategies Pvt Ltd.
+  Cyber Security Analyst,
+  Penetration Tester July 2019
+  to
+  Nov 2020
+  Veave Technologies Pvt Ltd.
+  Cyber Security Intern
+  CLIENTS RELATIONSHIP
+  Performed Vulnerability Assessment and Penetration Testing for Server, Router,
+  Switches, Web Application, Mobile applications for the following domain:
+  • Govern ment Administration.
+  • Banking Financial Services and Insurance (BFSI).
+  • Defense, Power Distribution, Hospitality
+  • Telecom, Infrastructure, Information Technology, Education
+  • Private Sector Labs, Manufacturing, Travel & Transport
+  June 2019
+  CORE SKILLS
+  Troubleshooting | Threat Management
+  Troubleshooting | Risk Assessment |
+  Expertise
+  VAPT Governance
+  Bug Bounty Program
+  Vulnerability Assessment
+  Web Application Penetration Testing
+  Android Penetration Testing
+
+================================================================================
+Security_Specialist__CURRICULAM_VITAE_Shiva_(1).txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+HEAD:
+  CURRICULAM VITAE
+  Mancherla Shivaprasad
+  Contact: +91-8309259171
+  Email: mancherlashivaprasad8@gmail.com
+  Professional Exposure:
+  ➢ Having a total of 9.3 years of experience in Security Operational Centre (SOC) and Skilled
+  primarily in Threat hunting, Incident Response, Threat Intelligence, Investigation and
+  admin engineering activities.
+  ➢ Expert in SIEM platforms (RSA NetWitness, QRadar) rule tuning, alert triage, log analysis,
+  use case development , custom parser’s by using RSA LPT tool , integration and
+  dashboard optimization.
+  ➢ Integration to the new ly onboard appliances to the SIEM so lution, and physically
+  maintain ing the SIEM serve rs in the Data Center.
+  ➢ Conducted advanced threat hunting aligned with MITRE ATT&CK and Diamond Models,
+  identifying stealthy APT activity and unknown IOCs.
+  ➢ Investigated and responded to 20+ high -severity security incidents weekly, including
+  malware, phishing, spoofing, and ransomware and SQL injection attacks.
+  ➢ Led SOC operations and incident response lifecycle, from detection to containment,
+  escalation, documentation, and recovery.
+  ➢ Integrated threat intelligence with detection strategy; tracked threat actors using TTPs
+  and contributed to threat intel repositories.
+  ➢ Designed and deployed custom correlation rules in ESA to improve detection accuracy
+  and minimize false positives.
+  ➢ Managed SOC tool maintenance, licensing, health monitoring, and collaboration with
+  OEMs for engineering -level troubleshooting.
+  ➢ Developed and delivered daily, fortnightly, and monthly reports with threat trend
+  insights and proactive recommendations.
+  ➢ Mentored Level L1 and L2 SOC analysts conducted knowledge -sharing sessions and
+  created escalation frameworks and incident templates.
+  ➢ Developed and Execute hypothesis -driven threat hunts, analyzed logs across layers
+  (network, system, application, registry, packet) for anomaly detection.
+  ➢ Supported change management and incident communications across cross -functional
+  teams.
+  ➢ Participated in SOC coordination calls, incident reviews and liaised with leadership to
+  align response priorities with business goals.
+  ➢ Development of Use cases design and fine tuning , reports analysis and further
+  enhancement .
+  ➢ Proactively reviewing and operationalizing threat intelligence to create alerting to
+  detect techniques, tactics, and procedures employed by threat actors .
+  ➢ Quick Learner and Flexible to adapt to challenging environments/technologies and
+  Excellent Communication & Coordination Skills.
+  ➢ Team and shifts as per shift roster and working in 24*7 rotational shifts.
+  Educational Details:
+  Bachelor of Technology from Khammam institute of technology and sciences - JNTU
+  Hyderabad University in the year 2016
+  Technical Skills:
+  • Technology/Skills: Log analysis, Packet analysis, Incident Respo nse, malware analysis,
+  Phishing analysis , UEBA, S OAR , Log parser tool, Endpoint Detection and responses,
+  DDOS traffic analysis , cloud application -based analysis.
+  • Tools : RSA Netwitness SIEM, IBM Qradar, Sysdig, SOAR, EDR, UEBA , Arbor (DDOS), Airtel
+
+================================================================================
+Security_Specialist__Naukri_AkshayR[8y_0m].txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  IT Analyst – Cybersecurity Practitioner | Tata Consultancy Services (TCS) Sep 2024 – Present
+HEAD:
+  AKSHAY R
+  Security Engineer | Incident Response & Threat Detection | Cloud Security
+  Bangalore, India • +91 -8050199637 • akshayrkumar29@gmail.com • linkedin.com/in/akshay -r-6022a166
+  PROFESSIONAL SUMMARY
+  Security Engineer with 7+ years of hands -on experience driving Security Incident Response, Threat Detection &
+  Hunting, and Cloud Security across on -premises and multi -cloud (AWS/Azure/GCP) environments. Proven track
+  record of reducing mean time to respond (MTTR), cutting false positive rates by 40%, and leading enterprise -wide
+  containment during zero -day events. Expert in SIEM (Azure Sentinel, Google Chronicle, QRadar) and EDR
+  (Cortex XDR, CrowdStrike Falcon) platforms; skilled in SOAR automation, MITRE ATT &CK-aligned detection
+  engineering, and translating complex threat findings into executive -level reporting. Holds AZ -500 certification;
+  actively pursuing CEH & CompTIA Security+.
+  CORE COMPETENCIES
+  Incident Response & Triage: Alert investigation, malware analysis, phishing response, containment, root cause
+  analysis, escalation, on -call
+  Threat Detection & Hunting: SIEM use case development, MITRE ATT&CK correlation tuning, GuardDuty,
+  CrowdStrike Falcon, Wiz Defend, Darktrace, IPS/IDS
+  SIEM / EDR / SOAR: Azure Sentinel, Google Chronicle, IBM QRadar, Cortex XDR, SOAR automation, custom
+  parser development
+  Cloud & Systems Security: AWS (GuardDuty, CloudTrail, S3, EC2, IAM), Azure, GCP, Linux/Unix, Windows,
+  network protocol analysis (HTTP, DNS, TCP/IP)
+  Scripting & Automation: Python, log analysis, command -line forensics, SAST/DAST integration, DevSecOps
+  pipelines
+  Frameworks & Compliance: MITRE ATT&CK, NIST CSF, vulnerability management, risk assessment, SOP
+  development, penetration testing concepts
+  AI & ML in Security: ML-based anomaly detection, AI -enhanced SIEM/SOAR triage, phishing and endpoint
+  anomaly scoring (POC)
+  PROFESSIONAL EXPERIENCE
+  IT Analyst – Cybersecurity Practitioner | Tata Consultancy Services (TCS) Sep 2024 – Present
+  ▸ Orchestrated end -to-end incident response across endpoint, network, and cloud environments — owning
+  full lifecycle from alert triage and forensic investigation to containment and root cause analysis, fully aligned
+  with the NIST Incident Response Framework .
+  ▸ Slashed analyst response times by designing and deploying SOAR -driven triage workflows and
+  standardized playbooks, cutting MTTR significantly and enabling consistent SOC performance at scale.
+  ▸ Proactively neutralized advanced threats through targeted threat hunting campaigns built on the MITRE
+  ATT&CK framework , uncovering lateral movement, persistence techniques, and living -off-the-land (LotL)
+  attacks across enterprise environments before they escalated.
+  ▸ Reduced organizational risk exposure by leading vulnerability assessments and patch validation cycles;
+  delivered data -driven risk dashboards and executive reports that directly informed leadership security
+  investment decisions.
+  ▸ Strengthened detection posture by partnering with cross -functional engineering teams to refine detection
+  logic, improve alert fidelity, and implement preventive controls — eliminating recurring incident patterns.
+  ▸ Authored high -impact incident reports including breach communications and detailed root cause
+  analyses consumed by senior stakeholders and client leadership, demonstrating ability to translate technical
+  findings into business context.
+  Technical Consultant – Endpoint & Infrastructure Security | IBM Dec 2021 – Sep 2024
+  ▸ Conducted deep -dive forensic investigations on Linux/Unix and Windows platforms — dissecting system
+  logs, process trees, and network flows to identify IOCs and attacker TTPs, enabling rapid and accurate
+  incident escalation. Incident Response Consultant, Senior Incident Response Consultant, Principal Incident Response Consultant, Lead Incident Response Consultant, IR Consultant, Se
+  Consultant, Cyber Defense Analyst, Cyber Defence Analyst, SOC Analyst, SOC L1 Analyst, SOC L2 Analyst, SOC L3 Analyst, Senior SOC Analyst, SOC Lead, SOC Manager, SOC Architect, Sec
+  Analyst, Cyber Threat Intelligence Analyst, CTI Analyst, Senior Threat Intelligence Analyst, Malware Analyst, Reverse Engineer, Cybersecurity Engineer, Cloud Security Engineer, Sen
+
+================================================================================
+Security_Specialist__Naukri_AwdheshGupta[7y_0m].txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+HEAD:
+  Awdhesh Gupta (CEH, eWPTX) B-17 Dallupura Road Noida Sector-12, 201301 Mobile: +917717752456 Email:awdheshji000@gmail.com
+  OBJECTIVE
+  ●
+  Looking
+  for
+  a
+  challenging
+  position
+  for
+  Cyber
+  Security
+  &
+  Vulner ability
+  Assessmen t
+  and
+  Penetration
+  Testing
+  (VAPT)
+  in
+  a
+  dynamic
+  environmen t
+  that
+  encourages
+  growth
+  and
+  excellence
+  with
+  the
+  opportunity
+  to
+  work
+  on
+  different
+  projects
+  involving
+  latest
+  technologies.
+  SUMMARY
+  ●
+  Over
+  8
+  years
+  of
+  relevant
+  experience
+  in
+  the
+  IT
+  indus try
+
+================================================================================
+Security_Specialist__Naukri_SusamayGarai[13y_0m].txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+HEAD:
+  Susamay Garai
+  Senior Consultant | PwC India (PricewaterhouseCoopers Services LLP)
+  Mob No: +91-9088782655 | Email: susamaygarai@hotmail.com
+  CAREER OBJECTIVE
+  Aspiring cybersecurity professional with hands -on experience in penetration testing and vulne rability
+  assessment across application, mobile (iOS and Android) , web service, and thick client platforms. Seeking
+  a challenging role in a forward -thinking organization where I can apply my technical expertise to identify
+  and mitigate security risks, contr ibute to robust defense strategies, and continuously evolve in the
+  dynamic landscape of information security. Committed to precision, ethical hacking practices, and
+  proactive problem -solving to safeguard digital assets and enhance organizational resilience .
+  PROFILE SUMMARY
+   Over 13.5+ years of comprehensive IT experience spanning Dynamic Application Security Testing
+  (DAST ), Network Security, Mobile Applications (iOS and Android), Web Services, and Thick Client
+  platforms.
+   Web Applications: OWASP Top 10, business logic flaws, ses sion management, and input validation .
+   Mobile Applications (iOS & Android): Static/dynamic analysis, reverse engineering, insecure data
+  storage, and API security .
+   Web Services: SOAP, REST, authentication bypass, injection flaws, and misconfigurations
+   Thick Client Applications: Memory analysis, protocol fuzzing, DLL hijacking, and binary exploitation
+   Led risk assessment initiatives to maintain alignment with corporate compliance requirements.
+   Conducted comprehensive security assessments on host, network, and web platforms utilizing various
+  automated testing tools.
+   Led onsite security assessments emulating insider threats to strengthen organizational defenses
+  against internal compromise.
+   Investigated hacker tactics, techniques, and procedures (TTPs), along wit h system -level exploits and
+  vulnerabilities, to strengthen defensive capabilities.
+   Produced detailed anomaly reports highlighting application and network security gaps, with strategic
+  recommendations for mitigation.
+   Strengthened organizational resilience b y incorporating security and compliance checks, supporting
+  continuous assurance and enhancing audit efficiency.
+   Led the team to successfully deliver the project to the client within the agreed timeline.
+  EXPERIENCE SUMMARY
+   Led penetration testing and vul nerability assessment projects as Senior Consultant at
+  PricewaterhouseCoopers Services LLP from November 2019 to December 2025
+   Worked as Security Test Engineer at ARC Document Solutions Pvt. Ltd. from August 2017 to
+  November 2019
+   Worked as Test Engineer at STQC IT Services under the Ministry of Electronics and Information
+  Technology (MeitY), Government of India, from February 2012 to June 2017
+  TECHNICAL SKILL SET
+   Web Application Security Testing with follow by the standard s of OWASP Top 10
+   Mobile Apps Secu rity Testing (iOS and Android)
+   Penetration Testing
+   Vulnerability Assessment
+   Information Security Analyst .
+  TOOLS USED FOR TESTING
+   Web Application Security Testing Tools:
+  Netsparker, IBM Security AppScan, Acunetix
+   Penetration Testing Tools :
+  Nessus Vulne rability Scanner , Sqlmap, Metasploit, Nmap (Network Mapper) , Wireshark, Nikto,
+  OpenVAS, Hping
+
+================================================================================
+Technical_Lead__Naukri_DhasarathanT[13y_0m].docx.txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+HEAD:
+  DHASARATHAN
+  TAMILARASAN
+  Technical
+  Lead
+  |
+  .NET
+  Solution
+  Architect
+  |
+  ASP.NET
+  Core
+  |
+  Angular
+  |
+  Microservices
+  |
+  Azure
+  |
+  AI
+  Integration
+  +91
+  7010420859
+  |
+  dasatml@gmail.com
+  |
+  India
+  PROFESSIONAL
+  SUMMARY
+  Technical
+  Lead
+  and
+  .NET
+  Solution
+  Architect
+  with
+  12+
+  years
+  of
+  experience
+  designing,
+  developing,
+  and
+  delivering
+  enterprise
+  applications
+  using
+  C#,
+  ASP.NET
+  Core,
+  ASP.NET
+
+================================================================================
+Technical_Lead__Naukri_DilipKumarTriapathy[14y_0m].docx.txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+HEAD:
+  DILIP KUMAR TRIPATHY
+  .NET Full Stack Technical Lead | .NET Core / .NET 10 | Angular & React | GenAI Expert
+  Bengaluru, India | +91-991-606-5866 | diliptripathy.net@gmail.com
+  PROFESSIONAL SUMMARY
+  Results-oriented Technical Lead with 14+ years of experience architecting, modernizing, and delivering enterprise-grade SaaS,
+  healthcare,
+  and
+  government
+  compliance
+  web
+  applications.
+  Expertise
+  in
+  modernizing
+  legacy
+  architectures
+  to
+  .NET
+  Core
+  /
+  .NET
+  10
+  and
+  Angular
+  (v8
+  to
+  18+),
+  designing
+  scalable
+  microservices,
+  and
+  deploying
+  robust
+  RESTful
+  APIs.
+  Advanced
+  in
+  leveraging
+  GenAI-assisted
+  development
+  tools
+  (Claude,
+  ChatGPT,
+  GitHub
+  Copilot,
+  Cursor
+  AI)
+  to
+  accelerate
+  code
+
+================================================================================
+Technical_Lead__Naukri_JitendraNShukla[16y_0m].txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  Project Lead / Technical Project Manager, Trigun Infotech 11/2025 – Present
+HEAD:
+  JITENDRA N . SHUKLA
+  Project Lead | Technical Project Lead
+  Shukla_jit@yahoo.co.in +91-9870765857
+  Summary
+  • Strong leadership, analytical, decision-making,
+  team mentoring, client management, and delivery-
+  focused skills.
+  • Experienced in Agile/Scrum delivery, 15-Day
+  Sprint Planning, Jira/Confluence, requirements
+  management, risk and issue resolution, UAT,
+  release planning, and stakeholder management.
+  • Experience integrating AI capabilities into
+  enterprise applications using Azure AI Services,
+  Azure OpenAI, RAG, LangChain, Ollama,
+  ChromaDB, and Vector Databases.
+  • Strong experience designing scalable solutions
+  using N-Tier Architecture, Microservices, RESTful
+  APIs, Design Patterns, and cloud-based solutions.
+  • 6+ years of experience developing modern web
+  applications using Angular, TypeScript, Node.js,
+  Express.js, HTML5, and CSS3.
+  • Strong hands-on expertise in C#, ASP.NET,
+  ASP.NET MVC, .NET Core, .NET 10, Entity
+  Framework, Azure, REST APIs, SQL Server, Oracle,
+  PostgreSQL, and Snowflake.
+  • Proven experience leading cross-functional
+  development teams, managing end-to-end project
+  delivery, sprint planning, release management,
+  production support, stakeholder coordination, and
+  client communication.
+  • 16+ years of experience in software architecture,
+  enterprise application development, technical
+  leadership, project delivery, and solution
+  implementation across Procurement, Maritime,
+  Cyber Security, Banking, E-commerce, VAS, and
+  Gaming domains.
+  • Requirement Analysis | Solution Design | Risk &
+  Issue Management | Production Support | Quality &
+  Delivery Governance
+  • Team Leadership & Mentoring | Stakeholder
+  Management | Client Coordination | UAT Support
+  • End-to-End Project Management | Agile/Scrum |
+  Sprint Planning | Release & Deployment
+  Management
+  PROJECT LEADERSHIP & DELIVERYProfessional Experience
+  Project Lead / Technical Project Manager, Trigun Infotech 11/2025 – Present
+  NAVIOX – Fleet Management System
+  •Project Description: NAVIOX is an enterprise fleet management solution
+  developed for the maritime industry to manage vessel operations, crew
+  management, maintenance planning, procurement, inventory, voyage
+
+================================================================================
+Technical_Lead__Naukri_Milash[14y_0m].txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  Technical Architect with 14+ years of software development experience and 18+ years in IT, currently leading enterprise microservices platform development at EY.
+  Hexaware Technologies | Technical Architect | May 2024 - Present
+
+================================================================================
+Technical_Lead__Naukri_Vidyashree[10y_0m].txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  01/2024 – Present • Client: Netgear
+HEAD:
+  VIDYASHREE
+  Technical Lead | Senior .NET Full Stack Developer
+  +91-7892502132 • vidyaumaluti@gmail.com • linkedin.com/in/vidyashree -tech -lead • Bengaluru, India
+  EXPERIENCE
+  Technical Lead
+  Tech Mahindra
+  01/2024 – Present • Client: Netgear
+  • Led a team of 7 developers delivering enterprise applications and end -to-end production
+  support
+  • Migrated a complete legacy application to the modern .NET framework and delivered
+  React -based UI components
+  • Improved application performance by 30%, automated 15+ manual processes and reduced
+  production incidents by 40%
+  • Conducted technical interviews, code reviews, mentoring and release planning; managed
+  Git-based Agile delivery across an international team
+  • Recognized by Netgear leadership for successful modernization and consistent technical
+  delivery
+  Senior Software Engineer
+  Wipro
+  03/2022 – 01/2024 • Client: Philips Signi fy (Netherlands)
+  • Engineered high -performance device communication drivers spanning hardware
+  integration, PLC integration and Windows Services
+  • Partnered with the Netherlands engineering team as offshore Single Point of Contact
+  (SPOC) for all development act ivities
+  • Optimized driver throughput and digitized 10+ manual business workflows through
+  targeted automation
+  • Collaborated within a 10 -member Agile team using Git for version control and pull request
+  management
+  • Received client appreciation from Philips Signify for technical ownership and delivery
+  excellence
+  Software Engineer
+  CMS Computers Ltd
+  06/2021 – 03/2022 • Client: Government of Karnataka – Bhoomi Land Records
+  • Maintained statewide Bhoomi land records applications serving 100,000+ citizens across
+  Karnataka
+  • Built ASP.NET applications, SQL Server database objects and WCF services supporting daily
+  land record transactions
+  • Provided production support and performance improvements, coordinating directly with
+  District Commissioners
+  • Recognized by Government of Karnataka stakeholders for reliable delivery and system
+  stability
+  Software Engineer
+  Sumeru Software Solutions
+  04/2019 – 05/2021 • Client: Government of Karnataka – Bhoomi Land Records
+  • Created citizen -facing land records modules using ASP. NET MVC, SQL Server and Web
+  Services
+  • Implemented backend APIs and database objects for statewide land digitization initiatives
+  • Supported statewide deployments across 227+ taluk offices along with ongoing feature
+  enhancements
+  Software Developer
+
+================================================================================
+Technical_Lead__Profile_Template_new_GoK_Shravan_(1).txt
+KYNDRYL_MENTION: YES
+  KY: - To Present | Employment Record: | Employer | Employer | Kyndryl India | Kyndryl India | Kyndryl India | Kyndryl India | Employment Record: | P
+PRESENT/CURRENT lines:
+  | Employment Record: | From/To | From/To | 1st Sep 2021 - To Present | 1st Sep 2021 - To Present | 1st Sep 2021 - To Present | 1st Sep 2021 - To Present
+HEAD:
+  Format for Biodata of personnel
+  Certifications :
+  I, Shravankumar M Airani the undersigned certify that:
+  (i) to the best of my knowledge and belief, this bio data correctly describes me, my qualifications,
+  and my experience.
+  I understand that my willful misstatement described herein may lead to my disqualification or dismissal, if engaged.
+  Name & Signature (Personnel) Name & Signature (Authorised
+  Shravankumar M Airani Representative)
+  12-08-2026, Bengaluru
+  Date and Place of signing Date and Place of signing
+  Name | Name | Years of Exp | Years of Exp | Years of Exp | Proposed Position | Proposed Position | Proposed Position
+  Shravankumar M Airani | Shravankumar M Airani | 24+ | 24+ | 24+ | Techonlogy Lead | Techonlogy Lead | Techonlogy Lead
+  1 | Name of Company: | Name of Company: | Name of Company: | KYNDRYL INDIA Ltd. | KYNDRYL INDIA Ltd. | KYNDRYL INDIA Ltd. | KYNDRYL INDIA Ltd.
+  2 | Designation of Staff: | Designation of Staff: | Designation of Staff: | Assiciate Director | Assiciate Director | Assiciate Director | Assiciate Director
+  3 | Date of Birth: | 14-01-1975 | 14-01-1975 | Nationality: | Nationality: | Indian | Indian
+  4 | Education: | Education: | Education: | Education: | Education: | Education: | Education:
+  | S.No | Degree Obtained | Degree Obtained | Institution | Dates | Dates | Dates
+  | 1 | MBA | MBA | SMU | June 2021 | June 2021 | June 2021
+  | 2 | BE | BE | STJIT, Ranebennur | 2001 | 2001 | 2001
+  | 3. | | | | | |
+  5 | Membership of Professional Associations: | Membership of Professional Associations: | Membership of Professional Associations: | | | |
+  6 | Other Training: | Other Training: | Other Training: | | | |
+  7 | Countries of Work Experience: | Countries of Work Experience: | Countries of Work Experience: | India | India | India | India
+  8 | Languages: | Language | Language | Speak | Read | Read | Write
+  8 | Languages: | English | English | Yes | Yes | Yes | Yes
+  8 | Languages: | Kannada | Kannada | Yes | Yes | Yes | Yes
+  8 | Languages: | Hindi | Hindi | Yes | Yes | Yes | Yes
+  | Employment Record: | From/To | From/To | 1st Sep 2021 - To Present | 1st Sep 2021 - To Present | 1st Sep 2021 - To Present | 1st Sep 2021 - To Present
+  | Employment Record: | Employer | Employer | Kyndryl India | Kyndryl India | Kyndryl India | Kyndryl India
+  | Employment Record: | Position Held | Position Held | Associate Director | Associate Director | Associate Director | Associate Director
+  | Employment Record: | From/To | From/To | 1st April 2016 – 31st Aug 2021 | 1st April 2016 – 31st Aug 2021 | 1st April 2016 – 31st Aug 2021 | 1st April 2016 – 31st Aug 2021
+  | Employment Record: | Employer | Employer | IBM India Pvt Ltd | IBM India Pvt Ltd | IBM India Pvt Ltd | IBM India Pvt Ltd
+  | Employment Record: | Position Held | Position Held | Assistant Manager | Assistant Manager | Assistant Manager | Assistant Manager
+  | Employment Record: | From/To | From/To | Feb 2005 to Mar 2016 | Feb 2005 to Mar 2016 | Feb 2005 to Mar 2016 | Feb 2005 to Mar 2016
+  | Employment Record: | Employer | Employer | USI and AT&T GBS | USI and AT&T GBS | USI and AT&T GBS | USI and AT&T GBS
+  | Employment Record: | Position Held | Position Held | Team Lead | Team Lead | Team Lead | Team Lead
+  10 | | Project Management, Oracle Applications , Oracle Database, PostgreSQL , Solutioning , WebLogic, WebSphere, IIS, Developer tools , API,OCI, Azure, Sharepoint,Java, Agile, Peo
+  10 | Skills | Project Management, Oracle Applications , Oracle Database, PostgreSQL , Solutioning , WebLogic, WebSphere, IIS, Developer tools , API,OCI, Azure, Sharepoint,Java, Agi
+  11 | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+  | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+  | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+  | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+  | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+  | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+  | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+  11 | Name of assignments or projects: | Name of assignments or projects: | Technical lead | Technical lead | Technical lead | Technical lead | Technical lead
+  11 | Year: | Year: | 2025 | 2025 | 2025 | 2025 | 2025
+  11 | Location: | Location: | Bidadi / Bengaluru | Bidadi / Bengaluru | Bidadi / Bengaluru | Bidadi / Bengaluru | Bidadi / Bengaluru
+  11 | Client: | Client: | Toyota Kirloskar Motors | Toyota Kirloskar Motors | Toyota Kirloskar Motors | Toyota Kirloskar Motors | Toyota Kirloskar Motors
+  11 | Main project features: | Main project features: | Migration of database and application | Migration of database and application | Migration of database and application | Migra
+
+================================================================================
+Test_Engineer__B_Sirish_Kumar_Resume_6.txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  Wipro Limited Dec 2021 – Present
+  Test Engineer Jan 2024 – Present
+
+================================================================================
+Test_Engineer__Bindhu_Bhargavi_Talasila.txt
+KYNDRYL_MENTION: YES
+  KY: e sprints Software Engineer – SDET / Automation Engineer | Kyndryl Solutions Pvt Ltd, Hyderabad Nov 2021 – Oct 2023 ●Automated monitoring workflow
+PRESENT/CURRENT lines:
+HEAD:
+  BINDHU BHARGAVI TALASILA
+  SDET | Automation Engineer | Selenium • Playwright • API • CI/CD
+  Hyderabad, India | +91-9100861350 | bindhutalasila08@gmail.com | LinkedIn | Portfolio
+  SUMMARY
+  SDET with 4.5+ years of experience designing and maintaining scalable automation frameworks for web, API, and backend
+  applications. Hands-on with Selenium, Playwright, C#, Java, BDD, API automation, Jenkins CI/CD, Azure DevOps, Git, SQL, and
+  Agile delivery. Automated 200+ end-to-end test cases and reduced regression execution time by 40%.
+  KEY ACHIEVEMENTS
+  ●Reduced regression execution time by 40% using parallel automation and optimized CI/CD pipelines
+  ●Automated 200+ end-to-end test cases across POS and Connected Payments projects
+  ●Cut nightly regression execution time by 2+ hours per release cycle through optimized Jenkins pipelines
+  ●Improved defect triage efficiency by 30% using structured reporting
+  PROFESSIONAL EXPERIENCE
+  Software Quality Engineer – Automation (SDET) | NCR Voyix, Hyderabad Oct 2023 – Feb 2026
+  ●Designed BDD-based automation frameworks using C#, Java, SpecFlow, Selenium, and NUnit, reducing regression effort by
+  40%
+  ●Automated 200+ end-to-end test cases across POS and Connected Payments projects, covering order management, payments,
+  device integrations, and transaction validation
+  ●Built and optimized Jenkins CI/CD pipelines for nightly regression, cutting execution time by 2+ hours per release cycle, and
+  built REST API test automation using Postman for backend validation
+  ●Implemented parallel test execution to accelerate defect detection; leveraged AI coding assistants (GitHub Copilot, Claude) to
+  speed up test script authoring and code reviews by 35%
+  ●Managed Azure VMs for stable, isolated test execution; improved defect triage efficiency by 30% using structured reporting
+  with Extent Reports
+  ●Prepared test plans, test cases, and defect reports for release readiness; collaborated with cross-functional teams in Agile
+  sprints
+  Software Engineer – SDET / Automation Engineer | Kyndryl Solutions Pvt Ltd, Hyderabad Nov 2021 – Oct 2023
+  ●Automated monitoring workflows across 3,000+ servers, reducing manual effort by 40%
+  ●Developed shell scripts to eliminate repetitive operational tasks, saving 10+ hours per week
+  ●Performed log analysis, defect identification, and root cause analysis for critical production issues
+  ●Supported CI/CD pipelines and deployment processes; managed incidents and change requests via ServiceNow while
+  maintaining SLA compliance
+  PROJECTS
+  ●POS Automation Framework (NCR Voyix): Built a hybrid framework (BDD + Page Object Model + Data-driven) for end-to-
+  end retail workflow automation, integrated with CI/CD
+  ●API Automation Framework: Designed a REST API automation suite validating service contracts and integration flows
+  ●AI-Assisted Test Automation: Explored Claude and GitHub Copilot for auto-generating SpecFlow step definitions and test
+  data, cutting script writing time significantly
+  TECHNICAL SKILLS
+  Automation & Testing: Selenium WebDriver, Playwright, WinAppDriver, Appium, SpecFlow (BDD), NUnit, Cucumber
+  Languages: C#, Java, JavaScript, Groovy, Shell Scripting, TypeScript
+  API Testing: Postman, REST Assured, REST API Automation, RestSharp
+  CI/CD & Cloud: Jenkins, Azure DevOps, Git, GitHub, Azure Virtual Machines, Resource Groups
+  QA Process: Test Strategy & Quality Engineering, Functional, Regression, Integration, API Testing, SDLC, STLC, Defect Lifecycle
+  Management, JIRA, PractiTest, Agile Scrum
+  Database & Reporting: SQL (SELECT queries, data validation); Extent Reports, Azure Test Plans
+  AI-Assisted Testing: GitHub Copilot, Claude – AI-generated test validation, script authoring & code review
+  EDUCATION & CERTIFICATIONS
+  B.Tech – Computer Science Engineering | BVRIT Hyderabad College of Engineering for Women | 2018 – 2021
+  AI Tools & Claude Workshop — be10x, Certificate of Completion, issued August 16, 2026
+
+================================================================================
+Test_Engineer__Profile_Template_Rosen_Nath.txt
+KYNDRYL_MENTION: YES
+  KY: | Name of Company: | Name of Company: | Name of Company: | Kyndryl Solution | Kyndryl Solution | Kyndryl Solution | Kyndryl Solution 2 | Designati
+  KY: 22 to Present | Employment Record: | Employer | Employer | Kyndryl Solution | Kyndryl Solution | Kyndryl Solution | Kyndryl Solution | Employment
+PRESENT/CURRENT lines:
+  | Employment Record: | From/To | From/To | June-2022 to Present | June-2022 to Present | June-2022 to Present | June-2022 to Present
+HEAD:
+  Format for Biodata of personnel
+  Certifications :
+  Microsoft Certified: Azure fundamentals
+  AWS Certified: Cloud Practitioner
+  AWS AI Practitioner
+  AWS Solutions Architect
+  I, the undersigned certify that:
+  (i) to the best of my knowledge and belief, this bio data correctly describes me, my qualifications,
+  and my experience.
+  I understand that my willful misstatement described herein may lead to my disqualification or dismissal, if engaged.
+  Name & Signature (Personnel) Name & Signature (Authorised
+  Rosen Nath Representative)
+  Date and Place of signing Date and Place of signing
+  Name | Name | Years of Exp | Years of Exp | Years of Exp | Proposed Position | Proposed Position | Proposed Position
+  Rosen Nath | Rosen Nath | 13 | 13 | 13 | Lead Developer | Lead Developer | Lead Developer
+  1 | Name of Company: | Name of Company: | Name of Company: | Kyndryl Solution | Kyndryl Solution | Kyndryl Solution | Kyndryl Solution
+  2 | Designation of Staff: | Designation of Staff: | Designation of Staff: | Lead Developer Eng | Lead Developer Eng | Lead Developer Eng | Lead Developer Eng
+  3 | Date of Birth: | 10th July 1983 | 10th July 1983 | Nationality: Indian | Nationality: Indian | |
+  4 | Education: | Education: | Education: | Education: | Education: | Education: | Education:
+  | S.No | Degree Obtained | Degree Obtained | Institution | Dates | Dates | Dates
+  | 1 | BE | BE | BPUT | | |
+  | 2 | | | | | |
+  | 3. | | | | | |
+  5 | Membership of Professional Associations: | Membership of Professional Associations: | Membership of Professional Associations: | NA | NA | NA | NA
+  6 | Other Training: | Other Training: | Other Training: | NA | NA | NA | NA
+  7 | Countries of Work Experience: | Countries of Work Experience: | Countries of Work Experience: | India | India | India | India
+  8 | Languages: | Language | Language | Speak | Read | Read | Write
+  8 | Languages: | English | English | Yes | Yes | Yes | Yes
+  8 | Languages: | Kannada | Kannada | No | No | No | No
+  8 | Languages: | Hindi | Hindi | Yes | Yes | Yes | Yes
+  | Employment Record: | From/To | From/To | June-2022 to Present | June-2022 to Present | June-2022 to Present | June-2022 to Present
+  | Employment Record: | Employer | Employer | Kyndryl Solution | Kyndryl Solution | Kyndryl Solution | Kyndryl Solution
+  | Employment Record: | Position Held | Position Held | Lead Developer Eng | Lead Developer Eng | Lead Developer Eng | Lead Developer Eng
+  | Employment Record: | From/To | From/To | March 2020 to June 2022 | March 2020 to June 2022 | March 2020 to June 2022 | March 2020 to June 2022
+  | Employment Record: | Employer | Employer | Harman Conneted Service | Harman Conneted Service | Harman Conneted Service | Harman Conneted Service
+  | Employment Record: | Position Held | Position Held | Laed Software Eng | Laed Software Eng | Laed Software Eng | Laed Software Eng
+  | Employment Record: | From/To | From/To | Oct 2018 to Mar 2020 | Oct 2018 to Mar 2020 | Oct 2018 to Mar 2020 | Oct 2018 to Mar 2020
+  | Employment Record: | Employer | Employer | Tech Mahindra | Tech Mahindra | Tech Mahindra | Tech Mahindra
+  | Employment Record: | Position Held | Position Held | Sr Software Eng | Sr Software Eng | Sr Software Eng | Sr Software Eng
+  | | From/To | From/To | Mar 2014 to Sept 2018 | Mar 2014 to Sept 2018 | Mar 2014 to Sept 2018 | Mar 2014 to Sept 2018
+  | | Employer | Employer | HCL | HCL | HCL | HCL
+  | | Position Held | Position Held | Lead Software Eng | Lead Software Eng | Lead Software Eng | Lead Software Eng
+  10 | | Python, Perl, Ansible, Fast API, Flask, Robot Framework, PyTest, Git, CICD- GitHub Action, Docker, Jira, Automation Testing, Functional testing, Intigration testing and agil
+  10 | Skills | Python, Perl, Ansible, Fast API, Flask, Robot Framework, PyTest, Git, CICD- GitHub Action, Docker, Jira, Automation Testing, Functional testing, Intigration testing a
+  11 | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+  | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+  | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+  | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+  | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+  | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+
+================================================================================
+Test_Engineer__REKHA_US_AUTOMATION_TESTING_4.5_YOE.txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+  Duration: Nov 2024 to Till date
+HEAD:
+  Rekha U S
+  System Engineer(QA) – Manual and Automation Testing (Java with Selenium &API )
+  mailto:rekharekha69982@gmail.com || https://www.linkedin.com/in/rekha -u-s || +91 8861531951
+  Professional Overview
+  Overall 4.5 years of industry experience in the area of Software Testing (Manual and Automation) with a
+  solid understanding of Test Planning, Test Design, Test Execution and Defect Reporting Tracking.
+   Strong knowledge of Software Testi ng Life Cycle (STLC) and experience working in Agile Scrum
+  methodology with active participation in sprint planning, daily stand -ups, sprint reviews, and retrospectives.
+   Expertise in Test Planning, Test Case Design, Test Execution, Defect Tracking, Test Re porting, and
+  Test Closure activities.
+   Proficient in UI Automation Testing using Java, Selenium WebDriver, TestNG, JUnit, Maven, and
+  Cucumber BDD .
+   Extensive experience in REST API Functional Testing, API Validation, and API Automation using
+  Postman and REST Assured.
+   Strong understanding of RESTful Web Services, HTTP/HTTPS protocols, JSON, XML, API
+  architecture, client -server communication, and HTTP methods .
+   Experience in validating HTTP status codes, response payloads, respons e headers, response time,
+  request parameters, and authentication mechanisms .
+   Experience in designing, developing, and maintaining automation frameworks using the Page Object Model
+  (POM).
+   Strong knowledge of Functional, Smoke, Sanity, Regression, Integratio n, System, End -to-End (E2E),
+  and User Acceptance Testing (UAT).
+   Hands -on experience with BDD using SpecFlow and writing feature files and step definitions.
+   Experience using JIRA, Azure DevOps, Zephyr, Git/GitHub, Jenkins, and CI/CD pipelines for defect
+  management, version control, and continuous testing.
+  Technical Proficiency
+   Programming Language : Java
+   UI Automation : Selenium WebDriver, TestNG, JUnit, Cucumber BDD, SpecFlow
+   API Testing : REST Assured, Postman, Swagger, REST API Testing, JSON, HTT P/HTTPS
+   Test Management : Jira, Zephyr, Azure DevOps, TFS
+   Version Control : Git, GitHub, Bitbucket , Jenkins
+   Database : SQL ( queries and validation )
+   IDE: Eclipse, IntelliJ IDEA, Visual Studio
+  Work Experience
+  Organization: QUALITEST
+  Client: Mercedes Benz R&D
+  Duration: Nov 2024 to Till date
+  Tools Used : Selen ium WebDriver, TestNG, Cucu mber BDD, Rest Assured, Postman , GitHu b, Azur e
+  DevOps (TFS), Jen kins, VS Code,
+  Testing Approach : Manual and Automation.
+  Description: Mercedes -Benz Data Collection Management System – An automotive platform designed to
+  collect, process, and manage diagnostic and operational data from multiple Electronic Control Units (ECUs),
+  enabling efficient vehicle monitoring, analysis, and backend integration.
+  
+  Roles & Responsibilities:
+   Designed and executed end -to-end automation test cases for the Mercedes -Benz Dat a Collection
+  Management platform, validating data acquisition from multiple ECUs.
+   Automated API testing using Rest Assured and Postman to verify data exchange between vehicle ECUs
+  and backend services.
+   Developed and maintained functional, regression, and i ntegration test suites using Selenium WebDriver,
+
+================================================================================
+Test_Engineer__SrinivasMutalik_5yrs_SoftwareTesting.txt
+KYNDRYL_MENTION: NO
+PRESENT/CURRENT lines:
+HEAD:
+  SRINIVAS GURURAJ MUTALIK
+  Contact : +91 -9632937336 | Email: shrinivas.mutalik@gmail.com | LinkedIn : linkedin.com/in/srinivas -mutalik31ba0117b
+  Softw are Testing professional with 5 years of
+  experience in manual testing across Agile projects,
+  seeking roles in Manual Testing/QA and Test
+  Automation (Selenium with Java) to deliver
+  high‑quality, reliable applications . Preferred
+  location: Bengaluru, Mysuru .
+  • Quality Assurance
+  • Software Development Lifecycle
+  • Manual Testing
+  • Agile Project Management
+  • Defect Management
+  • Test Case Design and Execution
+  • Performance Testing
+  • User Acceptance Testing
+  • Risk Assessment and Mitigation
+  • Stakeholder Engagement
+  • Selenium
+  • TestNG
+  • Decipher XML
+  • Azure DevOps
+  • SQL
+  • ALM
+  • Jira
+  • Life Sphere Regulatory Product :
+  Functional Testing of requirements leading to the
+  defect free development. Improved the overall web -
+  application’s functionalities. Involved in development of
+  Test cases , Test Planning and overall SDLC activities.
+  • PMT Project (Manual Tester):
+  Executed functional testing and test planning activities,
+  developed detailed test cases, and validated
+  requirements to ensure defect‑free development and
+  improved overall web application functionality .
+  • Manual & Automation Testing course from
+  QSpiders
+  • 2020: B.E. (Electronics) | Instrumentation from
+  RNS Institute of Technology, VTU, Bengaluru,
+  Karnataka
+  • Date of Birth: 2nd October 1997
+  • Languages Known: English, Hindi, and
+  Kannada
+  • Highly skilled in test case design, execution, and defect lifecycle management, ensuring
+  accurate coverage, early defect identification, and stable releases. Additionally involved
+  in management of test cases using ALM tool.
+  • Demonstrated expertise in SDLC and STLC processes, including requirement analysis,
+  sanity & smoke testing, black‑box testing, and validation across web‑based and
+  enterprise applications.
+  • Proficient in automation fundamentals and tools such as Selenium with Java, TestNG,

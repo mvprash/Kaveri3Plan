@@ -1,0 +1,118 @@
+JAGANNATH SAHU  
+Azure Solution Architect | Principal Engineer | AI Solutions Architect  
+Enterprise Cloud Architecture | Azure OpenAI & Generative AI | Cloud Modernization | Technical & Delivery Leadership  
+Bengaluru, India | + 91 9886331363  |  sahu_jagannath@yahoo.com  |  linkedin.com/in/jagannath -sahu  
+PROFESSIONAL SUMMARY  
+Azure Solution Architect and Technical Leader with 1 7 years of IT experience designing, architecting, and delivering enterprise -
+scale Microsoft Azure and .NET cloud solutions.  Proven track record leading complex cloud modernization programs, migrating 
+legacy mainframe and on -premises systems to cloud -native Azure architectures. Hands -on expertise in Azure DevOps, CI/CD 
+automation, Microservices, Azure Functions, Azure Data Fact ory, Azure Storage, Azure Service Bus, and Disaster Recovery 
+design. Skilled in building AI -powered solutions using Azure OpenAI, Retrieval -Augmented Generation (RAG), Azure AI Search, 
+and Vector Search, reducing manual support effort by approximately 80% on a recent engagement. Experienced technical 
+leader across Government, Banking, Financial Services, Capital Markets, and IoT domains, managing Agile teams of up to 15 
+engineers, stakeholder relationships, and end -to-end release governance. Microsoft Certi fied: Azure Solutions Architect Expert 
+(AZ-305), Azure Developer Associate (AZ -204), Azure Fundamentals (AZ -900); Certified ScrumMaster (CSM). U.S. onsite 
+experience on an H -1B visa.  
+CORE COMPETENCIES  
+Azure Solution Architecture  •  Cloud Modernization & M igration  •  Azure OpenAI & Generative AI  •  Retrieval -Augmented 
+Generation (RAG)  •  Azure AI Search & Vector Search  •  Microservices & REST APIs  •  Azure Functions & Durable Functions  •   
+Azure Data Factory  •  Azure DevOps & CI/CD  •  Docker  •  Disa ster Recovery & High Availability  •  Technical & Delivery 
+Leadership  •  Agile / Scrum Delivery  •  Stakeholder & Risk Management  •  Release Management  •  Requirement Gathering & 
+Solutioning  
+PROFESSIONAL EXPERIENCE  
+UNISYS  
+Associate Principal Engineer — Solution Architect | Technical Lead | Technical Project Manager | Scrum Master May 2017 – 
+Present  
+● Architect enterprise -scale Azure cloud solutions for mission -critical applications using Microsoft Azure, .NET, 
+Microservices, Azure Functions, Azure Data Fac tory, Azure Storage, Azure Service Bus, and Azure SQL Database.  
+● Lead cross -functional Agile teams of 5–10 engineers, providing technical direction, mentoring, sprint planning, backlog 
+refinement, and release governance.  
+● Drive architecture reviews, solution  design, technology selection, and engineering best practices to deliver scalable, 
+secure, and highly available applications.  
+● Design and implement Azure DevOps CI/CD pipelines, reducing deployment effort and improving release quality 
+through automation.  
+● Collaborate with Product Owners, business stakeholders, and enterprise architects to define technology roadmaps 
+aligned with business objectives.  
+● Lead cloud modernization initiatives, migrating legacy applications to cloud -native Azure architecture.  
+● Implemen t Disaster Recovery (DR) strategies and operational monitoring to improve platform resilience and business 
+continuity.  
+● Manage production deployments, issue resolution, performance optimization, and continuous improvement initiatives.  
+Key Project — Job Serv ice North Dakota (JSND), USA | Solution Architect | May 2022 – Present  
+● Architected the modernization of a legacy mainframe workforce -management platform into a cloud -native Microsoft 
+Azure solution, enabling scalable processing and reliable data transmissi on across workforce and unemployment 
+program systems.  
+● Designed enterprise integration using Azure Data Factory, Azure Functions, Azure Storage, Azure Service Bus, and Azure 
+SQL Database.  
+● Established Azure DevOps CI/CD pipelines supporting automated deployments across Development, UAT, and 
+Production environments.  
+● Implemented Disaster Recovery architecture for business -critical workloads, ensuring high availability and business 
+continuity.  
+● Designed and implemented an AI -powered support assistant using  Azure OpenAI, Retrieval -Augmented Generation 
+(RAG), Azure AI Search, and Vector Search, reducing manual support effort by approximately 80% through AI -assisted 
+knowledge retrieval.  
+● Led a cross -functional team of 6 engineers, facilitating Daily Scrum, spri nt planning, backlog grooming, sprint reviews, 
+and retrospectives to ensure effective Agile delivery.  
+● Acted as key point of contact for client stakeholders, negotiating scope, timelines, and deliverables, and conducting 
+periodic project and release reviews  with risk identification and mitigation.  
+● Developed and maintained project plans, roadmaps, and stakeholder presentations to communicate progress and 
+strategic direction.  
+Key Project — Elevate™ by Unisys | Technical Lead & Scrum Master | Apr 2017 – May 202 2 
+● Led technical delivery for Elevate™, an integrated Omni channel  digital banking software suite spanning mobile, 
+internet, branch, and contact -center channels, integrating with core banking systems.  
+● Led Agile Scrum delivery, facilitated daily stand -ups, a nd removed blockers to ensure smooth sprint execution.  
+● Analyzed user stories and translated business requirements into technical solutions; provided technical leadership in 
+development, code reviews, and defect resolution.  
+● Managed releases, tracked progres s, and communicated status to stakeholders while ensuring code quality through 
+unit testing and adherence to standards.  
+TECH MAHINDRA  
+Project Manager  Jan 2014 – May 2017  
+● Led end -to-end delivery of multiple enterprise software projects across Banking and IoT domains, ensuring alignment 
+with business objectives, timelines, and quality standards.  
+● Managed cross -functional teams (Development, QA, and DevOps) using Agile/Scrum methodologies to drive efficient 
+project execution and continuous improvement.  
+● Collab orated with clients and stakeholders to gather requirements, define project scope, and translate business needs 
+into technical solutions.  
+● Monitored project progress through KPI tracking, risk management, and mitigation strategies to ensure predictable 
+outc omes.  
+● Oversaw CI/CD pipelines, release management, and process optimization initiatives to improve deployment reliability 
+and operational efficiency.  
+Conext Smart Box — Schneider Electric, Canada | Solution Architect | Jul 2015 – Apr 2017  
+● Contributed to th e architecture and development of Conext Insight, a cloud -enabled remote monitoring and asset -
+management platform for distributed IoT/PV plants.  
+● Implemented Agile (Scrum) practices, facilitating daily stand -ups, sprint ceremonies, and retrospectives to ens ure 
+efficient delivery.  
+● Developed and deployed application components using C#, .NET, and Azure services; performed code reviews, release 
+coordination, and production support.  
+MTGO — Wizards of the Coast, Seattle, USA | Technical Project Manager | Jan 2015  – Jul 2015  
+● Served as Onsite Coordinator and primary liaison between the client and offshore team for Magic: The Gathering 
+Online (MTGO), a digital adaptation of the physical card game.  
+● Led test automation efforts using Coded UI, managed sprint planning, s tatus reporting, and release coordination.  
+MPHASIS  
+Senior Software Engineer  Sept 2007 – Jan 2014  
+● Led the design, development, and delivery of key application modules using C#, ASP.NET, .NET Framework, SQL Server, 
+and Oracle, ensuring scalable solutions aligned with project architecture.  
+● Managed and mentored development teams by assigning tasks, conducting code reviews, and enforcing coding 
+standards and best practices.  
+● Collaborated with architects, QA, DevOps, and UI/UX teams to deliver high -quality, wel l-integrated solutions.  
+● Owned the complete module lifecycle — development, testing, deployment, production support, and continuous 
+improvement.  
+ONSITE EXPERIENCE  
+● USA (H -1B Visa): Wizards of the Coast, Seattle — 3-month onsite engagement as Technical Projec t Manager.  
+TECHNICAL SKILLS  
+Cloud Platforms: Microsoft Azure, AWS (working knowledge)  
+AI / Generative AI: Azure OpenAI, Retrieval -Augmented Generation (RAG), Azure AI Search, Vector Search, LLMs  
+Azure Services: Azure Functions, Durable Functions, Azure Data Factory, Azure Storage (Blob, Queue, Table), Event Hub, Azure 
+Service Bus, Azure Key Vault, Azure SQL Database  
+Backend Development: C#, .NET, .NET Core, ASP.NET MVC, Web API, WCF, SQL Server, Oracle  
+Architecture: Microservices, REST APIs, Enterprise A rchitecture, Solution Design  
+DevOps & Tools: Azure DevOps, Git, GitHub, CI/CD, Docker, Bicep, ARM Template, TFS, Jira, Bitbucket, Postman, SoapUI  
+Methodologies: Agile, Scrum, Kanban, Release Management, Requirement Gathering, Stakeholder Management  
+CERTIFI CATIONS  
+● AZ-305: Microsoft Certified — Designing Microsoft Azure Infrastructure Solutions  
+● AZ-204: Microsoft Certified — Azure Developer Associate  
+● AZ-900: Microsoft Certified — Azure Fundamentals  
+● Certified ScrumMaster (CSM), Scrum Alliance  
+● Generative AI Foun dations Certificate — upGrad  
+● AI Tool Workshop — be10X  
+EDUCATION  
+Bachelor of Engineering, Computer Science & Engineering — Berhampur University  

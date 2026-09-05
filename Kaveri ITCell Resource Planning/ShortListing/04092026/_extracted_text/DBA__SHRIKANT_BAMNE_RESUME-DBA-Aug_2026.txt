@@ -1,0 +1,113 @@
+Shrikant N. Bamne  
+Bengaluru, Karnataka | snbamne@gmail.com | +91 -8898724340  
+Senior PostgreSQL DBA | High Availability | Performance Tuning | 
+Upgradation | Migration  | DR  
+Senior Database Administrator with 16+ years of overall professional experience, including 4.6+ 
+years of hands -on expertise in PostgreSQL administration across large -scale government and 
+enterprise environments. Proven experience in database architecture, high availability, 
+replication, performance tuning, backup and disaster recovery, cloud/on -prem migrations, and 
+production support. Strong experience in leading critical incidents, stakeholder communication, 
+SOP creation, and mentoring junior teams.  
+Recognized as Star Performer of the Year (2023) for delivering high -impact database solutions, 
+product ion stability, and operational excellence.  
+Core Competencies  
+• PostgreSQL Administration (Installation, Configuration, Upgrades)  
+• PostgreSQL High Availability: Patroni, Replication, Failover Planning  
+• Performance Tuning: Query optimization, VACUUM, REINDEX, AN ALYZE, Memory tuning  
+• Backup & Recovery: Logical / Physical backups, Barman, pgBackRest , PITR  
+• Replication: Streaming Replication, Logical Replication,  troubleshooting  
+• Database Migrations: On -prem to Cloud / Cloud to On -prem . 
+• Security: User management, Roles, Access controls,  pg_hba.conf  
+• Table Partitioning and Database Optimization  
+• Linux Administration and Cron Automation  
+• MySQL Administration  
+• Backup Tools: Commvault, Veeam  
+• Cloud Exposure: AWS, Azure, VMware, Hyper -V 
+• Client Management and Incident Handling  
+• SOP / Documentation /  Team Mentoring  
+Professional Experience  
+PostgreSQL DBA | Epic Minds | Mar 2026 – Present  
+Project: Karnataka Government Database Environment  
+• Managing production PostgreSQL databases for mission -critical government 
+applications.  
+• Closely working with the depa rtmental expert team on designing, reviewing, and 
+supporting Patroni -based high availability architecture and failover readiness.  
+• Supporting HA setup validation, node health review, replication monitoring, and failover 
+preparedness for production resilienc e. 
+• Performing database security hardening, user and role management, and access 
+controls.  
+• Leading production backup automation, restore validation, and recovery readiness 
+activities.  
+• Managing production -to-staging refreshes and cloud migration activities based on client 
+requirements.  
+• Performing memory tuning, query optimization, partitioning, and routine maintenance 
+for improved performance.  
+• Supporting PostgreSQL FDW / DB link integrations across environments.  
+• Coordinating deployment support, production ch anges, and client reporting.  
+• Contributing to environment planning for enterprise PostgreSQL / EDB deployments.  
+• Postgres server version upgrades.  
+PostgreSQL DBA | ESDS Software Solutions Ltd | Dec 2021 – Feb 2026  
+• Administered PostgreSQL production environments for multiple enterprise and 
+government clients.  
+• Managed installation, configuration, upgrades,  backup, restore, and replication setup.  
+• Performed performance tuning for high -load transactional systems.  
+• Implemented routine maintenance activities including VACUUM, REINDEX, ANALY ZE, 
+and bloat reduction.  
+• Managed cloud migrations, server refresh, and DR drills.  
+• Troublesho ot critical production issues including database slowness, locks, IO 
+bottlenecks, authentication issues, and recovery incidents.  
+• Automated backup and maintenance tas ks using Linux cron.  
+• Prepared SOPs and operational runbooks.  
+• Mentored junior DBAs and coordinated with clients during escalations.  
+• Awarded Star Performer of the Year (2023).  
+Backup Administrator / DBA Support | ESDS / Prior Roles  
+• Managed Commvault and Veeam enterprise backup environments.  
+• Handled DB backup scheduling, restore requests, VM backups, reporting, and OEM 
+coordination.  
+• Supported database operations and infrastructure reliability.  
+Key Projects and Highlights  
+• Supported PostgreSQL environments f or Maharashtra and Karnataka government 
+departments.  
+• Worked on production HA / replication readiness and failover support using Patroni 
+ecosystem.  
+• Led database migrations across on -premises and cloud platforms.  
+• Improved database performance and operational  stability through tuning and 
+maintenance.  
+• Supported major production restores and DR readiness exercises.  
+• Contributed to recovery efforts during critical database incidents, including large -
+volume environments.  
+Technical Skills  
+Databases:  PostgreSQL, MySQL, Couchbase  
+HA / DR:  Patroni, Streaming Replication, Failover Support, Backup / Restore  
+Third party Backup Tools:  Commvault, Veeam  
+Platforms:  Linux, Windows  
+Cloud / Virtualization:  AWS Basics, Azure, VMware, Hyper -V  
+Automation:  Shell scripting, Cron jobs  
+Certifications  
+• Couchbase CD100 Certified (Aug 2025)  
+• Oracle Cloud Data Management Foundations Associate  
+• Veeam Sales Professional (VSP)  
+• Veeam Technical Sales Professional (VTSP)  
+Education  
+M.Tech (Computer Science & Engineering)  – MIT, RGPV Bhopal, 2017  
+B.E. (Information Technology)  – Pune University, 2008  
+Diploma in Computer Engineering  – MSBTE, 2003  
+Additional Strengths  
+• Strong client communication and stakeholder management  
+• Production incident ownership and RCA support  
+• Team mentoring and knowledg e transfer  
+• Documentation, compliance, and operational governance  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+        Best regards,  
+        Shrikant N. Bamne  
+        Senior PostgreSQL  DBA | Database Reliability & HA Specialist  
+        Bengaluru, Karnataka  
+        +91-8898724340 | snbamne@gmail.com  

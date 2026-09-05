@@ -1,0 +1,184 @@
+=== Data Migration Specialist | Naukri_ANSHULPHULKE[7y_0m].docx ===
+Chars: 6272
+Preview: ANSHUL PHULKE Data Migration Specialist | Salesforce & ETL Systems Bengaluru, India | +91-7773097274 | anshul.phulke@gmail.com | linkedin.com/in/anshul-phulke-386aa15a PROFESSIONAL SUMMARY Salesforce CRM Data Migration Specialist with 4 years of combined experience across ETL, Salesforce data migration, and data analysis, including hands-on Data Loader-driven migrations, data mapping, and validation across Sales Cloud, Service Cloud, and Health Cloud in partnership with architects and client teams. Proven track record executing Salesforce data migration initiatives using DBsync and Workbench, consistently delivering 100 % data
+Out: Data_Migration_Specialist__Naukri_ANSHULPHULKE[7y_0m].txt
+
+=== Data Migration Specialist | Naukri_ASHISHSAHOO[7y_0m].pdf ===
+Chars: 3828
+Preview: Ashish Sahoo Hyderabad, India | ashish.sahoo12@gmail.com | +91-7008897871 | https://www.linkedin.com/in/ashishsahoo07/ SUMMARY Senior Data Engineer with 7 years of experience in SQL, Python, and ETL development, delivering scalable data solutions and automating data workﬂows across on-premise and cloud platforms. Expertise in risk management and regulatory reporting, with experience building complex data models for ﬁnancial data processing. Proven ability to ensure data accuracy, governance, and compliance across large-scale pipelines. Currently leading a team delivering reliable, high-performance, audit-ready data solutions. TECHNICAL SKILLS Programming
+Out: Data_Migration_Specialist__Naukri_ASHISHSAHOO[7y_0m].txt
+
+=== Data Migration Specialist | Naukri_MadhanMohanS[12y_0m].pdf ===
+Chars: 17664
+Preview: Madhan Mohan.S +91 9500791916 madhanlead15@gmail.com CAREER OBJECTIVE: - To prove myself as Database Administrator in a progressive managed organization that gives me scope to apply my knowledge and skills. I would like to be with team, which dynamically works towards success and growth of the organization and achieve the set goals. PROFESSIONAL EXPERIENCE: - Worked as a Senior Database Administrator with Rakuten Trade,Malaysia. Nov 2025 – June 2026 Worked as a Technical lead with Wipro Limited. May 2024 – OCT
+Out: Data_Migration_Specialist__Naukri_MadhanMohanS[12y_0m].txt
+
+=== Data Migration Specialist | Naukri_NoorussabaAsifAli[7y_0m].docx ===
+Chars: 4739
+Preview: NOORUSSABA ASIF ALI Consultant 📧 sabhakh25@gmail.com | 📱 +91-9845794362 | Bangalore, India | 🔗 LinkedIn PROFESSIONAL SUMMARY 7 years experienced Data Engineer specializing in cloud migration, ETL/ELT optimization, and enterprise data architecture. Proven expertise in Snowflake, Azure, Informatica, and SQL with demonstrated success in improving system performance by 50%, reducing operational costs by 35%, and contributing to 10% revenue growth through data-driven solutions across banking, insurance, and financial services. TECHNICAL SKILLS/ CORE COMPETENCIES Data Engineering: ETL/ELT Pipelines, Data Warehousing, Medallion
+Out: Data_Migration_Specialist__Naukri_NoorussabaAsifAli[7y_0m].txt
+
+=== Data Migration Specialist | Naukri_ShreyaRamakrishnaPandit[8y_0m].pdf ===
+Chars: 4069
+Preview: SHREYA PANDIT India | Phone: +91 -9980842146 | Email: Shreya.Pandit@ibm.com PROFESSIONAL SUMMARY Database specialist with 8+ years of IT industry experience in designing, developing, testing, and supporting large -scale database systems. Proven expertise in database migration, performance optimization, and T -SQL development across MSSQL, PostgreSQL, Or acle, and Teradata platforms. Strong background in Azure cloud technologies, database administration, and enterprise -level project delivery. Exceptional problem -solving capabilities with demonstrated ability to troubleshoot complex database issues. TECHNIC AL SKILLS Databases: MSSQL,
+Out: Data_Migration_Specialist__Naukri_ShreyaRamakrishnaPandit[8y_0m].txt
+
+=== DBA | KrushnaDebashram_DatabaseSoutionArchitect_202608_1.pdf ===
+Chars: 9180
+Preview: KRUSHNA CHANDRA DEBASHRAM Database Solution Architect Design | Development | Scalability | High Availability |Performance Tuning Mobile : +91-9874634162 e-mail : krushnha_deb@rediffmail.com Place : Bengaluru, India Professional Summary Database solution architect with 1 7+ years’ experience in MSSQL Database designing and delivering scalable, secure, highly available, and high -performance database solutions across enterprise environments. Expertise in database architecture, design, administration, security , high availability HA/DR, performance optimization , data migration, modernization, cloud adoption and operation. Worked across large scale G
+Out: DBA__KrushnaDebashram_DatabaseSoutionArchitect_202608_1.txt
+
+=== DBA | SHRIKANT BAMNE RESUME-DBA-Aug 2026.pdf ===
+Chars: 5757
+Preview: Shrikant N. Bamne Bengaluru, Karnataka | snbamne@gmail.com | +91 -8898724340 Senior PostgreSQL DBA | High Availability | Performance Tuning | Upgradation | Migration | DR Senior Database Administrator with 16+ years of overall professional experience, including 4.6+ years of hands -on expertise in PostgreSQL administration across large -scale government and enterprise environments. Proven experience in database architecture, high availability, replication, performance tuning, backup and disaster recovery, cloud/on -prem migrations, and production support. Strong experience in leading critical incidents, stakeholder communication,
+Out: DBA__SHRIKANT_BAMNE_RESUME-DBA-Aug_2026.txt
+
+=== Full Stack Developer | Binduraj C Resume (1).pdf ===
+Chars: 4136
+Preview: Bindu Raj.C Software Engineer Around 7 years of experience as a Software Engineer in development and implementation of web and client server applications using Microsoft Technologies. Ability to learn & develop using new technologies. Excellent Communication & interpersonal skills with strong background working. binduraj94@gmail.com 9663151636 Bengaluru, India Alternative Mail-id : cbinduraj6@gmail.com WORK EXPERIENCE Senior Engineer - Software SLK Software Pvt. Ltd. 11/2023 - Present , Bengaluru Senior Software Engineer Canarys Automations Pvt. Ltd 12/2022 - 08/2023 , Bengaluru Software Engineer
+Out: Full_Stack_Developer__Binduraj_C_Resume_(1).txt
+
+=== Full Stack Developer | Mahipal Thakur.pdf ===
+Chars: 10841
+Preview: Mahipal Thakur Senior Full Stack Software Engineer | .NET | Azure | Angular | Cloud-Native Phone: 9330458772 | Email: themahipalthakur@gmail.com | Location: Bangalore, KA LinkedIn: in/mahipal-thakur | GitHub: https://github.com/themahipalt | LeetCode: /themahipalthakur PROFILE Senior .NET Full-Stack Developer with 6 years building cloud-native enterprise applications on Azure, AWS, and GCP. At Ecolab, architected event-driven microservices across 15+ services, implemented CI/CD pipelines that cut deployment time by 40%, and maintained 90%+ unit test coverage. Hands-on experience with Docker, Kubernetes, GCP, BigQuery, and
+Out: Full_Stack_Developer__Mahipal_Thakur.txt
+
+=== Full Stack Developer | Sameer Kumar Baral.pdf ===
+Chars: 3388
+Preview: SAMEER KUMAR BARAL CONTACT +91 7008143010 kumarsameerbaral@gmail.com Bengaluru, India TECHNICAL SKILLS • C# • .NET Core (6, 7, 8, 9) • .NET Framework (3.5, 4.8) • ASP.NET Core Web API • ASP.NET Core MVC • Angular (16 - 19) • JavaScript • SQL Server • Oracle 19C • Entity Framework Core • LINQ • REST APIs • Clean Architecture • MediatR • CQRS • Agile / Scrum EDUCATION Bachelor of Computer Science Engineering Nalanda Institute of Technology, BPUT 2014 -
+Out: Full_Stack_Developer__Sameer_Kumar_Baral.txt
+
+=== Full Stack Developer | Swetha Sri TS.pdf ===
+Chars: 5259
+Preview: SWETHA SRI T S +91 7871766565⋄Bangalore, Karnataka swethasri1707@gmail.com⋄https://www.linkedin.com/in/swetha-sri-suresh PROFILE SUMMARY Results-driven Full Stack .NET Developer with 5+ years of experience building scalable web and enterprise appli- cations for Financial Services and E-commerce, using C#, ASP.NET Core, Microservices, SQL Server/PostgreSQL, and Angular. Skilled in SOLID principles, design patterns, unit testing (XUnit, NUnit, Moq), and Azure Cloud, with a track record of optimizing performance, resolving production issues, and mentoring developers in Agile/Scrum teams. EDUCATION BE Computer Science and Engineering, SSN College of
+Out: Full_Stack_Developer__Swetha_Sri_TS.txt
+
+=== Full Stack Developer | Vijay_Bhaskar_Resume_Latest_2026.doc ===
+Chars: 51
+Preview: [DOC extraction failed: No module named 'win32com']
+Out: Full_Stack_Developer__Vijay_Bhaskar_Resume_Latest_2026.txt
+
+=== L2 Support Engineer | Keerthana_K_Resume (1).pdf ===
+Chars: 3838
+Preview: KEERTHANA K Full Stack Developer | Java  Spring Boot  React.js  MySQL Tumkur, Karnataka  +91 6364769271  keerthanakanthraj0063@gmail.com  LinkedIn  Portfolio PROFESSIONAL SUMMARY Full Stack Developer with ~3 years of experience building secure, scalable web applications for Government of Karnataka projects at Centre for Smart Governance (CSG). Hands-on expertise in React.js, Java, Spring Boot, RESTful APIs, MySQL, and MVC architecture. Delivered across full SDLC with strong skills in JWT authentication, role-based access control, SQL optimization, and
+Out: L2_Support_Engineer__Keerthana_K_Resume_(1).txt
+
+=== L2 Support Engineer | Naukri_BSampurna[2y_8m].pdf ===
+Chars: 5791
+Preview: May 2026 - Present Oct 2025 - Apr 2026 Dec 2023 - Sep 2025 B Sampurna Fullstack Developer +91-9347827116 | sampurnab33@gmail.com | Bengaluru, INDIA | Experience: 2 Years 7 Months Results-driven Software Engineer with 2.7 years of experience in designing and developing scalable, high- performance web applications. Strong expertise in frontend development using Node.js, React.js, TypeScript, Redux, and modern UI frameworks. Proven experience in building reusable, responsive components, integrating REST APIs, and optimizing application performance. Skilled in collaborating with cross-functional
+Out: L2_Support_Engineer__Naukri_BSampurna[2y_8m].txt
+
+=== L2 Support Engineer | Naukri_GayatriSajjan[4y_0m].pdf ===
+Chars: 5495
+Preview: GAYATRI SAJJAN Dynamic and detail -oriented Frontend development at Infosys with proven skills in , UI/UX design, and API integration, targeting opportunities in Bengaluru, Chennai, and Hyderabad to leverage expertise in creating innovative web solutions. gayatrisajjan1@gmail.com +91-9113655498 LinkedIn GitHub CORE COMPETENCIES Frontend Development UI/UX Design & Optimization Web Application Performance API Integration Agile Development & DevOps Security & Compliance Standards Cross -Functional Collaboration Software Engineering Best Practices Cloud Technologies & Ver sion Control Scalability & Responsive Design TECHNICAL SKILLS Programming
+Out: L2_Support_Engineer__Naukri_GayatriSajjan[4y_0m].txt
+
+=== L2 Support Engineer | Naukri_satyabhama[1y_5m].pdf ===
+Chars: 4228
+Preview: SATYABHAMA Software Developer +91 8217635060 satyabhamakorke@gmail.com linkedin.com/in/satyabhama-korke OBJECTIVE Software Developer with experience in building web applications, developing and integrating APIs, and delivering scalable software solutions using ReactJS, Flask, Python, and MongoDB. Skilled in problem-solving, debugging, and collaborating across teams to build reliable and user-focused applications. Passionate about learning new technologies and contributing to innovative software products. TECHNICAL SKILLS •Frontend Development: React.js, JavaScript, TypeScript, Redux, HTML, CSS •Backend Development: FastAPI, Flask, Python •API Testing & Tools: REST APIs, Postman, Swagger, JSON,
+Out: L2_Support_Engineer__Naukri_satyabhama[1y_5m].txt
+
+=== L2 Support Engineer | Priyanka_AcharResume.pdf ===
+Chars: 4570
+Preview: Priyanka SEmail: priyankaachar003@gmail.com Mobile: +91 8861552099 LinkedIn: linkedin.com/in/priyanka-s-620734256/ GitHub: github.com/priyanka2003476 Portfolio: Portfolio Website Professional Summary Full Stack .NET Developer with 1.5 years of experience in designing, developing, and maintaining enterprise web applications using ASP.NET Core, C#, Blazor Server, SQL Server, and RESTful APIs. Proficient in backend development, database design, JWT-based authentication, and building responsive user interfaces. Experienced in Agile development environments with hands-on exposure to Power BI reporting, SQL-based data analysis, application support, and system monitoring. Strong problem-solving skills with
+Out: L2_Support_Engineer__Priyanka_AcharResume.txt
+
+=== L2 Support Engineer | Rohit Laveti_CV.pdf ===
+Chars: 5987
+Preview: ROHIT LAVETI Entry -Level Full Stack Developer masterrohit94391@gmail.c om | +91 96684 43829 | Github | LinkedIn | Portfolio PROFESSIONAL SUMMARY Aspiring Software Engineer with strong foundations in Java Full Stack and MERN Stack development, experienced in building scalable , end -to-end web applications through full -time and internship experience. Proficient in object -oriented programming, data str uctures, algorithms, REST APIs, and SQL/NoSQL databases, with hands -on exposure to SDLC, Agile methodologies, debugging, testing, and code reviews. A quick learner
+Out: L2_Support_Engineer__Rohit_Laveti_CV.txt
+
+=== L2 Support Engineer | suraj updated_5118.pdf ===
+Chars: 2228
+Preview: SURAJ MUGALE Technical Assistant Mobile: +91-8495091474 | Email: surajmugale14@gmail.com Location: Basaveshwar Nagar, Bengaluru – 560079 PROFESSIONAL SUMMARY Technical professional with 2+ years of experience supporting Government of Karnataka departments, with hands-on experience in e-Governance applications, e-Marukatte system, SQL database handling, data management, technical support, troubleshooting and networking. Experienced in handling application issues, database queries, data verification and providing technical support to government officials and field users. WORK EXPERIENCE Technical Assistant – Department of Sericulture, Govt. of Karnataka Through: Nila Mantek
+Out: L2_Support_Engineer__suraj_updated_5118.txt
+
+=== Performance and Security Test Lead | Naukri_PranayKumbhare[7y_8m].docx.pdf ===
+Chars: 11648
+Preview: PRANAY KUMBHARE AI Valida tion Tester | GxP & Comput er System Valida tion (CSV) | Pharmaceutic al Manuf acturing | AI/LLM Quality Engineering Pune, India | +91 8149120948 | pranaykumbhare1204@gmail.com | 7.8+ Years Experience PROFESSIONAL SUMMARY Senior SDET / AI Valida tion Tester with 7.8+ years of Functional, Automa tion, and AI/LLM Testing experience, including direct exposur e to GxP-regula ted pharmaceutic al environmen ts. Curr ently valida ting a cloud-based AI/Da ta platform for Takeda Pharmaceutic al (OneDa
+Out: Performance_and_Security_Test_Lead__Naukri_PranayKumbhare[7y_8m].docx.txt
+
+=== Performance and Security Test Lead | Naukri_SakshamKumar[10y_1m].docx.pdf ===
+Chars: 12025
+Preview: CURRICULUM VITAE Name: Saksham Kumar Test Lead – Morgan Stanley ✆ : +91 8923634625 Email: saksham.test17@gmail.com PROFESSIONAL SUMMARY: ✔ Having 9 years 6 months of IT experience as a Software test engineer in Automation testing: Playwright, MCP Servers, Spec Driven Development, AI Testing, Selenium WebDriver with core java, API testing, Android Application testing, Manual testing, and Mobile Device testing by following Agile Methodology. ✔ Experienced with Selenium Java, TestNG, Maven, GIT, Bitbucket and Jenkins. ✔ Good experience in Performance testing
+Out: Performance_and_Security_Test_Lead__Naukri_SakshamKumar[10y_1m].docx.txt
+
+=== Performance and Security Test Lead | Naukri_SayyadTouseefHussaini[8y_0m].pdf ===
+Chars: 8867
+Preview: Sayyad Touseef Hussaini Senior Cyber Security & VAPT Consultant, Penetration Tester Email : Touseef90@yahoo.com Contact No : +91 8951750565 LinkedIn : sayyad -touseef -huusaini PROFESSIONAL SUMMARY To be Dedicated and detail -oriented Cyber security professional with 8 years of experience in the Vulnerability Assessment and Penetration Testing (VAPT) domain. Currently employed as a Senior Security Consultant at EMIDS TECHNOLOGIES PVT LTD, specializing in VAPT Gove rnance, Bug Bounty Program, Network VAPT, Web Applications, Android, iOS, API, Secure Configuration Review, Phishing
+Out: Performance_and_Security_Test_Lead__Naukri_SayyadTouseefHussaini[8y_0m].txt
+
+=== Security Specialist | CURRICULAM VITAE_Shiva (1).pdf ===
+Chars: 12089
+Preview: CURRICULAM VITAE Mancherla Shivaprasad Contact: +91-8309259171 Email: mancherlashivaprasad8@gmail.com Professional Exposure: ➢ Having a total of 9.3 years of experience in Security Operational Centre (SOC) and Skilled primarily in Threat hunting, Incident Response, Threat Intelligence, Investigation and admin engineering activities. ➢ Expert in SIEM platforms (RSA NetWitness, QRadar) rule tuning, alert triage, log analysis, use case development , custom parser’s by using RSA LPT tool , integration and dashboard optimization. ➢ Integration to the new ly onboard appliances to the SIEM
+Out: Security_Specialist__CURRICULAM_VITAE_Shiva_(1).txt
+
+=== Security Specialist | Naukri_AkshayR[8y_0m].pdf ===
+Chars: 31695
+Preview: AKSHAY R Security Engineer | Incident Response & Threat Detection | Cloud Security Bangalore, India • +91 -8050199637 • akshayrkumar29@gmail.com • linkedin.com/in/akshay -r-6022a166 PROFESSIONAL SUMMARY Security Engineer with 7+ years of hands -on experience driving Security Incident Response, Threat Detection & Hunting, and Cloud Security across on -premises and multi -cloud (AWS/Azure/GCP) environments. Proven track record of reducing mean time to respond (MTTR), cutting false positive rates by 40%, and leading enterprise -wide containment during zero -day events. Expert in
+Out: Security_Specialist__Naukri_AkshayR[8y_0m].txt
+
+=== Security Specialist | Naukri_AwdheshGupta[7y_0m].pdf ===
+Chars: 8691
+Preview: Awdhesh Gupta (CEH, eWPTX) B-17 Dallupura Road Noida Sector-12, 201301 Mobile: +917717752456 Email:awdheshji000@gmail.com OBJECTIVE ● Looking for a challenging position for Cyber Security & Vulner ability Assessmen t and Penetration Testing (VAPT) in a dynamic environmen t that encourages growth and excellence with the opportunity to work on different projects involving latest technologies. SUMMARY ● Over 8 years of relevant experience in the IT indus try having strong skills in Network & Security , AWS Security , Web Security ,
+Out: Security_Specialist__Naukri_AwdheshGupta[7y_0m].txt
+
+=== Security Specialist | Naukri_SusamayGarai[13y_0m].pdf ===
+Chars: 10023
+Preview: Susamay Garai Senior Consultant | PwC India (PricewaterhouseCoopers Services LLP) Mob No: +91-9088782655 | Email: susamaygarai@hotmail.com CAREER OBJECTIVE Aspiring cybersecurity professional with hands -on experience in penetration testing and vulne rability assessment across application, mobile (iOS and Android) , web service, and thick client platforms. Seeking a challenging role in a forward -thinking organization where I can apply my technical expertise to identify and mitigate security risks, contr ibute to robust defense strategies, and continuously evolve in the dynamic landscape
+Out: Security_Specialist__Naukri_SusamayGarai[13y_0m].txt
+
+=== Technical Lead | Naukri_DhasarathanT[13y_0m].docx.pdf ===
+Chars: 8363
+Preview: DHASARATHAN TAMILARASAN Technical Lead | .NET Solution Architect | ASP.NET Core | Angular | Microservices | Azure | AI Integration +91 7010420859 | dasatml@gmail.com | India PROFESSIONAL SUMMARY Technical Lead and .NET Solution Architect with 12+ years of experience designing, developing, and delivering enterprise applications using C#, ASP.NET Core, ASP.NET MVC, Web API, Angular , Microservices, SQL Server , Azure DevOps, REST APIs, and CI/CD. Hands-on experience in AI-enabled application development, including Retrieval-Augmented Generation (RAG), LLM integration, and AI-powered search.
+Out: Technical_Lead__Naukri_DhasarathanT[13y_0m].docx.txt
+
+=== Technical Lead | Naukri_DilipKumarTriapathy[14y_0m].docx.pdf ===
+Chars: 4272
+Preview: DILIP KUMAR TRIPATHY .NET Full Stack Technical Lead | .NET Core / .NET 10 | Angular & React | GenAI Expert Bengaluru, India | +91-991-606-5866 | diliptripathy.net@gmail.com PROFESSIONAL SUMMARY Results-oriented Technical Lead with 14+ years of experience architecting, modernizing, and delivering enterprise-grade SaaS, healthcare, and government compliance web applications. Expertise in modernizing legacy architectures to .NET Core / .NET 10 and Angular (v8 to 18+), designing scalable microservices, and deploying robust RESTful APIs. Advanced in leveraging GenAI-assisted development tools (Claude,
+Out: Technical_Lead__Naukri_DilipKumarTriapathy[14y_0m].docx.txt
+
+=== Technical Lead | Naukri_JitendraNShukla[16y_0m].pdf ===
+Chars: 10286
+Preview: JITENDRA N . SHUKLA Project Lead | Technical Project Lead Shukla_jit@yahoo.co.in +91-9870765857 Summary • Strong leadership, analytical, decision-making, team mentoring, client management, and delivery- focused skills. • Experienced in Agile/Scrum delivery, 15-Day Sprint Planning, Jira/Confluence, requirements management, risk and issue resolution, UAT, release planning, and stakeholder management. • Experience integrating AI capabilities into enterprise applications using Azure AI Services, Azure OpenAI, RAG, LangChain, Ollama, ChromaDB, and Vector Databases. • Strong experience designing scalable solutions using N-Tier Architecture, Microservices, RESTful APIs,
+Out: Technical_Lead__Naukri_JitendraNShukla[16y_0m].txt
+
+=== Technical Lead | Naukri_Milash[14y_0m].docx ===
+Chars: 12540
+Preview: Milash IR Technical Architect | .Net Core | Microservices | Azure | React | Docker | Clean Architecture Phone: +91 7306712203 | Email: milashir@gmail.com Professional Summary Technical Architect with 14+ years of software development experience and 18+ years in IT, currently leading enterprise microservices platform development at EY. Expert in .Net Core, Web API, Microservices, Docker, Azure Cloud (Functions, Key Vault, App Configuration, App Insights), React, Angular, and SQL Server. 3+ years hands-on Microservices architecture with Docker containerization, RabbitMQ event-driven
+Out: Technical_Lead__Naukri_Milash[14y_0m].txt
+
+=== Technical Lead | Naukri_Vidyashree[10y_0m].pdf ===
+Chars: 4969
+Preview: VIDYASHREE Technical Lead | Senior .NET Full Stack Developer +91-7892502132 • vidyaumaluti@gmail.com • linkedin.com/in/vidyashree -tech -lead • Bengaluru, India EXPERIENCE Technical Lead Tech Mahindra 01/2024 – Present • Client: Netgear • Led a team of 7 developers delivering enterprise applications and end -to-end production support • Migrated a complete legacy application to the modern .NET framework and delivered React -based UI components • Improved application performance by 30%, automated 15+ manual processes and reduced production incidents by 40% • Conducted
+Out: Technical_Lead__Naukri_Vidyashree[10y_0m].txt
+
+=== Technical Lead | Profile_Template_new_GoK_Shravan (1).docx ===
+Chars: 16406
+Preview: Format for Biodata of personnel Certifications : I, Shravankumar M Airani the undersigned certify that: (i) to the best of my knowledge and belief, this bio data correctly describes me, my qualifications, and my experience. I understand that my willful misstatement described herein may lead to my disqualification or dismissal, if engaged. Name & Signature (Personnel) Name & Signature (Authorised Shravankumar M Airani Representative) 12-08-2026, Bengaluru Date and Place of signing Date and Place of signing Name | Name |
+Out: Technical_Lead__Profile_Template_new_GoK_Shravan_(1).txt
+
+=== Test Engineer | B_Sirish_Kumar_Resume 6.docx ===
+Chars: 4784
+Preview: B SIRISH KUMAR Senior Test Engineer shirishkumarbh51@gmail.com | +91 81436 41746 | Bengaluru, Karnataka, India PROFESSIONAL SUMMARY Dedicated Software Test Engineer with 4.5+ years of experience at Wipro Limited, delivering high-quality testing solutions for leading global banking clients — Lloyds Banking Group and Union Bank of Switzerland. Hands-on expertise in functional, regression, API, and automation testing within complex, regulated banking environments. Holds an MTech from BITS Pilani (completed under Wipro's WILP sponsorship program) and a BSc in Computer Science. Adept
+Out: Test_Engineer__B_Sirish_Kumar_Resume_6.txt
+
+=== Test Engineer | Bindhu Bhargavi Talasila.pdf ===
+Chars: 4124
+Preview: BINDHU BHARGAVI TALASILA SDET | Automation Engineer | Selenium • Playwright • API • CI/CD Hyderabad, India | +91-9100861350 | bindhutalasila08@gmail.com | LinkedIn | Portfolio SUMMARY SDET with 4.5+ years of experience designing and maintaining scalable automation frameworks for web, API, and backend applications. Hands-on with Selenium, Playwright, C#, Java, BDD, API automation, Jenkins CI/CD, Azure DevOps, Git, SQL, and Agile delivery. Automated 200+ end-to-end test cases and reduced regression execution time by 40%. KEY ACHIEVEMENTS ●Reduced regression execution time
+Out: Test_Engineer__Bindhu_Bhargavi_Talasila.txt
+
+=== Test Engineer | Profile_Template_Rosen_Nath.docx ===
+Chars: 30307
+Preview: Format for Biodata of personnel Certifications : Microsoft Certified: Azure fundamentals AWS Certified: Cloud Practitioner AWS AI Practitioner AWS Solutions Architect I, the undersigned certify that: (i) to the best of my knowledge and belief, this bio data correctly describes me, my qualifications, and my experience. I understand that my willful misstatement described herein may lead to my disqualification or dismissal, if engaged. Name & Signature (Personnel) Name & Signature (Authorised Rosen Nath Representative) Date and Place of signing Date
+Out: Test_Engineer__Profile_Template_Rosen_Nath.txt
+
+=== Test Engineer | REKHA_US_AUTOMATION TESTING_4.5 YOE.pdf ===
+Chars: 4399
+Preview: Rekha U S System Engineer(QA) – Manual and Automation Testing (Java with Selenium &API ) mailto:rekharekha69982@gmail.com || https://www.linkedin.com/in/rekha -u-s || +91 8861531951 Professional Overview Overall 4.5 years of industry experience in the area of Software Testing (Manual and Automation) with a solid understanding of Test Planning, Test Design, Test Execution and Defect Reporting Tracking.  Strong knowledge of Software Testi ng Life Cycle (STLC) and experience working in Agile Scrum methodology with active participation in sprint planning, daily stand -ups,
+Out: Test_Engineer__REKHA_US_AUTOMATION_TESTING_4.5_YOE.txt
+
+=== Test Engineer | SrinivasMutalik_5yrs_SoftwareTesting.pdf ===
+Chars: 5649
+Preview: SRINIVAS GURURAJ MUTALIK Contact : +91 -9632937336 | Email: shrinivas.mutalik@gmail.com | LinkedIn : linkedin.com/in/srinivas -mutalik31ba0117b Softw are Testing professional with 5 years of experience in manual testing across Agile projects, seeking roles in Manual Testing/QA and Test Automation (Selenium with Java) to deliver high‑quality, reliable applications . Preferred location: Bengaluru, Mysuru . • Quality Assurance • Software Development Lifecycle • Manual Testing • Agile Project Management • Defect Management • Test Case Design and Execution • Performance Testing • User
+Out: Test_Engineer__SrinivasMutalik_5yrs_SoftwareTesting.txt

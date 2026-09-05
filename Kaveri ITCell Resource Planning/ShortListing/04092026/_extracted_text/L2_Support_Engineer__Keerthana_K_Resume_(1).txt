@@ -1,0 +1,49 @@
+KEERTHANA K
+Full Stack Developer  |  Java  Spring Boot  React.js  MySQL
+Tumkur, Karnataka    +91 6364769271    keerthanakanthraj0063@gmail.com    LinkedIn    Portfolio
+PROFESSIONAL SUMMARY
+Full Stack Developer with ~3 years of experience building secure, scalable web applications for Government of Karnataka projects
+at Centre for Smart Governance (CSG). Hands-on expertise in React.js, Java, Spring Boot, RESTful APIs, MySQL, and MVC
+architecture. Delivered across full SDLC with strong skills in JWT authentication, role-based access control, SQL optimization, and
+schema design for enterprise systems serving multiple government departments.
+TECHNICAL SKILLS
+Languages: Java, JavaScript (ES6+), SQL, HTML5, CSS3
+Frontend: React.js, React Hooks, Redux, JavaScript ES6+, HTML5, CSS3, Bootstrap, Responsive UI, Cross-browser Compatibility,
+Axios, REST API Integration
+Backend: Java, Spring Boot, Spring MVC, RESTful APIs, Microservices, Hibernate, JPA, MVC Architecture, JWT Authentication
+Database: MySQL, SQL Query Optimization, Schema Design, Joins, Indexes
+Tools & Practices: Git, GitHub, Postman, Maven, Eclipse, VS Code, PuTTY, Linux, Agile, Scrum, Code Review, Unit Testing
+Domain: Government Tech — secure data handling, role-based access control, multi-department workflows, audit compliance
+WORK EXPERIENCE
+Associate Software Engineer  —  Centre for Smart Governance (CSG), Bengaluru
+Oct 2023 – Present
+Built and maintained 3 full-stack enterprise web applications using React.js, Java, and Spring Boot, following MVC architecture
+across multiple government departments.
+Designed and deployed 40+ RESTful APIs with Spring Boot, enabling real-time data exchange between internal modules and
+external government services.
+Developed responsive, cross-browser compatible UIs using React.js, JavaScript ES6+, HTML5, CSS3, and Bootstrap across web
+portals serving multiple departments.
+Designed and optimized MySQL schemas (30+ tables) and complex SQL queries, reducing report generation time and
+improving system reliability.
+Implemented role-based access control (RBAC) and JWT-based authentication, protecting sensitive government data;
+collaborated in Agile/Scrum team across full SDLC.
+KEY PROJECTS
+Employee Management System (EMS)   React.js · Spring Boot · MySQL · REST API
+Built full-stack EMS handling attendance tracking, payroll processing, resource allocation, and multi-level approval workflows for
+government employees across departments.
+Designed optimized MySQL schema with normalized tables and compliance modules ensuring accurate, audit-ready records;
+integrated automated reporting reducing manual reporting effort.
+IT Equipment Management System   React.js · Spring Boot · MySQL · Barcode Generation
+Developed asset-tracking platform managing 500+ equipment items and 200+ asset requests across departments, with
+purchase order processing and vendor invoice handling.
+Implemented automated barcode generation and assignment workflows, eliminating manual asset tagging errors; built real-time
+procurement dashboards in React.js consuming live REST APIs.
+Housing Allotment & Quarter Management System   React.js · Spring Boot · MySQL · Workflow Automation
+Designed government web application for housing quarter allotment, with NOC generation, applicant records, availability tracking,
+and multi-level approval workflows.
+Automated manual approval processes with role-based dashboards for applicants, officers, and approvers; secure document
+upload/download, reducing processing time and improving compliance.
+CERTIFICATIONS & EDUCATION
+Certifications:   Advanced React and Redux — Udemy (Verified)    Master Microservices with Spring Boot & Spring Cloud —
+Udemy (Verified)
+B.E. — Computer Science & Engineering, Sri Siddhartha Institute of Technology, Tumkur   (2019 – 2023  |  CGPA: 8.3 / 10)

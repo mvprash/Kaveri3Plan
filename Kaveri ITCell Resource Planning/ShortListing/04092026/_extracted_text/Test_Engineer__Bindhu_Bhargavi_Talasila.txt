@@ -1,0 +1,52 @@
+BINDHU BHARGAVI TALASILA
+SDET | Automation Engineer | Selenium • Playwright • API • CI/CD
+Hyderabad, India  |  +91-9100861350  |  bindhutalasila08@gmail.com  |  LinkedIn  |  Portfolio
+SUMMARY
+SDET with 4.5+ years of experience designing and maintaining scalable automation frameworks for web, API, and backend 
+applications. Hands-on with Selenium, Playwright, C#, Java, BDD, API automation, Jenkins CI/CD, Azure DevOps, Git, SQL, and 
+Agile delivery. Automated 200+ end-to-end test cases and reduced regression execution time by 40%.
+KEY ACHIEVEMENTS
+●Reduced regression execution time by 40% using parallel automation and optimized CI/CD pipelines
+●Automated 200+ end-to-end test cases across POS and Connected Payments projects
+●Cut nightly regression execution time by 2+ hours per release cycle through optimized Jenkins pipelines
+●Improved defect triage efficiency by 30% using structured reporting
+PROFESSIONAL EXPERIENCE
+Software Quality Engineer – Automation (SDET) | NCR Voyix, Hyderabad Oct 2023 – Feb 2026
+●Designed BDD-based automation frameworks using C#, Java, SpecFlow, Selenium, and NUnit, reducing regression effort by 
+40%
+●Automated 200+ end-to-end test cases across POS and Connected Payments projects, covering order management, payments, 
+device integrations, and transaction validation
+●Built and optimized Jenkins CI/CD pipelines for nightly regression, cutting execution time by 2+ hours per release cycle, and 
+built REST API test automation using Postman for backend validation
+●Implemented parallel test execution to accelerate defect detection; leveraged AI coding assistants (GitHub Copilot, Claude) to  
+speed up test script authoring and code reviews by 35%
+●Managed Azure VMs for stable, isolated test execution; improved defect triage efficiency by 30% using structured reporting 
+with Extent Reports
+●Prepared test plans, test cases, and defect reports for release readiness; collaborated with cross-functional teams in Agile 
+sprints
+Software Engineer – SDET / Automation Engineer | Kyndryl Solutions Pvt Ltd, Hyderabad Nov 2021 – Oct 2023
+●Automated monitoring workflows across 3,000+ servers, reducing manual effort by 40%
+●Developed shell scripts to eliminate repetitive operational tasks, saving 10+ hours per week
+●Performed log analysis, defect identification, and root cause analysis for critical production issues
+●Supported CI/CD pipelines and deployment processes; managed incidents and change requests via ServiceNow while 
+maintaining SLA compliance
+PROJECTS
+●POS Automation Framework (NCR Voyix): Built a hybrid framework (BDD + Page Object Model + Data-driven) for end-to-
+end retail workflow automation, integrated with CI/CD
+●API Automation Framework: Designed a REST API automation suite validating service contracts and integration flows
+●AI-Assisted Test Automation: Explored Claude and GitHub Copilot for auto-generating SpecFlow step definitions and test 
+data, cutting script writing time significantly
+TECHNICAL SKILLS
+Automation & Testing: Selenium WebDriver, Playwright, WinAppDriver, Appium, SpecFlow (BDD), NUnit, Cucumber
+Languages: C#, Java, JavaScript, Groovy, Shell Scripting, TypeScript
+API Testing: Postman, REST Assured, REST API Automation, RestSharp
+CI/CD & Cloud: Jenkins, Azure DevOps, Git, GitHub, Azure Virtual Machines, Resource Groups
+QA Process: Test Strategy & Quality Engineering, Functional, Regression, Integration, API Testing, SDLC, STLC, Defect Lifecycle 
+Management, JIRA, PractiTest, Agile Scrum
+Database & Reporting: SQL (SELECT queries, data validation); Extent Reports, Azure Test Plans
+AI-Assisted Testing: GitHub Copilot, Claude – AI-generated test validation, script authoring & code review
+EDUCATION & CERTIFICATIONS
+B.Tech – Computer Science Engineering | BVRIT Hyderabad College of Engineering for Women | 2018 – 2021
+AI Tools & Claude Workshop — be10x, Certificate of Completion, issued August 16, 2026
+Introduction to Generative AI – Art of the Possible — AWS, Jul 2026  |  AI in the Real World — IBM, Jul 2026
+IBM DevOps and Software Engineering Professional Certificate  |  Scrum Foundation Professional Certificate (SFPC)

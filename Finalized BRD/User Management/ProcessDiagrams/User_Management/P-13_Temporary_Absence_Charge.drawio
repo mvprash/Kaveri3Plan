@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net">
+<mxfile host="Electron">
   <diagram name="P-13_Temporary_Absence_Charge" id="0">
-    <mxGraphModel dx="900" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2900" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1427" dy="971" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="2900" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="frame" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" value="" vertex="1">
-          <mxGeometry height="868" width="2868" x="16" y="16" as="geometry" />
+          <mxGeometry height="868" width="2868" x="52" y="16" as="geometry" />
         </mxCell>
         <mxCell id="lane0" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=54;fontStyle=1;" value="SUPERIOR" vertex="1">
           <mxGeometry height="240" width="2868" x="16" y="16" as="geometry" />
@@ -16,89 +16,65 @@
         <mxCell id="lane2" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=54;fontStyle=1;" value="COVER OFFICER" vertex="1">
           <mxGeometry height="268" width="2868" x="16" y="616" as="geometry" />
         </mxCell>
-        <mxCell id="n1" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Open Temporary Absence&#xa;/ Leave / OOD (FR-79)" vertex="1">
+        <mxCell id="n1" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Open Temporary Absence&lt;br&gt;/ Leave / OOD&amp;nbsp;" vertex="1">
           <mxGeometry height="60" width="200" x="90" y="58" as="geometry" />
         </mxCell>
-        <mxCell id="n2" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;" value="List subordinate&#xa;occupancies in office&#xa;span + parentage&#xa;(FR-59, FR-43)" vertex="1">
+        <mxCell id="-WeuMH_6dI6xgKlP7Mvp-8" edge="1" parent="1" source="n2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.855;exitY=0;exitDx=0;exitDy=4.35;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="n3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;" value="List subordinate&lt;br&gt;occupancies in office&lt;br&gt;span + parentage&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="110" width="210" x="340" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="-WeuMH_6dI6xgKlP7Mvp-1" edge="1" parent="1" source="n3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.95;exitY=0.572;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" target="n8">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="n3" parent="1" style="shape=parallelogram;whiteSpace=wrap;html=1;fixedSize=1;" value="Select occupancy;&#xa;type Leave/OOD/Other;&#xa;reason; from–to dates" vertex="1">
           <mxGeometry height="70" width="220" x="600" y="53" as="geometry" />
         </mxCell>
-        <mxCell id="n4" parent="1" style="shape=document;whiteSpace=wrap;html=1;" value="Persist absence&#xa;record (occupancy&#xa;stays Occupied)&#xa;(FR-79, FR-81)" vertex="1">
+        <mxCell id="-WeuMH_6dI6xgKlP7Mvp-3" edge="1" parent="1" source="n4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="n5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="shape=document;whiteSpace=wrap;html=1;" value="Persist absence&lt;br&gt;record (occupancy&lt;br&gt;stays Occupied)&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="95" width="200" x="880" y="287.5" as="geometry" />
         </mxCell>
         <mxCell id="n5" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Assign temporary&#xa;charge now?" vertex="1">
           <mxGeometry height="120" width="180" x="1140" y="420" as="geometry" />
         </mxCell>
-        <mxCell id="n6" parent="1" style="shape=parallelogram;whiteSpace=wrap;html=1;fixedSize=1;" value="Pick cover officer&#xa;(peer under superior;&#xa;e.g. SR B for SR A)&#xa;(FR-82)" vertex="1">
+        <mxCell id="-WeuMH_6dI6xgKlP7Mvp-4" edge="1" parent="1" source="n6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.96;exitY=0.52;exitDx=0;exitDy=0;exitPerimeter=0;" target="n7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="shape=parallelogram;whiteSpace=wrap;html=1;fixedSize=1;" value="Pick cover officer&lt;br&gt;(peer under superior;&lt;br&gt;e.g. SR B for SR A)&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="85" width="220" x="1400" y="45.5" as="geometry" />
         </mxCell>
-        <mxCell id="n7" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;" value="Store temporary charge&#xa;Post+Office → cover user&#xa;(dated; audit) (FR-82)" vertex="1">
+        <mxCell id="n7" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;" value="Store temporary charge&lt;br&gt;Post+Office → cover user&lt;br&gt;(dated; audit)" vertex="1">
           <mxGeometry height="100" width="230" x="1680" y="285" as="geometry" />
         </mxCell>
-        <mxCell id="n8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="From from_date:&#xa;block login for&#xa;absent officer&#xa;(any absence) (FR-80)" vertex="1">
+        <mxCell id="-WeuMH_6dI6xgKlP7Mvp-2" edge="1" parent="1" source="n8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="n4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="From from_date:&lt;br&gt;block login for&lt;br&gt;absent officer&lt;br&gt;(any absence)" vertex="1">
           <mxGeometry height="90" width="200" x="880" y="48" as="geometry" />
         </mxCell>
         <mxCell id="n9" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Cover officer logs in&#xa;(KGID + OTP + bio)" vertex="1">
-          <mxGeometry height="60" width="200" x="1980" y="666" as="geometry" />
+          <mxGeometry height="60" width="175" x="1980" y="666" as="geometry" />
         </mxCell>
-        <mxCell id="n10" parent="1" style="shape=document;whiteSpace=wrap;html=1;" value="FR-52 list: own posts&#xa;+ Temporary charge&#xa;row for absent Post+Office&#xa;(FR-83)" vertex="1">
+        <mxCell id="n10" parent="1" style="shape=document;whiteSpace=wrap;html=1;" value="FR-52 list: own posts&lt;br&gt;+ Temporary charge&lt;br&gt;row for absent Post+Office&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="100" width="230" x="2240" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="-WeuMH_6dI6xgKlP7Mvp-6" edge="1" parent="1" source="n11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.96;exitY=0.508;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" target="n12">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="n11" parent="1" style="shape=parallelogram;whiteSpace=wrap;html=1;fixedSize=1;" value="Select Temporary charge&#xa;context (one per session)" vertex="1">
           <mxGeometry height="70" width="220" x="2240" y="661" as="geometry" />
         </mxCell>
-        <mxCell id="n12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="Claims from covered&#xa;post only (FR-38 spirit);&#xa;not FR-53 (FR-83)" vertex="1">
+        <mxCell id="n12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="Claims from covered&lt;br&gt;post only" vertex="1">
           <mxGeometry height="85" width="220" x="2520" y="653.5" as="geometry" />
         </mxCell>
-        <mxCell id="n13" parent="1" style="shape=process;whiteSpace=wrap;html=1;" value="After to_date 23:59 IST&#xa;/ cancel — clear absence&#xa;+ charge (FR-84 / FR-68)" vertex="1">
+        <mxCell id="n13" parent="1" style="shape=process;whiteSpace=wrap;html=1;" value="After to_date 23:59 IST&lt;br&gt;/ cancel — clear absence&lt;br&gt;+ charge" vertex="1">
           <mxGeometry height="85" width="230" x="2520" y="307.5" as="geometry" />
         </mxCell>
         <mxCell id="n14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="No charge yet —&#xa;absence only;&#xa;slot still not free&#xa;for Transfer In" vertex="1">
           <mxGeometry height="85" width="200" x="1130" y="48" as="geometry" />
-        </mxCell>
-        <mxCell id="e1" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" value="">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="290" y="88" as="sourcePoint" />
-            <mxPoint x="445" y="280" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="290" y="200" />
-              <mxPoint x="445" y="200" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e2" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" value="">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="445" y="280" as="sourcePoint" />
-            <mxPoint x="710" y="123" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="445" y="200" />
-              <mxPoint x="710" y="200" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e3" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" value="">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="820" y="88" as="sourcePoint" />
-            <mxPoint x="980" y="287.5" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="820" y="200" />
-              <mxPoint x="980" y="200" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e4" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" value="">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="980" y="287.5" as="sourcePoint" />
-            <mxPoint x="980" y="48" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e5" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" value="">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1080" y="335" as="sourcePoint" />
-            <mxPoint x="1230" y="420" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="e6" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" value="No">
           <mxGeometry relative="1" as="geometry">
@@ -108,54 +84,22 @@
         </mxCell>
         <mxCell id="e7" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" value="Yes">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1320" y="480" as="sourcePoint" />
-            <mxPoint x="1510" y="130.5" as="targetPoint" />
             <Array as="points">
               <mxPoint x="1510" y="480" />
               <mxPoint x="1510" y="200" />
             </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e8" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" value="">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1620" y="88" as="sourcePoint" />
-            <mxPoint x="1795" y="285" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="1620" y="200" />
-              <mxPoint x="1795" y="200" />
-            </Array>
+            <mxPoint x="1320" y="480" as="sourcePoint" />
+            <mxPoint x="1510" y="130.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e9" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" value="">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1910" y="335" as="sourcePoint" />
-            <mxPoint x="2080" y="666" as="targetPoint" />
             <Array as="points">
               <mxPoint x="2080" y="335" />
               <mxPoint x="2080" y="600" />
             </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e10" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" value="">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="2180" y="696" as="sourcePoint" />
-            <mxPoint x="2355" y="400" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="2355" y="696" />
-              <mxPoint x="2355" y="500" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e11" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" value="">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="2355" y="400" as="sourcePoint" />
-            <mxPoint x="2350" y="661" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e12" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" value="">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="2460" y="696" as="sourcePoint" />
-            <mxPoint x="2520" y="696" as="targetPoint" />
+            <mxPoint x="1910" y="335" as="sourcePoint" />
+            <mxPoint x="2080" y="666" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e13" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" value="">
@@ -163,6 +107,12 @@
             <mxPoint x="2470" y="350" as="sourcePoint" />
             <mxPoint x="2520" y="350" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="-WeuMH_6dI6xgKlP7Mvp-5" edge="1" parent="1" source="n9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.045;entryY=0.507;entryDx=0;entryDy=0;entryPerimeter=0;" target="n11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WeuMH_6dI6xgKlP7Mvp-7" edge="1" parent="1" source="n1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.145;entryY=0;entryDx=0;entryDy=4.35;entryPerimeter=0;" target="n2">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

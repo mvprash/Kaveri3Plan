@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net">
+<mxfile host="Electron">
   <diagram name="P-03_Citizen_Lost_Mobile_Reset" id="0">
-    <mxGraphModel dx="1086" dy="574" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2600" pageHeight="632" math="0" shadow="0">
+    <mxGraphModel dx="999" dy="680" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="2600" pageHeight="632" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -38,12 +38,12 @@
           <mxGeometry height="65" width="190" x="1460" y="61.900000000000006" as="geometry" />
         </mxCell>
         <mxCell id="n10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="OTP to new&#xa;mobile" vertex="1">
-          <mxGeometry height="65" width="200" x="1460" y="471.5" as="geometry" />
+          <mxGeometry height="65" width="200" x="1459" y="471.5" as="geometry" />
         </mxCell>
-        <mxCell id="n11" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;" value="Update mobile;&#xa;notify email;&#xa;write audit (FR-56)" vertex="1">
+        <mxCell id="n11" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;" value="Update mobile;&lt;br&gt;notify email;&lt;br&gt;write audit" vertex="1">
           <mxGeometry height="100" width="210" x="1750" y="342" as="geometry" />
         </mxCell>
-        <mxCell id="n12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="Continue login —&#xa;OTP to new mobile&#xa;(FR-05)" vertex="1">
+        <mxCell id="n12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="Continue login —&lt;br&gt;OTP to new mobile&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="70" width="210" x="2030" y="65" as="geometry" />
         </mxCell>
         <mxCell id="e13" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=0.5;entryX=0.5;entryY=0.5;" value="">

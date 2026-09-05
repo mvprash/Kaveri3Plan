@@ -1,0 +1,175 @@
+AKSHAY R  
+Security Engineer  |  Incident Response & Threat Detection  |  Cloud Security  
+Bangalore, India  •  +91 -8050199637  •  akshayrkumar29@gmail.com  •  linkedin.com/in/akshay -r-6022a166  
+PROFESSIONAL SUMMARY  
+Security Engineer with 7+ years of hands -on experience driving Security Incident Response, Threat Detection & 
+Hunting, and Cloud Security across on -premises and multi -cloud (AWS/Azure/GCP) environments. Proven track 
+record of reducing mean time to respond (MTTR), cutting false positive rates by 40%, and leading enterprise -wide 
+containment during zero -day events. Expert in SIEM (Azure Sentinel, Google Chronicle, QRadar) and EDR 
+(Cortex XDR, CrowdStrike Falcon) platforms; skilled in SOAR automation, MITRE ATT &CK-aligned detection 
+engineering, and translating complex threat findings into executive -level reporting. Holds AZ -500 certification; 
+actively pursuing CEH & CompTIA Security+.  
+CORE COMPETENCIES  
+Incident Response & Triage: Alert investigation, malware analysis, phishing response, containment, root cause 
+analysis, escalation, on -call 
+Threat Detection & Hunting: SIEM use case development, MITRE ATT&CK correlation tuning, GuardDuty, 
+CrowdStrike Falcon, Wiz Defend, Darktrace, IPS/IDS  
+SIEM / EDR / SOAR: Azure Sentinel, Google Chronicle, IBM QRadar, Cortex XDR, SOAR automation, custom 
+parser development  
+Cloud & Systems Security: AWS (GuardDuty, CloudTrail, S3, EC2, IAM), Azure, GCP, Linux/Unix, Windows, 
+network protocol analysis (HTTP, DNS, TCP/IP)  
+Scripting & Automation: Python, log analysis, command -line forensics, SAST/DAST integration, DevSecOps 
+pipelines  
+Frameworks & Compliance: MITRE ATT&CK, NIST CSF, vulnerability management, risk assessment, SOP 
+development, penetration testing concepts  
+AI & ML in Security: ML-based anomaly detection, AI -enhanced SIEM/SOAR triage, phishing and endpoint 
+anomaly scoring (POC)  
+PROFESSIONAL EXPERIENCE  
+IT Analyst – Cybersecurity Practitioner  | Tata Consultancy Services (TCS) Sep 2024 – Present  
+▸ Orchestrated end -to-end incident response  across endpoint, network, and cloud environments — owning 
+full lifecycle from alert triage and forensic investigation to containment and root cause analysis, fully aligned 
+with the NIST Incident Response Framework . 
+▸ Slashed analyst response times  by designing and deploying SOAR -driven triage workflows and 
+standardized playbooks, cutting MTTR significantly  and enabling consistent SOC performance at scale.  
+▸ Proactively neutralized advanced threats  through targeted threat hunting campaigns built on the MITRE 
+ATT&CK framework , uncovering lateral movement, persistence techniques, and living -off-the-land (LotL) 
+attacks across enterprise environments before they escalated.  
+▸ Reduced organizational risk exposure  by leading vulnerability assessments and patch validation cycles; 
+delivered data -driven risk dashboards and executive reports that directly informed leadership security 
+investment decisions.  
+▸ Strengthened detection posture  by partnering with cross -functional engineering teams to refine detection 
+logic, improve alert fidelity, and implement preventive controls — eliminating recurring incident patterns.  
+▸ Authored high -impact incident reports  including breach communications and detailed root cause 
+analyses consumed by senior stakeholders and client leadership, demonstrating ability to translate technical 
+findings into business context.  
+Technical Consultant – Endpoint & Infrastructure Security  | IBM  Dec 2021 – Sep 2024  
+▸ Conducted deep -dive forensic investigations  on Linux/Unix and Windows platforms — dissecting system 
+logs, process trees, and network flows to identify IOCs and attacker TTPs, enabling rapid and accurate 
+incident escalation.  Incident Response Consultant, Senior Incident Response Consultant, Principal Incident Response Consultant, Lead Incident Response Consultant, IR Consultant, Senior IR Consultant, Mandiant Consultant, Unit 42 Consultant, DFIR Consultant, Senior DFIR Consultant, Principal DFIR Consultant, DFIR Manager, Digital Forensics Consultant, Digital Forensics Analyst, Forensic Analyst, Forensic Investigator, Computer Forensics Analyst, Cyber Forensics Analyst, Cybersecurity Consultant, Senior Cybersecurity Consultant, Cyber Security
+Consultant, Cyber Defense Analyst, Cyber Defence Analyst, SOC Analyst, SOC L1 Analyst, SOC L2 Analyst, SOC L3 Analyst, Senior SOC Analyst, SOC Lead, SOC Manager, SOC Architect, Security Operations Analyst, Security Operations Lead, Security Operations Center Analyst, Security Analyst, Senior Security Analyst, Security Engineer, Senior Security Engineer, Detection Engineer, Senior Detection Engineer, Detection and Response Engineer, Threat Hunter, Senior Threat Hunter, Threat Hunting Analyst, Threat Intelligence
+Analyst, Cyber Threat Intelligence Analyst, CTI Analyst, Senior Threat Intelligence Analyst, Malware Analyst, Reverse Engineer, Cybersecurity Engineer, Cloud Security Engineer, Senior Cloud Security Engineer, Cloud Security Architect, Cloud Security Consultant, Cloud Incident Response Consultant, Cloud DFIR Consultant, Security Consultant, MDR Analyst, Managed Detection and Response Analyst, XDR Analyst, Information Security Analyst, Information Security Engineer, Information Security Specialist, CSIRT Analyst, CSIRT Lead,
+CIRT Lead, Incident Commander, Incident Manager, Incident Response Manager, Cybersecurity Manager, Security Delivery Lead, Principal Consultant, Managing Consultant, Senior Manager, vCISO, Virtual CISO
+Incident Response, IR, Incident Handling, Incident Management, Cyber Incident Response, Digital Forensics and Incident Response, DFIR, Breach Response, Data Breach Response, Cyber Breach Investigation, Computer Intrusion Investigation, Intrusion Investigation, Ransomware Response, Ransomware Investigation, Ransomware Negotiation, Ransom Negotiation, Ransomware Readiness Assessment, Business Email Compromise, BEC, BEC
+Investigation, BEC Readiness Assessment, Insider Threat Investigation, Insider Threat, APT Investigation, Advanced Persistent Threat, Nation-State Actor, Nation-State Investigation, NIST 800-61, NIST IR, SANS PICERL, PICERL, Preparation, Identification, Containment, Eradication, Recovery, Lessons Learned, Post-Incident Review, Post-Incident Report, Root Cause Analysis, RCA, Incident Lifecycle, Incident Triage, Triage, Scoping, Containment
+Strategy, Remediation, Tactical Remediation, Strategic Remediation, Crisis Management, War Room, Bridge Call, Incident Bridge, Incident Response Plan, IRP, Incident Response Playbook, Runbook, Tabletop Exercise, TTX, IR Tabletop, Red Team Exercise, Purple Team Exercise, Compromise Assessment, Breach Readiness Assessment, IR Readiness Assessment, IR Retainer, Cyber Risk Retainer, Resilience Retainer, 24x7 IR, On-Call,
+Follow-the-Sun, First Responder, Threat Containment, Threat Eradication, Forensic Analysis, Forensic Imaging, Forensic Investigation, Chain of Custody, Evidence Preservation, Evidence Handling, Evidence Collection, Defensible Chain of Custody, eDiscovery, Litigation Support, Expert Witness, Court-Admissible Evidence, Live Response, Live Forensics, Endpoint Triage, Tactics Techniques and Procedures, TTPs, Indicators of Compromise, IOCs,
+IOAs, Indicators of Attack, Dwell Time, Mean Time to Detect, MTTD, Mean Time to Respond, MTTR, Mean Time to Contain, MTTC
+Volatility, Volatility 3, Rekall, FTK, FTK Imager, AccessData FTK, EnCase, EnCase Forensic, Autopsy, Sleuth Kit, TSK, X-Ways, X-Ways Forensics, SIFT, SIFT Workstation, Magnet AXIOM, Magnet RAM Capture, Magnet IEF, KAPE, Kroll Artifact Parser and Extractor, Velociraptor,
+GRR, GRR Rapid Response, F-Response, Cellebrite, Cellebrite UFED, MSAB XRY, Oxygen Forensic Detective, Plaso, log2timeline, Super Timeline, Timeline Analysis, MFT Analysis, Master File Table, Prefetch, Prefetch Analysis, Shimcache, Amcache, USN Journal, Windows Registry
+Forensics, Registry Hives, NTUSER.DAT, SAM Hive, SYSTEM Hive, SOFTWARE Hive, SECURITY Hive, Event Logs, Windows Event Logs, Event ID 4624, Event ID 4625, Event ID 4688, Event ID 4720, Event ID 4732, Event ID 4740, Event ID 7045, Sysmon, LNK File Analysis,
+ShellBags, Jump Lists, RecycleBin, Windows Artifacts, Linux Artifacts, Linux Forensics, auditd, journalctl, macOS Forensics, OSX Forensics, Memory Forensics, RAM Analysis, RAM Capture, Memory Acquisition, Memory Imaging, Disk Imaging, dd, dcfldd, EWF, E01, Forensic Imaging,
+Write Blocker, Hashing, MD5, SHA1, SHA256, Mobile Forensics, iOS Forensics, Android Forensics, Cloud Forensics, Container Forensics, Kubernetes Forensics, Docker Forensics, Serverless Forensics, AWS Forensics, Azure Forensics, GCP Forensics, M365 Forensics, Office 365
+Forensics, Microsoft 365 Forensics, Email Forensics, Mailbox Forensics, UAL, Unified Audit Log, MailItemsAccessed, EDiscovery Search, Browser Forensics, USB ArtifactsNetwork Forensics, Network Traffic Analysis, NTA, Network Detection and Response, NDR, Wireshark, WireShark, tshark, tcpdump, TCPDump, Zeek, Bro, Suricata, Snort, RSA NetWitness, NetWitness, Moloch, Arkime, Security Onion, NetFlow, sFlow, IPFIX, PCAP, PCAP Analysis,
+Packet Capture, Full Packet Capture, Deep Packet Inspection, DPI, Protocol Analysis, Network Intrusion Detection, IDS, IPS, IDS/IPS, Network Intrusion Prevention, Corelight, Darktrace, ExtraHop, Vectra, C2 Analysis, Command and Control, C2, C&C, Beaconing, DNS Analysis, DNS
+Tunneling, DGA, Domain Generation Algorithm, JA3, JA3S, TLS Fingerprinting, East-West Traffic, Lateral Movement Detection, Egress Analysis, Exfiltration Detection, Network Segmentation, MicrosegmentationSIEM, Security Information and Event Management, Splunk, Splunk Enterprise, Splunk Cloud, Splunk Enterprise Security, Splunk ES, Splunk SOAR, Splunk Phantom, Splunk SPL, SPL, Search Processing Language, Splunk UBA, Splunk Mission Control, Microsoft
+Sentinel, Azure Sentinel, KQL, Kusto Query Language, IBM QRadar, QRadar, QRadar AQL, AQL, Google Chronicle, Chronicle SIEM, Chronicle SecOps, Google SecOps, Securonix, Exabeam, Exabeam Fusion, LogRhythm, Sumo Logic, Elastic SIEM, Elastic Security,
+ELK Stack, ELK, Elasticsearch, Logstash, Kibana, EQL, ES|QL, ArcSight, HP ArcSight, Micro Focus ArcSight, McAfee ESM, Trellix ESM, Devo, Panther, Hunters, Rapid7 InsightIDR, AlienVault USM, Wazuh, Graylog, Seceon, Log Analysis, Log Management, Log
+Aggregation, Log Parsing, Correlation Rules, Use Case Development, SIEM Tuning, Detection Content, Content Management, Alert TriageEDR, Endpoint Detection and Response, XDR, Extended Detection and Response, CrowdStrike Falcon, Falcon Insight, Falcon Prevent, Falcon OverWatch, Falcon Complete, Falcon Identity Protection, Falcon Cloud Security, Microsoft Defender for Endpoint, Microsoft Defender XDR, Defender XDR, Microsoft Defender for Cloud,
+MDE, MDE Advanced Hunting, Defender for Identity, Defender for Office 365, MDO, Defender for Cloud Apps, MDCA, Palo Alto Cortex XDR, Cortex XDR, Cortex XSIAM, Cortex XSOAR, SentinelOne, SentinelOne Singularity, Carbon Black, VMware Carbon Black, Carbon Black Cloud, CB Response, Tanium, FireEye HX, Trellix
+EDR, Trellix XDR, McAfee ENS, McAfee MVISION, Symantec EDR, Broadcom EDR, Trend Micro Vision One, Trend Micro Apex One, Sophos Intercept X, Sophos XDR, Cybereason, Bitdefender GravityZone, Cisco Secure Endpoint, Cisco AMP, Elastic Defend, Strellix, Endpoint Protection, EPP, Next-Gen Antivirus, NGAVSOAR, Security Orchestration Automation and Response, Phantom, Demisto, Tines, Swimlane, Torq, ServiceNow SecOps, ServiceNow Security Incident Response, ServiceNow SIR, IBM Resilient, IBM SOAR, Chronicle SOAR, Siemplify, D3 Security,
+SOAR Playbooks, Automation Playbooks, Security Automation, Hyperautomation, Workflow Automation
+Cloud Security, Multi-Cloud Security, Hybrid Cloud Security, AWS, Amazon Web Services, AWS GuardDuty, GuardDuty, AWS CloudTrail, CloudTrail, AWS CloudWatch, CloudWatch, VPC Flow Logs, AWS Security Hub, Security Hub, AWS Macie, Macie, AWS Detective, Detective, AWS Inspector, Inspector, AWS Config, AWS IAM, IAM, AWS
+KMS, KMS, AWS S3, S3, EC2, AWS Lambda, Lambda, EKS, Amazon EKS, ECS, Amazon ECS, AWS Fargate, AWS Athena, Athena, AWS WAF, WAF, AWS Shield, AWS Organizations, SCPs, Service Control Policies, AWS Secrets Manager, AWS SSM, AWS Systems Manager, AWS Control Tower, AWS Network Firewall, Azure, Microsoft
+Azure, Azure Defender, Microsoft Defender for Cloud, Defender for Cloud, Azure AD, Entra ID, Microsoft Entra ID, Entra ID Protection, Azure Activity Logs, Azure Diagnostic Logs, Azure Monitor, Azure Key Vault, Key Vault, Azure Storage, Storage Accounts, NSG Flow Logs, Azure NSG, Network Security Groups, Conditional Access, PIM,
+Privileged Identity Management, Azure Policy, Azure Blueprint, Azure Lighthouse, Azure Arc, Azure Firewall, Azure Front Door, Azure Application Gateway, GCP, Google Cloud, Google Cloud Platform, Security Command Center, SCC, Cloud Logging, Cloud Audit Logs, GCP VPC Flow Logs, GCP IAM, BeyondCorp, Cloud Armor, Cloud KMS,
+Chronicle, Workload Identity, VPC Service Controls, Forseti, Cloud DLP, Cloud Native IR, Cloud-Native Incident Response, Container Security, Kubernetes Security, Kubernetes, K8s, AKS, GKE, Pod Security, Serverless Security, Serverless, FaaS, CSPM, Cloud Security Posture Management, CWPP, Cloud Workload Protection Platform,
+CNAPP, Cloud Native Application Protection Platform, CIEM, Cloud Infrastructure Entitlement Management, DSPM, Data Security Posture Management, SSPM, SaaS Security Posture Management, Wiz, Prisma Cloud, Orca Security, Lacework, Aqua Security, Sysdig, Snyk, Prowler, ScoutSuite, CloudMapper, Cartography, Steampipe,
+HashiCorp Vault, Vault, Terraform, IaC, Infrastructure as Code, Open Policy Agent, OPA
+Malware Analysis, Static Analysis, Dynamic Analysis, Behavioral Analysis, Sandbox Analysis, Malware Triage, Malware Reverse Engineering, Reverse Engineering, RE, Cuckoo, Cuckoo Sandbox, ANY.RUN, Joe Sandbox, Hybrid Analysis, VirusTotal, MalwareBazaar,
+IDA Pro, IDA Free, Ghidra, x64dbg, x32dbg, OllyDbg, Radare2, Rizin, PEStudio, PE Analysis, PE Header Analysis, PEview, CFF Explorer, YARA, YARA Rules, YARA-X, Sigma, Sigma Rules, Snort Rules, Suricata Rules, Detect-it-Easy, DIE, Unpacking, Deobfuscation,
+Code Obfuscation, Packed Malware, Fileless Malware, Living-Off-the-Land, LOTL, LOLBins, LOLBAS, In-Memory Malware, Process Hollowing, Process Injection, DLL Injection, Reflective DLL Loading, API Hooking, Anti-Analysis, Anti-VM, Anti-Debug, Shellcode Analysis,
+Capa, FLOSS, BinwalkThreat Intelligence, Cyber Threat Intelligence, CTI, Strategic Threat Intelligence, Operational Threat Intelligence, Tactical Threat Intelligence, Technical Threat Intelligence, STIX, STIX 2.1, TAXII, TAXII 2.1, MISP, OpenCTI, ThreatConnect,
+Anomali, Recorded Future, Mandiant Advantage, Mandiant Threat Intelligence, CrowdStrike Falcon Intelligence, Flashpoint, Intel 471, Group-IB, Cybersixgill, ZeroFox, Digital Shadows, ReliaQuest, Cisco Talos, Talos, AlienVault OTX,
+abuse.ch, Maltego, Shodan, Censys, GreyNoise, urlscan.io, OSINT, Open Source Intelligence, HUMINT, SIGINT, IMINT, Threat Actor Profiling, Threat Actor Attribution, Attribution, Campaign Tracking, Adversary Tradecraft, Dark Web
+Monitoring, Deep Web Monitoring, Underground Forums, Threat Feed, IOC Feed, Intelligence Sharing, ISAC, ISAO, FS-ISAC, H-ISAC, IT-ISAC, Pyramid of Pain, Diamond Model, Diamond Model of Intrusion Analysis, F3EAD, Intelligence
+Lifecycle, PIR, Priority Intelligence Requirements, RFI
+MITRE ATT&CK, MITRE ATT&CK Framework, ATT&CK, ATT&CK Matrix, MITRE D3FEND, D3FEND, MITRE Engage, MITRE CAR, Cyber Analytics Repository, Cyber Kill Chain, Lockheed Martin Cyber Kill Chain, Unified Kill Chain, PEAK Framework,
+NIST CSF, NIST Cybersecurity Framework, NIST CSF 2.0, NIST 800-53, NIST 800-171, NIST 800-86, NIST 800-207, Zero Trust Architecture, NIST RMF, NIST SP 800-30, ISO 27001, ISO/IEC 27001, ISO 27001:2022, ISO 27002, ISO 27005, ISO 27017,
+ISO 27018, ISO 27035, ISO 27701, ISO 22301, BCM, BCP, Business Continuity, Disaster Recovery, DR, DR Drill, CIS Controls, CIS Top 18, CIS Controls v8, CIS Top 20, CIS Benchmarks, CMMC, OWASP Top 10, OWASP ASVS, SANS Top 25, CWE
+Top 25, PCI DSS, PCI DSS 4.0, HIPAA, HITRUST, GDPR, CCPA, NYDFS, NYDFS 23 NYCRR 500, SOX, SOC 1, SOC 2, SOC 2 Type II, FedRAMP, FISMA, GLBA, COBIT, COBIT 2019, ITIL, ITIL 4, NIS2, DORA, Digital Operational Resilience Act,
+SBOM, Software Bill of Materials, VAPT, Vulnerability Assessment and Penetration Testing, Risk Assessment, Risk Management, Threat Modeling, STRIDE, PASTA, DREADDPDP Act, DPDP Act 2023, Digital Personal Data Protection Act, Digital Personal Data Protection Act 2023, DPDP Rules 2025, Data Protection Board of India, Data Fiduciary, Significant Data Fiduciary, Data Principal, Data Processor, DPO, Data Protection Officer, CERT-In, Indian Computer Emergency Response
+Team, CERT-In 6-hour reporting, MeitY Directive 20(3)/2022-CERT-In, CERT-In Directions 2022, CERT-In Empanelled Auditor, CERT-In Cyber Security Audit Policy Guidelines, RBI, Reserve Bank of India, RBI Cyber Security Framework, RBI Cyber Security Framework for Banks, RBI Master Direction on IT
+Governance, RBI Master Direction on Information Technology Governance Risk Controls and Assurance Practices, RBI Master Direction on Cyber Resilience and Digital Payment Security Controls, RBI Master Direction on Outsourcing of IT Services, RBI IT Framework for NBFC, RBI Payment Aggregators Master
+Direction, RBI Digital Lending Guidelines, RBI Data Localization, Cyber Crisis Management Plan, CCMP, SEBI, SEBI CSCRF, Cybersecurity and Cyber Resilience Framework, Market Infrastructure Institutions, MIIs, Cyber Capability Index, CCI, IRDAI, IRDAI Information and Cyber Security Guidelines, NCIIPC,
+National Critical Information Infrastructure Protection Centre, MeitY, Ministry of Electronics and Information Technology, IT Act 2000, Information Technology Act 2000, Section 70B, IT Rules 2021, SPDI Rules 2011, NPCI, NPCI Guidelines, UPI Audit, IDRBT, ReBIT, DSCI, Data Security Council of India, UIDAI,
+Aadhaar Data Vault, SWIFT CSP, SWIFT Customer Security Programme, SWIFT CSCF
+APT, Nation-State Actor, State-Sponsored Threat Actor, APT29, APT28, APT41, FIN7, FIN11, Lazarus Group, Sandworm, Volt Typhoon, Storm-0501, Midnight Blizzard, Initial Access Broker, IAB, Ransomware, Ransomware-as-a-Service, RaaS, Double Extortion, Triple Extortion, Data Extortion,
+LockBit, ALPHV, BlackCat, Cl0p, Clop, Royal, Akira, Play, Black Basta, BianLian, Medusa, Rhysida, Hunters International, Qilin, Warlock, RansomHub, Conti, REvil, DarkSide, Hive, Pay2Key, Supply Chain Attack, Software Supply Chain, Zero-Day, 0-Day, N-Day, Initial Access, Lateral Movement,
+Privilege Escalation, Persistence, Defense Evasion, Credential Access, Credential Dumping, LSASS Dumping, LSASS Memory, Mimikatz, Pass-the-Hash, Pass-the-Ticket, Kerberoasting, AS-REP Roasting, Golden Ticket, Silver Ticket, DCSync, DCShadow, Discovery, Collection, Exfiltration, Data
+Exfiltration, Cobalt Strike, Brute Ratel, Sliver, Metasploit, Meterpreter, Empire, PowerShell Empire, BloodHound, SharpHound, Rubeus, Impacket, PsExec, Rclone, MEGAsync, AnyDesk, ConnectWise ScreenConnect, ConnectWise Control, Remote Access Tools, RATs, Webshell, Web Shell, China
+Chopper, BYOVD, Bring Your Own Vulnerable Driver, DLL Side-Loading, DLL Sideloading, DLL Hijacking, Defender Tampering, EDR Killer, EDR EvasionPython, PowerShell, PowerShell Remoting, WMI, Bash, Shell Scripting, SQL, Regex, Regular Expressions, JSON, YAML, TOML, Go, Golang, Ruby, JavaScript, Node.js, C, C++, C#, Perl, PHP, Java, .NET, Assembly, x86, x64, ARM, REST API, REST APIs, GraphQL, grep, sed, awk, jq, Git, GitHub, GitLab, CI/CD,
+Jenkins, Docker, Ansible, Detection-as-Code
+Active Directory, AD, AD Forensics, ADCS, Active Directory Certificate Services, Kerberos, NTLM, LDAP, LDAPS, SAML, OAuth, OAuth 2.0, OIDC, OpenID Connect, MFA, Multi-Factor Authentication, Multifactor Authentication, 2FA, Two-Factor Authentication, JIT, Just-In-Time Access, PAM, Privileged Access Management,
+CyberArk, BeyondTrust, Delinea, Thycotic, HashiCorp Boundary, Okta, Ping Identity, ForgeRock, SailPoint, Saviynt, IAM, Identity and Access Management, IGA, Identity Governance and Administration, IdP, Identity Provider, SSO, Single Sign-On, FIDO2, Passwordless, Service Accounts, gMSA, Tier 0 AssetsVulnerability Management, Vulnerability Assessment, Penetration Testing, Pentesting, Nessus, Tenable, Tenable.io, Tenable.sc, Qualys, Qualys VMDR, Rapid7 InsightVM, Rapid7 Nexpose, OpenVAS, Greenbone, CVE, CVSS, CVSS v3, CVSS v4, CWE, EPSS, KEV, Known Exploited
+Vulnerabilities, Patch Management, Vulnerability Prioritization, Risk-Based Vulnerability Management, RBVM, Attack Surface Management, ASM, EASM, External Attack Surface ManagementKali Linux, Parrot OS, Burp Suite, Burp Suite Professional, Nmap, Masscan, OWASP ZAP, Nikto, sqlmap, Hashcat, John the Ripper, Hydra, Responder, CrackMapExec, NetExec, Purple Team, Red Team, Blue Team, BAS, Breach and Attack Simulation, AttackIQ, SafeBreach, Picus Security, Cymulate, Atomic Red Team, CALDERA, MITRE
+CALDERA, Adversary Emulation, Adversary Simulation, Detection Engineering, Detection Engineering Lifecycle
+GRC, Governance Risk and Compliance, Compliance Monitoring, Data Privacy, Privacy Impact Assessment, PIA, DPIA, Data Subject Access Request, DSAR, Records of Processing Activities, RoPA, Third-Party Risk Management, TPRM, Vendor Risk
+Assessment, VRAGCFA, GIAC Certified Forensic Analyst, GCIH, GIAC Certified Incident Handler, GCFE, GIAC Certified Forensic Examiner, GNFA, GIAC Network Forensic Analyst, GREM, GIAC Reverse Engineering Malware, GCFR, GIAC Cloud Forensics Responder, GCTI, GIAC Cyber Threat Intelligence, GSEC, GIAC Security Essentials,
+GCED, GIAC Certified Enterprise Defender, GMON, GIAC Continuous Monitoring, GPEN, GIAC Penetration Tester, GWAPT, GIAC Web Application Penetration Tester, GXPN, GIAC Exploit Researcher and Advanced Penetration Tester, GCDA, GIAC Certified Detection Analyst, GDSA, GIAC Defensible Security Architect, GSE,
+GIAC Security Expert, GCIA, GIAC Certified Intrusion Analyst, GPYC, GIAC Python Coder, GCSA, GIAC Cloud Security Automation, GCPN, GIAC Cloud Penetration Tester, GCLD, GIAC Cloud Security Essentials, GPCS, GIAC Public Cloud Security, GDAT, GIAC Defending Advanced Threats, GSOM, GIAC Security Operations
+Manager, GCIL, GIAC Cyber Incident Leader, GEIR, GIAC Enterprise Incident Response, GLIR, GIAC Linux Incident Responder, GICSP, GCTD, GIAC Cloud Threat Detection, GCAD, GIAC Cloud Security Architecture and Design, GSNA, GIAC Systems and Network Auditor, GSLC, GIAC Security Leadership, GX-FA, OSCP,
+OSCP+, OffSec Certified Professional, OSEP, OSED, OSWE, OSWP, OSWA, OSDA, OSCE3, OSEE, KLCP, Kali Linux Certified Professional, CEH, Certified Ethical Hacker, CEH Master, CEH Practical, CHFI, Computer Hacking Forensic Investigator, ECIH, EC-Council Certified Incident Handler, ECSA, LPT, CCISO, CTIA,
+Certified Threat Intelligence Analyst, CSA, Certified SOC Analyst, CND, Certified Network Defender, CPENT, CISSP, Certified Information Systems Security Professional, CCSP, Certified Cloud Security Professional, CSSLP, SSCP, CC, Certified in Cybersecurity, HCISPP, CISSP-ISSAP, CISSP-ISSEP, CISSP-ISSMP, CGRC,
+CISM, Certified Information Security Manager, CISA, Certified Information Systems Auditor, CRISC, CGEIT, CDPSE, CCOA, Security+, CompTIA Security+, CySA+, CompTIA Cybersecurity Analyst+, PenTest+, CompTIA PenTest+, CASP+, SecurityX, CompTIA SecurityX, Network+, CompTIA Network+, Cloud+, Linux+, Data+,
+SC-100, Microsoft Cybersecurity Architect Expert, SC-200, Microsoft Security Operations Analyst, SC-300, Microsoft Identity and Access Administrator, SC-400, Microsoft Information Protection Administrator, SC-401, SC-900, AZ-500, Azure Security Engineer Associate, AZ-900, AZ-104, AZ-204, AZ-305, AZ-700, MS-500, MD-102,
+AWS Certified Security - Specialty, AWS Certified Solutions Architect - Associate, AWS Certified Solutions Architect - Professional, AWS Certified Advanced Networking - Specialty, AWS Certified Cloud Practitioner, AWS Certified SysOps Administrator, AWS Certified DevOps Engineer - Professional, Google Professional Cloud
+Security Engineer, Google Professional Cloud Architect, Google Cybersecurity Certificate, CCSK, Certificate of Cloud Security Knowledge, CCAK, CCFA, CrowdStrike Certified Falcon Administrator, CCFR, CrowdStrike Certified Falcon Responder, CCFH, CrowdStrike Certified Falcon Hunter, CCFC, Splunk Core Certified User,
+Splunk Core Certified Power User, Splunk Enterprise Certified Admin, Splunk Enterprise Security Certified Admin, Splunk SOAR Certified Automation Developer, Splunk Certified Cybersecurity Defense Analyst, Splunk Certified Cybersecurity Defense Engineer, PCCET, PCCSA, PCNSA, PCNSE, PCSAE, PCCSE, PCDRA,
+PCSFE, Cisco CCNA CyberOps, Cisco CyberOps Associate, Cisco CyberOps Professional, IBM Certified Analyst - Security QRadar SIEM, IBM Certified Deployment Professional - Security QRadar SIEM, NSE 4, NSE 5, NSE 6, NSE 7, NSE 8, FCSS, FCP, CCSA, Check Point Certified Security Administrator, CCSE, Check Point
+Certified Security Expert, eJPT, eCPPT, eCDFP, eCTHP, eCIR, eCMAP, eWPT, eMAPT, eCRE, CRTO, Certified Red Team Operator, CRTL, CRTP, Certified Red Team Professional, CRTE, CARTP, BTL1, Blue Team Level 1, BTL2, CCD, Certified CyberDefender, CPTS, CDSA, CBBH, CWEE, PNPT, PJPT, PSAA, EnCE,
+EnCase Certified Examiner, ACE, AccessData Certified Examiner, CFCE, GASF, Cellebrite Certified Operator
+Client-Facing, Customer-Facing, Stakeholder Management, Executive Communication, Executive Briefing, C-Suite Communication, Board Reporting, White Papers, Whitepaper Authoring, Thought Leadership, Public Speaking, Conference Presentations, Mentoring, Mentorship, Coaching, 24x7 Support, 24x7 SOC, Follow-the-Sun Model, Bridge Calls, Crisis Communication,
+Project Management, Engagement Management, Engagement Lead, SOW, Statement of Work, RFP Response, Pre-Sales Support, Cross-Functional Collaboration, Technical Writing, Report Writing, Executive Summary, Technical Documentation, Knowledge Transfer, Training Delivery, Workshop Facilitation, Tabletop Facilitation, Vendor Management, Team Leadership,
+People Management, Performance ManagementAI Security, AI-Driven Security, AI/ML Security, AI in SOC, Machine Learning Detection, ML-Based Detection, GenAI Security, Generative AI Security, LLM Security, Large Language Model Security, Prompt Injection, AI Red Teaming, MLSecOps, AI
+Governance, OWASP Top 10 for LLM, AI BOM, Microsoft Copilot for Security, Security Copilot, Zero Trust, ZTA, ZTNA, Zero Trust Network Access, SASE, Secure Access Service Edge, SSE, Security Service Edge, CASB, Cloud Access Security Broker,
+DLP, Data Loss Prevention, UEBA, User and Entity Behavior Analytics, ITDR, Identity Threat Detection and ResponseBFSI, Banking Financial Services and Insurance, Banking, Financial Services, Insurance, FinTech, Payments, Capital Markets, Healthcare, Pharma, Life Sciences, Retail, E-Commerce, Manufacturing, OT, ICS, ICS/SCADA, SCADA, Operational Technology, Industrial Control Systems,
+Critical Infrastructure, CIP, NERC CIP, Energy, Utilities, Oil and Gas, Telecom, Telecommunications, Public Sector, Government, Defense, SLED, Media and Entertainment, Education, Higher Education, Automotive, Embedded Systems, IoT, IoMT, Internet of Medical Things, Aviation,
+Logistics, Supply Chain
+Cybersecurity, Cyber Security, Behavior, Behaviour, Behavioral, Behavioural, Defense, Defence, Pen Test, Penetration Test, Pentest, Pentesting, Email, Endpoint, Anti-Virus, Antivirus, AV, Malware, Threat Hunting, Use Case, Real-Time, On-Premise, On-Prem, On-Premises
+▸ Unified and automated the detection pipeline  by integrating SIEM and SOAR tools for alert correlation, 
+threat enrichment, and case management; built custom log parsers that normalized multi -source data and 
+improved detection precision.  
+▸ Reduced false positives by 40%  by re -engineering SIEM detection rules and correlation use cases, 
+dramatically cutting analyst alert fatigue and allowing the SOC team to focus on genuine threats.  
+▸ Embedded security left in the SDLC  by participating in DevSecOps pipelines integrating SAST/DAST 
+tooling, enabling application teams to identify and remediate vulnerabilities before production deployment.  
+▸ Investigated high -severity EDR alerts  from CrowdStrike Falcon and similar platforms; produced 
+comprehensive investigation reports that guided executive decision -making during critical security events.  
+▸ Quantified and communicated detection gaps  through regular metrics reporting on detective control 
+effectiveness and remediation progress, influencing resource prioritization and control investment.  
+SOC Analyst – Security Administrator (P2)  | Microland  May 2021 – Dec 2021  
+▸ Delivered 24/7 enterprise security monitoring  using IBM QRadar and Palo Alto Cortex XDR, providing 
+first-line triage, analysis, and escalation of security events with minimal business disruption.  
+▸ Contained and remediated malware infections  across endpoints through rapid isolation and response 
+procedures, preserving business continuity during active threat scenarios.  
+▸ Built executive -facing dashboards  and incident trend reports that communicated security posture, threat 
+patterns, and KPIs to management, enabling informed security governance decisions.  
+System Engineer – Security Operations  | Byju's  Mar 2019 – May 2021  
+▸ Monitored and triaged security alerts  from AV, email security gateways, and perimeter firewalls; 
+escalated confirmed incidents with well -documented findings to senior analysts for fast resolution.  
+▸ Hardened system attack surfaces  by enforcing baseline configurations across servers and endpoints, 
+directly reducing the organization's exposure to commodity threats.  
+▸ Contributed to post -incident reviews  by supporting network traffic analysis, containment activities, and 
+documentation — accelerating the team's ability to learn from and prevent incident recurrence.  
+NOTABLE PROJECTS & ACHIEVEMENTS  
+▸ Zero -Day Triage & Response:  Led live enterprise containment during an active zero -day exploit — 
+performed real -time malware reverse engineering, coordinated cross -team remediation, and authored a 
+post-incident report with actionable preventive recommendations adopted org -wide.  
+▸ Detection Rule Optimization (40% FP Reduction):  Redesigned SIEM correlation logic across multiple use 
+cases, improving alert fidelity by 40% and measurably reducing analyst burnout from false positive fatigue.  
+▸ AI-SOAR Integration POC:  Designed and evaluated an ML -based scoring model for phishing email and 
+endpoint behavioral anomalies, integrated directly into SOAR playbooks — demonstrating potential to 
+further reduce triage time.  
+▸ SOC Playbook Standardization:  Authored a unified SOC playbook and SOP library adopted organization -
+wide, improving analyst response consistency, reducing onboarding ramp time, and establishing a 
+repeatable incident response foundation.  
+EDUCATION  
+Bachelor of Engineering – Computer Science  Visvesvaraya Technological University  
+Diploma – Computer Science  Board of Technical Examinations, Bengaluru  
+CERTIFICATIONS  
+▸ Microsoft Certified: AZ -500 – Azure Security Engineer Associate  
+▸ Microsoft Certified: AZ -900 – Azure Fundamentals  
+▸ IBM QRadar SIEM Foundation  
+▸ Palo Alto Cortex XDR: Architecture, Analytics & Threat Hunting  
+▸ CEH (Certified Ethical Hacker) – In Progress  
+▸ CompTIA Security+ – In Progress  

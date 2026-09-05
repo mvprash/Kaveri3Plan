@@ -1,0 +1,64 @@
+Priyanka SEmail: priyankaachar003@gmail.com
+Mobile: +91 8861552099
+LinkedIn: linkedin.com/in/priyanka-s-620734256/
+GitHub: github.com/priyanka2003476
+Portfolio: Portfolio Website
+Professional Summary
+Full Stack .NET Developer with 1.5 years of experience in designing, developing, and maintaining enterprise web
+applications using ASP.NET Core, C#, Blazor Server, SQL Server, and RESTful APIs. Proficient in backend
+development, database design, JWT-based authentication, and building responsive user interfaces. Experienced in Agile
+development environments with hands-on exposure to Power BI reporting, SQL-based data analysis, application
+support, and system monitoring. Strong problem-solving skills with a focus on delivering scalable, secure, and
+high-performance business solutions while adhering to clean coding and software development best practices.
+Experience
+•Aspire Software Consultancy Onsite
+Full Stack .NET Developer (Full-time) Mar 2026 – Present
+◦Full Stack Development: Working on NEXORA, a Smart Workforce Automation Platform built using ASP.NET
+Core, Blazor, and SQL Server while following Clean Architecture and Repository Pattern principles.
+◦API Development: Developing RESTful APIs for workforce automation modules including user management, task
+tracking, and approval workflows.
+◦Frontend Development: Building reusable and responsive UI components using Blazor and Radzen UI with form
+validation and seamless data binding.
+◦Database Management: Designing and optimizing SQL Server database objects and queries to support scalable
+application performance.
+•Sasken Technologies Hybrid
+Junior Full Stack .NET Developer (Full-time) Feb 2025 – Jan 2026
+◦Enterprise Application Development: Developed and maintained an Access Request Management Portal using
+ASP.NET Core, Blazor Server, and SQL Server with multi-level approval workflows and role-based access control.
+◦Backend API Development: Designed and implemented RESTful APIs for user management, request processing, and
+approval workflows, improving operational efficiency.
+◦Authentication & Security: Implemented JWT-based authentication and authorization mechanisms to ensure secure
+access across application modules.
+◦Reporting & Analytics: Created Power BI dashboards and reports to monitor request trends, approval metrics, and
+operational performance.
+Technical Skills
+•Programming Languages: C#, SQL, TypeScript
+•Frameworks & Technologies: ASP.NET Core, Blazor Server, Entity Framework, LINQ, Repository Pattern
+•Web & API Development: REST APIs, Web APIs, JWT Authentication, Role-Based Authorization
+•Frontend: HTML, CSS, Bootstrap, Angular, Blazor, Radzen UI
+•Database: SQL Server
+•Tools & Platforms: Visual Studio, VS Code, SSMS, GitLab, Postman, Power BI, LabWare LIMS
+•LIMS & Laboratory Informatics: LabWare LIMS (Basic), Laboratory Workflows, LIMS Lifecycle Processes
+Projects
+•Access Request Management Portal(Professional Project): Tech Stack: ASP.NET Core, Blazor Server, SQL Server,
+REST APIs, JWT Authentication. Developed an internal portal to manage employee access requests with a secure three-level
+approval workflow and role-based access control. Built backend APIs, designed the database schema, and implemented JWT
+authentication to streamline request processing and improve operational efficiency.
+•NEXORA – Smart Workforce Automation Platform(Professional Project): Tech Stack: ASP.NET Core Web API,
+Blazor, Radzen UI, SQL Server, Entity Framework Core, JWT Authentication, Clean Architecture. Building a full-stack HR
+automation platform to simplify employee management and automate organizational workflows. Implemented Clean
+Architecture with Repository Pattern, role-based authorization, and modular API design. Planned enhancements include an
+AI-powered HR chatbot and smart analytics dashboard for improved workforce insights and automation.
+Education
+•Bapuji Institute of Engineering and Technology
+Bachelor of Engineering - Information Science; CGPA: 7.8 2021 - 2024
+•DRR Government Polytechnic College
+Diploma - Computer Science and Engineering; Percentage: 77% 2018 - 2021
+Certifications
+•Complete ASP.NET Core 9 Course for Busy Developers
+•Blazor Deep Dive - Beginner to Advanced (.NET 8)
+Soft Skills
+•Problem Solving: Ability to analyze technical issues and implement effective solutions in software development.
+•Team Collaboration: Experienced in working with cross-functional teams in Agile environments to deliver project
+requirements.
+•Communication: Strong verbal and written communication skills for effective collaboration and documentation.

@@ -1,0 +1,862 @@
+PRANAY KUMBHARE
+ 
+AI Valida tion Tester | GxP & Comput er System Valida tion (CSV) | Pharmaceutic al Manuf acturing | AI/LLM Quality 
+Engineering
+ 
+Pune, India  |  +91 8149120948  |  pranaykumbhare1204@gmail.com  |  7.8+ Years Experience
+ 
+PROFESSIONAL SUMMARY
+ 
+Senior SDET / AI Valida tion Tester with 7.8+ years of Functional, Automa tion, and AI/LLM Testing experience, including direct 
+exposur e
+ 
+to
+ 
+GxP-regula ted
+ 
+pharmaceutic al
+ 
+environmen ts.
+ 
+Curr ently
+ 
+valida ting
+ 
+a
+ 
+cloud-based
+ 
+AI/Da ta
+ 
+platform
+ 
+for
+ 
+Takeda
+ 
+Pharmaceutic al
+ 
+(OneDa ta
+ 
+Platform)
+ 
+across
+ 
+4
+ 
+GxP
+ 
+environmen ts,
+ 
+and
+ 
+previously
+ 
+valida ted
+ 
+an
+ 
+AI
+ 
+Clinic al
+ 
+Content
+ 
+Gener ation
+ 
+platform
+ 
+for
+ 
+Roche
+ 
+Diagnos tics
+ 
+against
+ 
+regula tory
+ 
+and
+ 
+compliance
+ 
+requir emen ts.
+ 
+Skilled
+ 
+in
+ 
+transla ting
+ 
+business,
+ 
+NFR,
+ 
+and
+ 
+AI/regula tory
+ 
+requir emen ts
+ 
+into
+ 
+test
+ 
+plans,
+ 
+functional
+ 
+and
+ 
+automa tion
+ 
+test
+ 
+suites,
+ 
+and
+ 
+release/ compliance
+ 
+reports
+ 
+within
+ 
+Agile/S AFe
+ 
+teams
+ 
+using
+ 
+JIRA .
+ 
+Experienced
+ 
+in
+ 
+testing
+ 
+AI-gener ated/LLM
+ 
+outputs
+ 
+for
+ 
+accur acy,
+ 
+groundedness,
+ 
+and
+ 
+hallucina tion
+ 
+risk
+ 
+(LangSmith)
+ 
+to
+ 
+support
+ 
+regula tory
+ 
+review,
+ 
+alongside
+ 
+REST
+ 
+API,
+ 
+back end/da tabase
+ 
+(MySQL),
+ 
+and
+ 
+performance
+ 
+testing.
+ 
+Com fortable
+ 
+working
+ 
+with
+ 
+GxP
+ 
+documen tation
+ 
+practices,
+ 
+comput er
+ 
+system
+ 
+valida tion
+ 
+concep ts,
+ 
+and
+ 
+cross-functional
+ 
+pharma
+ 
+stakeholder s,
+ 
+and
+ 
+quick
+ 
+to
+ 
+pick
+ 
+up
+ 
+new
+ 
+manda tory
+ 
+tools
+ 
+such
+ 
+as
+ 
+RPA
+ 
+platforms
+ 
+and
+ 
+Micr osoft
+ 
+Copilot.
+ 
+ALIGNMENT TO ROLE REQUIREMENTS
+ 
+•
+ Functional Testing: 7.8+ years of functional, regression, smok e, and end-t o-end testing across Healthc are, Pharmaceutic al, 
+Paymen ts,
+ 
+Logis tics,
+ 
+and
+ 
+Enterprise
+ 
+platforms.
+ 
+•
+ GxP & Regula tory Compliance: Tested AI/da ta platforms across 4 GxP environmen ts for Takeda Pharmaceutic al (OneDa ta 
+Platform)
+ 
+and
+ 
+support ed
+ 
+regula tory
+ 
+review
+ 
+of
+ 
+AI-gener ated
+ 
+clinic al
+ 
+content
+ 
+for
+ 
+Roche
+ 
+Diagnos tics
+ 
+(AIDC G
+ 
+platform).
+ 
+•
+ Pharmaceutic al Manuf acturing / Domain Exposur e: Direct project experience with pharma data pipelines, ETL workflo ws, 
+and
+ 
+clinic al
+ 
+content
+ 
+gener ation,
+ 
+working
+ 
+alongside
+ 
+compliance
+ 
+and
+ 
+quality
+ 
+stakeholder s
+ 
+in
+ 
+regula ted
+ 
+pharma
+ 
+environmen ts.
+ 
+•
+ Agile & Tooling: Activ e participan t in Agile/S AFe ceremonies (PI Planning , Iteration Planning , ART Sync) using JIRA and 
+Confluence
+ 
+for
+ 
+defect
+ 
+and
+ 
+requir emen t
+ 
+tracking;
+ 
+comfortable
+ 
+adap ting
+ 
+to
+ 
+qTest
+ 
+for
+ 
+test
+ 
+manag emen t.
+ 
+•
+ AI Valida tion Focus: Hands-on testing of LLM/ Agentic AI outputs using LangSmith for accur acy, groundedness, and 
+hallucina tion
+ 
+risk
+ 
+against
+ 
+compliance
+ 
+rules
+ 
+—
+ 
+directly
+ 
+applic able
+ 
+to
+ 
+AI
+ 
+valida tion
+ 
+in
+ 
+a
+ 
+regula ted
+ 
+pharma
+ 
+setting.
+ 
+•
+ RPA & Micr osoft Copilot: No direct production RPA implemen tation to date; strong automa tion-scrip ting founda tion 
+(Playwrigh t,
+ 
+Selenium,
+ 
+Python)
+ 
+that
+ 
+transfers
+ 
+readily
+ 
+to
+ 
+RPA
+ 
+tools,
+ 
+and
+ 
+open
+ 
+to
+ 
+ramping
+ 
+up
+ 
+quickly
+ 
+on
+ 
+RPA
+ 
+and
+ 
+Copilot
+ 
+as
+ 
+needed.
+ 
+CORE COMPETENCIES
+ 
+Valida tion & Compliance: GxP Environmen ts, Comput er System Valida tion (CSV) Awareness, Regula tory Compliance Testing, 
+Audit -Ready
+ 
+Documen tation,
+ 
+Risk-Based
+ 
+Test
+ 
+Strategy
+ 
+AI / LLM Quality Engineering: LLM Output Valida tion, Contextual Accur acy & Groundedness, Hallucina tion Risk Assessmen t, 
+Promp t/Response
+ 
+Verific ation,
+ 
+Agentic
+ 
+AI
+ 
+Functional
+ 
+Testing
+ 
+Automa tion Testing: Playwrigh t (TypeScrip t), Selenium WebDriv er, Page Object Model (POM), Smok e/Regression/End-t o-End 
+Testing,
+ 
+Cross-Br owser
+ 
+&
+ 
+Cross-De vice
+ 
+Testing
+ 
+Programming & Scrip ting: TypeScrip t, JavaScrip t (ES6+, async/ await), Python (Reques ts, Pandas), SQL
+ 
+API & Back end Testing: REST API Testing, Postman, Newman, JSON, OAuth/ JWT, Micr oser vices Testing, SQL/MySQL Valida tion
+ 
+Performance Engineering: Apache JMeter, NeoLoad, BlazeMe ter, Load/Str ess/Spik e/Endur ance/Soak Testing, Workload 
+Modeling ,
+ 
+NFR
+ 
+Gathering ,
+ 
+RCA
+ 
+Cloud, DevOps & Observability: AWS (S3, IAM, SNS, SQS, KMS, API Gateway, CloudW atch), Harness CI/CD , Jenkins, Git/GitHub, 
+Dyna trace
+ 
+Deliv ery & Reporting: Test Strategy & Planning , KPI Dashboar ds, Defect/Risk Analy sis, Release Readiness, Agile/S AFe (PI 
+Planning ,
+ 
+ART
+ 
+Sync),
+ 
+JIRA ,
+ 
+Stakeholder
+ 
+Manag emen t
+ 
+TECHNICAL SKILLS
+ 
+Automa tion: Playwrigh t (TypeScrip t), Selenium WebDriv er, Page Object Model, Regression & Smok e Testing
+ 
+Programming: TypeScrip t, JavaScrip t (ES6+), Python (Reques ts, Pandas), SQL
+ 
+API / Back end: REST API, Postman, Newman, JSON, OAuth, JWT, Micr oser vices Testing
+ 
+Performance: Apache JMeter, NeoLoad, BlazeMe ter, Locus t, Load/Str ess/Endur ance/Soak Testing
+ 
+Database: MySQL , SQL Valida tion, Data Integrity Valida tion, ETL Workflo w Testing
+ 
+Cloud: AWS - S3, IAM, SNS, SQS, KMS, API Gateway, CloudW atch, Databrick s
+ 
+Monit oring: Dyna trace, Grafana, CloudW atch
+ 
+DevOps: Harness CI/CD , Jenkins, Git, GitHub, Newman CLI
+ 
+AI / LLM Testing: LangSmith, LLM Output Valida tion, Contextual/Gr oundedness Check s, Hallucina tion Risk Assessmen t, Agentic 
+AI
+ 
+Testing
+ 
+Valida tion & PM Tools: JIRA , Confluence, Figma, BrowserSt ack (qTest — quick learner)
+ 
+PROFESSIONAL EXPERIENCE
+ 
+Senior Performance & Automation Engineer
+ 
+Aug
+ 
+2025
+ 
+–
+ 
+Present
+ Ancile Digit al Solution LLP
+ Client: Takeda Pharmaceutical | Project: OneData Platform | Domain: Pharmaceutical, Cloud Data Platform, AI, Data Engineering
+ 
+•
+ Led NFR gathering , workload modeling , and test strategy for Takeda's OneDa ta Platform, a cloud data platform with 15+ 
+data
+ 
+pipelines
+ 
+and
+ 
+ETL
+ 
+workflo ws
+ 
+in
+ 
+a
+ 
+GxP-regula ted
+ 
+pharmaceutic al
+ 
+environmen t.
+ 
+•
+ Built Playwrigh t (TypeScrip t) automa tion scrip ts using the Page Object Model for smok e and regression testing to check 
+applic ation
+ 
+stability
+ 
+ahead
+ 
+of
+ 
+valida tion
+ 
+and
+ 
+performance
+ 
+testing.
+ 
+•
+ Automa ted REST API testing for data ingestion and ETL endpoin ts using Postman, Newman, and Python (Reques ts, 
+Pandas),
+ 
+speeding
+ 
+up
+ 
+response
+ 
+check s
+ 
+and
+ 
+complian t
+ 
+test-data
+ 
+setup.
+ 
+•
+ Ran and analy zed JMeter and NeoLoad performance tests with 200–500 concurr ent user s; iden tified 4 throughput 
+bottleneck s
+ 
+and
+ 
+cut
+ 
+average
+ 
+response
+ 
+time
+ 
+by
+ 
+~35%.
+ 
+•
+ Tested micr oser vices on AWS (SNS, IAM, KMS, S3, CloudW atch) across 4 GxP environmen ts, valida ting auto-scaling , load 
+balancer
+ 
+(ALB),
+ 
+and
+ 
+messag e
+ 
+queue
+ 
+(SQS/K afka)
+ 
+beha vior
+ 
+against
+ 
+compliance
+ 
+expect ations.
+ 
+•
+ Integrated automa tion and performance scrip ts into Harness CI/CD pipelines, cutting pipeline failur e rate from 18% to 
+under
+ 
+5%.
+ 
+•
+ Used LangSmith to valida te LLM/ Agentic AI features across 3 platform modules, assessing output accur acy, groundedness, 
+and
+ 
+hallucina tion
+ 
+risk
+ 
+against
+ 
+pharma
+ 
+compliance
+ 
+rules.
+ 
+•
+ Author ed test strategy, execution reports, KPI dashboar ds, and risk reports; participa ted in SAFe PI Planning , Iteration 
+Planning ,
+ 
+and
+ 
+ART
+ 
+Sync
+ 
+using
+ 
+JIRA .
+ 
+Client: Roche Diagnostics | Project: AIDCG (AI Data Clinical Content Generation) Platform | Domain: Healthcare, Artificial Intelligence, 
+Clinical
+ 
+Content
+ 
+Generation
+ 
+•
+ Gathered NFRs and built a combined functional, automa tion, API, back end, and performance test plan across 8 modules of 
+an
+ 
+AI
+ 
+clinic al
+ 
+content
+ 
+platform
+ 
+used
+ 
+in
+ 
+regula ted
+ 
+healthc are
+ 
+workflo ws.
+ 
+•
+ Built Postman collections of 80+ REST API test cases and Python (Reques ts) scrip ts to valida te response, payload, and 
+business
+ 
+rules;
+ 
+logged
+ 
+and
+ 
+tracked
+ 
+30+
+ 
+defects
+ 
+through
+ 
+JIRA
+ 
+to
+ 
+resolution.
+ 
+•
+ Valida ted AI-gener ated clinic al content against 5 sour ce documen t types for accur acy, groundedness, and hallucina tion risk 
+to
+ 
+support
+ 
+regula tory
+ 
+review
+ 
+of
+ 
+LLM
+ 
+outputs.
+ 
+•
+ Built and main tained JMeter and NeoLoad performance scrip ts for documen t upload, AI content extraction, and retrieval 
+APIs;
+ 
+ran
+ 
+load
+ 
+tests
+ 
+with
+ 
+100–300
+ 
+concurr ent
+ 
+user s
+ 
+in
+ 
+AWS/PVDI
+ 
+environmen ts.
+ 
+•
+ Monit ored CloudW atch dashboar ds, iden tified latency issues and error-rate spikes, and partner ed with developer s on 
+root-cause
+ 
+fixes.
+ 
+•
+ Deliv ered execution reports, KPI dashboar ds, and compliance documen tation on time across 6 sprin t cycles through 
+weekly
+ 
+stakeholder
+ 
+mee tings.
+ 
+Senior Performance & Automation Engineer
+ 
+Sep
+ 
+2022
+ 
+–
+ 
+Mar
+ 
+2025
+ 
+US Software Group
+ 
+•
+ Set NFRs and test strategy for Agthen ticate (KDHI), a logis tics iden tity-verific ation platform for driver and shipmen t authen tication; built Selenium WebDriv er automa tion pack s with 60+ regression test cases for biome tric enrollmen t/verific ation.
+ 
+•
+ Automa ted API testing for biome tric login and shipmen t-tracking services (Python Reques ts, Postman); tested RBAC, location-based sear ch, and biome tric login (fing erprin t, face recognition, OCR).
+ 
+•
+ Built functional, automa tion, and API test plans for Wurth Canada's B2B e-commer ce and order manag emen t platform; main tained Selenium regression pack s with 90+ test cases and automa ted pricing /inventory/order-status API check s.
+ 
+•
+ Ran JMeter load tests with 100–400 concurr ent user s across engagemen ts to valida te speed and response-time targets under peak load; verified back end data accur acy (MySQL) between storefront and order records.
+ 
+•
+ Support ed WGS's enterprise web applic ation with smok e/regression automa tion, REST API valida tion, and cross-br owser functional testing for release consis tency .
+ 
+Quality & Performance Engineer
+ 
+Jun
+ 
+2021
+ 
+–
+ 
+Sep
+ 
+2022
+ Infedis Infotech LLP
+ 
+•
+ Set NFRs and built functional, automa tion, API, and performance test plans for HidocDr , a cross-pla tform (iOS/ Andr oid) medic al learning applic ation; author ed 200+ test cases.
+ 
+•
+ Automa ted REST API testing for consult ation-booking and CME endpoin ts (Postman, Python Reques ts); ran JMeter scenarios with 100–200 concurr ent user s to measur e speed, latency , and session stability under peak load.
+ 
+•
+ Support ed NFR gathering and test planning for Adacel's aviation training and simula tion platform; tested integration APIs between simula tion and training-r ecord modules and verified back end data accur acy (MySQL).
+ 
+Quality & Automation Engineer
+ 
+Jun
+ 
+2018
+ 
+–
+ 
+Jun
+ 
+2021
+ IDmission Solution Pvt. Ltd.
+ 
+•
+ Deliv ered functional, regression, API, database, and automa tion QA for a digit al iden tity-verific ation SaaS platform; built Selenium WebDriv er pack s with 150+ regression test cases, cutting manual regression time by 2 days per release.
+ 
+•
+ Automa ted API testing for ID-verific ation and biome tric login services (Python Reques ts, Postman); valida ted biome tric login and back end data accur acy (MySQL) across multiple clien t integrations.
+ 
+•
+ Support ed test strategy for a customer iden tity-verific ation and digit al onboar ding platform used in KYC workflo ws for a global banking clien t; ran JMeter load tests with 100–400 concurr ent user s and valida ted RBAC/loc ation-based compliance check s.
+ 
+CERTIFICATIONS
+ 
+•
+ Performance / Load Testing with JMeter and BlazeMe ter
+ 
+•
+ Load Testing using NeoLoad (Valid up to 2026)
+ 
+EDUCATION
+ 
+•
+ B.Tech / B.E. in Engineering — Nagpur Univ ersity, 2016
+ 
+•
+ 12th (HSC) — Mahar ashtra Boar d, 2011
+ 
+•
+ 10th (SSC) — Mahar ashtra Boar d, 2009
+ 
+LANGUAGES
+ 
+English, Hindi, Marathi
+ 

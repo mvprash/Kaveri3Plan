@@ -1,0 +1,130 @@
+
+Milash IR
+Technical Architect | .Net Core | Microservices | Azure | React | Docker | Clean Architecture
+Phone: +91 7306712203 | Email: milashir@gmail.com
+Professional Summary
+Technical Architect with 14+ years of software development experience and 18+ years in IT, currently leading enterprise microservices platform development at EY.
+Expert in .Net Core, Web API, Microservices, Docker, Azure Cloud (Functions, Key Vault, App Configuration, App Insights), React, Angular, and SQL Server.
+3+ years hands-on Microservices architecture with Docker containerization, RabbitMQ event-driven messaging, and Clean Architecture patterns.
+4+ years building interactive and responsive UIs with ReactJs for enterprise clients including AT&T, DELL EMC, and IQVIA.
+Azure Certified: AI Engineer Associate (AI-102) | Developer Associate (AZ-204) | Solutions Architect Expert (AZ-305).
+Led teams of 10-20 developers, mentored junior developers, conducted code reviews, and drove CI/CD adoption with GitHub Actions.
+3+ years international onsite experience (Germany) with direct client interactions and cross-functional team leadership.
+Strong expertise in RESTful API design, Clean Architecture, SOLID principles, n-tier architecture, and Design Patterns.
+Proven track record delivering multi-tenant cloud platforms serving 100+ workspaces across multiple environments.
+Deep understanding of SDLC, Agile/Scrum, CI/CD pipelines, security best practices (Azure AD SSO, Key Vault), and production observability.
+Key Skills
+.Net Core | Microservices | Azure | Docker | React | Web API | Clean Architecture | RabbitMQ | C# | SQL Server | Angular | TypeScript | CI/CD | GitHub Actions | Azure Functions | Azure Key Vault | Azure App Configuration | Azure AD | MongoDB | Elasticsearch | Entity Framework | LINQ | REST API | Agile | Scrum | SOLID Principles | Design Patterns | N-Tier Architecture | Team Leadership | Code Review
+Certifications & Passed Exams
+Active Certifications:
+Microsoft Certified: Azure AI Engineer Associate (AI-102)
+Microsoft Certified: Azure Developer Associate (AZ-204)
+Microsoft Certified: Azure Solutions Architect Expert (AZ-305)
+Passed Exams:
+AZ-305: Designing Microsoft Azure Infrastructure Solutions
+AI-102: Designing and Implementing a Microsoft Azure AI Solution
+AZ-204: Developing Solutions for Microsoft Azure
+Technical Expertise
+Languages: C#, JavaScript, TypeScript, T-SQL, PL/SQL, HTML, CSS, XML
+Frameworks: .Net Core, ASP.NET MVC, Web API, React, Angular, Entity Framework, WCF, LINQ
+Cloud & DevOps: Azure (Functions, Key Vault, App Configuration, App Insights, AD), Docker, GitHub Actions, CI/CD, DevOps
+Databases: SQL Server 2008/2012/2017, MongoDB, Elasticsearch
+Messaging: RabbitMQ, Azure Service Bus
+Architecture: Clean Architecture, Microservices, N-Tier, SOLID Principles, Design Patterns
+Tools: Visual Studio, Git, SVN, Jira, Bootstrap, DevExpress, SSRS
+Testing: NUnit, MS Unit Testing Framework, TDD, Integration Testing
+Methodologies: Agile/Scrum, SDLC, PMLC
+Education
+Master of Computer Application (MCA)
+Professional Experience
+Hexaware Technologies | Technical Architect | May 2024 - Present
+Client: EY | Project: EY Fabric Platform
+Architected and developed enterprise-grade microservices following Clean Architecture principles using .Net Core, RabbitMQ, Azure App Configuration, Azure Key Vault, Azure Functions, MongoDB and Docker
+Led end-to-end design and delivery of scalable RESTful APIs powering a multi-tenant cloud platform serving hundreds of workspaces across multiple environments
+Implemented event-driven messaging patterns with RabbitMQ including fanout exchanges, dead letter queues, retry with exponential backoff, and message validation using FluentValidation
+Drove adoption of CI/CD pipelines using GitHub Actions, containerization strategies with Docker, and infrastructure-as-code across multiple development teams
+Ensured production-grade observability with Serilog structured logging, OpenTelemetry distributed tracing, correlation ID propagation, and Azure Application Insights
+Designed secure credential management workflows with Azure Key Vault, GitHub App authentication, and environment-specific configuration management
+Client: Kirkland | Project: DMS
+Designed and implemented high-performance RESTful APIs and web services using Microsoft Web API framework
+Successfully delivered software solutions across diverse business functions and work areas
+Implemented secure authentication and authorization mechanisms with Azure AD single sign-on
+Refactored and migrated legacy applications to modern tech stacks ensuring improved performance, maintainability, and scalability
+Client: Kirkland | Project: APAC
+Developed APAC application in a team of 12 developers using .Net Core, Web Api, React, Azure and Docker
+Focus on enhancing user interfaces, improving system reliability, and securely managing sector-specific information
+Security Implementation: Designed and implemented secure authentication and authorization mechanisms with Azure AD single sign-on ensuring compliance with security standards
+Client: AT&T | Project: CMP (Mar 2023 - May 2024)
+Led a team of 10 developers building CMP application using .Net Core, Web Api, React, Microservices, Docker, Clean Architecture, RabbitMQ, Azure App Configuration, Azure Key Vault, Azure Functions and Windows Azure
+Designed and implemented modular systems and individual components aligned with business requirements and scalability goals
+Conducted design review meetings and collaborated with business analysts to define technical specifications for application development
+Responsible for mentoring junior developers and conducting code reviews to ensure quality and adherence to best practices
+Collaborated with business users and business analysts to define and create technical specifications for application development
+Conducted Business Meetings, Design Review Meetings, and External Team meetings to understand issues and requirements
+Amdocs | Lead Software Developer | January 2022 - May 2024
+Initially deployed through ACS Solutions payroll (Jan 2022 - Mar 2023), then converted to Amdocs employee (Mar 2023 - May 2024)
+Client: AT&T | Project: Bot MarketPlace (Jan 2022 - Mar 2023)
+Spearheaded development of Bot MarketPlace application in a team of 12 developers using .Net Core, Web Api, React, Clean Architecture, RabbitMQ, Azure App Configuration, Azure Key Vault, Azure Functions and Windows Azure
+Used Elasticsearch as backend for efficient search and data retrieval across large datasets
+Established architectural guidelines and enforced coding standards across the development team
+Developed unit tests and integration tests using MS Unit Testing Framework ensuring high code coverage
+Maintained existing code including fixing security vulnerabilities identified through security scans (cross-site scripting, environment changes)
+Participated in project planning sessions with technical and functional leads, business analysts to analyze business requirements and outline IT solutions
+Participated in design reviews providing input to design recommendations, incorporating security requirements and data flow considerations
+Pyramid IT Consulting | Principal Software Developer | November 2020 - January 2022
+Client: DELL EMC | Project: Premier Connect
+Developed a high-traffic Dell ECommerce platform in a team of 10 developers using .Net Core, Web Api, React, Angular, TypeScript, C# 4.8, Windows Azure, T-SQL and ADO.NET
+Collaborated with cross-functional teams on requirement analysis, effort estimations, and architectural design decisions
+Created custom reusable modules and components extending the core Angular framework
+Provided inputs on solution design and approach for application integrations across multiple systems
+Established clear definition of client implementation responsibilities and collaborated in ongoing development of training materials
+Designed, wrote, unit tested, and documented application code following established architecture standards
+Executed advanced services with the ability to understand complex business and information technology processes
+Technosoft Corporation | Senior Software Developer | November 2019 - November 2020
+Client: IQVIA | Project: WebConnect Plus
+Built client-facing UI modules and backend services in a team of 8 developers using .Net Core, Web Api, Angular, TypeScript, Windows Azure, C# 4.6 and LINQ
+Delivered cross-browser compatible, responsive user interfaces with a strong focus on usability and performance
+Executed advanced services with the ability to understand complex business and information technology processes
+Collaborated with QA teams to identify and resolve defects, ensuring timely delivery of high-quality software
+Provided inputs on solution design and approach for application integrations
+Established clear definition of client implementation responsibilities and led training sessions
+Contract Engagements | Senior Software Developer | October 2018 - August 2019
+Client: Gallup Gmbh | Project: Gallup Survey (Oct 2018 - Mar 2019)
+Developed a scalable survey platform with RESTful APIs using ASP.NET Web API and ReactJs with Elasticsearch as backend
+Gathered user requirements and designed the system framework using UML diagrams including use case, class, and sequence diagrams
+Worked with caching features, configuring optimizations and securing the web application
+Implemented data visualization components and report generation modules for survey analytics
+Created architectural guidelines and monitored for their compliance across the team
+Participated in making responsive web designs using Bootstrap framework
+Client: Prologit Gmbh | Project: API Development (May 2019 - Aug 2019)
+Engineered RESTful APIs using ASP.NET Web API and built interactive front-end applications with ReactJs
+Designed, modified, and implemented software applications following established architecture standards and SDLC methodologies
+Evaluated emerging technologies and frameworks for applicability within the product roadmap
+Developed new web services and interfaced with existing web services across multiple systems
+Participated in agile ceremonies and contributed to sprint planning, daily standups, and retrospectives
+Cognizant Technology Solutions | Software Developer | October 2014 - September 2018
+Client: WWE | Project: Tickut
+Contributed to a large-scale application in a team of 20 developers using ASP.Net, MVC, WCF, JavaScript, JQuery, C# and LINQ
+Implemented n-tier architecture separating Presentation (ASP.NET), Business (C#), and Data Access (ADO.NET) layers
+Written Stored Procedures, Views, Functions and Packages in PL/SQL and T-SQL
+Created technical specifications for new web services and interfaced with existing web services
+Designed, modified, developed, and implemented software programming applications following established architecture standards and SDLC methodologies
+Developed User Documents and Manuals for each delivered module of the project
+Executed from start to finish on new web service development and integration projects
+J'Overtmatics Technologies | Senior Software Developer | March 2013 - October 2014
+Project: Ette Lifestyle
+Developed a health monitoring service using .NET, WCF, Entity Framework and SQL Server
+Responsible for design, code, unit tests, integration, and bug fixing for complex and large-scale projects
+Designed user interfaces using ASP.Net MVC and implemented business logic using C#
+Application design based on n-tier architecture implementing different design patterns across all layers
+Integrated third-party APIs and payment gateways for seamless e-commerce transactions
+Prepared technical design documents based on business requirements and estimated time costs for development
+Worked on agile methodology to meet timelines with quality deliverables
+Extensively involved in developing components for business and data tier using C#, ADO.Net and ASP.Net MVC framework
+HCL Infosystems Ltd. | Technical Support Specialist | August 2007 - January 2013
+Client: FCI (Food Corporation of India) | Project: FCI Project Support
+Managed FCI project infrastructure including server setup, configuration, and ongoing maintenance
+Performed routine database backups, restoration, and recovery operations ensuring data integrity
+Applied patches and updates to production and staging environments with minimal downtime
+Wrote and updated SQL queries for data extraction, reporting, and troubleshooting
+Handled project setup activities including environment configuration and deployment support

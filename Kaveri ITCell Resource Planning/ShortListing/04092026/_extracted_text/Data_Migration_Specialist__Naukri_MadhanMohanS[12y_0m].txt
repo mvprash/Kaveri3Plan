@@ -1,0 +1,365 @@
+Madhan  Mohan.S  
++91 9500791916  
+madhanlead15@gmail.com  
+CAREER  OBJECTIVE:  - 
+ 
+To prove myself  as Database  Administrator in a  progressive managed organization that gives me  scope  to apply 
+my knowledge and skills. I  would like to be with team, which dynamically works towards success and growth of 
+the organization and achieve the set goals.  
+ 
+PROFESSIONAL  EXPERIENCE:  - 
+ 
+Worked  as a Senior  Database  Administrator  with  Rakuten  Trade,Malaysia.  Nov 2025  – June  2026 
+Worked as a Technical lead with Wipro Limited. May 2024 – OCT 2025  
+ 
+OTHER  WORK  EXPERIENCE  AND  CERTIFICATION:  - 
+Worked  as a Technical  Lead  with,  HCL Technologies  Bangalore  from  Jan 2022  - Aug 2024. 
+Worked as Senior Consultant in Affluent Global Services Aug 2021 - Dec 2021.  
+Worked  as Senior  Consultant  in Future  Focus  Infotech  Pvt Ltd from  Nov 2020  - July 2021.  
+Worked  as a Lead  Database  Administrator  in Lucida  Technologies  Pvt Ltd from July  2019 -Oct 2020 
+Worked  as a PostgreSQL  Database  Administrator  in Appscore  Solutions  from  June  2014 –May  2019.  
+PROFESSIONAL  SUMMARY: - 
+ 
+A dynamic  professional  with  12+ years  of experience  in PostgreSQL  DB on Linux/Unix  and Windows 
+Platform respectively.  
+5+ years of experience in Mongo DB Installation, configuration and upgradation MongoDB 
+Community and Enterprise editions on Linux servers.  
+Create and manage MongoDB databases, collections, and indexes.  
+Monitor database health, performance, and resource utilization.  
+Perform backup and restore using mongodump, mongorestore, and snapshot backups.  
+Configure and manage Replica Sets for High Availability.  
+Set up and maintain MongoDB Sharding for horizontal scaling.  
+Experience in PostgreSQL Installation 9.3, 9.4, 9.5,9.6.X, 10 and 11(beta -DEV) Production support. 
+Experience  in PostgreSQL  , MongoDB and Oracle  Installation  and Configuration,  Database  
+Backup  and Recovery, SQL Tuning, User maintenance, Tablespaces management, Hot Standby and 
+Replication, PITTR and Up -gradation.  
+Experience  in Installation  and creating  Hot Streaming  Replication  (Master  and Slave).  
+Proficient  in PostgreSQL  DBA  activities  including  configuration  settings,  database  index  creation  and 
+maintained and Query optimization.  
+Experienced  in Backup  & Recovery  using  PG_DUMP  and PG_DUMPALL,  setting  up WAL  archiving, 
+Point in time recovery.  
+Patch  Upgrade  from  9.2.3  to 9.2.4  in production  and Testing  Environment.  
+Install  and Configure  Backup  and Recovery  Tool  (BART)  and configure  Prod  and Testing  Server. 
+Monitor the Disk space and Database growth more than 10 Servers.  
+Involving  and handling  in sql-tuning  and Stored -Procedure  –Tuning  in PT of Production  and Testing 
+Server.  
+Creating  index  and monitoring  index  using  Explain  Plan  to make  better  Performance  of Queries. 
+Experience in VACUUM and REINDEX in Production Database for Maintenance Activities.  
+Installing  and working  tools  & clients  like pg admin  , pg agent  pg web  client  , Putty  and Toad. 
+Basic knowledge in adding and deleting Database in a clone in Replication environment  
+Configured  and Database  installation  creating  tables,  schemas,  roles  and accessed  PostgreSQL.conf 
+files using client Request.  
+2 
+ 
+Implementing  and maintaining  database  security  (create  and maintain  users,  roles  and assign 
+privileges).  
+Monitoring the production  PostgreSQL alert logs for database errors. Configuration of PEM server, 
+Pg-Admin  to monitor  the database  server  performance  of query  to monitor  Cluster  and replication. 
+Migration of Oracle Database to Postgresql Database.  
+Migration  of AWS  DMS  to Postgresqs Database.  Migration  of Sybase  Database  to Postgresql 
+Database.  
+ 
+ 
+Technical  Competencies  
+ 
+Database  Postgresql  9.4,10  , NoSQL  (Mongodb  basic)  
+Operating  System  
+Tools 
+Scripting  
+Server tools  Linux,RHEL,OEL -6.6,Windows  10 
+EDB-MTK,PG -Admin,  PEM  and ora2pg 
+Shell Script  
+Putty,  Winscp.  Win-rar 
+ 
+ 
+ 
+OTHER  TECHNOLOGIES: - 
+ 
+Install  & configure  development  PostgreSQL  8.1.1  and 9.0 databases  on RedHat  Linux  servers/Fedora. 
+Knowledge in AWS(Schema conversion. Data -Migration -Nagios Monitoring).  
+Knowledge in  Oracle Database  Connectivity,  Installation  and configuration  . 
+ 
+PROJECT  DETAILS: - 
+ 
+Client: 
+Duration  : 
+Operating  System:  
+RDBMS:  CITI BANK  (NAM  Region)  
+JJune  2024  Feb 2025  
+LINUX,  OEL,  RHEL  
+PostgreSQL  11.2  Infrastructure  Code : Ansible  ,teraform  RHEL  PostgreSQL  11.2  
+Cloud  platforms : AWS, Azure,  Cloud  
+Monitoring : Grafana  
+Automation  and configuration  Management : Ansible,  Bash  
+ 
+Role  & Responsibility  : 
+ 
+Automated  PostgreSQL  deployment  as a service  using  Ansible,  reducing  manual  setup  time  by 80%. 
+Developed an Ansible playbook to install, configure, and manage PostgreSQL across cloud and on -
+premises environments.  
+Configured  pg_hba.conf  and postgresql.conf  for secure  authentication,  performance  tuning,  and remote 
+access.  
+Implemented  user  management,  role-based  access  control  (RBAC),  and automated  database 
+provisioning.  
+Integrated  PostgreSQL  monitoring  with  Prometheus/Grafana  for proactive  performance  tracking. 
+Ensured high availability by configuring replication and failover strategies.  
+Monitoring  tools  and create  partition  to manage data’s  separate.  
+Handling  Memory  configurations  for database  servers. 
+Backup and Point in time recovery in PostgreSQL.  
+Creating  child  partitions  tables  for every  month  in PostgreSQL  
+EXPLAIN  and EXPLAIN  ANALYZE  to identify  and fine tune  sql queries  for performance  improvements. 
+Monitoring the production PostgreSQL alert logs for database errors.  
+Check Log errors and make necessary actions to rectify them. 
+Creating  Database  Links  from  Testing  to Production  databases.  
+Monitoring the  database  for Index,  partitioning  Memory and  I/O utilization.  
+ 
+Client 
+Duration  
+Operating  System  
+RDBMS  
+Role  & Responsibility  : 4 
+Brambles (US) May 
+2022 – March 23 
+LINUX, OEL, RHEL 
+PostgreSQL  11.2,12,13  
+ 
+Oracle  to Postgresql  Migration  using  AWS -SCT. 
+DMS -Task Creation  
+Ability  to understand  Migration  requirements  and bridge  the gaps  
+Expertise  in architecture  blueprints  and detailed  documentation.  Create  bill of materials,  including 
+required Cloud Services (such as EC2, S3 etc.) and tools  
+Hands -on experience  with  EC2,  ECS,  ELB,  EBS,  S3, VPC,  IAM,  SQS,  RDS,  Lambda,  Cloud  Watch,  Storage 
+Gateway, Cloud formation, Elastic Beanstalk and Autoscaling  
+Worked on Replication  and Log shipping for  Postgresql Server  High  Availability  
+Coding  of new  tables,  views  and modifications  as well as SQL Stored  Procedures,  Data  Types,  Triggers 
+and Constraints  
+Troubleshoot  performance  problems,  fine-tuning  of databases  and index  Analysis.  
+Monitoring  tools  and create  partition  to manage  data’s  separate.  
+Handling  Memory  configurations  for database  servers. 
+Backup and Point in time recovery in PostgreSQL.  
+Creating  child  partitions  tables  for every  month  in PostgreSQL  
+EXPLAIN  and EXPLAIN  ANALYZE  to identify  and fine tune  sql queries  for performance  improvements. 
+Monitoring the production PostgreSQL alert logs for database errors.  
+Check Log errors and make necessary actions to rectify them. 
+Creating  Database  Links  from  Testing  to Production  databases.  
+Monitoring the  database  for Index,  partitioning  Memory and  I/O utilization.  
+ 
+ 
+ 
+Client 
+Duration  
+Operating  System  
+RDBMS  
+Role  & Responsibility  : Volvo UD Trucks 
+Jan 2022  – April  22 
+LINUX, OEL, RHEL  
+PostgreSQL  11.2 
+ 
+ 
+ 
+Worked  on Replication  and Log shipping  for Postgresql  Server  High  Availability  Coding  of new 
+tables, views and modifications as well as SQL Stored Procedures, Data Types, Triggers and 
+Constraints  
+Troubleshoot performance problems, fine -tuning of  databases and index Analysis. 
+Monitoring tools and create partition to manage data’s separate.  
+Handling  Memory  configurations  for database  servers. 
+Backup and Point in time recovery in PostgreSQL.  
+Creating  child  partitions  tables  for every  month  in PostgreSQL  
+EXPLAIN  and EXPLAIN  ANALYZE  to identify  and fine tune  sql queries  for performance 
+improvements.  
+Monitoring  the production  PostgreSQL  alert  logs for database  errors. 
+Check Log errors and make necessary actions to rectify them.  
+Prepare  weekly  and monthly  reports  on database  health  check  and growth. 
+Creating Database Links from Testing to Production databases.  
+Monitoring the  database  for Index,  partitioning  Memory and  I/O utilization.  
+
+Client 
+Duration  
+Operating  System  
+RDBMS  
+Role  & Responsibility  : L&T Infotech Pvt Ltd 
+Aug 2021  – Dec 2021 
+LINUX, OEL, RHEL  
+PostgreSQL  11.2  
+ 
+ 
+Up-gradation  database  from  10.1  to 11.2.  Conversion  of Stored  Procedures  using  Schema  Conversion  Tool. 
+Worked on Replication and Log shipping for Postgresql Server High Availability  
+Coding  of new  tables,  views  and modifications  as well as SQL Stored  Procedures,  Data  Types,  Triggers  and Constraints 
+Troubleshoot performance problems, fine -tuning of databases and index Analysis.  
+Monitoring  tools  and create  partition  to manage  data’s  separate. 
+Handling Memory configurations for database servers.  
+Backup  and Point  in time  recovery  in PostgreSQL.  
+Creating  child  partitions  tables  for every  month  in PostgreSQL  EXPLAIN  and EXPLAIN  ANALYZE  to identify  and fine 
+tune sql queries for performance improvements.  
+Monitoring  the production  PostgreSQL  alert  logs for database  errors. 
+Check Log errors and make necessary actions to rectify them.  
+Prepare  weekly  and monthly  reports  on database  health  check  and growth. 
+Creating Database Links from Testing to Production databases.  
+Monitoring the  database  for Index,  partitioning  Memory and  I/O utilization.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Client 
+Duration  
+Operating  System  
+RDBMS  
+Role  & Responsibility  : MasterCard  International  (US) 
+Nov 2020  – Mar  2021  
+LINUX,  OEL,  RHEL  
+PostgreSQL  11.2 
+ 
+Up-gradation database from 10.1 to 11.2. Conversion of Stored Procedures using Schema Conversion Tool. 
+Worked  on Replication  and Log shipping  for Postgresql  Server  High  Availability  Coding  of new  tables,  views  and 
+modifications as well as SQL Stored Procedures, Data Types, Triggers and Constraints Troubleshoot 
+performance problems, fine -tuning of databases and index Analysis.  
+Monitoring  tools  and create  partition  to manage  data’s  separate.  Handling  Memory  configurations  for database 
+servers.  
+Backup  and Point in  time  recovery in  PostgreSQL.  
+Creating  child  partitions  tables  for every  month  in PostgreSQL  EXPLAIN  and EXPLAIN  ANALYZE  to identify  and 
+fine tune sql queries for performance improvements.  
+Monitoring  the production  PostgreSQL  alert  logs for database  errors. 
+Check Log errors and make necessary actions to rectify them.  
+Prepare  weekly  and monthly  reports  on database  health  check  and growth. 
+Creating Database Links from Testing to Production databases.  
+Monitoring  the database  for Index,  partitioning  Memory  and I/O utilization.  
+
+Client  
+Duration 
+Operating  System 
+RDBMS  
+Role  & Responsibility  : Aspire  Systems  
+Feb 2020  – Mar  2020  
+LINUX,  OEL,  RHEL  
+PostgreSQL  11.2  
+ 
+Up-gradation  database from 10.1 to  11.2.  
+Conversion of  Stored  Procedures  using  Schema  Conversion  Tool.  
+Worked  on Replication  and Log shipping  for Postgresql  Server  High  Availability Coding  of new 
+tables, views and modifications as well as SQL Stored Procedures, Data Types, Triggers and 
+Constraints  Troubleshoot  performance  problems,  fine-tuning  of databases  and index  Analysis. 
+Monitoring tools and create partition to manage data’s separate.  
+Handling  Memory  configurations  for database  servers.  Backup  and Point  in time  recovery  in 
+PostgreSQL.  
+Creating child  partitions  tables  for every  month  in PostgreSQL  EXPLAIN  and EXPLAIN  ANALYZE  to 
+identify and fine tune sql queries for performance improvements. 
+Monitoring  the production  PostgreSQL  alert  logs for database  errors. 
+Check Log errors and make necessary actions to rectify them.  
+Prepare  weekly  and monthly  reports  on database  health  check  and growth.  
+Creating  Database  Links  from  Testing  to Production  databases.  Monitoring  the database  for Index, 
+partitioning Memory and I/O utilization.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Client 
+Duration  
+Operating System  
+RDBMS  
+Role  & Responsibility  : Nielsen,  (Canada). 
+Jul 2019  – Oct 2019 
+LINUX, OEL, RHEL  
+PostgreSQL  11.2  
+Up-gradation  of database from  10.1 to  11.2.  
+Migration  of Oracle  Database  to Postgresql  Database.  Conversion  of Schema,  tables  ,triggers,  functions, 
+store procedure using Ora to pg Tool.  
+Worked  on Replication  and Log shipping  for Postgresql  Server  High  Availability  Coding  of new  tables, 
+views and modifications as well as SQL Stored Procedures, Data Types, Triggers and Constraints.  
+Troubleshoot  performance  problems,  fine-tuning  of databases  and index  Analysis.  Monitoring  tools  and 
+create partition to manage data’s separate.  
+Handling Memory configurations for database  servers. Backup and Point  in time  recovery in PostgreSQL. 
+Creating child  partitions tables for  every  month in  PostgreSQL EXPLAIN  and EXPLAIN ANALYZE to  identify 
+and fine tune sql queries for performance improvements.  
+Monitoring  the production  PostgreSQL  alert  logs for database  errors. 
+Check Log errors and make necessary actions to rectify them  
+Prepare  weekly  and monthly  reports  on database  health  check  and growth.  
+Creating  Database  Links  from  Testing  to Production  databases.  Monitoring  the database  for Index, 
+partitioning Memory and I/O utilization.  
+Client 
+Duration  
+Operating  System  
+RDBMS  
+Role  & Responsibility  : Veterans  Health  Administration.,  SC(USA).  
+Feb 2017  – May2019  
+LINUX,  OEL,  RHEL  
+PostgreSQL  9.6, 10 
+ 
+Proficiency  and expertise  in Postgresql  Replication,  Backup/Recovery,  Disaster  recovery  planning  and 
+Security Management.  
+Up-gradation  of database  from  9.1 to 9.2 and 9.3 to 9.4. Install  & configure  development  PostgreSQL  8.1.1 
+and 9.0 databases on Red -Hat Linux servers/Fedora.  
+Worked  on Replication  and Log shipping  for Postgresql  Server  High  Availability  Coding  of new  tables, 
+views and modifications as well as SQL Stored Procedures, Data Types, Triggers and Constraints 
+Troubleshoot performance problems, fine -tuning of databases and index Analysis.  
+Monitoring tools and create partition to manage data’s separate. 
+Knowledge  in Application  Performance  Tuning  and Database  Design(ERVIN). 
+Handling Memory configurations for database servers.  
+Backup  and Point  in time  recovery  in PostgreSQL.  
+Creating  child  partitions  tables  for every  month  in PostgreSQL  
+EXPLAIN  and EXPLAIN  ANALYZE  to identify  and fine tune  sql queries  for performance  improvements. 
+Monitoring the production PostgreSQL alert logs for database errors.  
+Check  Log errors  and make  necessary  actions  to rectify  them.  
+Prepare  weekly  and monthly  reports  on database  health  check  and growth. 
+Creating Database Links from Testing to Production databases.  
+Monitoring  the database  for Index,  partitioning  Memory  and I/O utilization.  
+ 
+ 
+ 
+ 
+Client 
+Duration  
+Operating  System  
+RDBMS  
+Role  & Responsibility  : Kennerley  & Co | Tax & Business.(NZ)  Nov 
+2014 – Dec 2016 LINUX, OEL, RHEL. 
+FEDORA and WINDOWS  
+PostgreSQL  9.6, 10 
+ 
+ 
+Experience  in XDB Replication  from  oracle  to Mysql  to PostgreSQL.  
+Installation  and Configuration  of multiple  PostgreSQL  servers  using  source  code  or using  third 
+party tools.  
+Configuration  of pg-badger  tool to analyze  the log-file and generate  the html  report. 
+Configuration of rep -manager tool to automate the DR configuration.  
+Perform  the switchover/switch  back  using  the rep-manager  tool. 
+Taking physical backup using the pg_basebackup tool.  
+Extensively worked on Active -Active and Active -Passive Clustering. 
+Cross -Platform  Migration  from  windows  to linux  and sun-os to Mac.  
+Install  and Configure  Backup  and Recovery  Tool  (BART)  and configure  Prod  and Testing  Server. 
+Experience in VACUUM and REINDEX in Production Database for Maintenance Activities.  
+Exposure in Backup and Recovery Methods in Postgresql Server using Tools and Scripts. 
+Configure  and Manage  Pg-pool  to Load -balancing  and Automatic  Failover  in community  Version’s. 
+Monitor the Disk space and Database growth more than 10 Servers.  
+Creating  index  and monitoring  index  using  Explain  Plan  to make  better  Performance  of Queries 
+Exposure  in EDB tool like bart,Pem,Pg -agent,pg -cleint,PPAS -10,pg_cluu,PEM -AGENT,PG -Bench.  
+
+ 
+EDUCATIONAL  SUMMARY  
+ 
+B.E (CSE  ) in Anna university in  Mookambigai  college  of engg - pudukkottai  (MAY’  2011)  in with 69% 
+Higher  Secondary:  Government  Higher  Secondary  School  ( MAR’  2007)  with  77.25%.  
+S.S.LC:  government  Higher  Secondary  School  (MAY’  2005)  with  78.99%  
+PERSONAL  DETAILS  
+ 
+Date of birth 
+Nationality 
+Marital  Status  
+Present  Address  
+04.05.1990  
+INDIAN  
+Un Married  
+No 12 Nisha  Avenue,  1st Main  road,  sembakkam  .600073  
+Contact  Number  
+Email  
++91 9500791916  
+madhanlead15@gmail.com  
+[Name]  
+[Place]  

@@ -1,0 +1,133 @@
+GAYATRI  SAJJAN  
+Dynamic  and  detail -oriented  Frontend  development  at Infosys  with  proven  skills  in , UI/UX design,  and  API integration, targeting  
+opportunities in Bengaluru, Chennai, and Hyderabad to leverage expertise in creating innovative web solutions.  
+gayatrisajjan1@gmail.com  +91-9113655498  LinkedIn  GitHub  
+ 
+ 
+CORE  COMPETENCIES  
+Frontend  Development  
+UI/UX  Design & Optimization 
+Web  Application  Performance 
+API Integration  
+Agile Development & DevOps 
+Security & Compliance Standards 
+Cross -Functional  Collaboration 
+Software  Engineering  Best  Practices 
+Cloud Technologies & Ver sion 
+Control  
+Scalability  & Responsive  Design  
+TECHNICAL  SKILLS  
+Programming  Languages:  
+JavaScript, TypeScript  
+Frontend  Technologies: React.js, 
+HTML, CSS, Bootstrap  
+Database  Management:  MySQL 
+Version  Control  & DevOps:  Git, 
+GitHub, Azure DevOps  
+Testing  & Debugging:  Jest,  Cypress, 
+Postman  
+Development  Tools  & IDEs:  Visual 
+Studio, VS Code  
+EDUCATION  
+Bachelor  of Engineering  (B.E.) 
+in Computer Science & 
+Engineering  
+SJC Institute of Technology, 
+Karnataka  
+June  2017  – August  2021  
+ 
+NOTABLE  ACHIEVEMENTS  
+Developed and  deployed scalable 
+web applications, leading to a 30% 
+increase in user retention.  
+Insta Award(Sep  2024)  – Recognized 
+for contribution to macy’s platform.   PROFILE  SUMMARY   
+ 
+Over  4 years  of experience  in the technology  sector , specializing  in frontend 
+development and user interface design , with a strong commitment to 
+delivering high -quality, scalable software solutions.  
+Proficient  in frontend  technologies,  API integration,  and user  experience 
+design , while continuously refining skills in Agile methodolo gies and 
+DevOps  practices . 
+Boosted user engagement by 30% through the  creation of responsive web 
+applications , significantly enhancing overall user experience and 
+satisfaction . 
+Expert in security protocols and compliance standards, developing 
+applications that adhere to government regulations and industry best 
+practices . 
+Played  a key role  in optimizing  web  application  performance,  leading  to 30% 
+improvement in operational efficiency , reinforcing a commitment to 
+continuous enhancement and excellence . 
+Deep understanding of modern web technologies and frameworks , 
+enabling the creation of scalable, future -ready applications tailored to 
+business needs.  
+ 
+ WORK  EXPERIENCE   
+Senior System Engineer                                      March  2022  – March 2026  
+Infosys Limited | Bangalore, India  
+Key  Result  Areas:  
+Spearheading the development and maintenance of responsive web 
+applications,  which  has led to a significant  increase  in user  engagement  and 
+satisfaction  metrics.  
+Enhancing application performance through rigorous optimization 
+techniques , resulting in a notable reduction in page load times and 
+improved user experience.  
+Ensuring  the implementation  of robust  security  measures  and  compliance 
+protocols , thereby safeguarding sensitive user data and adhering to 
+government  regulations.  
+Integrating RESTful API s to facilitate real -time tax calculations and status 
+tracking, streamlining the user experience and operational efficiency.  
+Project:  Macy’s  -Ecommerce  Platform  
+Increased  page  load  speed  by 35% , leading  to improved  SEO  rankings  and 
+higher customer retention.  
+Enhanced  mobile  responsiveness , resulting  in a 25%  increase  in mobile 
+user  engagement . 
+Streamlined  cart  and  checkout  UI, contributing  to a 20%  improvement 
+in checkout conversion rates . 
+Reduced frontend c ode redundancy by 30% through reusable component 
+architecture.  
+Improved  product  filtering/search  experience,  which  led to a 15%  increase 
+in user session time . 
+Contributed  to a 40%  reduction  in frontend  bugs  post -deployment  by 
+implementing robust unit and integration testing using Jest and Cypress. 
+Actively  participated  in Agile  ceremonies  and supported CI/CD  workflows 
+with GitHub and Azure DevOps.  
+ 
+Designed and integrated modern UI 
+components, elevating application 
+aesthetics and user experience.  
+Led the successful development and 
+launch of a secure online tax filing 
+system for the Income Tax 
+Department.  
+ 
+Implemented DevOps best practices, 
+optimizing code deployment 
+efficiency and workflow automation.  
+ 
+ 
+PERSONAL  DETAILS  
+Date  of Birth:  1st June  1999  
+Address:  Bangalore,  KA 
+Languages  Known:  English,  Kannada, 
+Telugu and Hindi  Key  Highlights:  
+ Successfully led projects that resulted in a 40% increase in user 
+engagement  by implementing  innovative  frontend  solutions  and optimizing 
+existing applications.  
+ Achieved  a 30%  reduction  in operational  costs  through  the integration  of 
+efficient API services, streamlining processes and enhancing productivity.  
+ Developed a comprehensive testing strategy that improved application 
+reliability, res ulting in a 40% decrease in post -deployment issues.  
+ 
+ PERSONAL  PROJECTS   
+Portfolio  Website  
+Live Demo  
+ Designed  and developed  a personal  portfolio  website  to highlight  projects, 
+skills, and achievements.  
+ Utilized  React.js,  TypeScript , and Tailwind  CSS to create  a modern, 
+responsive  interface.  
+ Implemented  React  Router , ensuring  smooth  navigation  across  different 
+sections.  
+ Integrated  a dynamic  contact  form  and real -time  content  updates , 
+enhancing user interaction and engagement.  
+ 

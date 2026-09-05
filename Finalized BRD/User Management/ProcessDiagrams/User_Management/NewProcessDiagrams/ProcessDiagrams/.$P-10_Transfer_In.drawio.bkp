@@ -1,0 +1,115 @@
+<mxfile host="Electron">
+  <diagram name="P-10_Transfer_In" id="0">
+    <mxGraphModel dx="689" dy="469" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="2900" pageHeight="952" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lane0" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=54;fontStyle=1;" value="SUPERIOR" vertex="1">
+          <mxGeometry height="260" width="2868" x="16" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="lane1" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=54;fontStyle=1;" value="SYSTEM" vertex="1">
+          <mxGeometry height="530" width="2868" x="10" y="276" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" parent="lane1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;" value="Persist Transfer In&#xa;(reserved if future-dated)" vertex="1">
+          <mxGeometry height="100" width="230" x="1853" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="lane1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="Blocked — no&#xa;relieving recorded" vertex="1">
+          <mxGeometry height="75" width="220" x="884" y="426.0000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="lane1" style="rhombus;whiteSpace=wrap;html=1;" value="Occupied &lt;&#xa;Strength? (incl.&#xa;reserved) FR-66(a)" vertex="1">
+          <mxGeometry height="140" width="210" x="889" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="lane1" style="rhombus;whiteSpace=wrap;html=1;" value="Full: relieving&#xa;recorded, slot free,&#xa;Joining ≥ day after&#xa;Relieving? (FR-67)" vertex="1">
+          <mxGeometry height="160" width="220" x="884" y="219" as="geometry" />
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-10" edge="1" parent="lane1" source="n7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="n8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-11" connectable="0" parent="Ur-4fIWnBCh_uGnxgmc2-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="No" vertex="1">
+          <mxGeometry relative="1" x="0.0137" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-14" edge="1" parent="lane1" source="n6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="n7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-15" connectable="0" parent="Ur-4fIWnBCh_uGnxgmc2-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="No" vertex="1">
+          <mxGeometry relative="1" x="0.2874" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lane2" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=54;fontStyle=1;" value="INCOMING OFFICER" vertex="1">
+          <mxGeometry height="240" width="2868" x="16" y="806" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" parent="lane2" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="Excluded&lt;br&gt;until 12:00 AM IST&lt;br&gt;Joining Date (FR-61)" vertex="1">
+          <mxGeometry height="100" width="230" x="2132" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-2" edge="1" parent="1" source="n2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="n3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Open Transfer In&#xa;(FR-60)" vertex="1">
+          <mxGeometry height="60" width="190" x="97" y="99" as="geometry" />
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-1" edge="1" parent="1" source="n3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="n4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;" value="List offices in actor&#39;s&#xa;office span (FR-59)" vertex="1">
+          <mxGeometry height="90" width="210" x="254" y="366" as="geometry" />
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-3" edge="1" parent="1" source="n4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="n5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-4" connectable="0" parent="Ur-4fIWnBCh_uGnxgmc2-3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="No" vertex="1">
+          <mxGeometry relative="1" x="0.2648" y="-1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-16" edge="1" parent="1" source="n4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="n6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-17" connectable="0" parent="Ur-4fIWnBCh_uGnxgmc2-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Yes" vertex="1">
+          <mxGeometry relative="1" x="-0.0124" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="(1)/(2) Same&#xa;hierarchy tests as&#xa;P-09 (FR-59, FR-43)" vertex="1">
+          <mxGeometry height="140" width="200" x="600" y="340.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="Blocked — office/&#xa;parentage rules same&#xa;as Transfer Out" vertex="1">
+          <mxGeometry height="80" width="200" x="600" y="99" as="geometry" />
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-8" edge="1" parent="1" source="n6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="n10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-9" connectable="0" parent="Ur-4fIWnBCh_uGnxgmc2-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Yes Available" vertex="1">
+          <mxGeometry relative="1" x="0.1621" y="-1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="Reserved — counts as&#xa;Occupied immediately" vertex="1">
+          <mxGeometry height="75" width="220" x="1220" y="543.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-6" edge="1" parent="1" source="n10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="n11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n10" parent="1" style="shape=document;whiteSpace=wrap;html=1;" value="Enter Transfer /&#xa;Reporting Order +&#xa;Joining Date" vertex="1">
+          <mxGeometry height="90" width="220" x="1550" y="28.200000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-5" edge="1" parent="1" source="n11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="n12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-7" edge="1" parent="1" source="n9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.523;entryY=0.863;entryDx=0;entryDy=0;entryPerimeter=0;" target="n10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-12" edge="1" parent="1" source="n7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.001;entryY=0.415;entryDx=0;entryDy=0;entryPerimeter=0;" target="n9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ur-4fIWnBCh_uGnxgmc2-13" connectable="0" parent="Ur-4fIWnBCh_uGnxgmc2-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Yes" vertex="1">
+          <mxGeometry relative="1" x="-0.2636" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

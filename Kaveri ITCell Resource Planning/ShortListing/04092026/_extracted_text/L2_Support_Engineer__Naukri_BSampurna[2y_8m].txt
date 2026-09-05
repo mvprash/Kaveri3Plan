@@ -1,0 +1,114 @@
+May 2026 - Present
+Oct 2025 - Apr 2026
+Dec 2023 - Sep 2025
+B Sampurna
+Fullstack Developer
++91-9347827116 | 
+sampurnab33@gmail.com | 
+Bengaluru, INDIA | Experience: 2 Years 7 Months
+Results-driven Software Engineer with 2.7 years of experience in designing and developing scalable, high-
+performance web applications. Strong expertise in frontend development using Node.js, React.js, TypeScript,
+Redux, and modern UI frameworks. Proven experience in building reusable, responsive components,
+integrating REST APIs, and optimizing application performance. Skilled in collaborating with cross-functional
+teams in Agile/Scrum environments and owning features end-to-end from development to deployment. Actively
+seeking opportunities to contribute to impactful products while continuously enhancing technical and problem-
+solving skills.
+SKILLS
+Javascript
+MongoDB
+Github
+Redux
+HTML
+Less
+Agile
+Problem Solving
+React.js
+Bootstrap
+JIRA
+Restfull API
+CSS
+RESTful API
+Responsive Web Design
+Collaboration
+Node.js
+Sass / Less
+GIT
+Postman API
+Sass
+TypeScript
+UI/UX Design
+Material UI
+WORK EXPERIENCE
+Fullstack Developer - ClinoGenesis Research Institute
+End-to-End LMS Development: Architected and maintained a scalable Learning Management System portal to manage
+students, courses, assessments, and workflows.
+Frontend Engineering: Built responsive, mobile-first UI using React.js, TypeScript, Redux, and modern CSS libraries for
+seamless user experience.
+Backend & API Architecture: Designed secure RESTful APIs handling student enrollment, auth (JWT/OAuth), notifications,
+and progress tracking.
+Database & Performance Optimization: Managed SQL/NoSQL schemas for student records and grades, optimizing queries
+for low latency and high concurrency.
+Integrations & Delivery: Integrated third-party APIs/gateways and collaborated in Agile/Scrum environments from feature
+design to production deployment.
+Software Engineer - My teknoland Software Pvt Ltd
+- Engineered scalable, high-performance frontend applications using React.js, TypeScript, and Redux. 
+- Developed reusable, modular UI components to enhance user experience and accelerate development cycles. 
+- Implemented robust state management strategies to maintain application consistency and reliability. 
+- Integrated RESTful APIs to optimize data flow and enrich application capabilities. 
+- Enhanced rendering efficiency, achieving significant gains in application speed and user engagement. 
+- Led feature development from initial concept through deployment, collaborating closely with cross-functional Agile teams. 
+- Delivered production-ready, maintainable solutions adhering strictly to best practices and coding standards.
+Software Engineer - UNIFIED POINT TECH Pvt. Ltd.
+– Developed mobile-first, responsive web applications using React.js, JavaScript, HTML5, and CSS3.
+– Built reusable UI components and efficiently managed application state using Redux and Redux Thunk.
+– Integrated RESTful APIs with structured error handling, improving data consistency and UI reliability.
+– Enhanced application performance and responsiveness through rendering optimization and code refactoring.
+6 Months
+20 Months
+4 Months
+– Actively participated in Agile ceremonies, code reviews, and production deployments.
+Projects
+PROJECTS
+Jewellery POS & Inventory System
+- Architected and developed a comprehensive Jewellery Point of Sale (POS) system for retail operations, enhancing sales
+and inventory management.
+- Engineered modular and reusable UI components using React.js and TypeScript, ensuring a consistent and responsive
+user experience across various devices.
+- Implemented centralized state management with Redux, optimizing cart workflows and enhancing pricing calculations for
+real-time updates.
+- Integrated RESTful APIs for diverse functionalities, including product catalog, customer data management, and order
+processing.
+- Improved application stability through structured validation and error handling, leading to optimized rendering and
+enhanced performance. 
+- Utilized technologies such as Material UI, HTML5, CSS3, JavaScript, React.js, Node.js and Git to deliver a robust solution.
+Fidium
+- Developed high-performance service ordering interfaces for Fidium, ensuring real-time serviceability checks and plan
+customization.
+- Implemented secure authentication workflows, incorporating SMS-based two-factor authentication and robust validation
+logic.
+- Built responsive scheduling and checkout flows featuring dynamic form validation to enhance the user journey.
+- Improved user experience through accessibility enhancements, UI optimization, and thorough edge-case handling.
+- Utilized a tech stack that included React, TypeScript, Redux, Material UI, HTML5, CSS3, JavaScript, React js, Node.js, REST
+APIs, Git, and Azure to deliver innovative solutions.
+Learning Management System (LMS)
+- Architected and developed an end-to-end Learning Management System (LMS) portal for managing students, course
+enrollments, assessments, and progress tracking.
+- Built responsive, intuitive user interfaces using React.js, TypeScript, and Material UI to deliver a seamless experience
+across desktop and mobile devices.
+- Engineered secure RESTful APIs using Node.js/Express for user authentication (JWT/OAuth), student profiles, and real-
+time notifications.
+- Designed and optimized database schemas to efficiently query student records, grades, and system activity with low
+latency.
+- Integrated state management via Redux and implemented third-party API integrations for content delivery and payments.
+EDUCATION
+2024
+B.Tech/B.E. - Bachelor of Technology / Engineering | Computer Science and Engineering
+(CSE)
+Sree Vidyanikethan Engineering College, Tirupati
+Marks - 82%
+ADDITIONAL INFORMATION
+Languages: 
+English, 
+Telugu, 
+Kannada, 
+Hindi

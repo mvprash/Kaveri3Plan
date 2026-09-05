@@ -1,0 +1,293 @@
+Format for Biodata of personnel
+
+Certifications  : 
+Microsoft Certified: Azure fundamentals
+AWS Certified: Cloud Practitioner
+AWS AI Practitioner
+AWS Solutions Architect
+
+
+I, the undersigned certify that:
+
+(i) to the best of my knowledge and belief, this bio data correctly describes me, my qualifications,
+and my experience.
+
+I understand that my willful misstatement described herein may lead to my disqualification or dismissal, if engaged.
+
+Name & Signature (Personnel)                                                                       Name & Signature (Authorised
+     Rosen Nath                                                                                                                             Representative)
+
+Date and Place of signing                                                                                  Date and Place of signing
+Name | Name | Years of Exp | Years of Exp | Years of Exp | Proposed Position | Proposed Position | Proposed Position
+Rosen Nath | Rosen Nath | 13 | 13 | 13 | Lead Developer | Lead Developer | Lead Developer
+1 | Name of Company: | Name of Company: | Name of Company: | Kyndryl Solution | Kyndryl Solution | Kyndryl Solution | Kyndryl Solution
+2 | Designation of Staff: | Designation of Staff: | Designation of Staff: | Lead Developer Eng | Lead Developer Eng | Lead Developer Eng | Lead Developer Eng
+3 | Date of Birth: | 10th July  1983 | 10th July  1983 | Nationality: Indian | Nationality: Indian |  | 
+4 | Education:  | Education:  | Education:  | Education:  | Education:  | Education:  | Education: 
+  | S.No | Degree Obtained | Degree Obtained | Institution | Dates | Dates | Dates
+  | 1 | BE | BE | BPUT |  |  | 
+  | 2 |  |  |  |  |  | 
+ | 3.  |  |  |  |  |  | 
+5 | Membership of Professional Associations: | Membership of Professional Associations: | Membership of Professional Associations: | NA | NA | NA | NA
+6 | Other Training: | Other Training: | Other Training: |  NA |  NA |  NA |  NA
+7 | Countries of Work Experience: | Countries of Work Experience: | Countries of Work Experience: | India | India | India | India
+8 | Languages: | Language | Language | Speak | Read | Read | Write
+8 | Languages: | English | English | Yes | Yes | Yes | Yes
+8 | Languages: | Kannada | Kannada | No | No | No | No
+8 | Languages: | Hindi | Hindi | Yes | Yes | Yes | Yes
+ | Employment Record: | From/To | From/To | June-2022 to Present | June-2022 to Present | June-2022 to Present | June-2022 to Present
+ | Employment Record: | Employer | Employer | Kyndryl Solution | Kyndryl Solution | Kyndryl Solution | Kyndryl Solution
+ | Employment Record: | Position Held | Position Held | Lead Developer Eng | Lead Developer Eng | Lead Developer Eng | Lead Developer Eng
+ | Employment Record: | From/To | From/To | March 2020 to June 2022 | March 2020 to June 2022 | March 2020 to June 2022 | March 2020 to June 2022
+ | Employment Record: | Employer | Employer | Harman Conneted Service | Harman Conneted Service | Harman Conneted Service | Harman Conneted Service
+ | Employment Record: | Position Held | Position Held | Laed Software Eng | Laed Software Eng | Laed Software Eng | Laed Software Eng
+ | Employment Record: | From/To | From/To | Oct 2018 to Mar 2020  | Oct 2018 to Mar 2020  | Oct 2018 to Mar 2020  | Oct 2018 to Mar 2020 
+ | Employment Record: | Employer | Employer | Tech Mahindra | Tech Mahindra | Tech Mahindra | Tech Mahindra
+ | Employment Record: | Position Held | Position Held | Sr Software Eng | Sr Software Eng | Sr Software Eng | Sr Software Eng
+ |  | From/To | From/To | Mar 2014 to Sept 2018 | Mar 2014 to Sept 2018 | Mar 2014 to Sept 2018 | Mar 2014 to Sept 2018
+ |  | Employer | Employer | HCL | HCL | HCL | HCL
+ |  | Position Held | Position Held | Lead Software Eng | Lead Software Eng | Lead Software Eng | Lead Software Eng
+10 |  | Python, Perl, Ansible, Fast API, Flask, Robot Framework, PyTest, Git, CICD- GitHub Action, Docker, Jira, Automation Testing, Functional testing, Intigration testing and agile/scrum | Python, Perl, Ansible, Fast API, Flask, Robot Framework, PyTest, Git, CICD- GitHub Action, Docker, Jira, Automation Testing, Functional testing, Intigration testing and agile/scrum | Python, Perl, Ansible, Fast API, Flask, Robot Framework, PyTest, Git, CICD- GitHub Action, Docker, Jira, Automation Testing, Functional testing, Intigration testing and agile/scrum | Python, Perl, Ansible, Fast API, Flask, Robot Framework, PyTest, Git, CICD- GitHub Action, Docker, Jira, Automation Testing, Functional testing, Intigration testing and agile/scrum | Python, Perl, Ansible, Fast API, Flask, Robot Framework, PyTest, Git, CICD- GitHub Action, Docker, Jira, Automation Testing, Functional testing, Intigration testing and agile/scrum | Python, Perl, Ansible, Fast API, Flask, Robot Framework, PyTest, Git, CICD- GitHub Action, Docker, Jira, Automation Testing, Functional testing, Intigration testing and agile/scrum
+10 | Skills | Python, Perl, Ansible, Fast API, Flask, Robot Framework, PyTest, Git, CICD- GitHub Action, Docker, Jira, Automation Testing, Functional testing, Intigration testing and agile/scrum | Python, Perl, Ansible, Fast API, Flask, Robot Framework, PyTest, Git, CICD- GitHub Action, Docker, Jira, Automation Testing, Functional testing, Intigration testing and agile/scrum | Python, Perl, Ansible, Fast API, Flask, Robot Framework, PyTest, Git, CICD- GitHub Action, Docker, Jira, Automation Testing, Functional testing, Intigration testing and agile/scrum | Python, Perl, Ansible, Fast API, Flask, Robot Framework, PyTest, Git, CICD- GitHub Action, Docker, Jira, Automation Testing, Functional testing, Intigration testing and agile/scrum | Python, Perl, Ansible, Fast API, Flask, Robot Framework, PyTest, Git, CICD- GitHub Action, Docker, Jira, Automation Testing, Functional testing, Intigration testing and agile/scrum | Python, Perl, Ansible, Fast API, Flask, Robot Framework, PyTest, Git, CICD- GitHub Action, Docker, Jira, Automation Testing, Functional testing, Intigration testing and agile/scrum
+11 | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+ | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+ | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+ | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+ | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+ | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+ | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+
+11 | Name of assignments or projects: | Name of assignments or projects: | FPL PTID Automation | FPL PTID Automation | FPL PTID Automation | FPL PTID Automation | FPL PTID Automation
+11 | Year: | Year: | Nov 2024 to April 2026 | Nov 2024 to April 2026 | Nov 2024 to April 2026 | Nov 2024 to April 2026 | Nov 2024 to April 2026
+11 | Location: | Location: | Bangalore | Bangalore | Bangalore | Bangalore | Bangalore
+11 | Client: | Client: | Florida Power limited(FPL) | Florida Power limited(FPL) | Florida Power limited(FPL) | Florida Power limited(FPL) | Florida Power limited(FPL)
+11 | Main project features: | Main project features: | UI and API Automation of Applications usin Python and Pytest | UI and API Automation of Applications usin Python and Pytest | UI and API Automation of Applications usin Python and Pytest | UI and API Automation of Applications usin Python and Pytest | UI and API Automation of Applications usin Python and Pytest
+11 | Positions held: | Positions held: | Lead Developer | Lead Developer | Lead Developer | Lead Developer | Lead Developer
+11 | Activities performed: | Activities performed: | Design and implement robust test automation frameworks using Python, PyTest and Selenium for UI and request for API automation.
+Design and implement robust test automation frameworks using Python, PyTest and MSOLAP and PYODBC for OLAP Cubes application automation.
+Experienced Python developer with a strong background in designing and implementing test automation frameworks using Selenium. Proven ability to create efficient, maintainable test suites and collaborate effectively with cross-functional teams. 
+Working on Blueprint Design and requirement gathering.
+Woking on GIT Action and CICD pipelines.
+ | Design and implement robust test automation frameworks using Python, PyTest and Selenium for UI and request for API automation.
+Design and implement robust test automation frameworks using Python, PyTest and MSOLAP and PYODBC for OLAP Cubes application automation.
+Experienced Python developer with a strong background in designing and implementing test automation frameworks using Selenium. Proven ability to create efficient, maintainable test suites and collaborate effectively with cross-functional teams. 
+Working on Blueprint Design and requirement gathering.
+Woking on GIT Action and CICD pipelines.
+ | Design and implement robust test automation frameworks using Python, PyTest and Selenium for UI and request for API automation.
+Design and implement robust test automation frameworks using Python, PyTest and MSOLAP and PYODBC for OLAP Cubes application automation.
+Experienced Python developer with a strong background in designing and implementing test automation frameworks using Selenium. Proven ability to create efficient, maintainable test suites and collaborate effectively with cross-functional teams. 
+Working on Blueprint Design and requirement gathering.
+Woking on GIT Action and CICD pipelines.
+ | Design and implement robust test automation frameworks using Python, PyTest and Selenium for UI and request for API automation.
+Design and implement robust test automation frameworks using Python, PyTest and MSOLAP and PYODBC for OLAP Cubes application automation.
+Experienced Python developer with a strong background in designing and implementing test automation frameworks using Selenium. Proven ability to create efficient, maintainable test suites and collaborate effectively with cross-functional teams. 
+Working on Blueprint Design and requirement gathering.
+Woking on GIT Action and CICD pipelines.
+ | Design and implement robust test automation frameworks using Python, PyTest and Selenium for UI and request for API automation.
+Design and implement robust test automation frameworks using Python, PyTest and MSOLAP and PYODBC for OLAP Cubes application automation.
+Experienced Python developer with a strong background in designing and implementing test automation frameworks using Selenium. Proven ability to create efficient, maintainable test suites and collaborate effectively with cross-functional teams. 
+Working on Blueprint Design and requirement gathering.
+Woking on GIT Action and CICD pipelines.
+
+11 | Name of assignments or projects: | Name of assignments or projects: | SAP Enablement | SAP Enablement | SAP Enablement | SAP Enablement | SAP Enablement
+11 | Year: | Year: | June 2022 to Nov 2024 | June 2022 to Nov 2024 | June 2022 to Nov 2024 | June 2022 to Nov 2024 | June 2022 to Nov 2024
+11 | Location: | Location: | Bangalore | Bangalore | Bangalore | Bangalore | Bangalore
+11 | Client: | Client: | Multi Clent | Multi Clent | Multi Clent | Multi Clent | Multi Clent
+11 | Main project features: | Main project features: | Python and Ansible automation | Python and Ansible automation | Python and Ansible automation | Python and Ansible automation | Python and Ansible automation
+11 | Positions held: | Positions held: | Lead Developer | Lead Developer | Lead Developer | Lead Developer | Lead Developer
+11 | Activities performed: | Activities performed: | Working on development and automation in SAP Managed App space.
+Working on the Multi cloud Azure/Aws using ansible and Python. 
+Working on High availability solution for Azure and AWS.
+Orchestration and testing the APIs using postman.
+Working on ASR (azure site recovery) with different DB like db2, Oracle and Sybase.
+Working on window High availability solutions for Azure and AWS with MSSQL DB.
+ | Working on development and automation in SAP Managed App space.
+Working on the Multi cloud Azure/Aws using ansible and Python. 
+Working on High availability solution for Azure and AWS.
+Orchestration and testing the APIs using postman.
+Working on ASR (azure site recovery) with different DB like db2, Oracle and Sybase.
+Working on window High availability solutions for Azure and AWS with MSSQL DB.
+ | Working on development and automation in SAP Managed App space.
+Working on the Multi cloud Azure/Aws using ansible and Python. 
+Working on High availability solution for Azure and AWS.
+Orchestration and testing the APIs using postman.
+Working on ASR (azure site recovery) with different DB like db2, Oracle and Sybase.
+Working on window High availability solutions for Azure and AWS with MSSQL DB.
+ | Working on development and automation in SAP Managed App space.
+Working on the Multi cloud Azure/Aws using ansible and Python. 
+Working on High availability solution for Azure and AWS.
+Orchestration and testing the APIs using postman.
+Working on ASR (azure site recovery) with different DB like db2, Oracle and Sybase.
+Working on window High availability solutions for Azure and AWS with MSSQL DB.
+ | Working on development and automation in SAP Managed App space.
+Working on the Multi cloud Azure/Aws using ansible and Python. 
+Working on High availability solution for Azure and AWS.
+Orchestration and testing the APIs using postman.
+Working on ASR (azure site recovery) with different DB like db2, Oracle and Sybase.
+Working on window High availability solutions for Azure and AWS with MSSQL DB.
+
+11 | Name of assignments or projects: | Name of assignments or projects: | Head Unit Development | Head Unit Development | Head Unit Development | Head Unit Development | Head Unit Development
+11 | Year: | Year: | Mar 2020 to sept 2022 | Mar 2020 to sept 2022 | Mar 2020 to sept 2022 | Mar 2020 to sept 2022 | Mar 2020 to sept 2022
+11 | Location: | Location: | Bangalore | Bangalore | Bangalore | Bangalore | Bangalore
+11 | Client: | Client: | Volkswagon(Brazil) | Volkswagon(Brazil) | Volkswagon(Brazil) | Volkswagon(Brazil) | Volkswagon(Brazil)
+11 | Main project features: | Main project features: | Python Automation | Python Automation | Python Automation | Python Automation | Python Automation
+11 | Positions held: | Positions held: | Lead Automation Eng | Lead Automation Eng | Lead Automation Eng | Lead Automation Eng | Lead Automation Eng
+11 | Activities performed: | Activities performed: | Developing the actual code, using PYTHON according to requirement for different features of Head Unit using the Squish framework and Appium.
+Writing the automation test cases for various features and doing the Mock server Testing.
+Leading the automation activity for Head Unit Project.
+Carrying out Estimation in Automation for different modules.
+Understanding system functionality based on functional specifications and estimate the time required to develop and execute test cases.
+Doing the target testing using the test bench.
+Involved in providing weekly updates and involved in deciding the future road map for the various activities to be taken up. 
+ | Developing the actual code, using PYTHON according to requirement for different features of Head Unit using the Squish framework and Appium.
+Writing the automation test cases for various features and doing the Mock server Testing.
+Leading the automation activity for Head Unit Project.
+Carrying out Estimation in Automation for different modules.
+Understanding system functionality based on functional specifications and estimate the time required to develop and execute test cases.
+Doing the target testing using the test bench.
+Involved in providing weekly updates and involved in deciding the future road map for the various activities to be taken up. 
+ | Developing the actual code, using PYTHON according to requirement for different features of Head Unit using the Squish framework and Appium.
+Writing the automation test cases for various features and doing the Mock server Testing.
+Leading the automation activity for Head Unit Project.
+Carrying out Estimation in Automation for different modules.
+Understanding system functionality based on functional specifications and estimate the time required to develop and execute test cases.
+Doing the target testing using the test bench.
+Involved in providing weekly updates and involved in deciding the future road map for the various activities to be taken up. 
+ | Developing the actual code, using PYTHON according to requirement for different features of Head Unit using the Squish framework and Appium.
+Writing the automation test cases for various features and doing the Mock server Testing.
+Leading the automation activity for Head Unit Project.
+Carrying out Estimation in Automation for different modules.
+Understanding system functionality based on functional specifications and estimate the time required to develop and execute test cases.
+Doing the target testing using the test bench.
+Involved in providing weekly updates and involved in deciding the future road map for the various activities to be taken up. 
+ | Developing the actual code, using PYTHON according to requirement for different features of Head Unit using the Squish framework and Appium.
+Writing the automation test cases for various features and doing the Mock server Testing.
+Leading the automation activity for Head Unit Project.
+Carrying out Estimation in Automation for different modules.
+Understanding system functionality based on functional specifications and estimate the time required to develop and execute test cases.
+Doing the target testing using the test bench.
+Involved in providing weekly updates and involved in deciding the future road map for the various activities to be taken up. 
+
+ | Name of assignments or projects: | Name of assignments or projects: | Vodafone Alarm Automation | Vodafone Alarm Automation | Vodafone Alarm Automation | Vodafone Alarm Automation | Vodafone Alarm Automation
+ | Year: | Year: | Oct 2018 to Mar 2020 | Oct 2018 to Mar 2020 | Oct 2018 to Mar 2020 | Oct 2018 to Mar 2020 | Oct 2018 to Mar 2020
+ | Location: | Location: | Bangalore | Bangalore | Bangalore | Bangalore | Bangalore
+ | Client: | Client: | HPE | HPE | HPE | HPE | HPE
+ | Main project features: | Main project features: | Python Automation | Python Automation | Python Automation | Python Automation | Python Automation
+ | Positions held: | Positions held: | Lead Automation Eng | Lead Automation Eng | Lead Automation Eng | Lead Automation Eng | Lead Automation Eng
+ | Activities performed: | Activities performed: | Developing the actual code, using PYTHON according to requirement for different features in excel sheet parsing using the Robot Framework.
+Understood Alarms for Temip, UCA, and UTM in a short span of time and automated test cases for various features.
+Carrying out Estimation in Automation.
+Understanding system functionality based on functional specifications and estimate the time required to develop and execute test cases. 
+Involved in providing weekly updates and involved in deciding the future road map for the various activities to be taken up. 
+Closely worked with the client manual tester for the initial inputs for the peers and helping them with the script development.
+Lead peer reviews of deliverable scrip | Developing the actual code, using PYTHON according to requirement for different features in excel sheet parsing using the Robot Framework.
+Understood Alarms for Temip, UCA, and UTM in a short span of time and automated test cases for various features.
+Carrying out Estimation in Automation.
+Understanding system functionality based on functional specifications and estimate the time required to develop and execute test cases. 
+Involved in providing weekly updates and involved in deciding the future road map for the various activities to be taken up. 
+Closely worked with the client manual tester for the initial inputs for the peers and helping them with the script development.
+Lead peer reviews of deliverable scrip | Developing the actual code, using PYTHON according to requirement for different features in excel sheet parsing using the Robot Framework.
+Understood Alarms for Temip, UCA, and UTM in a short span of time and automated test cases for various features.
+Carrying out Estimation in Automation.
+Understanding system functionality based on functional specifications and estimate the time required to develop and execute test cases. 
+Involved in providing weekly updates and involved in deciding the future road map for the various activities to be taken up. 
+Closely worked with the client manual tester for the initial inputs for the peers and helping them with the script development.
+Lead peer reviews of deliverable scrip | Developing the actual code, using PYTHON according to requirement for different features in excel sheet parsing using the Robot Framework.
+Understood Alarms for Temip, UCA, and UTM in a short span of time and automated test cases for various features.
+Carrying out Estimation in Automation.
+Understanding system functionality based on functional specifications and estimate the time required to develop and execute test cases. 
+Involved in providing weekly updates and involved in deciding the future road map for the various activities to be taken up. 
+Closely worked with the client manual tester for the initial inputs for the peers and helping them with the script development.
+Lead peer reviews of deliverable scrip | Developing the actual code, using PYTHON according to requirement for different features in excel sheet parsing using the Robot Framework.
+Understood Alarms for Temip, UCA, and UTM in a short span of time and automated test cases for various features.
+Carrying out Estimation in Automation.
+Understanding system functionality based on functional specifications and estimate the time required to develop and execute test cases. 
+Involved in providing weekly updates and involved in deciding the future road map for the various activities to be taken up. 
+Closely worked with the client manual tester for the initial inputs for the peers and helping them with the script development.
+Lead peer reviews of deliverable scrip
+ | Name of assignments or projects: | Name of assignments or projects: | ActiveSafety | ActiveSafety | ActiveSafety | ActiveSafety | ActiveSafety
+ | Year: | Year: | 2016 June to Sept 2018 | 2016 June to Sept 2018 | 2016 June to Sept 2018 | 2016 June to Sept 2018 | 2016 June to Sept 2018
+
+ | Location: | Location: | Bangalore | Bangalore | Bangalore | Bangalore | Bangalore
+
+ | Client: | Client: | Robert Bosch | Robert Bosch | Robert Bosch | Robert Bosch | Robert Bosch
+ | Main project features: | Main project features: | Perl Automation | Perl Automation | Perl Automation | Perl Automation | Perl Automation
+ | Positions held: | Positions held: | Lead Eng | Lead Eng | Lead Eng | Lead Eng | Lead Eng
+ | Activities performed: | Activities performed: | Developing the actual code using Perl according to requirement for different features in JLR and CEVT. 
+Understood STEPS in a short span of time and automated test cases for various features.
+Carrying out Estimation in Automation.
+Understanding system functionality based on functional specifications and estimate the time required to develop and execute test cases. 
+Involved in providing weekly updates and involved in deciding the future road map for the various activities to be taken up. 
+Executing the test scripts in the different lab cars, making lab car fault free, and helping the client manual tester to correct the different mapping file issues.
+Closely worked with the client manual tester for the initial inputs for the peers and helping them with the script development.
+Lead peer reviews of deliverable scripts.
+Involved in Optimization activities.
+ | Developing the actual code using Perl according to requirement for different features in JLR and CEVT. 
+Understood STEPS in a short span of time and automated test cases for various features.
+Carrying out Estimation in Automation.
+Understanding system functionality based on functional specifications and estimate the time required to develop and execute test cases. 
+Involved in providing weekly updates and involved in deciding the future road map for the various activities to be taken up. 
+Executing the test scripts in the different lab cars, making lab car fault free, and helping the client manual tester to correct the different mapping file issues.
+Closely worked with the client manual tester for the initial inputs for the peers and helping them with the script development.
+Lead peer reviews of deliverable scripts.
+Involved in Optimization activities.
+ | Developing the actual code using Perl according to requirement for different features in JLR and CEVT. 
+Understood STEPS in a short span of time and automated test cases for various features.
+Carrying out Estimation in Automation.
+Understanding system functionality based on functional specifications and estimate the time required to develop and execute test cases. 
+Involved in providing weekly updates and involved in deciding the future road map for the various activities to be taken up. 
+Executing the test scripts in the different lab cars, making lab car fault free, and helping the client manual tester to correct the different mapping file issues.
+Closely worked with the client manual tester for the initial inputs for the peers and helping them with the script development.
+Lead peer reviews of deliverable scripts.
+Involved in Optimization activities.
+ | Developing the actual code using Perl according to requirement for different features in JLR and CEVT. 
+Understood STEPS in a short span of time and automated test cases for various features.
+Carrying out Estimation in Automation.
+Understanding system functionality based on functional specifications and estimate the time required to develop and execute test cases. 
+Involved in providing weekly updates and involved in deciding the future road map for the various activities to be taken up. 
+Executing the test scripts in the different lab cars, making lab car fault free, and helping the client manual tester to correct the different mapping file issues.
+Closely worked with the client manual tester for the initial inputs for the peers and helping them with the script development.
+Lead peer reviews of deliverable scripts.
+Involved in Optimization activities.
+ | Developing the actual code using Perl according to requirement for different features in JLR and CEVT. 
+Understood STEPS in a short span of time and automated test cases for various features.
+Carrying out Estimation in Automation.
+Understanding system functionality based on functional specifications and estimate the time required to develop and execute test cases. 
+Involved in providing weekly updates and involved in deciding the future road map for the various activities to be taken up. 
+Executing the test scripts in the different lab cars, making lab car fault free, and helping the client manual tester to correct the different mapping file issues.
+Closely worked with the client manual tester for the initial inputs for the peers and helping them with the script development.
+Lead peer reviews of deliverable scripts.
+Involved in Optimization activities.
+
+ | Name of assignments or projects: | Name of assignments or projects: | Ericsson SMS Porting | Ericsson SMS Porting | Ericsson SMS Porting | Ericsson SMS Porting | Ericsson SMS Porting
+ | Year: | Year: | Mar 2014 to May 2016 | Mar 2014 to May 2016 | Mar 2014 to May 2016 | Mar 2014 to May 2016 | Mar 2014 to May 2016
+
+ | Location: | Location: | Bangalore | Bangalore | Bangalore | Bangalore | Bangalore
+ | Client: | Client: | Ericsson | Ericsson | Ericsson | Ericsson | Ericsson
+ | Main project features: | Main project features: | Perl Automation | Perl Automation | Perl Automation | Perl Automation | Perl Automation
+ | Positions held: | Positions held: | Sr Eng | Sr Eng | Sr Eng | Sr Eng | Sr Eng
+ | Activities performed: | Activities performed: | Involved in writing the codes for PPP, L2TP & AAA based test scripts to support the N2X as traffic generators and SE when it is needed.
+Possess significant experience in developing units, functional test cases and API using Perl ARTS framework.
+Debugging and fixing script issues and reporting any Automation Framework and product issues.
+Involved in stabilization of the scripts in batch run.
+Involved in Optimization activities.
+ | Involved in writing the codes for PPP, L2TP & AAA based test scripts to support the N2X as traffic generators and SE when it is needed.
+Possess significant experience in developing units, functional test cases and API using Perl ARTS framework.
+Debugging and fixing script issues and reporting any Automation Framework and product issues.
+Involved in stabilization of the scripts in batch run.
+Involved in Optimization activities.
+ | Involved in writing the codes for PPP, L2TP & AAA based test scripts to support the N2X as traffic generators and SE when it is needed.
+Possess significant experience in developing units, functional test cases and API using Perl ARTS framework.
+Debugging and fixing script issues and reporting any Automation Framework and product issues.
+Involved in stabilization of the scripts in batch run.
+Involved in Optimization activities.
+ | Involved in writing the codes for PPP, L2TP & AAA based test scripts to support the N2X as traffic generators and SE when it is needed.
+Possess significant experience in developing units, functional test cases and API using Perl ARTS framework.
+Debugging and fixing script issues and reporting any Automation Framework and product issues.
+Involved in stabilization of the scripts in batch run.
+Involved in Optimization activities.
+ | Involved in writing the codes for PPP, L2TP & AAA based test scripts to support the N2X as traffic generators and SE when it is needed.
+Possess significant experience in developing units, functional test cases and API using Perl ARTS framework.
+Debugging and fixing script issues and reporting any Automation Framework and product issues.
+Involved in stabilization of the scripts in batch run.
+Involved in Optimization activities.

@@ -1,0 +1,94 @@
+Pate 1 of  2 
+ R. GANAPATHY  
+Bangalore 560068  |  +91 6360691603  |  ganapathyr605@gmail.com  |  linkedin.com/in/r -ganapathy -a74a91157  
+PROFESSIONAL SUMMARY  
+Dynamic AI Consultant and  Dot Net  Architect / Lead  - Cloud & Enterprise Solutions with 15  years of experience 
+in designing and implementing cloud -based solutions, optimizing performance, and enhancing system 
+interoperability. Proven track record leading projects that increased development efficiency by 15% and reduced 
+delivery time by 20% using agile methodologies. S killed in  managing complex SDLC, Full Stack development , 
+troubleshooting, problem solving, driving API integration,  migration  of legacy  .Net  applications in to containerized 
+Microservices , enhancement s,  scalable, secure technical strategy, and in mentoring teams to deliver on time.   
+Technical  Lead ership,  Requirements gathering, stakeholder management, budgeting, risk management . 
+TECHNICAL SKILLS  
+• AI Tools : Cursor, GitHub Copilot, Codex, Claude Code, Gemini, Context/Prompt Engineering,  MCP , RAG, Agent  
+• Cloud & DevOps : Azure DevOps, AWS, Kubernetes, Docker, CI/CD Pipelines  
+• .NET Ecosystem : Angular, .NET Core MVC, C#, Blazor , EF Core ,  LINQ , WPF, VB.Net  
+• Architecture & Integration : API Design, M icroservices, RESTful Services  
+• Data & Tools : SQL Server, Data Mode ling, MySQL, Performance Tuning,  JQuery, JavaScript, Jira  
+• Domain Expertise: Enterprise  Systems , IOT / Smart Metering (GPRS, GSM, DLMS), Financial Services, Banking, 
+Healthcare, MIS, Manufacturing, HR Systems  & Costing.  
+PROFESSIONAL EXPERIENCE  
+ 
+AI Cloud  Consultant   |  Accudia Industries, Bangalore  Dec 2023 – Mar 2025  
+• Leveraging AI tools to build and mentor .NET ecosystem projects using  modern AI assistants, native Microsoft 
+frameworks, and structured context strategies .  
+• Fine -tune  Enterprise cloud solutions enhancing performance, scalability, and interoperabi lity across 
+distributed systems,  containerized .NET Core Microservices using Docker with reusable images and 
+environment specific configurations.  
+• Led the team managing Operational Technology (SCADA, DCS, PLC) for p roduction systems, Developed and 
+deployed applications to Kubernetes enabling auto -scaling, load balancing, and high availability.  
+• Managed deployments, services, and ingress configurations for reliable servi ce exposure and traffic routing.  
+Implemented rolling deployments with pod health monitoring for zero -downtime releases.  
+• Collaborated with DevOps on container orchestration and cluster performance tuning; integrated 
+containerized workloads into Azure DevOps CI/CD pipelines for automated build, push, and deployment.  
+Environment: AI Tools, Azure DevOps, Kubernetes, AWS, Angular , API, Microservices , SQL, Jira  
+Lead Architect   |  Invendis Technologies India Pvt. Ltd.  Sep 2022 – Nov 2023  
+• Engineered  development of .NET Core APIs and M icroservices supporting large -scale energy monitoring and 
+billing systems. Migrated monolithic, legacy applications to modern containerized application.  
+• Enforced  EF Core -based data models and improved  SQL Serve r performance for high -volume IO T and billing 
+workloads,  deployed containerized workloads via Docker and Kubernetes for system resilience and scalability.  
+• Established DevOps best practices and automated CI/CD pipelines to improve release frequency and 
+production stability; Mentored  Agile teams, owned architecture decisions, and ensured on -time delivery.  
+• Automated I OT processes, performed requirement analysis, and optimized SQL query performance across 
+planning, architecture, and R&D of new tools and POCs.  
+• Designed distributed service architecture with secure API integrations and service -to-service communication.  
+• Handled architecture decisions, and ensured on -time delivery of complex enterprise solutions.  
+Environment: Azure DevOps, Kubernetes, AWS, .NET Core MVC, API, Microservices , SQL, Jira  
+Pate 2 of  2 
+ Assistant Architect Lead   |  Viatris  Oct 2019 – Sep 2022  
+• Architected and Oversaw  multiple financial projects: E -Reimbursement Claim System, Budget Management, 
+E-Compensation System, and Housing Loan Interest Subsidy System.  
+• Drove strategic planning, technical design, and architecture through creativity, conflict resolution, and 
+decision -making, critical problem solving, adaptability, and prioritization across teams.  
+• Applied  single sign -on and security compliance; investigated  custom nested g rid views and user controls, 
+guided  team activity planning, task allocation, and incident management.  
+• Performed data modeling, database design, and complex SQL query optimization for stored p rocedures, 
+views, and functions, delivered cloud -native solutions, R&D, POCs, migrations, and performance tuning.  
+• Database Optimization , Task management, identified gaps, and improved system modularity and 
+interoperability by adopting RESTful API strategies.  
+Environment: NET Core MVC, API, EF, Microservices, JQuery, LINQ, SQL Server  
+Senior Lead Developer   |  Jags Technologies Group Pvt. Ltd.  Jul 2014 – Sep 2019  
+• Developed and deployed cryptocurrency exchange, banking, financial, HR, and computerized MIS systems; 
+contributed to best practices, techniques, and tools for project planning and execution.  
+• Handled  two projects simultaneously, delivering web applications and APIs to meet customer requirem ents, 
+led projects from requirements through deployment, owning schedules, scope, and budget estima tion. 
+• Executed  TCP/IP socket connectivity for microsecond -level exchange rate retrieval, extended  all modules of 
+banking solutions, including data validation, bulk data uploads, and client deployment.  
+• Business analysis and tasks progress during conversion project. Design, development, and maintenance.  
+• Data validation, bulk data upload to DB server, sub sector data, deployment at client base & Documented.  
+• Presented  Computerized Inventory Control & Production and Hospital Management syst ems, collected 
+requirements, ran feasibility studies, and built prototypes and transaction reports.  
+Environment: ASP.NET MVC, C#, JQuery, LINQ, EF, Core API,  SQL Server  
+Senior Software Engineer   |  Matrix Energy Pvt. Ltd.  Nov 2010 – May 2014  
+• Enlarged  and deployed a Computerized Meter Reading System (GPRS, GSM, direct device) and a 
+Computerized Transformer Management System for alarm/temperature monitoring via GPRS.  
+• Built a  Water Pump Handling System with automatic level checks and on/off control; modernized global 
+standard meter reading protocols for instantaneous, billing, and tamper values.  
+• Launched Street Lighting solutions with DLMS protocol and smart metering; provided  dispersed  automation 
+for power utilities and automatic metering infrastructure.  
+• Developed Costing, Engine Operations, and Wind Predictor systems; gathered requirements and built API 
+interfaces for project enhancements.  
+• Created Forms and views for equipmen t, units, attributes, and manufa cturers for costing estimation.  
+Environment: Classic ASP.Net, C#, JavaScript, ADO.Net, Ajax, WPF, VB.Net, SQL Server  
+ 
+LICENSES & CERTIFICATIONS  
+• Diploma in Certified Associate in Project Management  
+• Advanced Diploma in Cloud Computing for AWS  & Certificate of AWS Summit India 2023  
+• Diploma in Certified Information Systems Security Professional  
+• Certificate of Microsoft Azure Administrator  
+• Certificate of Agile Scrum Master (ASM)  & Scrum Fundamentals Certified (SFC)  
+ 
+EDUCATIONAL QUALIFICATIONS  
+• Master of Science in Information Technology   — Annamalai University   
+• Post Graduate Diploma  in Computer Applications  — Gobi Arts College, Bharathiar University   
+• Bachelor of Science in Mathematics  — Sri Vasavi College, Bharathiar University   

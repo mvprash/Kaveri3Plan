@@ -1,0 +1,72 @@
+SATYABHAMA
+Software Developer
++91 8217635060 satyabhamakorke@gmail.com linkedin.com/in/satyabhama-korke
+OBJECTIVE
+Software Developer with experience in building web applications, developing and integrating APIs, and delivering
+scalable software solutions using ReactJS, Flask, Python, and MongoDB. Skilled in problem-solving, debugging, and
+collaborating across teams to build reliable and user-focused applications. Passionate about learning new technologies
+and contributing to innovative software products.
+TECHNICAL SKILLS
+•Frontend Development: React.js, JavaScript, TypeScript, Redux, HTML, CSS
+•Backend Development: FastAPI, Flask, Python
+•API Testing & Tools: REST APIs, Postman, Swagger, JSON, XML, API Integration
+•Web Optimization: Technical SEO, On-Page Optimization, Website Performance Tuning
+•Database Management: MongoDB, MySQL
+•Version Control: Git, GitHub
+•AI-Assisted Development: Prompt Engineering, LLM Tools, AI Debugging, Workflow Optimization
+•Soft Skills: Communication, Problem Solving, Analytical Thinking, Adaptability, Quick Learner, Teamwork
+EXPERIENCE
+Software Developer
+Ample Enterprise Technologies Pvt. Ltd. , Pune August 2025 – Present
+•Contributed to the development and enhancement of enterprise web applications and product-based platforms
+using React.js, JavaScript, HTML, and CSS .
+•Built responsive user interfaces, reusable frontend components, and scalable application features with a focus
+on performance and user experience.
+•Worked extensively on the iReqruit platform, contributing to platform modules, frontend integrations, Com-
+mand Centre features, and application enhancements.
+•Developed modern UI systems, animations, responsive layouts, and user-centric workflows across multiple web
+applications.
+•Delivered frontend solutions for 7+ enterprise websites , ensuring responsive design, maintainable UI archi-
+tecture, and optimized performance.
+•Developed and maintained 200+ ATS-friendly resume and portfolio templates with reusable design
+systems, responsive layouts, and scalable frontend implementations.
+•Implemented API integrations, dynamic rendering workflows, and real-time frontend functionalities across en-
+terprise applications.
+•Contributed to Technical SEO, website optimization, and overall application usability improvements.
+•Leveraged AI-assisted development workflows and LLM-powered productivity tools to accelerate debugging, UI
+engineering, and feature delivery.
+•Collaborated within agile teams to deliver scalable and production-ready frontend solutions.
+Full Stack Developer Intern
+VHU Technologies and Solutions Pvt. Ltd. , Bengaluru June 2024 – May 2025
+•Developed a full-stack account management system for group savings, handling user contributions, loans, repay-
+ments, and transaction tracking.
+•Designed and developed RESTful APIs using Flask and implemented business logic for repayment schedules and
+contribution cycles.
+•Implemented JWT-based authentication and Role-Based Access Control (RBAC) for secure user management.
+•Designed MongoDB schemas and optimized database queries to improve data management and application
+performance.
+•Built responsive dashboards using ReactJS with API integrations, pagination, filtering, and dynamic data ren-
+dering.
+•Collaborated in testing, debugging, and resolving application issues to ensure reliable system functionality and
+seamless user experience.
+ACADEMIC PROJECTS
+Fire and Smoke Detection for Wildfire (YOLOv5)
+•Built an AI-based object detection model using YOLOv5.
+•Project published on IEEE platform.
+Text Recognition App
+•Developed a mobile application using OCR to extract text from images.
+Shortest Job Next Scheduling Algorithm
+•Simulated CPU scheduling concepts.
+Pharmacy Management System
+•Built a web application for inventory and sales management.
+EDUCATION
+BE in Computer Science and Engineering 2020 – 2024
+Acharya Institute of Technology, Bengaluru CGPA: 7.56
+PUC – Pre-University Education 2019 – 2020
+Vision Girls PU College, Bengaluru 77.16%
+SSLC – Secondary Education 2017 – 2018
+Sri Basaveshwara EM High School, Basavakalyan 75.52%
+LANGUAGES
+English, Kannada, Hindi, Marathi, Telugu
+CERTIFICATIONS
+•IEEE Publication: Fire and Smoke Detection for Wildfire – CSEIJ Journal

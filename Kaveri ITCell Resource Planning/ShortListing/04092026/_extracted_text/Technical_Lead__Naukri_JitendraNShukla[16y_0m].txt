@@ -1,0 +1,211 @@
+JITENDRA N . SHUKLA
+Project Lead | Technical Project Lead
+Shukla_jit@yahoo.co.in +91-9870765857 
+Summary
+• Strong leadership, analytical, decision-making, 
+team mentoring, client management, and delivery-
+focused skills.
+• Experienced in Agile/Scrum delivery, 15-Day 
+Sprint Planning, Jira/Confluence, requirements 
+management, risk and issue resolution, UAT, 
+release planning, and stakeholder management.
+• Experience integrating AI capabilities into 
+enterprise applications using Azure AI Services, 
+Azure OpenAI, RAG, LangChain, Ollama, 
+ChromaDB, and Vector Databases.
+• Strong experience designing scalable solutions 
+using N-Tier Architecture, Microservices, RESTful 
+APIs, Design Patterns, and cloud-based solutions.
+• 6+ years of experience developing modern web 
+applications using Angular, TypeScript, Node.js, 
+Express.js, HTML5, and CSS3.
+• Strong hands-on expertise in C#, ASP.NET, 
+ASP.NET MVC, .NET Core, .NET 10, Entity 
+Framework, Azure, REST APIs, SQL Server, Oracle, 
+PostgreSQL, and Snowflake.
+• Proven experience leading cross-functional 
+development teams, managing end-to-end project 
+delivery, sprint planning, release management, 
+production support, stakeholder coordination, and 
+client communication.
+• 16+ years of experience in software architecture, 
+enterprise application development, technical 
+leadership, project delivery, and solution 
+implementation across Procurement, Maritime, 
+Cyber Security, Banking, E-commerce, VAS, and 
+Gaming domains.
+• Requirement Analysis | Solution Design | Risk & 
+Issue Management | Production Support | Quality & 
+Delivery Governance
+• Team Leadership & Mentoring | Stakeholder 
+Management | Client Coordination | UAT Support
+• End-to-End Project Management | Agile/Scrum | 
+Sprint Planning | Release & Deployment 
+Management
+PROJECT LEADERSHIP & DELIVERYProfessional Experience
+Project Lead / Technical Project Manager, Trigun Infotech 11/2025 – Present
+NAVIOX – Fleet Management System
+•Project Description: NAVIOX is an enterprise fleet management solution 
+developed for the maritime industry to manage vessel operations, crew 
+management, maintenance planning, procurement, inventory, voyage 
+planning, compliance, and reporting. The platform streamlines end-to-end 
+fleet operations and improves operational efficiency through centralized 
+management.
+Key Responsibilities:
+• Led end-to-end project delivery using Agile methodology, ensuring scope, 
+schedule,  quality, and delivery commitments were tracked.
+• Led and coordinated a cross-functional team of 8–10 developers, including 
+task planning, technical coordination, and delivery follow-up.
+• Coordinated with clients and stakeholders for requirement gathering, 
+clarification, solution design, and delivery alignment.
+• Planned and facilitated sprint planning, daily stand-ups, sprint reviews, 
+retrospectives, and delivery tracking.
+• Managed release planning, deployment coordination, production support, 
+risks, issues, and priority resolution.
+• Ensured timely delivery, quality standards, stakeholder communication, and 
+continuous improvement across the project lifecycle.
+Technologies: .NET 6, ASP.NET , C#, SQL Server, Angular, REST API, Azure 
+DevOps, Docker, Kubernetes, RAG, Claude, ChatGPT
+Projects: Naviox, Crew Management system, ShramYogi, Royal ERP
+Project Manager / Project Leader
+Arcon Techsolutions Pvt. Ltd12/2021 – 11/2025
+Privileged Access Management (PAM)
+•Project Description: Developed an enterprise cybersecurity solution for 
+managing privileged user accounts, password vaulting, secure access 
+control, session monitoring, and compliance auditing. The solution 
+enhanced organizational security and reduced the risk of unauthorized 
+access.
+Key Responsibilities:
+•Managed project planning and execution.
+•Coordinated with business stakeholders and technical teams.
+•Led Agile delivery and sprint execution.
+•Managed project risks, issue resolution, and release planning.
+•Conducted client demonstrations and UAT support.
+Technologies: ASP.NET Core, Web API, SQL Server, Angular, Azure DevOps, 
+REST API. RAG, Copilot, Open AI
+Team Leader, Pegasus Infocorp Pvt. Ltd 08/2020 – 12/2021
+Job Check Portal
+•Project Description: Developed an online recruitment and employment 
+verification portal that enabled job seekers to apply for jobs, employers to 
+manage recruitment, and administrators to monitor hiring activities 
+through a centralized platform.
+ Key Responsibilities:
+•Led the development team throughout the project lifecycle.
+•Managed task allocation and code reviews.
+•Coordinated with clients to gather business requirements.
+•Ensured on-time project delivery and quality assurance.
+Technologies: ASP.NET MVC, C#, Angular 12.0,  React.js ,SQL Server, 
+JavaScript, jQuery.
+Project Specialist, Geeta InfoTech Pvt. Ltd 06/2019 – 08/2020
+Regularization of Unauthorized Development (RUD)
+•Project Description: Developed a government web application to automate 
+the process of regularization of unauthorized developments, including 
+online application submission, document verification, approval workflow, 
+fee management, and status tracking.
+Key Responsibilities:
+•Participated in requirement analysis and solution design.
+•Developed core modules and integrated business workflows.
+•Collaborated with government stakeholders during UAT.
+•Provided deployment and production support.
+•Technologies: ASP.NET MVC, C#, SQL Server, JavaScript.
+Projects: POCARA, RUD
+Technical Skills
+Programming Languages: C#, Typescript, Java,
+Sql, VB.Net, AJAX, SQL, PL/SQL
+Technologies: ADO.NET, Web services, .Net, MVC
+5.0, .NET Framework 2.0/3.0/3.5, 4.7, 8.0, IIS, Web
+API, Redis.
+Scripting Languages: Angular 12.0, 18.3, Node.js,
+Java Script, jQuery, Ajax, XML.XSLT, React.js
+Web Development: ASP.Net, HTML/HTML5, CSS3,
+Bootstrap 3.3.7
+Framework: .Net Framework 2.0, 3.5, 4.7, 8.0.,
+Entity Framework, C# 3.0, 4.0, 5.0, 6.0, 8.0, Scrum
+Database: MS-Access, MS-SQL Server
+2000/2005/2008/2019, 2022, SQLite., PostgreSQL, MY
+SQL
+Operating System: Windows XP / Windows7
+Tools & Applications: MS Visual Studio 2013, 2012,
+2008, 2005, Crystal Reports, Ajax Control Toolkit,
+WinSCP, VScode
+Artificial Intelligence: OpenAI, Large Language
+Models (LLMs), RetrievalAugmented Generation
+(RAG), LangChain, Ollama, ChromaDB (Vector
+Database), Prompt Engineering, Semantic Search,
+AI Agents, Indexing, AI-powered Code Search,
+Cursor AI, Copilot
+Version Control: Visual Source Safe, GitLab, TFS,
+SVN
+Web Servers: IIS 6.0 and IIS 7.0
+Project Management: Jira, Zoho
+Education
+IET, Avadh University, 
+MCA (Masters of Computer Applications)
+Faizabad, IndiaTeam Leader, Nazara Technologies Pvt. Ltd. 06/2011 – 02/2019
+Nazara M-Commerce Platform
+•Project Description: Developed and maintained a mobile commerce 
+platform for digital content, gaming, and value-added services. The 
+platform supported content management, payment integration, user 
+management, and high-volume transaction processing.
+•Technologies: ASP.NET, C#, SQL Server, Web Services, JavaScript.
+CMS – Content Management System
+•Content Management System (CMS) is a bundled or stand-alone web 
+application used to manage, store, and deliver content on mobile. CMS 
+provides managements of video, audio, themes and mobile games. CMS is a 
+centralized repository for creating portals that allows publishing, editing 
+and modifying content and also maintain through a central interface with 
+multiple features like automated templates, access controls, easily editable 
+content, document management, multilingual and many more using CDR. 
+CMS contains following features. Content management, Portal 
+Management, MIS reports.
+Roles & Responsibilities
+•Led Technical Team – Managed developers, assigned tasks, and ensured 
+timely project delivery.
+•Application Development – Developed and maintained ASP.Net,C# web and 
+mobile applications using 3-tier architecture.
+•Third-Party Integration – Integrated payment gateways, cloud services 
+(Amazon S3), and external APIs(Paytm, CCAvenue, Consent Gateway, Alt 
+Balaji APIs)
+•Database Development – Designed SQL Server Stored Procedures, Views, 
+and optimized database performance.
+•Client Coordination – Gathered requirements, provided technical solutions, 
+and managed client communication.
+•Deployment & Quality Assurance – Performed code reviews, unit testing, 
+deployment, and application performance optimization.
+•Team Mentoring & Documentation – Conducted knowledge transfer 
+sessions and prepared technical documentation.
+Technologies: C#, ASP.NET, .NET Framework, SQL Server, ADO.NET, HTML, 
+React.js ,CSS, JavaScript, XML, IIS, Visual Studio, WAP.
+Projects: Gaming services developed in Africa, Asia & Latam America 
+countries, ibg.org.in, Quizlo.in
+Software Programmer, Coruscant Tech 01/2009 – 06/2011
+Online Charging Gateway (OCG)
+Project Description: Developed a telecom Value-Added Services (VAS) platform 
+that enabled secure purchase and delivery of digital content with real-time 
+balance validation, charging, and WAP gateway integration.
+Key Responsibilities:
+•Developed web-based modules using ASP.NET,C#, and SQL Server.
+•Implemented real-time balance validation and deduction for telecom 
+subscribers.
+•Designed and optimized SQL Server stored procedures, views, and database 
+objects.
+•Integrated WAP applications with telecom charging and content delivery 
+systems.
+•Prepared technical design documents and participated in requirement 
+analysis.
+•Performed unit testing, bug fixing, deployment support, and production 
+maintenance.
+Technologies: C#, ASP.NET, .NET Framework, SQL Server, ADO.NET,HTML, 
+CSS, JavaScript, XML, IIS, Visual Studio, WAP.
+Projects: OCR , WEB Portal , Ticket booking system
+Software Engineer, AG Technology 02/2008 – 12/2008
+UTOPIA – Call Centre Performance & Reporting System
+Project Description: UTOPIA is a call-centre business application designed to 
+integrate employee data from multiple sources, automate data processing, 
+generate configurable performance reports, and support employee appraisal 
+and organizational performance analysis.
+Key Responsibilities:
+Designed and developed modules including Security, Master, Upload, 
+Employee, Attendance, and Reporting.
+Technologies: C#, .NET Framework, Windows Forms, SQL Server, Stored 
+Procedures, Views, Triggers, Layered Architecture

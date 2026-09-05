@@ -1,0 +1,58 @@
+NOORUSSABA ASIF ALI
+Consultant
+📧 sabhakh25@gmail.com | 📱 +91-9845794362 | Bangalore, India | 🔗 LinkedIn
+
+PROFESSIONAL SUMMARY
+7 years experienced Data Engineer specializing in cloud migration, ETL/ELT optimization, and enterprise data architecture. Proven expertise in Snowflake, Azure, Informatica, and SQL with demonstrated success in improving system performance by 50%, reducing operational costs by 35%, and contributing to 10% revenue growth through data-driven solutions across banking, insurance, and financial services.
+
+TECHNICAL SKILLS/ CORE COMPETENCIES
+Data Engineering: ETL/ELT Pipelines, Data Warehousing, Medallion Architecture, SCD Types 1&2, Data Modeling, SQL Optimization, Data Migration
+Cloud & Platforms: Snowflake, Microsoft Azure, Azure Data Studio, SSMS, Informatica (PowerCenter/IICS), Power BI, MySQL, SAS Enterprise
+Programming: Advanced SQL, Python
+DevOps: Azure DevOps, Agile/Scrum, Rally, GitLab
+Leadership: Team Management, Stakeholder Communication, Agile Delivery
+Certifications: Microsoft Azure Fundamentals (AZ-900), Snowflake Snow Pro Core – (COF02)
+
+PROFESSIONAL EXPERIENCE
+Ernst & Young (EY) | Bangalore, India | Senior Data Engineer | Nov 2021 – Present
+UK Insurance Project - Senior Data Engineer/Data Modeler | Oct 2024 – Present 
+Led cloud migration from on-premises SQL Server to Snowflake using Medallion architecture, improving scalability by 40% 
+Architected ETL pipelines in Snowflake achieving 99.9% data reliability and 35% faster processing 
+Modernized legacy systems by refactoring SAS scripts to Snowflake, eliminating maintenance overhead and improving performance by 60% 
+Implemented data quality frameworks with equivalence testing, increasing stakeholder confidence in analytics 
+Delivered Agile projects via Azure DevOps, consistently meeting sprint commitments and release timelines
+EY Internal Project - Senior Data Analyst | Feb 2024 – Sep 2024 
+Engineered complex Snowflake Stored Procedures using CTEs, window functions, advanced joins, and Snowflake Scripting, leveraging Time Travel for historical data validation and rollback during development cycles.
+Achieved 50% performance improvement by optimizing Snowflake queries through micro-partition pruning, clustering keys, warehouse sizing, and advanced SQL tuning strategies.
+Greece Bank Project - Data Analyst | Sep 2022 – Jan 2024 
+Built enterprise ETL solutions using Informatica PowerCenter processing 10M+ records daily 
+Implemented SCD Type-2 for historical data tracking and regulatory compliance 
+Created interactive Power BI dashboards providing actionable business insights 
+Automated critical processes using SSIS, reducing manual intervention by 80% 
+Enhanced stakeholder collaboration, improving delivery clarity and resource allocation by 20%
+Greece Finance Company - Data Analyst | Nov 2021 – Aug 2022 
+Developed financial reporting pipelines using SQL stored procedures and SCD implementations 
+Aligned data architecture with business rules ensuring accurate regulatory reporting
+Infosys Ltd. | Bangalore, India | Senior Systems Engineer | Nov 2018 – Oct 2021
+Commercial Bank Merger - Lead ETL Developer | Mar 2020 – Oct 2021 
+Led ETL development team designing Informatica IICS workflows for bank merger integration 
+Conducted comprehensive code reviews ensuring quality standards across development team 
+Delivered complex projects on schedule using Agile methodology and Broadcom Rally
+Utility Client - ETL Developer | Dec 2019 – Mar 2020 
+Migrated ETL platform from PowerCenter to IICS, improving maintainability and reducing costs 
+Developed Power BI analytics enhancing energy sales insights, contributing to 10% revenue increase
+Internal Analytics Project - Data & Analytics Trainee | Nov 2018 – May 2019 
+Analyzed large-scale datasets (100K+ records) using Hadoop, Hive, MongoDB, and SQL 
+Developed customer segmentation models identifying top creditable customers using big data technologies 
+Created 50+ operational reports and BI dashboards, improving operational efficiency by 30% • Implemented GitLab workflows, reducing report development time by 25%
+
+KEY ACHIEVEMENTS & PROJECTS
+🚀 Performance Optimization: 50% SQL query performance improvement through advanced tuning
+☁️ Cloud Migration: Enterprise Snowflake migration improving scalability by 40%
+📊 Business Impact: 10% revenue increase through enhanced analytics solutions
+⚡ Automation: 80% reduction in manual processes through intelligent automation
+👥 Leadership: Led cross-functional teams delivering complex integration projects on-time
+🏆 Award Recognition: EY Spot Award – 2024, Achiever Extraordinaire – 2026
+
+EDUCATION
+Bachelor of Engineering in Computer Science | Visvesvaraya Technological University | Belgaum, India | 2013-2017

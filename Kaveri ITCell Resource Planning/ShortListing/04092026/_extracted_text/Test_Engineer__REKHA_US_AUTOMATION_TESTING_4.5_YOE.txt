@@ -1,0 +1,88 @@
+Rekha  U S 
+System Engineer(QA) – Manual and Automation Testing (Java  with Selenium &API ) 
+mailto:rekharekha69982@gmail.com  || https://www.linkedin.com/in/rekha -u-s || +91 8861531951  
+ 
+ 
+ 
+Professional Overview  
+Overall  4.5 years  of industry  experience  in the area of Software  Testing  (Manual  and Automation)  with a 
+solid understanding of Test Planning, Test Design, Test Execution and Defect Reporting Tracking.  
+ 
+ Strong knowledge of Software Testi ng Life Cycle (STLC)  and experience working in Agile Scrum  
+methodology with active participation in sprint planning, daily stand -ups, sprint reviews, and retrospectives.  
+ Expertise in Test Planning, Test Case Design, Test Execution, Defect Tracking, Test Re porting, and 
+Test Closure  activities.  
+ Proficient in UI Automation Testing using  Java, Selenium WebDriver, TestNG, JUnit, Maven, and 
+Cucumber BDD . 
+ Extensive experience in REST API Functional Testing, API Validation, and API Automation using  
+Postman and REST  Assured.  
+ Strong understanding of RESTful Web Services, HTTP/HTTPS protocols, JSON, XML, API 
+architecture, client -server communication, and HTTP methods  . 
+ Experience in validating HTTP status codes, response payloads, respons e headers, response time, 
+request parameters, and authentication mechanisms . 
+ Experience in designing, developing, and maintaining automation frameworks using the Page Object Model 
+(POM).  
+ Strong knowledge of Functional, Smoke, Sanity, Regression, Integratio n, System, End -to-End (E2E), 
+and User Acceptance Testing (UAT).  
+ Hands -on experience with BDD  using SpecFlow  and writing feature files and step definitions.  
+ Experience using  JIRA, Azure DevOps, Zephyr, Git/GitHub, Jenkins, and CI/CD  pipelines for defect 
+management, version control, and continuous testing.  
+ 
+Technical  Proficiency  
+ 
+ Programming Language : Java  
+ UI Automation : Selenium WebDriver, TestNG, JUnit, Cucumber BDD, SpecFlow  
+ API Testing : REST Assured, Postman, Swagger, REST API Testing, JSON, HTT P/HTTPS  
+ Test Management : Jira, Zephyr, Azure DevOps, TFS  
+ Version  Control : Git, GitHub, Bitbucket , Jenkins  
+ Database : SQL ( queries and validation ) 
+ IDE: Eclipse, IntelliJ IDEA, Visual Studio  
+ 
+ 
+Work Experience  
+  Organization:  QUALITEST   
+Client: Mercedes Benz  R&D   
+Duration:  Nov 2024  to Till  date 
+Tools  Used  :  Selen ium WebDriver, TestNG, Cucu mber BDD, Rest Assured, Postman , GitHu b, Azur e 
+DevOps (TFS), Jen kins, VS Code,  
+Testing  Approach  : Manual  and Automation.  
+Description:  Mercedes -Benz Data Collection Management System – An automotive platform designed to 
+collect, process, and manage diagnostic and operational data from multiple Electronic Control Units (ECUs), 
+enabling efficient vehicle monitoring, analysis, and backend integration.  
+
+ 
+ 
+ Roles  & Responsibilities:  
+ Designed and executed end -to-end automation test cases for the Mercedes -Benz Dat a Collection 
+Management platform, validating data acquisition from multiple ECUs.  
+ Automated API testing using Rest Assured and Postman to verify data exchange between vehicle ECUs 
+and backend services.  
+ Developed and maintained functional, regression, and i ntegration test suites using Selenium WebDriver, 
+Java, TestNG, and Cucumber BDD.  
+ Validated UI, API, and database interactions to ensure data integrity, system reliability, and seamless 
+end-to-end workflow  
+ 
+Organization:  TCS  
+Client:  CBA  
+Duration:  Nov 2021  to 2024  
+Tools  Used  :  Selenium  Web driver, Java,  SpecFlow, Visual  Studio, Post man, Git 
+Testing  Approach  : Manual  and Automation.  
+Description:  Comm See web Credit risk appli cation for Business Banking CCL Auto - Decisioning Credit 
+Bureau Information and re ports.  
+ 
+Roles  & Responsibilities:  
+ Performed Functional testing, Integration testing, and System testing  
+ Performed regression and E2E testing  
+ Play the role of test engineer: writing test script and executing automated tests script.  
+ Identify and report issues found, then verify  that issues are resolved.  
+ 
+Educatio n 
+Bachelor of Engineering (B.E.) – Informati on Science & Engineerin g 
+SDM Institute of Technology (SDMIT), Ujire  (Affiliated to VTU ) 
+Graduated:  2021  
+Personal Detail s 
+ Name:  Rekha U S  
+ Location:  Whitefield, Bengaluru, Karnataka  
+ Languages:  English, Kannada  
+ 
+ 

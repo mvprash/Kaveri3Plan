@@ -1,0 +1,203 @@
+Susamay Garai  
+Senior Consultant | PwC India (PricewaterhouseCoopers Services LLP)  
+Mob No: +91-9088782655  | Email: susamaygarai@hotmail.com  
+ 
+ 
+ 
+ 
+CAREER  OBJECTIVE  
+ 
+Aspiring cybersecurity professional with hands -on experience in penetration testing and vulne rability 
+assessment across application, mobile  (iOS and Android) , web service, and thick client platforms. Seeking 
+a challenging role in a forward -thinking organization where I can apply my technical expertise to identify 
+and mitigate security risks, contr ibute to robust defense strategies, and continuously evolve in the 
+dynamic landscape of information security. Committed to precision, ethical hacking practices, and 
+proactive problem -solving to safeguard digital assets and enhance organizational resilience . 
+ 
+PROFILE SUMMARY  
+ 
+ Over 13.5+ years  of comprehensive IT experience spanning Dynamic  Application Security  Testing 
+(DAST ), Network Security, Mobile Applications (iOS and Android), Web Services, and Thick Client 
+platforms.  
+ Web Applications: OWASP Top 10, business logic flaws, ses sion management, and input validation . 
+ Mobile Applications (iOS & Android): Static/dynamic analysis, reverse engineering, insecure data 
+storage, and API security . 
+ Web Services: SOAP, REST, authentication bypass, injection flaws, and misconfigurations  
+ Thick  Client Applications: Memory analysis, protocol fuzzing, DLL hijacking, and binary exploitation  
+ Led risk assessment initiatives to maintain alignment with corporate compliance requirements.  
+ Conducted comprehensive security assessments on host, network, and  web platforms utilizing various 
+automated testing tools.  
+ Led onsite security assessments emulating insider threats to strengthen organizational defenses 
+against internal compromise.  
+ Investigated hacker tactics, techniques, and procedures (TTPs), along wit h system -level exploits and 
+vulnerabilities, to strengthen defensive capabilities.  
+ Produced detailed anomaly reports highlighting application and network security gaps, with strategic 
+recommendations for mitigation.  
+ Strengthened organizational resilience b y incorporating security and compliance checks, supporting 
+continuous assurance and enhancing audit efficiency.  
+ Led the team to successfully deliver the project to the client within the agreed timeline.  
+ 
+EXPERIENCE SUMMARY  
+ 
+ Led penetration testing and vul nerability assessment projects as Senior Consultant at 
+PricewaterhouseCoopers Services LLP  from November 2019 to December 2025  
+ Worked as Security Test Engineer at ARC Document Solutions Pvt. Ltd.  from August 2017 to 
+November 2019  
+ Worked as Test Engineer at  STQC IT Services  under the Ministry of Electronics and Information 
+Technology (MeitY), Government of India, from February 2012 to June 2017  
+TECHNICAL SKILL SET 
+ 
+ Web Application Security Testing  with follow  by the standard s of OWASP Top 10  
+ Mobile Apps Secu rity Testing (iOS and Android)  
+ Penetration Testing   
+ Vulnerability Assessment  
+ Information Security Analyst . 
+ 
+TOOLS USED  FOR TESTING  
+ 
+ Web Application Security Testing  Tools: 
+Netsparker, IBM Security AppScan, Acunetix  
+ 
+ Penetration Testing Tools : 
+Nessus Vulne rability Scanner , Sqlmap,  Metasploit,  Nmap  (Network Mapper) , Wireshark, Nikto, 
+OpenVAS, Hping  
+ 
+ Mobile application Tools : 
+NowSecure, MobSF , Apktool , JAD, Android Virtual Device (AVD), Android Studio  
+ 
+ Web Proxy Tools:  
+Burp Suite , OWASP Zed Attack Proxy (ZAP) , Paros Proxy, Webscarab  
+ 
+ Operating System  (OS): 
+Kali Linux , CentOS, Red Hat, Ubuntu and Fedora , Windows  
+ 
+CERTIFICATION  
+ 
+ Certified Information Security Manager (CISM)  
+ Certified Information Systems Auditor (CISA)  
+ Certified Ethical Hacker (CEH)  
+ Certified Net work Defender (CND)  
+ ISO 27001:2013 - Certified Lead Auditor  
+ 
+PROJECT  SUMMARY  
+ 
+1: Project Summary: PwC Network Information Security (NIS) Project  
+ 
+Objective  
+The project aimed to identify, assess, and remediate security vulnerabilities within PwC’s internal  
+customer -facing web applications, thereby strengthening the firm’s overall security posture.  
+Scope & Methodology  
+ Conducted white -box, black -box, and gray -box penetration testing  across all internal 
+applications.  
+ Applied industry -standard frameworks includ ing OWASP Top 10, SANS 25, NIST guidelines , 
+and PwC’s internal security standards.  
+ Utilized automated scanning tools, complemented by manual exploitation techniques  for deeper 
+validation.  
+Key Findings  
+ Discovered vulnerabilities across Critical, High, Mediu m, and Low severity levels , including 
+issues such as SQL injection  and authentication bypass . 
+ Delivered proof -of-concept exploits  and detailed remediation steps  to facilitate effective 
+mitigation.  
+Impact  
+ Enabled PwC’s global internal applications to patch critical flaws before exploitation . 
+ Strengthened compliance readiness  for regulatory and internal standards.  
+ Enhanced customer trust  by significantly reducing the risk of data breaches.  
+Timeline  
+Each project was executed over four weeks, with the final rep ort delivered on schedule.  
+ 
+2: Project Summary: ARC Document Solutions All Products  
+ 
+Objective  
+The project aimed to identify, assess, and remediate security vulnerabilities across ARC’s product 
+ecosystem —including SKYSITE, PlanWell, ARC Abacus, Digital Sto refront, and ARC Print App —
+covering web applications, web services, mobile applications, and thick client platforms. The goal was to 
+strengthen ARC’s overall security posture and ensure resilience against evolving threats.  
+Scope & Methodology  
+ Conducted white-box, black -box, and gray -box penetration testing  across all application 
+types (Web, Mobile, API, and Thick Client).  
+ Applied industry -standard frameworks including OWASP Top 10, SANS 25 , and ARC’s internal 
+security standards.  
+ Utilized automated scanning tools, complemented by manual exploitation techniques  for deeper 
+validation and accuracy.  
+Key Findings  
+ Identified vulnerabilities across Critical, High, Medium, and Low severity levels . 
+ Delivered proof -of-concept exploits  and detailed remediation guidance  to facilitate effective 
+mitigation.  
+Impact  
+ Enabled ARC to proactively patch critical flaws  across its product suite before exploitation.  
+ Enhanced customer trust and confidence  by reducing the risk of data breaches across widely 
+used ARC products.  
+Timeline  
+Security assessments are conducted on a continuous basis , aligned with ARC’s ongoing product 
+development cycles, ensuring that vulnerabilities are identified and addressed in real time.  
+ 
+3: Project Summary: Central and State  Government Applications Securit y 
+ 
+Objective  
+The project aimed to identify, assess, and remediate security vulnerabilities across State and Central 
+Government applications  hosted on the NIC server, thereby strengthening the overall cybersecurity 
+posture of critical national systems.  
+Scop e & Methodology  
+ Conducted white -box and black -box penetration testing  across a wide range of government 
+applications.  
+ Applied industry -standard frameworks including OWASP Top 10, SANS 25 , and Indian 
+Government internal security standards . 
+ Utilized automate d scanning tools, complemented by manual exploitation techniques  for deeper 
+validation.  
+Key Projects Covered  
+The assessment encompassed a diverse portfolio of mission -critical applications, including but not limited 
+to: 
+ IRCTC (Indian Railway Catering and T ourism Corporation)  – e-Ticketing and Tourism 
+platforms  
+ UIDAI (Unique Identification Authority of India)  – Aadhaar systems  
+ Oriental Bank of Commerce Internet Banking  
+ All the Cooperative bank CSB application  
+ Passport Seva Data Center & Disaster Recovery Cen tre 
+ POSOCO (Power System Operation Corporation Limited)  
+ NCDEX e -Markets Ltd, MSTC Mining, CoalJunction  – National trading and auction systems  
+ Ministry of External Affairs  – Embassy and Consulate portals worldwide  
+ Integrated Financial Management Systems (IF MS) – Odisha, Jharkhand, West Bengal  
+ Kolkata Municipal Corporation, Kolkata Traffic Police, Howrah City Police  
+ Metro Railway Kolkata, Eastern Railway, Central Railway, North Eastern Railway  
+ Ministry of Earth Sciences (IMD, Positional Astronomy Centre)  
+ Health & Family Welfare Department, Govt. of West Bengal  
+ Make in India Portal, e -District Chhattisgarh, Tripura HRMS  
+ Numerous other State and Central government portals, financial systems, and public 
+service applications.  
+Key Findings  
+ Identified vulnerabilitie s across Critical, High, Medium, and Low severity levels . 
+ Delivered proof -of-concept exploits  and detailed remediation steps  to facilitate effective 
+mitigation.  
+Impact  
+ Enabled government agencies to patch critical flaws before exploitation , safeguarding 
+sensitive citizen and national data.  
+ Strengthened compliance readiness  with CERT -IN and internal government security standards.  
+ Enhanced public trust and confidence  in digital governance platforms by reducing the risk of 
+breaches.  
+Timeline  
+Each project was e xecuted over two weeks , with final reports delivered on schedule. Continuous 
+assessments were aligned with ongoing development cycles to ensure proactive security coverage.  
+Additional Note  
+During this tenure, I also appeared for the CERT -IN empanelment exa mination  on behalf of STQC and 
+achieved a score of over 90% , demonstrating strong expertise in national -level cybersecurity standards.  
+ 
+ 
+ 
+ACADEMIC QUALIFICATIONS  
+ 
+Academic  Board / University  Year of passing  Percentage/DGPA  
+Computer Science & Engineering 
+(B.Tech)  W.B.U.T.[AICT E. 
+Approved]  2011 7.48 
+Higher secondary  W.B.C.H.S.E.  2007 65% 
+Secondary  W.B.B.S.E.  2005 75% 
+ 
+ 
+Address  4/119 Seth Bagan Road, Dumdum, Kolkata -700030  
+Nationality  Indian.  
+ 
+ 
+ 
+ 
+  
+  PERSONAL DETAILS  

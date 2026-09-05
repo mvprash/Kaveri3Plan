@@ -1,0 +1,440 @@
+================================================================================
+Data_Migration_Specialist__Naukri_ANSHULPHULKE[7y_0m].txt
+KYNDRYL: False
+  [HINT] Salesforce
+  [HINT] ETL Systems
+  [HINT] Oracle
+  [HINT] Google
+  [HINT] and loading of records from legacy systems
+  [HINT] TekOptimize Software India Pvt Ltd
+  [HINT] Angel Broking Pvt Ltd
+
+================================================================================
+Data_Migration_Specialist__Naukri_ASHISHSAHOO[7y_0m].txt
+KYNDRYL: False
+  [CURRENTISH] Senior Data Engineer July 2024 - Present
+  [HINT] audit-ready data solutions
+  [HINT] Oracle
+  [HINT] Microsoft
+  [HINT] data warehousing solutions
+  [HINT] enterprise-scale regulatory reporting systems
+  [HINT] reporting teams to deliver solutions
+  [HINT] Infosys
+  [HINT] legacy on-prem SSIS solutions
+  [HINT] datasets for downstream systems
+
+================================================================================
+Data_Migration_Specialist__Naukri_MadhanMohanS[12y_0m].txt
+KYNDRYL: False
+  [CURRENTISH] Present Address
+  [HINT] Rakuten
+  [HINT] Worked as a Technical lead with Wipro Limited
+  [HINT] HCL
+  [HINT] as Senior  Consultant  in Future  Focus  Infotech
+  [HINT] Database  Administrator  in Lucida  Technologies
+  [HINT] Database  Administrator  in Appscore  Solutions
+  [HINT] Oracle
+  [HINT] OTHER  TECHNOLOGIES
+
+================================================================================
+Data_Migration_Specialist__Naukri_NoorussabaAsifAli[7y_0m].txt
+KYNDRYL: False
+  [CURRENTISH] Ernst & Young (EY) | Bangalore, India | Senior Data Engineer | Nov 2021 – Present
+  [CURRENTISH] UK Insurance Project - Senior Data Engineer/Data Modeler | Oct 2024 – Present
+  [HINT] revenue growth through data-driven solutions
+  [HINT] Microsoft
+  [HINT] Ernst & Young
+  [HINT] EY
+  [HINT] Modernized legacy systems
+  [HINT] Built enterprise ETL solutions
+  [HINT] Infosys
+  [HINT] Senior Systems
+  [HINT] top creditable customers using big data technologies
+  [HINT] increase through enhanced analytics solutions
+
+================================================================================
+Data_Migration_Specialist__Naukri_ShreyaRamakrishnaPandit[8y_0m].txt
+KYNDRYL: False
+  [CURRENTISH] IBM, India | Feb 2023 – Present
+  [CURRENTISH] Telco AT&T, USA | Apr 2023 – Present (Assignment History)
+  [HINT] ibm
+  [HINT] large -scale database systems
+  [HINT] Oracle
+  [HINT] Microsoft
+  [HINT] AT&T
+  [HINT] Senior Software
+  [HINT] Excelsoft Technologies
+  [HINT] Delivered high -impact database solutions
+
+================================================================================
+DBA__KrushnaDebashram_DatabaseSoutionArchitect_202608_1.txt
+KYNDRYL: False
+  [CURRENTISH]  Mar 2026 – Present | Database Architect |EpicMinds IT Pvt. Ltd.| Bengaluru,India
+  [HINT] and high -performance database solutions
+  [HINT] Microsoft
+  [HINT] Backup & Recovery Solutions
+  [HINT] Cloud Database Solutions
+  [HINT] Hybrid Disaster Recovery Solutions
+  [HINT] EpicMinds IT Pvt. Ltd
+  [HINT] ESDS
+  [HINT] Cygnet Infotech Pvt. Ltd
+  [HINT] Mapps IT Services Pvt. Ltd
+  [HINT] Kovair Software Pvt. Ltd
+  [HINT] InRhythm Solutions Pvt. Ltd
+  [HINT] IBM
+  [HINT] India Pvt. Ltd
+  [HINT] Senior Software
+  [HINT] NIIT Limited
+  [HINT] Sentinels Security Pvt. Ltd
+  [HINT] In EpicMinds Technologies
+  [HINT] In ESDS Software
+  [HINT] Oracle
+
+================================================================================
+DBA__SHRIKANT_BAMNE_RESUME-DBA-Aug_2026.txt
+KYNDRYL: False
+  [CURRENTISH] PostgreSQL DBA | Epic Minds | Mar 2026 – Present
+  [HINT] for delivering high -impact database solutions
+  [HINT] Epic Minds
+  [HINT] ESDS
+  [HINT] Software Solutions
+  [HINT] tuning for high -load transactional systems
+  [HINT] Oracle
+
+================================================================================
+Full_Stack_Developer__Binduraj_C_Resume_(1).txt
+KYNDRYL: False
+  [CURRENTISH] 11/2023 - Present
+  [HINT] Around 7 years of experience as a Software
+  [HINT] applications using Microsoft Technologies
+  [HINT] develop using new technologies
+  [HINT] Senior Engineer - Software
+  [HINT] SLK
+  [HINT] Software Pvt. Ltd
+  [HINT] Senior Software
+  [HINT] Canarys
+  [HINT] Automations Pvt. Ltd
+  [HINT] JOY Infotech Consulting Pvt Ltd
+  [HINT] Vagi Data systems
+  [HINT] Uttara InfoSolutions Pvt Ltd
+  [HINT] provides Computer hardware and software
+  [HINT] It is a Main Banking Software
+  [HINT] it is a web-based software
+
+================================================================================
+Full_Stack_Developer__Mahipal_Thakur.txt
+KYNDRYL: False
+  [CURRENTISH] Present
+  [HINT] Ecolab
+  [HINT] Microsoft
+
+================================================================================
+Full_Stack_Developer__Sameer_Kumar_Baral.txt
+KYNDRYL: False
+  [CURRENTISH] Brisa Technologies Pvt. Ltd. (Client - Viatris) | May 2024 - Present
+  [HINT] Oracle
+  [HINT] years of experience at Brisa Technologies
+  [HINT] business-driven solutions
+  [HINT] Senior Software
+  [HINT] Brisa
+  [HINT] Technologies Pvt. Ltd
+  [HINT] security vulnerabilities in AMS and EMS systems
+  [HINT] Senior Associate Software
+  [HINT] Anthology International Pvt. Ltd
+  [HINT] UMSM Technology Pvt. Ltd
+
+================================================================================
+Full_Stack_Developer__Swetha_Sri_TS.txt
+KYNDRYL: False
+  [CURRENTISH] BNP Paribas Oct 2024 - Present
+  [HINT] delivering secure and high-performance solutions
+
+================================================================================
+Full_Stack_Developer__Vijay_Bhaskar_Resume_Latest_2026.txt
+KYNDRYL: True
+  KY_HIT: , Tirupati GNIIT, from NIIT, Bangalore CAREER SUMMARY S.No. Company Designation Duration  1. Kyndryl Solutions Lead II, Application Architecture Sep 2021 – till date  2. IBM India Lead, Software
+  KY_HIT: RIENCE ============================================================================================ Kyndryl, Bangalore Sep 2021 – till date Project: University Management System Client: Jain Un
+  [CURRENTISH] Sep 2021 – till date
+  [CURRENTISH] Kyndryl, Bangalore Sep 2021 – till date
+  [HINT] Product Support & to deliver solutions
+  [HINT] Experience  in DotNet Technologies
+  [HINT] Kyndryl
+  [HINT] IBM
+  [HINT] Trianz Consulting
+  [HINT] Senior Software
+  [HINT] Pentasoft Technologies
+  [HINT] good exposure on concepts like Microsoft Technologies
+  [HINT] exposure on analyzing bugs and providing solutions
+  [HINT] training to the team members on multiple technologies
+
+================================================================================
+L2_Support_Engineer__Keerthana_K_Resume_(1).txt
+KYNDRYL: False
+  [CURRENTISH] Oct 2023 – Present
+  [HINT] Centre for Smart Governance
+  [HINT] CSG
+  [HINT] schema design for enterprise systems
+  [HINT] Associate Software
+
+================================================================================
+L2_Support_Engineer__Naukri_BSampurna[2y_8m].txt
+KYNDRYL: False
+  [CURRENTISH] May 2026 - Present
+  [HINT] Results-driven Software
+  [HINT] Software Engineer - My teknoland Software
+  [HINT] maintainable solutions
+  [HINT] Software Engineer - UNIFIED POINT TECH Pvt. Ltd
+  [HINT] Utilized technologies
+  [HINT] and Azure to deliver innovative solutions
+
+================================================================================
+L2_Support_Engineer__Naukri_GayatriSajjan[4y_0m].txt
+KYNDRYL: False
+  [HINT] Infosys
+  [HINT] expertise in creating innovative web solutions
+  [HINT] Cloud Technologies
+  [HINT] Frontend  Technologies
+  [HINT] scalable software solutions
+  [HINT] Proficient  in frontend  technologies
+  [HINT] Deep understanding of modern web technologies
+  [HINT] by implementing  innovative  frontend  solutions
+
+================================================================================
+L2_Support_Engineer__Naukri_satyabhama[1y_5m].txt
+KYNDRYL: False
+  [CURRENTISH] Ample Enterprise Technologies Pvt. Ltd. , Pune August 2025 – Present
+  [HINT] scalable software solutions
+  [HINT] Passionate about learning new technologies
+  [HINT] and contributing to innovative software
+  [HINT] Ample Enterprise Technologies Pvt. Ltd
+  [HINT] Developed modern UI systems
+  [HINT] Delivered frontend solutions
+  [HINT] scalable and production-ready frontend solutions
+  [HINT] VHU Technologies and Solutions Pvt. Ltd
+
+================================================================================
+L2_Support_Engineer__Priyanka_AcharResume.txt
+KYNDRYL: False
+  [CURRENTISH] Full Stack .NET Developer (Full-time) Mar 2026 – Present
+  [HINT] high-performance business solutions
+  [HINT] while adhering to clean coding and software
+  [HINT] Aspire Software
+  [HINT] Sasken Technologies
+  [HINT] Frameworks & Technologies
+  [HINT] technical issues and implement effective solutions
+  [HINT] in software
+
+================================================================================
+L2_Support_Engineer__Rohit_Laveti_CV.txt
+KYNDRYL: False
+  [HINT] Aspiring Software
+  [HINT] DevSkillZ   private Limited
+  [HINT] and secure login systems
+
+================================================================================
+L2_Support_Engineer__suraj_updated_5118.txt
+KYNDRYL: False
+  [HINT] Department of Sericulture
+  [HINT] Nila Mantek
+  [HINT] Avani Info-soft Pvt. Ltd
+  [HINT] Hardware & Software
+  [HINT] Java Software
+
+================================================================================
+Performance_and_Security_Test_Lead__Naukri_PranayKumbhare[7y_8m].docx.txt
+KYNDRYL: False
+  [CURRENTISH] RPA & Micr osoft Copilot: No direct production RPA implemen tation to date; strong automa tion-scrip ting founda tion
+  [CURRENTISH] Present
+  [HINT] Takeda
+
+================================================================================
+Performance_and_Security_Test_Lead__Naukri_SakshamKumar[10y_1m].docx.txt
+KYNDRYL: False
+  [CURRENTISH] Currently working as, a Test Lead in at Morgan Stanley, Bengaluru from Apr 2026 to till date.
+  [CURRENTISH] Current Project: Corporate Retirement Portal (Nov 2022 – Till Date) at Morgan Stanley Role: Test Lead Note: Earlier working as Consultant now as Full time employee. Testing Strategy: Service level Tes
+  [HINT] Morgan Stanley
+  [HINT] TCS
+  [HINT] Engineer in Testing at Integra Micro Software
+  [HINT] a Associate Test Engineer at Emids Technologies
+  [HINT] Operating Systems
+
+================================================================================
+Performance_and_Security_Test_Lead__Naukri_SayyadTouseefHussaini[8y_0m].txt
+KYNDRYL: False
+  [HINT] as a Senior Security Consultant at EMIDS TECHNOLOGIES
+  [HINT] Emids
+  [HINT] Technologies  Pvt Ltd
+  [HINT] PRIVATE LIMITED
+  [HINT] Veave Technologies Pvt Ltd
+  [HINT] Digital  Age Strategies Pvt Ltd
+  [HINT] TECHNOLOGIES  PRIVATE  LIMITED
+  [HINT] replacing multiple  legacy  systems
+  [HINT] PROTIVITI  INDIA  MEMBER  PRIVATE  LIMITED
+  [HINT] VEAVE  TECHNOLOGIES  PVT LTD
+
+================================================================================
+Security_Specialist__CURRICULAM_VITAE_Shiva_(1).txt
+KYNDRYL: False
+  [CURRENTISH] • SOC analyst as a L 3 from May 2022 to till in Nusummit cybersecurity Ltd.
+  [CURRENTISH] • Maintaining current knowledge and understanding of the threat
+  [HINT] IBM
+  [HINT] and Radware cloud DDOS solutions
+  [HINT] I worked with Cyberloop Pvt Ltd
+  [HINT] Organization  Nusummit  Cybersecurity Limited
+
+================================================================================
+Security_Specialist__Naukri_AkshayR[8y_0m].txt
+KYNDRYL: False
+  [CURRENTISH] IT Analyst – Cybersecurity Practitioner | Tata Consultancy Services (TCS) Sep 2024 – Present
+  [HINT] Google
+  [HINT] IBM
+  [HINT] Cloud & Systems
+  [HINT] Tata Consultancy
+  [HINT] TCS
+
+================================================================================
+Security_Specialist__Naukri_AwdheshGupta[7y_0m].txt
+KYNDRYL: False
+  [CURRENTISH] Present
+  [HINT] Amazon
+  [HINT] Aurionpro
+  [HINT] Sansad
+  [HINT] Panacea infosec Private Limited
+  [HINT] CyberQ Consulting private limited
+
+================================================================================
+Security_Specialist__Naukri_SusamayGarai[13y_0m].txt
+KYNDRYL: False
+  [HINT] PwC
+  [HINT] Security Test Engineer at ARC Document Solutions
+  [HINT] IBM
+  [HINT] Certified Information Systems
+  [HINT] ARC Document Solutions
+
+================================================================================
+Technical_Lead__Naukri_DhasarathanT[13y_0m].docx.txt
+KYNDRYL: False
+  [HINT] Cognizant
+  [HINT] Microsoft
+
+================================================================================
+Technical_Lead__Naukri_DilipKumarTriapathy[14y_0m].docx.txt
+KYNDRYL: False
+  [CURRENTISH] Present
+  [HINT] Infinite Computer Solutions
+  [HINT] Arctern Consulting
+  [HINT] CSM Technologies Pvt. Ltd
+
+================================================================================
+Technical_Lead__Naukri_JitendraNShukla[16y_0m].txt
+KYNDRYL: False
+  [CURRENTISH] Project Lead / Technical Project Manager, Trigun Infotech 11/2025 – Present
+  [HINT] Strong experience designing scalable solutions
+  [HINT] and cloud-based solutions
+  [HINT] Oracle
+  [HINT] years of experience in software
+  [HINT] Trigun
+  [HINT] Arcon
+  [HINT] Techsolutions
+  [HINT] Pegasus
+  [HINT] Infocorp Pvt. Ltd
+  [HINT] Geeta InfoTech Pvt. Ltd
+
+================================================================================
+Technical_Lead__Naukri_Milash[14y_0m].txt
+KYNDRYL: False
+  [CURRENTISH] Hexaware Technologies | Technical Architect | May 2024 - Present
+  [HINT] years of software
+  [HINT] EY
+  [HINT] AT&T
+  [HINT] DELL
+  [HINT] IQVIA
+  [HINT] Microsoft
+  [HINT] Azure Solutions
+  [HINT] Designing Microsoft Azure Infrastructure Solutions
+  [HINT] Developing Solutions
+  [HINT] Hexaware
+  [HINT] Successfully delivered software solutions
+  [HINT] Designed and implemented modular systems
+  [HINT] Amdocs
+  [HINT] Lead Software
+
+================================================================================
+Technical_Lead__Naukri_Vidyashree[10y_0m].txt
+KYNDRYL: False
+  [CURRENTISH] 01/2024 – Present • Client: Netgear
+  [HINT] Tech Mahindra
+  [HINT] Netgear
+  [HINT] Senior Software
+  [HINT] Wipro
+  [HINT] Sumeru Software Solutions
+  [HINT] PristineSoft s Pvt Ltd
+  [HINT] Associate Software
+  [HINT] Delta Informatics Pvt Ltd
+  [HINT] Sustained ASP.NET land -records systems
+
+================================================================================
+Technical_Lead__Profile_Template_new_GoK_Shravan_(1).txt
+KYNDRYL: True
+  KY_HIT: 1st Sep 2021 - To Present | 1st Sep 2021 - To Present | Employment Record: | Employer | Employer | Kyndryl India | Kyndryl India | Kyndryl India | Kyndryl India | Employment Record: | Position Held | Posit
+  [CURRENTISH] | Employment Record: | From/To | From/To | 1st Sep 2021 - To Present | 1st Sep 2021 - To Present | 1st Sep 2021 - To Present | 1st Sep 2021 - To Present
+  [HINT] KYNDRYL
+  [HINT] IBM
+  [HINT] India Pvt Ltd
+  [HINT] AT&T
+  [HINT] Oracle
+
+================================================================================
+Test_Engineer__B_Sirish_Kumar_Resume_6.txt
+KYNDRYL: False
+  [CURRENTISH] Wipro Limited Dec 2021 – Present
+  [CURRENTISH] Test Engineer Jan 2024 – Present
+  [HINT] Dedicated Software
+  [HINT] years of experience at Wipro Limited
+  [HINT] delivering high-quality testing solutions
+  [HINT] Wipro
+  [HINT] and account management systems
+  [HINT] online banking portals and back-office systems
+  [HINT] Oracle
+  [HINT] Sponsored by Wipro Limited
+
+================================================================================
+Test_Engineer__Bindhu_Bhargavi_Talasila.txt
+KYNDRYL: True
+  KY_HIT: ated with cross-functional teams in Agile sprints Software Engineer – SDET / Automation Engineer | Kyndryl Solutions Pvt Ltd, Hyderabad Nov 2021 – Oct 2023 ●Automated monitoring workflows across 3,000+ serv
+  [HINT] Kyndryl
+  [HINT] Solutions Pvt Ltd
+  [HINT] IBM
+  [HINT] DevOps and Software
+
+================================================================================
+Test_Engineer__Profile_Template_Rosen_Nath.txt
+KYNDRYL: True
+  KY_HIT: oper | Lead Developer | Lead Developer 1 | Name of Company: | Name of Company: | Name of Company: | Kyndryl Solution | Kyndryl Solution | Kyndryl Solution | Kyndryl Solution 2 | Designation of Staff: | Desig
+  KY_HIT: Present | June-2022 to Present | June-2022 to Present | Employment Record: | Employer | Employer | Kyndryl Solution | Kyndryl Solution | Kyndryl Solution | Kyndryl Solution | Employment Record: | Position
+  [CURRENTISH] | Employment Record: | From/To | From/To | June-2022 to Present | June-2022 to Present | June-2022 to Present | June-2022 to Present
+  [HINT] Microsoft
+  [HINT] AWS Solutions
+  [HINT] Kyndryl
+  [HINT] Laed Software
+  [HINT] Tech Mahindra
+  [HINT] Sr Software
+  [HINT] HCL
+  [HINT] Lead Software
+
+================================================================================
+Test_Engineer__REKHA_US_AUTOMATION_TESTING_4.5_YOE.txt
+KYNDRYL: False
+  [CURRENTISH] Duration: Nov 2024 to Till date
+  [HINT] of industry  experience  in the area of Software
+  [HINT] Strong knowledge of Software
+  [HINT] TCS
+
+================================================================================
+Test_Engineer__SrinivasMutalik_5yrs_SoftwareTesting.txt
+KYNDRYL: False
+  [HINT] Design & Execution  - Analyzed software
+  [HINT] ensure comprehensive test coverage and software
+  [HINT] Accenture
+  [HINT] Bengaluru as Junior Software
+

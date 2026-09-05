@@ -1,0 +1,66 @@
+SHREYA PANDIT  
+India | Phone: +91 -9980842146 | Email: Shreya.Pandit@ibm.com  
+PROFESSIONAL SUMMARY  
+Database specialist with 8+ years of IT industry experience in designing, developing, testing, and supporting 
+large -scale database systems. Proven expertise in database migration, performance optimization, and T -SQL 
+development across MSSQL, PostgreSQL, Or acle, and Teradata platforms. Strong background in Azure cloud 
+technologies, database administration, and enterprise -level project delivery. Exceptional problem -solving 
+capabilities with demonstrated ability to troubleshoot complex database issues.  
+TECHNIC AL SKILLS  
+Databases:  MSSQL, PostgreSQL, Oracle, Teradata, MongoDB, Microsoft Azure Synapse  
+Languages:  T-SQL, PL/SQL, Python, Shell Scripting, Bash  
+Tools & Platforms:  Azure Synapse, AWS Aurora, Ora2Pg, SSRS, Git, Jira, Oracle Enterprise Manager, 
+Query Sto re 
+Core Competencies:  Database Migration, Performance Tuning, Index Optimization, Schema Design, Data 
+Validation, Backup & Recovery, Security Management  
+ 
+PROFESSIONAL EXPERIENCE  
+Application Developer: RDBMS  
+IBM, India | Feb 2023 – Present  
+Orchestrated database migration from Teradata to Azure SQL Server, converting legacy database objects and 
+optimizing performance across multiple environments. Led performance tuning initiatives on Oracle and 
+PostgreSQL platforms, achieving significant quer y optimization improvements.  
+Key Achievements:  
+● Successfully migrated enterprise database from Teradata to Azure SQL Server; converted 100+ stored 
+procedures and database objects  
+● Optimized slow -running queries/stored procedures; improved performance by anal yzing execution 
+plans across MSSQL, PostgreSQL, and Oracle  
+● Designed and developed PostgreSQL objects for Oracle -to-PostgreSQL migration; implemented Azure 
+Synapse pipelines for data integration  
+● Managed database security; created roles, granted permissions,  and implemented access controls for 
+both SQL and non -SQL environments  
+Application Developer: RDBMS | Database Developer  
+Telco AT&T, USA | Apr 2023 – Present (Assignment History)  
+Led database development and migration initiatives across multiple enterprise  projects. Managed complex data 
+migrations, schema conversions, and performance optimization for mission -critical telecommunications 
+applications.  
+Projects & Contributions:  
+● GPM (Cogcore) & Nexxus Core: Managed end -to-end Oracle -to-PostgreSQL migration; bui lt Azure 
+Synapse pipelines; created roles and privileges management  
+● SAART Web: Led Teradata -to-Azure SQL Server migration; optimized complex queries and created 
+role-based access controls  
+Senior Software Engineer (Database) | Software Engineer (Database)  
+Excelsoft Technologies, India | Sep 2019 – Feb 2023  
+Delivered high -impact database solutions for enterprise learning management and e -learning platforms. 
+Specialized in database schema design, performance optimization, and cross -platform migrations for Pear son 
+and MyITLab projects.  
+Key Projects:  
+● Pearson Learning Services LMS: Executed MSSQL -to-PostgreSQL migration; created 50+ data fix 
+scripts; performed index analysis and partition optimization  
+● GradeIT Tools: Migrated MSSQL to AWS Aurora PostgreSQL; develop ed schema scripts; optimized 
+query performance and implemented index strategies  
+● FramerSpace (UNESCO -MGIEP): Designed MongoDB schemas; performed index analysis and 
+performance tuning for NodeJS API integration  
+EDUCATION  
+Bachelor of Engineering in Informatio n Science  
+B.V. Bhoomaraddi College of Engineering and Technology, Hubli, India (2017)  
+CERTIFICATIONS  
+Microsoft Certified: Azure Database Administrator Associate (2025)  
+Microsoft Certified: Azure Fundamentals (2025)  
+IBM Cloud Advocate Essentials (2025)  
+IBM watsonx Essentials (2024)  
+IBM Consulting Way Habits - Foundational (2023)  
+LANGUAGES  
+English (Fluent) | Hindi (Fluent) | Kannada (Fluent)  
+RECOGNITION  
+PAT ON THE BACK Award for outstanding commitment and contribution to project deliveries (2019, 2021)  

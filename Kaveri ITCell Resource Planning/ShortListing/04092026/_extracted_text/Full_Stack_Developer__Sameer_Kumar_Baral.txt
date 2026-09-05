@@ -1,0 +1,84 @@
+SAMEER KUMAR BARAL
+CONTACT
++91 7008143010
+kumarsameerbaral@gmail.com
+Bengaluru, India
+TECHNICAL SKILLS
+•  C#
+•  .NET Core (6, 7, 8, 9)
+•  .NET Framework (3.5, 4.8)
+•  ASP.NET Core Web API
+•  ASP.NET Core MVC
+•  Angular (16 - 19)
+•  JavaScript
+•  SQL Server
+•  Oracle 19C
+•  Entity Framework Core
+•  LINQ
+•  REST APIs
+•  Clean Architecture
+•  MediatR
+•  CQRS
+•  Agile / Scrum
+EDUCATION
+Bachelor of Computer Science 
+Engineering
+Nalanda Institute of Technology, BPUT
+2014 - 2018  |  CGPA: 6.91.NET Full-Stack Developer 
+.NET Full-Stack Developer  with 7+ years of experience at Brisa Technologies  
+(Client - Viatris), Anthology, and UMSM Technology. Skilled in building 
+scalable web applications using C#, .NET Core/MVC, Angular, REST APIs, 
+and SQL Server. Experienced across SDLC, Scrum, clean architecture, and 
+problem-solving, focused on delivering high-quality, business-driven solutions.
+WORK EXPERIENCE
+Senior Software Developer
+Brisa Technologies Pvt. Ltd. (Client - Viatris)    |   May 2024 - Present
+●Led full-stack development  of enterprise applications using Angular 
+16+, .NET Core 7/9 and SQL Server.
+●Built CSM (Cloud Server Management) , enabling automated server 
+up/down control, and independently developed the complete EMS 
+application end-to-end; contributed to AMS and V-Coach, improving 
+workflow automation.
+●Implemented Clean Architecture, MediatR , reusable components 
+and high-performance REST APIs within Scrum teams.
+●Resolved security vulnerabilities in AMS and EMS systems, 
+improving system stability.
+Senior Associate Software Developer
+Anthology International Pvt. Ltd.    |   Nov 2021 - Apr 2024
+●Developed REST APIs, MVC applications, and Angular modules for 
+Connect - University Management Platform .
+●Designed CRUD features, stored procedures and optimised database 
+performance using Oracle 19C, LINQ and C#.
+●Integrated multi-system data exchange through REST services and 
+contributed to Agile ceremonies.
+Software Programmer
+UMSM Technology Pvt. Ltd.    |   Feb 2019 - Mar 2021
+●Developed business applications using ASP.NET Core, MVC, Entity 
+Framework, and SQL Server across healthcare domains.
+●Built hospital and pharmacy management modules  improving 
+operational efficiency and data accuracy.
+●Implemented CRUD operations, LINQ queries, and layered 
+architecture while collaborating with cross-functional stakeholders.
+PROJECTS
+CSM, EMS, AMS & V-Coach Platform
+●Built CSM (Cloud Server Management) , enabling automated server 
+up/down operations for infrastructure control and uptime 
+management.
+●Independently developed the complete EMS application end-to-end, 
+from design through deployment.
+●Fixed security vulnerabilities in AMS and EMS, improving stability 
+and compliance.
+●Built real-time, scalable workflows using Clean Architecture and 
+MediatR patterns.
+Angular 16+, .NET Core 7/9, C#, EF Core, SQL Server, MediatR, Agile/Scrum
+Connect - University Management Platform
+●Developed REST APIs, Angular modules and MVC apps enhancing 
+student and admin operations.
+●Optimised database performance with stored procedures and Oracle 
+19C.
+●Integrated multi-system data exchange via REST services.
+ASP.NET Core, Angular, C#, Oracle 19C, LINQ, REST APIs, Agile/Scrum
+Hospital & Pharmacy Management System
+●Built hospital and pharmacy management modules for healthcare 
+domain clients.
+ASP.NET Core, MVC, Entity Framework, SQL Server

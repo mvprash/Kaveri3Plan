@@ -1,0 +1,266 @@
+CURRICULAM  VITAE  
+ 
+ 
+Mancherla Shivaprasad 
+Contact: +91-8309259171  
+Email: mancherlashivaprasad8@gmail.com  
+ 
+Professional  Exposure:   
+ 
+➢ Having a total of  9.3 years of experience in Security Operational Centre (SOC) and Skilled 
+primarily in Threat  hunting, Incident Response, Threat Intelligence, Investigation and 
+admin engineering activities.  
+➢ Expert in SIEM platforms (RSA NetWitness, QRadar) rule tuning, alert triage, log analysis, 
+use case development , custom parser’s by using RSA LPT tool , integration  and 
+dashboard optimization.  
+➢ Integration to the new ly onboard  appliances to the SIEM so lution, and physically 
+maintain ing the SIEM serve rs in the Data  Center.  
+➢ Conducted advanced threat hunting aligned with MITRE ATT&CK and Diamond Models, 
+identifying stealthy APT activity and unknown IOCs.  
+➢ Investigated and responded to 20+ high -severity security incidents weekly, including 
+malware, phishing, spoofing, and ransomware and SQL injection attacks.  
+➢ Led SOC operations and incident response lifecycle, from detection to containment, 
+escalation, documentation, and recovery.  
+➢ Integrated threat intelligence with detection strategy; tracked threat actors using TTPs 
+and contributed to threat intel repositories.  
+➢ Designed and deployed custom correlation rules in ESA to improve detection accuracy 
+and minimize false positives.  
+➢ Managed SOC tool maintenance, licensing, health monitoring, and collaboration with 
+OEMs for engineering -level troubleshooting.  
+➢ Developed and delivered daily, fortnightly, and monthly reports with threat trend 
+insights and proactive recommendations.  
+➢ Mentored Level L1 and L2 SOC analysts  conducted knowledge -sharing sessions and 
+created escalation frameworks and incident templates.  
+➢ Developed and Execute hypothesis -driven threat hunts, analyzed logs across layers 
+(network, system, application, registry, packet) for anomaly detection.  
+➢ Supported change management and incident communications across cross -functional 
+teams.  
+➢ Participated in SOC coordination calls, incident reviews and liaised with leadership to 
+align response priorities with business goals.  
+➢ Development of Use cases design  and fine tuning , reports analysis and further 
+enhancement . 
+➢ Proactively reviewing and operationalizing threat intelligence to create alerting to 
+
+detect techniques, tactics, and procedures employed by threat actors . 
+➢ Quick Learner and Flexible to adapt  to challenging environments/technologies and 
+Excellent Communication & Coordination Skills.  
+➢ Team and shifts as per shift roster and working in 24*7 rotational shifts.  
+ 
+Educational  Details:   
+ 
+Bachelor of Technology from Khammam institute of technology and sciences - JNTU 
+Hyderabad University in the year 2016  
+Technical  Skills:   
+ 
+• Technology/Skills:  Log analysis, Packet analysis, Incident Respo nse, malware analysis,  
+Phishing  analysis , UEBA, S OAR , Log parser tool, Endpoint Detection and responses, 
+DDOS  traffic analysis , cloud application -based analysis.  
+• Tools : RSA Netwitness SIEM, IBM Qradar, Sysdig, SOAR, EDR, UEBA , Arbor (DDOS), Airtel 
+and Radware cloud DDOS solutions.  
+• Ticketing Tools : Zammad, Midpoint, Control Portal, Sailcat, ServiceNow  
+ 
+ 
+Certifications:   
+ 
+• CEH - Certified Ethical Hacker (EC Council)  
+• RSA Netwitness  
+ 
+Professional  Work  Experience:   
+ 
+• I worked with Cyberloop Pvt Ltd  as SOC analyst - L1 & L2 from March  2017 to 2022.  
+• SOC analyst as a L 3 from May 2022 to till in Nusummit  cybersecurity Ltd.  
+ 
+ 
+Work  Experience:   
+ 
+SOC Analyst  – L2 
+Organization  Nusummit  Cybersecurity Limited  Duration  May 2022 to 2026  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Project 
+Description  • Monitor live network traffic using RSA NetWitness and other advanced 
+SIEM tools to detect and analyze anomalous security behavior.  
+• Investigate suspicious activities and potential breaches using threat 
+intelligence frameworks, including techniques for anonymous threat 
+actor tracking.  
+• Advanced threat hunting aligned with MITRE ATT&CK and Diamond 
+Models, identifying stealthy APT activity and unknown IOCs.  
+• Develop and implement use cases for SOC and SIEM workflows, 
+contributing to both global and local security repositories.  
+• Maintain physical SIEM infrastructure in the data center, ensuring high 
+availability and optimal performance of hardware components.  
+• Fine -tune correlation rules and alerts to reduce false positives, thereby 
+increasing SOC efficiency and incident accuracy.  
+• Create and deploy customized rules, dashboards  and visualizations to 
+enhance threat visibility and response readiness.  
+• Execute rapid incident response protocols during threat events, 
+containing threats and minimizing operational disruption and data 
+exfiltration.  
+• Translate complex technical findings into business -focused insights for 
+executive leadership, securing support and investment for key security 
+initiatives.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Role & 
+Contribution   
+• Monitored networks, systems, and applications using RSA NetWitness 
+SIEM, conducting in -depth log analysis to detect anomalies and investigate 
+potential security breaches.  
+• Utilized threat intelligence methodologies to investigate suspicious 
+activities, including tracking of anonymous threat actors and potential 
+compromise indicators.  
+• Developed and deployed custom correlation rules in ESA to enhance 
+threat detection accuracy and performed fine -tuning of detection rules to 
+reduce false positives and improve alert accuracy, thereby enhancing SOC 
+efficiency.  
+• Proactively conducted advanced threat hunting aligned with the MITRE 
+ATT&CK Framework, identifying previously undetected APT activities and 
+IOCs.  
+• Developed use cases for SIEM operations  contributed to the 
+maintenance and enhancement of global and local threat intelligence 
+repositories.  
+• Designed, implemented, and deployed custom detection rules and 
+dashboards to support proactive threat monitoring and visualization.  
+• Investigated 20+ high and critical severity alerts weekly, ensuring timely 
+triage, containment, and escalation.  
+• Participat ing in weekly SOC coordination calls and collaborated closely 
+with SOC vendors (OEMs) to streamline incident workflows.  
+• Developed and Execute hypothesis -based  threat hunts using structured, 
+unstructured, and situational methods to uncover undetected threats.  
+• Monitored a broad spectrum of logs application, packets , system, 
+registry, and network identifying, escalating, and documenting anomalies.  
+• Applied the Diamond Model to assess threat actors targeting South Asia 
+and implement  countermeasures via the threat intelligence platform.  
+• Created detailed incident reports and threat hunting documentation, 
+including IOCs, CVEs, and global security advisories.  
+• Published weekly, fortnightly and monthly threat hunting reports 
+summarizing findings, techniques used, and remediation actions.  
+• Maintained and updated threat hunting trackers and knowledge bases 
+to ensure repeatability and documentation of best practices.  
+• Shared threat intelligence and learnings across internal Threat Hunting 
+teams to promote collective growth and improved response readiness.  
+• Created new incident templates and use cases, setting a reference 
+framework for future team escalations and response playbooks.  
+• Maintained physical SIEM server infrastructure within data center 
+environments, ensuring operational continuity and optimal system 
+performance, Including participating in lift -and-shift activities.  
+• Provided technical support on engineering -related issues in 
+collaboration with OEMs, ensuring minimal system downtime.  
+• Gained hands  on experience integrating various devices with RSA 
+NetWitness SIEM for enhanced visibility and event collection.  
+• Executed rapid incident response protocols during cyber incidents, 
+containing ransomware threats and minimizing data leakage and 
+operational downtime.  
+•  Acted as a strategic liaison between technical teams and executive 
+leadership, translating complex cybersecurity intelligence into clear, 
+actionable insights that informed business decisions, optimized resource 
+allocation, and prioritized critical security  initiatives.  
+ 
+ 
+SOC Analyst L1 & L2  
+Organization  Cyberloop Pvt Ltd Duration  Mar 2017  to 2022  
+ 
+ 
+ 
+ 
+ 
+ 
+Project 
+Description   
+• The main goal of this project is to deliver SOC Deployments, Monitoring, 
+Alerting, Incident Response, Reporting and IOC and incident handling. 
+plans to deploy SOC environments in client location using IBM QRadar.  
+• Security technologies, including SIEM, IDS/IPS, firewalls, endpoint 
+security, content filtering, and packet inspection.  
+• Preparation and dissemination of daily, fortnightly, and monthly 
+reports, along with the creation and distribution of aggressive monitoring 
+reports.  
+• Handling Spear Phishing Attacks and ensuring Spam Management 
+within SLA.  
+• User entity behavior and anomalies analysis within the organization.  
+• Creating Use -causes for SOC & SIEM Operations and Global & local 
+repositories.  
+• Investigate and create cases for security  threats while performing initial 
+triage and escalate for further investigation and mitigation.  
+• Monitoring live traffic using SIEM tool IBM Qradar.  
+• Monitoring Authentication, bypass login mechanisms, 2 -factor 
+Authentications.  
+• Monitoring of SOC events, detecting and preventing the Intrusion 
+attempts.  
+• Investigate malicious traffic from blocked countries and Suspicious IPs. 
+• Using Threat Intelligence techniques to investigate suspicious events 
+and Anonymous tracking.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Role & 
+Contribution   
+• Monitoring all security alerts, Review the alerts and handle them as per 
+the process. This involves working with different groups and ensuring that 
+all the alerts are closed in a timely manner. Also contributes to the process 
+improvements via QRadar.  
+• Doing incident analysis in detail and solution mapping with knowledge 
+base.  
+• Ensuring quality call handling and call escalation adhering to SLA.  
+• Responsible for SOC tool's monitoring, maintenance and licenses 
+management.  
+• Development of Use cases design, reports analysis and further 
+enhancement  
+• Proactively reviewing and operationalizing threat intelligence to create 
+alerting to detect techniques, tactics, and procedures employed by threat 
+actors.  
+• Responsible for Incident management and changing  management 
+process handling.  
+• Collecting the logs of all the network devices and analysis  the logs to find 
+the suspicious activities.  
+• Regular compilation and proactive sharing aggressive monitoring 
+reports and daily , fortnightly and monthly reports as well as targeted 
+monitoring updates.  
+• Maintaining current knowledge and understanding of the threat 
+landscape and emerging security threats.  
+• Responsible for Handling and mitigating attacks related to Malware, 
+Viruses, Spoofing, Phishing, Spam and Email Monitoring.  
+• Well versed Understanding of common network services (web, mail, 
+FTP, etc.), network vulnerabilities, and network attack patterns.  
+• Analysis of malicious attacks, incidents, vulnerabilities, Fraud Detection.  
+• Sharing knowledge and providing training to Level 1 . 
+• Creating case for the suspicious issue and forwarding it to Onsite SOC 
+team for further investigation.  
+• Experience in performing log analysis and analyzing the critical alerts 
+from a security approach.  
+• Follow Cyber Kill Chain Model to detect and react to Security Incidents.  
+• Ad-hoc reports as and when what client requires, monitoring its health 
+etc. 
+• Tracking, reporting, and controlling incident communications with other 
+teams.  
+ 
+Personal  Profile:   
+Name  : Mancherla Shiva Prasad  
+Date of Birth  : 26-06-1994  
+Languages Known  : English,  Hindi , Telugu  
+ 
+Declaration:   
+ 
+I hereby declare that all the above information put by me is true to the best of my 
+knowledge.  
+ 
+Date:  
+Place: Bengaluru  (Mancherla Shiva)  

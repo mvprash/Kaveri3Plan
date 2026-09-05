@@ -1,0 +1,58 @@
+B SIRISH KUMAR
+Senior Test Engineer
+shirishkumarbh51@gmail.com | +91 81436 41746 | Bengaluru, Karnataka, India
+PROFESSIONAL SUMMARY
+
+Dedicated Software Test Engineer with 4.5+ years of experience at Wipro Limited, delivering high-quality testing solutions for leading global banking clients — Lloyds Banking Group and Union Bank of Switzerland. Hands-on expertise in functional, regression, API, and automation testing within complex, regulated banking environments. Holds an MTech from BITS Pilani (completed under Wipro's WILP sponsorship program) and a BSc in Computer Science. Adept at collaborating with distributed Agile teams while upholding banking-grade quality and compliance standards.
+PROFESSIONAL EXPERIENCE
+
+Wipro Limited	Dec 2021 – Present
+Bengaluru, India  |  Global IT & Technology Services
+Test Engineer	Jan 2024 – Present
+Client: Union Bank of Switzerland (UBS)
+Execute end-to-end functional and regression testing for core banking modules including trade finance, payments processing, and account management systems.
+Design and maintain test cases aligned with UBS compliance and audit requirements, ensuring full traceability from requirements through test evidence.
+Perform API testing using Postman and Rest Assured to validate microservices powering transaction processing and customer data workflows.
+Collaborate with business analysts and developers in Agile sprint ceremonies to review user stories, define acceptance criteria, and plan test coverage.
+Identify, log, and track defects in JIRA, producing detailed defect reports and coordinating with development teams for timely resolution before release.
+Support SIT and UAT phases by preparing test environments, coordinating with stakeholders, and producing test summary reports for sign-off.
+Apply risk-based testing strategies to prioritize high-value banking workflows, ensuring robust coverage within compressed release timelines.
+Test Engineer	Dec 2021 – Dec 2023
+Client: Lloyds Banking Group
+Delivered comprehensive manual and automated testing for retail and commercial banking applications including online banking portals and back-office systems.
+Built and maintained a Selenium-based automation framework using Java and TestNG, achieving 70%+ automation coverage and reducing regression cycle time by 50%.
+Conducted API testing using Postman to validate RESTful services for account enquiry, payment initiation, and beneficiary management modules.
+Performed database validation using SQL queries on Oracle and SQL Server to verify data integrity across upstream and downstream system integrations.
+Executed cross-browser and cross-device testing on mobile banking applications, ensuring consistent UX across iOS and Android platforms.
+Participated in daily stand-ups, sprint reviews, and retrospectives within a distributed Agile team spanning India and the UK.
+Prepared test artefacts including test plans, test cases, Requirements Traceability Matrix (RTM), and test closure reports for internal and client audits.
+EDUCATION
+
+Master of Technology (MTech) — Computer Science	2022 – 2025
+BITS Pilani (Birla Institute of Technology and Science)
+Completed under Wipro WILP (Work Integrated Learning Program) — Sponsored by Wipro Limited
+Pursued alongside full-time employment at Wipro, combining academic rigor with industry application.
+Bachelor of Science (BSc) — Computer Science	2018 – 2021
+Government Degree College, Anantapur
+Affiliated to Sri Krishnadevaraya University, Anantapur, Andhra Pradesh
+TECHNICAL SKILLS
+
+CERTIFICATIONS
+
+KEY ACHIEVEMENTS
+
+Delivered zero-defect releases across 3 consecutive major UBS banking platform upgrades through a comprehensive risk-based test strategy.
+Reduced regression test cycle time by 50% at Lloyds Banking Group by building and maintaining an automated Selenium + TestNG suite covering 700+ test cases.
+Successfully completed MTech at BITS Pilani under Wipro's WILP sponsorship program while simultaneously delivering full-time client engagements.
+Maintained 100% on-time test deliverables across multiple Agile sprints at both client engagements, with no missed release deadlines attributable to QA.
+Test Automation | Selenium WebDriver, TestNG, JUnit, Appium, Cucumber (BDD)
+Programming | Java, SQL, Basic Python,
+API Testing | Postman, Rest Assured, SoapUI
+CI/CD & DevOps | Jenkins, GitHub Actions, Git, Maven
+Test Management | JIRA, Confluence, TestRail, Zephyr, RTM
+Databases | Oracle SQL, SQL Server, MySQL, PostgreSQL
+Domain | Retail Banking, Commercial Banking, Trade Finance, Payments, Core Banking
+Methodologies | Agile/Scrum, BDD, Risk-Based Testing, Shift-Left Testing
+Tools | Browser Stack, Sauce Labs, IntelliJ IDEA, Eclipse, VS Code
+Certification | Issuing Body | Year
+Selenium WebDriver with Java – Basics to Advanced | WIPRO | 2022

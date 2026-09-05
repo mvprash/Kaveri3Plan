@@ -1,0 +1,79 @@
+SWETHA SRI T S
++91 7871766565⋄Bangalore, Karnataka
+swethasri1707@gmail.com⋄https://www.linkedin.com/in/swetha-sri-suresh
+PROFILE SUMMARY
+Results-driven Full Stack .NET Developer with 5+ years of experience building scalable web and enterprise appli-
+cations for Financial Services and E-commerce, using C#, ASP.NET Core, Microservices, SQL Server/PostgreSQL,
+and Angular. Skilled in SOLID principles, design patterns, unit testing (XUnit, NUnit, Moq), and Azure Cloud,
+with a track record of optimizing performance, resolving production issues, and mentoring developers in Agile/Scrum
+teams.
+EDUCATION
+BE Computer Science and Engineering, SSN College of Engineering 2017 - 2021
+CGPA - 8.42
+SKILLS
+LanguagesC#, SQL, TypeScript, JavaScript, HTML5, CSS3, Python
+Frameworks & LibrariesASP.NET Core, ASP.NET MVC, Web API, Entity Framework, ADO.NET,
+Angular, RxJS, Bootstrap, jQuery
+ArchitectureMicroservices, RESTful APIs, SOLID Principles, Design Patterns
+DatabaseSQL Server, PostgreSQL, LINQ, Stored Procedures, SSIS, SSRS
+TestingNUnit, Moq, XUnit, Unit Testing, Test-Driven Development (TDD)
+Cloud & DevOpsAzure Cloud, Azure Service Bus, CI/CD, Jenkins, GIT, Bitbucket
+Tools & IDEsVisual Studio, VS Code
+MethodologiesAgile, Scrum, Sprint Planning
+Soft SkillsCommunication, Problem Solving, Analytical Thinking, Mentoring
+EXPERIENCE
+BNP Paribas Oct 2024 - Present
+Software Engineer
+•Developed and maintained business-critical financial web applications usingASP.NET MVC, C#, HTML,
+CSS, and jQuery, delivering secure and high-performance solutions for users.
+•Optimized SQL Server stored procedures and added targeted indexes on high-traffic tables, reducing average
+query execution time by30-40%and eliminating timeout errors on the reporting dashboard.
+•Built a.NET Corebackground service, hosted as a Windows Service on a configurable schedule, to automati-
+cally process files up to 2GB for parsing and staging data into SQL Server tables to generate a report, eliminating
+manual, on-demand processing that previously required users to trigger runs via UI button clicks.
+•Refactored legacy modules to followSOLID principlesandDependency Injection patterns, improving
+testability and enabling unit test coverage with XUnit and Moq.
+•Designed and developed an internal utility application usingAngular and Web APIthat communicates with
+SharePoint to identify unused files and clear storage, reducing SharePoint storage usage by 50% and eliminating
+5-6 hours of manual cleanup effort.
+•Integrated AI-assisted tools into daily development workflow to generate boilerplate, refactor legacy code, and
+accelerate feature delivery by20%, while maintaining code quality through peer review standards.
+•Built and maintained CI/CD pipelines in Jenkins to automate build, test, and deployment processes, streamlining
+release cycles and reducing manual deployment effort.
+•Mentored junior developerson .NET Core best practices and code review standards, reducing production
+defects from their code.
+•Worked in Agile/Scrum environments, actively participating in sprint planning, estimation, backlog refinement,
+and release activities.
+LTIMindtree Nov 2021 - Oct 2024
+Software Engineer
+•Developed new features for contract-processing web application using C#, ASP.NET Core,Microservices,
+supporting 5k daily active users processing1000 transactions per day.
+•Designed microservices following SOLID principles and Repository/Dependency Injection patterns, improving
+code modularity and reducing coupling between service layers.
+•Designed and optimized database schemas and queries inPostgreSQL, ensuring data integrity and efficient
+retrieval for high-volume transactions.
+•Built new Angular features using RxJS observables and REST API integrations to streamline data processing
+and improve UI responsiveness.
+•UtilizedAzure Cloudservices for application hosting and monitoring, supporting deployment pipelines and
+ensuring high availability of business-critical applications.
+•Built SSIS packages to extract, transform, and load data between SQL Server instances, automating a previously
+manual data migration/sync process.
+•Rewrote slow-running SQL queries flagged in production monitoring, cutting page load times on dashboard from
+1m to 20s.
+•Resolved 3-5 production defects per sprint through root cause analysis, reducing recurring incident tickets by
+20% over a month.
+•Collaborated with business analysts and QA teams to clarify requirements and validate features early, reducing
+rework and defects found post-development.
+LTIMindtree Aug 2021 - Nov 2021
+Graduate Engineer Trainee
+•Built an e-commerce web application end-to-end. Designed the SQL Server schema, developed REST APIs using
+ASP.NET Core Web API, and built the Angular front end with 5 components (product catalog, cart, checkout).
+•WroteLINQqueries and stored procedures to support product information retrieval, order history storage and
+inventory tracking.
+KEY ACHIEVEMENTS
+Rising Star Award - BNP ParibasAug 2025
+•Recognized for outstanding performance, consistent delivery, and high-quality contributions to project mile-
+stones.
+Shooting Star Award - LTIMindtreeJune 2024
+•Recognized for outstanding contributions as a team player, consistently supporting collaborative delivery and
+team success.

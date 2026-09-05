@@ -1,0 +1,88 @@
+Format for Biodata of personnel
+
+Certifications  : 
+
+
+I, Shravankumar M Airani the undersigned certify that:
+
+(i) to the best of my knowledge and belief, this bio data correctly describes me, my qualifications,
+and my experience.
+
+I understand that my willful misstatement described herein may lead to my disqualification or dismissal, if engaged.
+
+Name & Signature (Personnel)                                                                       Name & Signature (Authorised
+        Shravankumar M Airani                                                                                                    Representative)
+
+12-08-2026, Bengaluru
+Date and Place of signing                                                                                  Date and Place of signing
+
+Name | Name | Years of Exp | Years of Exp | Years of Exp | Proposed Position | Proposed Position | Proposed Position
+Shravankumar M Airani | Shravankumar M Airani | 24+ | 24+ | 24+ | Techonlogy Lead | Techonlogy Lead | Techonlogy Lead
+1 | Name of Company: | Name of Company: | Name of Company: | KYNDRYL INDIA Ltd. | KYNDRYL INDIA Ltd. | KYNDRYL INDIA Ltd. | KYNDRYL INDIA Ltd.
+2 | Designation of Staff: | Designation of Staff: | Designation of Staff: | Assiciate Director | Assiciate Director | Assiciate Director | Assiciate Director
+3 | Date of Birth: | 14-01-1975 | 14-01-1975 | Nationality: | Nationality: | Indian | Indian
+4 | Education:  | Education:  | Education:  | Education:  | Education:  | Education:  | Education: 
+  | S.No | Degree Obtained | Degree Obtained | Institution | Dates | Dates | Dates
+  | 1 | MBA | MBA | SMU | June 2021 | June 2021 | June 2021
+  | 2 | BE | BE | STJIT, Ranebennur | 2001 | 2001 | 2001
+ | 3.  |  |  |  |  |  | 
+5 | Membership of Professional Associations: | Membership of Professional Associations: | Membership of Professional Associations: |  |  |  | 
+6 | Other Training: | Other Training: | Other Training: |   |   |   |  
+7 | Countries of Work Experience: | Countries of Work Experience: | Countries of Work Experience: | India | India | India | India
+8 | Languages: | Language | Language | Speak | Read | Read | Write
+8 | Languages: | English | English | Yes | Yes | Yes | Yes
+8 | Languages: | Kannada | Kannada | Yes | Yes | Yes | Yes
+8 | Languages: | Hindi | Hindi | Yes | Yes | Yes | Yes
+ | Employment Record: | From/To | From/To | 1st Sep 2021 - To Present | 1st Sep 2021 - To Present | 1st Sep 2021 - To Present | 1st Sep 2021 - To Present
+ | Employment Record: | Employer | Employer | Kyndryl India | Kyndryl India | Kyndryl India | Kyndryl India
+ | Employment Record: | Position Held | Position Held | Associate Director | Associate Director | Associate Director | Associate Director
+ | Employment Record: | From/To | From/To | 1st April 2016 – 31st Aug 2021 | 1st April 2016 – 31st Aug 2021 | 1st April 2016 – 31st Aug 2021 | 1st April 2016 – 31st Aug 2021
+ | Employment Record: | Employer | Employer | IBM India Pvt Ltd | IBM India Pvt Ltd | IBM India Pvt Ltd | IBM India Pvt Ltd
+ | Employment Record: | Position Held | Position Held | Assistant Manager | Assistant Manager | Assistant Manager | Assistant Manager
+ | Employment Record: | From/To | From/To | Feb 2005 to Mar 2016 | Feb 2005 to Mar 2016 | Feb 2005 to Mar 2016 | Feb 2005 to Mar 2016
+ | Employment Record: | Employer | Employer | USI and AT&T GBS | USI and AT&T GBS | USI and AT&T GBS | USI and AT&T GBS
+ | Employment Record: | Position Held | Position Held | Team Lead | Team Lead | Team Lead | Team Lead
+10 |  | Project Management, Oracle Applications , Oracle Database, PostgreSQL , Solutioning , WebLogic, WebSphere, IIS, Developer tools ,  API,OCI,  Azure, Sharepoint,Java, Agile, People management  | Project Management, Oracle Applications , Oracle Database, PostgreSQL , Solutioning , WebLogic, WebSphere, IIS, Developer tools ,  API,OCI,  Azure, Sharepoint,Java, Agile, People management  | Project Management, Oracle Applications , Oracle Database, PostgreSQL , Solutioning , WebLogic, WebSphere, IIS, Developer tools ,  API,OCI,  Azure, Sharepoint,Java, Agile, People management  | Project Management, Oracle Applications , Oracle Database, PostgreSQL , Solutioning , WebLogic, WebSphere, IIS, Developer tools ,  API,OCI,  Azure, Sharepoint,Java, Agile, People management  | Project Management, Oracle Applications , Oracle Database, PostgreSQL , Solutioning , WebLogic, WebSphere, IIS, Developer tools ,  API,OCI,  Azure, Sharepoint,Java, Agile, People management  | Project Management, Oracle Applications , Oracle Database, PostgreSQL , Solutioning , WebLogic, WebSphere, IIS, Developer tools ,  API,OCI,  Azure, Sharepoint,Java, Agile, People management 
+10 | Skills | Project Management, Oracle Applications , Oracle Database, PostgreSQL , Solutioning , WebLogic, WebSphere, IIS, Developer tools ,  API,OCI,  Azure, Sharepoint,Java, Agile, People management  | Project Management, Oracle Applications , Oracle Database, PostgreSQL , Solutioning , WebLogic, WebSphere, IIS, Developer tools ,  API,OCI,  Azure, Sharepoint,Java, Agile, People management  | Project Management, Oracle Applications , Oracle Database, PostgreSQL , Solutioning , WebLogic, WebSphere, IIS, Developer tools ,  API,OCI,  Azure, Sharepoint,Java, Agile, People management  | Project Management, Oracle Applications , Oracle Database, PostgreSQL , Solutioning , WebLogic, WebSphere, IIS, Developer tools ,  API,OCI,  Azure, Sharepoint,Java, Agile, People management  | Project Management, Oracle Applications , Oracle Database, PostgreSQL , Solutioning , WebLogic, WebSphere, IIS, Developer tools ,  API,OCI,  Azure, Sharepoint,Java, Agile, People management  | Project Management, Oracle Applications , Oracle Database, PostgreSQL , Solutioning , WebLogic, WebSphere, IIS, Developer tools ,  API,OCI,  Azure, Sharepoint,Java, Agile, People management 
+11 | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+ | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+ | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+ | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+ | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+ | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+ | Work Undertaken that Best Illustrates Capabilities to Handle the Tasks Assigned:
+
+11 | Name of assignments or projects: | Name of assignments or projects: | Technical lead | Technical lead | Technical lead | Technical lead | Technical lead
+11 | Year: | Year: | 2025 | 2025 | 2025 | 2025 | 2025
+11 | Location: | Location: | Bidadi / Bengaluru | Bidadi / Bengaluru | Bidadi / Bengaluru | Bidadi / Bengaluru | Bidadi / Bengaluru
+11 | Client: | Client: | Toyota Kirloskar Motors | Toyota Kirloskar Motors | Toyota Kirloskar Motors | Toyota Kirloskar Motors | Toyota Kirloskar Motors
+11 | Main project features: | Main project features: | Migration of database and application | Migration of database and application | Migration of database and application | Migration of database and application | Migration of database and application
+11 | Positions held: | Positions held: | Technical lead | Technical lead | Technical lead | Technical lead | Technical lead
+11 | Activities performed: | Activities performed: | Led the database migration initiative, upgrading the EJB-based application to ensure seamless connectivity, compatibility, and optimal performance on the new database platform. Provided critical support for Crystal Reports migration, including report rewrites, validation, and deployment to ensure continuity of business reporting.
+ | Led the database migration initiative, upgrading the EJB-based application to ensure seamless connectivity, compatibility, and optimal performance on the new database platform. Provided critical support for Crystal Reports migration, including report rewrites, validation, and deployment to ensure continuity of business reporting.
+ | Led the database migration initiative, upgrading the EJB-based application to ensure seamless connectivity, compatibility, and optimal performance on the new database platform. Provided critical support for Crystal Reports migration, including report rewrites, validation, and deployment to ensure continuity of business reporting.
+ | Led the database migration initiative, upgrading the EJB-based application to ensure seamless connectivity, compatibility, and optimal performance on the new database platform. Provided critical support for Crystal Reports migration, including report rewrites, validation, and deployment to ensure continuity of business reporting.
+ | Led the database migration initiative, upgrading the EJB-based application to ensure seamless connectivity, compatibility, and optimal performance on the new database platform. Provided critical support for Crystal Reports migration, including report rewrites, validation, and deployment to ensure continuity of business reporting.
+
+11 | Name of assignments or projects: | Name of assignments or projects: | Program Manager | Program Manager | Program Manager | Program Manager | Program Manager
+11 | Year: | Year: | 2024 | 2024 | 2024 | 2024 | 2024
+11 | Location: | Location: | Bengaluru | Bengaluru | Bengaluru | Bengaluru | Bengaluru
+11 | Client: | Client: | Canara Bank | Canara Bank | Canara Bank | Canara Bank | Canara Bank
+11 | Main project features: | Main project features: | Canara Bank - database technologies, application management, people leadership, and deployment governance.  | Canara Bank - database technologies, application management, people leadership, and deployment governance.  | Canara Bank - database technologies, application management, people leadership, and deployment governance.  | Canara Bank - database technologies, application management, people leadership, and deployment governance.  | Canara Bank - database technologies, application management, people leadership, and deployment governance. 
+11 | Positions held: | Positions held: | Program Manager | Program Manager | Program Manager | Program Manager | Program Manager
+11 | Activities performed: | Activities performed: | Led delivery and operational excellence across database and application platforms, combining expertise in application development, application management, deployment governance, and people leadership to drive reliable business outcomes. | Led delivery and operational excellence across database and application platforms, combining expertise in application development, application management, deployment governance, and people leadership to drive reliable business outcomes. | Led delivery and operational excellence across database and application platforms, combining expertise in application development, application management, deployment governance, and people leadership to drive reliable business outcomes. | Led delivery and operational excellence across database and application platforms, combining expertise in application development, application management, deployment governance, and people leadership to drive reliable business outcomes. | Led delivery and operational excellence across database and application platforms, combining expertise in application development, application management, deployment governance, and people leadership to drive reliable business outcomes.
+11 | Name of assignments or projects: | Name of assignments or projects: | Migration | Migration | Migration | Migration | Migration
+11 | Year: | Year: | 2016-2021 | 2016-2021 | 2016-2021 | 2016-2021 | 2016-2021
+11 | Location: | Location: | Bengaluru | Bengaluru | Bengaluru | Bengaluru | Bengaluru
+11 | Client: | Client: | Multiple Clients | Multiple Clients | Multiple Clients | Multiple Clients | Multiple Clients
+11 | Main project features: | Main project features: | Application upgrade, db upgrades,  | Application upgrade, db upgrades,  | Application upgrade, db upgrades,  | Application upgrade, db upgrades,  | Application upgrade, db upgrades, 
+11 | Positions held: | Positions held: | Delivery Manager | Delivery Manager | Delivery Manager | Delivery Manager | Delivery Manager
+ | Activities performed: | Activities performed: | Managed application development and support activities alongside application version upgrades and database migrations, ensuring thorough impact analysis, compatibility validation, performance testing, and seamless production deployments. Drove resource planning, project execution, and timely delivery of strategic initiatives while maintaining high operational standards. | Managed application development and support activities alongside application version upgrades and database migrations, ensuring thorough impact analysis, compatibility validation, performance testing, and seamless production deployments. Drove resource planning, project execution, and timely delivery of strategic initiatives while maintaining high operational standards. | Managed application development and support activities alongside application version upgrades and database migrations, ensuring thorough impact analysis, compatibility validation, performance testing, and seamless production deployments. Drove resource planning, project execution, and timely delivery of strategic initiatives while maintaining high operational standards. | Managed application development and support activities alongside application version upgrades and database migrations, ensuring thorough impact analysis, compatibility validation, performance testing, and seamless production deployments. Drove resource planning, project execution, and timely delivery of strategic initiatives while maintaining high operational standards. | Managed application development and support activities alongside application version upgrades and database migrations, ensuring thorough impact analysis, compatibility validation, performance testing, and seamless production deployments. Drove resource planning, project execution, and timely delivery of strategic initiatives while maintaining high operational standards.
+ | Name of assignments or projects: | Name of assignments or projects: | Project  | Project  | Project  | Project  | Project 
+ | Year: | Year: | 2005-2016 | 2005-2016 | 2005-2016 | 2005-2016 | 2005-2016
+ | Location: | Location: | Bengaluru | Bengaluru | Bengaluru | Bengaluru | Bengaluru
+ | Client: | Client: | AT&T – Multiple customers | AT&T – Multiple customers | AT&T – Multiple customers | AT&T – Multiple customers | AT&T – Multiple customers
+ | Main project features: | Main project features: | DB and Application upgrade | DB and Application upgrade | DB and Application upgrade | DB and Application upgrade | DB and Application upgrade
+ | Positions held: | Positions held: | Team Lead | Team Lead | Team Lead | Team Lead | Team Lead
+ | Activities performed: | Activities performed: | Managed application development, support, version upgrades, and database migration projects, ensuring thorough impact analysis, testing, deployment readiness, and seamless production releases. Also drove resource planning, project governance, and successful delivery of strategic initiatives. | Managed application development, support, version upgrades, and database migration projects, ensuring thorough impact analysis, testing, deployment readiness, and seamless production releases. Also drove resource planning, project governance, and successful delivery of strategic initiatives. | Managed application development, support, version upgrades, and database migration projects, ensuring thorough impact analysis, testing, deployment readiness, and seamless production releases. Also drove resource planning, project governance, and successful delivery of strategic initiatives. | Managed application development, support, version upgrades, and database migration projects, ensuring thorough impact analysis, testing, deployment readiness, and seamless production releases. Also drove resource planning, project governance, and successful delivery of strategic initiatives. | Managed application development, support, version upgrades, and database migration projects, ensuring thorough impact analysis, testing, deployment readiness, and seamless production releases. Also drove resource planning, project governance, and successful delivery of strategic initiatives.
+ |  |  |  |  |  |  | 

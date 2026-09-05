@@ -1,0 +1,51 @@
+Ashish Sahoo
+Hyderabad, India | ashish.sahoo12@gmail.com | +91-7008897871 | https://www.linkedin.com/in/ashishsahoo07/
+SUMMARY
+Senior Data Engineer with 7 years of experience in SQL, Python, and ETL development, delivering scalable data
+solutions and automating data workﬂows across on-premise and cloud platforms. Expertise in risk management and
+regulatory reporting, with experience building complex data models for ﬁnancial data processing. Proven ability to
+ensure data accuracy, governance, and compliance across large-scale pipelines. Currently leading a team delivering
+reliable, high-performance, audit-ready data solutions.
+TECHNICAL SKILLS
+Programming Languages: Python, SQL, Java
+Databases: MS SQL, MySQL, Oracle Database
+Big Data and Processing: PySpark, Spark SQL, Delta Lake, Hive, Data Warehousing
+Cloud: AWS (Lambda, S3, Glue, RDS, AppSync), Azure (ADF, Databricks, Data Lake, Azure DevOps), Snowﬂake
+Data Engineering: Data Lake and Medallion Architecture, ETL Pipelines, Data Modeling, Data Governance
+Tools and Scheduler: ODI, SSIS, Informatica Cloud, Tableau, Power BI, Azure DevOps (CI/CD), GitHub, Jira
+Certiﬁcation: Microsoft Azure Fundamentals (AZ-900) certiﬁed
+EXPERIENCE
+Senior Data Engineer July 2024 - Present
+Goldman Sachs | Hyderabad, India
+•Led a team to design and deliver scalable ETL pipelines, data warehousing solutions, and complex data models
+using Python, SQL, PySpark and Snowﬂake, supporting enterprise-scale regulatory reporting systems and
+improving data accessibility and performance.
+•Performed SQL optimization and database performance analysis on DB2 (application database), and automated
+reporting workﬂows using Python and ETL processes, reducing manual eﬀort by ~80% and improving eﬃciency.
+•Developed Tableau dashboards and collaborated with cross-functional stakeholders including audit, risk, and
+reporting teams to deliver solutions across the end-to-end SDLC using Agile methodologies.
+•Developed Python-based automation using pandas, requests, and REST APIs to orchestrate LLM API calls,
+parse structured outputs, validate JSON payloads, and load processed data into enterprise data platforms,
+improving pipeline eﬃciency and supporting AI-driven workﬂows.
+•Led migration of legacy data models to the Alloy platform, developing reusable REST-based Alloy Services
+and enabling row-level entitlement models for secure semantic-layer access.
+Senior Data Engineer (Specialist Programmer) Jan 2023 - May 2024
+Infosys Limited | Czech Republic, Europe
+•Worked onsite at client location in the Czech Republic (Europe), providing production support and monitoring
+pipelines for high availability, resolving SSIS-based data integration issues via JIRA, and leading migration of
+legacy on-prem SSIS solutions to Azure cloud services.
+•Developed and tested ADF and Azure Databricks pipelines integrating data from Oracle Database, Mainframe,
+and SAP, using Spark SQL transformations to ensure data quality and consistency.
+•Automated deployments using 10+ Azure DevOps YAML pipelines, optimizing CI/CD for cleaned and curated
+data layers.
+Data Engineer (Specialist Programmer) July 2019 - Dec 2022
+Infosys Limited | Hyderabad, India
+•Built scalable ETL pipelines using Oracle Data Integrator (ODI) and Informatica IICS, reducing operational
+costs by ~30%, and automated ﬁle archival, proﬁling, and ingestion workﬂows using Python.
+•Engineered AWS-based data pipelines using Glue (PySpark), Lambda (Node.js), Aurora PostgreSQL, and AWS
+AppSync, enabling seamless data migration and API-driven consumption.
+•Transformed and cleansed historical data using PostgreSQL (AWS RDS), ensuring structured and reliable
+datasets for downstream systems.
+EDUCATION
+Bachelor of Engineering in Computer Science July 2015 - May 2019
+Institute of Technical Education and Research, SOA University, India

@@ -1,0 +1,137 @@
+Bindu Raj.C 
+Software Engineer 
+Around 7 years of experience as a Software Engineer in
+development and implementation of web and client server
+applications using Microsoft Technologies. Ability to learn &
+develop using new technologies. Excellent Communication &
+interpersonal skills with strong background working. 
+binduraj94@gmail.com 
+9663151636 
+Bengaluru, India 
+Alternative Mail-id : cbinduraj6@gmail.com 
+WORK EXPERIENCE 
+Senior Engineer - Software 
+SLK Software Pvt. Ltd. 
+11/2023 - Present
+, 
+ 
+Bengaluru 
+Senior Software Engineer 
+Canarys Automations Pvt. Ltd 
+12/2022 - 08/2023
+, 
+ 
+Bengaluru 
+Software Engineer 
+JOY Infotech Consulting Pvt Ltd 
+10/2021 - 07/2022
+, 
+ 
+Bengaluru 
+Software Engineer 
+Vagi Data systems 
+08/2018 - 10/2021
+, 
+ 
+Bengaluru 
+Intern/Trainee 
+Uttara InfoSolutions Pvt Ltd 
+01/2018 - 06/2018
+, 
+ 
+6 months Internship 
+EDUCATION 
+Master of Computer Applications[MCA] 
+Cambridge Institute of Technology(VTU) 
+05/2016 - 08/2018
+, 
+ 
+6.8 CGPA ,Bengaluru,India 
+Bachelor of Computer Applications[BCA] 
+Seshadripuram ﬁrst grade college 
+Bengaluru,india 
+PUC [PCME] 
+Soundarya composite pre university college 
+bengaluru,India 
+10th [SSLC] 
+Standard english school 
+Bengaluru,India 
+STRENGTHS : 
+To be Associated with an organization that
+provides opportunity to-prove my skills. 
+SKILLS 
+Software/Application Development 
+C# ASP.net 
+ASP.Net Core 
+Web Api 
+MVC 
+Web Application 
+Entity Framework, Ado.net 
+Java script & jQuery 
+SQL Server 
+PostgreSQL 
+React js 
+WebForms 
+Vb.net, Vb6 
+MySQL 
+Stored Procedures 
+HTML 
+CSS 
+IIS Server 
+Git 
+Azure-Devops 
+PROJECTS HANDLED 
+Emerson - OM Portal 
+Emerson is an American multinational corporation headquartered in St.
+Louis, Missouri . 
+Emerson Order Management Portal is designed to
+streamline the order management process for customers with the
+Reporting Tool. In Summary, the Order Management Portal enhances
+the eﬃciency of procurement process by providing tools for order
+tracking, quote management, spend analysis, and personalized user
+experience. this supports customers in managing their orders and
+optimizing their purchasing strategies eﬀectively. 
+Technical Environment
+ 
+- C# Asp.net ,WebForms - Three Tier
+Architecture,SQL Server , Stored Procedures. Azure Repo, Git, IIS
+Server Hosting. 
+USMED - STARTRAX Application 
+US Med-Equip (USME)
+ 
+partners with top hospitals across the nation to
+provide the highest quality medical equipment for patients in their care.
+STARTRAX Application provides Computer hardware and software
+systems for inventory management and tracking of medical equipment
+assets, performing medical equipment asset audits, tracking location
+and movement of medical equipment assets, and generating medical
+equipment asset and personnel reports, managing product catalog,
+periodic replenishment levels, service alerts of medical equipment assets
+across multiple geographic locations, tracking location of medical
+equipment assets using barcode 
+Technical Environment
+ 
+– .net Core, Web API, React JS, Kendo UI,
+SSMS, Azure Devops , Git 
+Banking Automation 
+Client : 120 + PCARD & SLD Banks. 
+It is a Main Banking Software
+Developed for Rural Banks, Main aim to reduce manual banking
+procedure work, Monitoring of each and every transaction through
+centralized system, it is a web-based software application , All banking
+Operation are Handled in this application and generates various various
+reports based on requirements. 
+Technical Environment
+ - C# Asp.net ,WebForms - Three Tier
+Architecture,SQL Server , Stored Procedures. IIS Server Hosting. 
+Assessment Application 
+Assessment Application Developed for Recruitment process, The
+Application is Built with Admin,Tenant and User Interface. Where the
+Application enables to Invite,assign the assessment via mail,where once
+the user registers he can take up the test/assessment through the invite.
+The Question set is Uploaded to application through excel ﬁle. Test
+results will be calculated automatically and sent to mail. 
+Technical Environment
+ : ASP.Net Core, Web Api, Swagger UI,React
+JS, Azure B2C, Dapper, Rest Api, PostgreSQL ,Migration,Razor view,
+Azure Devops ,Git 

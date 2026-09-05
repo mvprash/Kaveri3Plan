@@ -1,0 +1,236 @@
+Sayyad  Touseef  Hussaini  
+Senior  Cyber  Security &  VAPT 
+Consultant,  Penetration  Tester  
+Email  : Touseef90@yahoo.com  
+Contact No  : +91 8951750565 
+LinkedIn   : sayyad -touseef -huusaini  
+PROFESSIONAL  SUMMARY  
+To be Dedicated  and detail -oriented Cyber security professional with 8 years of 
+experience  in the Vulnerability  Assessment  and Penetration  Testing  (VAPT)  domain. 
+Currently employed as a Senior Security Consultant at EMIDS TECHNOLOGIES PVT 
+LTD, specializing in VAPT Gove rnance, Bug Bounty Program, Network VAPT, Web 
+Applications, Android,  iOS, API, Secure Configuration Review, Phishing Campaigns, 
+Cloud Security and source code review. Seeking opportunities to leverage my 
+expertise and contribute to the cyber security field  while continuing to learn and 
+grow.  
+ 
+CAREER  TIMELINE  
+Emids  Technologies  Pvt Ltd 
+Senior  Security  Consultant  
+ 
+PROTIVITI INDIA MEMBER 
+PRIVATE LIMITED.  
+Senior Cyber Security 
+Consultant,   
+ 
+Veave Technologies Pvt Ltd. 
+Cyber Security Analyst, 
+Penetration Tester  
+ 
+Digital  Age Strategies Pvt Ltd. 
+Cyber Security Analyst, 
+Penetration Tester  July 2019 
+to 
+Nov 2020  
+ 
+ 
+Veave Technologies Pvt Ltd. 
+Cyber Security Intern  
+ 
+ 
+ 
+CLIENTS  RELATIONSHIP  
+ 
+Performed  Vulnerability  Assessment  and Penetration  Testing  for Server,  Router, 
+Switches, Web Application, Mobile applications for the following domain:  
+• Govern ment  Administration.  
+• Banking  Financial  Services  and Insurance  (BFSI).  
+• Defense,  Power  Distribution,  Hospitality  
+• Telecom,  Infrastructure,  Information  Technology,  Education  
+• Private  Sector  Labs,  Manufacturing,  Travel  & Transport  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+June  2019  
+ 
+ 
+ 
+ 
+ 
+ CORE  SKILLS   
+Troubleshooting  | Threat  Management  
+Troubleshooting | Risk Assessment | 
+ 
+ Expertise   
+VAPT  Governance  
+Bug Bounty  Program  
+Vulnerability  Assessment  
+Web  Application  Penetration  Testing  
+Android  Penetration  Testing  
+iOS Penetration  Testing  
+API Penetration  Testing  
+Network  Penetration  Testing  
+Application  Security  
+ 
+IOT Penetration  Testing  
+Server  Hardening  
+ 
+UAR  2021  to june  2024  
+ 
+ 
+ 
+NESSUS  
+NMAP  
+BURPSUITE  
+WIRESHARK  
+SQLmap  
+Kali (OS) 
+MobSF  
+Apk Tool 
+Dek2jar  
+Jd-Gui 
+Hopper  
+PostMan  
+SoupUI  
+Spiderfoot  
+Acunetix  
+ 
+  AI TOOLS   
+ 
+ 
+ 
+ 
+ 
+TOOLS  
+ 
+EXPERIENCE  
+ 
+    EMIDS  TECHNOLOGIES  PRIVATE  LIMITED.  Dec 2024  – April 2026  
+Senior  Security  Consultant  
+• Conducted comprehensive Vulnerability Assessment and Penetration Testing 
+(VAPT) for  a cloud -based claims  review platform,  replacing multiple  legacy  systems 
+with a centralized solution.  
+• Performed web and mobile application security testing, identifying critical 
+vulnerabilities across platforms using tools like Burp Suite, OWASP ZAP, Nessus,  
+Kali Linux, and mobile -specific tool s/environments.  
+• Ensured alignment with OWASP Top 10 (Web and Mobile) by detecting and 
+mitigating security flaws such as insecure data storage, improper platform usage, 
+and insufficient transport layer protection.  
+• Executed Black Box and Grey Box testing met hodologies to simulate attacker 
+behavior and assess system defenses in real -world scenarios.  
+• Analyzed outputs from automated tools, manually verified vulnerabilities, and 
+filtered out false positives for accurate and high -quality reporting.  
+• Prepared and  presented detailed security assessment reports with risk ratings, 
+impact analysis, and actionable remediation recommendations to development 
+teams and stakeholders.  
+• Collaborated with cross -functional teams to address security gaps early in the  
+SDLC, enhan cing the platform’s security posture across both web and mobile 
+interfaces.  
+• Supported the secure design of a modular, configurable architecture, ensuring 
+scalability, maintainability, and compliance across jurisdictions and future 
+programs.  
+ 
+ 
+ 
+ 
+PROTIVITI  INDIA  MEMBER  PRIVATE  LIMITED.  Dec 2021  – June  2024  
+Senior  Cyber  Security  Consultant  
+• VAPT Governance: Managing the VAPT Governance. The scope of work include, Monitoring all vulnerability assessment and 
+penetration testing activities, Co - ordinating with all  the stakeholders and addressing the challenges. Following up with 
+application owners and tracking the mitigation status and challenges.  
+• Bug Bounty Program: Managing the Bug Bounty Program. The scope of work include, receiving the bugs regularly from  the 
+Onedesk tool, Verifying the bugs, assigning to the respective application owners, Following up with application owners and 
+tracking the progression status, rewards and challenges.  
+• Conducting Vulnerability Assessment of Servers, Workstations, Switches,  Routers, Firewalls/UTM Devices, IDS & IPS, Load 
+Balancers and other Network devices.  
+• Vulnerability  Assessment  performed  using  Nessus,  Kali Linux  tools  etc. 
+• Conducting  Manual/Automated  Security  Testing  for Internet  and Intranet  Web  Applications.  
+• Performing  Mobile  Application  Penetration  Testing.  
+• Understanding of web application security concepts and standards, checking for vulnerabilities in application as per  OWASP 
+guidelines.  
+• Analyzing  tool-based  report  and removing  false  positive  results.  
+• Generating  repo rts based  on vulnerability  assessments  and presenting  them  to clients.  
+• Planning,  Managing  and Execution  of projects.  
+• Perform  penetration  testing  for web  applications  using  manual  and automated  tools  
+• Performed  VAPT  using  Black  Box testing  and Grey  Box testing  Techniques.  
+• Good  Knowledge  on OWASP  Top 10 Vulnerabilities  and TCP/IP  
+ 
+VEAVE  TECHNOLOGIES  PVT LTD,  BANGALURU  Nov 2020  – Sep 2021  
+Cyber  Security  Analyst  | Penetration  Tester  
+ 
+• The Application  PT performed  against  OWASP  Top 10 Vulnerabilities  using  Burp  Suite,  Drib,  Directory  Buster  etc.,  as well  as 
+Manually.  
+• Performed  reviewing  Vulnerability  Assessment  using  Nessus  NMAP  etc. 
+• Manual,  verifying  the results  and removing  the false  positives  from  the issues  reported.  
+• Performed  Mobile  Application  Penetration  Testing  of Android  and IOS. 
+• Performed  API Testing  using  Postman  and Burp  suite  tools.  ACADEMICS  
+• Bachelor of Engineering (VTU 
+Belagavi)  
+• Diploma  (DTE  Bengaluru)  
+ 
+ 
+ 
+CEH (Certified Ethical Hacker) 
+Certificate no: ECC6237109458  
+ISO 27001:2013 ISMS LEAD 
+AUDITOR  
+CompTIA  A+ 
+AWS Security, Identity, and 
+Compliance  - Amazon  Web  Services.  
+ 
+Web Application Penetration Testing 
+and Ethical Hacking – Cybrary.  
+ 
+Mobile  App Security  – Cybrary.  
+ 
+Cybersecurity  Essentials  by CISCO  
+ 
+Cloud Computing by EC Council. Cert 
+No : 3683264268714  
+ 
+CYBER  HYGIENE  PRACTICES  by 
+Ministry of Information technology. 
+Cert  no : Meit/ISEA/WCHP/021889  
+HOBBIES  
+ DETAILS  
+• Manages  multiple  tasks  and priorities  on very  tight  deadlines  
+• Create  reports  from  results  of vulnerability  testing  done  and distribute  the results  to the Client.  
+• Identify  and analyze  Web  application  vulnerabilities  based  on latest  industry  attacks.  
+• Interaction  with  the client  for the issues  to be fixed  and discussion  about  upcoming  security  measures  to be implemented  for 
+the Web Applications.  
+• Performing  Infrastructure  Scans  for various  Servers  using  Nessus,  and Nmap.  
+• Conducting  Manual/Automated  Security  Testing  for Internet  and Intranet  Web  Applications.  
+• Exploit  Development  through  burp  suite,  Kali Linux  Tools  
+ 
+DIGITAL  AGE  STRETAGIES  PVT LTD,  BANGALURU  July 2019  – Nov 2020  
+Cyber  Security  Analyst  | Penetration  Tester  
+ 
+• Performed  Web  application  Penetration  testing and  Vulnerability  Assessment of Government  Administration,  Power 
+distribution, BFSI, Defense, Private sector lab clients against OAWSP Top 10 Vulnerabilities.  
+• Performed  Black  Box and gray  Box Testing  for Internet  and intranet.  
+• Performed  Mobile  application  Penetration  testing  for Banking  and Health  insurance  Sector.  
+• Performed  Vulnerability  Assessment  testing  for Banking,  Defense,  Government  administration  and various  sector  clients 
+By using Nessus, Nmap and kali Linux tools  
+• Manual  reviewing,  verifying  the results  and removing  the false  positives  from  the issues  reported.  
+• Create  reports  from  results  of vulnerability  testing  done  and distribute  the results  to the Client.  
+• Manages  multiple  tasks  and priorities  on very  tight  deadlines  
+ 
+ 
+• Playing  Cricket  and Foot  Ball 
+• Bug Bounty  Hunting  
+• Playing  Chess  
+• Travelling  
+ 
+ 
+Gender  : Male  
+Nationality  : Indian  
+Language  Known  : English,  Hindi,  Kannnada,  Urdu,  Arabic  
+Address  : No.369,  6th cross  pailayout,  Hulimavu  BG Road  Bangalore  – 560076  Karnataka  India.  
+ 

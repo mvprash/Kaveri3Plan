@@ -1,0 +1,65 @@
+ANSHUL PHULKE
+Data Migration Specialist | Salesforce & ETL Systems
+Bengaluru, India  |  +91-7773097274  |  anshul.phulke@gmail.com  |  linkedin.com/in/anshul-phulke-386aa15a
+PROFESSIONAL SUMMARY
+Salesforce CRM Data Migration Specialist with 4 years of combined experience across ETL, Salesforce data migration, and data analysis, including hands-on Data Loader-driven migrations, data mapping, and validation across Sales Cloud, Service Cloud, and Health Cloud in partnership with architects and client teams.
+Proven track record executing Salesforce data migration initiatives using DBsync and Workbench, consistently delivering 100 % data accuracy and on-time project completion.
+Data Analyst with 3+ years collecting, cleaning, and interpreting large datasets using SQL, Python (Pandas, NumPy), and Power BI to support data-driven business decisions.
+ASP.NET MVC Developer background in designing, developing, and debugging web applications using MVC 5.0, Razor View Engine, and SQL Server.
+Skilled in cloud-based data integration using AWS (RDS, S3), with hands-on experience across SQL Server, MySQL, Oracle, and PostgreSQL.
+Effective cross-functional collaborator, partnering with engineering, product, and business stakeholders to deliver migration and analytics projects on schedule.
+CORE TECHNICAL SKILLS
+Programming: Python, ASP.NET MVC, SQL
+Databases: SQL Server, MySQL, Oracle, PostgreSQL, Sybase SQL Anywhere
+Salesforce: Data Loader, Sales Cloud, Service Cloud, Health Cloud, Salesforce Lightning, Salesforce Administration, Salesforce Reporting & Dashboards, Data Mapping, Workbench, DBsync
+ETL & Data: ETL Development, ETL Testing, Data Migration, Data Integration, Data Analysis, Data Mining
+Cloud & DevOps: AWS (RDS, S3), Jira, Slack, Git
+Analytics & BI: Pandas, NumPy, Jupyter, Power BI, Google Charts, Statistical Analysis
+Tools: MS Excel, MS Office, Google Workspace, FileZilla, SFTP, OmniStudio
+PROFESSIONAL EXPERIENCE
+DATA MIGRATION ASSOCIATE
+Target Recruit | Bangalore, India	Apr 2022 – Feb 2026
+Led Salesforce data migration projects using Data Loader across Sales Cloud and Service Cloud, covering extraction, transformation, and loading of records from legacy systems, achieving 100% data accuracy across 30+ migration cycles.
+Implemented ETL workflows using DBsync and Data Loader, reducing manual data-loading time by approximately 90%.
+Defined legacy-to-Salesforce field mapping and transformation logic in collaboration with solution architects and client teams, ensuring accurate source-to-target alignment and finalized migration strategy prior to each load cycle.
+Wrote and optimized complex SQL and advanced SQL queries for data validation, cutting data-error rates by 90%.
+Conducted end-to-end ETL testing across 30+ migration projects, ensuring data integrity prior to go-live.
+Integrated AWS (RDS, S3) for cloud-based storage and processing, supporting datasets of 2 Million+ records.
+Administered Salesforce.com environments, including user provisioning, and designed custom reports and dashboards to track key business KPIs across Sales Cloud, Service Cloud, and Health Cloud teams.
+Delivered training and ongoing support to Salesforce end users, improving adoption and reducing recurring data-entry errors.
+Recommended and implemented process improvements based on Salesforce best practices, streamlining data validation and reducing rework across migration cycles.
+Partnered with cross-functional teams via Slack and Jira to deliver migration milestones on schedule.
+Authored migration runbooks and process documentation adopted as the team standard for future projects.
+SOFTWARE DEVELOPER
+Town & Country Planning, Haryana | Chandigarh, India	Jun 2021 – Mar 2022
+Developed and maintained an in-house Project Monitoring Tool using ASP.NET MVC and SQL Server ADO.NET, used by 500+ internal stakeholders.
+Owned full SDLC — analysis, design, coding, testing, and implementation — for government urban-planning web applications.
+Built and tuned SQL Server stored procedures and functions, improving query performance by 70%.
+Interfaced with databases via ADO.NET DataSet, DataReader, DataAdapter, and DataGrid components.
+Documented bugs, design decisions, and testing outcomes to support handover and maintenance.
+DATA ANALYST
+TekOptimize Software India Pvt Ltd | Hyderabad, India	Apr 2019 – May 2021
+Collected and analyzed data from multiple sources, building a data-analytical database from complex financial source data.
+Wrote SQL scripts to automate data loads and extracts, reducing manual processing time by 50%.
+Performed statistical analysis and data mining using Python (NumPy, Pandas) across datasets.
+Partnered with engineering and product teams to validate data accuracy and resolve client data issues.
+Delivered qualitative and quantitative reporting to clients and internal stakeholders on a recurring basis.
+DATA ASSOCIATE
+TekOptimize Software India Pvt Ltd | Hyderabad, India	Oct 2017 – Mar 2019
+Collaborated with product management and development teams to capture and document customer feedback requests.
+Redesigned workflow documentation, contributing to a 50% reduction in average handling time.
+Implemented quality-management procedures that improved data-processing consistency across teams.
+Applied statistical techniques and pivot-table analysis to support recurring business reporting.
+RELATIONSHIP EXECUTIVE
+Angel Broking Pvt Ltd | Rajkot, Gujarat, India	May 2015 – Feb 2016
+Developed sales strategies that grew the active client base by 60% within 3 months.
+Tracked and reported sales performance metrics to leadership, identifying gaps and improvement plans.
+Resolved escalated customer issues, maintaining a 95% client satisfaction/retention rate.
+Collaborated with marketing on lead-generation campaigns and monitored competitive/industry trends.
+EDUCATION
+B.E., Information Technology — Gwalior Engineering College, RGPV, Gwalior, MP, India (2011)
+Higher Secondary (PCM) — Jawaharlal Nehru School, Bhopal, MP, India — MP State Board (2006)
+CERTIFICATIONS
+Salesforce Agentforce Specialist Certification — Credential ID: 7230138
+Salesforce Platform Administrator Certification — Credential ID: 7874174
+NCFM Capital Market Dealer Module, National Institute of Stock Market — Certificate No. NCFM-00001141214

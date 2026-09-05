@@ -27,6 +27,7 @@ class Node:
     w: int = 150
     h: int = 50
     kind: str = "rect"
+    y_off: int = 0
 
 
 @dataclass
@@ -127,7 +128,7 @@ def build_drawio(spec: DiagramSpec) -> str:
         node_mx[node.id] = mx_id
         next_id += 1
         parent = lane_ids[node.lane]
-        y_off = max(20, (LANE_H - node.h) // 2 - 10)
+        y_off = max(20, (LANE_H - node.h) // 2 - 10) + node.y_off
         cells.append(
             f'  <mxCell id="{mx_id}" value="{node.label}" '
             f'style="{node_style(node.kind)}" vertex="1" parent="{parent}">'
@@ -291,8 +292,9 @@ def parsi_marriage_offline() -> DiagramSpec:
                 1,
                 560,
                 180,
-                60,
+                55,
                 "cylinder",
+                y_off=-38,
             ),
             Node(
                 "manual",
@@ -300,8 +302,9 @@ def parsi_marriage_offline() -> DiagramSpec:
                 1,
                 560,
                 170,
-                60,
+                55,
                 "cylinder",
+                y_off=38,
             ),
             Node(
                 "capture",
@@ -400,6 +403,10 @@ def _font(size: int, bold: bool = False):
         "C:/Windows/Fonts/arialbd.ttf" if bold else "C:/Windows/Fonts/arial.ttf",
         "C:/Windows/Fonts/calibrib.ttf" if bold else "C:/Windows/Fonts/calibri.ttf",
         "C:/Windows/Fonts/segoeui.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf" if bold else
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold else
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
     ]
     for path in candidates:
         try:
@@ -485,7 +492,7 @@ def render_png(spec: DiagramSpec, out_path: Path) -> None:
     for node in spec.nodes:
         y0 = lane_top + node.lane * lane_h
         x = pad + label_w + node.x * scale
-        y = y0 + (lane_h - node.h) / 2
+        y = y0 + (lane_h - node.h) / 2 + node.y_off
         w, h = node.w * scale, node.h
         positions[node.id] = (x, y, w, h)
 

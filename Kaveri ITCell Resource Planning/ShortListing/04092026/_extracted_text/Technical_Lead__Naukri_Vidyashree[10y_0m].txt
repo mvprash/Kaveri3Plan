@@ -1,0 +1,106 @@
+VIDYASHREE  
+Technical Lead  |  Senior .NET Full Stack Developer  
++91-7892502132    •   vidyaumaluti@gmail.com    •   linkedin.com/in/vidyashree -tech -lead    •   Bengaluru, India  
+EXPERIENCE  
+Technical Lead  
+Tech Mahindra  
+01/2024 – Present   •   Client: Netgear  
+• Led a team of 7 developers delivering enterprise applications and end -to-end production 
+support  
+• Migrated a complete legacy application to the modern .NET framework and delivered 
+React -based UI components  
+• Improved application performance by 30%, automated 15+ manual processes and reduced 
+production incidents by 40%  
+• Conducted technical interviews, code reviews, mentoring and release planning; managed 
+Git-based Agile delivery across an international team  
+• Recognized by Netgear leadership for successful modernization and consistent technical 
+delivery  
+Senior Software Engineer  
+Wipro  
+03/2022 – 01/2024   •   Client: Philips Signi fy (Netherlands)  
+• Engineered high -performance device communication drivers spanning hardware 
+integration, PLC integration and Windows Services  
+• Partnered with the Netherlands engineering team as offshore Single Point of Contact 
+(SPOC) for all development act ivities  
+• Optimized driver throughput and digitized 10+ manual business workflows through 
+targeted automation  
+• Collaborated within a 10 -member Agile team using Git for version control and pull request 
+management  
+• Received client appreciation from Philips Signify for technical ownership and delivery 
+excellence  
+Software Engineer  
+CMS Computers Ltd  
+06/2021 – 03/2022   •   Client: Government of Karnataka – Bhoomi Land Records  
+• Maintained statewide Bhoomi land records applications serving 100,000+ citizens across  
+Karnataka  
+• Built ASP.NET applications, SQL Server database objects and WCF services supporting daily 
+land record transactions  
+• Provided production support and performance improvements, coordinating directly with 
+District Commissioners  
+• Recognized by Government of Karnataka stakeholders for reliable delivery and system 
+stability  
+Software Engineer  
+Sumeru Software Solutions  
+04/2019 – 05/2021   •   Client: Government of Karnataka – Bhoomi Land Records  
+• Created citizen -facing land records modules using ASP. NET MVC, SQL Server and Web 
+Services  
+• Implemented backend APIs and database objects for statewide land digitization initiatives  
+• Supported statewide deployments across 227+ taluk offices along with ongoing feature 
+enhancements  
+Software Developer  
+PristineSoft s Pvt Ltd  
+09/2017 – 04/2019   •   Client: DRDO (Defence Research and Development Organisation)  
+• Architected a customised 3CX VOIP & ROIP unified communication system meeting 
+defence -sector security requirements  
+• Built an offline -capable enterprise communicat ion application enabling secure 
+coordination without internet dependency  
+• Implemented VOIP and ROIP capabilities using C#, ASP.NET, .NET Core, MySQL, Python and 
+PyQt5  
+Associate Software Developer  |  Delta Informatics Pvt Ltd    •   11/2016 – 09/2017  
+• Designe d and maintained ASP.NET web applications using C#, SQL Server and JavaScript   
+SUMMARY  
+Technical Lead with 9+ years modernizing enterprise 
+and government applications across C#, .NET Core, 
+ASP.NET, React, SQL Server and REST APIs. Leads teams 
+through legacy migration, performance tuning and 
+production support — improving application 
+performance by 30%, automating 15+ manual processes 
+and reducing production incidents by 40%. Drives 
+releases, code reviews, stakeholder communication and 
+technical hiring across Agile delivery for clients including 
+Netgear, Philips Signify, DRDO and the Government of 
+Karnataka.  
+KEY ACHIEVEMENTS  
+◆  Performance Improvement Leader  
+Improved application performance by 30% and cut 
+production incidents by 40% through automation of  
+15+ processes.  
+◆  Legacy Modernization Lead  
+Led a 7 -developer team migrating a legacy platform 
+to modern .NET with new React -based components.  
+◆  Driver Performance Optimizer  
+Enhanced device driver performance and automated 
+10+ workflows; recognized by Ph ilips Signify for 
+technical excellence.  
+◆  System Stability Achiever  
+Sustained ASP.NET land -records systems for 
+100,000+ citizens across 227+ taluk offices with high 
+reliability.  
+EDUCATION  
+B.E. in Computer Science  
+Govt. Engineering College, Raichur  
+2016  
+SKILLS  
+Technical: C#, ASP.NET, ASP.NET MVC, .NET Framework, 
+.NET Core, React, JavaScript, HTML, CSS, Python  
+Architecture: System design, Microservices architecture, 
+API design, REST APIs, WCF, Web Services, ADO.NET, 
+Performance tuning  
+Engineering Leadership: Technical leadership, Code 
+review, Mentoring, Stakeholder management, Release 
+management, Agile, SDLC  
+Data & Tools: SQL Server, MySQL, Visual Studio, IIS, 
+SSMS, Git, NUnit unit testing  
+Specialised: Hardware integration, PLC integrat ion, 
+VOIP/ROIP, Windows Services, Production support  
+ 
