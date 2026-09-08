@@ -1,121 +1,92 @@
 # -*- coding: utf-8 -*-
-"""Create Document_Registration_requirement_07092026.docx
-
-Daily requirement discussion note for 07-09-2026 topics:
+"""Create Document_Registration_requirement_07092026.docx from the working
+02-09 template (keeps Word styles/theme that open correctly), replacing body
+with Acts/Rules/sections/notifications for:
   - Registration Appeal
   - Will after the death of the testator
-
-Populates Acts, Rules, sections and notifications from
-Acts_Rules/Document (Registration Act 1908, Karnataka Registration Rules 1965,
-Registration (Karnataka Amendment) Act 2023 / Act 47 of 2024, fee notification).
 """
 from __future__ import annotations
 
+import shutil
 import sys
+from copy import deepcopy
 from pathlib import Path
 
 from docx import Document
-from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn
-from docx.shared import Pt, RGBColor, Cm
+from docx.shared import Pt, RGBColor
+from docx.table import Table
+from docx.text.paragraph import Paragraph
 
 sys.stdout.reconfigure(encoding="utf-8")
 
 BASE = Path("/workspace/Requirement Discussions/Daily Reports")
+SRC = BASE / "Document_Registration_requirement_02092026_v1.1.docx"
 DST = BASE / "Document_Registration_requirement_07092026.docx"
 
-HEADING_FONT = "Segoe UI"
-BODY_FONT = "Calibri"
-HEADING3_SIZE = Pt(14.5)
-HEADING4_SIZE = Pt(13.5)
-BODY_SIZE = Pt(10.5)
 HEADER_FILL = "1F4E79"
-HEADER_FONT_COLOR = RGBColor(255, 255, 255)
 
 
-def set_run_font(run, *, name=BODY_FONT, size=BODY_SIZE, bold=False, color=None):
-    run.font.name = name
-    run._element.rPr.rFonts.set(qn("w:eastAsia"), name)
-    run.font.size = size
-    run.bold = bold
-    if color is not None:
-        run.font.color.rgb = color
+def clear_body(doc: Document) -> None:
+    body = doc.element.body
+    # keep sectPr at end
+    sectPr = body.find(qn("w:sectPr"))
+    for child in list(body):
+        if child is sectPr:
+            continue
+        body.remove(child)
 
 
-def add_heading(doc: Document, text: str, level: int) -> None:
-    p = doc.add_heading(text, level=level)
-    for run in p.runs:
-        set_run_font(
-            run,
-            name=HEADING_FONT,
-            size=HEADING3_SIZE if level == 3 else HEADING4_SIZE,
-            bold=True,
-        )
+def insert_paragraph(doc: Document, text: str = "", style: str | None = None) -> Paragraph:
+    p = doc.add_paragraph(text, style=style)
+    return p
 
 
-def add_para(doc: Document, text: str = "", *, bold_prefix: str | None = None) -> None:
-    p = doc.add_paragraph()
-    if bold_prefix:
-        r0 = p.add_run(bold_prefix)
-        set_run_font(r0, bold=True)
-        r1 = p.add_run(text)
-        set_run_font(r1)
-    else:
-        r = p.add_run(text)
-        set_run_font(r)
-
-
-def shade_cell(cell, hex_color: str) -> None:
-    tc = cell._tePr if hasattr(cell, "_tePr") else cell._tc
-    tcPr = tc.get_or_add_tcPr()
-    shd = tcPr.find(qn("w:shd"))
-    if shd is None:
-        from docx.oxml import OxmlElement
-
-        shd = OxmlElement("w:shd")
-        tcPr.append(shd)
-    shd.set(qn("w:fill"), hex_color)
-    shd.set(qn("w:val"), "clear")
-
-
-def set_cell(cell, text: str, *, header: bool = False) -> None:
-    cell.text = ""
+def set_cell_text(cell, text: str, *, header: bool = False, size_pt: float = 9.5) -> None:
+    # Clear existing paragraphs except first
+    for extra in cell.paragraphs[1:]:
+        extra._element.getparent().remove(extra._element)
     p = cell.paragraphs[0]
+    # clear runs
+    for r in list(p.runs):
+        r._element.getparent().remove(r._element)
     run = p.add_run(text)
+    run.font.size = Pt(size_pt)
+    run.bold = bool(header)
     if header:
-        set_run_font(run, size=Pt(10), bold=True, color=HEADER_FONT_COLOR)
-        # shade
+        run.font.color.rgb = RGBColor(255, 255, 255)
         from docx.oxml import OxmlElement
 
         tcPr = cell._tc.get_or_add_tcPr()
+        # remove old shd
+        for old in tcPr.findall(qn("w:shd")):
+            tcPr.remove(old)
         shd = OxmlElement("w:shd")
         shd.set(qn("w:fill"), HEADER_FILL)
         shd.set(qn("w:val"), "clear")
         tcPr.append(shd)
-    else:
-        set_run_font(run, size=Pt(9.5))
 
 
-def add_table(doc: Document, headers: list[str], rows: list[list[str]]) -> None:
+def add_table(doc: Document, headers: list[str], rows: list[list[str]]) -> Table:
     table = doc.add_table(rows=1 + len(rows), cols=len(headers))
     table.style = "Table Grid"
-    table.autofit = True
     for j, h in enumerate(headers):
-        set_cell(table.rows[0].cells[j], h, header=True)
+        set_cell_text(table.rows[0].cells[j], h, header=True, size_pt=10)
     for i, row in enumerate(rows):
         for j, val in enumerate(row):
-            set_cell(table.rows[i + 1].cells[j], val)
+            set_cell_text(table.rows[i + 1].cells[j], val, header=False)
+    return table
 
 
 def main() -> None:
-    doc = Document()
-    section = doc.sections[0]
-    section.top_margin = Cm(1.8)
-    section.bottom_margin = Cm(1.8)
-    section.left_margin = Cm(2.0)
-    section.right_margin = Cm(2.0)
+    if not SRC.exists():
+        raise FileNotFoundError(SRC)
 
-    # --- Meta ---
+    shutil.copy2(SRC, DST)
+    doc = Document(str(DST))
+    clear_body(doc)
+
+    # Meta
     add_table(
         doc,
         ["Field", "Value"],
@@ -131,25 +102,23 @@ def main() -> None:
             ],
             [
                 "Schedule ref",
-                "Sr.17 / Sub-modules #10 (Will after Death of testator); "
-                "Registration Appeal under Registration Act Part XII "
-                "(Secs. 71–77) and Karnataka Rules Ch. XXIV–XXV "
-                "(cross-link also to Kar. Amendment Sec. 22-D IGR appeal)",
+                "Sr.17 / Sub-module #10 (Will after Death of testator); "
+                "Registration Appeal — Registration Act Part XII (Secs. 71–77) "
+                "and Karnataka Rules Ch. XXIV–XXV; also Kar. Amendment Sec. 22-D",
             ],
-            ["Version", "1.0 (08-09-2026) — Acts / Rules / sections / notifications"],
+            ["Version", "1.1 (08-09-2026) — rebuilt from working template"],
         ],
     )
-    doc.add_paragraph()
+    insert_paragraph(doc, "")
 
-    # ========== 1. Primary Acts ==========
-    add_heading(doc, "1. Primary Acts", level=3)
-    add_para(
+    insert_paragraph(doc, "1. Primary Acts", style="Heading 3")
+    insert_paragraph(
         doc,
-        "Statutory basis for Registration Appeal and for registration / opening of "
-        "wills after the death of the testator.",
+        "Statutory basis for Registration Appeal and for registration / opening "
+        "of wills after the death of the testator.",
     )
 
-    add_heading(doc, "A. Registration Appeal", level=4)
+    insert_paragraph(doc, "A. Registration Appeal", style="Heading 4")
     add_table(
         doc,
         ["Act", "Sections", "Relevance"],
@@ -204,7 +173,7 @@ def main() -> None:
                 "",
                 "Sec. 68–69 (supporting)",
                 "Registrar’s superintendence / control over Sub-Registrars; "
-                "IGR’s power to make rules (incl. appeal procedure).",
+                "IGR’s power to make rules (including appeal procedure).",
             ],
             [
                 "Registration (Karnataka Amendment) Act, 2023 "
@@ -234,9 +203,9 @@ def main() -> None:
             ],
         ],
     )
-    doc.add_paragraph()
+    insert_paragraph(doc, "")
 
-    add_heading(doc, "B. Will after the death of the testator", level=4)
+    insert_paragraph(doc, "B. Will after the death of the testator", style="Heading 4")
     add_table(
         doc,
         ["Act", "Sections", "Relevance"],
@@ -301,22 +270,22 @@ def main() -> None:
                 "executor named in the will.",
             ],
             [
-                "Indian Succession Act, 1925 "
-                "(supporting — probate / letters of administration)",
+                "Indian Succession Act, 1925 (supporting)",
                 "Cross-ref via Reg. Act Sec. 46",
                 "Registration / deposit of a will does not replace probate where "
                 "required; Court production of deposited wills remains available.",
             ],
         ],
     )
-    doc.add_paragraph()
+    insert_paragraph(doc, "")
 
-    # ========== 2. Primary Rules ==========
-    add_heading(
-        doc, "2. Primary Rules — Karnataka Registration Rules, 1965", level=3
+    insert_paragraph(
+        doc,
+        "2. Primary Rules — Karnataka Registration Rules, 1965",
+        style="Heading 3",
     )
 
-    add_heading(doc, "A. Registration Appeal (Ch. XXIV–XXV)", level=4)
+    insert_paragraph(doc, "A. Registration Appeal (Ch. XXIV–XXV)", style="Heading 4")
     add_table(
         doc,
         ["Rule", "Module mapping", "What it covers"],
@@ -402,9 +371,11 @@ def main() -> None:
             ],
         ],
     )
-    doc.add_paragraph()
+    insert_paragraph(doc, "")
 
-    add_heading(doc, "B. Will after the death of the testator (Ch. XIV–XV)", level=4)
+    insert_paragraph(
+        doc, "B. Will after the death of the testator (Ch. XIV–XV)", style="Heading 4"
+    )
     add_table(
         doc,
         ["Rule", "Module mapping", "What it covers"],
@@ -468,17 +439,15 @@ def main() -> None:
             ],
         ],
     )
-    doc.add_paragraph()
+    insert_paragraph(doc, "")
 
-    # ========== 3. Notifications ==========
-    add_heading(doc, "3. Notifications / amendments", level=3)
+    insert_paragraph(doc, "3. Notifications / amendments", style="Heading 3")
     add_table(
         doc,
         ["Notification / instrument", "Effect for this topic"],
         [
             [
-                "Karnataka Registration Rules, 1965 "
-                "(under Registration Act Sec. 69)",
+                "Karnataka Registration Rules, 1965 (under Registration Act Sec. 69)",
                 "Parent instrument for Ch. XIV (Wills), Ch. XV (Sealed covers), "
                 "Ch. XXIV (Refusal) and Ch. XXV (Appeals and Enquiries).",
             ],
@@ -517,11 +486,10 @@ def main() -> None:
             ],
         ],
     )
-    doc.add_paragraph()
+    insert_paragraph(doc, "")
 
-    # ========== Pain points ==========
-    add_heading(doc, "Pain Points (ServiceDesk — indicative)", level=3)
-    add_para(
+    insert_paragraph(doc, "Pain Points (ServiceDesk — indicative)", style="Heading 3")
+    insert_paragraph(
         doc,
         "Few tickets are explicitly titled “appeal”; will / Book-3 issues "
         "surface mainly as payment and certified-copy failures:",
@@ -530,37 +498,40 @@ def main() -> None:
         doc,
         ["Pain point", "Evidence"],
         [
-            [
-                "Payment related issue for WILL",
-                "28795",
-            ],
+            ["Payment related issue for WILL", "28795"],
             [
                 "Unable to download Book 3 and Book 4 documents "
                 "(certified copies of wills / miscellaneous register)",
                 "Categorized: 92626, 87534, 82435, 78789; also 29879, 29938, 31252",
             ],
-            [
-                "Book-3 CC Issue",
-                "26371",
-            ],
+            ["Book-3 CC Issue", "26371"],
         ],
     )
-    doc.add_paragraph()
-
-    add_para(
-        doc,
+    insert_paragraph(doc, "")
+    p = insert_paragraph(doc, "")
+    r0 = p.add_run("Note:")
+    r0.bold = True
+    p.add_run(
         " Discussion focus: map Kaveri 3.0 workflows for (1) Sub-Registrar "
         "refusal → Book 2 → Sec. 72 appeal / Sec. 73 application → Registrar "
         "enquiry → order to register or refuse → optional Sec. 77 suit; "
         "(2) Sec. 22-C cancellation → Sec. 22-D IGR appeal; and (3) will "
         "presentation after death under Sec. 40 / 41(2) (and sealed-cover "
         "opening under Sec. 45), including Rule 83 enquiry and Rule 181 "
-        "appeal by executor.",
-        bold_prefix="Note:",
+        "appeal by executor."
     )
 
     doc.save(str(DST))
-    print(f"Wrote {DST}")
+    print(f"Wrote {DST} size={DST.stat().st_size}")
+
+    # Verify
+    check = Document(str(DST))
+    texts = [p.text for p in check.paragraphs if p.text.strip()]
+    print("headings/paras:", len(texts))
+    for t in texts[:8]:
+        print(" -", t[:90])
+    print("tables:", len(check.tables))
+    print("meta topics:", check.tables[0].rows[2].cells[1].text[:80])
 
 
 if __name__ == "__main__":
