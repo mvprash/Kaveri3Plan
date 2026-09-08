@@ -1,0 +1,252 @@
+<mxfile host="app.diagrams.net" agent="Kaveri3-Plan" version="24.7.0" type="device">
+  <diagram id="reg-appeal-part12" name="Registration Appeal – Classic Part XII (Secs. 71–77)">
+    <mxGraphModel dx="2000" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3500" pageHeight="890" math="0" shadow="0">
+      <root>
+  <mxCell id="0"/>
+  <mxCell id="1" parent="0"/>
+  <mxCell id="title" value="Registration Appeal – Classic Part XII (Secs. 71–77)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontStyle=1" vertex="1" parent="1">
+    <mxGeometry x="940" y="30" width="700" height="30" as="geometry"/>
+  </mxCell>
+  <mxCell id="subtitle" value="Registration Act, 1908 — Refusal to Register &amp; Appeal (excludes Karnataka Secs. 22-B/C/D)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+    <mxGeometry x="840" y="58" width="900" height="24" as="geometry"/>
+  </mxCell>
+  <mxCell id="2" value="Citizen" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=120;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+    <mxGeometry x="40" y="90" width="3400" height="140" as="geometry"/>
+  </mxCell>
+  <mxCell id="3" value="System" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=120;fillColor=#e1f5e0;strokeColor=#82b366;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+    <mxGeometry x="40" y="230" width="3400" height="140" as="geometry"/>
+  </mxCell>
+  <mxCell id="4" value="Sub-Registrar" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=120;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+    <mxGeometry x="40" y="370" width="3400" height="140" as="geometry"/>
+  </mxCell>
+  <mxCell id="5" value="District Registrar" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=120;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+    <mxGeometry x="40" y="510" width="3400" height="140" as="geometry"/>
+  </mxCell>
+  <mxCell id="6" value="Civil Court" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=120;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+    <mxGeometry x="40" y="650" width="3400" height="140" as="geometry"/>
+  </mxCell>
+  <mxCell id="7" value="Start" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="2">
+    <mxGeometry x="140" y="46" width="70" height="40" as="geometry"/>
+  </mxCell>
+  <mxCell id="8" value="Document presented&amp;#xa;for registration" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="2">
+    <mxGeometry x="230" y="41" width="130" height="50" as="geometry"/>
+  </mxCell>
+  <mxCell id="9" value="Obtains refusal order&amp;#xa;/ Book 2 copy (Sec. 71)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="2">
+    <mxGeometry x="680" y="41" width="150" height="50" as="geometry"/>
+  </mxCell>
+  <mxCell id="10" value="Denial of&amp;#xa;execution?" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="2">
+    <mxGeometry x="860" y="31" width="110" height="70" as="geometry"/>
+  </mxCell>
+  <mxCell id="11" value="Sec. 72 appeal to DR&amp;#xa;within 30 days&amp;#xa;(refusal copy + original)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="2">
+    <mxGeometry x="1020" y="15" width="160" height="60" as="geometry"/>
+  </mxCell>
+  <mxCell id="12" value="Sec. 73 application&amp;#xa;to DR within 30 days&amp;#xa;(verified like plaint)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="2">
+    <mxGeometry x="1020" y="67" width="160" height="60" as="geometry"/>
+  </mxCell>
+  <mxCell id="13" value="Present document again&amp;#xa;within 30 days of&amp;#xa;DR / Court order" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="2">
+    <mxGeometry x="2100" y="36" width="150" height="60" as="geometry"/>
+  </mxCell>
+  <mxCell id="14" value="File Sec. 77&amp;#xa;suit ≤ 30 days?" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="2">
+    <mxGeometry x="2300" y="31" width="120" height="70" as="geometry"/>
+  </mxCell>
+  <mxCell id="15" value="Institute civil suit&amp;#xa;(Sec. 77)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="2">
+    <mxGeometry x="2480" y="15" width="130" height="50" as="geometry"/>
+  </mxCell>
+  <mxCell id="16" value="No suit filed" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="2">
+    <mxGeometry x="2480" y="71" width="110" height="40" as="geometry"/>
+  </mxCell>
+  <mxCell id="17" value="Present within 30 days&amp;#xa;of Court decree" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="2">
+    <mxGeometry x="3020" y="15" width="140" height="50" as="geometry"/>
+  </mxCell>
+  <mxCell id="18" value="Receives registered&amp;#xa;document" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="2">
+    <mxGeometry x="3300" y="41" width="120" height="50" as="geometry"/>
+  </mxCell>
+  <mxCell id="19" value="End&amp;#xa;(Registered)" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="2">
+    <mxGeometry x="3460" y="41" width="90" height="50" as="geometry"/>
+  </mxCell>
+  <mxCell id="20" value="End&amp;#xa;(Finally refused)" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" vertex="1" parent="2">
+    <mxGeometry x="2640" y="67" width="110" height="50" as="geometry"/>
+  </mxCell>
+  <mxCell id="21" value="Record refusal in Book 2;&amp;#xa;update status = Refused;&amp;#xa;notify citizen;&amp;#xa;generate copy" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="3">
+    <mxGeometry x="480" y="31" width="170" height="70" as="geometry"/>
+  </mxCell>
+  <mxCell id="22" value="Validate ≤ 30 days;&amp;#xa;register Sec. 72 appeal;&amp;#xa;schedule DR hearing" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="3">
+    <mxGeometry x="1220" y="15" width="160" height="70" as="geometry"/>
+  </mxCell>
+  <mxCell id="23" value="Validate ≤ 30 days;&amp;#xa;register Sec. 73 application;&amp;#xa;list for Sec. 74 enquiry" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="3">
+    <mxGeometry x="1220" y="62" width="160" height="70" as="geometry"/>
+  </mxCell>
+  <mxCell id="24" value="Record Sec. 76 refusal&amp;#xa;in Book 2; notify citizen;&amp;#xa;copy on demand" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="3">
+    <mxGeometry x="2100" y="31" width="160" height="70" as="geometry"/>
+  </mxCell>
+  <mxCell id="25" value="Verify presentation&amp;#xa;within 30 days of&amp;#xa;order / decree" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="3">
+    <mxGeometry x="2280" y="31" width="140" height="70" as="geometry"/>
+  </mxCell>
+  <mxCell id="26" value="Effect as of original&amp;#xa;presentation date&amp;#xa;(Sec. 75)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="3">
+    <mxGeometry x="3160" y="31" width="140" height="70" as="geometry"/>
+  </mxCell>
+  <mxCell id="27" value="Examine document &amp;&amp;#xa;statutory compliance" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="4">
+    <mxGeometry x="230" y="38" width="150" height="55" as="geometry"/>
+  </mxCell>
+  <mxCell id="28" value="Admit to&amp;#xa;registration?" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="4">
+    <mxGeometry x="410" y="31" width="110" height="70" as="geometry"/>
+  </mxCell>
+  <mxCell id="29" value="Admit &amp; register&amp;#xa;document" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="4">
+    <mxGeometry x="560" y="41" width="120" height="50" as="geometry"/>
+  </mxCell>
+  <mxCell id="30" value="End&amp;#xa;(Registered)" style="ellipse;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="2">
+    <mxGeometry x="560" y="41" width="100" height="50" as="geometry"/>
+  </mxCell>
+  <mxCell id="31" value="Sec. 71 refusal order;&amp;#xa;reasons in Book 2;&amp;#xa;endorse; copy on demand&amp;#xa;(except wrong jurisdiction)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="4">
+    <mxGeometry x="480" y="26" width="180" height="80" as="geometry"/>
+  </mxCell>
+  <mxCell id="32" value="Register as ordered&amp;#xa;(Sec. 75 / decree);&amp;#xa;endorsements &amp; certificate" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="4">
+    <mxGeometry x="3020" y="31" width="160" height="70" as="geometry"/>
+  </mxCell>
+  <mxCell id="33" value="Hear Sec. 72 appeal&amp;#xa;(Rules 175–180)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="5">
+    <mxGeometry x="1440" y="15" width="140" height="60" as="geometry"/>
+  </mxCell>
+  <mxCell id="34" value="Sec. 74 enquiry:&amp;#xa;(a) executed?&amp;#xa;(b) requirements met?" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="5">
+    <mxGeometry x="1440" y="62" width="150" height="70" as="geometry"/>
+  </mxCell>
+  <mxCell id="35" value="Order&amp;#xa;registration?" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="5">
+    <mxGeometry x="1660" y="31" width="110" height="70" as="geometry"/>
+  </mxCell>
+  <mxCell id="36" value="Sec. 75 — Order to&amp;#xa;register; communicate" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="5">
+    <mxGeometry x="1840" y="36" width="140" height="60" as="geometry"/>
+  </mxCell>
+  <mxCell id="37" value="Sec. 76 — Refusal order;&amp;#xa;reasons in Book 2" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="5">
+    <mxGeometry x="1840" y="36" width="140" height="60" as="geometry"/>
+  </mxCell>
+  <mxCell id="38" value="Try Sec. 77 suit" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="6">
+    <mxGeometry x="2640" y="41" width="130" height="50" as="geometry"/>
+  </mxCell>
+  <mxCell id="39" value="Decree directs&amp;#xa;registration?" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="6">
+    <mxGeometry x="2820" y="31" width="120" height="70" as="geometry"/>
+  </mxCell>
+  <mxCell id="40" value="Decree: register&amp;#xa;the document" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="6">
+    <mxGeometry x="3000" y="15" width="130" height="50" as="geometry"/>
+  </mxCell>
+  <mxCell id="41" value="Dismiss suit /&amp;#xa;uphold refusal" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="6">
+    <mxGeometry x="3000" y="71" width="130" height="50" as="geometry"/>
+  </mxCell>
+  <mxCell id="42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="7" target="8">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="8" target="27">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="27" target="28">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="45" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="28" target="29">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="46" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="28" target="31">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="29" target="30">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="18" target="19">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="31" target="21">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="21" target="9">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="9" target="10">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="52" value="No — other ground
+(Sec. 72)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="10" target="11">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="11" target="22">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="22" target="33">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="33" target="35">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="56" value="Yes — denial
+(Sec. 73)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="10" target="12">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="12" target="23">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="23" target="34">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="34" target="35">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="60" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="35" target="36">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="61" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="35" target="37">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="36" target="13">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="37" target="24">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="24" target="14">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="13" target="25">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="25" target="32">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="32" target="26">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="26" target="18">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="69" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="14" target="15">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="70" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="14" target="16">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="16" target="20">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="15" target="38">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="38" target="39">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="74" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="39" target="40">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="75" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="39" target="41">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="40" target="17">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="17" target="25">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;endArrow=classic;fontColor=#333333;" edge="1" parent="1" source="41" target="20">
+    <mxGeometry relative="1" as="geometry"/>
+  </mxCell>
+  <mxCell id="79" value="Legend / notes: Sec. 71 SR refusal (Book 2) → Sec. 72 appeal (other grounds) or Sec. 73 application (denial of execution) → Sec. 74 enquiry → Sec. 75 order to register (present ≤30 days; effect from original date) or Sec. 76 DR refusal → Sec. 77 civil suit ≤30 days. Wrong-jurisdiction refusal is outside Sec. 71 appeal path." style="text;html=1;strokeColor=#999999;fillColor=#f5f5f5;align=left;verticalAlign=middle;fontSize=10;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+    <mxGeometry x="40" y="810" width="3400" height="50" as="geometry"/>
+  </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
