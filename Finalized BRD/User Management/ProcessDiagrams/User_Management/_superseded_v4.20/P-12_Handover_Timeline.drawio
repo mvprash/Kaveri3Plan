@@ -1,0 +1,25 @@
+<mxfile host="Electron">
+  <diagram name="P-12_Handover_Timeline" id="0">
+    <mxGraphModel dx="1249" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="480" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" value="31-Aug-2026&#xa;DRO Bengaluru relieves&#xa;SR SRO Yeshwanthapura&#xa;(Relieving Date)" vertex="1">
+          <mxGeometry height="135" width="270" x="61.79999999999998" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" value="Same date&#xa;Same DRO records Transfer&#xa;In, Joining Date 01-Sep-2026&#xa;— reserved immediately" vertex="1">
+          <mxGeometry height="135" width="270" x="609" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" value="Before 01-Sep&#xa;12:00 AM IST&#xa;Incoming officer cannot&#xa;log in under that post" vertex="1">
+          <mxGeometry height="135" width="270" x="1179" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" value="Shortly after&lt;br&gt;midnight IST, 01-Sep&lt;br&gt;Occupancy refresh job runs&lt;br&gt;&amp;nbsp;de-allocates outgoing,&lt;br&gt;activates incoming" vertex="1">
+          <mxGeometry height="135" width="270" x="1703.4" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" value="01-Sep-2026&#xa;Occupied stays 1 —&#xa;handover complete" vertex="1">
+          <mxGeometry height="135" width="270" x="2125" y="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

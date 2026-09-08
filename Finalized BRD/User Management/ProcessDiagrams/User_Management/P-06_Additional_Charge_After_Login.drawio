@@ -1,109 +1,117 @@
 <mxfile host="Electron">
-  <diagram name="P-06_Additional_Charge_After_Login" id="0">
-    <mxGraphModel dx="1332" dy="907" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="2560" pageHeight="792" math="0" shadow="0">
+  <diagram name="P-06_Additional_Charge_After_Login" id="P-06_Additional_Charge_After_Login">
+    <mxGraphModel dx="900" dy="600" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="1460" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="lane0" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=54;fontStyle=1;" value="DSR OFFICER" vertex="1">
-          <mxGeometry height="760" width="2531" x="16" y="16" as="geometry" />
-        </mxCell>
-        <mxCell id="frame" parent="lane0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" value="" vertex="1">
-          <mxGeometry height="760" width="2528" x="3" as="geometry" />
-        </mxCell>
-        <mxCell id="lane1" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=54;fontStyle=1;" value="SYSTEM" vertex="1">
-          <mxGeometry height="320" width="2528" x="16" y="236" as="geometry" />
-        </mxCell>
-        <mxCell id="lane2" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=54;fontStyle=1;" value="SESSION" vertex="1">
-          <mxGeometry height="220" width="2528" x="16" y="556" as="geometry" />
-        </mxCell>
-        <mxCell id="n2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="Logged in under&lt;br&gt;assigned Post" vertex="1">
-          <mxGeometry height="60" width="220" x="100" y="96" as="geometry" />
-        </mxCell>
-        <mxCell id="n3" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Open Additional&#xa;charge control" vertex="1">
-          <mxGeometry height="60" width="190" x="390" y="96" as="geometry" />
-        </mxCell>
-        <mxCell id="n4" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;" value="Read Hierarchy Master&lt;br&gt;children of assigned&lt;br&gt;post, same Office" vertex="1">
-          <mxGeometry height="100" width="230" x="650" y="250" as="geometry" />
-        </mxCell>
-        <mxCell id="n5" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Child post wholly&#xa;unoccupied?&#xa;Occupied = 0&#xa;(FR-66(b))" vertex="1">
-          <mxGeometry height="130" width="200" x="950" y="388.6" as="geometry" />
-        </mxCell>
-        <mxCell id="n6" parent="1" style="shape=document;whiteSpace=wrap;html=1;" value="Show options:&#xa;Role + Post (+ Office);&#xa;clear-charge option" vertex="1">
-          <mxGeometry height="90" width="220" x="1250" y="81" as="geometry" />
-        </mxCell>
-        <mxCell id="n7" parent="1" style="shape=parallelogram;whiteSpace=wrap;html=1;fixedSize=1;" value="Select subordinate&#xa;post (at most one)" vertex="1">
-          <mxGeometry height="65" width="210" x="1550" y="93.5" as="geometry" />
-        </mxCell>
-        <mxCell id="jNCRp86TPD-ACXFDhZzO-5" edge="1" parent="1" source="n8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="n9">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="n8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" value="Recompute claims from&lt;br&gt;active context ONLY&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="71.1" width="230" x="1840" y="300.9" as="geometry" />
-        </mxCell>
-        <mxCell id="n9" parent="1" style="shape=process;whiteSpace=wrap;html=1;" value="Update header: assigned&lt;br&gt;post + active context" vertex="1">
-          <mxGeometry height="85" width="240" x="1835" y="623.5" as="geometry" />
-        </mxCell>
-        <mxCell id="n10" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;" value="Audit log selection&lt;br&gt;or reversion" vertex="1">
-          <mxGeometry height="95" width="210" x="2160" y="290.9" as="geometry" />
-        </mxCell>
-        <mxCell id="e11" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=0.5;entryX=0.5;entryY=0.5;" value="">
+        <mxCell id="ttl" value="P-06  Additional Charge After Login" parent="1" vertex="1" style="text;html=1;fontFamily=Segoe UI;fontSize=18;fontStyle=1;align=left;verticalAlign=middle;"><mxGeometry x="20" y="10" width="1000" height="30" as="geometry"/></mxCell>
+        <mxCell id="sub" parent="1" vertex="1" value="Section 6.5.2.5 — FR-UM-053, FR-UM-054 (DSR Officers)" style="text;html=1;fontFamily=Segoe UI;fontSize=12;fontColor=#595959;align=left;verticalAlign=middle;"><mxGeometry x="20" y="38" width="1000" height="20" as="geometry"/></mxCell>
+        <mxCell id="start" parent="1" vertex="1" value="START" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#E2F0D9;strokeColor=#548235;fontStyle=1;"><mxGeometry x="450.0" y="100.0" width="140.0" height="46.0" as="geometry"/></mxCell>
+        <mxCell id="s1" parent="1" vertex="1" value="&lt;font color=&quot;#2E75B6&quot;&gt;&lt;b&gt;DSR OFFICER&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Logged in under assigned Post + Office" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#DCEAF7;strokeColor=#2E75B6;"><mxGeometry x="370.0" y="192.0" width="300.0" height="62.0" as="geometry"/></mxCell>
+        <mxCell id="s1_num" parent="1" vertex="1" value="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#404040;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;fontFamily=Segoe UI;"><mxGeometry x="348.0" y="182.0" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="s2" parent="1" vertex="1" value="&lt;font color=&quot;#2E75B6&quot;&gt;&lt;b&gt;DSR OFFICER&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Open Additional Charge control (no logout)" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#DCEAF7;strokeColor=#2E75B6;"><mxGeometry x="370.0" y="300.0" width="300.0" height="62.0" as="geometry"/></mxCell>
+        <mxCell id="s2_num" parent="1" vertex="1" value="2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#404040;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;fontFamily=Segoe UI;"><mxGeometry x="348.0" y="290.0" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="s3" parent="1" vertex="1" value="&lt;font color=&quot;#595959&quot;&gt;&lt;b&gt;SYSTEM&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Read Hierarchy Master children of assigned Post at same Office" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#EDEDED;strokeColor=#7F7F7F;"><mxGeometry x="370.0" y="408.0" width="300.0" height="74.5" as="geometry"/></mxCell>
+        <mxCell id="s3_num" parent="1" vertex="1" value="3" style="ellipse;whiteSpace=wrap;html=1;fillColor=#404040;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;fontFamily=Segoe UI;"><mxGeometry x="348.0" y="398.0" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="s4" parent="1" vertex="1" value="&lt;font color=&quot;#595959&quot;&gt;&lt;b&gt;SYSTEM&lt;/b&gt;&lt;/font&gt;&lt;br&gt;List wholly unoccupied subordinate posts (cascade rules)&lt;br&gt;&lt;font color=&quot;#666666&quot; style=&quot;font-size:10px&quot;&gt;&lt;i&gt;Partial vacancy does not qualify — FR-UM-066(b)&lt;/i&gt;&lt;/font&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#EDEDED;strokeColor=#7F7F7F;"><mxGeometry x="370.0" y="528.5" width="300.0" height="115.5" as="geometry"/></mxCell>
+        <mxCell id="s4_num" parent="1" vertex="1" value="4" style="ellipse;whiteSpace=wrap;html=1;fillColor=#404040;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;fontFamily=Segoe UI;"><mxGeometry x="348.0" y="518.5" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="d1" parent="1" vertex="1" value="Officer&amp;#x27;s&lt;br&gt;choice?" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#FFF6D8;strokeColor=#BF9000;"><mxGeometry x="410.0" y="690.0" width="220.0" height="100.0" as="geometry"/></mxCell>
+        <mxCell id="s5a" parent="1" vertex="1" value="&lt;font color=&quot;#2E75B6&quot;&gt;&lt;b&gt;DSR OFFICER&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Select a subordinate post" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#DCEAF7;strokeColor=#2E75B6;"><mxGeometry x="50.0" y="836.0" width="300.0" height="62.0" as="geometry"/></mxCell>
+        <mxCell id="s5a_num" parent="1" vertex="1" value="5a" style="ellipse;whiteSpace=wrap;html=1;fillColor=#404040;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;fontFamily=Segoe UI;"><mxGeometry x="28.0" y="826.0" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="s5b" parent="1" vertex="1" value="&lt;font color=&quot;#2E75B6&quot;&gt;&lt;b&gt;DSR OFFICER&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Switch back to assigned post" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#DCEAF7;strokeColor=#2E75B6;"><mxGeometry x="370.0" y="836.0" width="300.0" height="62.0" as="geometry"/></mxCell>
+        <mxCell id="s5b_num" parent="1" vertex="1" value="5b" style="ellipse;whiteSpace=wrap;html=1;fillColor=#404040;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;fontFamily=Segoe UI;"><mxGeometry x="348.0" y="826.0" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="s5c" parent="1" vertex="1" value="&lt;font color=&quot;#2E75B6&quot;&gt;&lt;b&gt;DSR OFFICER&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Clear additional charge" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#DCEAF7;strokeColor=#2E75B6;"><mxGeometry x="690.0" y="836.0" width="300.0" height="62.0" as="geometry"/></mxCell>
+        <mxCell id="s5c_num" parent="1" vertex="1" value="5c" style="ellipse;whiteSpace=wrap;html=1;fillColor=#404040;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;fontFamily=Segoe UI;"><mxGeometry x="668.0" y="826.0" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="s6" parent="1" vertex="1" value="&lt;font color=&quot;#595959&quot;&gt;&lt;b&gt;SYSTEM&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Recompute Module Function claims for active context only&lt;br&gt;&lt;font color=&quot;#666666&quot; style=&quot;font-size:10px&quot;&gt;&lt;i&gt;Assigned-post privileges do not apply while charge is active&lt;/i&gt;&lt;/font&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#EDEDED;strokeColor=#7F7F7F;"><mxGeometry x="370.0" y="944.0" width="300.0" height="115.5" as="geometry"/></mxCell>
+        <mxCell id="s6_num" parent="1" vertex="1" value="6" style="ellipse;whiteSpace=wrap;html=1;fillColor=#404040;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;fontFamily=Segoe UI;"><mxGeometry x="348.0" y="934.0" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="s7" parent="1" vertex="1" value="&lt;font color=&quot;#595959&quot;&gt;&lt;b&gt;UI&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Update header — assigned post + active context label" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#EDEDED;strokeColor=#7F7F7F;"><mxGeometry x="370.0" y="1105.5" width="300.0" height="74.5" as="geometry"/></mxCell>
+        <mxCell id="s7_num" parent="1" vertex="1" value="7" style="ellipse;whiteSpace=wrap;html=1;fillColor=#404040;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;fontFamily=Segoe UI;"><mxGeometry x="348.0" y="1095.5" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="s8" parent="1" vertex="1" value="&lt;font color=&quot;#595959&quot;&gt;&lt;b&gt;SYSTEM&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Audit log selection or reversion (mandatory)" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#EDEDED;strokeColor=#7F7F7F;"><mxGeometry x="370.0" y="1226.0" width="300.0" height="62.0" as="geometry"/></mxCell>
+        <mxCell id="s8_num" parent="1" vertex="1" value="8" style="ellipse;whiteSpace=wrap;html=1;fillColor=#404040;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;fontFamily=Segoe UI;"><mxGeometry x="348.0" y="1216.0" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="end" parent="1" vertex="1" value="CONTEXT UPDATED" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#E2F0D9;strokeColor=#548235;fontStyle=1;"><mxGeometry x="410.0" y="1334.0" width="220.0" height="46.0" as="geometry"/></mxCell>
+        <mxCell id="e1" parent="1" edge="1" source="start" target="s1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="320" y="126" as="sourcePoint" />
-            <mxPoint x="390" y="126" as="targetPoint" />
+            <mxPoint x="520.0" y="146.0" as="sourcePoint" />
+            <mxPoint x="520.0" y="192.0" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e12" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=0.5;entryX=0.5;entryY=0.5;" value="">
+        <mxCell id="e2" parent="1" edge="1" source="s1" target="s2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="485" y="203" />
-              <mxPoint x="765" y="203" />
-            </Array>
-            <mxPoint x="485" y="156" as="sourcePoint" />
-            <mxPoint x="765" y="250" as="targetPoint" />
+            <mxPoint x="520.0" y="254.0" as="sourcePoint" />
+            <mxPoint x="520.0" y="300.0" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e13" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=0.5;entryX=0.5;entryY=0.5;" value="">
+        <mxCell id="e3" parent="1" edge="1" source="s2" target="s3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="915" y="300" />
-              <mxPoint x="915" y="453.6" />
-            </Array>
-            <mxPoint x="880" y="300" as="sourcePoint" />
-            <mxPoint x="950" y="453.6" as="targetPoint" />
+            <mxPoint x="520.0" y="362.0" as="sourcePoint" />
+            <mxPoint x="520.0" y="408.0" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e15" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=0.5;entryX=0.5;entryY=0.5;" value="Yes — cascade continues">
+        <mxCell id="e4" parent="1" edge="1" source="s3" target="s4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1050" y="279.8" />
-              <mxPoint x="1360" y="279.8" />
-            </Array>
-            <mxPoint x="1050" y="388.6" as="sourcePoint" />
-            <mxPoint x="1360" y="171" as="targetPoint" />
+            <mxPoint x="520.0" y="482.5" as="sourcePoint" />
+            <mxPoint x="520.0" y="528.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e16" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=0.5;entryX=0.5;entryY=0.5;" value="">
+        <mxCell id="e5" parent="1" edge="1" source="s4" target="d1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1470" y="126" as="sourcePoint" />
-            <mxPoint x="1550" y="126" as="targetPoint" />
+            <mxPoint x="520.0" y="644.0" as="sourcePoint" />
+            <mxPoint x="520.0" y="690.0" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e19" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=0.5;entryX=0.5;entryY=0.5;" value="">
+        <mxCell id="e6" parent="1" edge="1" source="d1" target="s5a" value="Subordinate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0;exitY=0.5;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="2070" y="338.4" as="sourcePoint" />
-            <mxPoint x="2160" y="338.4" as="targetPoint" />
+            <mxPoint x="410.0" y="740.0" as="sourcePoint" />
+            <mxPoint x="200.0" y="836.0" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNCRp86TPD-ACXFDhZzO-2" edge="1" parent="1" source="n5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="n4">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="jNCRp86TPD-ACXFDhZzO-3" connectable="0" parent="jNCRp86TPD-ACXFDhZzO-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="No cascade blocked" vertex="1">
-          <mxGeometry relative="1" x="0.5691" y="1" as="geometry">
-            <mxPoint x="1" as="offset" />
+        <mxCell id="e7" parent="1" edge="1" source="d1" target="s5b" value="Switch back" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520.0" y="790.0" as="sourcePoint" />
+            <mxPoint x="520.0" y="836.0" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNCRp86TPD-ACXFDhZzO-4" edge="1" parent="1" source="n7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.95;exitY=0.518;exitDx=0;exitDy=0;entryX=0.527;entryY=0.039;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" target="n8">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="e8" parent="1" edge="1" source="d1" target="s5c" value="Clear" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=1;exitY=0.5;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630.0" y="740.0" as="sourcePoint" />
+            <mxPoint x="840.0" y="836.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" parent="1" edge="1" source="s5a" target="s6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200.0" y="898.0" as="sourcePoint" />
+            <mxPoint x="370.0" y="1001.8" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" parent="1" edge="1" source="s5b" target="s6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520.0" y="898.0" as="sourcePoint" />
+            <mxPoint x="520.0" y="944.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" parent="1" edge="1" source="s5c" target="s6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=1;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840.0" y="898.0" as="sourcePoint" />
+            <mxPoint x="670.0" y="1001.8" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" parent="1" edge="1" source="s6" target="s7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520.0" y="1059.5" as="sourcePoint" />
+            <mxPoint x="520.0" y="1105.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" parent="1" edge="1" source="s7" target="s8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520.0" y="1180.0" as="sourcePoint" />
+            <mxPoint x="520.0" y="1226.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" parent="1" edge="1" source="s8" target="end" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520.0" y="1288.0" as="sourcePoint" />
+            <mxPoint x="520.0" y="1334.0" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>

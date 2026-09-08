@@ -1,23 +1,53 @@
 <mxfile host="Electron">
-  <diagram name="P-12_Handover_Timeline" id="0">
-    <mxGraphModel dx="1249" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="480" math="0" shadow="0">
+  <diagram name="P-12_Handover_Timeline" id="P-12_Handover_Timeline">
+    <mxGraphModel dx="900" dy="600" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1520" pageHeight="406" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="n2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" value="31-Aug-2026&#xa;DRO Bengaluru relieves&#xa;SR SRO Yeshwanthapura&#xa;(Relieving Date)" vertex="1">
-          <mxGeometry height="135" width="270" x="61.79999999999998" y="60" as="geometry" />
+        <mxCell id="ttl" value="P-12  Handover Timeline — Relieving to Transfer In" parent="1" vertex="1" style="text;html=1;fontFamily=Segoe UI;fontSize=18;fontStyle=1;align=left;verticalAlign=middle;"><mxGeometry x="20" y="10" width="1480" height="30" as="geometry"/></mxCell>
+        <mxCell id="sub" parent="1" vertex="1" value="Section 6.6.4 — illustrative example: DRO Bengaluru relieves SR of SRO Yeshwanthapura" style="text;html=1;fontFamily=Segoe UI;fontSize=12;fontColor=#595959;align=left;verticalAlign=middle;"><mxGeometry x="20" y="38" width="1480" height="20" as="geometry"/></mxCell>
+        <mxCell id="m1" parent="1" vertex="1" value="&lt;font color=&quot;#2E75B6&quot;&gt;&lt;b&gt;SUPERIOR (Day 0)&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Relieving Date entered&lt;br&gt;&amp;amp; confirmed" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#DCEAF7;strokeColor=#2E75B6;"><mxGeometry x="40.0" y="130.0" width="190.0" height="100.0" as="geometry"/></mxCell>
+        <mxCell id="m1_num" parent="1" vertex="1" value="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#404040;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;fontFamily=Segoe UI;"><mxGeometry x="18.0" y="120.0" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="m2" parent="1" vertex="1" value="&lt;font color=&quot;#595959&quot;&gt;&lt;b&gt;SYSTEM&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Relieving Date ends —&lt;br&gt;post still usable that day" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#EDEDED;strokeColor=#7F7F7F;"><mxGeometry x="290.0" y="130.0" width="190.0" height="100.0" as="geometry"/></mxCell>
+        <mxCell id="m2_num" parent="1" vertex="1" value="2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#404040;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;fontFamily=Segoe UI;"><mxGeometry x="268.0" y="120.0" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="m3" parent="1" vertex="1" value="&lt;font color=&quot;#595959&quot;&gt;&lt;b&gt;SYSTEM&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Midnight refresh job&lt;br&gt;de-allocates mapping" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#EDEDED;strokeColor=#7F7F7F;"><mxGeometry x="540.0" y="130.0" width="190.0" height="100.0" as="geometry"/></mxCell>
+        <mxCell id="m3_num" parent="1" vertex="1" value="3" style="ellipse;whiteSpace=wrap;html=1;fillColor=#404040;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;fontFamily=Segoe UI;"><mxGeometry x="518.0" y="120.0" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="m4" parent="1" vertex="1" value="&lt;font color=&quot;#595959&quot;&gt;&lt;b&gt;SYSTEM&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Capacity freed —&lt;br&gt;Transfer In now allowed" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#EDEDED;strokeColor=#7F7F7F;"><mxGeometry x="790.0" y="130.0" width="190.0" height="100.0" as="geometry"/></mxCell>
+        <mxCell id="m4_num" parent="1" vertex="1" value="4" style="ellipse;whiteSpace=wrap;html=1;fillColor=#404040;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;fontFamily=Segoe UI;"><mxGeometry x="768.0" y="120.0" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="m5" parent="1" vertex="1" value="&lt;font color=&quot;#2E75B6&quot;&gt;&lt;b&gt;SUPERIOR&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Transfer In recorded;&lt;br&gt;occupancy active immediately" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#DCEAF7;strokeColor=#2E75B6;"><mxGeometry x="1040.0" y="130.0" width="190.0" height="100.0" as="geometry"/></mxCell>
+        <mxCell id="m5_num" parent="1" vertex="1" value="5" style="ellipse;whiteSpace=wrap;html=1;fillColor=#404040;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;fontFamily=Segoe UI;"><mxGeometry x="1018.0" y="120.0" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="m6" parent="1" vertex="1" value="&lt;font color=&quot;#595959&quot;&gt;&lt;b&gt;SYSTEM&lt;/b&gt;&lt;/font&gt;&lt;br&gt;New officer selects&lt;br&gt;post at next login" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#EDEDED;strokeColor=#7F7F7F;"><mxGeometry x="1290.0" y="130.0" width="190.0" height="100.0" as="geometry"/></mxCell>
+        <mxCell id="m6_num" parent="1" vertex="1" value="6" style="ellipse;whiteSpace=wrap;html=1;fillColor=#404040;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;fontFamily=Segoe UI;"><mxGeometry x="1268.0" y="120.0" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="note" parent="1" vertex="1" value="IGR at Head Office cannot perform this Transfer In — Sub-Registrar does not report immediately to IGR" style="rounded=0;dashed=1;fontStyle=2;fontSize=11;whiteSpace=wrap;html=1;fontFamily=Segoe UI;fontSize=13;fillColor=#F5F5F5;strokeColor=#B3B3B3;dashed=1;"><mxGeometry x="40.0" y="280.0" width="1440.0" height="46.0" as="geometry"/></mxCell>
+        <mxCell id="e1" parent="1" edge="1" source="m1" target="m2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230.0" y="180.0" as="sourcePoint" />
+            <mxPoint x="290.0" y="180.0" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="n3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" value="Same date&#xa;Same DRO records Transfer&#xa;In, Joining Date 01-Sep-2026&#xa;— reserved immediately" vertex="1">
-          <mxGeometry height="135" width="270" x="609" y="265" as="geometry" />
+        <mxCell id="e2" parent="1" edge="1" source="m2" target="m3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480.0" y="180.0" as="sourcePoint" />
+            <mxPoint x="540.0" y="180.0" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="n4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" value="Before 01-Sep&#xa;12:00 AM IST&#xa;Incoming officer cannot&#xa;log in under that post" vertex="1">
-          <mxGeometry height="135" width="270" x="1179" y="60" as="geometry" />
+        <mxCell id="e3" parent="1" edge="1" source="m3" target="m4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="730.0" y="180.0" as="sourcePoint" />
+            <mxPoint x="790.0" y="180.0" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="n5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" value="Shortly after&lt;br&gt;midnight IST, 01-Sep&lt;br&gt;Occupancy refresh job runs&lt;br&gt;&amp;nbsp;de-allocates outgoing,&lt;br&gt;activates incoming" vertex="1">
-          <mxGeometry height="135" width="270" x="1703.4" y="265" as="geometry" />
+        <mxCell id="e4" parent="1" edge="1" source="m4" target="m5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="980.0" y="180.0" as="sourcePoint" />
+            <mxPoint x="1040.0" y="180.0" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="n6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" value="01-Sep-2026&#xa;Occupied stays 1 —&#xa;handover complete" vertex="1">
-          <mxGeometry height="135" width="270" x="2125" y="60" as="geometry" />
+        <mxCell id="e5" parent="1" edge="1" source="m5" target="m6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontFamily=Segoe UI;fontSize=11;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1230.0" y="180.0" as="sourcePoint" />
+            <mxPoint x="1290.0" y="180.0" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
