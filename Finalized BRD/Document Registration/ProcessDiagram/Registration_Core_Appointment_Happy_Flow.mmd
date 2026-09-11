@@ -1,0 +1,84 @@
+---
+title: Registration Core – Registration & Appointment (Happy Path)
+---
+flowchart LR
+
+    subgraph lane_citizen["Citizen"]
+        direction LR
+        start(("Start"))
+        login["Log on to<br/>department portal"]
+        selectService["Select Document<br/>Registration service"]
+        selectSRO["Select SRO by property<br/>jurisdiction (Sec. 28)"]
+        enterDetails["Enter application details<br/>(article, property, parties,<br/>valuation characteristics)"]
+        previewSubmit["Review summary &<br/>submit for verification"]
+        payFees["Pay stamp duty &<br/>registration fee"]
+        bookSlot["Book appointment<br/>slot (date & time)"]
+        visitSRO["Visit SRO on<br/>appointed date<br/>(office attendance)"]
+        kiosk["Mark presence<br/>at kiosk"]
+        presentDoc["Present document;<br/>all parties appear<br/>at SRO (Sec. 34)"]
+        signEndorse["Sign Form 60/61,<br/>thumb copy,<br/>endorsements & summary"]
+        receiveDoc["Receive registered<br/>document + scanned<br/>copy & EC"]
+        endOk(("End<br/>(Registered)"))
+    end
+
+    subgraph lane_system["System"]
+        direction LR
+        sysValidate["Validate jurisdiction &<br/>application completeness"]
+        sysCalcDuty["Compute SD / RF<br/>(consideration ≥ guideline;<br/>no 45-A trigger)"]
+        sysRecordPay["Record payment;<br/>generate receipt"]
+        sysConfirmSlot["Confirm slot against<br/>office hours / holidays;<br/>notify citizen;<br/>status = Appointment booked"]
+        sysReadyPresent["Update status =<br/>Ready for presentation"]
+        sysRegisters["Update Book / Index /<br/>J-slip; generate<br/>Registration No."]
+        sysScanCert["Scan document;<br/>print Index II;<br/>Sec. 60 certificate"]
+        sysStatusReg["Status = Registered;<br/>prepare return of document"]
+    end
+
+    subgraph lane_sr["Sub-Registrar"]
+        direction LR
+        srReview["Review application;<br/>Send to Applicant<br/>for Payment"]
+        srCallParties["Call parties on<br/>appointment"]
+        srExamine["Examine document &<br/>SD / RF (Secs. 34–35;<br/>Rules 40–46)"]
+        srStampOk{"Full SD/RF &<br/>no undervaluation<br/>/ impound?"}
+        srPartiesOk{"All parties present<br/>& admit execution<br/>at SRO office?"}
+        srAdmit["Admit document;<br/>capture photo / thumb;<br/>enter payment details"]
+        srRegister["Attach endorsements;<br/>Check & Register;<br/>DSC / seal (Sec. 60)"]
+        srReturn["Return registered<br/>document to citizen"]
+    end
+
+    subgraph lane_dr["District Registrar"]
+        direction LR
+        drMaster["District / sub-district /<br/>SRO master & holiday<br/>calendar (Secs. 5–7;<br/>Rules 3, 5)"]
+        drNotInvoked["Not invoked in happy path:<br/>no Sec. 45-A undervaluation<br/>& no Stamp Act impound<br/>referral from SRO"]
+    end
+
+    start --> login
+    login --> selectService
+    selectService --> selectSRO
+    selectSRO --> drMaster
+    drMaster --> enterDetails
+    enterDetails --> sysValidate
+    sysValidate --> previewSubmit
+    previewSubmit --> sysCalcDuty
+    sysCalcDuty --> srReview
+    srReview --> payFees
+    payFees --> sysRecordPay
+    sysRecordPay --> bookSlot
+    bookSlot --> sysConfirmSlot
+    sysConfirmSlot --> visitSRO
+    visitSRO --> kiosk
+    kiosk --> sysReadyPresent
+    sysReadyPresent --> srCallParties
+    srCallParties --> presentDoc
+    presentDoc --> srExamine
+    srExamine --> srStampOk
+    srStampOk -->|"Yes (happy path)"| srPartiesOk
+    srStampOk -->|"No → 45-A / Impound (out of scope)"| drNotInvoked
+    srPartiesOk -->|"Yes — all present at SRO office"| srAdmit
+    srAdmit --> signEndorse
+    signEndorse --> sysRegisters
+    sysRegisters --> srRegister
+    srRegister --> sysScanCert
+    sysScanCert --> sysStatusReg
+    sysStatusReg --> srReturn
+    srReturn --> receiveDoc
+    receiveDoc --> endOk

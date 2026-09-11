@@ -1,0 +1,1169 @@
+
+### [Heading 1] Business Requirements Document (BRD)
+
+
+### [Heading 2] User Management Module
+
+[TABLE]
+Field | Value
+Document ID | BRD-K3-UM-001
+Version | 4.23
+Status | In review — pending Domain Expert sign-off
+Module | User Management
+Legal basis (primary) | Information Technology Act, 2000; Indian Registration Act, 1908 (appointment of Sub-Registrars); Aadhaar Act, 2016 (where biometric / Aadhaar is used)
+State rules (primary) | Karnataka e-Governance hosting and security norms; MeitY / CERT-In / STQC / GIGW; Government Orders for office and post creation
+Author (BA) | Nandha Kumar
+Product Owner | Prashanth
+Domain expert / reviewer | Prabhakar Naik
+Target audience | Kaveri IT Cell, Department of Stamps and Registration, Government of Karnataka
+Last updated | 2026-09-08
+[/TABLE]
+
+### [Heading 2] Document control
+
+[TABLE]
+Version | Date | Author | Description
+1.7 | 28-Aug-2026 | Nandha Kumar | Aligned to User Management BRD template; three user categories with OTP-only authentication (no password management); DSR division and role catalogue
+4.17 | 02-Sep-2026 | Nandha Kumar | §1.1 Purpose, §1.2 Background, and §1.3 Scope shortened; detailed requirements unchanged in Section 4
+4.18 | 04-Sep-2026 | Nandha Kumar | Refreshed the thirteen P-series process-diagram figures (P-01–P-13) from the redrawn .drawio sources and re-exported them at full text width; superseded sources archived under ProcessDiagrams/User_Management/_superseded_v4.17. Moved two Temporary Absence risk rows from the §4.6.6 workflow table into §8 Risks and Mitigations, and five Temporary Absence terms from the §4.7 requirements table into §9 Glossary. Process steps and functional requirements are otherwise unchanged.
+4.19 | 05-Sep-2026 | Nandha Kumar | Stakeholder updates: face/biometric auth for DSR only (remove biometrics for Other Department); mandatory Aadhaar e-KYC for Citizens; remove citizen security questions; no email ID on DSR registration; DSR self-service mobile change after login; OTP resend cooldown 60s; idle timeout 10 min; absolute session 4 hours; remove temporary deputation End Date; Other Department Username = Department Code + Employee ID/KGID; Relieving Reason codes (Deputation, Transfer, Suspension, Superannuation, Death).
+4.20 | 05-Sep-2026 | Nandha Kumar | FR-UM-006: remove OTP for DSR Officers (authenticate with Username + Captcha + Face/Biometric only). Transfer In: remove Joining Date; allow Transfer In only when the target post has available occupancy/capacity (FR-UM-060, FR-UM-066(a)); retire reserved future-dated Transfer In / Joining Date gate (FR-UM-061, FR-UM-067).
+4.21 | 05-Sep-2026 | Nandha Kumar | Redrew all thirteen P-series process-diagram figures (P-01–P-13) as simplified, single-column top-to-bottom flowcharts: numbered steps matched to the Step tables, colour-coded by actor (Citizen/Officer/Superior, Administrator, System), and decision points with clearly labelled Yes/No and retry branches, replacing the wide multi-lane layouts. New .drawio sources and PNG exports placed in ProcessDiagrams/User_Management/. Process steps and functional requirements are unchanged.
+4.22 | 08-Sep-2026 | Nandha Kumar | Updated the P-05 (DSR Login — Post Selection), P-09 (Transfer Out / Relieving), P-10 (Transfer In), and P-13 (Temporary Absence / Leave / OOD and Temporary Charge) process-diagram figures to match the revised .drawio sources: simplified system-step wording for office/occupancy listing in P-09 and P-10, and relabelled the covering officer as “InCharge Officer” in P-13 steps 7–8. No functional requirements changed.
+4.23 | 08-Sep-2026 | Nandha Kumar | Consistency-review pass: closed the top-level section-numbering gap (§2 and §5 were unused) by renumbering Functional Requirements §6→§4 (and all 4.1–4.7 subsections/cross-references), and NFR/Reporting/Acceptance/Risks/Glossary/Approval §7–12→§5–10 throughout; fixed a Word list-numbering fault that made the Acceptance Criteria list continue the Business Objectives numbering instead of restarting at 1; added the eight missing process-diagram captions (P-02–P-09), corrected the P-12/P-13 caption labels and styling, and removed a duplicated P-13 caption; removed stale references to the retired reserved/future-dated Transfer In (FR-UM-061, FR-UM-067) and the retired occupancy End Date (FR-UM-030) from the §4.5.5 table, the §4.6.5 occupancy-refresh job steps, the Reporting Requirements (§6), and the Acceptance Criteria UAT scenario (§7); clarified that DIV-ADMIN (“Admin, Law & Computers”) and DIV-COMPUTERS (“Computers”) are distinct divisions. Known follow-up (not fixable from this document): every process/structure diagram’s picture still shows its old §6.x-style section label in its own header text (e.g. P-02 still reads “Section 6.5.2.1” though the caption below it now correctly reads “4.5.2.1”), because the diagrams are raster images exported from external .drawio sources that this BRD does not contain — each of the nineteen .drawio files (P-01–P-13, S-01–S-06) needs its header re-exported to the new numbering. Separately, the P-13 diagram labels the actor “InCharge Officer” in steps 7–8 while its own action text and the §4.6.6 step table still say “Cover officer” — the .drawio source needs to be corrected to one consistent term.
+[/TABLE]
+
+### [Heading 1] 1. Introduction
+
+
+### [Heading 2] 1.1 Purpose
+
+This BRD defines business requirements for the KAVERI 3.0 User Management module — identity, passwordless authentication, sanctioned post occupancy, RBAC, and officer lifecycle for Citizens, DSR Officers, and Other Department users. It is the agreed basis for design, development, testing, and sign-off.
+
+### [Heading 2] 1.2 Background
+
+KAVERI 3.0 requires a single platform service to manage users, roles, posts, and module access for the department and its citizens. It replaces fragmented Kaveri 2.0 user administration with one User Master and one Role Master, OTP-only login (no passwords), post-based DSR access, and Application Admin–maintained privilege mapping. Detailed authentication, occupancy, transfer, absence, and RBAC rules are specified in Section 4.
+
+### [Heading 2] 1.3 Scope
+
+In Scope:
+User registration and profile management for Citizens, DSR Officers, and Other Department users (single User Master)
+Passwordless authentication, session policy, Citizen lost-mobile reset, DSR post selection, and additional charge (Sections 4.2–4.5)
+Unified Role Master; Posts and Sanctioned Posts masters; office and officer hierarchies; RBAC via Module, Function, and Resource mapping (Section 4.5)
+DSR lifecycle: post assignment, Transfer Out/In, occupancy refresh, Temporary Absence and Temporary Charge (Section 4.6)
+Administrative user management, audit logging, and reporting (Sections 4.7–6)
+
+### [Heading 1] 2. Business Objectives
+
+The User Management Module aims to achieve the following business objectives:
+Provide a secure and reliable mechanism for users to register and access the system.
+Enable administrators to efficiently manage user accounts and access rights.
+Enforce role-based access control to protect sensitive data and functionality.
+Maintain the DSR Officer Hierarchy Master aligned to the Department organisational chart.
+Support Module Function and Resource (API/URL) masters with Role–Module–Function mapping and runtime access enforcement maintained by Application Admin.
+Reduce support overhead related to account access issues through reliable OTP delivery.
+Ensure compliance with organizational security and data privacy policies.
+Provide auditability of user actions for security and compliance reporting.
+
+### [Heading 1] 3. Stakeholders
+
+[TABLE]
+Name / Role | Department | Responsibility
+Kaveri IT Cell | Engineering | Reviews technical feasibility
+Citizens (Public users) | External | Self-register and access citizen portal services
+DSR Officers & Other Department users | Government | Access departmental modules via OTP (Other Department) or Captcha + face/biometric authentication (DSR Officers — no OTP)
+[/TABLE]
+
+### [Heading 1] 4. Functional Requirements
+
+Approved Process Diagrams and Structure Figures — Index
+[TABLE]
+ID | Name | Section | Editable source (.drawio)
+P-01 | Citizen Self-Registration | 4.1.1 | ProcessDiagrams/User_Management/P-01_Citizen_Self_Registration.drawio
+P-02 | Login (all categories) | 4.5.2.1 | ProcessDiagrams/User_Management/P-02_Login_All_Categories.drawio
+P-03 | Citizen lost-mobile reset | 4.5.2.2 | ProcessDiagrams/User_Management/P-03_Citizen_Lost_Mobile_Reset.drawio
+P-04 | Departmental mobile change | 4.5.2.3 | ProcessDiagrams/User_Management/P-04_Departmental_Mobile_Change.drawio
+P-05 | DSR login post selection | 4.5.2.4 | ProcessDiagrams/User_Management/P-05_DSR_Login_Post_Selection.drawio
+P-06 | Additional charge after login | 4.5.2.5 | ProcessDiagrams/User_Management/P-06_Additional_Charge_After_Login.drawio
+S-01 | Access model | 4.5.1 | ProcessDiagrams/User_Management/S-01_Access_Model.drawio
+S-02 | Two vacancy tests | 4.5.3 | ProcessDiagrams/User_Management/S-02_Two_Vacancy_Tests.drawio
+S-03 | Runtime enforcement | 4.5.6 | ProcessDiagrams/User_Management/S-03_Runtime_Enforcement.drawio
+S-04 | Officer Hierarchy tree | 4.5.7 | ProcessDiagrams/User_Management/S-04_Officer_Hierarchy_Tree.drawio
+S-05 | Office Hierarchy tree | 4.5.8 | ProcessDiagrams/User_Management/S-05_Office_Hierarchy_Tree.drawio
+S-06 | Span vs action | 4.5.8 | ProcessDiagrams/User_Management/S-06_Span_vs_Action.drawio
+P-07 | DSR Officer user creation | 4.6.1 | ProcessDiagrams/User_Management/P-07_DSR_Officer_User_Creation.drawio
+P-08 | Other Department user creation | 4.6.2 | ProcessDiagrams/User_Management/P-08_Other_Department_User_Creation.drawio
+P-09 | Transfer Out / Relieving | 4.6.3 | ProcessDiagrams/User_Management/P-09_Transfer_Out_Relieving.drawio
+P-10 | Transfer In | 4.6.4 | ProcessDiagrams/User_Management/P-10_Transfer_In.drawio
+P-11 | Occupancy refresh job | 4.6.5 | ProcessDiagrams/User_Management/P-11_Occupancy_Refresh_Job.drawio
+P-12 | Handover timeline | 4.6.4 | ProcessDiagrams/User_Management/P-12_Handover_Timeline.drawio
+P-13 | Temporary Absence / Temporary Charge | 4.6.6 | ProcessDiagrams/User_Management/P-13_Temporary_Absence_Charge.drawio
+[/TABLE]
+
+### [Heading 2] 4.1 User Registration
+
+Registration and creation requirements for all three user categories are defined below (FR-UM-001–FR-UM-004, FR-UM-062–FR-UM-064). The Citizen self-registration workflow is detailed in 4.1.1; the corresponding administrator-driven workflows for DSR Officers and Other Department users are detailed in 4.6 (Administrative User Creation and Role Assignment Workflow).
+[TABLE]
+Req ID | Requirement | Priority
+FR-UM-001 | The system shall support instant self-registration for Public users (Citizens) with no approval workflow. Registration shall capture a preferred Username chosen by the registering user (FR-UM-062), email address, and mobile number. Both the email address and the mobile number shall be verified by separate OTPs before the account is created (FR-UM-063). Aadhaar e-KYC shall be mandatory and must complete successfully before the account is created (FR-UM-085). No security questions shall be asked during Citizen registration (FR-UM-055 retired). | High
+FR-UM-002 | The system shall allow Department users (DSR Officers) to be created only by authorised administrative roles. Creation shall capture KGID — which becomes the Username for this category (FR-UM-062, FR-UM-064) and is the governed unique login identifier — and mobile number. Official email ID shall not be captured during DSR Officer registration. Security questions are not captured for this category. | High
+FR-UM-003 | The system shall allow Other Department users (officers/staff from other government departments) to be created only by authorised administrative roles. Creation shall capture Employee ID or KGID, parent Department Code, official email ID of the parent department, and mobile number. The Username shall be formed by concatenating the Department Code with the Employee ID or KGID (FR-UM-062, FR-UM-064). Security questions are not captured for this category because no self-service mobile reset is offered (FR-UM-065). | High
+FR-UM-004 | The Username shall be the login identifier for all user categories. The Username shall be unique across the entire User Master (a single namespace covering Citizens, DSR Officers, and Other Department users) and the system shall reject creation of a duplicate Username. Email address and mobile number shall not be subject to a uniqueness constraint — the same email or mobile may legitimately appear on more than one account (for example family members sharing a mobile, or an office landline). See FR-UM-062. | High
+FR-UM-062 | The system shall derive the Username by user category: for Public users (Citizens) the Username is a preferred Username entered by the registering user, and the system shall check availability against the whole User Master and reject a Username already in use; for DSR Officers the KGID shall be treated as the Username and shall not be user-selectable; for Other Department users the Username shall be the parent Department Code concatenated with the Employee ID or KGID (format: <DepartmentCode>-<EmployeeID|KGID>), and shall not be user-selectable. The Username shall not be changeable by the user after creation. A correction to a Username (including a KGID or Employee ID correction) shall be performed only by an authorised administrator, with reason and audit trail. | High
+FR-UM-063 | During Citizen self-registration the system shall verify both contact channels before creating the account: an OTP shall be sent to the entered email address and a separate OTP shall be sent to the entered mobile number, and both shall be entered correctly. Aadhaar e-KYC (FR-UM-085) shall also complete successfully before account creation. If either contact verification or Aadhaar e-KYC is not completed, the account shall not be created. Each verification OTP shall be time-limited and single-use, and failed attempts shall be rate-limited and audit-logged. No security questions shall be presented. | High
+FR-UM-064 | For DSR Officers the system shall validate that the KGID is present and unique in the User Master; official email ID shall not be required or captured at DSR registration. For Other Department users the system shall validate that Employee ID or KGID is present, that parent Department Code is selected from a configured department list, and that the derived Username (<DepartmentCode>-<EmployeeID|KGID>) is unique in the User Master; the system shall require an official email ID of the parent department (rather than a personal email address). Where a permitted official email domain list is configured, the system shall validate the entered Other Department email against that list and reject non-official domains. | High
+[/TABLE]
+
+### [Heading 3] 4.1.1 Citizen Self-Registration Workflow (FR-UM-001, FR-UM-062, FR-UM-063, FR-UM-085)
+
+Citizens self-register instantly with no approval workflow. The registering user chooses their own Username, which the system checks for availability across the entire User Master. Both the email address and the mobile number are verified by separate OTPs before the account is created, so neither channel can be claimed without proof of control. Aadhaar e-KYC is mandatory and must succeed before the account is created (FR-UM-085). No security questions are asked during registration (FR-UM-055 retired).
+Approved process diagram — P-01 Citizen Self-Registration — FR-UM-001, FR-UM-062, FR-UM-063, FR-UM-085 — ProcessDiagrams/User_Management/P-01_Citizen_Self_Registration.drawio
+[TABLE]
+Step | Action | Actor / System | Notes
+1 | Open citizen registration; enter name | Citizen | Instant self-registration (FR-UM-001)
+2 | Enter preferred Username; system checks availability | Citizen / System | Rejected if already in use anywhere in User Master (FR-UM-062)
+3 | Enter email address and mobile number | Citizen | No uniqueness constraint on either (FR-UM-004)
+4 | System dispatches an OTP to the entered email address | System | FR-UM-063; time-limited, single-use
+5 | System dispatches a separate OTP to the entered mobile number | System | FR-UM-063; time-limited, single-use
+6 | Enter both OTPs — email and mobile | Citizen | Account not created unless both verify (FR-UM-063)
+7 | Complete mandatory Aadhaar e-KYC | Citizen / System | FR-UM-085; account not created unless e-KYC succeeds; no security questions
+8 | Save — account created; Citizen role assigned | System | FR-UM-001, FR-UM-063, FR-UM-085; no approval workflow; no security questions
+[/TABLE]
+
+### [Heading 2] 4.2 Authentication
+
+[TABLE]
+Req ID | Requirement | Priority
+FR-UM-005 | Public users (Citizens) shall authenticate using Username + Captcha + OTP on every login. OTP shall be sent only to the registered mobile number. | High
+FR-UM-006 | Department users (DSR Officers) shall authenticate using Username (KGID) + Captcha + Face authentication or Biometric authentication on every login. Either face authentication or biometric authentication (e.g. fingerprint) shall satisfy the biometric factor. OTP shall not be required or dispatched for DSR Officer login. | High
+FR-UM-007 | Other Department users shall authenticate using Username (Department Code concatenated with Employee ID or KGID) + Captcha + OTP on every login. Biometric / face authentication shall not be required or offered for Other Department users. OTP shall be sent only to the registered mobile number. | High
+FR-UM-008 | The system shall allow users to log out and terminate their active session. | High
+FR-UM-009 | The system shall not provide password-based login, password reset, or password change for any user category. | High
+FR-UM-069 | The system shall enforce OTP and PIN validity as follows (IST clock): login OTP is valid for five (5) minutes from dispatch; Citizen registration email OTP, registration mobile OTP (FR-UM-063), and lost-mobile reset PIN (FR-UM-056) are each valid for ten (10) minutes from dispatch. On expiry the code is invalid and the user must request a new one. | High
+FR-UM-070 | Login OTPs, registration OTPs, and the FR-UM-056 reset PIN shall be six (6) numeric digits. | High
+FR-UM-071 | The system shall allow a maximum of three (3) incorrect entries per issued OTP or reset PIN. After the third failure that code is invalidated and the user must request a new one. | High
+FR-UM-072 | The system shall enforce a sixty (60) second cooldown between successive OTP or PIN resend requests to the same user and channel (mobile or email), and a maximum of three (3) resends per channel per fifteen (15) minutes. | High
+FR-UM-073 | After five (5) failed login or OTP verification attempts for a Username (separate from FR-UM-056 lost-mobile reset lockout), the system shall lock that Username for fifteen (15) minutes. Unlock is automatic when the lockout expires, or earlier by an authorised administrator with reason and audit trail. FR-UM-056 reset-flow lockout: five (5) failed question or PIN attempts lock that flow for thirty (30) minutes. | High
+FR-UM-074 | The system shall terminate a session after ten (10) minutes of no user activity (idle timeout). Re-authentication is then required (OTP for Citizens and Other Department users; face/biometric authentication for DSR Officers — no OTP). This applies especially to shared SRO counter machines where FR-UM-052/FR-UM-053 fix the session post for the whole session. | High
+FR-UM-075 | The system shall terminate a session after an absolute maximum of four (4) hours from login, even if the user is still active. Re-authentication is required to continue. | High
+FR-UM-076 | The system shall allow only one active session per Username. A new successful login terminates any prior session for that Username (last-login-wins) and shall notify the prior session on next request that it has ended. | High
+FR-UM-052 | After successful authentication, if a DSR Officer has more than one active sanctioned-post occupancy, the system shall present a mandatory post-selection step before entering the application. Each option shall be labelled consistently as "Role — Post Name — Office Name (Office Code)" (see FR-UM-053, FR-UM-054). The user shall select exactly one assigned post for the session. If the officer has only one active occupancy, the system shall auto-select that post and skip the selection screen. Login shall complete under that assigned post only — additional charge of a subordinate post (FR-UM-053) shall not be offered during the login flow. Initial Module Function claims on entering the home page shall derive from the selected assigned post via Post–Role mapping only — not from other post occupancies the officer may hold concurrently. When a post maps to multiple roles, claims are the union of Module Functions for those roles of that single selected post (not a union across multiple assigned posts). Other Department and Citizen users are not subject to post selection. | High
+FR-UM-053 | After login — while the DSR Officer remains in the same session and without requiring logout — the system shall allow the officer to take additional charge of a wholly unoccupied subordinate post under the officer's assigned post (the post selected or auto-selected at login under FR-UM-052) at the same Office, using the DSR Officer Hierarchy Master (FR-UM-043). This is temporary in-office additional charge for the session; no Transfer Order, Reporting Order, or other order document is required (distinct from Transfer In under FR-UM-060). Eligibility: for the assigned Post at the same Office, examine each immediate child post in the hierarchy; that child post shall be offered only if it is wholly unoccupied at that Office — the occupied count is zero (FR-UM-066(b)). A post that has any occupant shall not be offered, even where sanctioned strength has not been fully used. Where a child post is unoccupied, the system shall continue one level further under it (cascade while posts remain unoccupied); a post with any occupant shall block cascading beneath it. Example: an SR logged in at SRO Yeshwanthapura; if no FDA is posted there, additional charge as FDA is allowed; if no SDA is posted under that unoccupied FDA, additional charge as FDA or SDA is allowed; if even one FDA is posted, FDA is not offered and SDA beneath it is not reachable. The officer may hold at most one additional charge subordinate post at a time. While additional charge is active, effective Module Function claims shall be derived from the additional charge post via Post–Role mapping only — assigned-post privileges shall not apply (e.g. a Sub-Registrar acting as FDA under additional charge shall not retain Sub-Registrar signing or approval functions until switching back). The officer may switch back to assigned-post context at any time during the session without logout; on switch-back, claims revert to the assigned post. When no additional charge is active, claims derive from the assigned post only. Selection, switch-back, and reversion shall be audit-logged (actor, assigned post, additional charge post or cleared, office, timestamp). The additional-charge picker shall label each option as "Role — Post Name — Office Name (Office Code)" — the same format as FR-UM-052 post selection and FR-UM-054 header display. | High
+FR-UM-054 | After login, the home page and/or application header shall display the assigned Post (from FR-UM-052) with its mapped Role(s) and Office details using the format "Role — Post Name — Office Name (Office Code)" for the assigned post. When additional charge is active under FR-UM-053, the header shall show which context is currently driving session privileges — either assigned post only, or additional charge post (with assigned post still shown for reference but not active for access). Example with additional charge active: "Assigned: Sub-Registrar (SR) — Sub-Registrar — SRO Yeshwanthapura (OFF-SRO-YESH) | Active context: Additional charge — FDA (Enforcement) — FDA (Enforcement) — SRO Yeshwanthapura (OFF-SRO-YESH)". The officer may switch between assigned-post context and additional charge, or clear additional charge, from this header or an equivalent in-application control without logging out. | High
+FR-UM-055 | RETIRED (v4.19) — Previously required five security questions during Citizen self-registration for lost-mobile reset. Security questions are no longer captured or used. Citizen identity proofing at registration and for lost-mobile reset is via mandatory Aadhaar e-KYC (FR-UM-085, FR-UM-056). | —
+FR-UM-056 | A Public user (Citizen) who has lost access to the registered mobile number shall be able to reset that mobile number before login as follows: the user enters the Username and Captcha; the system performs Aadhaar e-KYC (FR-UM-085) as identity verification; on successful e-KYC the system sends a time-limited, single-use PIN to the registered email address; on correct entry of that PIN the user may enter a new mobile number, which shall itself be verified by an OTP sent to that new number before the change takes effect. Only after the new mobile is verified shall the account's registered mobile be updated and login continue with an OTP to the new mobile. Failed e-KYC and failed PIN entries shall be rate-limited and shall lock the reset flow after a configured number of attempts. The completed change shall be notified to the registered email address and audit-logged. This flow is available only to Public users (Citizens) — see FR-UM-065 for departmental users. No security questions shall be used. | High
+FR-UM-065 | The lost-mobile reset flow (FR-UM-056) shall not be offered to DSR Officers or Other Department users. After login, a DSR Officer shall be able to change their registered mobile number from their own profile / login session: the new number shall be verified by OTP before the change takes effect, and the change shall be audit-logged (FR-UM-013, FR-UM-086). For Other Department users the registered mobile number shall be changed only by an authorised administrator through the User Management admin console, with a reason recorded and a full audit trail. No pre-login self-service path to change the mobile number, email address, or Username shall exist for DSR Officers or Other Department users. | High
+FR-UM-085 | Aadhaar e-KYC shall be mandatory for Public users (Citizens) during self-registration and must complete successfully before the account is created (FR-UM-001, FR-UM-063). Aadhaar e-KYC shall also be used as the identity verification step in the Citizen lost-mobile reset flow (FR-UM-056). e-KYC shall comply with the Aadhaar Act, 2016 and UIDAI guidelines; Aadhaar number / VID handling, consent, and audit shall follow applicable MeitY / UIDAI norms. Aadhaar e-KYC is not required for DSR Officers or Other Department users at registration. | High
+FR-UM-086 | After login, a DSR Officer shall be able to update their registered mobile number from within their authenticated session (profile / account settings) without administrator intervention. The system shall verify the new mobile number by OTP before saving, notify the officer of the change, and write a full audit trail (actor, timestamp, old and new number masked). Official email is out of scope for DSR registration (FR-UM-002); Other Department mobile changes remain administrator-only (FR-UM-065). | High
+[/TABLE]
+See approved process diagram P-02 (Login — all categories) in 4.5.2.1.
+
+### [Heading 2] 4.3 OTP Login and Account Recovery
+
+[TABLE]
+Req ID | Requirement | Priority
+FR-UM-010 | The system shall dispatch the login OTP only to the user's registered mobile number (SMS) within 5 seconds of request. The login OTP shall never be sent to email. Email shall be used for exactly two one-time verification purposes: the email verification OTP during Citizen registration (FR-UM-063), and the reset PIN in the Citizen lost-mobile flow (FR-UM-056). | High
+FR-UM-011 | The system shall validate Captcha before OTP dispatch for all user categories. | High
+FR-UM-012 | Lost-mobile recovery is available only to Public users (Citizens) and shall follow FR-UM-056 (three random security questions of five, plus a PIN to the registered email, plus OTP verification of the new mobile). DSR Officers and Other Department users have no self-service recovery path; their mobile number is changed by an authorised administrator only (FR-UM-065). The system shall not provide password reset. The login OTP remains mobile-only in all cases. | High
+[/TABLE]
+See approved process diagram P-03 (Citizen lost-mobile reset) in 4.5.2.2.
+
+### [Heading 2] 4.4 User Profile Management
+
+[TABLE]
+Req ID | Requirement | Priority
+FR-UM-013 | The system shall allow users to view and update their profile information after login. The Username shall be displayed read-only and shall not be user-editable (FR-UM-062). Public users (Citizens) may update their mobile number after login, verified by an OTP to the new number, and may update their email address, verified by an OTP to the new address. DSR Officers may update their mobile number after login under FR-UM-086 (OTP-verified). For Other Department users, mobile number and official email ID are maintained by an authorised administrator only (FR-UM-065). All such changes shall be audit-logged and notified to the user. Security questions are not part of the profile (FR-UM-055 retired). | High
+FR-UM-014 | The system shall allow users to upload and update a profile photo where applicable. | Medium
+FR-UM-015 | RETIRED (v4.5) — Previously required administrators to deactivate user accounts with reason and audit trail. Superseded by FR-UM-020, which shall require a deactivation reason and audit trail. Number retained for traceability; do not implement separately. | —
+[/TABLE]
+See approved process diagram P-04 (mobile change — DSR self-service / Other Department administrator) in 4.5.2.3.
+
+### [Heading 2] 4.5 Role-Based Access Control (RBAC)
+
+[TABLE]
+Req ID | Requirement | Priority
+FR-UM-016 | The system shall support RBAC using a single unified Role Master. Roles shall be differentiated by Role Category (Citizen, DSR, Other Department) as defined in Section 4.5.1. Users shall be stored in a single User Master differentiated by User Category. | High
+FR-UM-017 | The system shall allow administrators to assign DSR Officers to one or more sanctioned posts with available capacity during user creation (at least one post required; FR-UM-066(a)). There is no Primary/Secondary role or post distinction. At login, the officer selects one active post for the session when multiple posts are assigned (FR-UM-052); session roles shall be those mapped to the selected assigned post via Post–Role mapping. Additional charge under FR-UM-053 is only after login. | High
+FR-UM-028 | There shall be no separate Role Masters or User Masters for Citizens, DSR Officers, or Other Department users. All roles and users shall reside in one Role Master and one User Master respectively, differentiated by Role Category / User Category. | High
+FR-UM-029 | During Other Department user creation, the system shall allow administrators to assign exactly one role from the Role Master filtered by Role Category = Other Department. Posts Master and sanctioned post occupancy do not apply to Other Department users. | High
+FR-UM-030 | At least one sanctioned post with available capacity must be assigned to each DSR Officer at account creation (FR-UM-066(a)). Temporary / time-bound deputation via optional occupancy End Date is removed (v4.19) — post occupancy End Date and Deputation Reason shall not be captured at user creation or post assignment. Formal Transfer out / relieving shall follow FR-UM-057 and FR-UM-058 (including Relieving Reason under FR-UM-087). Transfer In shall follow FR-UM-060 and requires available capacity (FR-UM-066(a)); Joining Date / reserved Transfer In are retired (FR-UM-061, FR-UM-067). Occupancy de-allocation and Sanctioned Posts occupied-count updates shall be applied by the occupancy refresh job (FR-UM-068). | High
+FR-UM-031 | RETIRED (v3.0) — Previously required mandatory end date on Secondary / additional post assignment for DSR Officers. Superseded by removal of Primary/Secondary assignment; optional End Date on any post occupancy is covered by FR-UM-030. Number retained for audit traceability; do not implement. | —
+FR-UM-045 | A DSR Officer may be assigned to multiple sanctioned posts concurrently, provided each selected post has available capacity at assignment (Occupied < Sanctioned Strength — FR-UM-066). Over-capacity assignment shall be blocked. Occupied count shall increase per assigned post (including a reserved Transfer In under FR-UM-067) and decrease when occupancy ends (including after relieving under FR-UM-058). Transfer In assignments shall also require available capacity except where FR-UM-067 reservation against a recorded relieving applies. Occupied counts on the Sanctioned Posts Master shall be recalculated by the occupancy refresh job (FR-UM-068). | High
+FR-UM-066 | The system shall apply two distinct vacancy tests and shall not treat them as interchangeable. (a) Available capacity — used for post assignment during user creation, for Transfer In, and for the post pick lists in those workflows — is satisfied when the occupied count for a Post at an Office is less than the sanctioned strength for that Post at that Office (Occupied < Sanctioned Strength). Occupied for this test shall include active occupancies only. An occupancy with a recorded Relieving Date still counts as occupied until the occupancy refresh job de-allocates it (FR-UM-058, FR-UM-068). Transfer In requires available capacity at the time of recording (FR-UM-060); reserved / pending-join Transfer In occupancies are not used (FR-UM-067 retired). (b) Unoccupied post — used only for the FR-UM-053 post-login additional charge selection — is satisfied only when the occupied count for that Post at that Office is zero (Occupied = 0), irrespective of sanctioned strength. A Post at an Office with sanctioned strength 2 and one occupant therefore has available capacity for assignment but is not unoccupied, and shall not be offered under FR-UM-053. Both counts shall be shown on sanctioned post occupancy screens and reports. | High
+FR-UM-057 | The system shall support a Transfer out / relieving process for DSR Officers. An officer may be relieved from one or more currently assigned post occupancies (Post + Office). When the superior opens Transfer Out / Relieving, the system shall display only the offices that fall under the actor's session Office as per the Office Hierarchy Master (FR-UM-059) — i.e. the actor's own office and descendant offices. Within that office scope, the system shall list and allow relieving only of post occupancies where the actor's session Post is the immediate parent of the target Post in the DSR Officer Hierarchy Master (FR-UM-043). Office span is a first filter only: seeing a descendant office in the tree does not grant relieving of posts that do not report immediately to the actor. Example: District Registrar at DRO Mysuru sees SRO offices under DRO Mysuru and may relieve Sub-Registrar at those SROs (POST-SR reports to POST-DRO); Sub-Registrar at SRO Yeshwanthapura sees only that SRO and may relieve FDA/DEO under Sub-Registrar there. IGR or DIGR at Head Office may see statewide DRO/SRO offices in the span but may relieve only posts that report immediately to their session Post (e.g. IGR relieves DIGR; DIGR (Enforcement) relieves DRO) — not Sub-Registrar at an SRO. While relieving, the system shall capture Relieving Date, Relieving Reason (mandatory — FR-UM-087), and Relieving Order (order number / reference; upload of order document where applicable). Relieving actions shall be audit-logged. Citizens and Other Department users are out of scope for this process. | High
+FR-UM-058 | After a relieving is recorded (FR-UM-057), the system shall retain the user–post occupancy until the end of the Relieving Date. The occupancy refresh job (FR-UM-068) shall de-allocate / remove the mapping of the user to the relieved post after 11:59 PM IST of the Relieving Date (i.e. occupancy ends at the close of that calendar day; the job runs shortly after midnight). Occupied count for that Post + Office shall then decrease unless a reserved Transfer In for the same Post + Office becomes active on the same job run (FR-UM-067). Where the count reaches zero the post also becomes wholly unoccupied and therefore eligible under FR-UM-053 (FR-UM-066). If the user has no remaining active post occupancies after de-allocation, login shall be blocked or limited per policy until a new post is assigned. De-allocation shall be audit-logged. | High
+FR-UM-059 | The system shall maintain an Office Hierarchy Master for DSR offices. Structure: MS Building is the Secretariat office (root); under it is IGR Office (Head Office); under the Head Office are District Registrar Offices (DRO); under each District Registrar Office are Sub-Registrar Offices (SRO). Each Office shall have Office Code, Office Name, Office Type (Secretariat / Head Office / District Registrar Office / Sub-Registrar Office), and optional Parent Office. Application Admin shall add, edit, enable/disable, and update offices with audit trail. Sanctioned Posts and Transfer Out / Transfer In office scoping shall use this hierarchy (FR-UM-024, FR-UM-057, FR-UM-060). POST-ACS-SEC is sanctioned at MS Building (Secretariat). | High
+FR-UM-060 | The system shall support a Transfer In process for DSR Officers. A superior (within office span per FR-UM-059 and immediate-parent post parentage per FR-UM-043, same rules as Transfer Out — office span does not expand parentage) may assign an officer to a sanctioned post (Post + Office) only when that post has available capacity at that office (Occupied < Sanctioned Strength — FR-UM-066(a)). Transfer In shall be blocked when the post is at full strength — there is no reserved / future-dated Transfer In path (FR-UM-067 retired). While processing Transfer In, the system shall capture Transfer Order / Reporting Order (order number / reference; upload of order document where applicable). Joining Date shall not be captured. On confirm, the occupancy becomes active immediately, occupied count is increased, and the officer may select the post at the next login under FR-UM-052. Transfer In actions shall be audit-logged. Citizens and Other Department users are out of scope for this process. | High
+FR-UM-061 | RETIRED (v4.20) — Previously gated Transfer In login until 12:00 AM IST of Joining Date and activated reserved occupancies via FR-UM-068. Joining Date is no longer captured; Transfer In is allowed only when capacity is available and takes effect immediately (FR-UM-060). | —
+FR-UM-067 | RETIRED (v4.20) — Previously allowed future-dated / reserved Transfer In against a full post after relieving was recorded. Transfer In is now permitted only when the target Post + Office already has available capacity (Occupied < Sanctioned Strength — FR-UM-066(a), FR-UM-060). If the post is full, Transfer In remains blocked until relieving has taken effect and capacity is free (FR-UM-058, FR-UM-068). | —
+FR-UM-068 | The system shall run a scheduled occupancy refresh job shortly after midnight IST each calendar day (after 12:00 AM IST). On each run the job shall: (1) de-allocate user–post occupancies whose Relieving Date has ended (FR-UM-058); (2) recalculate and persist occupied count, remaining capacity, and wholly-unoccupied flag on the Sanctioned Posts Master for every Post + Office affected (FR-UM-048, FR-UM-066); (3) refresh the officer's effective post assignments so that login post selection (FR-UM-052) reflects only occupancies that are active as of that day. The job shall be idempotent, audit-logged (run timestamp, occupancies ended, before/after occupied counts), and shall raise an operational alert on failure so that relieving dates are not left unenforced. Reserved Transfer In / Joining Date activation is removed (v4.20; FR-UM-061 and FR-UM-067 retired). Optional occupancy End Date / temporary deputation processing remains removed (v4.19; see FR-UM-030). | High
+FR-UM-077 | The system shall maintain a Division Master — an enumerated list of DSR organisational divisions (Division Code, Division Name, Display Order, Is Active). Posts Master, Hierarchy Master nodes, and Role Master seed groupings shall reference Division Code from this master — free-text division labels shall not be used on new or edited records. Application Admin shall add, edit, enable/disable, and update divisions with audit trail. Seed divisions are listed in Section 4.5.1. | High
+FR-UM-078 | The system shall maintain a Post–Office-Type Allowed mapping defining which Post codes (from Posts Master) may be sanctioned at which Office Types (from Office Hierarchy Master — Secretariat, Head Office, District Registrar Office, Sub-Registrar Office). When creating or updating a Sanctioned Posts row or assigning a post to an officer, the system shall reject combinations not permitted by this mapping (FR-UM-024, FR-UM-048). Seed mapping for all active Posts is listed in Section 4.5.3 (e.g. POST-ACS-SEC only at Secretariat / MS Building; POST-SR, POST-FDA-ENF, POST-SDA-ENF, POST-DEO only at Sub-Registrar Office; POST-DRO only at District Registrar Office; POST-IGR and Head Office division posts only at Head Office). Application Admin shall maintain the mapping with audit trail. | High
+FR-UM-046 | The system shall maintain a separate Posts Master for DSR establishment posts (e.g. Sub-Registrar (SR), FDA (Enforcement), DEO, DRO, HQA (Enforcement)). Each Posts Master row shall reference a Division Code from the Division Master (FR-UM-077). Application Admin shall add, edit, enable/disable, and update posts. Posts Master is distinct from Role Master. | High
+FR-UM-047 | The system shall maintain a Post–Role mapping table. Each Post shall map to the corresponding unique Role(s) from the Role Master. Division-specific posts (e.g. POST-DIGR-ADMIN, POST-DIGR-ENF) shall not be mapped to roles of other divisions, so that assigning one post does not grant Admin + Vigilance + Enforcement access together. Application Admin shall add, edit, and remove mappings with audit trail. One post may map to multiple roles only when those roles intentionally belong to the same post's functional scope (not across unrelated divisions). The system shall block sanctioning or assignment of any Post that has no active Post–Role mapping row — an officer assigned to an unmapped post would receive zero roles (FR-UM-017). Example rows in this BRD are the complete seed mapping for all active Posts; Application Admin may add further mappings with audit trail. Domain Expert (Prabhakar Naik) shall confirm the seed list before go-live. | High
+FR-UM-048 | The Sanctioned Posts Master shall reference a Post from the Posts Master (not Role directly), an Office from the Office Hierarchy Master (by Office Code), and sanctioned strength. The Post + Office Type combination shall be validated against the Post–Office-Type Allowed mapping (FR-UM-078). Strength, occupied count, remaining capacity, and whether the post is wholly unoccupied are maintained per Post per Office (FR-UM-066). Occupied count shall include active occupancies and reserved Transfer In occupancies (FR-UM-067) and shall be recalculated by the occupancy refresh job (FR-UM-068). | High
+FR-UM-049 | Posts Master entries for DSR leadership and staff shall be division-specific where the organisation chart distinguishes them (e.g. POST-DIGR-ADMIN, POST-DIGR-VIG, POST-DIGR-ENF, POST-FDA-ADMIN, POST-FDA-ENF). Generic posts that would map to all division variants of DIGR/AIGR/FDA/SDA are not permitted in seed data. | High
+FR-UM-033 | During Other Department user creation, the system shall allow an optional End Date. If an End Date is entered, the system shall automatically deactivate the user account on that date and block login thereafter. | High
+FR-UM-034 | When assigning a role to a user, the system shall present only roles whose Role Category matches the user's User Category (Citizen roles for Citizens, DSR roles for DSR Officers, Other Department roles for Other Department users). | High
+FR-UM-035 | The Role Master shall include the seed roles listed in Section 4.5.4 for Role Category = Citizen, Role Category = Other Department, and Role Category = DSR (Department). Application Admin may add, edit, or deactivate roles within each Role Category. | High
+FR-UM-036 | The system shall maintain a Module Master of application modules (including Registration of Documents, Marriage Registration, Encumbrance Search, Certified Copy, and others listed in Section 4.5.6). Modules are not DSR organisational roles; they define functional areas to which roles are mapped. Registration of Documents is a single module with no online/offline classification in this master. | High
+FR-UM-037 | The system shall allow Application Admin to map roles to Module Functions (Role–Module–Function mapping). Access to a module capability is granted only through this mapping (except Application Admin system privileges — see FR-UM-051). Each mapping row shall reference an exact Role Master name (unique role name) and a valid Module Function code. Application Admin shall add, edit, and update mappings with audit trail. | High
+FR-UM-039 | The system shall maintain a Module Function Master under each module (e.g. VIEW, ADD, EDIT, APPROVE, SIGN, PRINT, DOWNLOAD). Application Admin shall add, edit, and update module functions. | High
+FR-UM-040 | The system shall maintain a Resource Master of APIs and URLs linked to Module Functions (resource type API or URL, HTTP method, path pattern, Is Public flag). Application Admin shall add, edit, and update resources. Roles shall not store raw API/URL lists; access is resolved via Role → Module Function → Resource. Is Public = Yes marks resources accessible without authentication (deny-by-default otherwise — FR-UM-041). | High
+FR-UM-041 | At runtime the application shall enforce access as follows: resolve the user's session roles (for DSR Officers: assigned post from FR-UM-052 when no additional charge is active; additional charge post only when FR-UM-053 is active); load Role–Module–Function claims per FR-UM-038; for each API/URL request look up the Resource Master using Type + Method + Path pattern matching with the most specific matching pattern taking precedence when multiple patterns match (longer / more specific path wins over shorter prefix). If no resource matches, access shall be denied (HTTP 403) unless the resource is explicitly marked Is Public = Yes in the Resource Master — deny-by-default. Allow only if the user holds the required Module Function for a matched non-public resource; otherwise deny (HTTP 403) and audit the attempt. Application Admin system principals are authorised for FN-UM-ADMIN outside Role–Module–Function mapping (FR-UM-051). | High
+FR-UM-050 | Role–Module–Function mapping entries shall be validated against exact Role Master names (referential integrity). The system shall reject save of a mapping whose Role name does not match an active Role Master entry character-for-character (e.g. bare FDA is invalid when only FDA (Admin), FDA (Enforcement), etc. exist). Post–Role mapping and Hierarchy Master entries shall reference Posts Master Post Name character-for-character (same discipline as Role names). Same integrity pattern as Hierarchy ↔ Posts (FR-UM-044). | High
+FR-UM-051 | Application Admin is a system-level / deployment-seeded actor, not a Role Master seed role and not created via the normal User Master creation workflow. Privileges for maintaining masters (including FN-UM-ADMIN resources) are granted to this principal outside Role–Module–Function mapping. Application Admin shall not appear as a DSR (or other) row in the Role–Module–Function example catalogue. Dual authorisation / maker-checker is not required for user creation or master maintenance in this module. DSR and Other Department user creation does not capture security questions (FR-UM-055, FR-UM-065). | High
+FR-UM-042 | Application Admin shall create, edit, enable/disable, and update Module Master, Module Function Master, Resource Master, and Role–Module–Function mapping tables from the User Management admin console. All changes shall be audit-logged. | High
+FR-UM-038 | A user's effective module access for a session shall be determined as follows: for DSR Officers, when no additional charge is active under FR-UM-053, Module Functions mapped to the assigned post (FR-UM-052) apply; when additional charge is active, only Module Functions mapped to the additional charge subordinate post apply — assigned-post privileges are suspended until the officer switches back to assigned-post context without logout; for Other Department users, the single assigned role; for Citizens, assigned Citizen roles. | High
+FR-UM-018 | The system shall restrict access to features, APIs, and URLs based on the user's assigned role(s) and Role–Module–Function / Resource mappings. | High
+FR-UM-019 | The system shall maintain DSR organizational divisions in the Division Master (FR-UM-077) and DSR roles within the unified Role Master (Role Category = DSR) as defined in Section 4.5.1 and the DSR Officer Hierarchy Master in Section 4.5.7. | High
+FR-UM-043 | The system shall maintain a DSR Officer Hierarchy Master representing the reporting structure of Department officers (organisational chart). Each hierarchy node shall reference a Post from the Posts Master (not a Role) and an optional parent hierarchy node (also a Post). Application Admin shall add, edit, reorder, enable/disable, and update hierarchy nodes with audit trail. Reporting lines are position-based so that a specific post holder has one parent post in the tree. | High
+FR-UM-044 | The DSR Officer Hierarchy Master shall seed and support the structure: Additional Chief Secretary / Principal Secretary / Secretary → Inspector General of Registration & Commissioner of Stamps → Divisions (Admin Law & Computers; Vigilance; Computers; Enforcement; Intelligence & Audit; DIGR CVC) with subordinate posts as listed in Section 4.5.7. Every hierarchy node Post must exist in Posts Master; every mapped Role in Post–Role mapping must exist in Role Master with a unique role name. | High
+FR-UM-024 | The system shall maintain a Sanctioned Posts Master that references Posts Master entries and records sanctioned strength (approved headcount) for each Post at each office. Sanctioned strength applies only to DSR Posts Master entries. Each row shall satisfy Post–Office-Type Allowed rules (FR-UM-078). | High
+FR-UM-025 | The system shall allow Application Admin to configure and update sanctioned strength per Post per office in the Sanctioned Posts Master, with audit trail of changes. Invalid Post + Office Type combinations shall be blocked (FR-UM-078). | High
+FR-UM-026 | DSR department users shall be assigned only to posts defined in the Posts Master and sanctioned in the Sanctioned Posts Master. A user may hold multiple post occupancies. Assignment to an unlisted post, or to a sanctioned post already at full strength (over-capacity), shall be blocked (FR-UM-066(a)). | High
+FR-UM-027 | The system shall display sanctioned strength, occupied count, and remaining vacancies per Post per office, and prevent over-capacity assignment. When assigning posts to a DSR Officer, only sanctioned posts with available capacity shall be selectable (FR-UM-066(a)). Screens shall make clear whether a post is wholly unoccupied or only partly filled, since FR-UM-053 requires a wholly unoccupied post (FR-UM-066(b)). Occupied count shall include reserved Transfer In occupancies (FR-UM-067) and shall be kept current by the occupancy refresh job (FR-UM-068). | High
+FR-UM-032 | The system shall provide dedicated step-by-step workflows for role assignment during user creation for DSR Officers (Section 4.6.1) and Other Department users (Section 4.6.2). | High
+FR-UM-079 | The system shall allow a hierarchy superior to record a Temporary Absence against an active DSR Officer post occupancy (Post + Office). Absence types shall include Leave, OOD (Out of Duty / Office Duty), and Other, with a mandatory reason code, inclusive from_date and to_date (IST calendar days), and optional order reference / uploaded order document. Absence shall be recorded by the superior only — the absent officer shall have no self-service create or approve path. The absence is a linked record on the occupancy; it shall not end the occupancy and shall not substitute for Transfer Out / relieving (FR-UM-057) or deputation End Date (FR-UM-030). Scope to create/amend/cancel shall follow office span (FR-UM-059) and immediate-parent post parentage (FR-UM-043) — the same filters as Transfer Out. Citizens and Other Department users are out of scope. All create, amend, and cancel actions shall be audit-logged. | High
+FR-UM-080 | While an Approved temporary absence covers the current IST calendar day for any of an officer's active post occupancies (effective absence), the system shall deny login for that Username (KGID). The officer shall not select another assigned post under FR-UM-052 for the same period. On cancel of the absence, or after 23:59 IST of to_date (FR-UM-084 / FR-UM-068), login shall be allowed again. The login denial message shall state that the officer is on Leave / OOD / Other until the to_date. | High
+FR-UM-081 | Temporary absence shall not free sanctioned capacity. The absent occupancy shall continue to count toward Occupied for available-capacity tests (FR-UM-066(a)) and for Transfer In available-capacity tests (FR-UM-066(a)). Transfer In shall not treat the post as vacant solely because of absence. Wholly-unoccupied tests for FR-UM-053 additional charge (FR-UM-066(b)) remain Occupied = 0 and are unaffected — an occupied-but-absent post shall not be offered under FR-UM-053. | High
+FR-UM-082 | While an occupancy is under temporary absence (or as part of the same superior workflow), the superior may assign Temporary Charge of that absent Post + Office to another DSR Officer who holds an active occupancy under the same superior (office span FR-UM-059 and posts under the superior in Officer Hierarchy FR-UM-043). Cross-office assignment within the superior's span is allowed — for example a District Registrar may assign temporary charge of Sub-Registrar at SRO A to the Sub-Registrar of SRO B under the same district; an AIGR (Admin) may assign temporary charge of one District Registrar to another District Registrar under them. The covering officer shall not be the absentee and shall not themselves be under effective absence (FR-UM-080). At most one active temporary charge shall exist per absent Post + Office at a time; the superior may cancel and reassign. Temporary charge is dated and linked to the absence; it is not a Transfer In (FR-UM-060), not relieving (FR-UM-057), and not FR-UM-053 session additional charge. Assignment and cancellation shall be audit-logged (optional order reference). | High
+FR-UM-083 | An officer holding an active temporary charge shall authenticate like any DSR Officer. At FR-UM-052 post selection the system shall list their active assigned posts and each active temporary-charge Post + Office, labelled for example "Temporary charge — Role — Post Name — Office Name (Office Code) — covering <Absent Officer Name>". Selecting a temporary-charge row sets session Module Function claims from that covered post via Post–Role mapping only (one active context; same spirit as FR-UM-038). The officer may switch back to an assigned-post context without logout where the product provides an in-session control (same pattern as FR-UM-053 switch-back). FR-UM-054 / header display shall show which context is active and the office of the covered post. Temporary charge is distinct from FR-UM-053: it is superior-assigned, may be cross-office, and applies while the primary occupancy remains occupied. | High
+FR-UM-084 | Temporary absence is effective through 23:59 IST of to_date. The occupancy refresh job (FR-UM-068) — or equivalent day-boundary evaluation — shall clear effective absence and end linked temporary charge mappings after that boundary, and shall remove temporary-charge rows from FR-UM-052 for subsequent logins. Superior cancel of absence or of temporary charge shall take effect immediately for login and post selection. The system shall provide an absence and temporary-charge report (officer, Post + Office, type, reason, dates, cover officer, actor, timestamps) and shall retain audit history for at least seven years consistent with other UM audit events. | High
+FR-UM-087 | During Transfer Out / Relieving (FR-UM-057) the system shall require a Relieving Reason selected from the following enumerated list only: Deputation; Transfer; Suspension; Superannuation; Death. Free-text reasons shall not replace the enumerated code. The selected Relieving Reason shall be stored with the relieving record, shown in Transfer history reports, and included in the audit trail. | High
+[/TABLE]
+
+### [Heading 3] 4.5.1 Unified Role Master and User Master
+
+The system shall maintain a single Role Master and a single User Master for all user types. There shall be no separate masters for Citizens, DSR Officers, or Other Department users. Differentiation is by Role Category on roles and User Category on users. When assigning a role, the system shall filter the Role Master to roles matching the user's User Category (FR-UM-034).
+[TABLE]
+Master | Differentiator | Values | Purpose
+User Master | User Category | Public (Citizen); DSR Officer; Other Department | One user store; category drives auth, creation path, and eligible roles
+Role Master | Role Category | Citizen; DSR; Other Department | One role store; category filters which roles can be assigned to which users
+[/TABLE]
+Figure — S-01 Access Model — FR-UM-004, FR-UM-009, FR-UM-029, FR-UM-034, FR-UM-052, FR-UM-062 — ProcessDiagrams/User_Management/S-01_Access_Model.drawio
+Division Master (FR-UM-077):
+DSR divisions are governed by the Division Master — not free text. Posts Master, Hierarchy Master, and role catalogues reference Division Code from this master. DIV-ADMIN's name, "Admin, Law & Computers," reflects the policy/administrative portfolio of the DIGR (Admin, Law & Computers) post at the top of that branch; it is a distinct division from DIV-COMPUTERS ("Computers"), which holds the separate operational IT posts (System Integrator, Application Developer, PMU, Sub Registrar (Computers), etc.) — the two shall not be confused when assigning Division Code.
+[TABLE]
+Division Code | Division Name | Display Order | Status
+DIV-SECRETARIAT | Secretariat | 1 | Active
+DIV-TOP-MGMT | Top Management | 2 | Active
+DIV-ADMIN | Admin, Law & Computers | 3 | Active
+DIV-VIGILANCE | Vigilance | 4 | Active
+DIV-COMPUTERS | Computers | 5 | Active
+DIV-ENFORCEMENT | Enforcement | 6 | Active
+DIV-INT-AUDIT | Intelligence & Audit | 7 | Active
+DIV-CVC | DIGR CVC | 8 | Active
+[/TABLE]
+DSR roles in the Role Master (Role Category = DSR) are organised by division. Role names shall be unique (e.g. FDA (Admin), FDA (Enforcement) — not a single shared FDA). Summary:
+[TABLE]
+Division (FR-UM-077) | Roles (Role Category = DSR) — unique names
+DIV-SECRETARIAT | ACS / Principal Secretary / Secretary
+DIV-TOP-MGMT | IGR
+DIV-ADMIN | DIGR (Admin, Law & Computers), AIGR (Admin), HQA (Admin), Sub Registrar (Admin), FDA (Admin), SDA (Admin), Typist (Admin), HQA (RTI), FDA (RTI), SDA (RTI), Statistical Inspector, Accountant Superintendent (Admin)
+DIV-VIGILANCE | DIGR (Vigilance), Law Officer
+DIV-COMPUTERS | AIGR (Computers), System Integrator, PMU, Application Developer, HQA / Project Manager (Comp), Sub Registrar (Computers), FDA (Computers), SDA (Computers)
+DIV-ENFORCEMENT | DIGR (Enforcement), DRO, HQA (Enforcement), Sub-Registrar (SR), FDA (Enforcement), SDA (Enforcement), DEO
+DIV-INT-AUDIT | DIGR (Intelligence), AIGR (Audit), HQA (Audit), Superintendent (Audit), FDA (Audit), SDA (Audit), Typist (Audit)
+DIV-CVC | DIGR CVC, JD Town Planning
+[/TABLE]
+
+### [Heading 3] 4.5.2 User Categories and Authentication
+
+All users are stored in the single User Master, differentiated by User Category. All user categories authenticate without passwords. Login uses the Username; the login OTP is sent only to the registered mobile. Captcha is required before OTP dispatch. The Username is a preferred Username chosen by the Citizen at registration, the KGID for DSR Officers, and Department Code concatenated with Employee ID or KGID for Other Department users (FR-UM-062). The Username is the single unique login identifier across the whole User Master; email address and mobile number carry no uniqueness constraint (FR-UM-004). DSR Officers authenticate with Captcha + face authentication or biometrics and without OTP (FR-UM-006); Other Department users use Captcha + OTP and do not use biometrics (FR-UM-007). Citizens complete mandatory Aadhaar e-KYC at registration (FR-UM-085), may update their mobile after login (FR-UM-013), and may reset a lost mobile before login using Aadhaar e-KYC plus a PIN to the registered email (FR-UM-056). DSR Officers may change their mobile after login (FR-UM-086); Other Department users are served by an administrator (FR-UM-065). DSR Officers with multiple active post occupancies must select one post (with office details) after authentication before entering the application (FR-UM-052). After login they may take additional charge of a wholly unoccupied subordinate post at the same office without logout (FR-UM-053). The home/header shows the assigned Post with mapped Role(s) and any active additional charge (FR-UM-054). OTP and session rules are defined in FR-UM-069–FR-UM-076 (login OTP 5 minutes, idle timeout 10 minutes, absolute session 4 hours, one session per Username).
+Terminology: Sub-Registrar Office (abbreviated SRO in Office Hierarchy) is an office type only. Role Master names use Sub Registrar (Admin) or Sub Registrar (Computers) — not SRO (Admin) or SRO (Comp) — to avoid confusion with the office abbreviation.
+[TABLE]
+User Category | Username | Authentication | Lost-mobile reset
+Public users (Citizens) — User Category = Public (Citizen) | Preferred Username chosen at registration (FR-UM-062) | Username + Captcha + OTP to mobile; Aadhaar e-KYC at registration (FR-UM-085) | Self-service: Aadhaar e-KYC + PIN to registered email + OTP to new mobile (FR-UM-056)
+Department users (DSR Officers) — User Category = DSR Officer | KGID (FR-UM-062, FR-UM-064) | Username (KGID) + Captcha + Face authentication or Biometrics (no OTP); then FR-UM-052 | Self-service after login (FR-UM-086); no pre-login reset — admin path not required for routine mobile change
+Other Department users — User Category = Other Department | Department Code + Employee ID or KGID (FR-UM-062, FR-UM-064) | Username + Captcha + OTP to mobile (no biometrics) | Not available — administrator changes mobile with reason and audit (FR-UM-065)
+[/TABLE]
+
+### [Heading 4] 4.5.2.1 Login — All User Categories (FR-UM-004–FR-UM-007, FR-UM-010, FR-UM-011, FR-UM-062)
+
+Login uses the Username — the preferred Username for Citizens, the KGID for DSR Officers, and Department Code concatenated with Employee ID or KGID for Other Department users. Because the Username is unique across the whole User Master, the account is resolved unambiguously from the Username alone and no category selection is needed. Citizens and Other Department users receive a login OTP by SMS to the registered mobile (never by email). DSR Officers do not use OTP; they complete Captcha plus face or biometric authentication (FR-UM-006).
+Approved process diagram — P-02 Login (all categories) — 4.5.2.1 — FR-UM-004, FR-UM-005, FR-UM-006, FR-UM-007, FR-UM-010, FR-UM-011, FR-UM-062 — ProcessDiagrams/User_Management/P-02_Login_All_Categories.drawio
+[TABLE]
+Step | Action | Actor / System | Notes
+1 | Enter Username and Captcha | User | Citizen: preferred Username; DSR: KGID; Other Dept: Dept Code + Emp ID/KGID (FR-UM-062)
+2 | Validate Captcha; look up the account by Username | System | FR-UM-011; Username unique across User Master (FR-UM-004)
+3 | Dispatch login OTP to the registered mobile only (Citizens and Other Department) | System | FR-UM-010; never to email; not used for DSR Officer login (FR-UM-006)
+4 | Citizen / Other Dept: enter OTP; DSR: Face authentication or Biometrics (no OTP) | User | FR-UM-005 / FR-UM-006 / FR-UM-007
+5 | If a Citizen cannot receive the OTP — leave login for lost-mobile reset | Citizen / System | FR-UM-056; Citizens only
+6 | On success — enter home under assigned post (DSR: FR-UM-052 only at login) | System | Session established; FR-UM-053 available after login
+7 | After login — Citizen or DSR Officer may update mobile from profile | Citizen | FR-UM-013, FR-UM-086; Other Department via administrator (FR-UM-065)
+[/TABLE]
+
+### [Heading 4] 4.5.2.2 Citizen Lost-Mobile Reset — Aadhaar e-KYC Plus PIN to Registered Email (FR-UM-056, FR-UM-085)
+
+This flow exists because the login OTP goes only to the registered mobile, so a citizen who has lost that number cannot otherwise log in. It requires two independent proofs before the mobile number can be changed: successful Aadhaar e-KYC (FR-UM-085), and a single-use PIN sent to the registered email address. The new mobile number is itself verified by OTP before the change takes effect. No security questions are used. This flow is available only to Public users (Citizens).
+Approved process diagram — P-03 Citizen Lost-Mobile Reset — 4.5.2.2 — FR-UM-056, FR-UM-085 — ProcessDiagrams/User_Management/P-03_Citizen_Lost_Mobile_Reset.drawio
+[TABLE]
+Step | Action | Actor / System | Notes
+1 | On the login screen choose "Lost / changed mobile number" | Citizen | Offered to Citizens only (FR-UM-056, FR-UM-065)
+2 | Enter Username and Captcha | Citizen | Username identifies the account (FR-UM-062)
+3 | System initiates Aadhaar e-KYC for identity verification | System / Citizen | FR-UM-085, FR-UM-056; replaces security questions
+4 | Complete Aadhaar e-KYC successfully | Citizen | Must succeed before PIN dispatch; rate-limited
+5 | On success — system sends a single-use, time-limited PIN to the registered email | System | Second independent factor (FR-UM-056)
+6 | Enter the PIN | Citizen | Flow locked after configured failed attempts
+7 | Enter the new mobile number | Citizen | Replaces the lost number
+8 | System sends an OTP to the new mobile; citizen enters it | System / Citizen | Change takes effect only after this verification
+9 | Update registered mobile; notify registered email; write audit log | System | FR-UM-056; actor, timestamp, old and new number (masked)
+10 | Continue login with OTP to the new mobile | System | FR-UM-005
+[/TABLE]
+
+### [Heading 4] 4.5.2.3 Mobile Change — DSR Self-Service After Login; Other Department Administrator Only (FR-UM-065, FR-UM-086)
+
+DSR Officers and Other Department users are not offered the FR-UM-056 pre-login reset path, and no security questions are held for them. A DSR Officer who needs to change the registered mobile after login does so from their own session (FR-UM-086) with OTP verification of the new number. An Other Department user who has lost the registered mobile is served by an authorised administrator, who records a reason and whose action is audit-logged (FR-UM-065). There is no pre-login self-service route to redirect a departmental OTP.
+Approved process diagram — P-04 Departmental Mobile Change — 4.5.2.3 — FR-UM-065, FR-UM-086 — ProcessDiagrams/User_Management/P-04_Departmental_Mobile_Change.drawio
+[TABLE]
+Step | Action | Actor / System | Notes
+1 | Other Department user reports the lost / changed mobile to the authorised administrator (DSR Officers use self-service after login — FR-UM-086) | Other Dept user | Identity verified off-system per departmental procedure; DSR path is FR-UM-086
+2 | Administrator opens User Management and locates the Other Department user by Username | Admin | Authorised admin role only (FR-UM-065)
+3 | Administrator enters the new mobile number and a reason | Admin | Reason mandatory (FR-UM-065)
+4 | System verifies the new number by OTP before saving | System / Officer | OTP to the new mobile
+5 | Save — mobile updated; audit-logged; user notified on official email | System | FR-UM-065, FR-UM-013
+6 | User logs in: Other Dept with Username + Captcha + OTP; DSR with Username + Captcha + Face/Biometrics (no OTP) | Officer | FR-UM-007 / FR-UM-006; FR-UM-086 for DSR mobile change
+[/TABLE]
+
+### [Heading 4] 4.5.2.4 Login Post Selection — DSR Officers (FR-UM-052)
+
+Applies only to DSR Officers. After Username (KGID) + Captcha + Face authentication or Biometrics succeed (no OTP), the system loads the officer's active sanctioned-post occupancies. If more than one is active, the user must choose which post to work under for this session. Each choice shows Post Name and Office details so dual-charge / multi-office officers can pick the correct context.
+Approved process diagram — P-05 DSR Login — Post Selection — 4.5.2.4 — FR-UM-052 — ProcessDiagrams/User_Management/P-05_DSR_Login_Post_Selection.drawio
+[TABLE]
+Step | Action | Actor / System | Notes
+1 | Authenticate (Username (KGID) + Captcha + Face authentication or Biometrics — no OTP) | DSR Officer / Auth | FR-UM-006
+2 | Load active post occupancies (Post + Office) | System | Relieved occupancies excluded after Relieving Date ends (FR-UM-058, FR-UM-068)
+3a | If exactly one active post — auto-select; continue to home | System | No selection UI; only active occupancies (FR-UM-052)
+3b | If two or more active posts — show post selection list labelled Role — Post Name — Office Name (Office Code) | System / UI | Mandatory; cannot skip (FR-UM-052); only posts effective for login
+4 | Display each option as Role — Post Name — Office Name (Office Code) | UI | Same unified label as FR-UM-052 / FR-UM-053 / FR-UM-054; Office details mandatory on each row
+5 | User selects exactly one assigned post and confirms | DSR Officer | Assigned post stored on session (FR-UM-052)
+6 | Resolve Module Function claims from assigned post; enter home | UM / Auth | FR-UM-038; FR-UM-053 not offered at login
+7 | Display assigned Post with mapped Role(s) on home/header | UI | FR-UM-054
+[/TABLE]
+
+### [Heading 4] 4.5.2.5 Additional Charge of Unoccupied Subordinate Post After Login (DSR Officers — FR-UM-053) and Display (FR-UM-054)
+
+Additional charge is temporary in-office cover for a wholly unoccupied subordinate post — like holding an extra desk for the session — and does not require an order. It happens only after login under the assigned post (FR-UM-052), without logout. A subordinate post qualifies only when nobody is posted against it at that Office (Occupied = 0 — FR-UM-066(b)). While additional charge is active, session privileges derive from the additional charge post only — assigned-post privileges do not apply (FR-UM-038). At most one additional charge post may be active at a time; the officer may switch back to assigned-post context without logging out to restore assigned-post privileges.
+Approved process diagram — P-06 Additional Charge After Login — 4.5.2.5 — FR-UM-053, FR-UM-054 — ProcessDiagrams/User_Management/P-06_Additional_Charge_After_Login.drawio
+[TABLE]
+Step | Action | Actor / System | Notes
+1 | Officer is logged in under assigned Post + Office (FR-UM-052) | DSR Officer / System | FR-UM-006, FR-UM-052
+2 | From header or control — open Additional charge | DSR Officer / UI | Post-login only; no logout
+3 | Read Hierarchy Master children of assigned Post at same Office | System | FR-UM-043
+4 | List wholly unoccupied subordinate posts (cascade rules; FR-UM-066(b)) | System | Partial vacancy does not qualify
+5 | Show options: Role + Post (+ Office); option to clear additional charge | UI | At most one additional charge active
+6 | Officer selects subordinate post, switches back to assigned post, or clears additional charge | DSR Officer | No order required; one active context at a time
+7 | Recompute Module Function claims for active context only — additional charge OR assigned post (FR-UM-038) | UM / Auth | SR acting as FDA loses SR signing until switch-back
+8 | Update header — assigned post + active context label (FR-UM-054) | UI | Shows which context drives access
+9 | Audit log selection or reversion | System | Mandatory (FR-UM-053)
+[/TABLE]
+Illustrative example (SR logged in at SRO Yeshwanthapura — additional charge after login). Only wholly unoccupied subordinate posts at the same Office (OFF-SRO-YESH) are offered (FR-UM-053); posts at other offices are never offered:
+[TABLE]
+Office | Post under the login post (Sub-Registrar) | Sanctioned | Occupied | Offered for additional charge (FR-UM-053)? | Drop-down entry (Role — Post Name — Office Name (Office Code))
+SRO Yeshwanthapura | Sub-Registrar (assigned post) | 1 | 1 (self) | Not applicable — assigned post is not additional charge | Assigned: Sub-Registrar (SR) — Sub-Registrar — SRO Yeshwanthapura (OFF-SRO-YESH)
+SRO Yeshwanthapura | → FDA (Enforcement) | 2 | 1 | No — an FDA is posted, so the post is not unoccupied | Not listed
+SRO Yeshwanthapura | → → SDA (Enforcement) under FDA | 1 | 0 | No — unreachable; the occupied FDA blocks the cascade | Not listed
+SRO Yeshwanthapura | → Data Entry Operator | 2 | 0 | Yes — nobody is posted against it at this office | DEO — Data Entry Operator — SRO Yeshwanthapura (OFF-SRO-YESH)
+SRO Jayanagar (different office) | → FDA (Enforcement) / SDA (Enforcement) | 2 / 1 | 0 / 0 | No — never offered; additional charge is same Office only (FR-UM-053). Empty posts at Jayanagar are occupancy facts for that office, not picker options here. | Not listed
+After login — additional charge | — | — | — | SR may switch to additional charge as DEO — SR signing not available until switch-back (FR-UM-038) | Active context: Additional charge — DEO — Data Entry Operator — SRO Yeshwanthapura (OFF-SRO-YESH); switch back for SR privileges (FR-UM-054)
+[/TABLE]
+
+### [Heading 4] 4.5.2.6 Assigned Post and Additional Charge Display (FR-UM-054)
+
+On the home page and/or application header, the system shall always show the assigned Post Name, Office, and Role(s) from login (FR-UM-052). When additional charge is active, the header shall clearly indicate which context is driving session privileges — assigned post or additional charge post — while still showing the assigned post for reference. Example without additional charge: "Sub-Registrar (SR) — Sub-Registrar — SRO Yeshwanthapura (OFF-SRO-YESH)". Example with additional charge active: "Assigned: Sub-Registrar (SR) — Sub-Registrar — SRO Yeshwanthapura (OFF-SRO-YESH) | Active context: Additional charge — FDA (Enforcement) — FDA (Enforcement) — SRO Yeshwanthapura (OFF-SRO-YESH)". The officer opens the additional-charge control from here without logging out.
+
+### [Heading 3] 4.5.3 Posts Master, Post–Role Mapping, and Sanctioned Posts
+
+Posts Master is separate from Role Master. Posts shall be division-specific where the organisation chart distinguishes them (FR-UM-049), so that Post–Role mapping does not over-provision access across Admin, Vigilance, and Enforcement. Sanctioned Posts Master references Posts Master (Post + Office + strength). Post–Role mapping links each Post to its corresponding unique Role(s). DSR Officers are assigned sanctioned posts that have available capacity; at login the officer selects one active post when multiple are assigned (FR-UM-052). Effective access follows the active context only: assigned post when no additional charge is active, or additional charge post when FR-UM-053 is active — not both simultaneously (FR-UM-038). Over-capacity assignment is blocked (FR-UM-026, FR-UM-027, FR-UM-045). FR-UM-066: assignment and Transfer In need available capacity (Occupied < Sanctioned Strength), except FR-UM-067 reservation against a recorded relieving; FR-UM-053 additional charge needs a wholly unoccupied post (Occupied = 0). Occupied counts are refreshed after midnight (FR-UM-068). Sanctioned posts must satisfy Post–Office-Type Allowed rules (FR-UM-078).
+Posts Master — seed rows (division-specific; Division Code from Division Master — FR-UM-077):
+[TABLE]
+Post Code | Post Name | Division Code (FR-UM-077) | Status
+POST-ACS-SEC | Additional Chief Secretary / Principal Secretary / Secretary | DIV-SECRETARIAT | Active
+POST-IGR | Inspector General of Registration & Commissioner of Stamps | DIV-TOP-MGMT | Active
+POST-DIGR-ADMIN | DIGR (Admin, Law & Computers) | DIV-ADMIN | Active
+POST-AIGR-ADMIN | AIGR (Admin) | DIV-ADMIN | Active
+POST-HQA-ADMIN | HQA (Admin) | DIV-ADMIN | Active
+POST-SR-ADMIN | Sub Registrar (Admin) | DIV-ADMIN | Active
+POST-ACCT-SUP | Accountant Superintendent (Admin) | DIV-ADMIN | Active
+POST-FDA-ADMIN | FDA (Admin) | DIV-ADMIN | Active
+POST-SDA-ADMIN | SDA (Admin) | DIV-ADMIN | Active
+POST-TYPIST-ADMIN | Typist (Admin) | DIV-ADMIN | Active
+POST-HQA-RTI | HQA (RTI) | DIV-ADMIN | Active
+POST-FDA-RTI | FDA (RTI) | DIV-ADMIN | Active
+POST-SDA-RTI | SDA (RTI) | DIV-ADMIN | Active
+POST-SI | Statistical Inspector | DIV-ADMIN | Active
+POST-DIGR-VIG | DIGR (Vigilance) | DIV-VIGILANCE | Active
+POST-LAW-OFF | Law Officer | DIV-VIGILANCE | Active
+POST-AIGR-COMP | AIGR (Computers) | DIV-COMPUTERS | Active
+POST-SI-INT | System Integrator | DIV-COMPUTERS | Active
+POST-APP-DEV | Application Developer | DIV-COMPUTERS | Active
+POST-PMU | PMU | DIV-COMPUTERS | Active
+POST-HQA-COMP | HQA / Project Manager (Comp) | DIV-COMPUTERS | Active
+POST-SR-COMP | Sub Registrar (Computers) | DIV-COMPUTERS | Active
+POST-FDA-COMP | FDA (Computers) | DIV-COMPUTERS | Active
+POST-SDA-COMP | SDA (Computers) | DIV-COMPUTERS | Active
+POST-DIGR-ENF | DIGR (Enforcement) | DIV-ENFORCEMENT | Active
+POST-DRO | District Registrar | DIV-ENFORCEMENT | Active
+POST-HQA-ENF | HQA (Enforcement) | DIV-ENFORCEMENT | Active
+POST-SR | Sub-Registrar | DIV-ENFORCEMENT | Active
+POST-FDA-ENF | FDA (Enforcement) | DIV-ENFORCEMENT | Active
+POST-SDA-ENF | SDA (Enforcement) | DIV-ENFORCEMENT | Active
+POST-DEO | Data Entry Operator | DIV-ENFORCEMENT | Active
+POST-DIGR-INT | DIGR (Intelligence) | DIV-INT-AUDIT | Active
+POST-AIGR-AUDIT | AIGR (Audit) | DIV-INT-AUDIT | Active
+POST-HQA-AUDIT | HQA (Audit) | DIV-INT-AUDIT | Active
+POST-SUP-AUDIT | Superintendent (Audit) | DIV-INT-AUDIT | Active
+POST-FDA-AUDIT | FDA (Audit) | DIV-INT-AUDIT | Active
+POST-SDA-AUDIT | SDA (Audit) | DIV-INT-AUDIT | Active
+POST-TYPIST-AUDIT | Typist (Audit) | DIV-INT-AUDIT | Active
+POST-DIGR-CVC | DIGR CVC | DIV-CVC | Active
+POST-JD-TP | JD Town Planning | DIV-CVC | Active
+[/TABLE]
+Post–Role mapping — seed rows for all active Posts (division-aligned; avoid cross-division over-provisioning). Post Name must match Posts Master character-for-character (FR-UM-050). FR-UM-047 blocks sanction or assignment of any Post with no mapping row:
+[TABLE]
+Post Code | Post Name | Mapped Role (unique name) | Notes
+POST-ACS-SEC | Additional Chief Secretary / Principal Secretary / Secretary | ACS / Principal Secretary / Secretary | 1:1 — hierarchy root; sanctioned at MS Building
+POST-IGR | Inspector General of Registration & Commissioner of Stamps | IGR | 1:1
+POST-DIGR-ADMIN | DIGR (Admin, Law & Computers) | DIGR (Admin, Law & Computers) | Not mapped to Vigilance/Enforcement DIGR roles
+POST-AIGR-ADMIN | AIGR (Admin) | AIGR (Admin) | 1:1
+POST-HQA-ADMIN | HQA (Admin) | HQA (Admin) | 1:1
+POST-SR-ADMIN | Sub Registrar (Admin) | Sub Registrar (Admin) | 1:1
+POST-ACCT-SUP | Accountant Superintendent (Admin) | Accountant Superintendent (Admin) | 1:1
+POST-FDA-ADMIN | FDA (Admin) | FDA (Admin) | Unique role — not shared FDA
+POST-SDA-ADMIN | SDA (Admin) | SDA (Admin) | Unique role
+POST-TYPIST-ADMIN | Typist (Admin) | Typist (Admin) | 1:1
+POST-HQA-RTI | HQA (RTI) | HQA (RTI) | 1:1
+POST-FDA-RTI | FDA (RTI) | FDA (RTI) | 1:1
+POST-SDA-RTI | SDA (RTI) | SDA (RTI) | 1:1
+POST-SI | Statistical Inspector | Statistical Inspector | 1:1
+POST-DIGR-VIG | DIGR (Vigilance) | DIGR (Vigilance) | 1:1 — division-specific
+POST-LAW-OFF | Law Officer | Law Officer | 1:1
+POST-AIGR-COMP | AIGR (Computers) | AIGR (Computers) | 1:1
+POST-SI-INT | System Integrator | System Integrator | 1:1
+POST-APP-DEV | Application Developer | Application Developer | 1:1
+POST-PMU | PMU | PMU | 1:1
+POST-HQA-COMP | HQA / Project Manager (Comp) | HQA / Project Manager (Comp) | 1:1
+POST-SR-COMP | Sub Registrar (Computers) | Sub Registrar (Computers) | 1:1 — Post Name matches Role
+POST-FDA-COMP | FDA (Computers) | FDA (Computers) | 1:1
+POST-SDA-COMP | SDA (Computers) | SDA (Computers) | 1:1
+POST-DIGR-ENF | DIGR (Enforcement) | DIGR (Enforcement) | 1:1 — division-specific
+POST-DRO | District Registrar | DRO | 1:1
+POST-HQA-ENF | HQA (Enforcement) | HQA (Enforcement) | 1:1
+POST-SR | Sub-Registrar | Sub-Registrar (SR) | Field signing post
+POST-FDA-ENF | FDA (Enforcement) | FDA (Enforcement) | Unique role
+POST-SDA-ENF | SDA (Enforcement) | SDA (Enforcement) | Unique role
+POST-DEO | Data Entry Operator | DEO | 1:1
+POST-DIGR-INT | DIGR (Intelligence) | DIGR (Intelligence) | 1:1
+POST-AIGR-AUDIT | AIGR (Audit) | AIGR (Audit) | 1:1
+POST-HQA-AUDIT | HQA (Audit) | HQA (Audit) | 1:1
+POST-SUP-AUDIT | Superintendent (Audit) | Superintendent (Audit) | 1:1
+POST-FDA-AUDIT | FDA (Audit) | FDA (Audit) | Unique role
+POST-SDA-AUDIT | SDA (Audit) | SDA (Audit) | 1:1
+POST-TYPIST-AUDIT | Typist (Audit) | Typist (Audit) | 1:1
+POST-DIGR-CVC | DIGR CVC | DIGR CVC | 1:1
+POST-JD-TP | JD Town Planning | JD Town Planning | 1:1
+[/TABLE]
+Sanctioned Posts Master — references Posts Master (example rows; the last two columns show the two distinct vacancy tests of FR-UM-066 — note that FDA (Enforcement) at SRO Yeshwanthapura has capacity for another appointment yet is not available for FR-UM-053 acting):
+[TABLE]
+Office Code | Office Name | Post Code | Post Name | Sanctioned Strength | Occupied | Vacancies remaining | Available capacity — FR-UM-066(a) | Wholly unoccupied — FR-UM-066(b)
+OFF-MS-BLDG | MS Building | POST-ACS-SEC | Additional Chief Secretary / Principal Secretary / Secretary | 1 | 1 | 0 | No — full | No
+OFF-SRO-YESH | SRO Yeshwanthapura | POST-SR | Sub-Registrar | 1 | 1 | 0 | No — full | No
+OFF-SRO-YESH | SRO Yeshwanthapura | POST-FDA-ENF | FDA (Enforcement) | 2 | 1 | 1 | Yes — may assign one more | No — an FDA is posted
+OFF-SRO-YESH | SRO Yeshwanthapura | POST-SDA-ENF | SDA (Enforcement) | 1 | 0 | 1 | Yes | Yes
+OFF-SRO-YESH | SRO Yeshwanthapura | POST-DEO | Data Entry Operator | 2 | 0 | 2 | Yes | Yes
+OFF-SRO-JAY | SRO Jayanagar | POST-FDA-ENF | FDA (Enforcement) | 2 | 0 | 2 | Yes | Yes
+OFF-SRO-JAY | SRO Jayanagar | POST-SDA-ENF | SDA (Enforcement) | 1 | 0 | 1 | Yes | Yes
+OFF-DRO-MYS | DRO Mysuru | POST-DRO | District Registrar | 1 | 1 | 0 | No — full | No
+OFF-DRO-MYS | DRO Mysuru | POST-HQA-ENF | HQA (Enforcement) | 1 | 0 | 1 | Yes | Yes
+OFF-IGR | IGR Office (Head Office) | POST-DIGR-ADMIN | DIGR (Admin, Law & Computers) | 1 | 1 | 0 | No — full | No
+OFF-IGR | IGR Office (Head Office) | POST-DIGR-ENF | DIGR (Enforcement) | 1 | 0 | 1 | Yes | Yes
+[/TABLE]
+Figure — S-02 Two Vacancy Tests — FR-UM-066 — ProcessDiagrams/User_Management/S-02_Two_Vacancy_Tests.drawio
+Post–Office-Type Allowed mapping — seed rows for all active Posts (FR-UM-078):
+[TABLE]
+Post Code | Allowed Office Type(s) | Notes
+POST-ACS-SEC | Secretariat | ACS / Secretary at MS Building only
+POST-IGR | Head Office | IGR at IGR Office
+POST-DIGR-ADMIN | Head Office | Admin DIGR
+POST-AIGR-ADMIN | Head Office | Admin AIGR
+POST-HQA-ADMIN | Head Office | Admin HQ
+POST-SR-ADMIN | Head Office | Admin Sub Registrar
+POST-ACCT-SUP | Head Office | Admin accounts
+POST-FDA-ADMIN | Head Office | Admin FDA
+POST-SDA-ADMIN | Head Office | Admin SDA
+POST-TYPIST-ADMIN | Head Office | Admin Typist
+POST-HQA-RTI | Head Office | RTI HQ
+POST-FDA-RTI | Head Office | RTI FDA
+POST-SDA-RTI | Head Office | RTI SDA
+POST-SI | Head Office | Statistical Inspector
+POST-DIGR-VIG | Head Office | Vigilance DIGR
+POST-LAW-OFF | Head Office | Law Officer
+POST-AIGR-COMP | Head Office | Computers AIGR
+POST-SI-INT | Head Office | System Integrator
+POST-APP-DEV | Head Office | Application Developer
+POST-PMU | Head Office | PMU
+POST-HQA-COMP | Head Office | Computers HQ / PM
+POST-SR-COMP | Head Office | Sub Registrar (Computers)
+POST-FDA-COMP | Head Office | Computers FDA
+POST-SDA-COMP | Head Office | Computers SDA
+POST-DIGR-ENF | Head Office | Enforcement DIGR
+POST-DRO | District Registrar Office | District Registrar only at DRO
+POST-HQA-ENF | District Registrar Office, Head Office | Enforcement HQA at DRO or Head Office
+POST-SR | Sub-Registrar Office | Field Sub-Registrar
+POST-FDA-ENF | Sub-Registrar Office | Enforcement FDA at SRO
+POST-SDA-ENF | Sub-Registrar Office | Enforcement SDA at SRO
+POST-DEO | Sub-Registrar Office | Data Entry Operator at SRO
+POST-DIGR-INT | Head Office | Intelligence DIGR
+POST-AIGR-AUDIT | Head Office | Audit AIGR
+POST-HQA-AUDIT | Head Office | Audit HQ
+POST-SUP-AUDIT | Head Office | Superintendent (Audit)
+POST-FDA-AUDIT | Head Office | Audit FDA
+POST-SDA-AUDIT | Head Office | Audit SDA
+POST-TYPIST-AUDIT | Head Office | Audit Typist
+POST-DIGR-CVC | Head Office | DIGR CVC
+POST-JD-TP | Head Office | JD Town Planning
+[/TABLE]
+Application Admin maintenance:
+[TABLE]
+Master / Table | Application Admin may | FR
+Posts Master | Add, edit, enable/disable posts; Division Code from Division Master (FR-UM-077) | FR-UM-046, FR-UM-077
+Division Master | Add, edit, enable/disable divisions | FR-UM-077
+Post–Role mapping | Map one Post to one or more Roles; block sanction/assignment if unmapped (FR-UM-047) | FR-UM-047
+Post–Office-Type Allowed mapping | Define which Post codes may be sanctioned at which Office Types | FR-UM-078
+Sanctioned Posts Master | Set strength per Post per Office (Office Code); validate Office Type; view occupied count, remaining capacity, and whether the post is wholly unoccupied; occupied counts updated by occupancy refresh job | FR-UM-024, FR-UM-025, FR-UM-048, FR-UM-067, FR-UM-068, FR-UM-078
+[/TABLE]
+
+### [Heading 3] 4.5.4 Role Master — Seed Roles by Role Category
+
+All roles below reside in the single Role Master, differentiated by Role Category. Seed roles are listed for Citizen, Other Department, and DSR (Department). Application Admin may add further roles under the same Role Categories. Other Department users are assigned exactly one role with Role Category = Other Department. DSR Officers receive roles only through Post–Role mapping after sanctioned post assignment. Sanctioned posts reference Posts Master and apply only to DSR establishment posts.
+Roles with Role Category = Citizen:
+[TABLE]
+Role | Description
+Citizen | Default role assigned on instant self-registration; access to citizen portal services
+Marriage Applicant | Apply for Hindu Marriage / Special Marriage registration and related citizen actions
+Document Registration Applicant | Initiate and track document registration applications
+Certified Copy / EC Applicant | Apply for Encumbrance Certificate (EC) and certified copy of registered documents
+Firm / Society Applicant | Apply for firm / society related registration services where offered on the portal
+Stamp Duty / Challan Payer | Pay stamp duty / registration fees and view payment history for citizen transactions
+[/TABLE]
+Roles with Role Category = Other Department:
+[TABLE]
+Role | Typical Parent Department | Description
+Revenue Verification Officer | Revenue | Verify land / revenue particulars linked to registration applications
+Bhoomi Cross-check User | Revenue | Cross-check Bhoomi / RTC data against registration records
+Treasury Payment Verifier | Treasury / Finance | Verify treasury / payment status for registration fees
+Khajane Reconciliation User | Treasury / Finance | Reconcile Khajane-II receipts with Kaveri transactions
+Police Enquiry Officer | Police | View / respond to police enquiry requests on registered documents
+FIR Verification User | Police | Verify FIR / crime particulars where required for registration workflow
+ULB Document Verifier | Urban Local Body (ULB) | Verify municipal / ULB documents submitted with applications
+Read-only MIS Viewer | Any (cross-department) | Read-only access to assigned MIS / dashboards; no transactional actions
+Document Upload User | Any (cross-department) | Upload supporting documents for assigned inter-department workflows
+Inter-Department Enquiry User | Any (cross-department) | Raise / respond to inter-department enquiries on applications
+[/TABLE]
+Roles with Role Category = DSR (Department) — unique role names (no duplicate FDA/SDA/Typist):
+[TABLE]
+Division Code (FR-UM-077) | Role (unique name) | Description
+DIV-SECRETARIAT | ACS / Principal Secretary / Secretary | Additional Chief Secretary / Principal Secretary / Secretary — hierarchy root
+DIV-TOP-MGMT | IGR | Inspector General of Registration & Commissioner of Stamps
+DIV-ADMIN | DIGR (Admin, Law & Computers) | Deputy IGR for Admin, Law & Computers
+DIV-ADMIN | AIGR (Admin) | Assistant IGR (Admin)
+DIV-ADMIN | HQA (Admin) | Head Quarter Assistant (Admin)
+DIV-ADMIN | Sub Registrar (Admin) | Sub Registrar (Admin) — not to be confused with Sub-Registrar Office (SRO) office type
+DIV-ADMIN | Accountant Superintendent (Admin) | Accountant Superintendent (Admin)
+DIV-ADMIN | FDA (Admin) | First Division Assistant — Admin
+DIV-ADMIN | SDA (Admin) | Second Division Assistant — Admin
+DIV-ADMIN | Typist (Admin) | Typist — Admin
+DIV-ADMIN | HQA (RTI) | Head Quarter Assistant (RTI)
+DIV-ADMIN | FDA (RTI) | First Division Assistant — RTI & Statistics
+DIV-ADMIN | SDA (RTI) | Second Division Assistant — RTI & Statistics
+DIV-ADMIN | Statistical Inspector | Statistical Inspector
+DIV-VIGILANCE | DIGR (Vigilance) | Deputy IGR (Vigilance)
+DIV-VIGILANCE | Law Officer | Departmental Law Officer
+DIV-COMPUTERS | AIGR (Computers) | Assistant IGR (Computers)
+DIV-COMPUTERS | System Integrator | System Integrator / SI support
+DIV-COMPUTERS | PMU | Project Management Unit
+DIV-COMPUTERS | Application Developer | Application development support
+DIV-COMPUTERS | HQA / Project Manager (Comp) | Head Quarter Assistant / Project Manager (Computers)
+DIV-COMPUTERS | Sub Registrar (Computers) | Sub Registrar (Computers)
+DIV-COMPUTERS | FDA (Computers) | First Division Assistant — Computers
+DIV-COMPUTERS | SDA (Computers) | Second Division Assistant — Computers
+DIV-ENFORCEMENT | DIGR (Enforcement) | Deputy IGR (Enforcement)
+DIV-ENFORCEMENT | DRO | District Registrar / DRO
+DIV-ENFORCEMENT | HQA (Enforcement) | Head Quarter Assistant (Enforcement)
+DIV-ENFORCEMENT | Sub-Registrar (SR) | Sub-Registrar (office head / signing)
+DIV-ENFORCEMENT | FDA (Enforcement) | First Division Assistant — Enforcement
+DIV-ENFORCEMENT | SDA (Enforcement) | Second Division Assistant — Enforcement
+DIV-ENFORCEMENT | DEO | Data Entry Operator — SRO operational role
+DIV-INT-AUDIT | DIGR (Intelligence) | Deputy IGR (Intelligence)
+DIV-INT-AUDIT | AIGR (Audit) | Assistant IGR (Audit)
+DIV-INT-AUDIT | HQA (Audit) | Head Quarter Assistant (Audit)
+DIV-INT-AUDIT | Superintendent (Audit) | Superintendent (Audit)
+DIV-INT-AUDIT | FDA (Audit) | First Division Assistant — Audit
+DIV-INT-AUDIT | SDA (Audit) | Second Division Assistant — Audit
+DIV-INT-AUDIT | Typist (Audit) | Typist — Audit
+DIV-CVC | DIGR CVC | Deputy IGR (CVC)
+DIV-CVC | JD Town Planning | Joint Director, Town Planning
+[/TABLE]
+
+### [Heading 3] 4.5.5 DSR Officer Post Assignment
+
+DSR Officers are assigned one or more sanctioned posts that have available capacity (Posts Master via Sanctioned Posts Master). There is no Primary or Secondary role/post assignment. At login, if multiple active posts exist, the officer selects one post shown with office details (FR-UM-052); session roles = roles mapped to the assigned post at login; may take additional charge of a wholly unoccupied subordinate after login without logout (FR-UM-053, FR-UM-038). Division-specific posts prevent over-provisioning across Admin/Vigilance/Enforcement (FR-UM-047, FR-UM-049). Other Department users and Citizens use Role Master directly (see Sections 4.5.1, 4.5.4 and 4.6.2).
+[TABLE]
+User Category | What is assigned | Roles in session | End Date | Notes
+DSR Officer | One or more sanctioned posts with available capacity (Post + Office) — FR-UM-066(a) | Active context: assigned post (FR-UM-052) or additional charge (FR-UM-053) — one at a time per FR-UM-038 | Not applicable — removed (v4.19); see Transfer Out / In instead (FR-UM-030) | Multi-post → choose assigned post at login; switch context after login without logout
+Other Department | Exactly one role from Role Master | That single role | Optional account End Date | No Posts Master / sanctioned posts
+Citizen | Citizen role(s) from Role Master (e.g. on self-registration) | Assigned Citizen role(s) | N/A | No sanctioned posts
+[/TABLE]
+
+### [Heading 3] 4.5.6 Module, Function, Resource Masters and Access Enforcement
+
+DSR organisational roles (SR, FDA (Enforcement), DEO, etc.) are not named after application services. Access is modelled as: User → Role(s) → Module Function(s) → Resource(s) (API/URL). Registration of Documents is a single module (no online/offline classification). Role names in Role–Module–Function mapping must match Role Master exactly (FR-UM-050). Application Admin is a system-level actor outside Role Master / Role–Module–Function mapping (FR-UM-051) and maintains all masters in this section (FR-UM-042). Maker-checker / dual authorisation is not required. DSR and Other Department user creation does not capture security questions.
+Privilege hierarchy (masters):
+[TABLE]
+Level | Master | Maintained by | Purpose
+1 | Module Master | Application Admin | Business modules (Registration of Documents, Marriage Registration, …)
+2 | Module Function Master | Application Admin | Functions under each module (VIEW, ADD, APPROVE, SIGN, …)
+3 | Resource Master | Application Admin | APIs and URLs linked to each Module Function
+4 | Role–Module–Function mapping | Application Admin | Which roles may perform which Module Functions
+[/TABLE]
+Module Master — seed rows:
+[TABLE]
+Module Code | Module Name | Description | Status
+MOD-DOC-REG | Registration of Documents | Registration of documents | Active
+MOD-MARRIAGE | Marriage Registration | Marriage registration (Hindu Marriage and Special Marriage) | Active
+MOD-EC | Encumbrance Search | Search and issue of Encumbrance Certificate (EC) | Active
+MOD-CC | Certified Copy | Application and issue of certified copies of registered documents | Active
+MOD-STAMP | Stamp Duty / Payments | Stamp duty assessment, challan, and payment reconciliation | Active
+MOD-FIRM | Firm / Society Registration | Firm and society related registration services | Active
+MOD-UM | User Management | Identity, roles, posts, modules, functions, resources, and mappings | Active
+MOD-MIS | MIS / Dashboards | Operational and management reporting | Active
+[/TABLE]
+Module Function Master — example rows:
+[TABLE]
+Function Code | Module | Function Name | Description
+FN-DOC-VIEW | Registration of Documents | VIEW | View document registration applications / records
+FN-DOC-ADD | Registration of Documents | ADD | Create / initiate document registration
+FN-DOC-EDIT | Registration of Documents | EDIT | Edit draft / in-progress applications
+FN-DOC-APPROVE | Registration of Documents | APPROVE | Approve application for registration
+FN-DOC-SIGN | Registration of Documents | SIGN | Digitally sign registered document
+FN-DOC-PRINT | Registration of Documents | PRINT | Print registration extracts / slips
+FN-MAR-VIEW | Marriage Registration | VIEW | View marriage applications
+FN-MAR-ADD | Marriage Registration | ADD | Create marriage application
+FN-MAR-APPROVE | Marriage Registration | APPROVE | Approve / register marriage
+FN-EC-APPLY | Encumbrance Search | APPLY | Apply for EC
+FN-EC-ISSUE | Encumbrance Search | ISSUE | Issue / download EC
+FN-CC-APPLY | Certified Copy | APPLY | Apply for certified copy
+FN-CC-ISSUE | Certified Copy | ISSUE | Issue / download certified copy
+FN-UM-ADMIN | User Management | ADMIN | Maintain users, roles, modules, functions, resources, mappings
+[/TABLE]
+Resource Master (API / URL) — example rows:
+[TABLE]
+Resource Code | Type | Method | Path / URL Pattern | Module Function | Is Public | Status
+RES-DOC-GET | API | GET | /api/v1/documents/{id} | FN-DOC-VIEW | No | Active
+RES-DOC-LIST | API | GET | /api/v1/documents | FN-DOC-VIEW | No | Active
+RES-DOC-CREATE | API | POST | /api/v1/documents | FN-DOC-ADD | No | Active
+RES-DOC-UPDATE | API | PUT | /api/v1/documents/{id} | FN-DOC-EDIT | No | Active
+RES-DOC-APPROVE | API | POST | /api/v1/documents/{id}/approve | FN-DOC-APPROVE | No | Active
+RES-DOC-SIGN | API | POST | /api/v1/documents/{id}/sign | FN-DOC-SIGN | No | Active
+RES-UI-DOC-VIEW | URL | GET | /app/documents/view | FN-DOC-VIEW | No | Active
+RES-UI-DOC-CREATE | URL | GET | /app/documents/create | FN-DOC-ADD | No | Active
+RES-MAR-CREATE | API | POST | /api/v1/marriages | FN-MAR-ADD | No | Active
+RES-MAR-APPROVE | API | POST | /api/v1/marriages/{id}/approve | FN-MAR-APPROVE | No | Active
+RES-EC-APPLY | API | POST | /api/v1/encumbrance/applications | FN-EC-APPLY | No | Active
+RES-CC-ISSUE | API | POST | /api/v1/certified-copies/{id}/issue | FN-CC-ISSUE | No | Active
+RES-UM-ROLES | API | PUT | /api/v1/admin/roles/{id}/module-functions | FN-UM-ADMIN | No | Active
+RES-PUBLIC-HEALTH | API | GET | /api/v1/public/health | — | Yes | Active
+[/TABLE]
+Resource Master attributes (Application Admin maintains):
+[TABLE]
+Attribute | Description | Mandatory
+Resource Code | System or admin-defined unique identifier | Yes
+Type | API or URL | Yes
+HTTP Method | GET, POST, PUT, DELETE, … (for APIs) | Yes for API
+Path / URL Pattern | Ant-style or regex path pattern matched at runtime | Yes
+Module Function | Required function code for non-public resources (FR-UM-041) | Yes unless Is Public
+Is Public | Yes = accessible without authentication; default No (deny-by-default) | Yes
+Match Precedence | When multiple patterns match, most specific (longest) pattern wins | System rule (FR-UM-041)
+Is Active | Enable / disable resource without deleting history | Yes
+[/TABLE]
+Role–Module–Function mapping — example rows (exact Role Master names only; FR-UM-050):
+Every Role column value must match an active Role Master name character-for-character. Document-registration functions for First Division Assistants are seeded for FDA (Enforcement) only (Enforcement / SRO document-registration path). FDA (Admin), FDA (RTI), FDA (Computers), and FDA (Audit) are not granted these functions unless Domain Expert adds explicit separate rows. Sub-Registrar (SR) and DEO match 4.5.4 unchanged. Application Admin is not listed here (FR-UM-051).
+[TABLE]
+Role | Role Category | Module Function | Allowed
+Citizen | Citizen | FN-DOC-ADD | Yes
+Citizen | Citizen | FN-DOC-VIEW | Yes
+Citizen | Citizen | FN-EC-APPLY | Yes
+Citizen | Citizen | FN-CC-APPLY | Yes
+Document Registration Applicant | Citizen | FN-DOC-ADD | Yes
+Document Registration Applicant | Citizen | FN-DOC-VIEW | Yes
+Sub-Registrar (SR) | DSR | FN-DOC-VIEW | Yes
+Sub-Registrar (SR) | DSR | FN-DOC-APPROVE | Yes
+Sub-Registrar (SR) | DSR | FN-DOC-SIGN | Yes
+Sub-Registrar (SR) | DSR | FN-DOC-PRINT | Yes
+Sub-Registrar (SR) | DSR | FN-MAR-APPROVE | Yes
+DEO | DSR | FN-DOC-VIEW | Yes
+DEO | DSR | FN-DOC-ADD | Yes
+DEO | DSR | FN-DOC-EDIT | Yes
+DEO | DSR | FN-MAR-ADD | Yes
+FDA (Enforcement) | DSR | FN-DOC-VIEW | Yes
+FDA (Enforcement) | DSR | FN-DOC-ADD | Yes
+FDA (Enforcement) | DSR | FN-DOC-EDIT | Yes
+Revenue Verification Officer | Other Department | FN-DOC-VIEW | Yes
+[/TABLE]
+Application Admin (system actor — Option B): Application Admin is not a Role Master seed role and is not assigned via sanctioned posts or the normal user-creation flow. It is seeded at deployment as a system principal with authority to maintain User Management masters (Module, Module Function, Resource, Role–Module–Function, Posts, Hierarchy, Sanctioned Posts, etc.). FN-UM-ADMIN and related Resource Master rows (e.g. RES-UM-ROLES) describe the capability surface for that principal; they are not granted through a Role–Module–Function mapping row labelled Application Admin | DSR (FR-UM-051).
+How the application enforces access (runtime):
+[TABLE]
+Step | Action | Actor / Component | Notes
+1 | User authenticates (Citizen/Other Dept: Username + Captcha + OTP; DSR: Username + Captcha + Face/Biometrics — no OTP) | User / Auth service | Username = preferred Username (Citizen) or KGID (departmental) — FR-UM-062
+1a | If DSR Officer with multiple active posts — select assigned Post + Office for session | User / UI | Mandatory at login only (FR-UM-052)
+1b | Show assigned Post with Role(s); offer Additional charge control after login | UI | FR-UM-054, FR-UM-053; no logout to switch
+2 | Load session role(s) for active context — assigned post OR additional charge post | Auth / UM service | One context at a time per FR-UM-038
+3 | Resolve Role–Module–Function mappings into session claims (function codes) | UM / Auth service | Functions for session roles (FR-UM-038)
+4 | User calls an API or opens a URL | Client / Browser | Method + path
+5 | Look up Resource Master for matching Type + Method + Path pattern (most specific wins) | API Gateway / Middleware | If no match → deny (403) unless Is Public = Yes (FR-UM-041)
+6 | Obtain required Module Function from the matched Resource | API Gateway / Middleware | e.g. POST /api/v1/documents/{id}/approve → FN-DOC-APPROVE
+7 | Allow if session claims include that Module Function; else HTTP 403 | API Gateway / Middleware | FR-UM-041; Application Admin system principal may hold FN-UM-ADMIN outside mapping (FR-UM-051); failed attempts audit-logged
+8 | UI menus / buttons shown only for Module Functions present in session claims | Front-end | Same mapping; hide unauthorised screens
+[/TABLE]
+Figure — S-03 Runtime Enforcement — FR-UM-038, FR-UM-041, FR-UM-050, FR-UM-051 — ProcessDiagrams/User_Management/S-03_Runtime_Enforcement.drawio
+Application Admin maintenance (CRUD):
+[TABLE]
+Master / Table | Application Admin may | Audit
+Module Master | Add, edit, enable/disable modules | Mandatory (FR-UM-042)
+Module Function Master | Add, edit, enable/disable functions under a module | Mandatory (FR-UM-042)
+Resource Master | Add, edit, enable/disable API and URL resources; link to Module Function | Mandatory (FR-UM-042)
+Role–Module–Function mapping | Grant or revoke Module Functions for Role Master roles only (exact names; FR-UM-050); not used for Application Admin (FR-UM-051) | Mandatory (FR-UM-042)
+DSR Officer Hierarchy Master | Add, edit, reorder, enable/disable hierarchy nodes (4.5.7) | Mandatory (FR-UM-043)
+Office Hierarchy Master | Add, edit, enable/disable offices; set parent (IGR → DRO → SRO) (4.5.8) | Mandatory (FR-UM-059)
+[/TABLE]
+
+### [Heading 3] 4.5.7 DSR Officer Hierarchy Master
+
+The system shall maintain the reporting hierarchy for Department officers (DSR) as a Hierarchy Master aligned to the Department organisational chart. Hierarchy nodes reference Posts from the Posts Master (not Roles) — reporting is position-based (FR-UM-043). Each child Post has exactly one parent Post in the tree. The same parent–child links drive unoccupied subordinate post additional charge after login (FR-UM-053, FR-UM-066(b)) and Transfer out / relieving by hierarchy superior (FR-UM-057, FR-UM-058). Application Admin shall add, edit, reorder, enable/disable, and update hierarchy nodes. The hierarchy does not replace Sanctioned Posts or Role–Module–Function access control.
+Seed hierarchy (Post → Parent Post) — uses unique Posts Master codes. Enforcement SRO chain is Sub-Registrar → FDA (Enforcement) → SDA (Enforcement) under DRO so FR-UM-053 / FR-UM-057 examples apply. Vacancy for the FR-UM-053 cascade is judged per Post per Office as Occupied = 0 (FR-UM-066(b)):
+[TABLE]
+Level | Division / Branch | Post Code | Post Name | Reports To (Parent Post Code)
+0 | Secretariat | POST-ACS-SEC | Additional Chief Secretary / Principal Secretary / Secretary | — (root)
+1 | Top Management | POST-IGR | Inspector General of Registration & Commissioner of Stamps | POST-ACS-SEC
+2 | Admin, Law & Computers | POST-DIGR-ADMIN | DIGR (Admin, Law & Computers) | POST-IGR
+3 | Admin — Administration | POST-AIGR-ADMIN | AIGR (Admin) | POST-DIGR-ADMIN
+4 | Admin — Administration | POST-HQA-ADMIN | HQA (Admin) | POST-AIGR-ADMIN
+4 | Admin — Administration | POST-SR-ADMIN | Sub Registrar (Admin) | POST-AIGR-ADMIN
+4 | Admin — Administration | POST-ACCT-SUP | Accountant Superintendent (Admin) | POST-AIGR-ADMIN
+4 | Admin — Administration | POST-FDA-ADMIN | FDA (Admin) | POST-AIGR-ADMIN
+4 | Admin — Administration | POST-SDA-ADMIN | SDA (Admin) | POST-AIGR-ADMIN
+4 | Admin — Administration | POST-TYPIST-ADMIN | Typist (Admin) | POST-AIGR-ADMIN
+3 | Admin — RTI & Statistics | POST-HQA-RTI | HQA (RTI) | POST-DIGR-ADMIN
+4 | Admin — RTI & Statistics | POST-FDA-RTI | FDA (RTI) | POST-HQA-RTI
+4 | Admin — RTI & Statistics | POST-SDA-RTI | SDA (RTI) | POST-HQA-RTI
+4 | Admin — RTI & Statistics | POST-SI | Statistical Inspector | POST-HQA-RTI
+2 | Vigilance | POST-DIGR-VIG | DIGR (Vigilance) | POST-IGR
+3 | Vigilance | POST-LAW-OFF | Law Officer | POST-DIGR-VIG
+2 | Computers | POST-AIGR-COMP | AIGR (Computers) | POST-IGR
+3 | Computers — Development | POST-SI-INT | System Integrator | POST-AIGR-COMP
+3 | Computers — Development | POST-APP-DEV | Application Developer | POST-AIGR-COMP
+3 | Computers — Development | POST-PMU | PMU | POST-AIGR-COMP
+3 | Computers — Operations | POST-HQA-COMP | HQA / Project Manager (Comp) | POST-AIGR-COMP
+4 | Computers — Operations | POST-SR-COMP | Sub Registrar (Computers) | POST-HQA-COMP
+4 | Computers — Operations | POST-FDA-COMP | FDA (Computers) | POST-HQA-COMP
+4 | Computers — Operations | POST-SDA-COMP | SDA (Computers) | POST-HQA-COMP
+2 | Enforcement | POST-DIGR-ENF | DIGR (Enforcement) | POST-IGR
+3 | Enforcement | POST-DRO | District Registrar | POST-DIGR-ENF
+3 | Enforcement | POST-HQA-ENF | HQA (Enforcement) | POST-DIGR-ENF
+4 | Enforcement — under DRO (field) | POST-SR | Sub-Registrar | POST-DRO
+5 | Enforcement — SRO | POST-FDA-ENF | FDA (Enforcement) | POST-SR
+6 | Enforcement — SRO | POST-SDA-ENF | SDA (Enforcement) | POST-FDA-ENF
+5 | Enforcement — SRO | POST-DEO | Data Entry Operator | POST-SR
+2 | Intelligence & Audit | POST-DIGR-INT | DIGR (Intelligence) | POST-IGR
+3 | Intelligence & Audit | POST-AIGR-AUDIT | AIGR (Audit) | POST-DIGR-INT
+4 | Intelligence & Audit | POST-HQA-AUDIT | HQA (Audit) | POST-AIGR-AUDIT
+4 | Intelligence & Audit | POST-SUP-AUDIT | Superintendent (Audit) | POST-AIGR-AUDIT
+4 | Intelligence & Audit | POST-FDA-AUDIT | FDA (Audit) | POST-AIGR-AUDIT
+4 | Intelligence & Audit | POST-SDA-AUDIT | SDA (Audit) | POST-AIGR-AUDIT
+4 | Intelligence & Audit | POST-TYPIST-AUDIT | Typist (Audit) | POST-AIGR-AUDIT
+2 | DIGR CVC | POST-DIGR-CVC | DIGR CVC | POST-IGR
+3 | DIGR CVC | POST-JD-TP | JD Town Planning | POST-DIGR-CVC
+[/TABLE]
+Figure — S-04 Officer Hierarchy Tree — FR-UM-043 — ProcessDiagrams/User_Management/S-04_Officer_Hierarchy_Tree.drawio
+Hierarchy Master attributes (Application Admin maintains):
+[TABLE]
+Attribute | Description | Mandatory
+Hierarchy Node ID | System-generated unique identifier | Yes (system)
+Post | Post from Posts Master (unique Post Code) | Yes
+Parent Node | Immediate reporting parent node (null for root); parent must also be a Post | No for root
+Division / Branch | Division Code from Division Master (FR-UM-077) | Yes
+Display Order | Sort order among siblings under the same parent | Yes
+Level | Depth in the tree (0 = root) | Yes (system/derived)
+Is Active | Enable / disable node without deleting history | Yes
+Effective From / To | Optional validity of the hierarchy link | No
+[/TABLE]
+Maintain hierarchy — Application Admin workflow:
+[TABLE]
+Step | Action | Actor | Notes
+1 | Open User Management → DSR Officer Hierarchy | Application Admin | FR-UM-043
+2 | View tree / list of hierarchy nodes by division | System | Filter by Division, Active status
+3 | Add node — select Post from Posts Master, parent Post node, division, display order | Application Admin | Post must exist; FR-UM-043
+4 | Edit node — change parent, order, division, or active flag | Application Admin | Cannot create circular parent links
+5 | Disable node (soft) if post/structure superseded | Application Admin | History retained; audit logged
+6 | Save — hierarchy available for organisational views and admin span rules | System | FR-UM-044 seed structure; each Post has one parent
+[/TABLE]
+
+### [Heading 3] 4.5.8 Office Hierarchy Master
+
+The system shall maintain the hierarchy of DSR offices separately from the Officer (Post) Hierarchy. MS Building is the Secretariat office (root). Under it is IGR Office (Head Office). Under the Head Office are District Registrar Offices. Under each District Registrar Office are Sub-Registrar Offices (FR-UM-059). This hierarchy scopes Transfer Out / Relieving and Transfer In so a superior sees only offices under them; within that list, only posts whose immediate parent is the actor's session Post are actionable (FR-UM-057, FR-UM-060). ACS / Secretary is posted at MS Building (POST-ACS-SEC).
+Seed Office Hierarchy (illustrative):
+[TABLE]
+Level | Office Type | Office Code (example) | Office Name (example) | Parent Office
+0 | Secretariat | OFF-MS-BLDG | MS Building | — (root)
+1 | Head Office | OFF-IGR | IGR Office (Head Office) | OFF-MS-BLDG
+2 | District Registrar Office | OFF-DRO-MYS | DRO Mysuru | OFF-IGR
+2 | District Registrar Office | OFF-DRO-BLR | DRO Bengaluru | OFF-IGR
+3 | Sub-Registrar Office | OFF-SRO-YESH | SRO Yeshwanthapura | OFF-DRO-BLR
+3 | Sub-Registrar Office | OFF-SRO-JAY | SRO Jayanagar | OFF-DRO-BLR
+3 | Sub-Registrar Office | OFF-SRO-MYS-E | SRO Mysuru East | OFF-DRO-MYS
+[/TABLE]
+Figure — S-05 Office Hierarchy Tree — FR-UM-059 — ProcessDiagrams/User_Management/S-05_Office_Hierarchy_Tree.drawio
+Office span for Transfer Out / Transfer In (examples):
+[TABLE]
+Actor session Office | Offices shown in the tree | May act on (immediate parent only)
+MS Building (OFF-MS-BLDG) | IGR Head Office + DRO and SRO offices under the tree | Only posts that report immediately to ACS (e.g. IGR) — not DIGR or Sub-Registrar
+IGR Head Office (OFF-IGR) | DRO offices and SRO offices under Head Office (statewide tree) | Only posts that report immediately to IGR (e.g. DIGR) — not Sub-Registrar at an SRO
+DRO Bengaluru (OFF-DRO-BLR) | OFF-DRO-BLR + SRO Yeshwanthapura, SRO Jayanagar, … | Sub-Registrar at those SROs (POST-SR reports to POST-DRO) — not FDA/DEO (those report to SR)
+SRO Yeshwanthapura (OFF-SRO-YESH) | OFF-SRO-YESH only | FDA / DEO under Sub-Registrar at that SRO only
+[/TABLE]
+Figure — S-06 Span vs Action — FR-UM-057, FR-UM-059, FR-UM-043 — ProcessDiagrams/User_Management/S-06_Span_vs_Action.drawio
+
+### [Heading 2] 4.6 Administrative User Creation and Role Assignment Workflow
+
+The system shall provide dedicated step-by-step workflows to assign access during user creation. For DSR Officers the KGID is entered first because it becomes the Username; for Other Department users Employee ID or KGID is entered with Department Code and the Username is the concatenation (FR-UM-062). The Citizen self-registration flow is set out in 4.1.1. For DSR Officers, assign one or more sanctioned posts with available capacity (roles via Post–Role mapping; no Primary/Secondary; at login the officer selects one post when multiple are active — FR-UM-052). No temporary deputation End Date is captured (FR-UM-030). Transfer out / relieving and Transfer In are scoped to offices under the actor, then to posts whose immediate parent is the actor's session Post (4.6.3–4.6.4, FR-UM-057–FR-UM-060); Relieving Reason is mandatory (FR-UM-087); Transfer In requires available capacity and has no Joining Date. Occupancies take effect or end via the occupancy refresh job after midnight IST (FR-UM-068). DSR user creation uses KGID as Username with no email ID and no security questions; maker-checker is not required (FR-UM-051). For Other Department users, select exactly one role; biometrics are not captured.
+
+### [Heading 3] 4.6.1 DSR Officer User Creation with Post Assignment
+
+Approved process diagram — P-07 DSR Officer User Creation — 4.6.1 — FR-UM-002, FR-UM-017, FR-UM-030, FR-UM-045, FR-UM-066(a) — ProcessDiagrams/User_Management/P-07_DSR_Officer_User_Creation.drawio
+[TABLE]
+Step | Action | Actor | Notes
+1 | Open User Management → Add DSR Department User | Admin | Authorised admin role only (FR-UM-002)
+2 | Enter KGID — this becomes the Username | Admin | Validated for presence and uniqueness across User Master (FR-UM-062, FR-UM-064)
+2a | Enter remaining particulars (name, mobile, photo, ID proof) — no email ID | Admin | Email ID not captured for DSR (FR-UM-002, FR-UM-064); mobile need not be unique (FR-UM-004)
+2b | No security questions captured for this category | System | No security questions; DSR may change mobile after login (FR-UM-086)
+3 | Assign one or more sanctioned posts with available capacity (Post + Office from Posts / Sanctioned Posts Masters) | Admin | At least one required; FR-UM-017, FR-UM-030, FR-UM-045, FR-UM-048, FR-UM-066(a); no temporary deputation End Date
+4 | Temporary deputation End Date — REMOVED (v4.19) | — | FR-UM-030: optional occupancy End Date / Deputation Reason removed; use Transfer Out / In instead
+5 | System shows roles available via Post–Role mapping for each assigned post | System | FR-UM-047; login will use selected post only (FR-UM-052)
+6 | Upload approval letter where applicable | Admin | Recommended, not mandatory to save the account
+7 | Capture face authentication template or biometrics | Admin / Officer | Mandatory for DSR users — face or biometric (FR-UM-006)
+8 | Review post occupancies and mapped roles; confirm | Admin | Multi-post users choose post at each login
+9 | Save — account active; occupied count updated per assigned post | System | Blocked if no post assigned or any selected post is at full sanctioned strength (FR-UM-066(a))
+[/TABLE]
+
+### [Heading 3] 4.6.2 Other Department User Creation with Role Assignment
+
+Other Department users are stored in the same User Master (User Category = Other Department). Exactly one role is selected from the Role Master filtered by Role Category = Other Department. There is no Primary/Secondary model for Other Department users. An optional End Date may be entered; if entered, the system shall deactivate the user on that date.
+Approved process diagram — P-08 Other Department User Creation — 4.6.2 — FR-UM-003, FR-UM-029, FR-UM-033, FR-UM-034 — ProcessDiagrams/User_Management/P-08_Other_Department_User_Creation.drawio
+[TABLE]
+Step | Action | Actor | Notes
+1 | Open User Management → Add Other Department User | Admin | Authorised admin role only (FR-UM-003)
+2 | Enter Employee ID or KGID and parent Department Code — Username = Dept Code + ID | Admin | Username format <DepartmentCode>-<EmployeeID|KGID>; validated unique (FR-UM-062, FR-UM-064)
+2a | Enter remaining particulars (name, official email ID of parent department, mobile, photo, ID proof) | Admin | User Category = Other Department; official email validated (FR-UM-064); no uniqueness on email or mobile (FR-UM-004)
+2b | No security questions captured for this category | System | No self-service mobile reset (FR-UM-055, FR-UM-065)
+3 | Enter parent department and designation | Admin | e.g. Revenue, Treasury, Police
+4 | Assign exactly one role from Role Master (Role Category = Other Department) | Admin | Mandatory; FR-UM-029, FR-UM-034
+5 | Optionally enter Account End Date | Admin | Not mandatory; FR-UM-033
+6 | Upload authorisation letter / NOC from parent department | Admin | Recommended, not mandatory to save the account
+7 | Biometrics — NOT required (removed v4.19) | — | FR-UM-007: Other Department authenticates with Username + Captcha + OTP only
+8 | Review role and End Date (if any) and confirm | Admin | 
+9 | Save — account active with module access for the assigned role | System | Blocked if no role selected
+10 | If End Date was entered and is reached — deactivate user; block login | System | FR-UM-033; audit logged
+[/TABLE]
+
+### [Heading 3] 4.6.3 Transfer Out / Relieving Process (DSR Officers)
+
+A DSR Officer may be relieved from currently assigned post occupancy(ies). When Transfer Out / Relieving is opened, the system shall list offices under the actor's session Office per the Office Hierarchy Master — IGR Head Office → District Registrar Offices → Sub-Registrar Offices (FR-UM-059). Within that office span, the system shall list and allow relieving only where the actor's session Post is the immediate parent of the target Post in the Officer Hierarchy (4.5.7, FR-UM-057). Seeing a descendant office (for example an SRO under Head Office) does not allow relieving a Sub-Registrar there. Capture Relieving Date, Relieving Reason (Deputation / Transfer / Suspension / Superannuation / Death — FR-UM-087), and Relieving Order. Mapping is removed after 11:59 PM IST of the Relieving Date by the occupancy refresh job (FR-UM-058, FR-UM-068).
+Examples (Office Hierarchy + Officer Hierarchy):
+[TABLE]
+Actor (session) | Offices shown | May relieve (posts under actor) | Example
+District Registrar @ DRO Bengaluru | DRO Bengaluru + its SRO offices only | Sub-Registrar at those SROs (POST-SR reports to POST-DRO) | DRO Bengaluru relieves Sub-Registrar of SRO Yeshwanthapura — not SRO Mysuru East
+Sub-Registrar @ SRO Yeshwanthapura | SRO Yeshwanthapura only | FDA / DEO under Sub-Registrar at that SRO | SR Yeshwanthapura relieves FDA at Yeshwanthapura — not another SRO
+IGR / DIGR @ IGR Head Office | DRO and SRO offices under Head Office (tree only) | Only posts whose immediate parent is the actor's session Post (e.g. IGR relieves DIGR; DIGR (Enforcement) relieves DRO / HQA (Enforcement)) | Seeing SRO Yeshwanthapura in the tree does not allow IGR or DIGR to relieve the Sub-Registrar there
+FDA (Enforcement) @ SRO Yeshwanthapura | SRO Yeshwanthapura only | SDA under FDA at that SRO | FDA relieves SDA at same office
+[/TABLE]
+Approved process diagram — P-09 Transfer Out / Relieving — 4.6.3 — FR-UM-057, FR-UM-058, FR-UM-059, FR-UM-087 — ProcessDiagrams/User_Management/P-09_Transfer_Out_Relieving.drawio
+Relieving workflow:
+[TABLE]
+Step | Action | Actor | Notes
+1 | Open Transfer Out / Relieving | Superior | FR-UM-057
+2 | System lists only offices in actor's office span (Office Hierarchy) | System | FR-UM-059; own office + descendants
+3 | Within those offices, list post occupancies where actor Post is immediate parent | System | Officer Hierarchy FR-UM-043
+4 | Select officer / post occupancy to relieve | Superior | Cannot see outside span; cannot select posts that do not report immediately to actor
+5 | Enter Relieving Date, Relieving Reason, and Relieving Order (upload if applicable) | Superior | Mandatory (FR-UM-057, FR-UM-087); Reason = Deputation / Transfer / Suspension / Superannuation / Death
+6 | Confirm relieving | Superior | Audit-logged; occupancy stays active until end of Relieving Date
+7 | Until end of Relieving Date — occupancy remains active | System | Officer may still use post until day closes
+8 | Shortly after midnight following Relieving Date — occupancy refresh job de-allocates mapping | System | FR-UM-058, FR-UM-068; occupied count −1; Transfer In may then proceed once capacity is free (FR-UM-060)
+9 | If no remaining post occupancies — block / limit login until new assignment | System | Per policy; audit
+[/TABLE]
+
+### [Heading 3] 4.6.4 Transfer In Process (DSR Officers)
+
+Transfer In assigns a DSR Officer to a post within the superior's office span and only where the actor's session Post is the immediate parent of the target Post (same rules as Transfer Out — FR-UM-057, FR-UM-059, FR-UM-043). The system shall capture Transfer Order / Reporting Order only — Joining Date is not captured (FR-UM-060). Transfer In is allowed only when the target post has available capacity (Occupied < Sanctioned Strength — FR-UM-066(a)); if the post is full, Transfer In is blocked until relieving has taken effect and capacity is free. Reserved / future-dated Transfer In is retired (FR-UM-061, FR-UM-067). On confirm, the occupancy is active immediately and the officer may use the post at the next login (FR-UM-052).
+Example (handover after capacity frees): District Registrar at DRO Bengaluru relieves the Sub-Registrar of SRO Yeshwanthapura with Relieving Date 31-Aug-2026. Transfer In of the incoming officer to that Sub-Registrar post cannot be recorded while the post remains at full strength. Shortly after midnight IST following the Relieving Date, the occupancy refresh job (FR-UM-068) de-allocates the outgoing officer and frees capacity. The DRO then records Transfer In with Transfer Order only (no Joining Date); the occupancy is active immediately (FR-UM-060). IGR at Head Office cannot perform this Transfer In because Sub-Registrar does not report immediately to IGR.
+Approved process diagram — P-12 Handover Timeline — 4.6.4 — FR-UM-058, FR-UM-060, FR-UM-068 — ProcessDiagrams/User_Management/P-12_Handover_Timeline.drawio
+Approved process diagram — P-10 Transfer In — FR-UM-060, FR-UM-066(a) — ProcessDiagrams/User_Management/P-10_Transfer_In.drawio
+[TABLE]
+Step | Action | Actor | Notes
+1 | Open Transfer In | Superior | FR-UM-060
+2 | System lists offices in actor's office span | System | FR-UM-059; tree only
+3 | Select target Post + Office where actor Post is immediate parent | Superior | Same parentage as FR-UM-057
+4 | If post has available capacity — proceed; if at full strength — block Transfer In | System | FR-UM-066(a), FR-UM-060; reserved / future-dated Transfer In retired (FR-UM-067)
+5 | Select / identify the officer being transferred in | Superior | Existing DSR user (or create then Transfer In per policy)
+6 | Enter Transfer Order / Reporting Order (number + upload if applicable) | Superior | Mandatory (FR-UM-060)
+7 | Joining Date — NOT captured (removed v4.20) | — | FR-UM-061 retired; occupancy takes effect immediately on confirm
+8 | Confirm Transfer In — occupancy active immediately; occupied count +1 | System | Audit-logged (FR-UM-060); no reservation path
+9 | Officer may select the post at next login (FR-UM-052) | System | No Joining Date gate (FR-UM-061 retired)
+10 | Occupancy refresh job — no Transfer In activation step (Joining Date removed) | System | FR-UM-068 handles relieving de-allocation only for day-boundary effects
+[/TABLE]
+
+### [Heading 3] 4.6.5 Occupancy refresh job (after midnight)
+
+Post assignments on the user record and occupied counts on the Sanctioned Posts Master shall not be left to wait for a user to log in. A scheduled job shall run shortly after midnight each day (FR-UM-068) so that Transfer Out / relieving takes effect on the correct calendar day before the first login. Transfer In itself takes effect immediately when recorded against available capacity (FR-UM-060).
+Approved process diagram — P-11 Occupancy Refresh Job — FR-UM-068 — ProcessDiagrams/User_Management/P-11_Occupancy_Refresh_Job.drawio
+[TABLE]
+Step | Action | Actor | Notes
+1 | Start occupancy refresh job shortly after 12:00 AM IST | System | FR-UM-068; idempotent
+2 | De-allocate occupancies whose Relieving Date ended the previous calendar day | System | FR-UM-057, FR-UM-058
+3 | Optional occupancy End Date deallocation — REMOVED (v4.19) | — | FR-UM-030: occupancy End Date is no longer captured at user creation or post assignment; only relieving (FR-UM-058) de-allocates occupancies
+4 | Reserved Transfer In activation — REMOVED (v4.20) | — | FR-UM-061 / FR-UM-067 retired; Transfer In is immediate when capacity available
+5 | Recalculate occupied count, remaining capacity, and wholly-unoccupied flag on Sanctioned Posts Master for affected Post + Office rows | System | FR-UM-048, FR-UM-066
+6 | Refresh each affected officer's effective post assignments for login selection | System | FR-UM-052; relieved posts no longer selectable; joining posts now selectable
+7 | Write occupancy-refresh audit (run time, ended, activated, before/after occupied counts) | System | Mandatory
+8 | If the job fails — raise operational alert; do not leave relieving/joining unenforced | System | Risk mitigation
+[/TABLE]
+
+### [Heading 3] 4.6.6 Temporary Absence / Leave / OOD and Temporary Charge (DSR Officers)
+
+This section covers temporary unavailability of a DSR Officer who remains the occupant of their post (Leave, OOD, or Other). It is distinct from Transfer Out / relieving (FR-UM-057), Transfer In (FR-UM-060), and post-login additional charge of a wholly unoccupied subordinate post (FR-UM-053). Temporary / time-bound deputation via occupancy End Date has been removed (FR-UM-030, v4.19). Full HRMS leave balances and payroll are out of scope — User Management records absence and temporary charge for access control and operational continuity only.
+Business rules (summary):
+1. Absence is entered by the hierarchy superior only (office span + immediate-parent parentage). The officer cannot self-record Leave / OOD.
+2. Absence does not free a slot — Occupied is unchanged; Transfer In must not treat the post as vacant (FR-UM-081).
+3. While any effective absence exists on any of the officer's active occupancies, login is blocked entirely (FR-UM-080).
+4. The superior may assign Temporary Charge of the absent Post + Office to another subordinate under them, including cross-office peers (FR-UM-082).
+5. The covering officer logs in normally and selects the temporary-charge post at FR-UM-052 (FR-UM-083).
+User stories / examples:
+[TABLE]
+ID | Actor | Story | Acceptance (system)
+US-TA-01 | District Registrar | As District Registrar of DRO Bengaluru, I need to record Leave for the Sub-Registrar of SRO Yeshwanthapura (SRO A) from 01-Sep-2026 to 05-Sep-2026 so that the officer cannot access KAVERI while away, without opening the post for Transfer In. | Absence saved (FR-UM-079); Occupied unchanged (FR-UM-081); SR of SRO A denied login for those dates (FR-UM-080); Transfer In to that SR post still blocked unless relieving/capacity rules allow otherwise.
+US-TA-02 | District Registrar | As the same District Registrar, I need to give temporary charge of SRO Yeshwanthapura (SRO A) Sub-Registrar work to the Sub-Registrar of SRO Jayanagar (SRO B) under my district for the leave period. | Temporary charge mapping created (FR-UM-082); SR of SRO B sees a Temporary charge row for SR @ SRO A at FR-UM-052 (FR-UM-083); claims are those of SR @ SRO A while that context is selected; SRO B own post remains available as a separate selectable context.
+US-TA-03 | AIGR (Admin) | As AIGR (Admin), I need to record OOD / Leave for District Registrar of DRO Mysuru and assign temporary charge of that DRO post to the District Registrar of DRO Bengaluru (another district under me). | Same FR-UM-079–FR-UM-083 behaviour at DRO post level; cover officer is DRO Bengaluru; absent DRO Mysuru cannot log in; capacity at DRO Mysuru not freed for Transfer In.
+US-TA-04 | Covering Sub-Registrar | As Sub-Registrar of SRO B holding temporary charge of SRO A, I need to log in and choose whether to work as SR of B or under temporary charge of A. | FR-UM-052 lists both; one context per session; header shows active context and office (FR-UM-083 / FR-UM-054 pattern).
+[/TABLE]
+Examples (who may assign temporary charge):
+[TABLE]
+Superior (session) | Absent occupancy | May assign temporary charge to | Example
+District Registrar @ DRO Bengaluru | Sub-Registrar @ SRO A (under DRO) | Any other Sub-Registrar (or eligible subordinate) with an active occupancy under the same DRO — including at SRO B | DRO gives charge of SR @ SRO Yeshwanthapura to SR @ SRO Jayanagar
+AIGR (Admin) @ Head Office / Admin span | District Registrar @ DRO Mysuru | Any other District Registrar under the same AIGR | AIGR gives charge of DRO Mysuru to DRO Bengaluru
+Sub-Registrar @ SRO Yeshwanthapura | FDA @ same SRO | Another subordinate under that SR at that SRO (office span) | SR records FDA leave and may assign temporary charge to another eligible subordinate under the SR
+[/TABLE]
+Approved process diagram — P-13 Temporary Absence / Leave / OOD and Temporary Charge — 4.6.6 — FR-UM-079–FR-UM-084 — ProcessDiagrams/User_Management/P-13_Temporary_Absence_Charge.drawio
+Temporary Absence / Temporary Charge workflow:
+[TABLE]
+Step | Action | Actor | Notes
+1 | Open Temporary Absence / Leave / OOD | Superior | FR-UM-079; not available to the officer for self-service
+2 | System lists offices in actor's office span; within them, occupancies where actor Post is immediate parent | System | FR-UM-059, FR-UM-043 — same filters as FR-UM-057
+3 | Select occupancy; enter type (Leave / OOD / Other), reason code, from_date, to_date; optional order | Superior | Mandatory fields per FR-UM-079
+4 | Confirm absence — linked record on occupancy; Occupied unchanged | System | FR-UM-079, FR-UM-081; audit-logged
+5 | From from_date — deny login for absent Username (any effective absence) | System | FR-UM-080; applies even if other posts are assigned
+6 | Optional: assign Temporary Charge of absent Post + Office to another subordinate under the superior (may be different office) | Superior | FR-UM-082; one active charge per Post + Office
+7 | Cover officer authenticates; FR-UM-052 lists own posts + Temporary charge row | Cover officer / System | FR-UM-083
+8 | Cover officer selects Temporary charge context — claims from covered post only | Cover officer / System | FR-UM-083; distinct from FR-UM-053
+9 | After to_date 23:59 IST (or superior cancel) — clear effective absence and temporary charge; absentee may log in again | System | FR-UM-084; FR-UM-068 day-boundary / refresh
+[/TABLE]
+FR-UM-053 remains unchanged: session additional charge applies only to wholly unoccupied subordinate posts at the same office. Temporary charge under this section is the path used when the post is still occupied by an officer on Leave / OOD / Other.
+
+### [Heading 2] 4.7 Administrative User Management
+
+[TABLE]
+Req ID | Requirement | Priority
+FR-UM-020 | The system shall allow administrators to create, edit, suspend, and deactivate user accounts by category. Deactivation shall require a reason and shall be audit-logged (supersedes retired FR-UM-015). | High
+FR-UM-021 | The system shall allow administrators to search and filter users by Username (including KGID for departmental users), category, role, office, division, and status. | Medium
+FR-UM-022 | The system shall log all administrative actions performed on user accounts. | High
+FR-UM-023 | The system shall notify a user via SMS/email when their account is created, suspended, or deactivated. | Medium
+[/TABLE]
+
+### [Heading 1] 5. Non-Functional Requirements
+
+[TABLE]
+Category | Requirement
+Security | No password storage — authentication is OTP-based only; the login OTP is sent only to the registered mobile.
+Security | OTP and session policy is defined in FR-UM-069–FR-UM-076: login OTP 5 minutes; registration/recovery OTP and reset PIN 10 minutes; 6 digits; 3 incorrect entries per code; 60-second resend cooldown (max 3 per 15 minutes); 5 failed login attempts lock Username 15 minutes; idle timeout 10 minutes; absolute session 4 hours; one active session per Username.
+Security | All data in transit shall be encrypted using TLS 1.2 or higher.
+Security | Face authentication / biometric data for DSR Officers shall comply with the Aadhaar Act, 2016 and UIDAI guidelines where Aadhaar-linked biometrics are used. Citizen Aadhaar e-KYC (FR-UM-085) shall likewise comply with UIDAI / MeitY norms. Other Department users shall not use biometric authentication.
+Security | RETIRED (v4.19) — Security-question storage rules no longer apply; security questions are not captured (FR-UM-055 retired). Citizen identity proofing uses Aadhaar e-KYC (FR-UM-085).
+Security | The Citizen lost-mobile reset shall require two independent proofs — successful Aadhaar e-KYC and a single-use PIN delivered to the registered email — before a new mobile number may be entered, and the new number shall itself be OTP-verified before the change takes effect (FR-UM-056, FR-UM-085).
+Security | The reset PIN shall be single-use and time-limited; e-KYC and PIN attempts shall be rate-limited and the reset flow locked after a configured number of failures.
+Security | No pre-login self-service path shall exist to change the mobile number, email address, or Username of a DSR Officer or Other Department user. After login, DSR Officers may change mobile under FR-UM-086; Other Department mobile remains administrator-only (FR-UM-065).
+Performance | OTP dispatch (SMS to mobile only) shall complete within 5 seconds of user request.
+Performance | Registration verification OTPs (email and mobile) and the reset PIN to email shall be dispatched within 30 seconds of request.
+Performance | Login and authentication requests shall complete within 2 seconds after OTP verification (Citizen / Other Department) or face/biometric verification (DSR).
+Availability | The occupancy refresh job (FR-UM-068) shall complete shortly after midnight so that relieving ended the previous day and Transfer In joining the current day are reflected before the first login of the day; job failure shall raise an operational alert.
+Usability | Registration and OTP login workflows shall be completable on desktop and mobile browsers.
+Usability | Username availability shall be checked and reported to the citizen during registration before submission, with suggestions where the chosen Username is taken.
+Auditability | All create, update, delete, login, mobile-update, email-update, Citizen lost-mobile reset, administrator-initiated mobile change, access-control, Transfer Out / Transfer In, and occupancy-refresh job actions shall be logged with timestamp and actor.
+Compliance | Citizen-facing UI shall support Kannada and English (bilingual) per Karnataka e-Governance norms.
+Compliance | Citizen-facing UI shall comply with Government of India Guidelines for Indian Government Websites (GIGW) accessibility requirements.
+Compliance | Personal and authentication data shall reside in India; production hosting shall use MeitY-empanelled cloud / data-centre infrastructure as applicable to KAVERI 3.0.
+Compliance | The module shall comply with Karnataka e-Governance, MeitY/CERT-In, the DPDP Act 2023, and applicable Karnataka state data-protection norms.
+Performance | The system shall support a minimum of 500 concurrent authenticated user sessions at launch; peak-load targets shall be validated during performance testing with Kaveri IT Cell.
+Availability | Disaster recovery shall target RPO ≤ 24 hours and RTO ≤ 4 hours for the User Management module and its database, subject to platform-wide DR architecture.
+Usability | Supported browsers: latest two stable versions of Google Chrome and Microsoft Edge on Windows; citizen flows shall also work on current Android and iOS mobile browsers.
+Auditability | Audit logs for security, authentication, access control, Transfer Out / Transfer In, and administrative actions shall be retained for at least seven (7) years unless a longer DSR records-retention rule applies.
+Compliance | PII retention and purge policy: user PII shall be retained while the account is active and for the audit-retention period thereafter; purge/anonymisation of dormant Citizen accounts shall follow a policy defined by the Department before go-live.
+[/TABLE]
+
+### [Heading 1] 6. Reporting Requirements
+
+The system shall provide a report of all active, inactive, and suspended users.
+The system shall provide an audit log report of login attempts (successful and failed) over a selected date range.
+The system shall provide a report of role and permission assignments across all users.
+The system shall provide a sanctioned post occupancy report showing, for each office, the number of sanctioned posts per Post (from Posts Master), occupied count, remaining capacity, and whether the post is wholly unoccupied (FR-UM-066).
+The system shall provide a Role-to-Module mapping report showing which modules and functions are assigned to each role.
+The system shall provide a single contact-change and recovery report over a selected date range covering: (a) Citizen lost-mobile / Aadhaar e-KYC recovery attempts (FR-UM-056) — Username, e-KYC outcome, PIN dispatch outcome, new mobile OTP outcome, success/failure, actor, and timestamp; (b) DSR self-service mobile changes (FR-UM-086) and administrator-initiated mobile changes for Other Department users (FR-UM-065); and (c) email changes (Citizen self-service or admin) — showing actor, user, channel changed, timestamp, outcome, and failed attempt counts. One report; do not build separate overlapping recovery reports.
+The system shall provide an additional charge report (FR-UM-053) showing, for each officer and date range, when additional charge was taken or cleared, the assigned post, the subordinate post, office, and audit timestamp.
+The system shall provide a Temporary Absence and Temporary Charge report (FR-UM-079–FR-UM-084) over a selected date range showing each absence (officer, Post + Office, type, reason, from/to dates, actor) and each temporary charge assignment or clearance (cover officer, covered Post + Office, timestamps).
+The system shall provide an occupancy-refresh report (FR-UM-068) showing, for each midnight job run, occupancies de-allocated (relieving), Sanctioned Posts occupied-count changes (Post + Office, before/after counts), and updated wholly-unoccupied flags.
+The system shall provide a Transfer Out / Transfer In history report (FR-UM-057–FR-UM-060) over a selected date range showing each relieving and Transfer In event — actor, officer, Post + Office, order reference (Relieving Order or Transfer / Reporting Order), Relieving Date, and audit timestamp.
+The system shall provide an officer posting and service history report showing, for each DSR Officer, the chronological list of post occupancies (Post + Office), assignment / Transfer In / relieving events, and effective date ranges.
+
+### [Heading 1] 7. Acceptance Criteria
+
+The User Management Module will be considered accepted when:
+All functional requirements listed in Section 4 have been implemented and pass QA testing, including the UAT scenarios below.
+UAT — FR-UM-052: A DSR Officer with two active post occupancies must select one post labelled Role — Post Name — Office Name (Office Code) before home; a single occupancy auto-selects; claims derive only from the selected assigned post.
+UAT — FR-UM-053: After login at SRO Yeshwanthapura, additional charge lists only wholly unoccupied subordinate posts at that same office; empty posts at another SRO (e.g. Jayanagar) are not offered; privileges switch to the additional-charge post only until switch-back (FR-UM-038).
+UAT — FR-UM-058 / FR-UM-068: Relieving with Relieving Date D keeps occupancy through 11:59 PM IST of D; the occupancy refresh job shortly after midnight IST de-allocates it and updates occupied counts.
+UAT — FR-UM-060 / FR-UM-066(a): Transfer In to a post at full sanctioned strength is blocked; once relieving takes effect and the midnight occupancy refresh job frees capacity (FR-UM-058, FR-UM-068), Transfer In succeeds immediately with a Transfer / Reporting Order only — no Joining Date and no reserved/future-dated step (FR-UM-061, FR-UM-067 retired).
+UAT — FR-UM-069–FR-UM-076: Login OTP expires after 5 minutes; 6 digits; 3 incorrect entries invalidate the code; 60-second resend cooldown; 5 failed logins lock Username 15 minutes; idle timeout 10 minutes; session ends at 4 hours; a second login ends the prior session.
+UAT — FR-UM-079–FR-UM-084: District Registrar records Leave for Sub-Registrar of SRO A; that SR cannot log in; Occupied unchanged; DRO assigns temporary charge to Sub-Registrar of SRO B; SRO B SR sees Temporary charge for SRO A at FR-UM-052 and receives SR@A claims when selected; after to_date the charge disappears and SRO A SR may log in again. FR-UM-053 still requires Occupied = 0 and is not used for this path.
+UAT — Role–Module–Function coverage: before go-live, Role–Module–Function mapping has been completed (not left as illustrative example rows) and confirmed by the Domain Expert for every active Role Master entry and every active Module in the Module Master, so that no DSR, Citizen, or Other Department role is left with unintended zero access.
+All non-functional requirements listed in Section 5 have been verified and validated.
+User acceptance testing (UAT) has been completed and signed off by Prashanth (Product Owner), including the scenarios listed in Section 7.
+Security review/penetration testing has been completed with no critical or high-severity findings open.
+Relevant documentation (user guide, admin guide) has been delivered.
+
+### [Heading 1] 8. Risks and Mitigations
+
+[TABLE]
+Risk | Impact | Mitigation
+OTP delivery failure (SMS) | High | Retry mechanism; allow mobile update after login for Citizens (FR-UM-013) and DSR Officers (FR-UM-086); Citizen lost-mobile reset via Aadhaar e-KYC (FR-UM-056); administrator-initiated change for Other Department users (FR-UM-065).
+Face / biometric device unavailability (DSR) | Medium | Face authentication or biometrics are mandatory on every login for DSR Officers (FR-UM-006) with no OTP and no exception path — offices must maintain working devices; Other Department users do not require biometrics (FR-UM-007).
+Account takeover via lost-mobile reset | High | Two independent proofs required — Aadhaar e-KYC plus single-use PIN to registered email — and OTP verification of the new mobile; attempts rate-limited and flow locked after configured failures; change notified to registered email and audit-logged.
+Aadhaar e-KYC failure or UIDAI downtime | Medium | Registration and lost-mobile reset depend on Aadhaar e-KYC (FR-UM-085). Provide clear user messaging, retry, and operational monitoring of UIDAI connectivity; no security-question fallback (FR-UM-055 retired).
+Citizen has lost both mobile and access to registered email | Medium | Assisted recovery at a designated counter with documentary identity verification and supervisory approval, fully audit-logged; no purely remote path.
+Security-question answers forgotten | Medium | Assisted recovery with strong documentary identity verification and audit; no override of the two-proof rule.
+Username squatting or impersonating Usernames | Medium | Reject reserved and misleading Username patterns (e.g. names resembling official designations); Username uniqueness enforced across the whole User Master (FR-UM-062).
+Over-capacity post assignment | High | Enforce sanctioned strength validation; block assignment when the post at that office is at full strength (FR-UM-066(a)).
+Vacancy tests confused in build | High | FR-UM-066 defines available capacity and wholly unoccupied separately; FR-UM-053 additional charge uses Occupied = 0; active context is either assigned post or additional charge post, not both (FR-UM-038)
+Post occupancy end date / relieving not enforced | High | Occupancy refresh job shortly after midnight (FR-UM-068) de-allocates relieving (FR-UM-058); Transfer In is immediate when capacity is available (FR-UM-060); audit alert on job failure.
+Unmapped post assigned or sanctioned | High | FR-UM-047 blocks sanction/assignment without Post–Role mapping; seed mapping covers all active Posts; Domain Expert to confirm before go-live.
+OTP/session policy | High | Enforce FR-UM-069–FR-UM-076 as specified (including 10-minute idle timeout and 4-hour absolute session on shared SRO counters with FR-UM-052/FR-UM-053).
+Unauthorised relieving / transfer in | High | Scope to offices under actor (FR-UM-059) then immediate-parent posts only (FR-UM-043, FR-UM-057); seeing a descendant office does not grant SR transfer to IGR/DIGR; available capacity required for Transfer In (FR-UM-060, FR-UM-066(a)).
+Transfer In without available capacity | High | Block Transfer In when Occupied >= Sanctioned Strength (FR-UM-060, FR-UM-066(a)); Joining Date / reservation path retired (FR-UM-061, FR-UM-067).
+Double-booking a full post during handover | High | Transfer In allowed only when available capacity exists (FR-UM-060); full posts remain blocked until relieving frees capacity via FR-UM-068.
+Other Department end date not enforced | Medium | Scheduled job to deactivate Other Department users on optional End Date; audit alert.
+Scope creep beyond OTP-only auth | Medium | Maintain strict change-control; no password management in KAVERI 3.0.
+Delayed stakeholder sign-off | Low | Set clear review deadlines and escalation path.
+Role–Module–Function mapping incomplete at go-live | High | Only Sub-Registrar (SR), FDA (Enforcement), DEO, Citizen roles, and one Other Department role have seeded Module Function mappings; the remaining ~37 DSR roles and 3 of 8 Module Master entries (Stamp Duty / Payments, Firm / Society Registration, MIS / Dashboards) currently have none. Unlike Post–Role mapping (FR-UM-047), which is seeded complete for all active Posts, this matrix carries no completeness commitment. Require Application Admin, with Domain Expert sign-off, to complete Role–Module–Function mapping for all active roles and modules before go-live (see UAT scenario in 9).
+Shared email weakens Citizen lost-mobile reset for linked accounts | Medium | Email and mobile carry no uniqueness constraint across the User Master (FR-UM-004), so a shared email address (e.g. family members) already satisfies one of FR-UM-056's two required proofs for every account tied to it, and security-question answers may be more easily known within a shared household. Consider a lower per-email daily attempt threshold on the reset flow and a notice to the shared email itself naming which account triggered the reset, in addition to existing rate-limiting and audit logging.
+Repeated OTP + biometric re-authentication may slow high-volume SRO counters | Medium | FR-UM-074 (10-minute idle timeout) combined with FR-UM-006 (Captcha + face/biometrics on every fresh DSR login, no OTP) adds authentication overhead at busy Sub-Registrar counters. Beyond functional UAT (9), measure end-to-end re-authentication time during performance testing with Kaveri IT Cell.
+Role/Post naming ambiguity — Sub-Registrar (SR) vs Sub Registrar (Admin)/(Computers) | Medium | The Enforcement signing-authority role is distinguished from the similarly named Admin/Computers roles only by a hyphen and a different suffix convention; the Glossary already flags related SRO-vs-role-name confusion. FR-UM-050's exact-name validation prevents backend mis-mapping but does not protect UI labels, reports, or verbal handovers from confusion. Domain Expert to confirm the naming convention (e.g. a more distinct name such as “Sub-Registrar (Enforcement)”) before go-live.
+Leave / OOD treated as vacancy or FR-UM-053 | High | FR-UM-081 keeps Occupied; FR-UM-082/FR-UM-083 temporary charge is superior-assigned and distinct from FR-UM-053; Transfer In must not open on absence alone
+Absent officer still logs in on another post | High | FR-UM-080 blocks entire Username login while any effective absence exists
+[/TABLE]
+
+### [Heading 1] 9. Glossary
+
+[TABLE]
+Term | Definition
+BRD | Business Requirements Document
+RBAC | Role-Based Access Control
+OTP | One-Time Password — the login OTP is sent only to the registered mobile (SMS); separate one-time OTPs verify the email address and mobile number at Citizen registration (FR-UM-063) and verify a new mobile / email on change; resend cooldown is 60 seconds (FR-UM-072)
+Username | The unique login identifier for every account, unique across the whole User Master: a preferred Username chosen by the citizen for Public users; the KGID for DSR Officers; and Department Code concatenated with Employee ID or KGID (<DepartmentCode>-<EmployeeID|KGID>) for Other Department users (FR-UM-062)
+Preferred Username | The Username a citizen chooses for themselves during self-registration, subject to an availability check against the entire User Master (FR-UM-062)
+KGID | Karnataka Government Insurance Department number — used as the Username for DSR Officers, and as one permitted identifier (with Department Code) for Other Department Username formation (FR-UM-062, FR-UM-064)
+Division Master | Enumerated master of DSR organisational divisions (Division Code, Division Name); referenced by Posts Master and Hierarchy Master (FR-UM-077)
+Post–Office-Type Allowed mapping | Rules defining which Post codes may be sanctioned at which Office Types; invalid combinations blocked (FR-UM-078)
+Official email ID | Government or parent-department email address recorded for Other Department users; not captured during DSR Officer registration (FR-UM-002, FR-UM-064); validated against the permitted domain list where configured
+Security question | RETIRED (v4.19) — Previously one of five questions selected by a citizen at registration; no longer captured or used. Replaced by Aadhaar e-KYC (FR-UM-085, FR-UM-056)
+Reset PIN | Single-use, time-limited code sent to a citizen's registered email address as the second independent proof in the lost-mobile reset flow (FR-UM-056)
+Lost-mobile reset | Citizen-only pre-login flow to replace the registered mobile number: Aadhaar e-KYC, then a PIN to the registered email, then OTP verification of the new number (FR-UM-056, FR-UM-085); not available to departmental users
+DSR | Department of Stamps and Registration, Government of Karnataka
+UAT | User Acceptance Testing
+IGR | Inspector General of Registration
+DIGR | Deputy Inspector General of Registration
+AIGR | Assistant Inspector General of Registration
+Sanctioned post | A Posts Master entry sanctioned at a specific office with approved strength; Post + Office + Strength
+Sanctioned strength | The approved number of occupants for a given Post at a given office
+Available capacity | Vacancy test used for post assignment and Transfer In: occupied count (active occupancies) for a Post at an Office is less than its sanctioned strength (FR-UM-066(a)); Transfer In requires this condition at the time of recording (FR-UM-060)
+Wholly unoccupied post | Vacancy test used only for FR-UM-053 post-login additional charge: the occupied count for a Post at an Office is zero, irrespective of sanctioned strength (FR-UM-066(b))
+Posts Master | Separate catalogue of DSR establishment posts (distinct from Role Master)
+Post–Role mapping | Table linking a Post to one or more Roles; one post may map to multiple roles
+Office | A concrete DSR office instance (e.g. IGR Head Office, DRO Mysuru, SRO Yeshwanthapura)
+Office Hierarchy Master | Tree of DSR offices: MS Building (Secretariat, root) → IGR Head Office → District Registrar Offices → Sub-Registrar Offices (FR-UM-059)
+MS Building | Secretariat office (Office Code OFF-MS-BLDG); Office Hierarchy root; office of POST-ACS-SEC (ACS / Secretary)
+Secretariat (Office Type) | Office Type for MS Building, distinct from Head Office (IGR Office) (FR-UM-059, FR-UM-078)
+Office span | The actor's session Office plus all descendant offices in the Office Hierarchy Master; first filter for Transfer Out / Transfer In lists — actions remain limited to posts whose immediate parent is the actor's session Post (FR-UM-057, FR-UM-060)
+Role Master | Single master of all roles for Citizens, DSR Officers, and Other Department users; differentiated by Role Category
+User Master | Single master of all users across categories; differentiated by User Category
+Role Category | Attribute on a role in the Role Master: Citizen, DSR, or Other Department
+User Category | Attribute on a user in the User Master: Public (Citizen), DSR Officer, or Other Department
+Module Master | Catalogue of application modules (e.g. Registration of Documents, Marriage Registration, Encumbrance Search, Certified Copy)
+Module Function Master | Catalogue of privilege verbs under a module — e.g. VIEW, ADD, EDIT, APPROVE, SIGN, PRINT, DOWNLOAD
+Resource Master | Catalogue of APIs and URLs linked to a Module Function (type, HTTP method, path pattern)
+Role–Module–Function mapping | Association of a Role Master role (exact unique name) to one or more Module Functions; Application Admin system privileges are not represented here (FR-UM-051)
+Module function | Privilege verb within a module — e.g. VIEW, ADD, EDIT, APPROVE, SIGN, PRINT, DOWNLOAD
+Resource | An API endpoint or UI URL/route protected by a Module Function
+Access enforcement | Runtime check: request path/method → Resource → required Module Function → user's role claims
+Application Admin | System-level / deployment-seeded actor who maintains masters; not a Role Master seed role; privileges outside Role–Module–Function mapping (FR-UM-051)
+DSR Officer Hierarchy Master | Master of reporting relationships among DSR Posts (Posts Master) as per the Department organisational chart
+Hierarchy node | A node in the DSR Officer Hierarchy Master linking a Post to an optional parent Post node
+Unique role name | Distinct Role Master name including division context where needed (e.g. FDA (Admin), FDA (Enforcement)) — no duplicate bare FDA/SDA/Typist entries
+Other Department role | A role in the Role Master with Role Category = Other Department; exactly one such role is assigned per Other Department user
+Post occupancy | Assignment of a DSR user to a sanctioned post at an office; roles follow from Post–Role mapping for the assigned post at login (FR-UM-052); no Primary/Secondary distinction
+Relieving / Transfer out | Process by which a superior removes a DSR Officer from a post occupancy within the superior's office span and immediate-parent posts only, capturing Relieving Date, Relieving Reason (FR-UM-087), and Relieving Order (FR-UM-057–FR-UM-059); mapping ends after 11:59 PM IST of that date via the occupancy refresh job (FR-UM-058, FR-UM-068)
+Relieving Date | Calendar date captured during relieving; user–post mapping is removed after 11:59 PM IST of this date by the occupancy refresh job (FR-UM-068)
+Relieving Order | Order number / reference (and optional uploaded order document) recorded when relieving an officer
+Transfer In | Process by which a superior assigns a DSR Officer to a post within office span and immediate-parent posts only, capturing Transfer/Reporting Order (no Joining Date), only when the post has available capacity; occupancy is active immediately (FR-UM-060, FR-UM-066(a))
+Reserved occupancy | RETIRED (v4.20) — Previously a future-dated Transfer In that counted toward Occupied until Joining Date; removed. Transfer In requires available capacity and takes effect immediately (FR-UM-060)
+Joining Date | RETIRED (v4.20) — Previously captured during Transfer In to gate login until 12:00 AM IST of that date; no longer captured (FR-UM-061 retired)
+Sub-Registrar Office (SRO) | Office Type in Office Hierarchy Master — not a role name; do not use SRO as a Role Master name (use Sub Registrar (Admin) or Sub Registrar (Computers) instead)
+Deputation Reason | RETIRED (v4.19) — Previously mandatory when optional occupancy End Date was set under FR-UM-030; temporary deputation End Date feature removed. Deputation as a Relieving Reason remains under FR-UM-087
+Is Public | Resource Master flag: Yes allows unauthenticated access; default No — deny-by-default at runtime (FR-UM-040, FR-UM-041)
+Occupancy refresh job | Scheduled job shortly after midnight IST that de-allocates relieved occupancies, recalculates Sanctioned Posts occupied counts, and refreshes officers' effective post assignments (FR-UM-068); no Joining Date / reserved Transfer In activation
+Transfer / Reporting Order | Order number / reference (and optional uploaded document) recorded when transferring an officer into a post
+Login post selection | After authentication, when a DSR Officer has multiple active post occupancies, the mandatory step to choose one Post (shown with Office details) for the session (FR-UM-052)
+Assigned post | The sanctioned post (Post + Office) selected or auto-selected at login under FR-UM-052; fixed for the session unless the officer logs out and logs in again with a different choice
+Additional charge | Temporary in-office cover of a wholly unoccupied subordinate post under the assigned post, taken after login under FR-UM-053 without logout or order; session privileges derive from the additional charge post only while active; switch back to assigned post to restore assigned-post privileges (FR-UM-038)
+Session post | Synonym for assigned post (FR-UM-052) in audit and reporting contexts; distinct from additional charge post under FR-UM-053
+Additional charge switch | Post-login action allowing a DSR Officer to take or clear additional charge of a wholly unoccupied subordinate post at the same office (FR-UM-053, FR-UM-066(b)); no logout required
+Session Post–Role display | After login, persistent display of assigned Post with Role(s); when FR-UM-053 is active, shows which context drives session privileges — assigned post or additional charge post (FR-UM-054)
+Parent department | The government department to which an Other Department user belongs (e.g. Revenue, Treasury, Police)
+Account End Date | Optional date on an Other Department user account; if set, the system deactivates the user on that date
+Temporary Absence | Superior-recorded Leave / OOD / Other period linked to an active post occupancy with reason and from–to dates (FR-UM-079); does not end the occupancy or free Transfer In capacity
+Effective absence | An Approved temporary absence whose from_date–to_date covers the current IST calendar day
+OOD | Out of Duty / Office Duty — an absence type under Temporary Absence (FR-UM-079)
+Temporary Charge | Superior-assigned, dated mapping of an absent Post + Office to another subordinate officer under the same superior (may be cross-office); cover officer selects it at FR-UM-052 (FR-UM-082, FR-UM-083); distinct from FR-UM-053 additional charge
+Cover officer | DSR Officer who holds Temporary Charge of another officer's Post + Office during Temporary Absence
+Aadhaar e-KYC | UIDAI electronic Know Your Customer verification mandatory for Citizen self-registration and used as identity proof in Citizen lost-mobile reset (FR-UM-085, FR-UM-056)
+Face authentication | Facial biometric verification used as the biometric factor for DSR Officer login (with Captcha; no OTP) as an alternative to fingerprint / other biometrics (FR-UM-006)
+Employee ID | Parent-department employee identifier that may be used (instead of or alongside KGID) when forming Other Department Username with Department Code (FR-UM-062)
+Department Code | Configured code for the parent government department of an Other Department user; concatenated with Employee ID or KGID to form the Username (FR-UM-062, FR-UM-064)
+Relieving Reason | Mandatory enumerated reason captured during Transfer Out / Relieving: Deputation; Transfer; Suspension; Superannuation; Death (FR-UM-087)
+[/TABLE]
+
+### [Heading 1] 10. Approval
+
+By signing below, the stakeholders confirm they have reviewed and approved this Business Requirements Document.
+[TABLE]
+Name | Role | Signature | Date
+Prashanth | Product Owner |  | 
+Prabhakar Naik | Domain Expert |  | 
+Kaveri IT Cell Lead | IT Security / Engineering |  | 
+[/TABLE]

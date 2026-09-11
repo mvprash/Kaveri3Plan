@@ -6,6 +6,7 @@
   - Document_Registration_requirement_28082026_v1.1.docx
   - Document_Registration_requirement_01092026_v2.docx
   - Document_Registration_requirement_02092026_v1.1.docx
+  - Document_Registration_requirement_07092026_v1.1.docx
 
 Includes: discussion topics, sections, rules, notifications, pain points,
 user stories. Excludes business re-engineering.
@@ -25,7 +26,9 @@ sys.stdout.reconfigure(encoding="utf-8")
 BASE = Path(
     r"E:\MVP\Kaveri 3.0\Source Code\Kaveri 3 Plan\Requirement Discussions\Daily Reports"
 )
-OUT = BASE / "Consolidated_Requirement_Discussions_25082026_to_02092026.docx"
+OUT = BASE / "Consolidated_Requirement_Discussions_25082026_to_08092026.docx"
+LEGACY_OUT = BASE / "Consolidated_Requirement_Discussions_25082026_to_02092026.docx"
+OUT_FALLBACK = BASE / "Consolidated_Requirement_Discussions_25082026_to_08092026_v2.docx"
 
 FONT = "Segoe UI"
 TITLE_FONT = "Segoe UI"
@@ -173,7 +176,7 @@ def build():
     )
     add_para(
         doc,
-        "25-08-2026 to 02-09-2026",
+        "25-08-2026 to 08-09-2026",
         size=14,
         bold=True,
         align=WD_ALIGN_PARAGRAPH.CENTER,
@@ -196,6 +199,7 @@ def build():
         "Requirement Discussions/Daily Reports/Document_Registration_requirement_28082026_v1.1.docx",
         "Requirement Discussions/Daily Reports/Document_Registration_requirement_01092026_v2.docx",
         "Requirement Discussions/Daily Reports/Document_Registration_requirement_02092026_v1.1.docx",
+        "Requirement Discussions/Daily Reports/Document_Registration_requirement_07092026_v1.1.docx",
     ]
     for s in sources:
         add_bullet(doc, s)
@@ -221,6 +225,10 @@ def build():
             [
                 "02-09-2026",
                 "Rule 17(1)/(2)/(3) filing, Old pending release, Govt/Institutional e-filing",
+            ],
+            [
+                "07-09-2026 to 08-09-2026",
+                "Registration Appeal; Will after the death of the testator",
             ],
         ],
         col_widths=[1.3, 5.5],
@@ -369,86 +377,42 @@ def build():
     add_heading_custom(doc, "1.4 User stories", level=2)
     add_para(
         doc,
-        "Derived from the 25-08-2026 discussion sections.",
+        "Aligned to BRD_User_Management_v4.23 (Login / RBAC / Temporary Absence / Reporting). "
+        "Format matches BRD §4.6.6: ID | Actor | Story | Acceptance (system). "
+        "KT notes on Primary/Secondary roles, password+OTP for all categories, and biometric "
+        "refresh every 5 years are superseded by FR-UM-017/030, FR-UM-005–007/009, and FR-UM-006.",
         size=10,
+        space_after=6,
+    )
+    add_para(
+        doc,
+        "Source: Finalized BRD/User Management/BRD_User_Management_v4.23.docx",
+        size=9.5,
+        bold=True,
         space_after=8,
     )
-    stories_2508 = [
-        (
-            "US-UM-01",
-            "department / citizen user",
-            "log in with User ID + OTP + captcha only (no password)",
-            "authentication is simpler and consistent with OTP-based access",
-        ),
-        (
-            "US-UM-02",
-            "department user",
-            "optionally authenticate using biometrics that are refreshed every 5 years",
-            "secure biometric login is available for office users",
-        ),
-        (
-            "US-UM-03",
-            "logged-in user",
-            "select a role from my assigned list after login and have menus/actions update accordingly",
-            "I work under the correct role context",
-        ),
-        (
-            "US-UM-04",
-            "logged-in user",
-            "switch among my assigned roles whenever needed",
-            "I do not need to log out to change role context",
-        ),
-        (
-            "US-UM-05",
-            "admin / creator",
-            "assign a primary role without an end date at account creation",
-            "every user has a permanent home role",
-        ),
-        (
-            "US-UM-06",
-            "admin",
-            "assign secondary roles with mandatory end dates and auto-remove access after expiry",
-            "temporary access cannot continue beyond the approved period",
-        ),
-        (
-            "US-UM-07",
-            "admin",
-            "capture an approval letter when granting additional roles or changing the primary role",
-            "role changes remain auditable",
-        ),
-        (
-            "US-UM-08",
-            "admin",
-            "record the reason for primary-role change (promotion / transfer / demotion) and set a future effective date",
-            "role changes can be scheduled and justified",
-        ),
-        (
-            "US-UM-09",
-            "super admin",
-            "add roles with abbreviation/acronym, hierarchy level, and peer/subordinate edit permission flags",
-            "role masters stay configurable for the department",
-        ),
-        (
-            "US-UM-10",
-            "department officer",
-            "generate relieving and joining letters from the application in the department format",
-            "offline letter work is reduced",
-        ),
-        (
-            "US-UM-11",
-            "admin",
-            "create a user account instantly without an approval workflow",
-            "onboarding is not delayed by multi-level approvals",
-        ),
-        (
-            "US-UM-12",
-            "management / admin",
-            "view a daily login report with user counts and roles",
-            "login activity can be monitored",
-        ),
-    ]
-    for s in stories_2508:
-        add_story(doc, *s)
+    add_table(
+        doc,
+        ["ID", "Actor", "Story", "Acceptance (system)"],
+        [
+            ["US-LG-01", "Citizen", "As a Citizen, I need to log in with my Username + Captcha + OTP sent only to my registered mobile, with no password option, so that I can access KAVERI securely.", "FR-UM-005, FR-UM-009, FR-UM-010, FR-UM-011"],
+            ["US-LG-02", "DSR Officer", "As a DSR Officer, I need to log in with my KGID + Captcha + Face authentication or Biometrics (no OTP and no password), so that I can access the office application.", "FR-UM-006, FR-UM-009"],
+            ["US-LG-03", "Other Department user", "As an Other Department user, I need to log in with my Username (Department Code concatenated with Employee ID or KGID) + Captcha + OTP (no biometrics), so that I can access my allotted modules.", "FR-UM-007, FR-UM-009"],
+            ["US-PS-01", "DSR Officer", "As a DSR Officer with more than one active sanctioned-post occupancy, I need to select exactly one assigned post labelled \"Role — Post Name — Office Name (Office Code)\" after authentication (auto-select if only one), so that session Module Function claims come from that assigned post only.", "FR-UM-052, FR-UM-038"],
+            ["US-AC-01", "DSR Officer", "As a DSR Officer already logged in under my assigned post, I need to take additional charge of a wholly unoccupied subordinate post at the same office without logout, switch back to assigned-post context when needed, and see the active context in the header, so that I can cover vacant desks for the session without retaining assigned-post privileges while in additional charge.", "FR-UM-053, FR-UM-054, FR-UM-066(b)"],
+            ["US-CR-01", "Citizen", "As a Citizen, I need to self-register instantly (preferred Username availability check, email OTP, mobile OTP, and mandatory Aadhaar e-KYC) with no approval workflow, so that I can start using the portal without delay.", "FR-UM-001, FR-UM-062, FR-UM-063, FR-UM-085"],
+            ["US-CR-02", "Authorised administrator", "As an authorised administrator, I need to create DSR Officers and Other Department users instantly without maker-checker, assigning at least one sanctioned post with available capacity for DSR Officers (no Primary/Secondary role distinction) or exactly one Other Department role, so that onboarding is not delayed.", "FR-UM-002, FR-UM-003, FR-UM-017, FR-UM-029, FR-UM-030, FR-UM-051"],
+            ["US-RM-01", "Application Admin", "As Application Admin, I need to maintain a single unified Role Master and User Master (differentiated by Role Category / User Category), with unique role names, abbreviations as displayed via Post–Role mapping, and hierarchy via the DSR Officer Hierarchy Master, so that access and reporting lines stay configurable.", "FR-UM-016, FR-UM-028, FR-UM-034, FR-UM-035, FR-UM-043, FR-UM-047"],
+            ["US-TO-01", "Hierarchy superior", "As a hierarchy superior (within office span and immediate-parent post parentage), I need to relieve a subordinate from a post occupancy capturing Relieving Date, enumerated Relieving Reason, and Relieving Order (number / upload), so that Transfer Out is auditable and occupancy ends after the Relieving Date via the midnight refresh job.", "FR-UM-057, FR-UM-058, FR-UM-068, FR-UM-087"],
+            ["US-TI-01", "Hierarchy superior", "As a hierarchy superior, I need to Transfer In an officer to a Post + Office that already has available capacity, capturing Transfer / Reporting Order (immediate effect; no Joining Date), so that the officer can select that post at the next login.", "FR-UM-060, FR-UM-066(a)"],
+            ["US-RP-01", "Management / Admin", "As management, I need login-attempt audit reports (successful and failed) over a selected date range, plus role/permission, sanctioned-post occupancy, additional-charge, and Transfer Out/In history reports, so that access and establishment can be monitored.", "BRD §6 Reporting Requirements; FR-UM-053; FR-UM-057–FR-UM-060"],
+            ["US-TA-01", "District Registrar", "As District Registrar of DRO Bengaluru, I need to record Leave for the Sub-Registrar of SRO Yeshwanthapura (SRO A) from 01-Sep-2026 to 05-Sep-2026 so that the officer cannot access KAVERI during that period.", "FR-UM-079, FR-UM-080"],
+            ["US-TA-02", "District Registrar", "As the same District Registrar, I need to give temporary charge of SRO Yeshwanthapura (SRO A) Sub-Registrar work to the Sub-Registrar of SRO Jayanagar (SRO B) under my district for the leave period so that SRO A work continues.", "FR-UM-082, FR-UM-083"],
+            ["US-TA-03", "AIGR (Admin)", "As AIGR (Admin), I need to record OOD / Leave for District Registrar of DRO Mysuru and assign temporary charge of that DRO post to the District Registrar of DRO Bengaluru (another district under me) so that DRO Mysuru work continues.", "FR-UM-079, FR-UM-082"],
+            ["US-TA-04", "Covering Sub-Registrar", "As Sub-Registrar of SRO B holding temporary charge of SRO A, I need to log in and choose whether to work as SR of B or under temporary charge of A.", "FR-UM-052 lists both; one context; FR-UM-083"],
+        ],
+        col_widths=[0.9, 1.3, 3.4, 1.6],
+    )
 
     # =====================================================================
     # 27-08-2026
@@ -1868,12 +1832,433 @@ def build():
         "If paperless, whether the template should be generated for the required languages.",
     )
 
+    # =====================================================================
+    # 07-09-2026 to 08-09-2026 — Registration Appeal & Will after death
+    # =====================================================================
+    page_break(doc)
+    add_heading_custom(
+        doc,
+        "6. 07-09-2026 to 08-09-2026 — Registration Appeal & Will After Death of Testator",
+        level=1,
+    )
+    add_meta_table(
+        doc,
+        [
+            ["Date", "07-09-2026 to 08-09-2026"],
+            [
+                "Topics",
+                "Registration Appeal and Will After the death of the testator documents",
+            ],
+            [
+                "Attendees",
+                "Kaveri IT Cell, AIGR Computers team, Domain Expert and committee members",
+            ],
+            [
+                "Version",
+                "1.1 (08-09-2026) — Acts, sections, Rules and notifications added for Registration Appeal and Will After the death of the testator",
+            ],
+            ["Source", "Document_Registration_requirement_07092026_v1.1.docx"],
+        ],
+    )
+    add_para(
+        doc,
+        "Scope: (1) Registration Appeal against refusal / related Registrar orders; "
+        "(2) Will after the death of the testator (presentation / registration and "
+        "proceedings on deposited sealed covers). Source folder referenced in note: Acts_Rules/Document/.",
+        size=10.5,
+        space_after=8,
+    )
+
+    add_heading_custom(doc, "6.1 Primary Acts", level=2)
+    add_table(
+        doc,
+        ["Act / instrument", "Role", "Relevance to topics"],
+        [
+            [
+                "The Registration Act, 1908 (Central Act 16 of 1908)",
+                "Primary",
+                "Registration Appeal (Part XII — Secs. 71–77); Wills presentation & deposit (Parts VIII–IX — Secs. 40–46); wills may be presented/deposited at any time (Sec. 27); optional registration of wills (Sec. 18)",
+            ],
+            [
+                "The Registration (Karnataka Amendment) Act, 2023 (Karnataka Act 47 of 2024)",
+                "Related — Appeal",
+                "Sec. 22-D — appeal against District Registrar’s order cancelling registration under Sec. 22-C (forged / prohibited documents)",
+            ],
+            [
+                "The Karnataka Registration Rules, 1965",
+                "Primary (Rules)",
+                "Appeals & enquiries (Ch. XXV — Rules 175–191); Wills / authorities to adopt (Ch. XIV — Rules 83–86); sealed covers containing wills (Ch. XV — Rules 87–93); withdrawal of sealed covers (Ch. XXXII — Rule 213)",
+            ],
+            [
+                "The Indian Succession Act, 1925",
+                "Related — Will after death (reference)",
+                "Probate / letters of administration and succession proof often accompany post-death will registration or opening of deposited sealed covers — confirm with Domain Expert whether Kaveri 3.0 captures probate/court order as a prerequisite",
+            ],
+        ],
+        col_widths=[2.4, 1.4, 3.0],
+    )
+
+    add_heading_custom(doc, "6.2 Relevant sections", level=2)
+    add_heading_custom(doc, "6.2.1 Registration Appeal", level=3)
+    add_table(
+        doc,
+        ["Section", "Topic", "BRD / system relevance"],
+        [
+            [
+                "Sec. 71",
+                "Reasons for refusal to register to be recorded",
+                "SRO must record reasons — starting point for appeal / application",
+            ],
+            [
+                "Sec. 72",
+                "Appeal to Registrar — refusal on ground other than denial of execution",
+                "Primary Registration Appeal path to District Registrar",
+            ],
+            [
+                "Sec. 73",
+                "Application to Registrar — refusal on ground of denial of execution",
+                "Separate application (not styled as Sec. 72 appeal) when execution is denied",
+            ],
+            [
+                "Sec. 74",
+                "Procedure of Registrar on such application",
+                "Enquiry workflow at DR login",
+            ],
+            [
+                "Sec. 75",
+                "Order by Registrar to register and procedure thereon",
+                "Direction to register; re-presentation / status 'Ordered to register'",
+            ],
+            [
+                "Sec. 76",
+                "Order of refusal by Registrar",
+                "DR refusal — end of departmental appeal (unless Sec. 22-D path applies)",
+            ],
+            [
+                "Sec. 77",
+                "Suit in case of order of refusal by Registrar",
+                "Civil Court suit within 30 days — court-ordered registration status",
+            ],
+            [
+                "Sec. 22-D (Kar. Amd. 2023)",
+                "Appeal against District Registrar cancellation under Sec. 22-C",
+                "Appeal of forged/prohibited document cancellation — parallel appeal track",
+            ],
+            [
+                "Sec. 68",
+                "Power of Registrar to superintend and control Sub-Registrars",
+                "DR oversight of SRO refusal / appeal handling",
+            ],
+        ],
+        col_widths=[1.6, 2.4, 2.8],
+    )
+
+    add_heading_custom(doc, "6.2.2 Will After the death of the testator", level=3)
+    add_table(
+        doc,
+        ["Section", "Topic", "BRD / system relevance"],
+        [
+            [
+                "Sec. 18",
+                "Documents of which registration is optional — includes wills",
+                "Will registration is optional (not compulsory under Sec. 17)",
+            ],
+            [
+                "Sec. 27",
+                "Wills may be presented or deposited at any time",
+                "No 4-month presentation bar for wills — including after death of testator",
+            ],
+            [
+                "Sec. 40",
+                "Persons entitled to present wills and authorities to adopt",
+                "Who may present after death (executor / legatee / person claiming under will)",
+            ],
+            [
+                "Sec. 41",
+                "Registration of wills and authorities to adopt",
+                "Procedure for registering a will when presented (Book 3)",
+            ],
+            [
+                "Sec. 42",
+                "Deposit of wills",
+                "Sealed-cover deposit with Registrar during testator’s lifetime",
+            ],
+            [
+                "Sec. 43",
+                "Procedure on deposit of wills",
+                "Receipt / entry of deposited sealed cover",
+            ],
+            [
+                "Sec. 44",
+                "Withdrawal of sealed cover deposited under Sec. 42",
+                "Testator may withdraw sealed cover during lifetime",
+            ],
+            [
+                "Sec. 45",
+                "Proceedings on death of depositor",
+                "Core section for Will after death of testator — opening / delivery of deposited sealed cover to Court or entitled person as prescribed",
+            ],
+            [
+                "Sec. 46",
+                "Saving of certain enactments and powers of Courts",
+                "Court powers over wills / probate not affected",
+            ],
+            [
+                "Sec. 51",
+                "Register-books — Book 3 (wills and authorities to adopt)",
+                "Statutory book for will registration entries",
+            ],
+        ],
+        col_widths=[1.4, 2.6, 2.8],
+    )
+
+    add_heading_custom(doc, "6.3 Primary Rules — Karnataka Registration Rules, 1965", level=2)
+    add_heading_custom(doc, "6.3.1 Registration Appeal", level=3)
+    add_table(
+        doc,
+        ["Rule", "Requirement", "System feature"],
+        [
+            [
+                "Rule 171–174 (Ch. XXIV)",
+                "Refusal to register — reasons; partial refusal; etc.",
+                "Pre-appeal refusal record at SRO",
+            ],
+            [
+                "Rule 175",
+                "Appeal against refusal",
+                "Intake of Sec. 72 appeal",
+            ],
+            [
+                "Rule 176",
+                "Appeal by whom to be preferred",
+                "Who can file the appeal",
+            ],
+            [
+                "Rule 177",
+                "Persons who can appear in an enquiry connected with a will or authority to adopt",
+                "Cross-link — will-related enquiry appearance",
+            ],
+            [
+                "Rule 179–180",
+                "Procedure of disposing appeal; endorsement on order",
+                "DR enquiry and order endorsement",
+            ],
+            [
+                "Rule 181",
+                "Appeal against refusal to register a will",
+                "Specific appeal path when the refused document is a will",
+            ],
+            [
+                "Rule 182–183",
+                "Refusal based on non-appearance; communication of orders",
+                "Special refusal / notice workflow",
+            ],
+            [
+                "Rule 184 / 188",
+                "Registration ordered by Registrar or Court; order directing registration after enquiry",
+                "Re-presentation and registration after successful appeal / court order",
+            ],
+            [
+                "Rule 185–187, 190–191",
+                "File of appeal orders; refusal orders; no appeal when returned at presentant’s request; limitation on appeals",
+                "Appeal file maintenance, limitation and exclusions",
+            ],
+            [
+                "Rule 108–109",
+                "Endorsement on document registered under Sec. 74; presented by order of Registrar or Court",
+                "Endorsement templates after appeal / court direction",
+            ],
+        ],
+        col_widths=[1.8, 2.6, 2.4],
+    )
+
+    add_heading_custom(doc, "6.3.2 Will After the death of the testator", level=3)
+    add_table(
+        doc,
+        ["Rule", "Requirement", "System feature"],
+        [
+            [
+                "Rule 83",
+                "Registration of a Will or authority to adopt",
+                "SRO/DR procedure when will is presented for registration",
+            ],
+            [
+                "Rule 84",
+                "Return of Will or authority to adopt after the death of Testator — unregistered",
+                "Directly covers Will after death of the testator when still unregistered",
+            ],
+            [
+                "Rule 85",
+                "Registration of revocation or cancellation of a Will or authority to adopt",
+                "Revocation / cancellation registration",
+            ],
+            [
+                "Rule 86",
+                "Unclaimed Wills",
+                "Custody / disposal of unclaimed wills",
+            ],
+            [
+                "Rules 87–89",
+                "Sealed covers — manner of entries; deposit by persons; wills sent by post",
+                "Deposit workflow (lifetime deposit under Sec. 42)",
+            ],
+            [
+                "Rules 90–93",
+                "Endorsements when sealed cover is sent to Court; forwardal; opening procedure",
+                "Post-death opening / Court production of deposited will (Sec. 45)",
+            ],
+            [
+                "Rule 213 (Ch. XXXII)",
+                "Withdrawal of sealed covers",
+                "Withdrawal under Sec. 44",
+            ],
+            [
+                "Rule 177 / 181",
+                "Enquiry appearance for will; appeal against refusal to register a will",
+                "Overlap with Registration Appeal when will registration is refused",
+            ],
+        ],
+        col_widths=[1.8, 2.6, 2.4],
+    )
+
+    add_heading_custom(doc, "6.4 Notifications / amendments", level=2)
+    add_table(
+        doc,
+        ["Instrument", "Effect", "Topics"],
+        [
+            [
+                "The Karnataka Registration Rules, 1965 (under Registration Act Sec. 69)",
+                "Parent subordinate legislation for appeal and will procedures",
+                "Both topics",
+            ],
+            [
+                "RGN 2/2002-03 (1 Apr 2002; w.e.f. 4 Apr 2002)",
+                "Document sheets; photograph / digital photo at presentation (Rule 40) — applies when a will is presented for registration",
+                "Will registration",
+            ],
+            [
+                "The Registration (Karnataka Amendment) Act, 2023 — Gazette Extra-ordinary No. 480 (19 Oct 2024)",
+                "Secs. 22-B–22-D, 81-A–81-B — refusal/cancellation of forged documents and appeal under Sec. 22-D",
+                "Registration Appeal (cancellation track)",
+            ],
+            [
+                "RD 403 ESR 85 / RD/46/MNMU/2025 (registration fee table under Sec. 78)",
+                "Fee for appeal / application / will registration or deposit as per notified Table of Fees",
+                "Both topics — fee masters",
+            ],
+            [
+                "Karnataka Registration (Amendment) Rules / GSR notifications cited in Rules 1965 (incl. 1971 onwards)",
+                "Amendments to will / sealed-cover / appeal procedure text embedded in Rules PDF",
+                "Both topics",
+            ],
+        ],
+        col_widths=[2.6, 2.6, 1.6],
+    )
+
+    add_heading_custom(doc, "6.5 Pain points", level=2)
+    add_para(
+        doc,
+        "No ServiceDesk pain-point mapping was attached to the 07–08 Sep 2026 source note.",
+        size=10.5,
+    )
+
+    add_heading_custom(doc, "6.6 User stories", level=2)
+    add_para(
+        doc,
+        "Derived from 07–08 Sep 2026 Acts, sections and Rules (source note had no User Stories section).",
+        size=10,
+        space_after=8,
+    )
+
+    add_heading_custom(doc, "Registration Appeal", level=3)
+    for s in [
+        (
+            "US-APL-01",
+            "Sub-Registrar",
+            "record reasons for refusal under Sec. 71 (and Rules 171–174)",
+            "the presentant has a clear starting point for appeal or Sec. 73 application",
+        ),
+        (
+            "US-APL-02",
+            "citizen / presentant",
+            "file a Sec. 72 appeal to the District Registrar when refusal is on a ground other than denial of execution",
+            "my case is taken up on the primary Registration Appeal path",
+        ),
+        (
+            "US-APL-03",
+            "citizen / presentant",
+            "file a Sec. 73 application when refusal is for denial of execution",
+            "the denial-of-execution track is handled separately from a Sec. 72 appeal",
+        ),
+        (
+            "US-APL-04",
+            "District Registrar",
+            "run the Sec. 74 enquiry, dispose the appeal under Rules 179–180, and order registration (Sec. 75) or refuse (Sec. 76)",
+            "appeal outcomes and endorsements are complete and auditable",
+        ),
+        (
+            "US-APL-05",
+            "citizen / presentant",
+            "re-present the document for registration after a Registrar or Court order (Rules 184 / 188; Rules 108–109)",
+            "status moves to 'Ordered to register' and registration can complete",
+        ),
+        (
+            "US-APL-06",
+            "citizen / presentant",
+            "pursue Sec. 77 civil suit within 30 days after DR refusal, or Sec. 22-D appeal against Sec. 22-C cancellation",
+            "court-ordered registration and forged/prohibited cancellation appeals are supported",
+        ),
+    ]:
+        add_story(doc, *s)
+
+    add_heading_custom(doc, "Will After the death of the testator", level=3)
+    for s in [
+        (
+            "US-WILL-01",
+            "executor / legatee / person claiming under the will",
+            "present a will for registration after the testator’s death under Secs. 27, 40 and 41 (Book 3), without the ordinary 4-month bar",
+            "optional will registration can proceed post-death",
+        ),
+        (
+            "US-WILL-02",
+            "testator (during lifetime)",
+            "deposit a sealed-cover will with the Registrar (Secs. 42–43; Rules 87–89) and withdraw it if needed (Sec. 44; Rule 213)",
+            "lifetime deposit and withdrawal are recorded correctly",
+        ),
+        (
+            "US-WILL-03",
+            "entitled person / Court / District Registrar",
+            "open or forward a deposited sealed cover after death of the depositor under Sec. 45 and Rules 90–93",
+            "proceedings on death of depositor follow the prescribed sealed-cover workflow",
+        ),
+        (
+            "US-WILL-04",
+            "Sub-Registrar / District Registrar",
+            "return an unregistered will after death of the testator under Rule 84, register revocation/cancellation under Rule 85, and manage unclaimed wills under Rule 86",
+            "post-death will custody and related registrations are handled",
+        ),
+        (
+            "US-WILL-05",
+            "citizen / presentant",
+            "appeal refusal to register a will under Rule 181 (with Rule 177 enquiry appearance where applicable)",
+            "will-registration refusals use the correct appeal path",
+        ),
+    ]:
+        add_story(doc, *s)
+
+    add_heading_custom(doc, "6.7 Open query (from source)", level=2)
+    add_bullet(
+        doc,
+        "Confirm with Domain Expert whether Kaveri 3.0 should capture probate / letters of administration / court order "
+        "(Indian Succession Act, 1925) as a prerequisite for post-death will registration or opening of deposited sealed covers.",
+    )
+
     # ----- End note -----
     page_break(doc)
     add_heading_custom(doc, "Appendix — Scope note", level=1)
     add_bullet(
         doc,
-        "This consolidation is date-wise and limited to the five named daily reports.",
+        "This consolidation is date-wise and limited to the named daily reports listed under Sources.",
     )
     add_bullet(
         doc,
@@ -1881,15 +2266,26 @@ def build():
     )
     add_bullet(
         doc,
-        "User stories for 25-08, 27-08 and 28-08 were derived from discussion sections where the source notes did not yet include a User Stories section; 01-09 and 02-09 user stories are taken from the source documents.",
+        "User stories for 25-08 are aligned to BRD_User_Management_v4.23 (ID | Actor | Story | Acceptance). User stories for 27-08, 28-08 and 07–08 Sep were derived from discussion sections / Acts-Rules where the source notes did not include a User Stories section; 01-09 and 02-09 user stories are taken from the source documents.",
     )
     add_bullet(
         doc,
-        "Pain-point ticket numbers are as recorded in the source daily reports / ServiceDesk mapping.",
+        "Pain-point ticket numbers are as recorded in the source daily reports / ServiceDesk mapping (not supplied for 07–08 Sep 2026).",
     )
 
-    doc.save(str(OUT))
-    print(f"Wrote {OUT}")
+    try:
+        doc.save(str(OUT))
+        print(f"Wrote {OUT}")
+    except PermissionError:
+        doc.save(str(OUT_FALLBACK))
+        print(f"Target locked — wrote {OUT_FALLBACK}")
+    if LEGACY_OUT.exists() and LEGACY_OUT.resolve() != OUT.resolve():
+        try:
+            LEGACY_OUT.unlink()
+            print(f"Removed legacy {LEGACY_OUT.name}")
+        except PermissionError:
+            print(f"Could not remove legacy {LEGACY_OUT.name} (file in use)")
+
 
 
 if __name__ == "__main__":
