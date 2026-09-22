@@ -47,11 +47,11 @@ COMMENT ON TABLE um.officer_hierarchy_node IS
   'Reporting tree of Posts (not people) — FR-UM-043';
 
 COMMENT ON COLUMN um.officer_hierarchy_node.division_code IS
-  'Division / Branch attribute of the hierarchy node (FR-UM-043, Section 6.5.7 attributes table)';
+  'Division / Branch attribute of the hierarchy node (FR-UM-043, Section 4.5.7 attributes table)';
 COMMENT ON COLUMN um.officer_hierarchy_node.effective_from IS
-  'Optional validity window start of the hierarchy link (Section 6.5.7 attributes table)';
+  'Optional validity window start of the hierarchy link (Section 4.5.7 attributes table)';
 COMMENT ON COLUMN um.officer_hierarchy_node.effective_to IS
-  'Optional validity window end of the hierarchy link (Section 6.5.7 attributes table)';
+  'Optional validity window end of the hierarchy link (Section 4.5.7 attributes table)';
 
 -- POST_OFFICE_TYPE_ALLOWED (FR-UM-078)
 CREATE TABLE IF NOT EXISTS um.post_office_type_allowed (
@@ -97,7 +97,7 @@ CREATE INDEX IF NOT EXISTS ix_post_role_map_role
 COMMENT ON TABLE um.post_role_map IS
   'Unmapped post cannot be sanctioned or assigned (FR-UM-047)';
 
--- SANCTIONED_POST (FR-UM-024, FR-UM-048, FR-UM-066–068)
+-- SANCTIONED_POST (FR-UM-024, FR-UM-048, FR-UM-066, FR-UM-068)
 CREATE TABLE IF NOT EXISTS um.sanctioned_post (
   post_code            varchar(40) NOT NULL
                        REFERENCES um.posts_master (post_code),
@@ -113,17 +113,17 @@ CREATE TABLE IF NOT EXISTS um.sanctioned_post (
   updated_at           timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (post_code, office_code),
   CONSTRAINT ck_sanctioned_occupied
-    CHECK (occupied_count <= sanctioned_strength + 1)
-    -- +1 allows FR-UM-067 reserved handover at full strength during transition;
-    -- application enforces normal capacity; job keeps count accurate.
+    CHECK (occupied_count <= sanctioned_strength)
+    -- Transfer In is blocked at full strength (FR-UM-060, FR-UM-066(a));
+    -- reserved / future-dated handover (FR-UM-067) is retired.
 );
 
 COMMENT ON TABLE um.sanctioned_post IS
   'Approved headcount per Post at Office; occupied_count job-maintained (FR-UM-068)';
 
 COMMENT ON COLUMN um.sanctioned_post.occupied_count IS
-  'Active + Reserved occupancies; Temporary Absence does NOT reduce this (FR-UM-081)';
+  'Count of ACTIVE occupancies only; Temporary Absence does NOT reduce this (FR-UM-081)';
 COMMENT ON COLUMN um.sanctioned_post.remaining_capacity IS
-  'Persisted (generated), floored at 0 — FR-UM-066(a), FR-UM-068(3): GREATEST(sanctioned_strength - occupied_count, 0). During an FR-UM-067 handover, occupied_count may transiently exceed sanctioned_strength by 1 (outgoing officer still active + incoming reserved Transfer In); remaining_capacity reads 0, not negative, in that window.';
+  'Persisted (generated) — FR-UM-066(a), FR-UM-068: GREATEST(sanctioned_strength - occupied_count, 0). Transfer In requires remaining_capacity > 0.';
 COMMENT ON COLUMN um.sanctioned_post.is_wholly_unoccupied IS
-  'Persisted (generated) — FR-UM-066(b), FR-UM-068(3): true only when occupied_count = 0';
+  'Persisted (generated) — FR-UM-066(b), FR-UM-068: true only when occupied_count = 0';

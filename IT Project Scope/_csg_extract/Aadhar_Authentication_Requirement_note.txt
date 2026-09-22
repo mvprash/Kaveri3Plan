@@ -1,0 +1,41 @@
+P0|Aadhar Authentication
+P2|This note captures the multiple scenarios involved in Aadhar Authentication on the department side. The assumption is that the citizen has already done the OTP-based authentication on the citizen side while submitting the application.
+P4|Scenarios on Aadhar Authentication
+P6|Scenario-1: Refusal of consent
+P8|To-be
+P9|Executants should have the option to refuse consent for Aadhar authentication. The application should proceed further, recording this refusal of consent.
+P10|As-Is
+P11|Currently, there is no option for executant to refuse consent. The DBT website also doesn’t have an option to record refusal of consent. The consent status on the DBT website is not available for Kaveri 2 to act upon.
+P12|Change Required
+P13|To implement this change, an option has to be provided in Step-1 of DEO login to capture the consent for each of the executant.
+P15|Scenario-2: Aadhar service is down
+P17|To-be
+P18|In case the Aadhar service is down, the application should proceed with recording the status.
+P19|As-Is
+P20|Currently, the workflow will not proceed further if the Aadhar service is down.
+P21|Change Required
+P22|The system will have to record the response from the backend and continue further.
+P24|Scenario-3: Aadhar authentication failed
+P25|To-be
+P26|In case the Aadhar authentication fails, the application should proceed with recording the status.
+P27|As-Is
+P28|In this scenario, upon providing the Aadhar number and biometrics, the Aadhar authentication fails on the DBT website. The status is passed on from the DBT website to Kaveri. Currently, there is an option to retry Aadhar authentication, which often succeeds upon retrying.
+P29|Change Required
+P30|In case the DBT portal gives an error message, the Kaveri software records the status as “Unsuccessful authentication” and proceeds. The implication is that there will be no option to retry either with thumb or with iris/face auth.
+P31|Scenario 4: Aadhar mismatch
+P32|To-be
+P33|The application should proceed even if there is a mismatch between the Aadhar hash on the citizen's and department's sides.
+P34|As-Is
+P35|In this scenario, the Aadhar authentication from the DBT website is successful, but the response (hash) doesn’t match the hash saved on the citizen's side. The current workflow doesn’t proceed until there is a match.
+P36|Change Required
+P37|The authentication status will be recorded as “Aadhar details mismatch”, and the Name received will be recorded in the document summary. The application will proceed further.
+P38|Scenario 5: Aadhar match
+P39|No change to this scenario.
+P41|Scenario 6: SR chooses to “Send back to DEO”
+P43|To-be
+P44|If the SR is sent back to DEO from Step 7, the verify Aadhar button should be enabled for scenarios 1-4 to give the option to try again. Only in scenario 5 the Verify Aadhar button should be disabled.
+P45|As-Is
+P46|Currently, the DEO cannot send the application to DEO in case of scenarios 1-4.
+P47|Process flow
+P51|Test Scenarios
+P53|Please find attached the detailed outcomes for Aadhar authentication for each of the above scenarios.

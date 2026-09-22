@@ -1,0 +1,193 @@
+P0|Karnataka Valuation & E-Registration (KAVERI - 2.0)
+P1|Government of Karnataka
+P3|Functional Requirement Specifications
+P5|For KAVERI 2.0
+P6|Department of Stamps & Registration
+P7|Government of Karnataka
+P11|Registration of Wills
+P12|after the death of the Testator
+P18|Prepared by
+P19|Centre for Smart Governance (CSG)
+P20|2nd Floor, TTMC Yeshwanthapura, BMTC Bus station
+P21|Bangalore – 560022
+P30|Acronyms
+P32|Revision History
+P35|Introduction
+P37|The Department of Stamps and Registration (henceforth referred to as “department”) is the custodian of registered public records such as Registration of Marriages and Firms, Documents about transactions, namely sale, transfer or gift of immovable properties, Mortgage, Power of Attorney, wills and many more. Maintenance and preservation of these critical public records is the prime responsibility of the department. The records or the information associated with registered records are to be made available to the public when requested through defined procedures. The department is also responsible for collecting stamp duty on behalf of the Government for specified transactions. The services are provided through 258 Sub-Registrar Offices (SROs), under the supervision of 35 District Registrar Offices, spread across the state.
+P38|The department has computerised the delivery of these services through the development of Kaveri software. KAVERI Online service is a web-based application of the department that provides an interface to the citizens required for documents, marriage, and firm registration. It enables citizens to know the details of stamp duty, property guidelines value, data entry for document registration and marriage registration, etc. The list of modules of Kaveri 2.0 is available in Annexure 1.
+P40|Document scope
+P42|This document is a Functional Requirement Specification (FRS) describing the functional features of the Registration of wills after the death of the testator in Kaveri 2.0. The document is prepared by the Centre for Smart Governance (CSG) and is being submitted for the department’s approval. The intended audience of the document is the departmental approving authority and the development team.
+P43|The document is prepared through document analysis and departmental consultation. The department shared the high-level requirements verbally. Following this, the CSG team analysed the requirement and prepared the FRS document.
+P46|Overview of the function
+P49|Fig: Will after the death of the testator features in the Document registration.
+P50|A citizen has created a will but could not deposit it due to unforeseen circumstances, and passes away without registering the will, such a will can still be registered at the sub-registrar's office. The sub-registrar will electronically file a copy of the will in Book No. 3 and ensure its proper storage and preservation per regulatory requirements.
+P51|The functionalities mentioned below take place in the office of the Sub-registrar under the Department of Stamps and Registrations, Government of Karnataka, under the Karnataka Registration Act, 1908. These functions are elaborated in this document and are sought to be available online through the document registration module under Kaveri 2.0.
+P53|Interaction diagram: Registration of wills after the death of the testator
+P58|Description of the functional requirement
+P60|Workflow
+P63|Actors and their roles
+P67|Process description
+P68|Application Submission
+P69|The applicant logs into the Kaveri 2.0 portal and selects the article for "Registration of Wills After the Death of the Testator."
+P70|The system prompts the applicant to provide relevant details.
+P71|The system should not allow user to choose consenting witness, private attendance and sec 88 exemption.
+P72|The applicant enters key information, including the date of execution of the will, testator details, presenter details, and witness information.
+P73|The system shows the fees to be paid by the citizen.
+P74|The system then prompts the screen to upload the documents.
+P75|The applicant uploads the will document, the death certificate of the testator, and proof of identity for both the presenter and witnesses.
+P76|Once all information and documents are provided, the applicant applies.
+P77|The system forwards the application to the SR for further scrutiny.
+P78|Application Scrutiny
+P79|The SR receives the application on their dashboard for verification.
+P80|The SR has the option to either scrutinise the application personally or allocate it to an FDA/ SDA for initial verification.
+P81|Application Scrutiny by FDA/SDA
+P82|The FDA/SDA accesses the application via their dashboard.
+P83|They verify the details and supporting documents provided in the application.
+P84|Based on their assessment, the FDA/SDA either adds remarks or forwards the application to the SR for further scrutiny.
+P85|Application Scrutiny by SR
+P86|The SR reviews the application forwarded by the FDA/SDA.
+P87|If corrections are needed, the SR adds remarks and sends the application back to the applicant for rectification.
+P88|The system notifies the applicant about the required corrections.
+P89|The applicant reviews the remarks, makes the necessary changes, and resubmits the application for verification.
+P90|Once the application is verified and no corrections are required, the SR proceeds to the payment stage.
+P91|Scheduling an Appointment
+P92|The applicant makes the payment and schedules an appointment for the presentation of the application at the SRO.
+P94|Application Presentation
+P95|On the scheduled date, the applicant visits the SRO to present the application.
+P96|The SR accepts the application for registration and assigns it to the DEO for biometric capture.
+P97|The system initiates the SAKALA.
+P98|The DEO captures the presenter’s biometrics and generates a summary, forwarding it back to the SR for approval.
+P99|The SR reviews the summary received from the DEO and will hold the application for further investigation.
+P100|The SR clicks on the ‘Keep Pending’ button to conduct the investigation, and the system prompts the reason “Keep pending for Deposition Statement of witnesses and Scribe” to select.
+P101|Once the SR select the reason and continues, the system should move the application into the Minute Book tab and close the SAKALA.
+P102|The SR conduct the investigation offline and uploads the investigation summary and releases the application.
+P103|Registration of wills
+P104|After the investigation, the SR uploads the recorded statements to release the application from the Minute book.
+P105|The system releases the application from the Investigation of wills and routes it back to the SR for summary approval.
+P106|If the SR is satisfied with the investigation, then approve the application by selecting the "Check and Register" button.
+P107|Upon click on Check and Register button, the system displays the pop-up u with following checklist -
+P108|That the will was executed by testator.
+P109|That the testator id dead.
+P110|That the person presenting the will is entitled to present the same.
+P111|The SR selects the above checklist to register the will.
+P112|Then typical registration flow will continue.
+P113|A note to be printed along with the Section 60 certificate.
+P114|Else, the SR clicks on the "Refuse Registration" button, officially rejecting the application. And the application follows the rejection flow.
+P116|Fee Calculation
+P117|There will not be a stamp duty for registering the wills after the death of the testator. Below is the list of fees applicable for registration of wills after the death of the testator.
+P120|Prototype
+P121|https://www.figma.com/proto/h3kEbWDrgmUjNWvIMRP1xf/Will-after-death?page-id=0%3A1&node-id=1-2&viewport=476%2C101%2C0.06&t=mC6a1dJ3J0nrUXDe-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=1%3A2
+P124|Input and Output Descriptions
+P126|Input validations
+P127|The details mentioned below are not mandatory for the testator
+P128|Date of birth/Age.
+P129|Phone number.
+P130|POI.
+P131|Reason for not having Aadhar.
+P132|Alias name.
+P133|The system should not allow the executants to opt for the following features while entering the party details:
+P134|Sec 88 exemption.
+P135|Private attendance.
+P136|Consenting witness.
+P137|Output Validations
+P138|A note should be printed along with the Section 60 certificate.
+P139|A checklist to be displayed before registering the will, and without accepting the checkpoints, the system should not allow proceeding further.
+P141|Integration with other systems/modules
+P143|External integration
+P144|This module has no integration with external systems other than what already exists in the document registration module. The Sakala integration will be similar to the case of typical document registration.
+P145|Internal integration with other modules
+P146|No
+P148|Implications for MIS
+P149|All registered wills must reflect in the MIS statutory report, specifically in
+P150|Form No. 3 – Register of Wills and Authority to Adopt.
+P152|Assumptions
+P153|The will can be presented at any time after the execution of the will.
+P154|No stamp duty will be collected during the process; therefore, the 10A certificate will not appear in the endorsement.
+P155|The system should not allow user to choose consenting witness, private attendance and sec 88 exemption for application, regardless of number of parties.
+P159|Annexures
+P160|Annexure – 1 – List of modules of Kaveri 2.0
+P164|Sample Endorsement:
+P165|I am satisfied from the evidence of the witnesses whose signatures appear above: -
+P166|That the Will was executed by the testator.
+P167|That the testator is dead.
+P168|That the person presenting the Will is entitled to present the same.
+P172|Date: 27/05/2025					Signature of the Registering officer
+P174|Hence order for registration.
+---TABLE 0---
+T0R0|SR || Sub-Registrar
+T0R1|SRO || Sub-Registrar Office
+T0R2|FDA || First Division Assistant
+T0R3|SDA || Second Division Assistant
+T0R4|DEO || Data Entry Operator
+T0R5|CSG || Centre for Smart Governance
+T0R6|EC || Encumbrance Certificate
+T0R7|MIS || Management Information System
+---TABLE 1---
+T1R0|Date || Version || Prepared by || Reviewed by || Description
+T1R1|27-05-2025 || 1.0 || Pavan Deshapande || Rajesh Hanbal || Sent for dept approval.
+T1R2|02-06-2025 || 1.1 || Pavan Deshapande ||  || Incorporated the changes suggested by the department.
+---TABLE 2---
+T2R0|Functional Requirement Specifications || Functional Requirement Specifications
+T2R1|Stakeholder/ Interface || Role/ Responsibilities
+T2R2|Applicant || Enters testator, presenter and witness details. / Uploads the documents. / Makes the necessary corrections or makes the payment. / Schedules an appointment for presentation. / Presents the will for registration after the death of the Testator.
+T2R3|SRO || Scrutinises the application or allocates it to the FDA/SDA to scrutinise the application. / Verifies the scrutinised applications received from FDA/SDA. / Add remarks, if applicable. / Send the application for payment or corrections. / Allocates to DEO to capture the biometrics of the presenter. / Keeps the document pending until the investigation is complete. / Uploads the investigation report. / Rejects the application if not satisfied with the investigation. / Else approves the application by Check and Register. / Digitally signs the Endorsement received by DEO.
+T2R4|FDA/SDA || Scrutinises the application. / Sends to SR for verification with or without remarks.
+T2R5|DEO || Capture the biometrics of the presenter. / Generates the Summary. / Sends the summary to SR for verification. / Generates the endorsement. / Scan and upload endorsement. / Sends endorsement to SR for the Digital sign.
+T2R6|System || Forwards the submitted application to SR. / Notifies and sends the application with remarks to the applicants’ dashboard for correction. / Notifies the applicant to make payment. / Displays available SROs with available slots to book an appointment. / Initiates and closes SAKALA. / Application moved into the Minute book upon SR keep pending the document for investigation. / Records the investigation statements. / Releases the application from the Investigation of wills. / Sends a refused endorsement to the applicants’ dashboard / Stores data and reflects in Book 3. / Generates a registration number with the date.
+T2R7|Output documents generated || Endorsement,  / contains: / Section 60 Certificate. / Registration Number with Date.
+T2R8|Internal changes || Book-3
+T2R9|Impact on other modules || MIS
+---TABLE 3---
+T3R0|Sl. No. || Type of Fees || Amount
+T3R1|1 || Registration Fees || 200
+T3R2|2 || Scanning Fees || 50/Page
+T3R3|3 || Enquiry Fee || 1000
+---TABLE 4---
+T4R0|Sl No || Module No || Main Module || Sub-Module
+T4R1|1 || 1.1 || Registration || Registration
+T4R2|2 || 1.2 || Registration || Appointment
+T4R3|3 || 1.3 || Registration || Integration module
+T4R4|4 || 1.4 || Registration || Stamp duty and Registration fee calculation
+T4R5|5 || 1.5 || Registration || Guideline value calculation
+T4R6|6 || 1.6 || Registration || Rule 17 (2) filing
+T4R7|7 || 1.7 || Registration || Rule 17 (3) filing
+T4R8|8 || 1.8 || Registration || Old pending release module
+T4R9|9 || 1.9 || Registration || Re-Registration module
+T4R10|10 || 1.1 || Registration || Will after Death
+T4R11|11 || 1.11 || Registration || Filing documents (FRUITS)
+T4R12|12 || 1.12 || Registration || Scanning
+T4R13|13 || 1.13 || Registration || Memo transmission and filing
+T4R14|14 || 1.14 || Registration || 68(2) correction
+T4R15|15 || 1.15 || Registration || Cross-reference Rule 123
+T4R16|16 || 1.16 || Registration || Integration exemption
+T4R17|17 || 1.17 || Registration || Court entry
+T4R18|18 || 1.18 || Registration || Liability
+T4R19|19 || 1.19 || Registration || Status tracking
+T4R20|20 || 1.2 || Registration || Investigation and Search
+T4R21|21 || 1.21 || Registration || Valuation Module (CVC)
+T4R22|22 || 2 || EC || 
+T4R23|23 || 3 || CC || 
+T4R24|24 || 4 || Verify Document || 
+T4R25|25 || 5 || Power of attorney Authentication Module || 
+T4R26|26 || 6 || Refund Module || 
+T4R27|27 || 7.1 || Marriage || Hindu Marriage
+T4R28|28 || 7.2 || Marriage || Special Marriage
+T4R29|29 || 7.3 || Marriage || Special Marriage in Other forms
+T4R30|30 || 8 || Legacy record digitisation || 
+T4R31|31 || 9 || Audit || 
+T4R32|32 || 10 || Accounts || 
+T4R33|33 || 11.1 || MIS || Statutory (44)
+T4R34|34 || 11.2 || MIS || Statistical (54)
+T4R35|35 || 11.3 || MIS || Integration (15)
+T4R36|36 || 11.4 || MIS || Computer related (4)
+T4R37|37 || 11.5 || MIS || Reconciliation (5)
+T4R38|38 || 11.6 || MIS || HR (5)
+T4R39|39 || 12.1 || DRO || Firm Registration
+T4R40|40 || 12.2 || DRO || Undervaluation
+T4R41|41 || 12.3 || DRO || Deposit of will
+T4R42|42 || 12.4 || DRO || Adjudication of documents
+T4R43|43 || 13 || IGRO || Appeal
+T4R44|44 || 14 || Master Data Management || 
+T4R45|45 || 15 || User Management || 
+T4R46|46 || 16 || Mobile application || 
+T4R47|47 || 17 || Training Module || Master Trainer, Training Plan

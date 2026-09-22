@@ -1,0 +1,350 @@
+P0|Karnataka Valuation & E-Registration (KAVERI - 2.0)
+P1|Government of Karnataka
+P3|Functional Requirement Specifications
+P5|For KAVERI 2.0
+P6|Department of Stamps & Registration
+P7|Government of Karnataka
+P14|Registration of UPOR Properties
+P26|Prepared by
+P27|Centre for Smart Governance (CSG)
+P28|2nd Floor, TTMC Yeshwanthapura, BMTC Bus station
+P29|Bangalore – 560022
+P31|Acronyms
+P35|Revision History
+P39|Kaveri 2.0
+P40|The Department of Stamps and Registration (hereinafter referred to as the “Department”) is entrusted with the custody, maintenance, and preservation of registered public records, including but not limited to the registration of marriages and firms, documents evidencing transactions such as sale, transfer, or gift of immovable properties, mortgages, powers of attorney, wills, and other instruments of legal or commercial significance. The Department, in addition to its custodial functions, is responsible for the levy and collection of stamp duty on behalf of the Government for transactions and instruments as prescribed under law. These services are administered through 259 Sub-Registrar Offices (SROs), operating under the supervision of 35 District Registrar Offices across the State. The list of modules of KAVERI 2.0 is available in Annexure 1.
+P41|Document scope
+P42|This document is a Functional Requirement Specification (FRS) describing the functional features and integration protocol for UPOR properties in Kaveri 2.0. The document is prepared by the Centre for Smart Governance (CSG) and has been submitted for department approval. The intended audience of the document is the departmental approving authority and the development team.
+P43|Overview of the function
+P45|Figure: workflow for application submission
+P46|Currently in Kaveri 2.0, citizen can proceed with property search and register the document which involves the agricultural properties which lies within the BHOOMI database. Upon UPOR integration, citizen now proceed with the registration of the document which involves the agricultural properties falling under UPOR category.
+P48|Functional Requirements for UPOR
+P49|4.1 Process flow
+P54|4.1.1 Article Selection
+P55|1. User will select nature of documents, stamp article and sub-article.
+P56|2. User will be allowed to select same articles that are mapped to agricultural properties (BHOOMI). Refer to annexure 2 for list of articles.
+P57|4.1.2 Property Search
+P58|3. User will be provided to select the type of agricultural properties as listed below:
+P59|BHOOMI
+P60|UPOR
+P62|4. Once user select UPOR option, user will be asked to enter following details:
+P63|Bhoomi village name
+P64|Road name
+P65|UPOR number
+P67|5. Once the property is fetched, the user will be allowed to select the owner's name and extent.
+P69|6. The user can select the full extent for a complete transaction. However, in case of part transaction the user should select part extent.
+P71|7. There will be no requirement for an 11E sketch for part transactions. Instead, the user will be provided with an option to enter the area to be transacted in sq. meters and this area should be considered for further calculations. Any area above 1 sq metre and less than the fetched property area will be transactable using the part extent option.
+P73|8. The user should enter the boundary details, description of the schedule and proceed further.
+P75|4.1.3 Party Details
+P76|9. Imported parties: The executants for immovable properties will be fetched from the property registers (UPOR).
+P78|10. The fetched user details will not be editable.
+P80|11. The next process will be similar to the existing flow of document registration till market valuation.
+P82|4.1.4 Market valuation and Fee calculations
+P83|12. Market valuation will be based on the road name selected by the user during property selection. Further, the process will be similar to the document registration for agricultural properties (i.e Bhoomi).
+P85|13. All calculations for agricultural properties happen in acre/gunta/fgunta as unit of measurement (UoM). However, since the UPOR area is in sqmt, it will be converted to acre/gunta/fgunta for market valuation purposes.
+P87|14. Similar to the existing logic for market valuation, if the area is less than 5 gunta (after conversion from sqmt), non-agricultural rates will apply.
+P89|15. The following rates will be applicable when agricultural land fetched from UPOR property records.
+P90|If the agricultural land is 20 cents or less in area: The site rate of the respective area concerned shall be applicable.
+P91|If the land measuring more than 20 cents and less than 40 cents in area: The price to be applied shall be 80% of the site price of the respective area concerned or the price of agricultural land, whichever is highest.
+P92|If the land measuring above 40 cents: The price to be applied shall be 60% of the site price of the respective area concerned or the price of agricultural land, whichever is highest.
+P94|16. User should select the annexures as per Agri properties annexures.
+P96|17. The further application should follow typical registration flow.
+P98|18. During fee calculation, two additional fees will be applicable:
+P99|a. UPOR service fee: The amount will be fetched from the API provided by UPOR.
+P100|b. Mutation fee:
+P102|19. The UPOR service fee will have a separate HoA.
+P104|20. The HoA for the mutation fee will be the same as that used for Bhoomi.
+P106|21. Mutation XMLs will be sent once the registration is complete, as is the case for Bhoomi properties.
+P107|Assumptions
+P108|All the validation such GL, GR, PYKI and alienated land must be verified at UPOR. Kaveri will allow the registration of property that fetched from UPOR.
+P109|There will not be multiple owner like mojini, instead a property can be owned by multiple owners jointly.
+P110|Unit of measurement will always be sq. meter.
+P111|The user can transact between 1 sq. meter till the area fetched UPOR.
+P112|UPOR will only be available in 37 villages. See annexure for the list of such villages.
+P113|J-slips will be sent for the registered documents involving UPOR properties.
+P114|Input and output validations
+P115|Input Validations
+P116|UPOR will only be available at 37 villages. As per annexure 3.
+P117|Out Validations
+P118|NA
+P121|Integration with other systems/modules
+P122|UPOR
+P123|Fetching property information
+P124|UPOR service fee calculation
+P125|Pushing mutation data after registration.
+P126|Others: (As currently exists in document registration)
+P127|Sakala
+P128|Aadhaar for eKYC
+P129|Khajane
+P131|Implication On MIS
+P132|All reports for agricultural properties will also list UPOR data along with Bhoomi data.
+P133|Integration report will include UPOR-related data.
+P141|Annexures
+P142|Annexure 1: List of modules of Kaveri 2.0
+P146|Annexure 2: List of Stamp Rules
+P150|Annexure 3: List of Villages
+P151|Below is the list of villages which is shared by the BHOOMI team:
+P153|Annexure 4: Sample XML
+P154|URL: http://172.18.21.70/kaveriwebservice/SROsService.asmx/GetAlInfoForProperty?strRequestXML=<?xml version="1.0" encoding="utf-8" standalone="yes"?><propertycardrequestinfo><requestinfo><requestid>11112</requestid><requestby>SROs</requestby><requestfor>1</requestfor></requestinfo><propertydetails><property><districtcode>24</districtcode><talukcode>1</talukcode><townid>1</townid><upornumber>S29-228/10</upornumber></property></propertydetails></propertycardrequestinfo>
+P156|Sample XML
+P157|<?xml version="1.0" encoding="utf-8"?>
+P158|<propertycard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="GetAlInfoForProperty.xsd">
+P159|<propertycardversion>
+P160|<versionnumber>1.0.0.0</versionnumber>
+P161|</propertycardversion>
+P162|<requestinfo>
+P163|<requestid>11112</requestid>
+P164|<district>ಮಂಗಳೂರು</district>
+P165|<taluk>ಮಂಗಳೂರು</taluk>
+P166|<town>ಮಂಗಳೂರು</town>
+P167|<mutationfeetobecollected>821.26</mutationfeetobecollected>
+P168|<prcardchargestobecollected>102.66</prcardchargestobecollected>
+P169|<requeststatus>Success</requeststatus>
+P170|<errormessage />
+P171|</requestinfo>
+P172|<header>
+P173|<town>ಮಂಗಳೂರು</town>
+P174|<uporno>S29-228/10</uporno>
+P175|<wardname>SURATHKAL</wardname>
+P176|<wardnumber>V_W_1</wardnumber>
+P177|<khatano />
+P178|<checkbandinorth>s29-228/10</checkbandinorth>
+P179|<checkbandieast>s29-228/10</checkbandieast>
+P180|<checkbandiwest>s29-228/10</checkbandiwest>
+P181|<checkbandisouth>s29-228/10</checkbandisouth>
+P182|</header>
+P183|<propertysection>
+P184|<propertydetail>
+P185|<propertytype>ಖಾಸಗಿ</propertytype>
+P186|<propertytypeid>1</propertytypeid>
+P187|<mutationregisterno />
+P188|<plotarea>242.81</plotarea>
+P189|<builtuparea>0.00</builtuparea>
+P190|<remarks>NIL</remarks>
+P191|</propertydetail>
+P192|<sharedplotsdetails>
+P193|<sharedplots>
+P194|<shareddescription />
+P195|</sharedplots>
+P196|</sharedplotsdetails>
+P197|</propertysection>
+P198|<ownershipsection>
+P199|<ownerdetails>
+P200|<owners>
+P201|<owner>
+P202|<ownerno>1</ownerno>
+P203|<ownername>ವಿನ್ಸೆಂಟ್  ಫೋರ್ಸಿ ಪಿರೇರಾ ಬಿನ್ ಫ್ರೆಡ್ರಿಕ್ ಪಿರೇರಾ</ownername>
+P204|<relationship />
+P205|<relationshipid>0</relationshipid>
+P206|<relativename />
+P207|<pan />
+P208|<uidno />
+P209|<mobileno>0</mobileno>
+P210|</owner>
+P211|<mutationregisterno />
+P212|<ownersource>
+P213|<documenttype>ಕ್ರಯ ಪತ್ರ</documenttype>
+P214|<documenttypeid>1</documenttypeid>
+P215|<documentnumber>4058</documentnumber>
+P216|<dateofregistration>10/01/2019</dateofregistration>
+P217|<placeofregistration>Mangalore(Mulki)</placeofregistration>
+P218|</ownersource>
+P219|</owners>
+P220|</ownerdetails>
+P221|<leasedetails>
+P222|<leasetype>
+P223|<mutationregisterno />
+P224|<leasetype />
+P225|<leasetypeid>0</leasetypeid>
+P226|<documentno />
+P227|<dateofregistration />
+P228|<from />
+P229|<to />
+P230|<leseedetails>
+P231|<lessee />
+P232|<lesseerelationship />
+P233|<lesseerelationshipid>0</lesseerelationshipid>
+P234|<lesseerelative />
+P235|</leseedetails>
+P236|</leasetype>
+P237|</leasedetails>
+P238|</ownershipsection>
+P239|<securitiessection>
+P240|<liabilitydetails>
+P241|<libiality>
+P242|<type />
+P243|<typeid>0</typeid>
+P244|<registrationnumber />
+P245|<dateofregistration />
+P246|<loanamount />
+P247|<bankname />
+P248|<banknameid>0</banknameid>
+P249|<bankbranch />
+P250|<yearmonth />
+P251|<mutationregisterno />
+P252|</libiality>
+P253|</liabilitydetails>
+P254|</securitiessection>
+P255|<burdensection>
+P256|<restrictiondetails>
+P257|<restriction>
+P258|<restrictiontype />
+P259|<restrictiontypeid>0</restrictiontypeid>
+P260|<ordernumber />
+P261|<orderdate />
+P262|<restrictiondetails />
+P263|</restriction>
+P264|</restrictiondetails>
+P265|<litigationdetails>
+P266|<litigation>
+P267|<courtname />
+P268|<courtnameid>0</courtnameid>
+P269|<casenumber />
+P270|<stayorderdate />
+P271|<disputants />
+P272|</litigation>
+P273|</litigationdetails>
+P274|</burdensection>
+P275|<easementdetails>
+P276|<easementright>
+P277|<easement />
+P278|<uporno />
+P279|</easementright>
+P280|</easementdetails>
+P281|<otherrightsdetails>
+P282|<otherrights>
+P283|<rightstype />
+P284|<rightstypeid>0</rightstypeid>
+P285|<rightsremarks />
+P286|</otherrights>
+P287|</otherrightsdetails>
+P288|<mutationregisterno />
+P289|</propertycard>
+---TABLE 0---
+T0R0|CSG || Centre for Smart Governance
+T0R1|GL || Government Land
+T0R2|GR || Government Restriction
+---TABLE 1---
+T1R0|Date || Version || Prepared by || Reviewed by || Description
+T1R1|11-09-2025 || 1.0 || Yash Veer ||  || First Version
+---TABLE 2---
+T2R0|Sl No || Module No || Main Module || Sub-Module
+T2R1|1 || 1.1 || Registration || Registration
+T2R2|2 || 1.2 || Registration || Appointment
+T2R3|3 || 1.3 || Registration || Integration module
+T2R4|4 || 1.4 || Registration || Stamp duty and Registration fee calculation
+T2R5|5 || 1.5 || Registration || Guideline value calculation
+T2R6|6 || 1.6 || Registration || Rule 17 (2) filing
+T2R7|7 || 1.7 || Registration || Rule 17 (3) filing
+T2R8|8 || 1.8 || Registration || Old pending release module
+T2R9|9 || 1.9 || Registration || Re-Registration module
+T2R10|10 || 1.1 || Registration || Will after Death
+T2R11|11 || 1.11 || Registration || Filing documents (FRUITS)
+T2R12|12 || 1.12 || Registration || Scanning
+T2R13|13 || 1.13 || Registration || Memo transmission and filing
+T2R14|14 || 1.14 || Registration || 68(2) correction
+T2R15|15 || 1.15 || Registration || Cross-reference Rule 123
+T2R16|16 || 1.16 || Registration || Integration exemption
+T2R17|17 || 1.17 || Registration || Court entry
+T2R18|18 || 1.18 || Registration || Liability
+T2R19|19 || 1.19 || Registration || Status tracking
+T2R20|20 || 1.2 || Registration || Investigation and Search
+T2R21|21 || 1.21 || Registration || Valuation Module (CVC)
+T2R22|22 || 2 || EC || 
+T2R23|23 || 3 || CC || 
+T2R24|24 || 4 || Verify Document || 
+T2R25|25 || 5 || Power of attorney Authentication Module || 
+T2R26|26 || 6 || Refund Module || 
+T2R27|27 || 7.1 || Marriage || Hindu Marriage
+T2R28|28 || 7.2 || Marriage || Special Marriage
+T2R29|29 || 7.3 || Marriage || Special Marriage in Other Forms
+T2R30|30 || 8 || Legacy Record Digitisation || 
+T2R31|31 || 9 || Audit || 
+T2R32|32 || 10 || Accounts || 
+T2R33|33 || 11.1 || MIS || Statutory (44)
+T2R34|34 || 11.2 || MIS || Statistical (54)
+T2R35|35 || 11.3 || MIS || Integration (15)
+T2R36|36 || 11.4 || MIS || Computer related (4)
+T2R37|37 || 11.5 || MIS || Reconciliation (5)
+T2R38|38 || 11.6 || MIS || HR (5)
+T2R39|39 || 12.1 || DRO || Firm Registration
+---TABLE 3---
+T3R0|stampruleid || descriptione
+T3R1|324 || 14 (b) - Cancellation Deed (executed by or on behalf of central govt, local authority, or other authority constituted by or under any law for the time being in force or a body corporate wholly or part
+T3R2|339 || (5-f) Joint Development Agreement
+T3R3|49 || Composition-deed
+T3R4|381 || (45-b-iii) If the property is situated within the limits other than the limits specified in items (45-b-i) and (45-b-ii)
+T3R5|281 || Mortgage Deed (Stamp Duty Already Paid)
+T3R6|138 || 44 - Reconveyance of mortgaged property(Immovable)
+T3R7|234 || Agreement or Memorandum of Agreement
+T3R8|14 || 5(e)(i) relating to sale of immovable property where the possesion of property is delivered or agreed to be delivered
+T3R9|376 || 40-A (A)(b) - Limitated Liability Partnership (LLP) where the capital exceeding 10 lakh
+T3R10|487 || Bagar Hukum
+T3R11|443 || Sub-Lease for solar park/windmill for term exceeding 10 year not exceeding 20 years
+T3R12|442 || Sub-Lease for solar park/windmill for term exceeding 1 year not exceeding 10 years
+T3R13|58 || (22) Counterpart or Duplicate
+T3R14|426 || (30-3-a-i) Lease of Immovable Lease of mine development and production agreement granted through auction for term exceeding 1 year not exceeding 10 years 30
+T3R15|364 || 28(b)- Gift deed (Within the Family) ImmovableProperty Converted Land/Site/Bulding/Apartment
+T3R16|13 || (5-e) Relating to sale of immovable property
+T3R17|132 || 41(e) Power of Attorney when given for consideration and or when coupled with interest and authorising the attorney to sell any immovable property
+T3R18|18 || (5-f) Power given to a promoter to construct or develop or sale of the Immovable Property
+T3R19|345 || 41(ea) GPA (Joint Development)
+T3R20|365 || 28(b)(ii)- Gift Deed(WITHIN FAMILY DEFINITION) Immovable property situated within limits of CMC/TMC/Town Panchayat
+T3R21|11 || 5(d) if relating to a transaction of lease-cum-sale in connection with the allotment of a building site, with or without building effected by BDA,CITB,KHB,HBCS,KIADB,KSSIDC,KSIIDC,KSEDC,AMPC,Municipal
+T3R22|336 || (52-d-ii) of any trust property from one trust to another trust or from trust to trustee or benificiary, or from trustee to trust or trustee or benificiary, as the case may be, in case of public relig
+T3R23|361 || 28(b)-Gift deed (Within the Family) Immovable Agriculture Land
+T3R24|421 || (30-3-a-iv)-Sub-Lease of mine development and production agreement granted through auction for term exceeding 30 years or in perpetuity
+T3R25|196 || 20 (6) - Assignment of SPV (Special Purpose Vehicle) under securitisation and reconsruction of Financial Assets and Enforcement of Security Interest Act, 2002
+T3R26|445 || Sub-Lease for solar park/windmill for termexceeding 30 years or in perpetuity
+T3R27|282 || Supplemental Deed of Settlement
+T3R28|283 || Settlement Deed (Stamp Duty Not Paid)
+T3R29|284 || Settlement Deed (Stamp Duty Already Paid)
+T3R30|20 || 5(h) if relating to the mortgage immovable
+T3R31|444 || Sub-Lease for solar park/windmill for term exceeding 20 year not exceeding 30 years
+T3R32|222 || 6 (1) (I) - Deposit of Title Deed (DTD) upto 10lakhs
+T3R33|69 || (27) - Further charge
+T3R34|321 || (5-e-i-a) cancellation of agreement with posession [As per proviso of K.S.(SECOND AMENDMENT) ACT 2010 wef 01/4/2010]
+T3R35|287 || Section 26
+T3R36|388 || 48-A(ii) - Settlement(WITHIN FAMILY DEFINITION) Immovable property situated other than BMRDA/BBMP/CMC/TMC/Town Panchayat limits
+T3R37|294 || (5-f-(5) ) where the market value of property  exceeds ten crores
+T3R38|391 || 48A(ii) - Settlement (Within the Family) ImmovableProperty Converted Land/Site/Bulding/Apartment
+T3R39|392 || 48A(ii) - Settlement (Within the Family) Immovable Agriculture Land
+---TABLE 4---
+T4R0|VILLAGE_NAME_KN || VILLAGE_NAME || ACTIVE_FLAG || LGDCODE
+T4R1|89.ಎ-ಕೋಡಿಯಲ್‌ಬೈ || 89 E-KODIYAL‌BAI || Y || 938770
+T4R2|89.ಬಿ-ಕೋಡಿಯಲ್‌ಬ || 89 BI-KODIYAL‌BA || Y || 938769
+T4R3|90.ಎ-ಬೋಳೂರು.ಎ || 90 E-BOLURU A || Y || 938772
+T4R4|90.ಬಿ-ಬೋಳೂರು.ಬಿ || 90 BI-BOLURU B || Y || 938771
+T4R5|83-ಬಜಾಲ್ || 83-BAJAL || Y || 938762
+T4R6|86-ಅತ್ತಾವರ || 86-ATTAVARA || Y || 938766
+T4R7|87.ಎ-ಕದ್ರಿ.ಎ || 87 E-KADRI A || Y || 938768
+T4R8|87.ಬಿ-ಕದ್ರಿ.ಬಿ || 87 BI-KADRI B || Y || 938767
+T4R9|91-ಕಸಬಾ ಬಜಾರ್ || 91-KASABA BAJAR || Y || 938773
+T4R10|79-ಪದವು || 79-PADAVU || Y || 938761
+T4R11|85.ಎ-ಜಪ್ಪಿನ ಮೊಗರು || 85 E-JAPPINA MOGARU || Y || 938764
+T4R12|85.ಬಿ-ಜಪ್ಪಿನ ಮೊಗರು || 85 BI-JAPPINA MOGARU || Y || 938763
+T4R13|92-ಮಂಗಳೂರು ತೋಟ || 92-MANGALURU TOTA || Y || 938774
+T4R14|ಬೆಂಗ್ರೆ || BENGRE || Y || 938775
+T4R15|ಕಂಕನಾಡಿ.ಎ || KANKANADI A || Y || 938783
+T4R16|ಕಂಕನಾಡಿ.ಬಿ || KANKANADI B || Y || 938785
+T4R17|ಮರೋಳಿ || MAROLI || Y || 938788
+T4R18|ಬಂಗ್ರಕೂಳೂರು || BANGRAKULURU || Y || 938781
+T4R19|ಪಡುಕೋಡಿ || PADUKODI || Y || 938789
+T4R20|ದೇರೆಬೈಲು || DEREBAILU || Y || 938782
+T4R21|ಕಣ್ಣೂರು || KANNURU || Y || 938786
+T4R22|ಅಳಪೆ || ALAPE || Y || 938779
+T4R23|49-ಸುರತ್ಕಲ್ || 49-SURATKAL || Y || 938797
+T4R24|50-ಇಡ್ಯಾ || 50-IDYA || Y || 938798
+T4R25|59-ಕಾವೂರು || 59-KAVURU || Y || 938807
+T4R26|54-ಪಣಂಬೂರು || 54-PANAMBURU || Y || 938804
+T4R27|55-ತಣ್ಣೀರುಬಾವಿ || 55-TANNEERUBAVI || Y || 938805
+T4R28|ಕಾಟಿಪಳ್ಳ || KATIPALLA || Y || 938810
+T4R29|53-ಬೈಕಂಪಾಡಿ || 53-BAIKAMPADI || Y || 938802
+T4R30|61-ಕುಂಜತ್ತಬೈಲು || 61-KUNJATTABAILU || Y || 938808
+T4R31|58-ಪಂಜಿಮೊಗರು || 58-PANJIMOGARU || Y || 938806
+T4R32|51-ಹೊಸಬೆಟ್ಟು || 51-HOSABETTU || Y || 938800
+T4R33|52-ಕುಳಾಯಿ || 52-KULAYI || Y || 938801
+T4R34|50-ಮರಕಡ || 50-MARAKADA || Y || 938799
+T4R35|78-ಕುಡುಪು || 78-KUDUPU || Y || 938758
+T4R36|77-ಪಚ್ಚನಾಡಿ || 77-PACHCHANADI || Y || 938757
+T4R37|74-ತಿರುವೈಲು || 74-TIRUVAILU || Y || 938755

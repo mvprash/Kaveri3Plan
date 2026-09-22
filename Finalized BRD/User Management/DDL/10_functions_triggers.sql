@@ -1,10 +1,11 @@
 -- =============================================================================
 -- 10 · Functions and triggers — occupancy refresh, occupied_count, absence end
+-- Companion to ERD-K3-UM-001 v2.3 / BRD_User_Management_v1.0 (11-Sep-2026)
 -- =============================================================================
 
 SET search_path TO um, public;
 
--- Recalculate occupied_count for one Post+Office (Active + Reserved)
+-- Recalculate occupied_count for one Post+Office (Active occupancies only)
 CREATE OR REPLACE FUNCTION um.fn_refresh_occupied_count(
   p_post_code   varchar,
   p_office_code varchar
@@ -18,7 +19,7 @@ BEGIN
   FROM um.post_occupancy
   WHERE post_code = p_post_code
     AND office_code = p_office_code
-    AND status IN ('ACTIVE', 'RESERVED');
+    AND status = 'ACTIVE';
 
   UPDATE um.sanctioned_post
   SET occupied_count = v_count,
@@ -31,7 +32,7 @@ END;
 $$;
 
 COMMENT ON FUNCTION um.fn_refresh_occupied_count IS
-  'Recount Active+Reserved occupancies; Temporary Absence does not change count (FR-UM-081)';
+  'Recount ACTIVE occupancies; Temporary Absence does not change count (FR-UM-081). Reserved Transfer In retired (FR-UM-067).';
 
 -- Trigger: keep occupied_count in sync on occupancy status changes
 CREATE OR REPLACE FUNCTION um.tg_post_occupancy_sync_occupied()
@@ -65,6 +66,8 @@ CREATE TRIGGER trg_post_occupancy_sync_occupied
   EXECUTE PROCEDURE um.tg_post_occupancy_sync_occupied();
 
 -- Occupancy refresh job body (FR-UM-068 / FR-UM-084) — call shortly after midnight IST
+-- Reserved / Joining Date activation removed (FR-UM-061, FR-UM-067 retired).
+-- Occupancy End Date / deputation processing removed (FR-UM-030).
 CREATE OR REPLACE FUNCTION um.fn_occupancy_refresh_job(
   p_as_of date DEFAULT (timezone('Asia/Kolkata', now()))::date
 ) RETURNS TABLE (
@@ -85,34 +88,12 @@ BEGIN
     SET status = 'ENDED',
         ended_at = now(),
         updated_at = now()
-    WHERE status IN ('ACTIVE', 'RESERVED')
+    WHERE status = 'ACTIVE'
       AND relieving_date IS NOT NULL
       AND relieving_date < p_as_of
     RETURNING occupancy_id
   )
   SELECT count(*)::integer INTO v_ended_occ FROM closed;
-
-  -- End deputation by End Date (FR-UM-030)
-  WITH closed AS (
-    UPDATE um.post_occupancy
-    SET status = 'ENDED',
-        ended_at = now(),
-        updated_at = now()
-    WHERE status IN ('ACTIVE', 'RESERVED')
-      AND end_date IS NOT NULL
-      AND end_date < p_as_of
-    RETURNING occupancy_id
-  )
-  SELECT v_ended_occ + count(*)::integer INTO v_ended_occ FROM closed;
-
-  -- Activate reserved Transfer In on Joining Date (FR-UM-061)
-  UPDATE um.post_occupancy
-  SET status = 'ACTIVE',
-      reserved_flag = false,
-      updated_at = now()
-  WHERE status = 'RESERVED'
-    AND joining_date IS NOT NULL
-    AND joining_date <= p_as_of;
 
   -- End temporary absences after to_date (FR-UM-084)
   WITH closed AS (
@@ -176,7 +157,7 @@ END;
 $$;
 
 COMMENT ON FUNCTION um.fn_occupancy_refresh_job IS
-  'Scheduled shortly after midnight IST — relieving, joining, absence/charge end, OD end-date (FR-UM-068, FR-UM-084)';
+  'Scheduled shortly after midnight IST — relieving de-allocation, absence/charge end, OD end-date (FR-UM-068, FR-UM-084). No reserved Transfer In activation.';
 
 -- Login eligibility check (FR-UM-080)
 CREATE OR REPLACE FUNCTION um.fn_user_has_effective_absence(p_user_id bigint)

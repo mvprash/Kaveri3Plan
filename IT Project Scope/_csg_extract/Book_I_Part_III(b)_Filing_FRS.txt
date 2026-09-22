@@ -1,0 +1,173 @@
+P0|Karnataka Valuation & E-Registration (KAVERI - 2.0)
+P1|Government of Karnataka
+P3|Functional Requirement Specifications
+P5|For KAVERI 2.0
+P6|Department of Stamps & Registration
+P7|Government of Karnataka
+P10|Book 1- Part III(b)
+P11|Land Acquisition
+P17|Prepared by
+P18|Centre for Smart Governance (CSG)
+P19|2nd Floor, TTMC Yeshwanthapura, BMTC Bus station
+P20|Bangalore – 560022
+P36|Acronyms
+P53|Revision History
+P55|Book-1 Part III(b): Land Acquisition statement
+P56|Overview
+P57|To urbanize, authorities such as BDA, MUDA, TUDA, KIADB, etc., will acquire revenue land under the Land Acquisition Act 1894. The Relevant authorities will send a copy of the statement to the jurisdictional registering officer, who will file it and make an entry in Book No-1, electronically for storing and preserving it.
+P59|Figure 1: Process of Land Acquisition
+P61|Overall functional flow
+P62|The below-mentioned functionalities take place in the office of the Sub Registrar under the Department of Stamps and Registration of Government of Karnataka under the Karnataka Registration Rules, 1965. Filing module functionalities of Kaveri 2.0 are elaborated in this document.
+P64|Functional requirement Description
+P66|Figure 2: Interaction diagram of Land Acquisition
+P69|Workflow
+P71|Actors and their roles
+P74|Process Description
+P75|The Relevant Authorities will send the Land acquisition order to the concerned jurisdictional SRO (manually) for filing.
+P76|Filing process
+P77|K2 jurisdictional SRO initiates the process by entering the Issuing authority, Date of Issue and notification number and allocates the task of inputting details from the Land acquisition statement to DEO.
+P79|DEO - Data entry
+P80|DEO inputs details according to the Land acquisition statement:
+P81|Property details.
+P82|Boundary details.
+P83|Schedule Description.
+P84|Party details.
+P85|DEO repeats the above step until he adds all the properties mentioned in the land acquisition order and once he finishes then proceeds to the next step.
+P86|DEO generates the report and sends it back to SR for approval.
+P87|SR can either self-verify or allocate to the FDA for Verification.
+P89|SR - FDA/ SDA allocation
+P90|SR selects the FDA/SDA from the drop-down and clicks on the allocate button.
+P91|FDA/SDA receives the report in the dashboard for verification.
+P93|SR - Self Verification
+P94|SR clicks on ‘Verify’ button to verify the report.
+P95|SR adds remarks if any and sends it back to DEO for editing/correcting.
+P96|If there are no correction SR approves for registration.
+P98|DEO - Correction
+P99|DEO views the remarks given by SR/FDA/SDA, updates them and sends the modified report to them.
+P101|FDA/SDA - Verification
+P102|FDA/SDA receives the report with corrections in the dashboard for verification from DEO.
+P103|FDA/SDA verifies the report and sends it back to SR for approval.
+P105|SR - Approval
+P106|SR receives the report after modification in the dashboard for verification from DEO.
+P107|SR receives the report for approval from the FDA/SDA.
+P108|SR approves the report Summary and Check and Register.
+P109|Once SR registers, DEO generate endorsement, prints it and will take a printout of endorsement.
+P110|DEO takes the physical signature of the SR on the endorsement, uploads physically signed endorsement, annexures and sends them to SR for Digital sign.
+P113|SR – Digital Sign
+P114|SR signs on the hard copy of the Endorsement and had it over to DEO to scan and upload endorsement and Annexures.
+P115|Once the SR receives the application in dashboard to digitally sign the document.
+P116|SR adds digital sign on endorsement and all the pages uploaded with it.
+P118|System activities
+P119|Updates MIS: Book-1 Part III(b)
+P120|Updates index II (EC)
+P122|Wireframes
+P123|https://www.figma.com/proto/l5qKp1Z62SIwAzQmxut7QB/Kaveri-2.0?page-id=2337%3A2276&node-id=3127-6294&viewport=1728%2C948%2C0.05&t=AuvJdW9ZjfKnl53C-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=3127%3A6294&show-proto-sidebar=1
+P124|Input and Output Validations
+P125|Input validations
+P126|A minimum of 1 executant and 1 claimant are required, without which DEO cannot proceed further.
+P127|At least 1 property detail should be entered to continue with the application.
+P128|All text fields will have a maximum of 250-character limits.
+P129|Description field is an alphanumeric field which should have 1000 characters limit including all the special characters.
+P130|Without entering the mandatory fields application should not proceed further.
+P131|Workflow validations
+P132|SRO should be able to select and allocate to DEO.
+P133|In case of DEO’s absence or FDA’s absence, the system should have the provision of a suggested in-charge.
+P134|System provides a unique Filing number to the submitted application.
+P135|All entries in each book shall be numbered in a consecutive series, which shall commence and terminate with the year, a fresh series being commenced at the beginning of each year.
+P136|Integration with other systems/modules
+P137|External integration
+P138|No Integration 1.
+P139|Internal integration with other modules
+P140|MIS.
+P141|EC.
+P143|Implications for MIS:
+P144|After the document is filed and entry made in Book 1 Part III(b), the MIS Report (in Statutory reports) has to be generated:
+P148|Assumptions and Dependencies
+P149|Assumptions:
+P150|The Relevant Authorities send a copy of the Land acquisition order/ statement manually.
+P151|K2 SRO sends the acknowledgement to the Relevant Authorities after the filing process (if required).
+P152|All the properties listed in the land acquisition order will get a distinct filing number.
+P153|No fees are calculated or collected including scanning fees.
+P154|No J-slips will be sent.
+P155|Dependencies:
+P156|No Dependencies.
+P157|Annexures
+P158|Annexure – 1 – List of modules of Kaveri 2.0
+P160|Annexure- 2 – Requirements as shared by the department
+P161|Requirements were shared verbally and workflows were verbally approved in August 2023
+P164|Annexure – 3 Endorsement
+P165|The final Endorsement contains the below-mentioned details:
+P167|Annexure – 4 Index II(EC)
+---TABLE 0---
+T0R0|BDA || Bangalore Development Authority
+T0R1|DEO || Data Entry Operator
+T0R2|FDA || First Division Assistant
+T0R3|KIADB || Karnataka Industrial Area Development Board
+T0R4|K2 SRO || Kaveri 2 Sub-registrar Office
+T0R5|MUDA || Mysore Urban Development Authority
+T0R6|SDA || Second Division Assistant
+T0R7|TUDA || Tumkur Urban Development Authority
+---TABLE 1---
+T1R0|Version || Date || Description / Modifications || Prepared by / Modified by
+T1R1|1.0 || 13/08/2024 || First Version || Arugolli Subhash
+T1R2|1.1 || 21/09/2024 || Changes suggested by the Department, and the addition of scanning and uploading the certificate. || Pavan Kumar Deshapande
+---TABLE 2---
+T2R0|Functional Requirement Specifications || Functional Requirement Specifications
+T2R1|Stakeholder/ Interface || Role/ Responsibilities
+T2R2|Deputy Commissioner || Send a manual copy of the Land acquisition order to the Kaveri 2.0 Sub-registrar office
+T2R3|SRO || Receives a manual copy of the Land acquisition order from the Relevant Authorities. / Initiate the filing process. / Allocates to DEO to key in the details. / Provide a manual copy of the Land acquisition order to DEO to key in details. / Allocates details to FDA for verification. / Self-verify the details. / Approves details by check and Register. / Signs physically and digitally on the Endorsement.
+T2R4|DEO || Enters all the details mentioned in the Land acquisition notification. / Generates the report. / Sends details report to SR for verification. / Scan, and upload the land acquisition statement. / Takes physical signature on Endorsement. / Sends endorsement to SR for Digital sign.
+T2R5|FDA/SDA || Verifies the details generated by DEO. / Add remarks if required after verification. / Send back the verified details to SR for further processing.
+T2R6|System || Based on the details entered, the system should generate a report. / Once the report is approved by SR, the system should generate endorsements. / Allow DEO to scan and upload the land acquisition statement. / Allow SR to digitally sign the Endorsement. / Store this data and reflect in Book 1 Part III(b). / Updates Index II (EC). / Generates filing number with date.
+T2R7|Output documents generated || Endorsement,  / contains: / Section 60 Certificate: Book -I part III(b). / Filing Number with Date.
+T2R8|Internal changes || Book-1 Part III(b).
+T2R9|Impact on other modules || EC Search. / MIS.
+---TABLE 3---
+T3R0|Sl No || Module No || Main Module || Sub-Module
+T3R1|1 || 1.1 || Registration || Registration
+T3R2|2 || 1.2 || Registration || Appointment
+T3R3|3 || 1.3 || Registration || Integration module
+T3R4|4 || 1.4 || Registration || Stamp duty and Registration fee calculation
+T3R5|5 || 1.5 || Registration || Guideline value calculation
+T3R6|6 || 1.6 || Registration || Rule 17 (2) filing
+T3R7|7 || 1.7 || Registration || Rule 17 (3) filing
+T3R8|8 || 1.8 || Registration || Old pending release module
+T3R9|9 || 1.9 || Registration || Re-Registration module
+T3R10|10 || 1.1 || Registration || Will after Death
+T3R11|11 || 1.11 || Registration || Filing documents (FRUITS)
+T3R12|12 || 1.12 || Registration || Scanning
+T3R13|13 || 1.13 || Registration || Memo transmission and filing
+T3R14|14 || 1.14 || Registration || 68(2) correction
+T3R15|15 || 1.15 || Registration || Cross-reference Rule 123
+T3R16|16 || 1.16 || Registration || Integration exemption
+T3R17|17 || 1.17 || Registration || Court entry
+T3R18|18 || 1.18 || Registration || Liability
+T3R19|19 || 1.19 || Registration || Status tracking
+T3R20|20 || 1.2 || Registration || Investigation and Search
+T3R21|21 || 1.21 || Registration || Valuation Module (CVC)
+T3R22|22 || 2 || EC || 
+T3R23|23 || 3 || CC || 
+T3R24|24 || 4 || Verify Document || 
+T3R25|25 || 5 || Power of attorney Authentication Module || 
+T3R26|26 || 6 || Refund Module || 
+T3R27|27 || 7.1 || Marriage || Hindu Marriage
+T3R28|28 || 7.2 || Marriage || Special Marriage
+T3R29|29 || 7.3 || Marriage || Special Marriage in Other Forms
+T3R30|30 || 8 || Legacy Record digitisation || 
+T3R31|31 || 9 || Audit || 
+T3R32|32 || 10 || Accounts || 
+T3R33|33 || 11.1 || MIS || Statutory (44)
+T3R34|34 || 11.2 || MIS || Statistical (54)
+T3R35|35 || 11.3 || MIS || Integration (15)
+T3R36|36 || 11.4 || MIS || Computer related (4)
+T3R37|37 || 11.5 || MIS || Reconciliation (5)
+T3R38|38 || 11.6 || MIS || HR (5)
+T3R39|39 || 12.1 || DRO || Firm Registration
+T3R40|40 || 12.2 || DRO || Undervaluation
+T3R41|41 || 12.3 || DRO || Deposit of will
+T3R42|42 || 12.4 || DRO || Adjudication of documents
+T3R43|43 || 13 || IGRO || Appeal
+T3R44|44 || 14 || Master Data Management || 
+T3R45|45 || 15 || User Management || 
+T3R46|46 || 16 || Mobile application || 
+T3R47|47 || 17 || Training Module || Master Trainer, Training Plan

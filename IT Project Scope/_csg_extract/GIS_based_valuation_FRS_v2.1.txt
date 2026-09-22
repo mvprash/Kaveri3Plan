@@ -1,0 +1,430 @@
+P0|Karnataka Valuation & E-Registration (KAVERI - 2.0)
+P1|Government of Karnataka
+P3|Functional Requirement Specifications
+P5|For KAVERI 2.0
+P6|Department of Stamps & Registration
+P7|Government of Karnataka
+P8|Version 2.1
+P12|GIS-Based Market Valuation of Agri-Properties
+P17|Prepared by
+P18|Centre for Smart Governance (CSG)
+P19|2nd Floor, TTMC Yeshwanthapura, BMTC Bus station
+P20|Bangalore – 560022
+P29|Acronyms
+P32|Revision History
+P34|Introduction
+P35|The Department of Stamps and Registration (henceforth referred to as “department”) is the custodian of registered public records such as Registration of Marriages and Firms, Documents about transactions namely sale, transfer or gift of immovable properties, Mortgage, Power of Attorneys, wills and many more. Maintenance and preservation of these critical public records is the prime responsibility of the department. The records or the information associated with registered records are to be made available to the public when requested through defined procedures. The department is also responsible for collecting stamp duty on behalf of the Government for specified transactions. The services are provided through 260 Sub-Registrar Offices (SROs), under the supervision of 35 District Registrar Offices, spread across the state.
+P36|The department has computerized the delivery of these services through the development of the Kaveri software. KAVERI Online service is a web-based application of the department that provides an interface to the Applicants required for documents, marriage, and firm registration. It enables Applicants to know the details of stamp duty, property guidelines value, data entry for document registration and marriage registration, etc. The list of modules of Kaveri 2.0 is available in Annexure 1.
+P37|Document scope
+P38|This document is a Functional Requirement Specification (FRS) describing the functional features of the GIS-based market valuation. The document is prepared by the Centre for Smart Governance (CSG) and has been submitted for department approval. The intended audience of the document is the departmental approving authority and the development team. The document was prepared based on consultation with the Department of Stamps and Registrations. Based on the subsequent discussions, the FRS has been revised to incorporate the fundamental change in valuation policy from a manual road-based approach to an automated base rate approach.
+P40|The document describes the high-level integration protocol between the Kaveri development team, Bhoomi team and the KSRSAC team. However, its scope excludes the algorithms to be adopted by the KSRSAC team. Further, this feature will be for agricultural properties.
+P42|The current valuation module covers Agricultural land requirements as agreed upon with the department. There will not be any change in the market valuation logic of the Non-Agricultural properties.
+P43|Description of the functional requirement
+P44|Currently, stamp duty calculations are based on the “proper market value” of a property as determined by the Central Valuation Committee (CVC). However, rate fixing is prone to significant discretion and might potentially lead to a loss of revenue to the state treasury. The feature seeks to reduce users' discretion and maximise revenue realisation by automating market value determination to the extent feasible.
+P45|Thus, there are only key changes to the calculation in the market valuation determination of agricultural properties.
+P46|Market Valuation Determination
+P47|AS-IS Process
+P48|In the existing registration system, the Guideline Value (GV) is displayed based on the property selected by the citizen.
+P49|The system then shows the applicable Guideline Value as per the CVC guideline values.
+P50|Additional property attributes like Jurisdiction, Road types, Zone/ Usage type, are selected manually by the Citizen (Refer Figure 01).
+P51|The Guideline Value formula is applied, and the consideration amount is entered by the citizen.
+P52|The application is then submitted to the Sub-Registrar for verification.
+P53|The Sub-Registrar currently has the discretion to add, delete, or modify the valuation attributes manually.
+P54|These changes are performed without system-supported data validation.
+P57|Figure 1: Agri-properties- Market valuation parameters
+P59|TO-BE Process
+P60|Agricultural Properties
+P62|Figure 2: Agri properties - High-level proposed flow
+P63|The revised GIS-based property valuation system seeks to determine the property value automatically based on the extraction of features (Figure 2). It involves the following steps:
+P64|Road Code or Area Code selection should not be required from the user.
+P65|Upon user property selection, Kaveri to share the property information with Bhoomi and KSRSAC to fetch location details with attributes.
+P66|Village boundaries and survey numbers will be identified through geo-fencing using KSRSAC GIS data.
+P67|Location data should be fetched from the KSRSAC GIS data.
+P68|Bhoomi will provide the following attribute details - Refer Annexure 3
+P69|Property details: District, taluka, Hobli, Village, Land Codes, Total and Available Extent details
+P70|Owner details: Owner name, Relative name and relationship with the owner
+P71|Restrictions: Property category, Alienation status, Restriction type and description
+P72|Agri-Land type: Khuski, Tari and Baghayat.
+P73|KSRSAC will provide the following attribute details - Refer Annexure 3
+P74|Jurisdiction details: Within ULB or outside the ULB or at a certain distance from the ULB, etc.
+P75|Road type: abutting to NH, SH, others.
+P76|Zone/Usage type: Residential, Commercial and Industrial
+P77|Tree types
+P78|Agri properties under the jurisdiction of the local planning and development authority.
+P79|Construction details in the Agri properties.
+P80|The system will compare the agricultural rate against a certain percentage of the non-agricultural rate and will pick the higher rate. The percentage will be defined by the attributes provided by the KSRSAC.
+P81|Kaveri will save these details and move to market valuation.
+P82|Kaveri will automatically identify the village in which the property is located.
+P83|The village-based Guideline Value will be fetched automatically.
+P84|For agricultural and converted but undeveloped lands, the valuation will be based on village-level GV. The same will apricated further using the logic mentioned in annexure 3.
+P85|Kaveri to determine the market valuation based on the following points:
+P86|Base rate - The base rate varies for each category of the land type. The rates will be fetched using the response provided by BHOOMI and KSRSAC.
+P87|BHOOMI provides the extent details
+P88|KSRSAC provides the jurisdiction, abutting roads, and usage details.
+P89|Using these details, Kaveri will arrive at the base rate using the logic mentioned in the table. Please refer to annexure 3.
+P90|The extent fetched by the user during the property search will be used to transact.
+P91|User modified details:  Tree count and built-up area (if available), only an increase is allowed.
+P92|System saves the market valuation amount in INR along with the additionalities added by the user, and the existing application flow continues hereon.
+P93|All changes made to the data, at each level, are to be stored in the database for future retrieval.
+P94|Data required for valuation will be sourced from multiple systems: Refer to Figure 3
+P96|Figure 3: To-Be Market valuation parameters
+P97|Workflow
+P99|Figure 4: Activity diagram of revised market valuation
+P101|Actors and their roles
+P103|Process Description
+P104|Citizen Login
+P105|The process outlined below will explicitly talk about the changes in the property search and the market valuation process of the agricultural properties, and for non-agricultural properties, there will be no change.
+P106|Log in and select the new application.
+P107|Select the article and sub-article.
+P108|The user will key in the District, Taluka, Hobli, Village, Survey Number and Hissa Number to get the property details. The system shall not provide any option to pinpoint the location on the GIS map.
+P109|Property selection:
+P110|For Agricultural properties - The property will be searched using survey, surnoc and hissa numbers. The system shall initiate 2 parallel calls separately
+P111|First call will be for Bhoomi to get
+P112|Property details.
+P113|Owner details and
+P114|Agricultural land type details.
+P115|Parallelly, the system shall send the search parameters to KSRSAC to get the following details
+P116|Jurisdiction details (Within ULB, Outside ULB within the distance mentioned in Annexure 3).
+P117|Road types.
+P118|Zone Details.
+P119|Usage type (Industrial, Commercial or Residential).
+P120|Crop types (Refer to annexure 3).
+P121|Tree type (Refer to annexure 3).
+P122|The system receives the data and stores it in the database.
+P123|The system displays the GIS map (Navigation allowed: zoom out, zoom in, Panning) with the selected location and a list of attributes from Bhoomi and KSRSAC.
+P124|User selects the property owner and extent type.
+P125|System displays the market valuation details.
+P126|Market Valuation:
+P127|The system automatically fetches the base rate of the village; this guideline value is based on inputs provided by the Bhoomi and KSRSAC using the logic below.
+P128|The system will compare the agricultural rate against a certain percentage of the non-agricultural rate and will pick the higher rate. The percentage will be defined by the attributes provided by the KSRSAC.
+P129|The system calculates the Market value using the formula:
+P130|Market value = Base rate * transacted extent.
+P131|There should be an option for the applicant to update (to increase only) the tree count and Built-up area.
+P132|System calculates the total market value based on the user's input using the formula: Total Market value = Market Value + (tree count * rate/tree) + (Built up area*rate/sq. mtr)+ Other attribute value.
+P133|Below are a few scenarios on how the market valuation will be calculated in the proposed flow, when the property is situated within the ULB and outside the ULB.
+P137|User shall continue with the existing application process.
+P138|The system must display the relevant GIS map associated with the selected property on the review summary page.
+P139|SR Login
+P140|The SR open the application for verification.
+P141|The system must display the relevant GIS map associated with the selected property on the review page.
+P142|The Sub-Registrar will not have discretion to remove property extent, but the Sub Registrar can modify the parameters that are selected during the citizen market valuation.
+P143|The Sub-Registrar will have the provision to modify the following parameters. The Sub Registrar can only increase the counts or choose the attribute which having more value than the current attribute. The following fields
+P144|Agri-land type: The SR will be allowed to choose the Agri-land type that has a higher guidance value than the current Agri-land type.
+P145|Tree count: The SR will be allowed to increase the tree count if required.
+P146|Construction details in Agri-land: The SR will be allowed to increase the area of the building that is constructed in the agricultural property if required.
+P147|Abutting road type and the distance from the road.
+P148|The radial distance from the ULBs.
+P149|Usage of the property.
+P151|The system must log all the changes that are made by the SR to increase the market value of the property.
+P152|This provision is necessary since KSRAC GIS data may have a time lag of up to three years.
+P153|The application follows the existing registration process.
+P154|Base rate determination
+P155|The base rate for each Village is fixed by the Central Valuation Committee (CVC). The base rate for agricultural and non-agricultural will be distinct.
+P156|Note - Awaiting the Base rates details from the Department.
+P157|Output documents
+P158|Document summary - The document summary for the citizen must have a description of the basis for arriving at the market valuation for each property.
+P159|Scenarios considered
+P160|Release phase: State-wide release.
+P161|Article type: Articles with and without market valuation
+P162|Property restrictions: Government Land (GL), Government Restrictions (GR), PTCL, Pyki.
+P163|Source of property info: Bhoomi and previous document-related details from the existing database, in case of cancellation, modification and rectification of the document.
+P164|Extent: Full extent, part extent, and non-agricultural valuations for less than 5 Guntas
+P165|Property use type: Alienated and agricultural.
+P166|Validations
+P167|The value of the pre-fetched base rate cannot be lowered.  The users should not be permitted to reduce the tree count or construction area if pre-fetched from KSRSAC/Bhoomi/property register; however, they may increase these values if needed.
+P168|The system must keep the logs of all the changes that are made during the market valuation.
+P169|The system must store both the market valuation evaluated by the Applicant and the SR, along with the attributes used to arrive at the market valuation.
+P170|User input fields must not be left blank. The system shall display ‘0’(Zero) as the input value if a particular field is not applicable.
+P171|All other existing validations will continue.
+P172|Assumptions
+P173|For the non-Agri properties, the GIS map will not be shown, and the existing market valuation process will continue.
+P174|The GIS map will be shown on both the citizen and SR login.
+P175|GIS-based valuation is dependent on details provided by KSRSAC and the property registers.
+P176|Dependencies
+P177|The department shall provide the consolidated guideline values for Agri and Non-Agri properties.
+P178|Details shown in annexures 3 and 4 have to be confirmed by the department.
+P179|Annexures
+P180|Annexure- 1: Requirements as shared by the department
+P185|Annexure – 2: Agri-land types masters
+P188|Annexure 3: Annexure Rules for Market Valuation of Agricultural Properties
+P189|Shared via WhatsApp on 13-03-2026
+P194|@startmindmap
+P195|** Anywhere
+P196|*** Agriculture or Non-Agriculture
+P197|**** Up to 5G
+P198|***** Site Rate or Agriculture Rate - whichever is more
+P201|*** Within a ULB
+P202|**** Converted but undeveloped_
+P203|***** > 5G to 7.5G: 80% of Site Rate or Ag Rate
+P204|***** > 7.5G to 10G: 75% of Site Rate or Ag Rate
+P205|***** > 10G to 20G: 70% of Site Rate or Ag Rate
+P206|***** > 20G to 40G: 60% of Site Rate or Ag Rate
+P207|***** > 40G Indus: 40% of Site Rate or 1.5x Ag Rate
+P208|***** > 40G Res: 45% of Site Rate or 1.5x Ag Rate
+P209|***** > 40G Comm: 50% of Site Rate or 1.6x Ag Rate
+P211|**** Agricultural Land_
+P212|***** > 5G to 7.5G: 70% of Site Rate or Ag Rate
+P213|***** > 7.5G to 10G: 65% of Site Rate or Ag Rate
+P214|***** > 10G to 20G: 55% of Site Rate or Ag Rate
+P215|***** > 20G to 40G: 45% of Site Rate or Ag Rate
+P216|***** > 40G: 35% of Site Rate or Ag Rate
+P218|*** Outside ULB (within radial distance)
+P219|**** Converted but undeveloped_
+P220|***** > 5G to 7.5G: 60% of Site Rate or Ag Rate
+P221|***** > 7.5G to 10G: 55% of Site Rate or Ag Rate
+P222|***** > 10G to 20G: 50% of Site Rate or Ag Rate
+P223|***** > 20G to 40G: 45% of Site Rate or Ag Rate
+P224|***** > 40G Indus: 35% of Site Rate or Ag Rate
+P225|***** > 40G Res: 40% of Site Rate or Ag Rate
+P226|***** > 40G Comm: 45% of Site Rate or Ag Rate
+P228|**** Agricultural Land_
+P229|***** > 5G to 7.5G: 50% of Site Rate or Ag Rate
+P230|***** > 7.5G to 10G: 45% of Site Rate or Ag Rate
+P231|***** > 10G to 20G: 40% of Site Rate or Ag Rate
+P232|***** > 20G to 40G: 35% of Site Rate or Ag Rate
+P233|***** > 40G: 30% of Site Rate or Ag Rate
+P235|*** Outside ULB (beyond radial distance)
+P236|**** Converted but undeveloped_
+P237|***** 5G to 10G: Ag Rate + 65% of Ag Rate
+P238|***** > 10G Indus: Ag Rate + 55% of Ag Rate
+P239|***** > 10G Res: Ag Rate + 65% of Ag Rate
+P240|***** > 10G Comm: Ag Rate + 80% of Ag Rate
+P242|** Special Permissions
+P243|*** Section 109 Permission<br/>Purchase of Ag land for non-agriculture<br/>Any Extent<br/>Same rates as applicable to corresponding Converted Land_
+P245|** Road Proximity Rules
+P246|*** On NH: +150%
+P247|*** On SH: +75%
+P248|*** On District Roads (>80ft width): +50%
+P249|*** On Village Roads: +25%
+P250|*** Within 1km from NH: +50%
+P251|*** Within 0.5km from SH: +35%
+P252|*** Within 0.5km from District Roads (>80ft): +30%
+P254|** Land Type Based Rules
+P255|*** Wet/Irrigated Agricultural Land<br/>Any Extent<br/>+50%_
+P256|***Perennial Horticulture/Agricultural Land<br/>Any Extent<br/>+100%_
+P257|***Industrial Zone<br/>Any Extent<br/>+50%_
+P258|***Residential Zone<br/>Any Extent<br/>+50%_
+P259|***Commercial Zone<br/>Any Extent<br/>+75%_
+P260|***CRZ (150m from HTL)<br/>Any Extent<br/>+50%_
+P261|***Others<br/>Any Extent<br/>+10%_
+P263|** Commercial Property Rules
+P264|***Commercial/Non-residential use lands (no notified GV)<br/>50% more than residential rate_
+P265|***Commercial/Non-residential flats/Service Apartments/Villaments<br/>Flats: +40% of residential rate<br/>Commercial units: +50% of residential rate_
+P267|** Special Conditions
+P268|***Site opening to 2+ roads<br/>Any Extent<br/>+10%_
+P269|***Inside industrial areas<br/>GV as fixed/notified for such area_
+P270|***Outside industrial areas<br/>GV as for residential sites in same area_
+P271|***Exclusive open/garden area (single entity)<br/>40% of GV of Super Built Up area_
+P273|** Property Type Definitions
+P274|***Villa/Row Houses GV = Basic Rate + Value of Addl Facilities + Addl value for higher floors_
+P275|***Flats GV = Basic Rate + Value of Spl Facilities + Value of higher floors_
+P276|***Villa/Row Houses GV (detailed) = Basic Rate of Site + Value of Building + Value of Special Facilities + Addl value for higher floors_
+P278|** Administrative Rules
+P279|***Layouts/Multi-Storey Bldg/Apartments etc (no notified rate)<br/>CVC shall fix the rates_
+P280|***Upgradation of Local Body/Area<br/>Revised rates applicable from notification date_
+P281|***New Notification applicability<br/>Applicable to properties registered after notification date_
+P283|@endmindmap
+---TABLE 0---
+T0R0|CSG || Centre for Smart Governance.
+T0R1|GL || Government Land.
+T0R2|GR || Government Restriction.
+T0R3|KSRSAC || Karnataka State Remote Sensing Applications Centre.
+T0R4|PTCL || Prohibition of Transfer of Certain Lands
+---TABLE 1---
+T1R0|Date || Version || Prepared by || Reviewed by || Description
+T1R1|24-11-2025 || 1.0 || Pavan Deshapande ||  || Submitted for review
+T1R2|10-03-2026 || 2.0 || Arugolli Subhash / Associate Business Analyst ||  || Submitted for review
+T1R3|16-03-2025 || 2.1 || Arugolli Subhash / Associate Business Analyst ||  || Submitted for review
+---TABLE 2---
+T2R0|Attribute Range || Attribute description. || Source System
+T2R1|1 || Base Rate || Kaveri
+T2R2|2 || Land type (Khuski, Tari, Bagayat, etc.) || Bhoomi
+T2R3|3 || Jurisdiction (within or outside ULB or within or outside the limit of ULB’s radial distance) || KSRSAC
+T2R4|4 || Distance from the ULB, village || KSRSAC
+T2R5|5 || Type of trees || KSRSAC
+T2R6|6 || Type of crops || Type details - KSRSAC / Count details - Kaveri
+T2R7|7 || Construction details in an Agri property || Type details - KSRSAC / Count details - Kaveri
+T2R8|8 || Zones (CRZ, Green etc) || KSRSAC
+---TABLE 3---
+T3R0|Actor/Interface || Role/Responsibilities
+T3R1|Applicant || Keys the relevant document details / Keys the property details / Selects extent type (full or part) / Enters tree count and Built-up area (If applicable) / Continues with the application process
+T3R2|KSRSAC || Sends the following attributes details – / For Properties / Jurisdiction details: BBMP, ULB, CMC, TMC GP, etc. / Road type: abutting to NH, SH / Properties in the zones of local development authorities: Green zone, Industrial, Residential, Commercial, and other.  / Usage type: Residential/ Commercial, Near to major facilities like bus stand or metro station and Industrial / Crop type / Tree types / Other attributes
+T3R3|BHOOMI || Sends back the following details to the Kaveri system / Property Details  / Owner details / Property types
+T3R4|System || Fetches relevant details from the BHOOMI and KSRSAC / Stores the details received from KSRSAC and the Property register / Displays the GIS map with pinpoint location for Agri properties. / Displays the error message if any restricted properties are  / Displays Base rate based on details received from KSRSAC and Property register / Calculates market valuation based on user input and Base rate
+T3R5|SR || Verifies the application. / Allocates to FDA/SDA or verification / Calculates the market valuation and stamp duty fee. / Add remarks and send back to the applicant for correction, if required / Send back to the applicant for payment / Modifies the attributes to increase MV (if required)
+T3R6|Process Triggers || Selection of property information
+T3R7|Data/Information Required || Property Details -Extent / Owner details / Property type / Jurisdiction details: BBMP, ULB, CMC, TMC GP, etc. / Road type: abutting to NH, SH, and other details. / Zone/Usage type: Residential/ Commercial and Industrial / Crop types / Tree types / Tree count and other attributes
+T3R8|Output documents generated || Application summary with the GIS Map
+---TABLE 4---
+T4R0|Sl. No || Scenario || Attributes provided by || Attributes provided by || Agri rates/Acre || Site Rate/Sqm || GV for the selected property
+T4R1|Sl. No || Scenario || BHOOMI || KSRSAC || Agri rates/Acre || Site Rate/Sqm || GV for the selected property
+T4R2|1 || An agricultural property situated at Nelamagala taluk, having an extent of 1 acre, the property located at a distance of 0.5KM from the NH 44 and will be used for agricultural purposes, has a canal for irrigation, and the property grows sandalwood. || Owner Name: Test 1 / Extent: 1 Acres / Agri land type: Bagayat || Within ULB: Yes / Abutting road: NH / Distance from the road: 0.5KM / Usage: Agri / Tree: Sandalwood. / QTY: 50 trees || 25,00,000 || 1,200 || Referring to the table: / Within ULB, Agri Land, >40G, 35% of Site Rate or the Agriculture rate - whichever is more
+T4R3|1 || Calculation Method: || Calculation Method: || Calculation Method: || 25,00,000 || 1,200 || Referring to the table: / Within ULB, Agri Land, >40G, 35% of Site Rate or the Agriculture rate - whichever is more
+T4R4|1 || Converting the Acre rate to per sqm rates || 617.76 || INR/Sqm || 25,00,000 || 1,200 || Referring to the table: / Within ULB, Agri Land, >40G, 35% of Site Rate or the Agriculture rate - whichever is more
+T4R5|1 || Site rate per sqm || 1,200.00 || INR/Sqm || 25,00,000 || 1,200 || Referring to the table: / Within ULB, Agri Land, >40G, 35% of Site Rate or the Agriculture rate - whichever is more
+T4R6|1 || 35% Site rate || 420.00 || INR/Sqm || 25,00,000 || 1,200 || Referring to the table: / Within ULB, Agri Land, >40G, 35% of Site Rate or the Agriculture rate - whichever is more
+T4R7|1 || GV will be || 617.76 || INR/Sqm || 25,00,000 || 1,200 || Referring to the table: / Within ULB, Agri Land, >40G, 35% of Site Rate or the Agriculture rate - whichever is more
+T4R8|1 || Total area || 4,046.87 || sqm || 25,00,000 || 1,200 || Referring to the table: / Within ULB, Agri Land, >40G, 35% of Site Rate or the Agriculture rate - whichever is more
+T4R9|1 || Base Rate || 25,00,000.00 || INR || 25,00,000 || 1,200 || Referring to the table: / Within ULB, Agri Land, >40G, 35% of Site Rate or the Agriculture rate - whichever is more
+T4R10|1 || Additionalities: Within 1KM from NH: 50% of the GV || 12,50,000.00 || INR || 25,00,000 || 1,200 || Referring to the table: / Within ULB, Agri Land, >40G, 35% of Site Rate or the Agriculture rate - whichever is more
+T4R11|1 || Canal irrigation: 50% of the GV || 12,50,000.00 || INR || 25,00,000 || 1,200 || Referring to the table: / Within ULB, Agri Land, >40G, 35% of Site Rate or the Agriculture rate - whichever is more
+T4R12|1 || Tree type: Sandal wood, 10000/tree, and has 50 trees || 5,00,000.00 || INR || 25,00,000 || 1,200 || Referring to the table: / Within ULB, Agri Land, >40G, 35% of Site Rate or the Agriculture rate - whichever is more
+T4R13|1 || Total Market Valuation || 55,00,000.00 || INR || 25,00,000 || 1,200 || Referring to the table: / Within ULB, Agri Land, >40G, 35% of Site Rate or the Agriculture rate - whichever is more
+---TABLE 5---
+T5R0|Sl. No || Scenario || Attributes provided by || Attributes provided by || Agri rates/ Acre || Site Rate/ Sqm || GV for the selected property
+T5R1|Sl. No || Scenario || BHOOMI || KSRSAC || Agri rates/ Acre || Site Rate/ Sqm || GV for the selected property
+T5R2|2 || An agricultural property situated in Pavagada taluk, with an extent of 2 acres, located outside the ULB, 0.5 KM from the village road, and used for agricultural purposes. It has a borewell for irrigation and grows coconut trees. || Owner Name: Test 2 / Extent: 2 acres / Agri land type: Bagayat || Within ULB: No / Abutting road: Village road / Distance from the road: 0.5KM / Usage: Agri / Tree: Coconut. || 7,00,000 || 650 || Referring to the table: / Outside the ULB but within the radial distance as given in table below, Agri Land, >40G, 30% of Site Rate or the Agriculture rate - whichever is more
+T5R3|2 || Calculation Method: || Calculation Method: || Calculation Method: || 7,00,000 || 650 || Referring to the table: / Outside the ULB but within the radial distance as given in table below, Agri Land, >40G, 30% of Site Rate or the Agriculture rate - whichever is more
+T5R4|2 || Converting the Acre rate to per sqm rates || 172.97 || INR/Sqm || 7,00,000 || 650 || Referring to the table: / Outside the ULB but within the radial distance as given in table below, Agri Land, >40G, 30% of Site Rate or the Agriculture rate - whichever is more
+T5R5|2 || Site rate per sqm || 650.00 || INR/Sqm || 7,00,000 || 650 || Referring to the table: / Outside the ULB but within the radial distance as given in table below, Agri Land, >40G, 30% of Site Rate or the Agriculture rate - whichever is more
+T5R6|2 || 30% Site rate || 227.50 || INR/Sqm || 7,00,000 || 650 || Referring to the table: / Outside the ULB but within the radial distance as given in table below, Agri Land, >40G, 30% of Site Rate or the Agriculture rate - whichever is more
+T5R7|2 || GV will be || 227.50 || INR/Sqm || 7,00,000 || 650 || Referring to the table: / Outside the ULB but within the radial distance as given in table below, Agri Land, >40G, 30% of Site Rate or the Agriculture rate - whichever is more
+T5R8|2 || Total area || 8,093.74 || sqm || 7,00,000 || 650 || Referring to the table: / Outside the ULB but within the radial distance as given in table below, Agri Land, >40G, 30% of Site Rate or the Agriculture rate - whichever is more
+T5R9|2 || Base Rate || 18,41,325.85 || INR || 7,00,000 || 650 || Referring to the table: / Outside the ULB but within the radial distance as given in table below, Agri Land, >40G, 30% of Site Rate or the Agriculture rate - whichever is more
+T5R10|2 || Additionalities: Borewell irrigation: 50% of the GV || 9,20,662.93 || INR || 7,00,000 || 650 || Referring to the table: / Outside the ULB but within the radial distance as given in table below, Agri Land, >40G, 30% of Site Rate or the Agriculture rate - whichever is more
+T5R11|2 || Tree type: Coconut, 400000/Acre || 8,00,000.00 || INR || 7,00,000 || 650 || Referring to the table: / Outside the ULB but within the radial distance as given in table below, Agri Land, >40G, 30% of Site Rate or the Agriculture rate - whichever is more
+T5R12|2 || Total Market Valuation || 35,61,988.78 || INR || 7,00,000 || 650 || Referring to the table: / Outside the ULB but within the radial distance as given in table below, Agri Land, >40G, 30% of Site Rate or the Agriculture rate - whichever is more
+---TABLE 6---
+T6R0|Agri-land type || Description
+T6R1|1 || Dry, No Source of Irrigation, Black Soil
+T6R2|2 || Dry, No Source of Irrigation,Red Soil
+T6R3|3 || Dry, No Source of Irrigation, Other
+T6R4|4 || Dry, Paddy/Areca/Coconut/Mango/Grapes/Fruit grown with rain water, Black Soil
+T6R5|5 || Dry, Paddy/Areca/Coconut/Mango/Grapes/Fruit grown with rain water, Red Soil
+T6R6|6 || Dry, Paddy/Areca/Coconut/Mango/Grapes/Fruit grown with rain water, Other Soil
+T6R7|7 || Dry, Irrigation by pumping water from river/ canal/ stream/ pond, Black Soil
+T6R8|8 || Dry, Irrigation by pumping water from river/ canal/ stream/ pond, Red Soil
+T6R9|9 || Dry, Irrigation by pumping water from river/ canal/ stream/ pond, Other Soil
+T6R10|10 || Bagayat, Dry
+T6R11|11 || Bagayat, Wet
+T6R12|12 || Wet (Assured Water Supply from Government Tanks/Canals), Two Crops of Paddy
+T6R13|13 || Wet (Assured Water Supply from Government Tanks/Canals), Sugarcane
+T6R14|14 || Wet (Assured Water Supply from Government Tanks/Canals), One Crop
+T6R15|15 || Wet (Assured Water Supply from Government Tanks/Canals), Lift Irrigation
+T6R16|16 || Wet (Assured Water Supply from Government Tanks/Canals), Garden/Areca/Coconut
+T6R17|17 || Plantation, Coffee/Pepper
+T6R18|18 || Plantation, Cardamom/Pepper
+T6R19|19 || Plantation, Rubber/Areca nut
+T6R20|20 || Plantation, Tea
+T6R21|23 || Dry Agriculture Land, Irrigated By Bore / Well / Pump set, Other Soil
+T6R22|24 || Dry, No Source of Irrigation, Loamy Soil
+T6R23|26 || Dry, Paddy/Areca/Coconut/Mango/Grapes/Fruit grown with rain water ,loamy Soil
+T6R24|27 || Dry, Irrigation by pumping water from river/ canal/ stream/ pond, loamy Soil
+T6R25|28 || Dry,Areca,coconut,Rubber,CashewNut
+T6R26|29 || Plantation Coffee(Low Grade)
+T6R27|30 || Plantation Coffee(High Grade)
+T6R28|31 || Bagayat Coconut(Plant Within 2 years)
+T6R29|32 || Bagayat Coconut
+T6R30|33 || Bagayat Arecanut & venilla(Plant Within 2 years)
+T6R31|34 || Bagayat Arecanut & vanilla
+T6R32|35 || Plantation, Cardamom/Pepper(Low Grade)
+T6R33|36 || Plantation, Cardamom/Pepper(High Grade)
+T6R34|37 || Plantation, Coffee/Cardamom
+T6R35|38 || Plantation, Coffee/Cardamom/Pepper
+T6R36|39 || Dry, No Source of Irrigation,Maradi
+T6R37|40 || Dry, No Source of Irrigation, Garasu
+T6R38|41 || Non-Agriculture Land
+T6R39|42 || Dry Agriculture Land, Irrigated By Bore / Well / Pumpset, Black Soil
+T6R40|43 || Dry Agriculture Land, Irrigated By Bore / Well / pump set, Red Soil
+T6R41|44 || NA Dry land (Undeveloped) - Residential Use
+T6R42|45 || NA Dry land (Undeveloped) - Commercial Use
+T6R43|46 || NA Dry land (Undeveloped) - Industrial Use
+T6R44|50 || NA Wet land (Undeveloped) - Residential Use
+T6R45|52 || NA Wet land (Undeveloped) - Industrial Use
+T6R46|53 || NA Bhagayat land (Undeveloped) - Residential Use
+T6R47|55 || NA  Bhagayat land (Undeveloped) - Industrial Use
+T6R48|57 || Wet Pond
+T6R49|58 || Coconut Tree in Dry Land
+T6R50|59 || Coconut Tree in Wet Land
+T6R51|60 || Arecanut Tree in Dry Land
+T6R52|61 || Arecanut Tree in Wet Land
+T6R53|63 || Bagayath  - Maradi
+T6R54|64 || Bagayath  - Masari
+T6R55|65 || Bagayath  - yari
+---TABLE 7---
+T7R0|S. No || Location of the Land || Type of Land || Extent || GV Rate
+T7R1|1 || Anywhere || Agriculture or  / Non-Ag || Up to 5 G || Site Rate or Agriculture rate - whichever is more
+T7R2|2 || Within a ULB || Converted but undeveloped || > 5 G to 7.5 G || 80% of Site Rate or Agriculture rate - whichever is more
+T7R3|2 || Within a ULB || Converted but undeveloped || > 7.5 G to 10 G || 75% of Site Rate or Agriculture rate - whichever is more
+T7R4|2 || Within a ULB || Converted but undeveloped || > 10 G to 20 G || 70% of Site Rate or Agriculture rate - whichever is more
+T7R5|2 || Within a ULB || Converted but undeveloped || > 20 G to 40 G || 60% of Site Rate or Agriculture rate - whichever is more
+T7R6|2 || Within a ULB || Converted but undeveloped || > 40 G Indus || 40% of Site Rate or 1.5 times the Agriculture rate - whichever is more
+T7R7|2 || Within a ULB || Converted but undeveloped || > 40 G Res || 45% of Site Rate or 1.5 times th Agriculture rate - whichever is more
+T7R8|2 || Within a ULB || Converted but undeveloped || > 40 G Comm || 50% of Site Rate or 1.6 times the Agriculture rate - whichever is more
+T7R9|3 || Within a ULB || Agricultural Land || > 5 G to 7.5 G || 70% of Site Rate or Agriculture rate - whichever is more
+T7R10|3 || Within a ULB || Agricultural Land || > 7.5 G to 10 G || 65% of Site Rate or Agriculture rate - whichever is more
+T7R11|3 || Within a ULB || Agricultural Land || > 10 G to 20 G || 55% of Site Rate or Agriculture rate - whichever is more
+T7R12|3 || Within a ULB || Agricultural Land || > 20 G to 40 G || 45% of Site Rate or Agriculture rate - whichever is more
+T7R13|3 || Within a ULB || Agricultural Land || > 40 G || 35% of Site Rate or the Agriculture rate - whichever is more
+T7R14|4 || Outside the ULB but within the radial distance as given in table below || Converted but undeveloped || > 5 G to 7.5 G || 60% of Site Rate or Agriculture rate - whichever is more
+T7R15|4 || Outside the ULB but within the radial distance as given in table below || Converted but undeveloped || > 7.5 G to 10 G || 55% of Site Rate or Agriculture rate - whichever is more
+T7R16|4 || Outside the ULB but within the radial distance as given in table below || Converted but undeveloped || > 10 G to 20 G || 50% of Site Rate or Agriculture rate - whichever is more
+T7R17|4 || Outside the ULB but within the radial distance as given in table below || Converted but undeveloped || > 20 G to 40 G || 45% of Site Rate or Agriculture rate - whichever is more
+T7R18|4 || Outside the ULB but within the radial distance as given in table below || Converted but undeveloped || > 40 G Indus || 35% of Site Rate or the Agriculture rate - whichever is more
+T7R19|4 || Outside the ULB but within the radial distance as given in table below || Converted but undeveloped || > 40 G Res || 40% of Site Rate or the Agriculture rate - whichever is more
+T7R20|4 || Outside the ULB but within the radial distance as given in table below || Converted but undeveloped || > 40 G Comm || 45% of Site Rate or the Agriculture rate - whichever is more
+T7R21|5 || Outside the ULB but within the radial distance as given in table below || Agricultural Land || > 5 G to 7.5 G || 50% of Site Rate or Agriculture rate - whichever is more
+T7R22|5 || Outside the ULB but within the radial distance as given in table below || Agricultural Land || > 7.5 G to 10 G || 45% of Site Rate or Agriculture rate - whichever is more
+T7R23|5 || Outside the ULB but within the radial distance as given in table below || Agricultural Land || > 10 G to 20 G || 40% of Site Rate or Agriculture rate - whichever is more
+T7R24|5 || Outside the ULB but within the radial distance as given in table below || Agricultural Land || > 20 G to 40 G || 35% of Site Rate or Agriculture rate - whichever is more
+T7R25|5 || Outside the ULB but within the radial distance as given in table below || Agricultural Land || > 40 G || 30% of Site Rate or the Agriculture rate - whichever is more
+T7R26|6 || Outside ULB & beyond the radial distance from ULB boundary as given below || Converted but undeveloped || 5 G to 10 G || Ag Rate + 65% of Ag Rate
+T7R27|6 || Outside ULB & beyond the radial distance from ULB boundary as given below || Converted but undeveloped || > 10 G Indus || Ag Rate + 55% of Ag Rate
+T7R28|6 || Outside ULB & beyond the radial distance from ULB boundary as given below || Converted but undeveloped || > 10 G Res || Ag Rate + 65% of Ag Rate
+T7R29|6 || Outside ULB & beyond the radial distance from ULB boundary as given below || Converted but undeveloped || > 10 G Comm || Ag Rate + 80% of Ag Rate
+T7R30|6 || Anywhere || Section 109 permission for purchase of Ag land for non-agriculture purpose || Any Extent as per above details for Converted Land || Same rates as applicable to corresponding Converted Land as given in 1 & 2 above
+T7R31|7 || On the NH || Agriculture or Non-Ag Lands || Any Extent || 150% additional rate than what is the GV otherwise for that piece of land
+T7R32|8 || On the SH || Agriculture or Non-Ag Lands || Any Extent || 75% additional rate than what is the GV otherwise for that piece of land
+T7R33|9 || On the District Roads or roads more than 80 feet in width || Agriculture or Non-Ag Lands || Any Extent || 50% additional rate than what is the GV otherwise for that piece of land
+T7R34|10 || On the Village Roads(VR) || Agriculture or Non-Ag Lands || Any Extent || 25% additional rate than what is the GV otherwise for that piece of land
+T7R35|11 || Within 1Km from NH || Agriculture or Non-Ag Lands || Any Extent || 50% additional rate than what is the GV otherwise for that piece of land
+T7R36|12 || Within 0.5 KM from SH || Agriculture or Non-Ag Lands || Any Extent || 35% additional rate than what is the GV otherwise for that piece of land
+T7R37|13 || Within 0.5 KM from the District Roads or roads more than 80 feet in width || Agriculture or Non-Ag Lands || Any Extent || 30% additional rate than what is the GV otherwise for that piece of land
+T7R38|14 || Anywhere || Wet or Irrigated Agricultural Land || Any Extent || 50% additional rate than what is the GV otherwise for that piece of agricultural land
+T7R39|15 || Anywhere || Perennial Horticulture or Agricultural Land || Any Extent || 100% additional rate than what is the GV otherwise for that piece of agricultural land
+T7R40|16 || Anywhere || Industrial Zone || Any Extent || 50% additional rate than what is the GV otherwise for that piece of agricultural land
+T7R41|17 || Anywhere || Residential Zone || Any Extent || 50% additional rate than what is the GV otherwise for that piece of agricultural land
+T7R42|18 || Anywhere || Commercial Zone || Any Extent || 75% additional rate than what is the GV otherwise for that piece of agricultural land
+T7R43|19 || Anywhere || CRZ(150 m from HTL) || Any Extent || 50% additional rate than what is the GV otherwise for that piece of agricultural land
+T7R44|20 || Anywhere || Others || Any Extent || 10% additional rate than what is the GV otherwise for that piece of agricultural land
+T7R45|21 || Anywhere || Commercial or non-agricultural & non-residenial use lands not having specifically notified GV || Any Extent || The 50% more than the rate fixed for residential
+T7R46|22 || Anywhere || Commercial or non-residential use flats/Service Apartments/Villaments || Any Extent || The 40% more than the rate fixed for residential flats and in case of commercial units 50% more than the rate of residential flats
+T7R47|23 || Anywhere || A site which opens to two or more than two roads || Any Extent || 10% more than the rate which would otherwise be applicable for same site
+T7R48|24 || Inside the areas declared as industrial || Any site in such an area || Any Extent || GV as fixed or notified for such an area
+T7R49|25 || Outside the areas declared as industrial || Any site in any area outside the industrial area || Any Extent || GV as fixed or notified for residential sites in the same area
+T7R50|26 || Anwhere || Any exclusive usage  of an open area or garden area meant for a single entity || Any Extent || 40% of the GV as fixed or notified for Super Built Up area of the same property
+T7R51|27 || Anywhere || Explanation of GV of Villa or Row Houses with additional exclusive  areas || Any Extent || GV of Villa/Row Houses = Basic Rate + Value of Addl Facilities + Addl value for higher floors & GV of Flats = Basic Rate + Value of Spl Facilities + Value of higher floors
+T7R52|28 || Anywhere || Explanation of GV of Villa or Row Houses || Any Extent || GV of Villa/Row Houses = Basic Rate of Site + Value of Building + Value of Special Facilities +  Addl value for higher floors & GV of Flats = Basic Rate + Value of Spl Facilities + Value of higher floors
+T7R53|29 || Anywhere || Explanation of GV of Layouts or Multi-Storey Bldg or Apartments or Row Houses or Villaments or Hybrid etc which do have a notified rate in Notification || Any Extent || The CVC shall fix the rates of such properties/lands
+T7R54|30 || Anywhere || GV change upon upgradation of any Local Body or Area to higher Category || Any Extent || The revised rates shall be applicable from the date of notification of the said upgradation
+T7R55|31 || Anywhere || The new Notification comes into force with respect to all properties/lands  from which date || Any Extent || The lands and properties which undergo registration after the date of notification shall attrach newly notified GVs.
+---TABLE 8---
+T8R0|S. No || Type of Urban Local Body || Radial Distance within which additional GV shall apply
+T8R1|1 || Bengaluru City || 18 KM
+T8R2|2 || Any Municipal Corporation || 10 KM
+T8R3|3 || Any City Municipal Council || 5KM
+T8R4|4 || Any Town Municipal Council || 3KM
+T8R5|5 || Town Panchayats || 1KM
+T8R6|In cases where the site value is higher than the agricultural value for bagayath lands, the crop value shall not be added. || In cases where the site value is higher than the agricultural value for bagayath lands, the crop value shall not be added. || In cases where the site value is higher than the agricultural value for bagayath lands, the crop value shall not be added.
+T8R7|S. No || Types of Trees (D) – Value per Tree || GV Rate
+T8R8|1 || Coconut || 4,00,000/-
+T8R9|2 || Arecanut || 7,00,000/-
+T8R10|3 || Mango || 3,00,000/-
+T8R11|4 || Coffee || 5,00,000/-
+T8R12|5 || Tea || 5,00,000/-
+T8R13|6 || Rubber || 4,00,000/-
+T8R14|7 || Cardamom || 4,00,000/-
+T8R15|8 || Pepper || 5,00,000/-
+T8R16|9 || Cashew || 4,00,000/-
+T8R17|10 || Sugarcane || 2,00,000/-
+T8R18|11 || Lemon || 3,00,000/-
+T8R19|12 || Grapes || 3,00,000/-
+T8R20|13 || Other fruit crops || 3,00,000/-
+T8R21|S. No || Types of Trees (E) – Value per Tree || GV Rate
+T8R22|1 || Teak || 8,000/-
+T8R23|2 || Mahogany || 7,000/-
+T8R24|3 || Sandalwood || 10,000/-
+T8R25|4 || Red Sanders || 10,000/-
+T8R26|5 || Beete || 15,000/-
+T8R27|6 || Neem || 200/-
+T8R28|7 || Silver Oak || 200/-

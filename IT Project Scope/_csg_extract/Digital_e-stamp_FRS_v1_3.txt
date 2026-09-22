@@ -1,0 +1,396 @@
+P0|Karnataka Valuation & E-Registration (KAVERI - 2.0)
+P1|Government of Karnataka
+P3|Functional Requirement Specifications
+P5|For KAVERI 2.0
+P6|Department of Stamps & Registration
+P7|Government of Karnataka
+P14|Digital e-Stamping for 
+optionally registerable Documents
+P27|Prepared by
+P28|Centre for Smart Governance (CSG)
+P29|2nd Floor, TTMC Yeshwanthapura, BMTC Bus station
+P30|Bangalore – 560022
+P33|Acronyms
+P37|Revision History
+P41|Kaveri 2.0
+P42|The Department of Stamps and Registration (hereinafter referred to as the “Department”) is entrusted with the custody, maintenance, and preservation of registered public records, including but not limited to the registration of marriages and firms, documents evidencing transactions such as sale, transfer, or gift of immovable properties, mortgages, powers of attorney, wills, and other instruments of legal or commercial significance. The Department, in addition to its custodial functions, is responsible for the levy and collection of stamp duty on behalf of the Government for transactions and instruments as prescribed under law. These services are administered through 258 Sub-Registrar Offices (SROs), operating under the supervision of 35 District Registrar Offices across the State.
+P43|Within this framework of Kaveri 2.0, optionally registrable articles occupy a distinct position under the Karnataka Stamp Act. These are instruments on which stamp duty is payable, though their registration under the Registration Act, 1908 is not compulsory. Such articles include documents relating to immovable property, movable property instruments, wills, powers of attorney, adoption deeds, bonds, affidavits, and diverse commercial agreements. While the payment of stamp duty is essential to validate such documents, parties retain the discretion to seek or forego registration, weighing the benefits of creating a public record and securing evidentiary value against the additional formalities of registration.
+P44|Context of digital e-Stamp
+P45|Currently, stamp duty for optionally registerable articles in Karnataka is collected primarily offline through the sale of non-judicial stamp paper and franking at authorised centres. Parties can purchase physical stamp paper from licensed stamp vendors, cooperative banks, treasury offices, or sub-registrar offices by paying the required denomination in cash or online. Alternatively, documents may be franked using mechanical impression machines at registration offices or designated franking centres, where duty is paid in cash/online and a numbered frank is affixed to the instrument. Receipts are issued on payment, and parties manually affix or incorporate the stamped or franked papers into their documentation for legal validation.
+P46|This document describes the functional features of the digital e-Stamp in Kaveri 2.0. Citizens can now apply for and obtain a digital e-Stamp for optionally registrable documents through Kaveri 2.0. It calculates stamp duty based on the property's value, type, and location, as provided by the user, and allows payments via UPI, net banking, or cards. Upon payment, a unique e-Stamp certificate is generated instantly, and citizens can download the digitally signed e-Stamp document from the dashboard. This ensures faster processing and transparency. The system streamlines workflows while reducing dependency on physical stamp vendors.
+P48|User Management
+P49|Digital e-Stamp (and Kaveri 2.0) to have Mobile OTP-based login along with the existing system of email-based login.
+P50|Every user (new and existing) must do Aadhaar-based e-KYC.
+P51|Email-based users and mobile-based users will have an option to link their email with their mobile and vice versa.
+P54|Functional Requirements for Digital E-Stamp
+P55|4.1 Process flow for Document Generation
+P56|4. The process flow for generating an E-Stamp after user login until completion of the digital e-Stamp is as follows:
+P59|Article Selection
+P60|5. Article-mapping will be two-level instead of the existing three-level.
+P61|The existing article mapping of document registration is three-level, i.e.
+P62|The nature of the document is mapped to multiple Stamp articles.
+P63|Each Stamp article is mapped to multiple sub-articles.
+P64|All the sub-articles of all stamp articles mapped to a nature document are currently shown. Instead, the revised article mapping must be two-level, i.e.
+P65|Nature of document and Stamp Sub-article.
+P67|6. Only optionally registrable articles must be allowed as per annexure 1. Mandatorily registrable articles must not be available for selection.
+P69|7. Unlike document registration, where multiple sub-articles are allowed within a stamp article, only one sub-article selection per document is allowed.
+P71|Schedule Selection
+P72|8. There shall be an article to property register mapping based on the nature of the sub-article as per Annexure 2. Accordingly,
+P73|Agricultural
+P74|Non-Agricultural
+P75|Miscellaneous (for articles without immovable property)
+P77|9. The Kaveri village and road must be asked only if market valuation is required for the article. The market valuation is currently only required for Joint Development Agreements.
+P79|10. The system should check for the following restrictions on agricultural property and allow the user to select the articles based on the restrictions as per Annexure 6:
+P80|Do not allow any transaction on properties marked as GL.
+P81|Do not allow any transactions on properties marked as GR.
+P82|Only the full extent can be transacted if the agricultural property is alienated.
+P84|11. Validation at the source will be as is: The system does not allow properties to be fetched where property tax is not paid or if the properties are under mutation.
+P86|12. Validations for non-agricultural properties fetched from the property records (E-Aasthi /E-Swathu/ ULMS) to be relaxed for specific article as per annexure 3. Relaxed field to be:
+P87|Fetched Owner Name Validation
+P88|Extent Validation
+P89|Boundary validation
+P91|13. A description of the schedule should be auto-generated for all documents containing immovable properties.
+P93|14. Since boundary information is not available with Bhoomi, it will only be input by the user, following which the schedule description will be auto-generated.
+P95|15. There will be no schedule description required for movable property articles.
+P97|Party Details
+P98|16. Imported parties: The executants for immovable properties will be fetched from the property registers.
+P100|17. Each party must provide their mobile number, and the system will authenticate them via OTP.
+P102|18. The fields concerning imported parties (details which are imported from property registers) are not editable except for a few articles which are having the relaxation as per Annexure 3.
+P104|19. The minimum number of parties is as per Annexure 4:
+P105|For instance, for miscellaneous articles like a will or an affidavit, it is 1.
+P106|However, in most of the articles dealing with immovable properties, it is 2, with at least one executant and one claimant.
+P107|20. Other party types: A combination of the following parties is allowed, leading to 9 scenarios, refer to Figure 1 and Table 01.
+P108|Power of Authority
+P109|Minor Guardian
+P110|Organisation represented by a representative.
+P129|Table 1: Party Type Scenarios
+P132|21. Proof of Identity: System accepts Aadhaar as a primary method of proof of identity.
+P133|Aadhaar: Aadhaar is the primary proof of identification in Kaveri 2.0, and it’ll be validated using OTP.
+P134|The party name and other details available with Aadhaar are auto-populated and not editable.
+P135|Only for the fetched parties, there will be two names. The name fetched from the property register will be the primary name. Along with this, name as per Aadhaar will also be saved and displayed.
+P136|The following details must be auto-populated:
+P137|Name (First Name, Middle Name and Last Name)
+P138|Age in Years.
+P139|Gender (Male/Female)
+P140|There should be an option to key in the details which are not populated during E-KYC.
+P141|Relationship (S/O, D/O, W/O, C/O etc).
+P142|Relative Name (text field having a max length of 50 characters).
+P144|22. Name matching will be enforced for fetched parties (Executant) only, and it will not be implemented for Organisations or organisational POAs/Authorised signatories.
+P146|23. Name matching will not be necessary in cases where names can be edited.
+P147|24. The name-matching functionality operates using the C-DAC algorithm with a configurable 80% similarity threshold. When the similarity score falls below 80%, the system displays a warning message to inform users about the name mismatch. Names are compared between data populated via UIDAI and property registers, including e-aasthi, e-Swathu, ULMS, Bhoomi.
+P148|25. For overseas users, an option will be provided to use the passport as a POI. If the user doesn’t have the Aadhaar to continue with the e-KYC flow, then the user can continue with the non-e-KYC flow with a passport or enrolment ID.
+P149|26. In the non-e-KYC flow, the system will prompt the user to finish the DSC before moving forward. The non-e-KYC flow is mentioned below:
+P150|27. Non-e-KYC Flow will be as follows:
+P153|28. Witness details: Addition of a witness is based on the article selection as per Annexure 5. If the user selects the article that requires adding a witness after entering all the details of the parties, the user can continue adding witness details.
+P154|The witness details will follow the same logic used for the claimant.
+P155|The user details must be auto-populated upon doing E-KYC.
+P156|There should be an option to validate the witness's Mobile Number (a Numeric field having a max length of 10 digits) using the OTP.
+P157|In case a witness is mandatory or when the applicant chooses to add a witness when optional, a minimum of two witnesses is required.
+P159|29. Schedule allocation will map the property with the party (claimant) in case of transactions related to immovable property. Further, the allocation will happen as follows:
+P160|Automatic allocation: In the case of a single claimant or a single schedule, the schedule must be allocated to the claimant.
+P161|Manual allocation: In case of multiple schedules and multiple claimants, the system must allow the user to select and allocate the schedule manually.
+P162|There will not be any schedule allocation for movable properties.
+P164|Fee calculations
+P165|30. The fee for an e-Stamp article shall be calculated based on the existing logic for document registration, specifically mapped to pre-defined e-Stamp articles. The calculation logic for each article is determined by one of four parameters:
+P166|Market Valuation: 
+The fee is based on the current market value of the asset or property to which the document pertains.
+P167|Consideration Value:
+The fee is calculated based on the consideration (the amount agreed to be paid or transferred), as specified in the document.
+P168|Fixed Stamp Duty:
+The fee is a fixed value, predefined for the article, regardless of market or consideration value.
+P169|Highest of All:
+The fee is determined as the highest value among the applicable calculated fees (such as consideration)
+P170|31. The system shall recognise that, for optionally registrable articles:
+P171|Minimum and maximum stamp duty shall not be applicable on 69 optionally registerable articles.
+P172|Minimum and maximum stamp duty shall be applicable on 102 optionally registerable articles.
+P174|Preview and Fee payment
+P175|32. The system has to generate the draft e-Stamp document upon the user entering the details and description in the text box to generate the PDF.
+P177|35. The document will contain required metadata like certificate number, execute/claimant details, issue date, stamp duty amount, challan number, and description of document.
+P179|36. The document will have the QR code, which can be used to verify the authenticity of the e-Stamp document.
+P181|37. For payment, the applicant will be navigated through Khajane-II, following the existing process.
+P183|38. The user must complete the payment to continue further for e-sign.
+P185|39. After payment system should allow the user to make any changes in the generated document.
+P187|40. If a user navigates away, refreshes, or otherwise interrupts the payment flow, due to which the payment fails, the system will cancel the transaction and require the user to start a new application.
+P189|41. In case payment is neither successful nor failed at Khajane, an option to "verify challan" will be available in the dashboard. The application can continue to the next step after payment is confirmed at Khajane.
+P191|E-sign and download
+P192|42. The names of the parties during e-KYC and e-sign must match as per the Aadhaar. If the name does not match, the system shall not allow the user to proceed with e-sign.
+P194|43. If the user opts out for Aadhaar-based e-KYC, the system must allow them to continue with the DSC.
+P196|44. The system generates the final e-Stamp certificate with the e-signatures of all parties. All the parties have to complete the e-sign. Upon the completion of e-sign by all parties, a SMS notification will be sent to all parties.
+P198|45. Once the document is generated, the user can continue to download the document and complete the application.
+P199|46. The produced document will be uploaded to the Digi-locker of all registered parties.
+P202|5. Verify Document
+P203|47. The user can verify the digital e-Stamp by navigating to the Verify digital e-Stamp. To fetch the details, the user can key in the following details,
+P204|Digital e-Stamp certificate number.
+P206|48. A QR code is also provided and by scanning the QR, user will be able to view the details of the digital e-Stamp. (See Annexure 3)
+P207|6. Assumptions
+P208|NA
+P209|7. Reports and Dashboards
+P210|MIS reports
+P211|49. The system will generate the MIS statistical reports of the digital e-Stamp.
+P212|Input
+P213|From date
+P214|To date
+P215|Article
+P216|Output
+P217|Number of applications received, Number of digital e-Stamps issued, Number of digital e-Stamps in progress
+P218|Revenue MIS: E-Stamp duty collection categorised by Nature of document, Total revenue generated on digital e-Stamp duty, Total revenue generated day-wise
+P219|Number of e-KYC done, Number of Non- e-KYC applications
+P228|Annexures
+P229|Annexure 1: Optionally Registrable Articles
+P233|Annexure 2: Property Mapping
+P236|Annexure 3: List of sub-articles with relaxed validations (E-aasthi, E-Swathu and ULMS)
+P241|Annexure 4: Minimum Party
+P242|Annexure 5: Witness Required or Not
+P243|Table of articles where witness is not mandatory
+P245|Table of Articles where witness is mandatory
+P267|Annexure 6: List of Article and Sub-Articles (Government Restrictions)
+P269|Annexure 7: Verify Document
+P271|Annexure 8: e-Stamp certificate template
+---TABLE 0---
+T0R0|CSG || Centre for Smart Governance
+T0R1|GL || Government Land
+T0R2|GR || Government Restriction
+T0R3|OTP || One-Time Password
+---TABLE 1---
+T1R0|Date || Version || Prepared by || Reviewed by || Description
+T1R1|04-09-2025 || 1.0 || Yash Veer || Rajesh Hanbal / Principal Consultant || First Version
+---TABLE 2---
+T2R0|Party Types || Is Minor? || Represent by || Is Org? || Outcome || Example
+T2R1|Individual || Major || Self || Individual || Individual party || Ramesh
+T2R2|Individual || Minor || Self || Individual || An individual party with a minor guardian || Ramesh is the minor guardian of master Amit
+T2R3|Individual || Minor || POA || Individual || The individual is represented by a minor guardian whose POA || Ramesh is the minor guardian of master Amit, whose POA is Pratap
+T2R4|Individual || Major || POA || Individual || The individual party is represented by the POA holder || POA Ashok represents Ramesh
+T2R5|Individual || Major || POA || Organization || The individual party is represented by a POA holder whose POA is an organisation. || Ramesh is the POA of Pratap, whose POA is ABC PVT LTD, represented by authorised signatory Ashwini
+T2R6|Individual || Minor || POA || Organization || The individual party is represented by a minor guardian whose POA is the organisation represented by an authorised signatory. || Ramesh is the minor guardian of master Pratap, who is represented by ABC PVT LTD, represented by authorised signatory Ashok.
+T2R7|Organization || NA || Self || Individual || Organisation is represented by an authorised signatory. || ABC PVT LTD is represented by authorised signatory Ramesh.
+T2R8|Organization || Major || POA || Individual || The organisation is represented by an authorised signatory whose POA is || An authorised signatory represents ABC PVT LTD, Ramesh, whose POA is Ram
+T2R9|Organization || Major || POA || Organization || The organisation is represented by an authorised signatory whose POA is the organisation. || ABC PVT LTD is represented by authorised signatory Ramesh, whose POA is XYZ PVT LTD, which is represented by authorised signatory Ram
+---TABLE 3---
+T3R0|Article
+T3R1|1(ii) given to a letter, article, document, parcel, package, or consignment given by a person, courier company, firm or body of persons
+T3R2|1 (i)(b) a debt written or signed by or on behalf of a debtor that exceeds rupees 5000
+T3R3|1 (i)(b) a debt written or signed by or on behalf of a debtor that exceeds rupees 5000
+T3R4|2 (a) where the amount does not exceed Rs 1000
+T3R5|2(b) in another case
+T3R6|3 Adoption deed
+T3R7|4 Affidavit/ Declaration
+T3R8|5 (a) relating to the sale of a bill of exchange
+T3R9|5 (b) relating to the purchase or sale of a Government security
+T3R10|5 (c) (i) relating to the purchase or sale of shares, scripts, stocks, bonds, debentures or any other marketable security between the members of stock exchange
+T3R11|5 (c) (ii) relating to the purchase or sale of shares, scripts, stocks, bonds, debentures or any other marketable security in other case
+T3R12|5(e)(ii) relating to sale of immovable property where the possession of property is not delivered
+T3R13|5(j) not otherwise provided for
+T3R14|5(i) if relating to contract between depository participant
+T3R15|5(i-a) relating to contact between stock broker and principal
+T3R16|5(i-b) relating to advertisement, telecasting, or broadcasting of promotions
+T3R17|5(f) relating to construction of immovable property (Joint Development Agreement)
+T3R18|5(i-C) relating to Assignment or IPR
+T3R19|5(i-d)(i) relating to building works where the amount or consideration does not exceed Rs 10 lakhs
+T3R20|5(i-d)(ii) relating to building works where the amount or consideration does exceed Rs 10 lakhs
+T3R21|5(g)(i) relating to the sale of movable property where the possession of the property is delivered or agreed to be delivered without executing a conveyance
+T3R22|5(g)(ii) relating to the sale of movable property where the possession of the property is not delivered
+T3R23|5(i-e)( i) Chit agreement where the value does not exceed Rs. one lakh
+T3R24|5(i-e)(i) Chit agreement where the value exceeds Rs. one lakh
+T3R25|5(h)relating to the mortgage movable
+T3R26|9 Apprenticeship Deed
+T3R27|7 Appointments in execution of the power of property /Trustee
+T3R28|8 Appraisement or valuation
+T3R29|10 Articles of Association of the Company
+T3R30|11 (b) (i) Award movable where the amount or market value does not exceed 50lakhs
+T3R31|11 (b) (iii) Award movable where the amount or market value is above five crores
+T3R32|11 (b) (ii) Award movable where amount or market value above 50lakhs below five crores
+T3R33|12 (a) Bond Movable
+T3R34|5 J Service Bond
+T3R35|13 Bottomry bond
+T3R36|17 Certificate of enrolment
+T3R37|15(b) Certificate of sale where the purchase money exceeds Rs . 10/- but does not exceed Rs . 25/- (Movable)
+T3R38|15(c) Certificate of sale (Movable)
+T3R39|15(c) Certificate of sale (Immovable)
+---TABLE 4---
+T4R0|Article ||  || Is agri-land? || Is nonagricultural land? || Is miscellaneous?
+T4R1|1(ii) given to a letter, article, document, parcel, package, or consignment given by a person, courier company, firm or body of persons ||  || FALSE || FALSE || TRUE
+T4R2|1 (i)(b) a debt written or signed by or on behalf of a debtor that exceeds rupees 5000 ||  || FALSE || FALSE || TRUE
+T4R3|1 (i)(b) a debt written or signed by or on behalf of a debtor that exceeds rupees 5000 ||  || FALSE || FALSE || TRUE
+T4R4|2 (a) where the amount does not exceed Rs . 1000 ||  || FALSE || FALSE || TRUE
+T4R5|2(b) in anyother case ||  || FALSE || FALSE || TRUE
+T4R6|3 Adoption deed ||  || FALSE || FALSE || TRUE
+T4R7|4 Affidavit/ Declaration ||  || FALSE || FALSE || TRUE
+T4R8|5 (a) relating to the sale of a bill of exchange ||  || FALSE || FALSE || TRUE
+T4R9|5 (b) relating to the purchase or sale of a Government security ||  || FALSE || FALSE || TRUE
+T4R10|5 (c) (i) relating to the purchase or sale of shares, scripts, stocks, bonds, debentures or any other marketable security between the members of stock exchange ||  || FALSE || FALSE || TRUE
+T4R11|5 (c) (ii) relating to the purchase or sale of shares, scripts, stocks, bonds, debentures or any other marketable security in other case ||  || FALSE || FALSE || TRUE
+T4R12|5(e)(ii) relating to the sale of immovable property where the possession of the property is not delivered ||  || TRUE || TRUE || FALSE
+T4R13|5(j) not otherwise provided for ||  || FALSE || FALSE || TRUE
+T4R14|5(i) if relating to contract between depository participant ||  || FALSE || FALSE || TRUE
+T4R15|5(i-a) relating to contact between stock broker and principal ||  || FALSE || FALSE || TRUE
+T4R16|5(i-b) relating to advertisement, telecasting, or broadcasting of promotions ||  || FALSE || FALSE || TRUE
+T4R17|5(f) relating to the construction of immovable property (Joint Development Agreement) ||  || TRUE || TRUE || FALSE
+T4R18|5(i-C) relating to Assignment or IPR ||  || FALSE || FALSE || TRUE
+T4R19|5(i-d)(i) relating to building works where the amount or consideration does not exceed Rs 10 lakhs ||  || FALSE || FALSE || TRUE
+T4R20|5(i-d)(ii) relating to building works where the amount or consideration does exceed Rs 10 lakhs ||  || FALSE || FALSE || TRUE
+T4R21|5(g)(i) relating to the sale of movable property where the possession of the property is delivered or agreed to be delivered without executing a conveyance ||  || FALSE || FALSE || TRUE
+T4R22|5(g)(ii) relating to sale of movable property where the possesion of property is not delivered ||  || FALSE || FALSE || TRUE
+T4R23|5(i-e)( i) Chit agreement where the value does not exceed Rs. one lakh ||  || FALSE || FALSE || TRUE
+T4R24|5(i-e)(i) Chit agreement where the value exceeds Rs. one lakh ||  || FALSE || FALSE || TRUE
+T4R25|5(h)relating to the mortgage movable ||  || FALSE || FALSE || TRUE
+T4R26|9 Apprenticeship Deed ||  || FALSE || FALSE || TRUE
+T4R27|7 Appointments in execution of the power of property /Trustee ||  || TRUE || TRUE || TRUE
+T4R28|8 Appraisement or valuation ||  || FALSE || FALSE || TRUE
+T4R29|10 Articles of Association of the Company ||  || FALSE || FALSE || TRUE
+T4R30|11 (b) (i) Award movable where the amount or market value does not exceed 50lakhs ||  || FALSE || FALSE || TRUE
+T4R31|11 (b) (iii) Award movable where the amount or market value is above five crores ||  || FALSE || FALSE || TRUE
+T4R32|11 (b) (ii) Award movable where amount or market value above 50lakhs below five crores ||  || FALSE || FALSE || TRUE
+T4R33|12 (a) Bond Movable ||  || FALSE || FALSE || TRUE
+T4R34|5 J Service Bond ||  || FALSE || FALSE || TRUE
+T4R35|13 Bottomry bond ||  || FALSE || FALSE || TRUE
+T4R36|17 Certificate of enrolment ||  || FALSE || FALSE || TRUE
+T4R37|15(b) Certificate of sale where the purchase money exceeds Rs . 10/- but does not exceed Rs 25/- (Movable) ||  || FALSE || FALSE || TRUE
+T4R38|15(c) Certificate of sale (Movable) ||  || FALSE || FALSE || TRUE
+T4R39|15(c) Certificate of sale (Immovable) ||  || TRUE || TRUE || FALSE
+---TABLE 5---
+T5R0|Stamp rule id || Stamp article || Sub-Article name || Name Editable || Area Editable || Boundary Editable || Addition of executants || Description
+T5R1|22 || Agreement relating to deposit of title-deeds, pawn or pledge || 6(2)(i)-Where the loan amount exceeds rupees one lakh but does not exceed rupees ten lakhs || Yes || No || No || Yes || Name validation: The owner's name should be fetched and should be editable.
+T5R2|222 || Agreement relating to deposit of title-deeds, pawn or pledge || 6 (1) (i) Deposit of Title Deed (DTD) up to 10lakhs || Yes || No || No || Yes || Name validation: The owner's name should be fetched and should be editable.
+T5R3|223 || Agreement relating to deposit of title-deeds, pawn or pledge || 6(1) (ii) Deposit of Title Deed (DTD) more than 10lakhs || Yes || No || No || Yes || Name validation: The owner's name should be fetched and should be editable.
+T5R4|393 || Agreement relating to deposit of title-deeds, pawn or pledge || 6(2)(ii) Where the loan amount exceeds rupees ten lakhs || Yes || No || No || Yes || Name validation: The owner's name should be fetched and should be editable.
+T5R5|411 || Sub-Lease of Immovable properties || 30 (1)(ii) Sub Lease not exceeding 1 year - Immovable Industrial / Commercial property || No || Yes || No || Yes || Name validation: The owner's name should be fetched and shouldn’t be editable. / Extent validation: The area should be fetched, and should be editable. / Boundary validation: Boundaries should be fetc
+T5R6|412 || Sub-Lease of Immovable properties || 30 (1)(i) Sub Lease not exceeding 1 year - Immovable residential property || No || Yes || No || Yes || Name validation: The owner's name should be fetched and shouldn’t be editable. / Extent validation: The area should be fetched, and should be editable. / Boundary validation: Boundaries should be fetc
+T5R7|486 || Agreement || Agreement for first sale of flat/site || No || Yes || No || Yes || Name validation: The owner's name should be fetched and shouldn’t be allowed to be edited. / Extent validation to be removed: Areas should be fetched and should be editable.
+T5R8|516 || Sub-Lease of Immovable Properties || 30 (2)(c)(i) Sub-Lease in respect of lease of industrial machinery || No || Yes || No || Yes || Name validation: The owner's name should be fetched and shouldn’t be editable. / Extent validation: The area should be fetched should be editable. / Boundary validation: Boundaries should be fetched, 
+---TABLE 6---
+T6R0|Article || Minimum Party Required
+T6R1|41(b) For authorising one person or more to act in a single transaction || 0
+T6R2|1(ii) given to a letter, article, document, parcel, package, or consignment given by a person, courier company, firm or body of persons || 1
+T6R3|2 (a) where the amount does not exceed Rs . 1000 || 1
+T6R4|2(b) in anyother case || 1
+T6R5|4 Affidavit/ Declaration || 1
+T6R6|5 (a) relating to the sale of a bill of exchange || 1
+T6R7|5 (b) relating to the purchase or sale of a Government security || 1
+T6R8|5 (c) (i) relating to the purchase or sale of shares, scripts, stocks, bonds, debentures or any other marketable security between the members of stock exchange || 1
+T6R9|5(j) not otherwise provided for || 1
+T6R10|5(i) if relating to contract between depository participant || 1
+T6R11|5(i-a) relating to contact between stock broker and principal || 1
+T6R12|9 Apprenticeship Deed || 1
+T6R13|8 Appraisement or valuation || 1
+T6R14|10 Articles of Association of the Company || 1
+T6R15|12 (a) Bond Movable || 1
+T6R16|13 Bottomry bond || 1
+T6R17|17 Certificate of enrolment || 1
+T6R18|37(a) Of any goods/commodities/currencies || 1
+T6R19|(37-b) of any share/scrip/stock/bond/debenture/debenture stock/other marketable security not being Govt. security || 1
+T6R20|37(c ) Of a Govt. Security || 1
+T6R21|37(d) Securities other than share/scrip/stock/bond/debenture/debenture stock/other marketable security not being a Govt. security || 1
+T6R22|37(e) Of futures/options trading of Securities other than shares/scrips/stock/bond/debenture/debenture stock/other marketable security not being Govt. security || 1
+T6R23|37(f) Of forward contracts of commodities || 1
+T6R24|18 Charter-Party || 1
+T6R25|18-A (2) Clearance list (purchase/Sale of Share/scrip/stock/bond/debenture/debenture stock/other marketable security in Stock Exchange recongnized by Securities Contracts (Regulation) Act 1956) || 1
+T6R26|18-A (3) Clearance list (purchase/Sale of Share/scrip/stock/bond/debenture/debenture stock/other marketable security in Stock Exchange not recongnized by Securities Contracts (Regulation) Act 1956) || 1
+T6R27|18-A (1) Clearance list (purchase/Sale of Govt.Securities in Stock Exchange) || 1
+T6R28|22 if the duty with which the original instrument is chargeable does not exceed 2[fivehundredrupees] || 1
+T6R29|(22-b) in any other case || 1
+T6R30|23 in any other case || 1
+T6R31|23 Customs/Excise Bond (Less Than 1000) || 1
+T6R32|54 (i) Trust for public Religious and Charitable purposes - Movable || 1
+T6R33|54(ii) Trust for management and custody of properties for the purpose of distribution of profits/benefits to beneficiaries - Movable || 1
+T6R34|54 (iii) Trust made involves transfer/disposition of property-Movable || 1
+T6R35|24 Delivery order in respect of goods || 1
+T6R36|Protest of bill or note || 1
+T6R37|43 Protest by the Master of a ship || 1
+T6R38|52 (a) of debenture || 1
+T6R39|52 (c)of any property under sec 25 of the administrator generals act 1963 - Immovable || 1
+---TABLE 7---
+T7R0|Nature of Document || Article || Is witness mandatory?
+T7R1|Acknowledgement of debt. or letter/document/Parcel etc. || 1(ii) given to a letter, article, document, parcel, package, or consignment given by person, courier company, firm or body of persons || No
+T7R2|Acknowledgement of debt. or letter/document/Parcel etc. || 1 (i)(b) a debt written or signed by or on behalf of a debtor; exceeds rupees 5000 || No
+T7R3|Acknowledgement of debt. or letter/document/Parcel etc. || 1 (i)(b) a debt written or signed by or on behalf of a debtor; exceeds rupees 5000 || No
+T7R4|Administration Bond for estates/assets || 2 (a) where the amount does not exceed Rs.1000 || No
+T7R5|Administration Bond for estates/assets || 2(b) in another case || No
+T7R6|Affidavit || 4 Affidavit/ Declaration || No
+T7R7|Agreement || 5 (a) relating to the sale of a bill of exchange || No
+T7R8|Agreement || 5 (b) relating to the purchase or sale of a Government security || No
+T7R9|Agreement || 5 (c) (i) relating to the purchase or sale of shares, scripts, stocks, bonds, debentures or any other marketable security between the members of stock exchange || No
+T7R10|Agreement || 5 (c) (ii) relating to the purchase or sale of shares, scripts, stocks, bonds, debentures or any other marketable security in other case || No
+T7R11|Agreement || 5(i) if relating to contract between depository participant || No
+T7R12|Agreement || 5(i-a) relating to contact between stock broker and principal || No
+T7R13|Apparenticeship Deed || 9 Apparenticeship Deed || No
+T7R14|Appraisement or valuation || 8 Appraisement or valuation || No
+T7R15|Arbitrator or umpire Award || 11 (b) (i) Award movable where amount or market value not exceeding 50lakhs || No
+T7R16|Arbitrator or umpire Award || 11 (b) (iii) Award movable where amount or market value above 5 crores || No
+T7R17|Arbitrator or umpire Award || 11 (b) (ii) Award movable where amount or market value above 50lakhs below 5 crores || No
+T7R18|Certificate of enrolment || 17 Certificate of enrolment || No
+T7R19|Certificate of Sale by court/authority || 15(b) Certificate of sale where the purchase money exceed Rs.10/- but does not exceed Rs.25/- (Movable) || No
+T7R20|Certificate of Sale by court/authority || 15(c) Certificate of sale (Movable) || No
+T7R21|Certificate of Sale by court/authority || 15(c) Certificate of sale (Immovable) || No
+T7R22|Certificate of Sale by court/authority || 15(a) Certificate of sale where the purchase money does not exceed Rs.10/- (Movable) || No
+T7R23|Broker Note or Memorandum || 37(a) Of any goods/commodities/currencies || No
+T7R24|Broker Note or Memorandum || (37-b) of any share/scrip/stock/bond/debenture/debenture stock/other marketable security not being Govt. security || No
+T7R25|Broker Note or Memorandum || 37(c ) Of a Govt. Security || No
+T7R26|Broker Note or Memorandum || 37(d) Securities other than share/scrip/stock/bond/debenture/debenture stock/other marketable security not being Govt. security || No
+T7R27|Broker Note or Memorandum || 37(e) Of futures/options trading of Securities other than share/scrip/stock/bond/debenture/debenture stock/other marketable security not being Govt. security || No
+T7R28|Broker Note or Memorandum || 37(f) Of forward contracts of commodities || No
+T7R29|Charter-Party || 18 Charter-Party || No
+T7R30|Clearance list of transaction || 18-A (2) Clearance list (purchase/Sale of Share/scrip/stock/bond/debenture/debenture stock/other marketable security in Stock Exchange recongnized by Securities Contracts (Regulation) Act 1956) || No
+T7R31|Clearance list of transaction || 18-A (3) Clearance list (purchase/Sale of Share/scrip/stock/bond/debenture/debenture stock/other marketable security in Stock Exchange not recongnized by Securities Contracts (Regulation) Act 1956) || No
+T7R32|Clearance list of transaction || 18-A (1) Clearance list (purchase/Sale of Govt.Securities in Stock Exchange) || No
+T7R33|Composition Deed by debtor or creditor || 19 Composition Deed immovable || No
+T7R34|Composition Deed by debtor or creditor || 19 Composition Deed miscellneous || No
+T7R35|Delivery order in respect of goods || 24 Delivery order in respect of goods || No
+T7R36|Protest by the Master of a ship || 43 Protest by the Master of a ship || No
+T7R37|Letter of Allotment of Shares || 31 Letter of Allotment || No
+T7R38|Letter of license by creditor or debtor || 32 Letter of licence || No
+T7R39|Notarial Act || Notarial Act || No
+---TABLE 8---
+T8R0|Nature of Document || Article || Is witness mandatory?
+T8R1|Adoption deed || 3 Adoption deed || Yes
+T8R2|Agreement || 5(e)(ii) relating to sale of immovable property where the possesion of property is not delivered || Yes
+T8R3|Agreement || 5(j) not otherwise provided for || Yes
+T8R4|Agreement || 5(i-b) relating to advertisement or telecasting or broadcasting of promotions || Yes
+T8R5|Agreement || 5(f) relating to construction of immovable property (Joint Developement Agreement) || Yes
+T8R6|Agreement || 5(i-C) relating to Assignment or IPR || Yes
+T8R7|Agreement || 5(i-d)(i) relating to building works where the amount or consideration does not exceed rs 10 lakhs || Yes
+T8R8|Agreement || 5(i-d)(ii) relating to building works where the amount or consideration does exceed rs 10 lakhs || Yes
+T8R9|Agreement || 5(g)(i) relating to sale of movable property where the possesion of property is delivered or agreed to be delivered without executing convayance || Yes
+T8R10|Agreement || 5(g)(ii) relating to sale of movable property where the possesion of property is not delivered || Yes
+T8R11|Agreement || 5(i-e)( i) Chit agreement where the value does not exceed rs one lakh || Yes
+T8R12|Agreement || 5(i-e)(i) Chit agreement where the value exceeds rs one lakh || Yes
+T8R13|Agreement || 5(h)relating to the mortgage movable || Yes
+T8R14|Appointment in execution of power || 7 Appointments in execution of power of property /Trustee || Yes
+T8R15|Articles of association of Company || 10 Articles of association of Company || Yes
+T8R16|Bond to pay or do something || 12 (a) Bond Movable || Yes
+T8R17|Bond to pay or do something || 5 J Service Bond || Yes
+T8R18|Bottomry bond || 13 Bottomry bond || Yes
+T8R19|Release/Reliquishment || 45(b)(i) Release Deed (Releasee is a family member of the Releasor) movable - Property situated in BMRDA/BDA/BBMP/City Corporation limits || Yes
+T8R20|Release/Reliquishment || 45(b)(iii) Release Deed (Releasee is a family member of the Releasor) movable - Property situated in other than BMRDA/BDA/BBMP/City Corporation/ CMC/TMC/Town Panchayat limits || Yes
+T8R21|Release/Reliquishment || 45(b)(iii) Proviso Release Deed (Releasee is a family member of the Releasor) movable - Property situated in combination of BMRDA/BDA/BBMP/City Corporation/ CMC/TMC/Town Panchayat limits/other limits || Yes
+T8R22|Release/Reliquishment || 45(b)(ii) Release Deed (Releasee is a family member of the Releasor) movable - Property situated in CMC/TMC/Town Panchayat limits || Yes
+T8R23|Release/Reliquishment || 45(a) Release Deed(Releasee is not a family member of the Releasor) Movable || Yes
+T8R24|Duplicate copy || 22 if the duty with which the original instrument is chargeable does not exceed 2[fivehundredrupees] || Yes
+T8R25|Duplicate copy || (22-b) in any other case || Yes
+T8R26|Customs Bond || 23 in any other case || Yes
+T8R27|Customs Bond || 23 Customs/Excise Bond (Less Than 1000) || Yes
+T8R28|Trust deed || 54 (i) Trust for public Religious and Charitable purposes - Movable || Yes
+T8R29|Trust deed || 54(ii) Trust for management and custody of properties for the purpose of distribution of profits/benefits to beneficiaries - Movable || Yes
+T8R30|Trust deed || 54 (iii) Trust made involves transfer/disposition of property-Movable || Yes
+T8R31|Deposite of title deed || 6(2)(i)-Where the loan amount exceeds rupees one lakh but does not exceed rupees ten lakhs || Yes
+T8R32|Deposite of title deed || 6 (1) (i) Deposit of Title Deed (DTD) upto 10lakhs || Yes
+T8R33|Deposite of title deed || 6(1) (ii) Deposit of Title Deed (DTD) more than 10lakhs || Yes
+T8R34|Deposite of title deed || 6(2)(ii) Where the loan amount exceeds rupees ten lakhs || Yes
+T8R35|Divorce || 25 Divorce || Yes
+T8R36|Memorandum of Association of a Company || 33 (a) If accompnaied by articles of Assocaition under sec 26 of the Companies Act || Yes
+T8R37|Memorandum of Association of a Company || 33(b) If not accompnied || Yes
+T8R38|Protest of bill or note || Protest of bill or note || Yes
+T8R39|Transfer || 52 (a) of debenture || Yes
+---TABLE 9---
+T9R0|Sl.No || Stamp Schedule || Nature of Document || Article
+T9R1| || 44 || Lease || Reconveyance of mortgaged property
+T9R2| || 30 (1)(ii) || Lease || Sub Lease not exceeding 1 year - Immovable Industrial / Commercial property
+T9R3| || 30 (1)(ii) || Lease || Lease not exceeding 1 year - Immovable Industrial / Commercial property
+T9R4| || 30 (1)(i) || Lease || Sub Lease not exceeding 1 year - Immovable residential property
+T9R5|31 || 30 (1)(i) || Lease || Lease not exceeding 1 year - Immovable residential property
+T9R6|7 || 7 || Appointment in execution of power || Appointments in execution of power of property /Trustee
+T9R7| || 6(2)(ii) || Appointment in execution of power || Where the loan amount exceeds rupees ten lakhs
+T9R8| || 6(2)(i) || Appointment in execution of power || Where the loan amount exceeds rupees one lakh but does not exceed rupees ten lakhs
+T9R9| || 6(1) (ii) || Appointment in execution of power || /  / Deposit of Title Deed (DTD) more than 10lakhs
+T9R10|6 || 6 (1) (i) || Deposit of Title Deed || Deposit of Title Deed (DTD) upto 10lakhs
+T9R11| || 5(f) || Deposit of Title Deed || relating to construction of immovable property (Joint Developement Agreement)
+T9R12| || 5(e)(ii) || Deposit of Title Deed || relating to sale of immovable property where the possesion of property is not delivered

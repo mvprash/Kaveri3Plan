@@ -1,0 +1,94 @@
+P3|Functional Requirement Specification
+P4|KAVERI 2.0 Online Services
+P5|For
+P6|Department of Stamps & Registration
+P7|Government of Karnataka
+P8|Book 1 – Rule 17 (3) Module
+P16|Prepared by
+P17|Centre for Smart Governance (CSG)
+P18|2nd Floor, TTMC Yeshwanthapura, BMTC Bus station
+P19|Bangalore - 560022
+P20|Book 1 - Rule 17 (3) – Filing of Communication received from other departments
+P22|Brief Description: A separate file shall be maintained for communications received from officers of other departments intimating the cancellation, modification or rectification of transactions evidenced by papers previously filed or registered
+P24|As per Registration Rule 17, copies of the documents are filed for Registration in six parts of Book I.
+P26|Process Flow
+P31|Functional Step by Step Process
+P33|The Sub Registrar follows the normal process to get the document registered and registers the document as below steps:
+P34|The Sub Registrar receives the copy either manual or by post from other departments.
+P35|The Sub Registrar logs in to the Kaveri 2 application with the credentials.
+P36|The Sub Registrar clicks on Book 1 - Rule 17 (3) filing module.
+P37|The Sub Registrar Keys in/enters the court/communication Number which contains alphanumeric characters.
+P38|The Sub Registrar enters date on communication copy received.
+P39|The Sub Registrar selects the transaction type from the drop down as below
+P41|Select Transaction Type (drop down)
+P42|>Cancellation
+P43|>Rectification
+P44|>Modification.
+P46|The Sub Registrar handover copy manually to DEO after entering above details.
+P47|The Sub Registrar shall allocate the application to any one of the DEO by selecting from the drop down as below
+P48|>DEO 1
+P49|>DEO 2
+P50|>DEO 3
+P52|The Book 1 - Rule 17 (3) filing application is received from the sub registrar to Data entry operator.
+P53|DEO logs into Kaveri 2 application with the credentials
+P54|DEO clicks on Book 1 - Rule 17 (3) filing module
+P55|DEO views the filing application sent by Sub registrar
+P57|DEO fills in the required fields as below
+P59|Document Details:
+P60|>District
+P61|>Taluk
+P62|>Hobli
+P63|>Index II village
+P64|>Property Type
+P65|>Enter Valuation details (optional field)
+P67|Boundary Details:
+P68|>East
+P69|>West
+P70|>North
+P71|>South
+P74|Schedule Description:
+P75|>Schedule type
+P76|>Enter Area in Sq.ft
+P77|>Add Bhoomi Parties (optional field)
+P78|>Schedule Description (optional field)
+P80|Property Number details:
+P81|>Select Property Number type (drop down)
+P82|. Site Number
+P83|. Municipal List Number
+P84|. Block Number
+P85|. Property Number
+P86|. Converted Survey Number
+P87|Add Property – This field has to be provisioned, in case of second schedule details required to be added, above fields will be repeated and DEO needs to fill the required details for second schedule.
+P88|Party Details:
+P89|>Enter Party Name
+P90|>Enter Party address (optional field)
+P91|>Select Party Type (drop down)
+P92|. Executant
+P93|. Claimant
+P94|>Add Note/Remarks (optional field)
+P95|Add Party – This field has to be provisioned, in case of additional party details required to be added, above fields will be repeated and DEO needs to fill the required details for additional party.
+P96|Once the DEO enters the above details, the Summary sheet of Book 1 - Rule 17 (3) filing has to be generated.
+P97|DEO will send the generated summary to Sub registrar for verification.
+P98|The Sub registrar receives the Summary of Book 1 - Rule 17 (3) filing for verification.
+P99|The Sub registrar can either allocate to FDA/SDA for verification or will do a self-verification.
+P100|In case Sub registrar allocates to FDA/SDA for verification of summary of Book 1 - Rule 17 (III) filing, the filing application will be assigned to FDA/SDA login
+P101|FDA/SDA logins into Kaveri 2 application with credentials
+P102|FDA/SDA views the filing application received sent by sub registrar.
+P103|FDA/SDA verifies the detailed summary report entered by DEO
+P104|FDA/SDA sends the verified summary report to Sub registrar with or without remarks
+P105|In case FDA/SDA finds any information missing in the summary report done by DEO, FDA/SDA has to send back the verified report with remarks to DEO for correction.
+P106|In case DEO has to make any changes in the summary, DEO can edit and send back the updated application to FDA/SDA for reverifying.
+P107|The Sub Registrar receives the verified summary report from FDA/SDA for approval.
+P108|The Sub Registrar will check and register the Summary and send the filing application to DEO for scan and upload of summary.
+P109|DEO scans and uploads summary and sends back to SR for Approval of summary.
+P110|SR Approves the Summary
+P111|DEO receives the approved summary to generate endorsement.
+P112|DEO will scan the Endorsement with communication copy, the preview will also be seen of the scanned copy
+P113|The filing number of Book 1 Rule 17 (3) will be generated in the Endorsement as example-NMG-Rule 17(3)-01234-2023-24
+P114|The Sub registrar will receive the scanned copy of endorsement for digital sign
+P115|The Sub registrar will digitally sign the Endorsement and the filing of Book 1 rule 17 (3) will be completed.
+P116|Once the Filing is completed, it will be stored in Book 1 Rule 17 (3)
+P117|Index II and cross reference to the previous document will be created
+P118|Encumbrance Certificate will be updated
+P121|Wire Frame: Below is the wireframe to be referred for the Book 1 Rule 17 (3) Module
+P123|https://www.figma.com/proto/JEJZwbGWkWdZ3AOxtMM5W1/Kaveri-2.0?type=design&node-id=2055-4519&t=SYQgpr2jIZKTcrtj-0&scaling=min-zoom&page-id=2010%3A2&starting-point-node-id=2055%3A4519

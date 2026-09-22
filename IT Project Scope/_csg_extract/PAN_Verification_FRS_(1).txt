@@ -1,0 +1,151 @@
+P0|Karnataka Valuation & E-Registration (KAVERI - 2.0)
+P1|Government of Karnataka
+P3|Functional Requirement Specifications
+P5|For KAVERI 2.0
+P6|Department of Stamps & Registration
+P7|Government of Karnataka
+P8|___________________
+P11|PAN AUTHENTICATION
+P18|Prepared by
+P19|Centre for Smart Governance (CSG)
+P20|2nd Floor, TTMC Yeshwanthapura, BMTC Bus station
+P21|Bangalore – 3060022
+P23|Acronyms
+P28|Revision History
+P31|Introduction
+P32|The Department of Stamps and Registration (henceforth referred to as “department”) is the custodian of registered public records such as Registration of Marriages and Firms, Documents pertaining to transactions, namely sale, transfer or gift of immovable properties, mortgages, power of attorney, wills and many more. Maintenance and preservation of these critical public records is the prime responsibility of the department. The records or the information associated with registered records are to be made available to the public when requested through defined procedures. The department is also responsible for collecting stamp duty on behalf of the Government for specified transactions. The services are provided through 259 Sub-Registrar Offices (SROs), under the supervision of 34 District Registrar Offices, spread across the state.
+P33|The department has computerised the delivery of these services through the development of Kaveri software. KAVERI Online service is a web-based application of the department which provides an interface to the applicants required for documents, marriage and firm registration. It enables applicants to know the details of stamp duty, property guideline value, data entry for document registration and marriage registration, etc. The list of modules of Kaveri 2.0 is available in Annexure 1.
+P34|Document scope
+P35|This document is a Functional Requirement Specification (FRS) describing the functional features of the PAN Authentication in document registration via Kaveri 2.0. The document is prepared by the Centre for Smart Governance (CSG) and has been approved by the department. The intended audience of the document is the departmental approving authority and the development team.
+P36|Overview of the function
+P37|The overall workflow of PAN authentication will involve the following changes in the ordering of the key steps.
+P39|In the proposed function, PAN details will be verified in real time at all stages through the integration of a PAN API.
+P40|Aside from the sequence of the aforementioned steps, the key changes are outlined as follows, with further elaboration provided in the subsequent sections.
+P45|Functional Requirements
+P46|4.1 Application Submission
+P47|On the Party Info page of the KAVERI portal, executants can choose any of the identity-proof options like Aadhaar, passport or PAN.
+P48|When the user selects PAN as POI and clicks “Verify PAN”, KAVERI’s 2.0 shall allow the user to enter:
+P49|PAN number
+P50|Name as per PAN
+P51|Father's name
+P52|DOB and send this payload for the third-party API verification.
+P53|The API shall return the result, and KAVERI displays a “Details as per PAN API ” on success.
+P54|The fetched details will be stored in the database and can be used at a later stage of the application.
+P55|If the Market or the consideration value is less than INR 30 lakhs, the user will be allowed to submit the application for scrutiny.
+P56|When the market or consideration value is equal to or more than INR 30 Lakhs:
+P57|If all the executants’ PAN Details have already been verified earlier in the party info page, then the user can proceed further.
+P58|Else, the user enters PAN details and clicks on the ‘Verify’ button, the system shall validate the PAN details.
+P59|If the user does not have PAN, the system should generate Form 60 & 61.
+P60|The system presents the user with the option to e-sign or manually sign and upload Form 60/61.
+P61|4.2 Scrutiny
+P62|SR receives the application for the pre-scrutiny and evaluates MV or CV:
+P63|During scrutiny, if SR valuation of MV or CV is ≥ INR 30L for any one property among the selected properties, SR sends back the application to the applicant to verify the PAN.
+P64|If MV or CV is less than INR 30L, the application follows the existing flow.
+P65|4.3 Presentation and Registration
+P66|SR should be able to view PAN details or form 60&61 if available with verification status.
+P67|The summary document will have the name as per PAN and verification status.
+P69|4.4 Activity Diagram: Pan Authentication
+P70|Input validations
+P71|PAN Number format check
+P72|External integration
+P73|This module has an integration with the external system API to verify and validate the applicant's PAN authenticity at the party info screen and fee calculation screen.
+P74|Existing integrations like K2, Aadhaar, etc, remain the same.
+P75|Assumptions and Dependencies
+P76|Assumptions
+P77|PAN API will verify the PAN number and display the name as per the PAN.
+P78|Name as per the property masters and name retrieved from PAN should be scrutinised by the SR.
+P79|Dependencies
+P80|This feature has a dependency on the third-party PAN database.
+P81|Limitation
+P82|The system will not allow the user to make the payment until the PAN details are verified or the Form 60 & 61 are signed using an Aadhar-based e-sign, when the market value or the consideration value is equal to or more than INR 30 Lakhs.
+P83|If the PAN API is not working, application submission will not be possible in case if the applicant wants to choose PAN as POI or MV/CV is more than INR 30Lakhs.
+P85|Annexure – 1: List of modules of Kaveri 2.0
+P87|Annexure – 2: Actors and Responsibilities
+P91|Annexure – 3: Requirements as shared by the department
+P95|Annexure – 4: Scenarios
+P97|Annexure-5: Sample payload & Response of Protean PAN API
+P98|JSON Request Prototype:
+P99|Payload: { " inputData" : [ {“pan”:"",“name”:"",“fathername”:"",“dob”:""}, . . . . ]
+P100|"signatre":" “ }
+P101|JSON Response Prototype:
+P102|Response : { " response_Code" : "", "outputData" : [ {" pan":""," pan_status":""," name":"","fathername":"",“dob”:"","seeding_status":""}, . . . . ] }
+---TABLE 0---
+T0R0|API || Application Programming Interface
+T0R1|CSG || Centre for Smart Governance
+T0R2|CV || Consideration Valuation
+T0R3|MV || Market Valuation
+T0R4|OTP || One-time password
+T0R5|PAN || Permanent Account Number
+T0R6|POI || Proof of Identity
+T0R7|SR || Sub-Registrar
+T0R8|SRO || Sub-Registrar Office
+---TABLE 1---
+T1R0|Date || Version || Prepared by || Reviewed By || Approved By || Description
+T1R1|23-10-2025 || 1.0 || Yash Veer ||  ||  || 
+---TABLE 2---
+T2R0|Application phase || Key changes
+T2R1|Application Submission || Integration of PAN authentication API at the party info screen to verify PAN details in real-time. / During fee calculation: / If MV or CV is less than 30L, the applicant does not need to authenticate
+T2R2|Scrutiny || During scrutiny, if MV or CV is ≥ INR 30L for any one property among the selected properties, SR will send back the application to the applicant to verify the PAN.  / SR can view the verified PAN deta
+T2R3|Payment || No changes
+T2R4|Appointment || No changes
+T2R5|Presentation & Registration || Display name as per PAN both in the applicant and department summary document
+---TABLE 3---
+T3R0|Sl. No || Module No || Main Module || Sub-Module
+T3R1|1 || 1.1 || Registration || Registration
+T3R2|2 || 1.2 || Registration || Appointment
+T3R3|3 || 1.3 || Registration || Integration module
+T3R4|4 || 1.4 || Registration || Stamp duty and Registration fee calculation
+T3R5|30 || 1.30 || Registration || Guideline value calculation
+T3R6|6 || 1.6 || Registration || Rule 17 (2) filing
+T3R7|7 || 1.7 || Registration || Rule 17 (3) filing
+T3R8|8 || 1.8 || Registration || Old pending release module
+T3R9|9 || 1.9 || Registration || Re-Registration module
+T3R10|10 || 1.1 || Registration || Will after Death
+T3R11|11 || 1.11 || Registration || Filing documents (FRUITS)
+T3R12|12 || 1.12 || Registration || Scanning
+T3R13|13 || 1.13 || Registration || Memo transmission and filing
+T3R14|14 || 1.14 || Registration || 68(2) correction
+T3R15|130 || 1.130 || Registration || Cross-reference Rule 123
+T3R16|16 || 1.16 || Registration || Integration exemption
+T3R17|17 || 1.17 || Registration || Court entry
+T3R18|18 || 1.18 || Registration || Liability
+T3R19|19 || 1.19 || Registration || Status tracking
+T3R20|20 || 1.2 || Registration || Investigation and Search
+T3R21|21 || 1.21 || Registration || Valuation Module (CVC)
+T3R22|22 || 2 || EC || 
+T3R23|23 || 3 || CC || 
+T3R24|24 || 4 || Verify Document || 
+T3R25|230 || 30 || Power of attorney Authentication Module || 
+T3R26|26 || 6 || Refund Module || 
+T3R27|27 || 7.1 || Marriage || Hindu Marriage
+T3R28|28 || 7.2 || Marriage || Special Marriage
+T3R29|29 || 7.3 || Marriage || Special Marriage in Other forms
+T3R30|30 || 8 || Legacy record digitisation || 
+T3R31|31 || 9 || Audit || 
+T3R32|32 || 10 || Accounts || 
+T3R33|33 || 11.1 || MIS || Statutory (44)
+T3R34|34 || 11.2 || MIS || Statistical (304)
+T3R35|330 || 11.3 || MIS || Integration (130)
+T3R36|36 || 11.4 || MIS || Computer related (4)
+T3R37|37 || 11.30 || MIS || Reconciliation (30)
+T3R38|38 || 11.6 || MIS || HR (30)
+T3R39|39 || 12.1 || DRO || Firm Registration
+---TABLE 4---
+T4R0|Actors || Responsibilities
+T4R1|Applicant || Select PAN as POI and verify PAN at the party info screen. / In case a applicant doesn’t have a PAN, they should fill form 60 and 61 & E-sign or manually sign the form and upload the copies. / Continu
+T4R2|SR || SR scrutiny.  / After receiving the application, SR verifies the application details and allocates for biometric captures.
+T4R3|DEO || Transmit the summary to the SR / Summary will have name as per PAN. / Scan and upload the signed document for a digital scan.
+T4R4|System || Check if the market or consideration value, whichever is equal to or more than INR 30L to be paid. / Should not allow the applicant to make the payment until the user validates all the executants' PAN
+T4R5|Process Triggers || Applicant selects PAN as the proof of identity at the party info screen. / Upon entering the PAN clicks on the verify button to authenticate the PAN details. / In case PAN is not available applicant t
+T4R6|Data/Information Required || PAN number. / Form 60 & 61.
+T4R7|Output documents generated || Payment receipt. / In both the applicant and the department summary, below the executant's name as per PAN should be displayed.
+T4R8|Internal changes || PAN validation step will be added on the applicant side. / Executants' list who had submitted PAN/form60&61 to be displayed at the SR side in step 5.
+T4R9|Impact on other modules || NA
+---TABLE 5---
+T5R0|Sl. No. || Market value or Consideration. || Is PAN Mandatory || PAN is available for all executants || Description || Expected Outcome
+T5R1|1 || < 30 Lakhs || No || NA || The user is allowed to make the payment || Navigate to Khajane 2
+T5R2|2 || >= 30 Lakhs || Yes || Yes || All the executants have PAN details, and all the PAN details are successfully verified. Should be allowed for the payment. || Navigate to Khajane 2
+T5R3|3 || >= 30 Lakhs || Yes || No || When one or more executants do not have the PAN details. Fills and E-Signs or Ink sign on Form 60 & 61. Should be allowed for payment. || Navigate to Khajane 2
+T5R4|4 || >= 30 Lakhs || Yes || Yes || When PAN Authentication fails or the API times out during the verification. || Display the following error message: “Please verify the PAN after 5 minutes”.
+T5R5|5 || >= 30 Lakhs || Yes || Yes || When E-Sign is unsuccessful on forms 60 & 61. || Should display a message “Please try again”
+T5R6|6 || >= 30 Lakhs || Yes || Yes || When any of the executants doesn’t want to verify the PAN. || Shouldn’t proceed until the PAN is verified.

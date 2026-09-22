@@ -1,0 +1,117 @@
+---PAGE 1---
+ 
+ 
+Functional Requirement Specification  
+KAVERI 2.0 Online Services  
+For  
+Department of Stamps & Registration  
+Government of Karnataka  
+Accounts  Module  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Prepared by  
+Centre for Smart Governance (CSG)  
+2nd Floor, TTMC Yeshwanthapura, BMTC Bus station  
+Bangalore - 560022  
+ 
+
+---PAGE 2---
+Accounts  
+ 
+i. Brief Description:  
+The revenue generated are remitted to appropriate head of accounts and then reconciled with bank 
+Challan and treasury report.  
+Accounting is an internal function of the department. SRO does daily accountin g, remits the money 
+to banks and records the remittances. The statements are prepared by SRO and sent to DRO. DRO 
+further consolidates it and sends to IGR office. Reconciliation with treasuries is carried out at 
+concerned SR/DR offices.  
+This module will be  used for internal purpose by IGR/DR/SR.  
+Types:  
+ Add Funds  
+ Allocate Funds  
+ Expenditure  
+ Reconciliation  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+---PAGE 3---
+ii. Process Flow  
+ 
+ 
+ 
+
+---PAGE 4---
+Types:  
+1. Add Funds:  For IGR Login  
+ Select HOA – Head of Account  
+ Select Quarter – Q1, Q2, Q3, Q4  
+ Enter Amount  
+ Upload Order  
+2.Allocate Funds : IGR and DR  
+>IGR Login  
+ Select HOA  
+ Select District  
+ Allocate Amount (shouldn’t be more than added funds)  
+ Upload Order  
+>DR Login  
+ Select HOA  
+ Select SRO  
+ Allocate  amount  
+3.Expenditure:  IGR DR SR  
+Below all fields should be dropdown  
+ Select H OA 
+ Select District  
+ IGR Office  
+>Date of Expenditure  
+>Amount  
+>Voucher No  
+>Upload order no  
+ DRO Office  
+4. Reconciliation  Module : IGR DR SR  
+4.1. Receipt  
+4.2. Expenditure  
+4.3. E-Stamp  
+4.1 Receipt  
+Input search parameter as below  
+ System auto fetch each reference number KTC25 should be fetched from Khajane  
+ DRO and SRO drop down  
+ From date To date  
+> Output response as below:  
+---PAGE 5---
+ 
+ 
+4.2 Expenditure  
+Input search parameter as below  
+Screensh ot and parameter list missing  
+> DRO and SRO drop down , from date,  to date  – office wise  – office wise  
+>Output response as below:  
+ 
+4.3 E-Stamp  
+Input search parameter as below  
+Screenshot and parameter list missing  
+> DRO and SRO drop down , from date,  to date  DRO and SRO drop down – office wise.  
+>Output response as below:  
+ 
+Date Receipt No Document Number KTC25 EC CC Reference Number Amount Paid
+Date Voucher No KTC62B
+Date E-stamp No Reconcilation SHCIL

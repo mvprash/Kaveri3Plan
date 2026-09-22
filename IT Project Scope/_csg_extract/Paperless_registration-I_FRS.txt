@@ -1,0 +1,144 @@
+P0|Karnataka Valuation & E-Registration (KAVERI - 2.0)
+P1|Government of Karnataka
+P3|Functional Requirement Specifications
+P5|For KAVERI 2.0
+P6|Department of Stamps & Registration
+P7|Government of Karnataka
+P10|Paperless registration-I
+P19|Prepared by
+P20|Centre for Smart Governance (CSG)
+P21|2nd Floor, TTMC Yeshwanthapura, BMTC Bus station
+P22|Bangalore – 560022
+P25|Acronyms
+P28|Revision History
+P38|1. Introduction
+P40|Kaveri 2.0 software allows citizens to submit documents for registration online and has a detailed process flow for departmental users, including the sub-registrar, to register the documents in compliance with the Registration Act 1908 and the Karnataka Registration Rules
+P41|Document registration currently relies on the parties' ink signatures at multiple stages, from execution to registration. The current process involves printing and scanning documents at these phases. The Department of Stamps and Registrations (DSR) intend to implement a paperless registration system that uses a digital signature rather than an ink signature.
+P42|The current document is a functional requirements specification based on multiple rounds of discussion and the department's proposed workflow. The details of these discussions are available in Annexure 1.
+P43|2. Document Scope
+P45|The document serves as the Functional Requirement Specification (FRS) for paperless registration. The overall scope of paperless registration includes
+P46|Template-based document generation (Citizen-side)
+P47|User interface and functionality changes (citizen-side) to make it similar to Digital eStamp
+P48|Digital execution (Citizen-side)
+P49|Paperless registration (Department-side).
+P50|However, due to operational contingencies, the implementation will be taken up in two phases. The first phase will include Digital execution (3) and Paperless registration (4). The changes involving template-based document generation (1) and User interface changes (2) will be covered in a separate document.
+P51|The phased implementation is as per the consultations with the department dated 31st October 25:
+P53|3. Overview of the function
+P55|The overall workflow of document registration will involve the following changes in the ordering of the key steps.
+P56|As-Is
+P58|To-be
+P60|The existing process is as follows:
+P61|Execution of document: A deed document is prepared, often by the document writer, and is executed by all the parties. Execution here implies the ink signing of the document.
+P62|Application submission: Following the execution, the document is submitted to the sub-registrar for pre-registration scrutiny. This step involves the applicant selecting relevant articles, property, parties, and fee calculations, and submitting the application along with the executed deed.
+P63|Scrutiny: This involves the SRO scrutinising the document, approving the application, or sending it back to the applicant for corrections.
+P64|Payment & Appointment: Upon approval, the applicant makes payment through the Khajane portal.
+P65|Appointment: Following the payment, the applicant takes an appointment.
+P66|Presentation & Registration: The document is presented by the presenter, who might be admitted for registration. During registration, the parties' photos and thumbprints are collected, and a final registration number is generated. All parties physically sign endorsements, which become part of the deed.
+P68|Apart from the ordering of the above steps, the key changes to the above are as follows. These are elaborated in the following sections.
+P70|Once rolled out, digital execution via e-sign/DSC will be mandatory for all documents to be registered on the Kaveri 2.0 portal.
+P73|4. Functional Requirements
+P74|4.1 Application Submission by Citizen
+P77|There is no change in the existing data entry process. Date of execution will not be available during application submission.
+P78|The unsigned application will be verified by SR as per the step mentioned in section 4.2.
+P80|4.2 Pre-registration scrutiny
+P81|The date of execution will not be displayed during the pre-registration scrutiny level.
+P82|In case the document is returned with remarks for correction, the applicant will resubmit the updated application.
+P83|4.3 Digital execution (Citizen Side)
+P84|The citizen shall make the payment after completion of the scrutiny.
+P85|The uploaded document, which has been scrutinised, shall be digitally signed by all the parties (including the identifiers) either through Aadhaar or through DSC.
+P86|The Date of signature of each party shall be captured, and the date of signature of the last signing citizen shall be considered as the Date of Execution of the document, and the same shall be updated in the system.
+P87|Parties will be required to use the Aadhaar-OTP-based e-signature, which will be mandatory if the parties have provided their Aadhaar as proof of identity (POI) during the application submission.
+P88|The Aadhaar name fetched during e-sign and the earlier e-KYC should exactly match for all parties who have chosen Aadhaar as POI.
+P89|In case the parties have not provided Aadhaar as POI, they will be required to use a Digital Signature.
+P90|After completion of all digital signatures, the system shall enable appointment. The system shall also have a facility to print/download the digitally signed document.
+P91|There will be no changes to the appointment process.
+P92|4.4 Presentation and Registration
+P93|The SR shall admit the document for registration and send it to the DEO for capturing the required details (described below).
+P94|The DEO process shall have three key steps –
+P95|Biometric capture: Capturing a photo and a thumbprint of all executants.
+P96|Biometric-based eKYC of executants who have given Aadhaar as POI.
+P97|Digital signature of all executants and witnesses
+P101|4.5.1 DEO-1: Biometric capture
+P102|DEO shall have an option of changing the identifiers if required (As-Is).
+P103|DEO shall capture a photo and a Thumb of all executants. The process is similar to the existing one, capturing only the agents’ photos and thumbs, excluding the principals as applicable.
+P104|In case a party refused to provide biometrics, the typical flow of biometric refusal shall be followed.
+P105|Following the completion of the capture of all biometrics of all the parties, the DEO shall proceed to the biometric-based authentication (DEO-2).
+P106|4.5.2 DEO-2: Aadhaar authentication
+P108|All executants who had given Aadhaar as POI are required to authenticate their identity through biometric-based eKYC. Options include thumb, iris, and face auth.
+P109|The system shall compare the Aadhaar hash generated during application submission and during biometric-based authentication.
+P110|Such authentication will not be required for those parties who have refused to give biometrics during DEO-1 (Biometric capture).
+P112|4.5.3 DEO-3: Digital signature of all parties
+P113|The system shall generate two documents –
+P114|Merged deed document
+P115|Deed copy (digitally executed)
+P116|Endorsement containing the photo and thumb of all parties
+P117|10 A certificate
+P118|Thumb Register containing the thumbprint of all the parties.
+P119|Following this, all the executants and the identifiers shall be required to sign the merged deed copy and the thumb register digitally. Each copy must be signed separately.
+P121|Before the creation of the merged copy, the system will perform the following functions:
+P122|Archive the digitally executed document, which is being edited.
+P123|Convert the previously digitally signed document into an imaged version, which will not be verifiable.
+P124|Log will be kept for monitoring and audit purposes.
+P126|If the parties choose to proceed with Aadhaar, it shall be through a biometric-based esign only. OTP-based esign will not be available.
+P128|The system shall validate the names as per Aadhaar of eKYC and esign. There must be an exact match between the two.
+P130|Following this, the DEO will send the application to the Sub-Registrar for further action.
+P134|4.4 SR Login
+P135|SR shall choose to register or to exercise other options (as per existing flow), including
+P136|Keep pending
+P137|Withdraw
+P138|Refuse
+P139|Send back to DEO
+P141|If the SR chooses to register, the section 60 certificate containing the final registration number will be generated and added to the merged deed document. This will be part of the digital signature of the Sub-Registrar (Similar to FRUITS filing).
+P143|Along with this, the SR shall also sign the thumb register and receipt.
+P145|Alternatively, if the document is kept pending, the sub-registrar shall digitally sign only the endorsement, the thumb register and receipts.
+P147|Else, if the SR refuses to register or keeps it pending in the minute book, the relevant endorsement is inserted in the merged copy (following step 30).
+P149|The citizen shall also have the provision to download a copy of the registered document in their login.
+P151|The final registered document will have the e-signs of all the parties and the sub-registrar and will be saved as the original registered document against the registration number.
+P153|The registered copy will be available for printing in the DEO login.
+P155|The SR shall be able to retrieve and check the archived original e-signed document by entering the application number or final registration number in their login whenever required.
+P157|5. Assumptions and Dependencies
+P159|Document registration will depend on the reliable availability of the underlying Aadhaar service (KRDH)for e-sign. Any disruption to the Aadhaar service will disrupt document registration.
+P161|The uploaded deed shall be considered as the final deed for digital execution.
+P163|The identifier added to the citizen login can be subject to change during biometric capturing at the DEO login.
+P165|All the Aadhar-based e-signatures on the department side will be based on biometrics instead of OTP.
+P167|There is likely to be an impact on the storage size since multiple incremental versions of the document will need to be saved.
+P169|If DSC is selected at the execution level, then the option of selection will be given to the citizen to use Aadhaar / DSC.
+P171|All the existing validations and integrations will continue as it is.
+P174|Annexure-1
+P175|Consultation leading to FRS
+P197|Annexure-2
+P198|Requirement provided by the department
+---TABLE 0---
+T0R0|CSG || Centre for Smart Governance
+T0R1|DEO || Data Entry Operator
+T0R2|DSC || Digital Signature Certificate
+T0R3|KYC || Know Your Customer
+T0R4|SR || Sub Registrar
+T0R5|SRO || Sub Registrar Office
+T0R6|POI || Proof of Identity
+---TABLE 1---
+T1R0|Sl. No || Date || Prepared By || Status || Changes
+T1R1|1 || 07-11-25 || Diwakar (CSG) || Submitted for approval || NA
+---TABLE 2---
+T2R0|Application phase || Key changes
+T2R1|Application submission || Date of execution shall not be captured during application submission. Instead, it will be captured after payment completion. / The unsigned deed document will be submitted for scrutiny.
+T2R2|Scrutiny || The date of execution will not be displayed during the pre-registration scrutiny level.
+T2R3|Payment || No changes
+T2R4|Document Execution || After payment, the provision for digitally executing the document either through Aadhaar or DSC shall be enabled in the citizen login. / The date of signature of the last signing presenter shall be considered as the Date of Execution of the document.  / No changes would be possible for the document after e-sign/DSC.
+T2R5|Appointment || Executed document will be pushed to the departmental login after taking the appointment.
+T2R6|Presentation & Registration || Biometric capture of all executants  / Biometric authentication of executants (with Aadhar as POI) / Digital signature of all executants and witnesses on Endorsement and Thumb Register / Digital signature by SR on the deed copy.  / Digital signature on Acknowledgement by Presenter /
+---TABLE 3---
+T3R0|Date || Description
+T3R1|17-02-2025 || First discussion with Principal Secretary (DM) and IGR
+T3R2|23-02-2025 || CSG Note shared with the Department
+T3R3|25-02-2025 || Meeting with Hon'ble Revenue Minister on Digital Execution
+T3R4|03-03-2025 || Meeting chaired by IGR on Digital Execution
+T3R5|18-03-2025 || Department response to clarifications sought
+T3R6|19-03-2025 || Department shares workflow
+T3R7|25-03-2025 || MoRD presentation on Digital Execution
+T3R8|09-10-2025 || Discussion with KPMU on digital e-sign registration
+T3R9|25-10-2025 || Discussion with KPMU on digital e-sign registration
+T3R10|24-10-2025 || Review with IGR.
+T3R11|28-10-2025 || Review with IGR.
+T3R12|30-10-2025 || Discussion with the Department
+T3R13|07-11-2025 || Review with the Department

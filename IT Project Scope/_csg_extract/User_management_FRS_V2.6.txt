@@ -1,0 +1,974 @@
+P0|Karnataka Valuation & E-Registration (KAVERI - 2.0)
+P1|Government of Karnataka
+P3|Functional Requirement Specifications
+P5|For KAVERI 2.0
+P6|Department of Stamps & Registration
+P7|Government of Karnataka
+P12|USER MANAGEMENT
+P13|v2.6
+P18|Prepared by
+P19|Centre for Smart Governance (CSG)
+P20|2nd Floor, TTMC Yeshwanthapura, BMTC Bus station
+P21|Bangalore – 560022
+P28|Acronyms
+P31|Revision History
+P33|Introduction
+P34|The Department of Stamps and Registration (henceforth referred to as “department”) is the custodian of registered public records such as Registration of Marriages and Firms, Documents about transactions namely sale, transfer or gift of immovable properties, Mortgage, Power of Attorneys, wills and many more. Maintenance and preservation of these critical public records is the prime responsibility of the department. The records or the information associated with registered records are to be made available to the public when requested through defined procedures. The department is also responsible for collecting stamp duty on behalf of the Government for specified transactions. The services are provided through 260 Sub-Registrar Offices (SROs), under the supervision of 35 District Registrar Offices, spread across the state.
+P35|The department has computerized the delivery of these services through the development of the Kaveri software. KAVERI Online service is a web-based application of the department that provides an interface to the Applicants required for documents, marriage, and firm registration. It enables Applicants to know the details of stamp duty, property guidelines, value, data entry for document registration and marriage registration, etc. The list of modules of Kaveri 2.0 is available in Annexure 1.
+P37|About User Management
+P38|The user management module of KAVERI 2.0 allows administrators to manage user accounts linked to the application. It typically provides functionality to create, edit, delete, and search for user accounts, as well as manage user roles, permissions, and access control.
+P39|This module helps administrators to efficiently manage large numbers of users and assign appropriate permissions to each user.
+P40|Some common features of a user management module include user authentication and activation, office creation and management of the roles, and post management. Overall, the user management module is a critical component of Kaveri 2 applications and helps ensure the security and integrity of user data and resources.
+P42|Document scope
+P43|This document defines the functional scope of the User Management Module for the KAVERI 2.0 application. This module is a foundational security and administrative component designed to allow authorised administrators – Super admin (DIGR admin), DRO admin and SRO admin to manage user identities, control access to application resources, and maintain the integrity of the system through structured role-based access control (RBAC).
+P44|The document was prepared through document analysis and departmental consultation. The department shared the high-level requirements (Annexure 2).
+P46|Definitions
+P47|A Post is a specific, sanctioned position within the organisational hierarchy of the department, independent of the individual currently holding it. It has a designated grade and a formal job description. An officer is formally appointed to a Post.
+P48|A Role is a defined set of responsibilities, permissions, and access rights within the Kaveri 2.0 system, assigned based on an officer's designated functions. It dictates what actions a user can perform and what data they can view.
+P49|A User is an individual (typically a government officer or Contract employee) who has been given a unique identity to log in and interact with the Kaveri 2.0 system. A user is always associated with a specific Role to define their system
+P50|To understand how these three concepts, work together, think of it this way:
+P51|The authorities create a Post (e.g., DIGR) with a specific job description.
+P52|An officer is appointed to fill that Post. This officer is now a User of the Kaveri 2.0 system.
+P53|The system grants that User a specific Role (e.g., "DIGR_ADMIN", "DIGR_LAW") which gives them the digital permissions to perform the duties of their Post.
+P55|Overview of the function
+P56|The user management module consists of the following sub-modules (Please refer to Figure 01)
+P58|Figure 01: Mind map of user management functions
+P59|To maintain security and organisational alignment, admin capabilities are bifurcated: Table 01 defines the 'What' (available functions), and Table 02 defines the 'Who' (mapped users). Admins are fully empowered to manage their assigned users using the specific toolsets mapped to their professional designation.
+P70|Table 01: Admin access to Functions
+P72|Table 02: Admin access mapped to Roles
+P74|Description of the functional requirement
+P75|Master Data
+P76|This module handles all the basic setup, and it’s broken down into three straightforward areas:
+P77|Office Types:  This feature is used to define different workplace categories, like IGRO, DRO, or SRO.
+P78|Post Types: Using this feature, the user will be allowed to create specific job roles, ranging from IGR and Super Users down to DEOs and Public Servants.
+P79|User Types: This feature will help to create the classification of team members based on their employment status, such as Government Appointed or Contract-based.
+P80|Create office type
+P81|Workflow
+P83|Process description
+P84|Admin logs in to the Kaveri 2.0 application.
+P85|Admin selects the “User Management->Master->Create office type” option.
+P86|Office Type ID: It’s a numeric field, and the system will generate the office type ID automatically in the backend, it is not displayed in the UI.
+P87|Office Type: It is an input field where user can enter the office type name
+P88|Office Type Description (English): Description of the Office type in English
+P89|Office Type Description (Kannada): Description of office type in Kannada (This shall be used for Kannada label display in the application)
+P90|NOTE- Only Alpha numeric characters are allowed no special characters allowed, office type character limit is set to 200.
+P91|Upon saving the details display ‘Office type saved successfully’.
+P93|Create Post type
+P94|Workflow
+P96|Process description
+P97|Admin logs in to the Kaveri 2.0 application.
+P98|Admin navigates through “User Management-> Master ->Create Post type” option.
+P99|Post Type ID: It’s a numeric field, and the system will generate the Post type ID in the backend, it is not displayed in the UI.
+P100|Post Type: The user can create a new post using this feature, it’s mandatory field. Below are a few post types
+P101|IGR: Inspector General of Stamps.
+P102|DIGR: Deputy Inspector General of Stamps
+P103|AIGR: Assistant Inspector General of Stamps
+P104|DR: District Registrar
+P105|HQA: Head Quarter Assistant.
+P106|SSR: Senior Sub Registrar
+P107|SR: Sub Registrar
+P108|FDA: First Division Assistant
+P109|SDA: Second Division Assistant
+P110|DEO: Data entry operator
+P111|Post Type Description (English): It’s a text field which describes the post type in English
+P112|Post Type Description (Kannada): It’s a text field which describes the post in Kannada (This shall be used for Kannada label display in the application)
+P113|NOTE- Only Alpha numeric characters are allowed no special characters allowed, office type character limit is set to 200.
+P115|Create User type
+P116|Workflow
+P118|Process description
+P119|Admin logs in to the Kaveri 2.0 application.
+P120|Admin selects the “User Management->Master->Create User type” option.
+P121|User Type ID: It’s a numeric field, and the system generates the User Type ID in the backend, it is not displayed in the UI.
+P122|User Type: It is an input field where user can enter the User type name
+P123|User Type Description (English): Description of the User type in English
+P124|User Type Description (Kannada): Description of User type in Kannada (This shall be used for Kannada label display in the application)
+P126|NOTE- Only Alpha numeric characters are allowed no special characters allowed, office type character limit is set to 200.
+P129|Office
+P130|Under this module, there will be 1 sub-module
+P131|Create office - The functionality helps the admin to create and modify the types of offices, such as Sub Registrar's Office, District Registrar's Office and IGR Office.
+P132|Create Office
+P133|Workflow
+P136|Process description
+P137|Admin logs in to the Kaveri application
+P138|Admin selects “User Management->Office->Create office” option.
+P139|Scans & uploads Government Order to create a new office. This would be mandatory going forward if any new office is created other than the existing 298 offices.
+P140|Office Type: Mandatory dropdown field with the options: IGRO, DRO, and SRO.  Based on the office type selected, it would ask for the jurisdiction it belongs to. Further, if any DRO or SRO is created, the DDO code (used for Khajane II payment) needs to be added. This will be a mandatory field in case of DRO and SRO. The same DDO code will be used to pass to the Khajane II API for payment specific to this office
+P141|Case 1
+P142|If we are creating SRO Yeshwanthapura, the list of all DROs should appear here. Select the appropriate DRO. When we select DRO Rajajinagar, the office ID of this DRO will be the jurisdiction ID of SRO Yeshwanthapura.
+P143|Case 2
+P144|Creating IGRO does not require the selection of a jurisdiction ID; the automatically current office ID will be the jurisdiction ID.
+P145|Case 3
+P146|In case DRO needs to be created, then IGRO will be the jurisdiction and the DDO code specific to this office needs to be added
+P147|DDO Code: Mandatory numeric field. a unique identifier assigned to authorised government officials responsible for preparing, submitting, and approving financial claims, such as payroll and expenditure. We need to map these from the Khajane mapping table. For new offices, this needs to be entered. This is mandatory. Only for “DRO” and “SRO”.
+P148|Office Name (English): This is the name of the office. Office Name shall be entered in English. This is mandatory.
+P149|Example: If we are creating an SRO of Yeshwanthapura, we can input as “SRO Yeshwanthapura”.
+P150|Office Name (Kannada): Enter the office name in Kannada. This is mandatory, and it would be used wherever the Kannada name of the office is required.
+P151|Short Name (English): A three-character or 4 character (in rare scenarios) short name shall be entered. This will be a mandatory field. This short name will be used to create the triplet code in the final registration number.
+P152|Office address: We can input the office address where the office is located. The office address shall be entered in the Address text box. This will be a mandatory field
+P153|Phone: Enter the landline Number as the point of contact. This will be a mandatory field
+P154|District: Select the District from the drop-down. This is mandatory.
+P155|Pin code: Enter the pin code. This will be a mandatory field.
+P156|Is active: To enable or disable the office. This is only for office-type SRO, and it is mandatory.
+P157|Anywhere Registration: This will be applicable only to the SRO. In case registration is enabled anywhere, then the corresponding rules will be applied to this office. In case Anywhere registration is enabled for a particular SRO under a DRO, then a message should be shown that Anywhere registration would be enabled for the remaining SRO under the same DRO.
+P158|Then, click on “Save & Submit”. On successful creation of the message to be displayed.
+P161|Role
+P162|Under this module, there will be 2 sub-modules
+P163|Add role – The function is used to create a new role for the user. The list below shows the existing roles in Kaveri 2.0
+P164|IGR
+P165|DIGR Law
+P166|DIGR Administration
+P167|DIGR Audit
+P168|DIGR Intelligence
+P169|DIGR Vigilance
+P170|DIGR CVC
+P171|DIGR Enforcement
+P172|AIGR Computers
+P173|AIGR Administration
+P174|AIGR Audit
+P175|AIGR Law Officer
+P176|Accounts Superintendent
+P177|Superintendent Audit
+P178|Statistical Inspector
+P179|SR Administration
+P180|SR Computers
+P181|FDA
+P182|SDA
+P183|DR
+P184|SR
+P185|Auditor
+P186|The Fruits User
+P187|will be created using this functionality.
+P188|View/Edit role - This functionality will display a list of roles and further provide an edit option to change the role name or enable/disable the role.
+P189|Add/ View/ Edit Role
+P190|Workflow
+P193|Process description
+P194|Admin logs in to the Kaveri 2.0.
+P195|System displays Admin Console.
+P196|Admin selects User Management ->Role
+P197|System displays the list of all roles under the admin's jurisdiction.
+P198|View Role: Admin views the role details from the list of roles – Designation/Role name, Designation/Role description and Is Active status.
+P199|Add Role: Admin clicks on the Add Role button.
+P200|System autogenerates the Role ID.
+P201|System prompts to select Post type, enter Role name and Role Description.
+P202|Admin uploads the Government order.
+P203|Admin selects Post type, enters Role name and Role Description.
+P204|Upon entering relevant details, the admin clicks on the save button.
+P205|System updates the role details.
+P206|Edit Role: Admin clicks on the Edit Role button.
+P207|The Edit Role option will be available according to the privileges given by the admin to a particular Role.
+P208|System prompts to enter Role name, Role Description and Is active: To enable or disable Role.
+P209|Admin enters Role name, Role Description and Is active: To enable or disable Role
+P210|Then click on “Update & Submit”.
+P211|System updates the role details.
+P214|Map modules/sub-modules/functions to Roles
+P215|Workflow
+P217|Process description
+P218|Admin logs in to the Kaveri 2.0.
+P219|Admin selects the User Management option.
+P220|On selection of “Map Role to Module/Sub Module/Function”.
+P221|Select the Role from the drop-down.
+P222|System Displays existing privileges given to the selected Role
+P223|Click on “Edit” to map new modules/sub modules/functions or remove existing privileges given to the selected Role.
+P224|Click on “Save & Submit”
+P226|User
+P227|Under this module, there will be 6 sub-modules
+P228|Add user - This functionality will be used to create a new departmental user to whom application access will be provided.
+P229|View/Edit user – This functionality lists all the users or is specific to DRO/SRO. Further, based on the privilege, the Edit User functionality would be provided.
+P230|Deputation/Leave arrangement to User - This functionality will be used to give the charge handover to the user when there is the unavailability of the other user.
+P231|Transfer User - This functionality will be used to transfer the user from one office to another.
+P232|Promote User - This functionality will be used to promote the user.
+P233|Add User
+P234|Workflow
+P236|Process description
+P237|Admin selects “User Management -> User -> Add User” option.
+P238|There are 4 sections in this particular page.
+P239|1. User details;
+P240|First Name, Middle Name & Last Name: Test fields with a limit of 250 characters. The user has to enter the name of the person who’s joining. First Name is mandatory.
+P241|Phone No: Numeric field, with a limit of 10 digits, the user will enter the contact number. The system should send an OTP to validate the mobile number.
+P242|Date of birth: (Calendar) The admin selects the date of birth of the user being added
+P243|User Type: (Dropdown) Select the user type from the list, Government Appointed/Contract.
+P244|KGID: A six-digit numeric field; the KGID number shall be entered; it is mandatory for all government-appointed users. This is mandatory for a Government Appointee and is visible only if the admin has selected the user type as a Government Appointee
+P245|Official Email ID: Official email ID shall be entered as the login name. System checks whether the login name (Official email ID) exists; if yes, displays a message that the user exists, else proceeds with adding the user as a new user. This is mandatory. The system should send an OTP to validate the email id.
+P246|Date of Joining: (Calendar) The admin selects the date on which the user has joined the organisation, only for the govt appointee
+P247|Service Expiry date: The system populates the tentative date on which the user will retire from the service (only for the govt employee). It is calculated as 60 years from the date of birth of the user.
+P248|Id proof details: Enter ID proof No. This is mandatory
+P249|Pan number: Is a mandatory; it must be verified with the PAN API.
+P250|Identity proof – Dropdown with options -. Aadhar, Driving License, passport
+P251|Identity proof number - – only for passport and Driving license
+P252|Upload id proof – only for passport and Driving license
+P253|If user selects Aadhaar, it should hide the id proof number and upload id proof field and show button to do ekyc.
+P254|Office details;
+P255|Office type - SR/DR/IGRO
+P256|Office name- dropdown
+P257|Role- dropdown
+P258|Biometrics
+P259|Left and right thumb
+P260|Capture photo
+P261|Role ID: Selected from drop-down. It can be DR/SR/FDA/SDA/DEO. This is mandatory.
+P262|Office Name: The user will select the office from the list of offices, which will be populated based on the jurisdiction selected previously. Based on the office ID, data access has been restricted to only that office for all SROs.
+P263|Date of Joining: (Calendar) The admin selects the date on which the user has joined the organisation, only for the govt appointee
+P264|ID Proof type: The dropdown to select ID proof from the list. This is mandatory.
+P267|Validation as per the standard format for ID proof document number.
+P268|ID proof No: Enter ID proof No. This is mandatory.
+P269|If Aadhar is selected E-KYC is mandatory, no need to upload ID proof.
+P270|Upload ID proof: Scan & upload ID proof. This is mandatory
+P271|If any other id proof apart from Aadhaar is selected, then selected id proof should be uploaded
+P272|Pan No: Add user PAN number. This is mandatory.
+P273|Whether biometric authentication is required, if yes, then scan both thumb impressions.
+P274|Image: The admin will capture the user's photo.
+P275|Click on “Save & Submit”.
+P276|As soon as the new user is created, the system must send the Login credentials to the user at the registered mobile number.
+P278|View/ Edit User
+P279|Workflow
+P281|Process description
+P282|Admin logs in to Kaveri 2.0.
+P283|Admin selects User Management -> User -> View/Edit User.
+P284|The user has to select the details based on the type of admin who wants to perform the edit action as follows:
+P285|View User
+P286|Super admin
+P287|Admin selects Office type, Office name, SR office (if required), Role and Status- (Inactive/ Active user)-(drop-down)
+P288|System displays a list of all users based on the selection.
+P289|DRO admin
+P290|Admin selects Office name, SR and below designations in the Role dropdown and Status- (Inactive/ Active user)-(drop-down)
+P291|System displays a list of all users based on the selection.
+P292|SRO admin
+P293|Admin selects Role and Status- (Inactive/ Active user)-(drop-down)
+P294|System displays a list of all users based on the selection.
+P295|The system displays the list of users and the filters to drill down the list.
+P296|By default, the system displays all the users, including active and inactive.
+P297|The following filters can be selected to drill down the list.
+P298|Office type: Dropdown with office type values (IGRO/DRO/SRO), including all options. This is a mandatory field.
+P299|District: A dropdown of all districts of Kaveri, including all options. This is a mandatory field.
+P300|SRO: Dropdown of all SROs of Kaveri, including all options. This is a mandatory field if user selects office type as SRO.
+P301|Role: Dropdown of all Roles, including all options.
+P302|Status: Dropdown with active status (Active and Inactive), including all options.
+P303|Based on the selection, the user will be able to see the list.
+P304|The admin will select/click on the particular user whose details are to be viewed/modified.
+P305|The edit button will be available based on the privileges given to the user
+P306|Employee name (First, Middle and Last), official email id, Phone number, and Status are enabled for editing.
+P307|Click on “Update and Submit” to go back to the previous menu.
+P309|Deputation/ Leave Arrangement
+P310|Workflow
+P312|Process description
+P313|Admin logs into Kaveri 2.0 and selects the User management module and clicks on the Deputation/leave management sub-module.
+P314|System displays the dropdown of district, office (SR/DR) and officer name to select.
+P315|Admin selects the district, the office (SR/DR) and the officer name user to assign the role.
+P316|Admin selects the Role from the drop-down.
+P317|System displays the list of assigned roles to the selected user.
+P318|Admin can remove any other role assigned to the selected user.
+P319|Admin clicks on the add role button.
+P320|System prompts to select the relevant details.
+P321|Admin selects –
+P322|Select office type (Drop Down)
+P323|Office name (Drop-down)
+P324|Role (Drop-down)
+P325|From date (Calendar)
+P326|To date (Calendar)
+P327|A checkbox to declare the indefinite deputation
+P328|Handover user (Dropdown)
+P329|Clicks on the save button.
+P330|System update the details.
+P331|Deputation/ leave arrangement validations –
+P332|Auto charge allocation: Once the defined 'To Date' of a temporary charge handover period is exceeded, the system shall automatically and seamlessly revoke the delegated charge from the user who was temporarily holding the additional responsibility, and reinstate the original user to their designated post with full access rights and privileges, thereby ensuring continuity of operations without manual intervention.
+P333|Manual charge allocation: Once the indefinite deputation check box is checked, the system will disable the auto-charge allocation. To re-allocate the charge, the admin has to manually disable the check and allocate the charge to the required person.
+P334|The system must check for the user’s availability, that is, whether the user who is getting an additional charge is on leave or not. If yes, then the system must prompt a message “Cannot perform this action as the user is on leave”. Otherwise, the system should allow the user to act.
+P335|The table defines the mapping of - Access of Admins to the Roles while performing the Deputation/ Leave arrangement.
+P337|The table below defines the mapping of – Current role to the Charge handover role
+P338|NOTE;
+P339|The SR can handover the in charge for only 1 day (within office), for more than 1-day DR should be authorised to perform charge handover. Disable indefinite deputation option to SR.
+P340|Transfer User
+P341|Workflow
+P343|Process description
+P344|Admin logs into Kaveri 2.0 and selects the User management module and clicks on the Transfer user sub-module.
+P345|System displays the dropdown of office type and office name to select.
+P346|Admin selects the office type, office name and clicks on the search button.
+P347|System displays the list of users associated with the selected office.
+P348|Admin views the users and clicks on the transfer button.
+P349|System prompts to enter the relevant transfer user details.
+P350|Admin will be able to see the details of the employee –
+P351|Employment type.
+P352|KGID number.
+P353|Employee name.
+P354|Office e-mail ID.
+P355|Phone number.
+P356|Present role.
+P357|Present office
+P358|Then, select the following details to transfer the user.
+P359|New joining date (Calendar)
+P360|Transfer role (Drop down)
+P361|Transfer office type (Drop down)
+P362|Transfer office name (Drop down)
+P363|Upon entering the details, clicks on the transfer button.
+P364|System update the details.
+P365|Transfer user validations –
+P366|Transfer: If the user has to be transferred from one office to another office (within or outside the districts), such transfers will be performed by the super admin user. The system should allow the Head Office/ Super admin to transfer.
+P367|One post one user: A validation mechanism is required to ensure that a single post is not occupied by multiple users simultaneously. The system must prevent a user from being transferred into a post if it is already occupied. An existing user must be transferred out first before another user can be transferred into the same post.
+P368|(Note: The system should not allow and must display the pop-up message when multiple users are allocated to a single post.)
+P369|The table defines the mapping of - Access of Admins to the Roles while performing the Transfer.
+P371|The table below defines the mapping of – Current role to the Transfer role
+P374|Promote User
+P375|Workflow
+P377|Process description
+P378|Admin logs into Kaveri 2.0 and selects the User management module and clicks on the promote user sub-module.
+P379|System displays the dropdown of office type and office name to select.
+P380|Admin selects the office type, office name and clicks on the search button.
+P381|System displays the list of users associated with the selected office.
+P382|Admin views the users and clicks on the promote button.
+P383|System prompts to enter the relevant promoted user details.
+P384|Admin will be able to see the details of the employee –
+P385|Employment type.
+P386|KGID number.
+P387|Employee name.
+P388|Office e-mail ID.
+P389|Phone number.
+P390|Present role.
+P391|Present office
+P392|Admin chooses in the details –
+P393|New joining date
+P394|Promoted role
+P395|Promote office type
+P396|Promote office name
+P397|Upon entering the details, clicks on the promote button.
+P398|System update the details.
+P399|Promote user validations –
+P400|The table below defines the mapping of - Access of Admins to the Roles who can perform the Promotion.
+P402|The table below defines the mapping of – Current role to the Promoted role
+P414|Password Expiry Alert & Forced Change
+P415|This process ensures system security by notifying users of password expiration and enforcing a mandatory password change upon expiry, in compliance with the organisation's password policy.
+P416|Step-by-Step Process Flow
+P417|Pre-Expiry Notification (X Days Prior)
+P418|Trigger: System checks user password expiration date daily via automated background job.
+P419|Action: If the password is set to expire in exactly X days, the system:
+P420|Displays a prominent alert/warning message upon user login.
+P421|(Alert message: "Your password will expire in [X] days. Please change it soon to avoid login interruption.")
+P422|The user can either:
+P423|Proceed to dashboard (alert remains dismissible but reappears on next login).
+P424|Click "Change Now" to be redirected to the password change screen.
+P425|Final Notification (1 Day Prior)
+P426|Trigger: Password expires in 1 day.
+P427|Acton: System displays a stronger warning:
+P428|(Alert message: "Your password expires TOMORROW. Change it now to maintain access.")
+P429|Change Password" button prominently displayed.
+P430|Alert cannot be permanently dismissed until the password is changed.
+P431|Expiry Day – Forced Password Change
+P432|Trigger: Current date = password expiration date.
+P433|Action: Upon login attempt:
+P434|User is automatically redirected to the Password Change Screen.
+P435|No access to any other system modules or dashboard.
+P436|Screen displays: "Your password has expired. Please set a new password to continue."
+P437|Password Change Process
+P438|User enters:
+P439|Current Password (for verification)
+P440|New Password
+P441|Confirm New Password
+P442|System validates new password against Password Policy:
+P443|Minimum length (e.g., 8 characters)
+P444|Complexity requirements (uppercase, lowercase, digits, special character)
+P445|Post-Change Actions
+P446|If successful:
+P447|System updates password hash and sets new expiration date.
+P448|User is granted access to the application.
+P449|Confirmation message: "Password changed successfully."
+P450|Email/SMS notification sent to user (optional, for security audit).
+P451|If validation fails: Error message displays specific policy violation.
+P452|User remains on password change screen until successful.
+P453|Lockout Scenario
+P454|If the user fails to change the password even after the expiry day and attempts to access without changing it:
+P455|System blocks access entirely.
+P456|User must use the "Reset Password" flow or contact the admin.
+P458|Input and Output Descriptions
+P459|Input validations
+P460|Master Creation (Offices, Posts, User Types)
+P461|Uniqueness Check: The system must prevent duplicate Office or Post names (e.g., you shouldn't be able to create two "DRO" office types).
+P462|Dependency Protection: Prevent the deletion of a "Post Type" if there are active users currently assigned to it.
+P463|Character Constraints: Ensure codes (like IGRO or SRO) follow a standard format (e.g., all caps, no special characters).
+P464|User Creation
+P465|The "One Person, One ID" Rule: Validate unique identifiers like Employee ID or Email to prevent duplicate profiles.
+P466|Mandatory Mapping: A user cannot be saved without being linked to a valid Office Type (from Table 01) and Post Type (from Table 02).
+P467|Format Validation: Ensure phone numbers and emails follow standard patterns (e.g., name@domain.com).
+P468|Leave, Deputation, and Management
+P469|Overlap Prevention:
+P470|An employee cannot be on "Leave" and "Deputation" at the same time.
+P471|A single post cannot be assigned to multiple users.
+P472|Transfers and Promotions
+P473|Active Status Check: You can’t transfer or promote a user who is currently marked as "Inactive".
+P474|Post Availability: If a specific Office (e.g., SRO) only has 2 "DEO" slots, the system should warn the admin if a 3rd person is being transferred there.
+P475|Effective Date Validation: Future-dated transfers should be allowed, but the system should only update the user's active permissions on that specific date.
+P477|Output Responses
+P478|Master Creation (The "Foundation" Check)
+P480|User Creation (The "Identity" Check)
+P482|Leave & Deputation (The "Calendar" Check)
+P485|Transfers & Promotions (The "Movement" Check)
+P490|Annexures
+P491|Annexure – 1: List of modules of Kaveri 2.0
+P495|Annexure- 2: Requirements/ Mail as shared by the department
+P496|Requirements given through verbal communication.
+P497|Annexure- 3: List of scenarios prepared based on Requirements
+P498|Transfer
+P499|DEO Transfer (Same Role)
+P500|Scenario: A DEO at Nelamangala SRO is transferred to Mysore SRO with no role change.
+P501|Outcome: Only user details are to be updated to another login.
+P502|DEO Transfer (Higher Office)
+P503|Scenario: A DEO at Nelamangala SRO is transferred to Bangalore Rural DRO (higher office) with no role change.
+P504|Outcome: Only user details are to be updated to another login.
+P505|SR Transfer (Same Role)
+P506|Scenario: A SR at Nelamangala SRO is transferred to Mysore SRO with no role change.
+P507|Outcome: User details to be mapped to the new office.
+P508|FDA Transfer (Same Role)
+P509|Scenario: An FDA at Nelamangala SRO is transferred to Mysore SRO.
+P510|Outcome: Complete details to be mapped to the user.
+P511|FDA Transfer (Higher Office)
+P512|Scenario: An FDA at Nelamangala SRO is transferred to Bangalore Rural DRO.
+P513|Outcome: Complete details to be mapped to the user.
+P514|SDA Transfer (Same Role)
+P515|Scenario: An SDA at Nelamangala SRO is transferred to Mysore SRO.
+P516|Outcome: Complete details to be mapped to the user.
+P517|SDA Transfer (Higher Office)
+P518|Scenario: An SDA at Nelamangala SRO is transferred to Bangalore Rural DRO as DFDA.
+P519|Outcome: Complete details to be mapped to the user.
+P520|DR Transfer
+P521|Scenario: A DR at Bangalore Rural DRO is transferred to Mysore DRO.
+P522|Outcome: Complete details to be mapped to the user.
+P523|Promotion
+P524|SR Promotion
+P525|Scenario: An SR at Nelamangala SRO is promoted to DR at Bangalore Rural DRO.
+P526|Outcome: User details to be mapped to the new office along with the new designation.
+P527|FDA Promotion
+P528|Scenario: An FDA at Nelamangala SRO is promoted to SR at Mysore SRO.
+P529|Outcome: User details to be mapped to the new office along with the new designation.
+P530|SDA Promotion (Same Office)
+P531|Scenario: An SDA at Nelamangala SRO is promoted to FDA at Mysore SRO.
+P532|Outcome: User details to be mapped to the new office along with the new designation.
+P533|SDA Promotion (Higher Office)
+P534|Scenario: An SDA at Nelamangala SRO is promoted to DFDA at Bangalore Rural DRO.
+P535|Outcome: User details to be mapped to the new office along with the new designation.
+P537|Deputation/ leave arrangement
+P538|SR Additional Role
+P539|Scenario: An SR at Nelamangala SRO is given an additional role as FDA at Mysore SRO.
+P540|Outcome: Along with the existing office, a new office is to be mapped
+P541|FDA Additional Role
+P542|Scenario: An FDA at Nelamangala SRO is assigned an additional role as SDA at Mysore SRO.
+P543|Outcome: Along with the existing office, a new office is to be mapped.
+P544|SDA Additional Role
+P545|Scenario: An SDA at Nelamangala SRO is assigned additional roles as FDA and SR at Nelamangala.
+P546|Outcome: Along with the existing role, a new role is to be mapped.
+P547|DR Additional Role
+P548|Scenario: A DR at Bangalore Rural DRO is assigned an additional role at Mysore DRO.
+P549|Outcome: Along with the existing office, a new office will be mapped.
+P550|SR Charge Handover (Same Role)
+P551|Scenario: An SR at Nelamangala SRO is assigned an additional charge at Mysore SRO (dual office handling).
+P552|Outcome: Along with the existing office, a new office is to be mapped.
+P553|FDA Charge Handover (Dual Role)
+P554|Scenario: An FDA at Nelamangala SRO is assigned an additional charge as DFDA at Bangalore Rural DRO.
+P555|Outcome: Along with the existing office, a new office is to be mapped.
+P556|FDA Charge Handover
+P557|Scenario: An FDA at Nelamangala SRO is given an additional charge as SR at Mysore SRO.
+P558|Outcome: Along with the existing office, a new office is to be mapped.
+P559|FDA Charge Handover back to SR
+P560|Scenario: An FDA currently holding additional charge as the SR of Nelamangala SRO hands back the SR role to the newly appointed full-time SR.
+P561|Outcome:
+P562|Remove SR role from the FDA’s profile.
+P563|Map full-time SR to Nelamangala SRO in the system.
+P564|SDA Charge Handover (Dual Role)
+P565|Scenario: An SDA at Nelamangala SRO is assigned an additional charge as FDA at Bangalore Rural DRO.
+P566|Outcome: Along with the existing office, a new office is to be mapped.
+P567|SDA Charge Handover (Higher Role)
+P568|Scenario: An SDA at Nelamangala SRO is given an additional charge as DFDA at Bangalore Rural DRO.
+P569|Outcome: Along with the existing office, a new office is to be mapped.
+P571|Annexure- 4: List of offices and active users
+P572|The table below consists of a list of Office types and the number of Offices in the Kaveri database.
+P574|The table below consists of a list of Active users by Designation and Count in the Kaveri production database.
+P576|The table below consists of a list of Posts and Roles in Kaveri 2.0
+P596|Feedback from department dated 17/07/2026
+P597|List of scenarios prepared based on Requirements
+P598|Add new Role
+P599|Scope: The below diagram represents, Introduction of SSR (Senior Sub Registrar) as a new role in the KAVERI 2.0 User Management module, in the To-Be flow, under District Registrar Office (DRO) and Inspector General of Registration Office (IGRO) only
+P600|SSR is positioned between SR and HQA in the role hierarchy for both office types —
+P601|DRO: SDA→ FDA→ SR → SSR → HQA→DR→DIGR
+P602|IGRO: SR → SSR → HQA→AIGR→DIGR
+P603|< <Note- SSR Role was not there in the previous version of FRS, as per the discussion with the department on 17/07/2026, SSR Role has been added and saved in the DB> >
+P605|As-Is Process Description
+P606|In the As-Is state, the KAVERI 2.0 User Management master data defines a fixed set of roles under each office type — SRO, DRO, and IGRO — without an SSR (Senior Sub Registrar) role anywhere in the hierarchy.
+P607|Under this structure, a user attached to an SRO can only be mapped to SDA, FDA, or SR.
+P608|A user attached to a DRO can be mapped to SDA, FDA, SR, HQA, DR, or DIGR.
+P609|A user attached to an IGRO can be mapped to SR, HQA, AIGR, or DIGR.
+P610|Because there is no SSR role, any officer who has grown beyond SR has to be elevated directly to HQA, which creates a wide responsibility gap between SR and HQA.
+P611|To-Be Process Description
+P612|In the To-Be state, a new role, SSR (Senior Sub Registrar), is introduced into the Master Data of the User Management module. SSR is added under all office types —Sub Registrar Office (SRO) District Registrar Office (DRO) and Inspector General of Registration Office (IGRO).
+P613|Functionally, the addition of SSR requires the following changes in the User Management master data configuration:
+P614|The Role Master must be updated to add "SSR" as a new selectable role value.
+P615|The Office Type – Role mapping configuration must be updated so that SSR appears as an eligible role when the selected Office Types are SRO, DRO or IGRO.
+P616|The role hierarchy sequence used for Add User, Promotion, and Role-based access control must be updated to position SSR between SR and HQA under SRO, DRO and IGRO.
+P617|Existing role-mapping validations (e.g., role dropdown filtering by office type on the Add User / Edit User screens) must be revalidated to ensure SSR is added for all office types.
+P618|Reports and MIS dashboards that consume role master data (e.g., user counts by role/office) must be updated to recognise SSR as a distinct, reportable role.
+P619|With this change, the administrative hierarchy under SRO now reads SDA → FDA → SR → SSR, DRO now reads SDA → FDA → SR → SSR → HQA → DR → DIGR, and under IGRO it reads SR → SSR → HQA → AIGR → DIGR. This inserts an intermediate senior operational grade before an officer is elevated to the headquarters-level HQA role, aligning the system's role hierarchy with the Department's actual cadre structure.
+P620|Business Rules
+P623|Promotion hierarchy
+P624|The table below defines the mapping of – Current role to the Promoted role
+P625|Note;
+P626|SR can be promoted as SSR.
+P627|Process Description
+P628|The Promotion Hierarchy defines how a user's role in KAVERI 2.0 User Management is upgraded from a Current Role to a Promoted Role, in line with the office-wise cadre structure. When a Super Admin authorised approver initiates a promotion for a user, the system must determine the eligible Promoted Role(s) based on the user's Current Role and, in specific cases, the Office Type the user is currently mapped to.
+P629|The new promotion path is linear and follows the sequence SDA → FDA → SR → SSR → HQA → DR / AIGR → DIGR:
+P630|HQA Promotion:
+P631|An HQA user's next role depends on the Office Type they are attached to.
+P632|If the HQA is in a DRO, the system must promote them to DR.
+P633|If the HQA is in an IGRO, the system must promote them to AIGR.
+P634|The system must therefore check the user's current Office Type before resolving the promoted role for HQA.
+P635|SR Promotion:
+P636|SR will be promoted to SSR.
+P637|All other transitions in the hierarchy — SDA → FDA, FDA → SR, SR→SSR, SSR → HQA, HQA → DR/AIGR and DR/AIGR → DIGR — are single-outcome promotions and do not require additional branching logic.
+P638|Functionally, the Promotion module must therefore:
+P639|Read the user's Current Role and Office Type
+P640|Look up the Promotion Mapping table
+P641|Apply the office-specific branching rule if the Current Role is HQA
+P642|Update the User Master with the new (Promoted) Role upon approval
+P643|Log the promotion action (old role, new role, office, approver, timestamp) for audit/MIS purposes.
+P645|Promotion Mapping Table
+P647|Business Rules — Promotion Hierarchy
+P650|Scenarios — Promotion Hierarchy
+P652|Impact Analysis
+P653|The introduction of the SSR role and its associated promotion logic impacts the following areas of the KAVERI 2.0 application and must be validated during testing:
+P654|User Management: Add User, Edit User, and View User screens — role dropdown filtering by Office Type.
+P655|Promotion workflow screens — resolution/selection logic for HQA and SR roles.
+P656|Role-Based Access Control (RBAC) — access/permission mapping must be defined for the new SSR role under DRO and IGRO.
+P657|MIS Reports / User Count Dashboards — must recognise and report SSR as a distinct role.
+P658|Audit Logs — promotion history must correctly capture Old Role, New Role, and Office Type context for HQA and SR transitions.
+P664|Demote User
+P665|Process Overview
+P666|The Demote User module allows authorized administrative users to lower an active employee's position by exactly one level down within the departmental operational hierarchy. This function updates organizational mappings, revokes high-level systemic permissions, and assigns a role mapped to the direct lower-tier post.
+P667|Step-by-Step Process Flow
+P668|Admin Authentication: Admin logs securely into Kaveri 2.0 and navigates to User Management -> User -> Demote User.
+P669|Search Scope Selection: Admin filters users using specific dropdown menus:
+P670|Office Type (IGRO, DRO, or SRO)
+P671|Office Name
+P672|Target Selection: Admin clicks Search, views the generated active employee list, and selects the target profile.
+P673|Current Profile Review: System displays the employee's read-only details:
+P674|Employment Type, KGID Number, Employee Name, Official Email ID, Phone Number, Present Role, and Present Office.
+P675|Demotion Rules Generation: System checks the current post and automatically limits the selection to a role exactly one level lower based on the operational matrix.
+P676|The system should not demote the user below the role from where the user started.
+P677|NOTE; If the user started as a SR and got promoted as HQA/SSR, they should be demoted only till SR not below SR roles.
+P679|Demotion Data Input: Admin provides mandatory parameters:
+P680|Effective Demotion Date (Calendar Picker)
+P681|Demoted Role (Restricted Dropdown)
+P682|Demotion Office Type & Office Name
+P683|Upload Demotion Government Order (Mandatory PDF Upload attachment).
+P684|Execution: Admin clicks Demote & Submit.
+P685|System Actions: System terminates current high-level security permissions, saves the transaction log, applies new data access scopes, and resets role attributes.
+P687|Strict Business Rules & Input Validations
+P688|One Level Restriction: Demotions can only occur to a role precisely one operational rank below the current active assignment.
+P689|Active Profile Mandate: An admin cannot initiate a demotion on a profile marked as Inactive.
+P690|Super Admin Jurisdiction: Cross-district demotions or higher-tier officer demotions (such as DR down to SR/HQA) can solely be processed by the Super Admin.
+P691|Post Capacity Check: System must block execution and show an alert if the destination office has hit its absolute target headcount quota for that demoted role.
+P692|No Dual-Overlaps: A demoted individual cannot retain concurrent active deputation or charge distribution profiles from their past higher role.
+P694|Demotion Hierarchy Mapping Matrix
+P695|The dropdown menu automatically maps according to this operational breakdown:
+P697|Clarification needed
+P698|In case of deputation, for more than 1 day, who will be having provision to depute?
+P699|Super admin will have the provision to perform the more than 1-day deputation, DR has to raise the tickets.
+P700|How will the system know when the specific role person has returned?
+P702|Validations added as per discussion on 03/08/2026
+P703|User management
+P704|1. view/edit user Employee name (First, Middle and Last), official email id, Phone number, and Status are enabled for editing.
+P705|Access for super admin only. Provide all the options to edit.
+P707|Miscellaneous
+P708|Designation Menu Mapping
+P709|Process description
+P710|Admin logs in to the Kaveri 2.0 application.
+P711|Admin selects the "User Management → Designation Menu Mapping" option.
+P712|Designation: Mandatory dropdown field. Lists all designations configured in the system (populated from the Designation master). No menu-mapping actions are enabled until a designation is selected.
+P713|Available Menus (left panel): Displays the complete hierarchical list of all menus, sub-menus, and functions available in the application as checkboxes — e.g., Search Application, MIS Reports, IGR Dashboard, User Management (with sub-nodes Office → Create Office Type, Create Office; Role → Add Role, View Role; User → Add User, View/Edit User, Transfer User, etc.).
+P714|Selected Menus (right panel): Displays the menus already mapped to the selected designation. If no menus are mapped, the panel displays "No menus selected."
+P715|Search: Both panels have a search box to filter menu items by name.
+P716|Admin checks the required menu(s)/sub-menu(s) in the Available Menus panel and clicks Add → to move them to the Selected Menus panel.
+P717|Admin can select menu(s) in the Selected Menus panel and click ← Remove to move them back to the Available Menus panel.
+P718|Admin clicks Save to persist the menu mapping for the selected designation.
+P719|Admin clicks Clear to reset the current selections without saving.
+P720|NOTE — Until a Designation is selected, the system displays the message "Select a designation to enable menu access," and the Add/Remove/Save controls remain disabled.
+P721|Please display the success message text to display on Save (e.g., "Menu mapping saved successfully").
+P722|Map Modules / Sub-Modules / Functions to Role
+P723|Process description
+P724|Admin logs in to the Kaveri 2.0 application.
+P725|Admin selects the "User Management → Map Module/Sub Module/Function to Role" option.
+P726|Role: Mandatory dropdown field. Lists all roles configured in the system — SR, FDA, SDA, DEO, DR, AIGR, DIGR, MISADMIN, SUPERUSER, DFDA, DSDA, HQA, etc.
+P727|On selecting a Role, the Module/Sub-Module/Function Permissions table is displayed with the following columns:
+P728|Module/Sub-Module/Function: Hierarchical list of all modules with sub-modules/functions, show an expand arrow (▶) to reveal children.
+P729|Each row also displays a count in the format "(x/y Functions)" indicating the number of functions currently enabled out of the total available under that node.
+P730|Access: Status indicator — green check (✓) if the role has access to that module, red cross (✗) if not.
+P731|Permission: Toggle switch to enable or disable the role's access to that module/sub-module/function.
+P732|Search: A search box ("Search Modules, Sub Modules and Functions") filters the list by name.
+P733|Enable all / Disable all: Bulk actions to switch on/off permissions for all listed modules in one click.
+P734|Edit: Admin clicks Edit to unlock the Permission toggles for editing (toggles are read-only/disabled outside edit mode).
+P735|Admin expands the relevant module (▶) to view and configure permissions at the sub-module/function level.
+P736|Admin toggles the required Permission switches on/off as needed as per the designations.
+P737|Admin saves the changes to persist the updated role-permission mapping.
+P738|Upon save and submit display a message
+P739|Forgot password
+P740|Process description
+P741|User navigates to the Kaveri 2.0 Login page.
+P742|Forgot Password? link: Displayed below the Password field. User clicks the link to initiate the password reset flow.
+P743|System redirects the user to the Password Reset page.
+P744|Username: Mandatory input field.
+P745|Registered Mobile Number: Mandatory input field (as applicable) used to verify the user's identity.
+P746|System validates the entered details against the registered user information.
+P747|If invalid, system displays an error message and does not proceed.
+P748|If valid, system triggers an OTP to the user's registered mobile number.
+P749|OTP: The OTP is valid for a configurable duration (default: 5 minutes) OTP has to be sent to the registered mobile number only.
+P750|User enters the received OTP in the OTP verification field for validation.
+P751|Upon successful OTP validation, system displays the Login screen.
+P752|User should login using the received password and reset the new password to their desired password.
+P753|New Password: Mandatory input field.
+P754|Confirm New Password: Mandatory input field.
+P755|System validates the new password against the configured password policy:
+P756|Minimum password length.
+P757|Combination of uppercase, lowercase, numeric, and special characters.
+P758|New Password and Confirm New Password must match.
+P759|New password must not match previous password(s), where password history is maintained.
+P760|Upon successful validation:
+P761|Password is updated in the system.
+P762|System displays the message "Password has been reset successfully."
+P763|User is redirected to the Login page.
+P764|NOTE — OTP resend is enabled only after a configurable waiting period (default: 60 seconds). Invalid OTP attempts are limited to a configurable maximum (default: 3 attempts), beyond which the request is blocked/reset.
+P765|5.1.4.3 Validations
+P766|Mandatory field validation for all required inputs (User ID, Registered Mobile/Email, OTP, New Password, Confirm New Password).
+P767|User ID must exist in the system.
+P768|Registered mobile number/email must match the user's profile.
+P769|OTP must be valid, unexpired, and unused.
+P770|Invalid OTP attempts shall be limited (e.g., maximum 3 attempts).
+P771|OTP resend shall be enabled only after a configurable waiting period (e.g., 30 seconds).
+P772|Password must comply with the defined password policy.
+P773|Password and Confirm Password must match.
+P774|5.1.4.4 Error Messages
+P775|Invalid User ID or registered contact details.
+P776|Invalid or expired OTP.
+P777|Maximum OTP attempts exceeded.
+P778|Password does not meet the required policy.
+P779|Password and Confirm Password do not match.
+P780|Unable to process the request. Please try again later.
+P782|5.1.4.5 Audit & Security
+P783|All password reset requests shall be logged for audit purposes.
+P784|Passwords shall be stored in encrypted/hashed format and shall never be displayed in plain text.
+P785|All OTP verification and password reset activities shall be securely logged with timestamp and user details.
+P786|After successful password reset, all active user sessions may be invalidated, requiring the user to log in again with the new password.
+P787|Add Module
+P788|Process description
+P789|Admin logs in to the Kaveri 2.0 application.
+P790|Admin selects the "User Management → Masters → Add Module" option.
+P791|Module Name: Mandatory input field where the admin enters the name of the new module to be created.
+P792|Admin clicks Save & Submit to save the entered module.
+P793|Admin clicks Clear to reset the input field without saving.
+P794|Upon successful save, the system displays the message "Saved successfully" and the newly added module is listed in the table below the input field.
+P795|The table below displays the list of all modules created so far, with columns:
+P796|Sl. No.: Serial number.
+P797|Module Name: Name of the module (e.g., All Registration, Supporting Software, Rule 17(3), Filing, Reserve Bank of India - House Price Index Report).
+P798|Action: Provide a ‘Edit’ and ‘Delete’ buttons.
+P799|History: Maintain a history of edit and delete actions in the DB.
+P800|Duplicate module names should not be allowed to create
+P801|NOTE — Only Alpha numeric characters are allowed, no special characters allowed. Module Name character limit is set to [200].
+P802|Add Sub-Module
+P803|Process description
+P804|Admin logs in to the Kaveri 2.0 application.
+P805|Admin selects the "User Management → Masters → Add Sub-Module" option.
+P806|Module: Mandatory dropdown field. Lists all modules created under the "Add Module" screen. Admin selects the parent module under which the sub-module is to be added.
+P807|Sub Module: Mandatory input field where the admin enters the name of the new sub-module to be created under the selected Module.
+P808|Admin clicks Save & Submit to save the entered sub-module.
+P809|Admin clicks Clear to reset the selections/input field without saving.
+P810|Upon successful save, the system displays the message "Saved successfully" and the newly added sub-module is listed in the table below.
+P811|The table below displays the list of all sub-modules created so far, along with pagination controls ("Items per page," page navigation).
+P812|Action: Provide a ‘Edit’ and ‘Delete’ buttons.
+P813|History: Maintain a history of edit and delete actions in the DB.
+P814|Duplicate sub module names should not be allowed to create
+P815|NOTE — Only Alpha numeric characters are allowed, no special characters allowed. Sub Module character limit is set to [200].
+P817|Add Functionality
+P818|Process description
+P819|Admin logs in to the Kaveri 2.0 application.
+P820|Admin selects the "User Management → Masters → Add Function" option.
+P821|Module: Mandatory dropdown field. Lists all modules created under the "Add Module" screen.
+P822|Sub Module: Mandatory dropdown field. Lists all sub-modules created under the "Add Sub-Module" screen, filtered based on the Module selected above.
+P823|Function Name: Mandatory input field where the admin enters the name of the new function to be created under the selected Module and Sub Module.
+P824|Admin clicks Save & Submit to save the entered function.
+P825|Admin clicks Clear to reset the selections/input field without saving.
+P826|Upon successful save, the system displays the message "Saved successfully" and the newly added function is listed in the table below.
+P827|The table below displays the list of all functions created so far, with columns:
+P828|Sl. No.: Serial number.
+P829|Module Name: Name of the parent module.
+P830|Sub Module Name: Name of the parent sub-module.
+P831|Function Name: Name of the function created.
+P832|Pagination controls ("Items per page," page navigation) are provided below the table.
+P833|Action: Provide a ‘Edit’ and ‘Delete’ buttons.
+P834|History: Maintain a history of edit and delete actions in the DB.
+P835|Duplicate Functionality names should not be allowed to create
+P836|NOTE — Only Alpha numeric characters are allowed, no special characters allowed. Function Name character limit is set to [200].
+P837|NOTE- Under Masters- for create office types, create post type, and create user type remove ‘’Edit’’ and ‘’Delete’’ action buttons.
+P845|Feedback from the department on 07/08/2026
+P846|Applicable Roles: The following roles shall be included in the IGRO module: SDA, FDA, SR, and SSR.
+P847|User History
+P848|In the View User History screen, the system shall display the complete service history of the user upon entering the Employee ID. The history shall include details such as Date of Joining, Promotion Date(s), Demotion Date(s), Transfer History (if applicable), and all other user activity/history records.
+P849|Charge Handover Notification
+P850|Upon completion of a Charge Handover action by the District Registrar (DR)/Sub Registrar (SR), the system shall send a email notification to the Super Admin informing them of the action.
+P851|Forgot Password Notifications
+P852|When a user successfully resets their password using the Forgot Password functionality, the system shall:
+P853|Send an email notification to the Super Admin.
+P854|Send a confirmation SMS to the user's registered mobile number.
+P855|Send a confirmation email to the user's official registered email ID.
+P856|For all the masters provide ‘edit’ and ‘delete’ options.
+---TABLE 0---
+T0R0|AIGR || Assistant Inspector General of Registration
+T0R1|CSG || Centre for Smart Governance
+T0R2|DEO || Data Entry Operator
+T0R3|DIGR || Deputy Inspector General of Registration
+T0R4|DR || District Registrar
+T0R5|DRO || District Registration Office
+T0R6|FDA || First Division Assistant
+T0R7|HQA || Head Quarter Assistant
+T0R8|IGR || Inspector General of Registration
+T0R9|IGRO || Office of Inspector General of Registration
+T0R10|SDA || Second Division Assistant
+T0R11|SR || Sub-Registrar
+T0R12|SRO || Sub-Registrar Office
+---TABLE 1---
+T1R0|Date || Version || Prepared by || Reviewed by || Description
+T1R1| || 1.0 || Ramachandra Kulkarni || Department || 
+T1R2|27-10-2025 || 2.0 || Arugolli Subhash / (BA, CSG) ||  || Addition of sub-modules –  / Deputation/ Leave arrangement / Transfer User / Promote User
+T1R3|27-02-2026 || 2.1 || Arugolli Subhash / (BA, CSG) ||  || Addition of admin functionalities –  / DRO admin / SRO admin / Addition of modules –  / Create Masters.  / View reports.
+T1R4|14-03-2026 || 2.2 || Arugolli Subhash (BA, CSG) ||  || Added the definitions for the Post and Role. / Added the additional validations to the Transfer and Deputations / Introduced the password expiry policy
+T1R5|20-03-2026 || 2.3 || Arugolli Subhash (BA, CSG) ||  || Modified the validations for the Transfer, Deputations and Promotion.
+T1R6|17/07/2026 || 2.4 || Kavyashree D (ABA, CSG) ||  || Modified masters, ID Proof validations, charge handover validation.
+T1R7|05/08/2026 || 2.5 || Kavyashree D / (ABA, CSG) ||  || Added Miscellaneous, forgot password, add module, add sub-module, add functionality.
+T1R8|07/08/2026 || 2.6 || Kavyashree D / (ABA, CSG) ||  || Added validations for, charge handover, forgot password.
+---TABLE 2---
+T2R0|FUNCTION || FUNCTION || ADMIN || ADMIN || ADMIN
+T2R1|FUNCTION || FUNCTION || Super admin || DRO admin || SRO admin
+T2R2|Master || Create Office type ||  ||  || 
+T2R3|Master || Create Post type ||  ||  || 
+T2R4|Master || Create User type ||  ||  || 
+T2R5|Master || Miscellaneous ||  ||  || 
+T2R6|Office || Create Office ||  ||  || 
+T2R7|Role || Add Role ||  ||  || 
+T2R8|Role || View Role ||  ||  || 
+T2R9|Role || Edit Role ||  ||  || 
+T2R10|Role || Map modules/Sub-modules/Functions to Role ||  ||  || 
+T2R11|User || Add User ||  ||  || 
+T2R12|User || View User ||  ||  || 
+T2R13|User || Edit User ||  ||  || 
+T2R14|User || Deputation/Leave arrangement ||  ||  || 
+T2R15|User || Transfer User ||  ||  || 
+T2R16|User || Promote User ||  ||  || 
+---TABLE 3---
+T3R0|ADMIN ||  ||  || ROLE || ROLE || ROLE || ROLE || ROLE || ROLE || ROLE || ROLE || ROLE || ROLE
+T3R1|ADMIN || IGR || DIGR || DIGR || AIGR || DR || HQA || Other || SSR || SR || FDA || SDA || DEO
+T3R2|Super admin ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+T3R3|DR ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+T3R4|SR ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+---TABLE 4---
+T4R0|Sl. No || ID proof Type || Validation type
+T4R1|1 || Passport || Alphanumeric field with 7 digits limit
+T4R2|2 || Driving license || 16-character alphanumeric field.
+T4R3|3 || Aadhar Number || 16-character numeric field
+---TABLE 5---
+T5R0|ADMIN || ROLE || ROLE || ROLE || ROLE || ROLE || ROLE || ROLE
+T5R1|ADMIN || DR || HQA || Other role || SR || FDA || SDA || DEO
+T5R2|Super admin ||  ||  ||  ||  ||  ||  || 
+T5R3|DRO admin ||  ||  ||  ||  ||  ||  || 
+T5R4|SRO admin ||  ||  ||  ||  ||  ||  || 
+---TABLE 6---
+T6R0|Current Role || Charge Handover Role || Charge Handover Role || Charge Handover Role || Charge Handover Role || Charge Handover Role
+T6R1|Current Role || DR || HQA || SR || FDA || SDA
+T6R2|DR ||  ||  ||  ||  || 
+T6R3|HQA ||  ||  ||  ||  || 
+T6R4|SR ||  ||  ||  ||  || 
+T6R5|FDA ||  ||  ||  ||  || 
+T6R6|SDA ||  ||  ||  ||  || 
+---TABLE 7---
+T7R0|ADMIN || ROLE || ROLE || ROLE || ROLE || ROLE || ROLE || ROLE
+T7R1|ADMIN || DR || HQA || Other role || SR || FDA || SDA || DEO
+T7R2|Super admin ||  ||  ||  ||  ||  ||  || 
+---TABLE 8---
+T8R0|Current Role || Transfer to the same level office || Transfer to a higher office || Transferred role
+T8R1|DR ||  ||  || DR, DIGR
+T8R2|SR ||  ||  || SR, HQA
+T8R3|FDA ||  ||  || SR, FDA
+T8R4|SDA ||  ||  || FDA, SDA
+T8R5|DEO ||  ||  || DEO
+---TABLE 9---
+T9R0|ADMIN || ROLE || ROLE || ROLE || ROLE || ROLE
+T9R1|ADMIN || DR || HQA || SR || FDA || SDA
+T9R2|Super admin ||  ||  ||  ||  || 
+T9R3|DRO admin ||  ||  ||  ||  || 
+---TABLE 10---
+T10R0|Current Role || Promoted Role || Promoted Role || Promoted Role || Promoted Role || Promoted Role
+T10R1|Current Role || DIGR || DR || HQA || SR || FDA
+T10R2|DR ||  ||  ||  ||  || 
+T10R3|HQA ||  ||  ||  ||  || 
+T10R4|SR ||  ||  ||  ||  || 
+T10R5|FDA ||  ||  ||  ||  || 
+T10R6|SDA ||  ||  ||  ||  || 
+---TABLE 11---
+T11R0|Input Validation || Output / Feedback Message
+T11R1|Uniqueness Check || "This Office Type already exists. Please use a unique name or edit the existing one."
+T11R2|Dependency Protection || "Cannot delete this Post Type because 5 users are currently assigned to it. Please reassign them first."
+T11R3|Format Check || "Please use only capital letters and no spaces for Office Codes (e.g., 'SRO' instead of 'sro 1')."
+---TABLE 12---
+T12R0|Input Validation || Output / Feedback Message
+T12R1|Duplicate ID || "This Employee ID is already linked to [User Name]. Please verify the ID number."
+T12R2|Mandatory Mapping || "Almost there! Please select both an Office and a Post Type to finish creating this profile."
+T12R3|Email Format || "That doesn't look like a valid email address. Please check for typos (e.g., name@domain.com)."
+---TABLE 13---
+T13R0|Input Validation || Output / Feedback Message
+T13R1|Date Logic || "The end date cannot be earlier than the start date. Please adjust your calendar selection."
+T13R2|Overlap Prevention || "Conflict detected: This user is already marked as 'On Leave' during these dates."
+T13R3|Quota Check || "Insufficient Balance: The user only has 4 days of leave remaining, but 6 days were requested."
+---TABLE 14---
+T14R0|Input Validation || Output / Feedback Message
+T14R1|Active Status || "This user is currently 'Inactive.' You must reactivate their profile before processing a transfer."
+T14R2|Post Capacity || "Warning: The SRO office is currently at full capacity for DEO roles. Do you wish to proceed anyway?"
+T14R3|Effective Date || "Transfer scheduled! This change will automatically reflect in the system on [Selected Date]."
+---TABLE 15---
+T15R0|Sl No || Module No || Main Module || Sub-Module
+T15R1|1 || 1.1 || Registration || Registration
+T15R2|2 || 1.2 || Registration || Appointment
+T15R3|3 || 1.3 || Registration || Integration module
+T15R4|4 || 1.4 || Registration || Stamp duty and Registration fee calculation
+T15R5|5 || 1.5 || Registration || Guideline value calculation
+T15R6|6 || 1.6 || Registration || Rule 17 (2) filing
+T15R7|7 || 1.7 || Registration || Rule 17 (3) filing
+T15R8|8 || 1.8 || Registration || Old pending release module
+T15R9|9 || 1.9 || Registration || Re-Registration module
+T15R10|10 || 1.1 || Registration || Will after Death
+T15R11|11 || 1.11 || Registration || Filing documents (FRUITS)
+T15R12|12 || 1.12 || Registration || Scanning
+T15R13|13 || 1.13 || Registration || Memo transmission and filing
+T15R14|14 || 1.14 || Registration || 68(2) correction
+T15R15|15 || 1.15 || Registration || Cross-reference Rule 123
+T15R16|16 || 1.16 || Registration || Integration exemption
+T15R17|17 || 1.17 || Registration || Court entry
+T15R18|18 || 1.18 || Registration || Liability
+T15R19|19 || 1.19 || Registration || Status tracking
+T15R20|20 || 1.2 || Registration || Investigation and Search
+T15R21|21 || 1.21 || Registration || Valuation Module (CVC)
+T15R22|22 || 2 || EC || 
+T15R23|23 || 3 || CC || 
+T15R24|24 || 4 || Verify Document || 
+T15R25|25 || 5 || Power of Attorney Authentication Module || 
+T15R26|26 || 6 || Refund Module || 
+T15R27|27 || 7.1 || Marriage || Hindu Marriage
+T15R28|28 || 7.2 || Marriage || Special Marriage
+T15R29|29 || 7.3 || Marriage || Special Marriage in Other Forms
+T15R30|30 || 8 || Legacy Record Digitisation || 
+T15R31|31 || 9 || Audit || 
+T15R32|32 || 10 || Accounts || 
+T15R33|33 || 11.1 || MIS || Statutory (44)
+T15R34|34 || 11.2 || MIS || Statistical (54)
+T15R35|35 || 11.3 || MIS || Integration (15)
+T15R36|36 || 11.4 || MIS || Computer-related (4)
+T15R37|37 || 11.5 || MIS || Reconciliation (5)
+T15R38|38 || 11.6 || MIS || HR (5)
+T15R39|39 || 12.1 || DRO || Firm Registration
+---TABLE 16---
+T16R0|Office type || count
+T16R1|IGRO || 1
+T16R2|DRO || 3
+T16R3|SRO || 260
+---TABLE 17---
+T17R0|Designation || Count
+T17R1|IGR || 1
+T17R2|DIGR-CVC || 1
+T17R3|Fruits user || 1
+T17R4|Public_servent || 1
+T17R5|HQA || 2
+T17R6|AIGR || 3
+T17R7|SUPERUSER || 4
+T17R8|DSDA || 7
+T17R9|DIGR || 7
+T17R10|MISADMIN || 8
+T17R11|DFDA || 17
+T17R12|Auditor || 31
+T17R13|DR || 43
+T17R14|FDA || 186
+T17R15|SDA || 244
+T17R16|SR || 286
+T17R17|DEO || 959
+---TABLE 18---
+T18R0|POST || ROLE
+T18R1|IGR || IGR
+T18R2|DIGR || DIGR - ADMIN
+T18R3|DIGR || DIGR - LAW
+T18R4|DIGR || DIGR - VIGILANCE
+T18R5|DIGR || DIGR - ENF
+T18R6|DIGR || DIGR - CVC
+T18R7|DIGR || DIGR - COMPUTER
+T18R8|AIGR || AIGR - COMPUTER
+T18R9|AIGR || AIGR - ADMIN
+T18R10|AIGR || AIGR - AUDIT
+T18R11|AIGR || AIGR - LAW
+T18R12|DR || DR - COMPUTER
+T18R13|DR || DR - ADMIN
+T18R14|DR || DR - AUDIT
+T18R15|DR || DR - LAW
+T18R16|HQA || HQA - COMPUTER
+T18R17|HQA || HQA - ADMIN
+T18R18|HQA || HQA - AUDIT
+T18R19|SSR || SSR
+T18R20|SR || SR
+T18R21|FDA || FDA
+T18R22|SDA || SDA
+T18R23|DEO || DEO
+---TABLE 19---
+T19R0|Office type || SRO || DRO || IGRO
+T19R1| || SDA || SDA || SR
+T19R2| || FDA || FDA || SSR
+T19R3| || SR || SR || HQA
+T19R4| || SSR || SSR || AIGR
+T19R5| ||  || HQA || DIGR
+T19R6| ||  || DR || 
+T19R7| ||  || DIGR || 
+---TABLE 20---
+T20R0|BR ID || Business Rule Description
+T20R1|BR-01 || The role "SSR" (Senior Sub Registrar) shall be added as a new entry in the Role Master table.
+T20R2|BR-02 || SSR shall be an eligible/selectable role when Office Type = SRO, Office Type = DRO or Office Type = IGRO.
+T20R3|BR-03 || The role hierarchy order under DRO shall be: SDA < FDA < SR < SSR < HQA < DR < DIGR.
+T20R4|BR-04 || The role hierarchy order under IGRO shall be: SR < SSR < HQA < AIGR < DIGR.
+T20R5|BR-05 || The role hierarchy order under SRO shall be: SDA < FDA < SR < SSR.
+T20R6|BR-06 || Any existing user records created prior to this change shall remain unaffected; SSR will apply only to new role assignments and future promotions unless a data migration/back-fill is explicitly reques
+T20R7|BR-07 || All screens and reports that filter or display roles based on Office Type (e.g., Add User, Edit User, View User, User Reports/MIS) must reflect the updated To-Be mapping.
+---TABLE 21---
+T21R0|Current Role || Promoted Role || Promoted Role || Promoted Role || Promoted Role || Promoted Role || Promoted Role
+T21R1|Current Role || DIGR || DR || HQA || SSR || SR || FDA
+T21R2|DR ||  ||  ||  ||  ||  || 
+T21R3|HQA ||  ||  ||  ||  ||  || 
+T21R4|SSR ||  ||  ||  ||  ||  || 
+T21R5|SR ||  ||  ||  ||  ||  || 
+T21R6|FDA ||  ||  ||  ||  ||  || 
+T21R7|SDA ||  ||  ||  ||  ||  || 
+---TABLE 22---
+T22R0|Current Role || → || Promoted Role
+T22R1|SDA (Second Division Assistant) || → || FDA (First Division Assistant)
+T22R2|FDA (First Division Assistant) || → || SR (Sub Registrar)
+T22R3|SR (Sub Registrar) || → || SSR (Senior Sub Registrar) — or — HQA (Head Quarters Assistant)
+T22R4|SSR (Senior Sub Registrar) || → || HQA (Head Quarters Assistant)
+T22R5|HQA (Head Quarters Assistant) || → || DR (District Registrar) — if HQA is in DRO / AIGR (Assistant Inspector General of Registration) — if HQA is in IGRO
+T22R6|DR (District Registrar)/AIGR (Assistant Inspector General of Registration) || → || DIGR (Deputy Inspector General of Registration)
+---TABLE 23---
+T23R0|BR ID || Business Rule Description
+T23R1|BR-09 || The system shall support the following single-outcome promotion transitions: SDA → FDA, FDA → SR, SR→SSR SSR → HQA, DR/AIGR → DIGR.
+T23R2|BR-10 || If the Current Role = HQA and the user's Office Type = DRO, the Promoted Role shall be resolved as DR.
+T23R3|BR-11 || If the Current Role = HQA and the user's Office Type = IGRO, the Promoted Role shall be resolved as AIGR.
+T23R4|BR-12 || The Promotion action shall update the user's Role in the User Master and shall not alter the user's Office Type unless a Transfer/Deputation/Transfer with promotion is separately initiated.
+T23R5|BR-13 || Every promotion action shall be logged with Old Role, New Role, Office Type, initiating Approver ID, and Timestamp for audit and MIS reporting.
+T23R6|BR-14 || A user already at the apex role for their office type (DIGR) shall not have a further Promoted Role available in the system.
+---TABLE 24---
+T24R0|Scenario ID || Scenario Description || Precondition / Trigger || Expected System Behaviour
+T24R1|SC-01 || Approver initiates promotion for a user whose Current Role = SDA. || User's Current Role = SDA. || System auto-resolves Promoted Role = FDA and proceeds to confirmation.
+T24R2|SC-02 || Approver initiates promotion for a user whose Current Role = HQA and Office Type = DRO. || Current Role = HQA; Office Type = DRO. || System auto-resolves Promoted Role = DR (per BR-10).
+T24R3|SC-03 || Approver initiates promotion for a user whose Current Role = HQA and Office Type = IGRO. || Current Role = HQA; Office Type = IGRO. || System auto-resolves Promoted Role = AIGR (per BR-11).
+T24R4|SC-04 || Approver initiates promotion for a user whose Current Role = SR. || Current Role = SR (Office Type = DRO or IGRO). || System auto-resolves Promoted Role = SSR
+T24R5|SC-05 || Approver selects SSR as the Promoted Role for an SR user and confirms. || SR user promotion in progress; SSR selected. || User's Role is updated to SSR; promotion is logged with Old Role = SR, New Role = SSR.
+---TABLE 25---
+T25R0|Current High-Level Post/Role || Allowed Demoted Target Role (Exactly One Level Down) || Authorized Processing Admin
+T25R1|DIGR || DR/AIGR || Super Admin
+T25R2|DR/AIGR || HQA || Super Admin
+T25R3|HQA || SSR || Super Admin
+T25R4|SSR || SR || Super Admin
+T25R5|SR || FDA || Super Admin / DR Admin
+T25R6|FDA || SDA || Super Admin / DR Admin
+T25R7|SDA || DEO || Super Admin / DR Admin

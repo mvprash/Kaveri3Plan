@@ -109,14 +109,11 @@ SELECT
   po.office_code,
   oh.office_name,
   NULL::text AS absent_officer_name,
-  po.status AS occupancy_status,
-  po.joining_date
+  po.status AS occupancy_status
 FROM um.post_occupancy po
 JOIN um.posts_master pm ON pm.post_code = po.post_code
 JOIN um.office_hierarchy oh ON oh.office_code = po.office_code
 WHERE po.status = 'ACTIVE'
-  AND (po.joining_date IS NULL
-       OR po.joining_date <= (timezone('Asia/Kolkata', now()))::date)
 UNION ALL
 SELECT
   tc.cover_user_id AS user_id,
@@ -128,8 +125,7 @@ SELECT
   tc.covered_office_code,
   tc.covered_office_name,
   tc.absent_officer_name,
-  NULL::um.occupancy_status_t,
-  NULL::date
+  NULL::um.occupancy_status_t
 FROM um.v_active_temporary_charge tc;
 
 -- Active session privilege path — roles for current context (simplified)
@@ -243,7 +239,7 @@ COMMENT ON VIEW um.v_office_descendants IS
   'Root office plus all descendants — used for office-span checks (FR-UM-059)';
 
 -- =============================================================================
--- Additional reporting views — Section 8 (Reporting Requirements) coverage
+-- Additional reporting views — Section 6 (Reporting Requirements) coverage
 -- =============================================================================
 
 -- Report: all active, inactive, and suspended users
@@ -263,7 +259,7 @@ SELECT
 FROM um.user_master u;
 
 COMMENT ON VIEW um.v_user_status_report IS
-  'Section 8 bullet 1 — report of all active, inactive, and suspended users';
+  'Section 6 bullet 1 — report of all active, inactive, and suspended users';
 
 -- Report: audit log of login attempts (successful and failed) over a date range
 CREATE OR REPLACE VIEW um.v_login_audit_report AS
@@ -281,10 +277,13 @@ SELECT
 FROM um.audit_log a
 LEFT JOIN um.user_master u ON u.user_id = a.actor_id
 WHERE a.entity = 'SESSION'
-  AND a.action IN ('LOGIN_SUCCESS', 'LOGIN_FAILURE', 'OTP_VERIFY_FAILURE', 'LOGIN_LOCKOUT');
+  AND a.action IN (
+    'LOGIN_SUCCESS', 'LOGIN_FAILURE', 'OTP_VERIFY_FAILURE', 'LOGIN_LOCKOUT',
+    'FACE_AUTH_FAILURE', 'BIOMETRIC_FAILURE'
+  );
 
 COMMENT ON VIEW um.v_login_audit_report IS
-  'Section 8 bullet 2 — login attempt audit report over a selected date range';
+  'Section 6 bullet 2 — login attempt audit report over a selected date range';
 
 -- Report: role and permission assignments across all users
 CREATE OR REPLACE VIEW um.v_user_effective_roles AS
@@ -303,14 +302,14 @@ SELECT
   po.post_code, po.office_code,
   'POST_OCCUPANCY'::text AS source
 FROM um.user_master u
-JOIN um.post_occupancy po ON po.user_id = u.user_id AND po.status IN ('ACTIVE', 'RESERVED')
+JOIN um.post_occupancy po ON po.user_id = u.user_id AND po.status = 'ACTIVE'
 JOIN um.post_role_map prm ON prm.post_code = po.post_code
 JOIN um.role_master r ON r.role_id = prm.role_id;
 
 COMMENT ON VIEW um.v_user_effective_roles IS
-  'Section 8 bullet 3 — role and permission assignments across all users (direct + post-derived)';
+  'Section 6 bullet 3 — role and permission assignments across all users (direct + post-derived)';
 
--- Report: Citizen lost-mobile / security-question recovery, admin mobile change, email changes
+-- Report: Citizen lost-mobile / Aadhaar e-KYC recovery, DSR self-service mobile, admin mobile, email changes
 CREATE OR REPLACE VIEW um.v_contact_change_recovery_report AS
 SELECT
   a.audit_id,
@@ -329,10 +328,14 @@ FROM um.audit_log a
 LEFT JOIN um.user_master u     ON u.user_id::text = a.entity_id
 LEFT JOIN um.user_master actor ON actor.user_id = a.actor_id
 WHERE a.entity = 'USER_CONTACT'
-  AND a.action IN ('CITIZEN_LOST_MOBILE_RESET', 'ADMIN_MOBILE_CHANGE', 'EMAIL_CHANGE', 'MOBILE_CHANGE_SELF');
+  AND a.action IN (
+    'CITIZEN_LOST_MOBILE_RESET', 'EKYC_SUCCESS', 'EKYC_FAILURE',
+    'ADMIN_MOBILE_CHANGE', 'DSR_MOBILE_CHANGE_SELF',
+    'EMAIL_CHANGE', 'MOBILE_CHANGE_SELF'
+  );
 
 COMMENT ON VIEW um.v_contact_change_recovery_report IS
-  'Section 8 bullet 6 — single contact-change and recovery report (FR-UM-056, FR-UM-065, email changes)';
+  'Section 6 bullet 6 — single contact-change and recovery report (FR-UM-056, FR-UM-065, FR-UM-086, email changes)';
 
 -- Report: additional charge taken / cleared (FR-UM-053)
 CREATE OR REPLACE VIEW um.v_additional_charge_report AS
@@ -351,7 +354,7 @@ WHERE a.entity = 'SESSION'
   AND a.action IN ('ADD_CHARGE_TAKEN', 'ADD_CHARGE_CLEARED', 'ADD_CHARGE_SWITCH_BACK');
 
 COMMENT ON VIEW um.v_additional_charge_report IS
-  'Section 8 bullet 7 — additional charge taken/cleared report (FR-UM-053)';
+  'Section 6 bullet 7 — additional charge taken/cleared report (FR-UM-053)';
 
 -- Report: occupancy-refresh job runs (FR-UM-068)
 CREATE OR REPLACE VIEW um.v_occupancy_refresh_report AS
@@ -367,9 +370,9 @@ WHERE a.entity = 'JOB' AND a.action = 'OCCUPANCY_REFRESH'
 ORDER BY a.occurred_at DESC;
 
 COMMENT ON VIEW um.v_occupancy_refresh_report IS
-  'Section 8 bullet 9 — occupancy-refresh job run report (FR-UM-068)';
+  'Section 6 bullet 9 — occupancy-refresh job run report (FR-UM-068)';
 
--- Report: Transfer Out / Transfer In history (FR-UM-057–FR-UM-061, FR-UM-067)
+-- Report: Transfer Out / Transfer In history (FR-UM-057–FR-UM-060)
 CREATE OR REPLACE VIEW um.v_transfer_history_report AS
 SELECT
   po.occupancy_id,
@@ -381,10 +384,9 @@ SELECT
   po.office_code,
   oh.office_name,
   po.status,
-  po.reserved_flag,
-  po.joining_date,
   po.transfer_order_no,
   po.relieving_date,
+  po.relieving_reason,
   po.relieving_order_no,
   po.created_at AS occupancy_created_at,
   po.ended_at
@@ -395,7 +397,7 @@ JOIN um.office_hierarchy oh ON oh.office_code = po.office_code
 ORDER BY po.created_at DESC;
 
 COMMENT ON VIEW um.v_transfer_history_report IS
-  'Section 8 bullet 10 — Transfer Out / Transfer In history report';
+  'Section 6 bullet 10 — Transfer Out / Transfer In history report';
 
 -- Report: officer posting and service history (chronological per officer)
 CREATE OR REPLACE VIEW um.v_officer_posting_history AS
@@ -409,10 +411,8 @@ SELECT
   po.office_code,
   oh.office_name,
   po.status,
-  po.joining_date,
   po.relieving_date,
-  po.end_date,
-  po.deputation_reason,
+  po.relieving_reason,
   po.created_at,
   po.ended_at
 FROM um.post_occupancy po
@@ -422,4 +422,38 @@ JOIN um.office_hierarchy oh ON oh.office_code = po.office_code
 ORDER BY po.user_id, po.created_at;
 
 COMMENT ON VIEW um.v_officer_posting_history IS
-  'Section 8 bullet 11 — officer posting and service history report';
+  'Section 6 bullet 11 — officer posting and service history report';
+
+-- Derived hierarchy Level (Section 4.5.7 — system/derived, not stored)
+CREATE OR REPLACE VIEW um.v_officer_hierarchy_tree AS
+WITH RECURSIVE tree AS (
+  SELECT
+    n.node_id,
+    n.post_code,
+    n.parent_node_id,
+    n.division_code,
+    n.display_order,
+    n.effective_from,
+    n.effective_to,
+    n.is_active,
+    0 AS level
+  FROM um.officer_hierarchy_node n
+  WHERE n.parent_node_id IS NULL
+  UNION ALL
+  SELECT
+    c.node_id,
+    c.post_code,
+    c.parent_node_id,
+    c.division_code,
+    c.display_order,
+    c.effective_from,
+    c.effective_to,
+    c.is_active,
+    t.level + 1
+  FROM tree t
+  JOIN um.officer_hierarchy_node c ON c.parent_node_id = t.node_id
+)
+SELECT * FROM tree;
+
+COMMENT ON VIEW um.v_officer_hierarchy_tree IS
+  'Section 4.5.7 derived Level (0 = root) for DSR Officer Hierarchy Master';

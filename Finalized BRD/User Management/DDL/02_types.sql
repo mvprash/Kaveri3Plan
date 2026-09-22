@@ -1,5 +1,6 @@
 -- =============================================================================
 -- 02 · Enumerated types
+-- Companion to ERD-K3-UM-001 v2.3 / BRD_User_Management_v1.0 (11-Sep-2026)
 -- =============================================================================
 
 SET search_path TO um, public;
@@ -28,11 +29,21 @@ DO $$ BEGIN
   );
 EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 
+-- RESERVED occupancy status retired with FR-UM-061 / FR-UM-067 (v4.20 / BRD v1.0)
 DO $$ BEGIN
   CREATE TYPE um.occupancy_status_t AS ENUM (
     'ACTIVE',
-    'RESERVED',
     'ENDED'
+  );
+EXCEPTION WHEN duplicate_object THEN NULL; END $$;
+
+DO $$ BEGIN
+  CREATE TYPE um.relieving_reason_t AS ENUM (
+    'DEPUTATION',
+    'TRANSFER',
+    'SUSPENSION',
+    'SUPERANNUATION',
+    'DEATH'
   );
 EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 
@@ -74,7 +85,8 @@ DO $$ BEGIN
     'REG_EMAIL',
     'REG_MOBILE',
     'RESET_PIN',
-    'NEW_MOBILE'
+    'NEW_MOBILE',
+    'NEW_EMAIL'
   );
 EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 
@@ -82,6 +94,21 @@ DO $$ BEGIN
   CREATE TYPE um.otp_channel_t AS ENUM (
     'SMS',
     'EMAIL'
+  );
+EXCEPTION WHEN duplicate_object THEN NULL; END $$;
+
+DO $$ BEGIN
+  CREATE TYPE um.ekyc_purpose_t AS ENUM (
+    'REGISTRATION',
+    'LOST_MOBILE'
+  );
+EXCEPTION WHEN duplicate_object THEN NULL; END $$;
+
+DO $$ BEGIN
+  CREATE TYPE um.ekyc_status_t AS ENUM (
+    'PENDING',
+    'SUCCESS',
+    'FAILED'
   );
 EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 

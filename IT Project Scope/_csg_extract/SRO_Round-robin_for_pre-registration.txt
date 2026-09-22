@@ -1,0 +1,156 @@
+P0|Karnataka Valuation & E-Registration (KAVERI - 2.0)
+P1|Government of Karnataka
+P3|Functional Requirement Specifications
+P5|For KAVERI 2.0
+P6|Department of Stamps & Registration
+P7|Government of Karnataka
+P8|Version 1.0
+P9|October 22, 2024
+P11|Pre-registration scrutiny
+P12|(Round-robin method)
+P18|Prepared by
+P19|Centre for Smart Governance (CSG)
+P20|2nd Floor, TTMC Yeshwanthapura, BMTC Bus station
+P21|Bangalore – 560022
+P30|Acronyms
+P33|Revision History
+P35|Introduction
+P36|The Department of Stamps and Registration (henceforth referred to as “department”) is the custodian of registered public records such as Registration of Marriages and Firms, Documents about transactions namely sale, transfer or gift of immovable properties, Mortgage, Power of Attorney, wills, and many more. Maintenance and preservation of these critical public records is the prime responsibility of the department. The records or the information associated with registered records are to be made available to the public when requested through defined procedures. The department is also responsible for collecting stamp duty on behalf of the government for specified transactions. The services are provided through 258 Sub-Registrar Offices (SROs), under the supervision of 35 District Registrar Offices, spread across the state.
+P37|The department has computerized the delivery of these services through the development of Kaveri software. The KAVERI Online service is a web-based application of the department that provides an interface to the applicants required for documents, marriage, and firm registration. It enables applicants to know the details of stamp duty, property guidelines value, data entry for document registration and marriage registration, etc. The list of modules in Kaveri 2.0 is available in Annexure 1.
+P39|Document scope
+P40|This document is a Functional Requirement Specification (FRS) describing the functional feature of the pre-registration scrutiny (round-robin method) in Kaveri 2.0. The document is prepared by the Centre for Smart Governance (CSG) and has been submitted for department approval. The intended audience of the document is the departmental approving authority and the development team.
+P41|The document was prepared through document analysis and departmental consultation. The department shared the high-level requirements (Annexure -2)
+P44|Overview of the function
+P50|Fig: Pre-registration scrutiny (Round-robin method) function in Document registration.
+P52|Interaction diagram: Round-robin SRO for scrutiny
+P55|Under the existing system, applicants for document registration are allowed to select the Sub-Registrar Office (SRO) during the application submission phase based on the index village of the property. With the feature of “anywhere registration”, the applicant can select any of the SROs within the registration district for application scrutiny and registration.
+P56|Importantly, the scrutiny process is conducted electronically via the Kaveri portal, thereby eliminating the need for applicants to physically visit the selected SRO. However, this system does not account for the real-time availability, workload, or operational capacity of each SRO. As a result, certain SROs within a district experience disproportionate burdens, causing undue delays in service delivery and adversely impacting the quality and efficiency of operations.
+P57|Proposed Solution – Introduction of the Round-Robin Method:
+To address the imbalanced distribution of applications and to ensure the equitable allocation of workloads at the scrutiny level across all available SROs, the Round-Robin Method is proposed as a new allocation method. Under this model:
+P58|Automatic and equal allocation: Applications will no longer be assigned based on the applicant’s discretion at the scrutiny stage. Instead, the system will automatically allocate applications sequentially among all available SROs in the district in a rotational order, ensuring uniform distribution of workloads. The Round-Robin mechanism will prevent any single SRO from becoming disproportionately burdened, thereby mitigating service delays and maintaining the quality and efficiency of scrutiny.
+P59|Date selection: Following the scrutiny of the application, the applicant shall make the payment. Upon successful completion of the payment, a dropdown will be displayed, listing the available dates of all the SROs within the registration district.
+P60|Time selection: The applicant shall select an SRO and a time slot available and confirm the appointment for the presentation of documents. On the scheduled date and time, the applicant is required to personally appear at the selected SRO for the submission and formal presentation of the documents.
+P62|Description of the functional requirement
+P63|Actors and their roles
+P72|Use case
+P73|For example, Ramanagara district comprises four Sub-Registrar Offices (SROs): Ramanagara, Channapatna, Kanakapura, and Magadi. Across these offices, a total of five Sub-Registrars (SRs) are working, as explained below:
+P75|Allocation of the application using the weighted round-robin method:
+P76|The five SRs across the district are assigned applications sequentially, with one application per SR in each round of five applications to maintain equitable distribution.
+P77|Multiple allocations to Ramanagara SRO:
+P78|Ramanagara has two SRs each receiving one of two consecutive applications during every cycle.
+P79|After handling two applications, the system moves to the next SRO.
+P80|Other SROs (Channapatna, Kanakapura, Magadi):
+P81|Each of these offices has one SR. As a result, each receives one application every 5th round, maintaining a uniform distribution across the district.
+P82|Operational Efficiency:
+P83|This method ensures that SROs with more SRs (like Ramanagara) receive an equitable number of applications, optimizing their capacity, while smaller offices still handle a fair share of the workload.
+P84|Under the previous system, the distribution of applications was determined at the discretion of the applicant during the scrutiny stage. As a consequence, certain Sub-Registrar Offices (SROs) experienced a disproportionate workload. For instance, the Ramanagara SRO, being the district headquarters, attracted a higher volume of applications, leading to an inequitable distribution of work. Conversely, other SROs in the district, namely Channapatna, Kanakapura, and Magadi, remained underutilized due to the relatively lower number of applications assigned to them.
+P85|Workflow
+P90|Validations
+P92|The system must send the application to the SRO within the selected district using the round-robin method.
+P93|The system must display the available time slots for each SRO within the selected district during the appointment booking process.
+P94|The system must resend the application to the same SRO who initially scrutinized it when the application is returned by the applicant with corrections.
+P95|Wireframes
+P96|https://www.figma.com/proto/XXr1AJjPcmTqqWK6zMBVQo/Untitled?page-id=0%3A1&node-id=1-735&node-type=frame&viewport=-5787%2C167%2C0.27&t=9B1KAn2AdTim8vXq-1&scaling=contain&content-scaling=fixed&starting-point-node-id=1%3A73
+P98|Integration with other systems/modules
+P99|External integration
+P100|NA
+P101|Internal integration with other modules
+P102|NA
+P103|Assumptions
+P104|The DR can assign the responsibility of scrutiny to the FDA/SDA within the same SRO in the absence of the SR.
+P106|Dependencies
+P108|No dependencies
+P112|Annexures
+P113|Annexure – 1 – List of modules of Kaveri 2.0
+P117|Annexure- 2 – Requirements as shared by the department
+P120|Annexure – 3 – Clarificatory questions
+P121|Is any statistical MIS report generation required?
+P123|Annexure – 4 – Document Summary
+---TABLE 0---
+T0R0|CSG || Centre for Smart Governance
+T0R1|DR || District-Registrar
+T0R2|FDA || First division assistant
+T0R3|SR || Sub-Registrar
+T0R4|SRO || Sub-Registrar Office
+T0R5|SDA || Second division assistant
+---TABLE 1---
+T1R0|Date || Version || Prepared by || Reviewed by || Approved by || Description
+T1R1|22/10/2024 || 1.0 || Arugolli Subhash (CSG) || Rajesh Hanbal (CSG) || To be approved || Submitted for approval of the nodal officer of the department
+---TABLE 2---
+T2R0|Actor/Interface || Role/Responsibilities
+T2R1|Applicant || Submits the application / Makes payment / Selects time-slot  / Select SRO for presentation / Visits SRO on appointment day
+T2R2|System || Sends the application to SRO for scrutiny (round-robin method) / Sends the scrutinized application to the applicant for payment / Confirms the payment / Displays the available time-slots / Displays the available SROs to book an appointment / Confirm and schedule the appointment
+T2R3|Scrutinizing SRO || Receives the application / Verifies the application / Calculates the market valuation and stamp duty fee
+T2R4|Registering SRO || Receives the application / Typical registration flow (presentation flow) /
+T2R5|Process Triggers || Citizen submits the application for document registration  /
+T2R6|Data/Information Required || NA
+T2R7|Output documents generated || Document summary / The summary must contain the note of the scrutinized SRO name
+T2R8|Internal changes || NA /
+T2R9|Impact on other modules || NA /
+---TABLE 3---
+T3R0|SRO Office || Number of SRs
+T3R1|Ramanagara || 2
+T3R2|Channapatna || 1
+T3R3|Kanakapura || 1
+T3R4|Magadi || 1
+---TABLE 4---
+T4R0|Application No || SRO allotted for scrutiny
+T4R1|1 || Ramanagara
+T4R2|2 || Ramanagara
+T4R3|3 || Channapatna
+T4R4|4 || Kanakapura
+T4R5|5 || Magadi
+T4R6|6 || Ramanagara
+T4R7|7 || Ramanagara
+T4R8|8 || Channapatna
+T4R9|9 || Kanakapura
+T4R10|10 || Magadi
+---TABLE 5---
+T5R0|Sl No || Module No || Main Module || Sub-Module
+T5R1|1 || 1.1 || Registration || Registration
+T5R2|2 || 1.2 || Registration || Appointment
+T5R3|3 || 1.3 || Registration || Integration module
+T5R4|4 || 1.4 || Registration || Stamp duty and Registration fee calculation
+T5R5|5 || 1.5 || Registration || Guideline value calculation
+T5R6|6 || 1.6 || Registration || Rule 17 (2) filing
+T5R7|7 || 1.7 || Registration || Rule 17 (3) filing
+T5R8|8 || 1.8 || Registration || Old pending release module
+T5R9|9 || 1.9 || Registration || Re-Registration module
+T5R10|10 || 1.1 || Registration || Will after Death
+T5R11|11 || 1.11 || Registration || Filing documents (FRUITS)
+T5R12|12 || 1.12 || Registration || Scanning
+T5R13|13 || 1.13 || Registration || Memo transmission and filing
+T5R14|14 || 1.14 || Registration || 68(2) correction
+T5R15|15 || 1.15 || Registration || Cross-reference Rule 123
+T5R16|16 || 1.16 || Registration || Integration exemption
+T5R17|17 || 1.17 || Registration || Court entry
+T5R18|18 || 1.18 || Registration || Liability
+T5R19|19 || 1.19 || Registration || Status tracking
+T5R20|20 || 1.2 || Registration || Investigation and Search
+T5R21|21 || 1.21 || Registration || Valuation Module (CVC)
+T5R22|22 || 2 || EC || 
+T5R23|23 || 3 || CC || 
+T5R24|24 || 4 || Verify Document || 
+T5R25|25 || 5 || Power of attorney Authentication Module || 
+T5R26|26 || 6 || Refund Module || 
+T5R27|27 || 7.1 || Marriage || Hindu Marriage
+T5R28|28 || 7.2 || Marriage || Special Marriage
+T5R29|29 || 7.3 || Marriage || Special Marriage in Other Forms
+T5R30|30 || 8 || Legacy Record digitisation || 
+T5R31|31 || 9 || Audit || 
+T5R32|32 || 10 || Accounts || 
+T5R33|33 || 11.1 || MIS || Statutory (44)
+T5R34|34 || 11.2 || MIS || Statistical (54)
+T5R35|35 || 11.3 || MIS || Integration (15)
+T5R36|36 || 11.4 || MIS || Computer related (4)
+T5R37|37 || 11.5 || MIS || Reconciliation (5)
+T5R38|38 || 11.6 || MIS || HR (5)
+T5R39|39 || 12.1 || DRO || Firm Registration
+T5R40|40 || 12.2 || DRO || Undervaluation
+T5R41|41 || 12.3 || DRO || Deposit of will
+T5R42|42 || 12.4 || DRO || Adjudication of documents
+T5R43|43 || 13 || IGRO || Appeal
+T5R44|44 || 14 || Master Data Management || 
+T5R45|45 || 15 || User Management || 
+T5R46|46 || 16 || Mobile application || 
+T5R47|47 || 17 || Training Module || Master Trainer, Training Plan

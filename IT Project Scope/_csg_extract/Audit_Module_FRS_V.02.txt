@@ -1,0 +1,112 @@
+---PAGE 1---
+ 
+ 
+Functional Requirement Specification  
+KAVERI 2.0 Online Services  
+For  
+Department of Stamps & Registration  
+Government of Karnataka  
+AUDIT Module  
+ 
+ 
+   
+ 
+ 
+Prepared by  
+Centre for Smart Governance (CSG)  
+2nd Floor, TTMC Yeshwanthapura, BMTC Bus station  
+Bangalore - 560022  
+ 
+
+---PAGE 2---
+AUDIT  Module  
+ 
+1. Brief Description:  
+Audit is carried over to check  revenue generated, allocation and utilisation of funds, expenditure 
+etc.,  
+Accountant General - Communication of the department with Accountant General (AG) 
+Department is a statutory requirement. AG sends audit report and Para to the department for its 
+response. 
+Auditor General – Auditor general office conducts annual audit inspection in the SRO.  
+Local audit Report is s ubmitted after audit. Some discrepancies, if any, are put up to SR and DR for 
+their clarification. The query and response through conventional mode often consumes so much 
+time that the very purpose of audit gets delayed. Separate login for audit is to be c reated in KAVERI 
+reports portal for the same.  
+Types  of Audits : 
+Internal Audit  and External Audit  
+Internal Audit –  Carried by DR, IGR, Regional Committee, HQA, Deputy Commissioner  
+Inspection will be carried out as below:  
+DR – 50% inspection  
+HQA – 100% inspection  
+IGR – One office in each district  
+External Audit is conducted by Auditor general office  
+A module is required where in AG team can automatically fetch the necessary details through 
+application instead of manual consolidation of query reply by con cerned SR, DR.  
+ 
+ 
+     
+ 
+ 
+ 
+---PAGE 3---
+2. Process Flow:  
+Below is the process flow for Audit Module and Audit Para Module 
+ 
+ 
+ 
+
+---PAGE 4---
+ 
+3. Functional Steps   
+i. Audit Module  
+Creation of Login  
+a. Login would be created by respective office head like in case audit is done at Sub -
+registrar office it would be created by SR, in case it is done at District registrar office it 
+would be created by DR  and if it’s  done for Head office (IGRO) then it would be created 
+by respective  division head.  
+b. AG official mail id would be one of the mandatory fields to be captured during login 
+creation. Along with this AG office ID card copy would be uploaded.  
+c. Login credentials would be sent through mail to AG office mail id.  
+ 
+Audit Process  
+a. AG logins to KAVERI 2 application through the login credentials received through mail.  
+b. Selects the period for which Audit would be performed  and on click of search the 
+documents registered during that period in the mentioned jurisdiction would be 
+displayed.  
+c. In case AG further wants to audit and verify a particul ar document or few documents 
+among the list, AG will the select the documents and submits request for viewing the 
+details of document.  
+d. Once request is initiated by AG concerned office head would receive notification on the view request.  
+e. Office head would verify and approve the AG request for a particular or set of documents.  
+f. On successful approval AG would be able to see the details of the document  which they 
+had requested for. A print option of document and document details would be provided . 
+Document det ails consists of Document Copy, Payment details, Fee calculation etc.,  
+ 
+ 
+ 
+
+---PAGE 5---
+Communication of the department with Accountant General (AG) Department is a statutory 
+requirement. AG sends audit report and Para to the department for its response from the login 
+created for them  
+Steps  in Audit Para  
+Audit Para  can be divided into 3 steps  
+1. Creat e of Audit pa ra 
+2. Edit Audit para 
+3. Close Audit pa ra 
+ 
+Creat e Audit Par  can be of below category  
+1. AG Para  
+2. PAC Para  
+3. IRF Para  
+4. Others Para  
+Para should be created in below format for specific roles as mentioned above and each para is distinguished by para no.  
+ 
+In case of Edit Audit Para a provision to search  audit para through Par a number should be 
+provi sioned. On successful search provision need to be made for remark entry. There can be 
+multiple remark entry against one para.  
+Para Number  
+Provision needs  to be made for ent ering Action Taken  remarks against each para.  
+For Closing para  search provision will be available like  Edit Audit Para . Closing remarks  would be 
+captured and provision would be made fo r order upload. 
+Order  that would be uploaded will be in pdf format.  SL No Para No Para Description Document Number Deficit Stamp duty Deficit Registration Fee Others Deficit Fee Total Revenue Loss (Sum of all fees)

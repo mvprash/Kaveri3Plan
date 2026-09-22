@@ -7,6 +7,9 @@
   - Document_Registration_requirement_01092026_v2.docx
   - Document_Registration_requirement_02092026_v1.1.docx
   - Document_Registration_requirement_07092026_v1.1.docx
+  - Document_Registration_requirement_08092026_v1.1.docx
+  - Document_Registration_requirement_09092026_v1.1.docx
+  - Document_Registration_requirement_11092026_v1.1.docx
 
 Includes: discussion topics, sections, rules, notifications, pain points,
 user stories. Excludes business re-engineering.
@@ -26,9 +29,9 @@ sys.stdout.reconfigure(encoding="utf-8")
 BASE = Path(
     r"E:\MVP\Kaveri 3.0\Source Code\Kaveri 3 Plan\Requirement Discussions\Daily Reports"
 )
-OUT = BASE / "Consolidated_Requirement_Discussions_25082026_to_08092026.docx"
-LEGACY_OUT = BASE / "Consolidated_Requirement_Discussions_25082026_to_02092026.docx"
-OUT_FALLBACK = BASE / "Consolidated_Requirement_Discussions_25082026_to_08092026_v2.docx"
+OUT = BASE / "Consolidated_Requirement_Discussions_25082026_to_11092026.docx"
+LEGACY_OUT = BASE / "Consolidated_Requirement_Discussions_25082026_to_08092026.docx"
+OUT_FALLBACK = BASE / "Consolidated_Requirement_Discussions_25082026_to_11092026_v2.docx"
 
 FONT = "Segoe UI"
 TITLE_FONT = "Segoe UI"
@@ -96,7 +99,8 @@ def add_story(doc, sid, actor, want, so_that):
     p.paragraph_format.space_before = Pt(2)
     r0 = p.add_run(f"{sid}. ")
     set_run_font(r0, size=10.5, bold=True)
-    r1 = p.add_run(f"As a {actor}, I want to {want}, so that {so_that}.")
+    article = "an" if actor[:1].lower() in "aeiou" else "a"
+    r1 = p.add_run(f"As {article} {actor}, I want to {want}, so that {so_that}.")
     set_run_font(r1, size=10.5)
 
 
@@ -176,7 +180,7 @@ def build():
     )
     add_para(
         doc,
-        "25-08-2026 to 08-09-2026",
+        "25-08-2026 to 11-09-2026",
         size=14,
         bold=True,
         align=WD_ALIGN_PARAGRAPH.CENTER,
@@ -200,6 +204,9 @@ def build():
         "Requirement Discussions/Daily Reports/Document_Registration_requirement_01092026_v2.docx",
         "Requirement Discussions/Daily Reports/Document_Registration_requirement_02092026_v1.1.docx",
         "Requirement Discussions/Daily Reports/Document_Registration_requirement_07092026_v1.1.docx",
+        "Requirement Discussions/Daily Reports/Document_Registration_requirement_08092026_v1.1.docx",
+        "Requirement Discussions/Daily Reports/Document_Registration_requirement_09092026_v1.1.docx",
+        "Requirement Discussions/Daily Reports/Document_Registration_requirement_11092026_v1.1.docx",
     ]
     for s in sources:
         add_bullet(doc, s)
@@ -229,6 +236,18 @@ def build():
             [
                 "07-09-2026 to 08-09-2026",
                 "Registration Appeal; Will after the death of the testator",
+            ],
+            [
+                "08-09-2026 (Sr.18)",
+                "Sec. 68(2) correction; Cross-reference Rule 123",
+            ],
+            [
+                "09-09-2026 to 10-09-2026 (Sr.19)",
+                "Integration module; Integration exemption; Court entry; Liability",
+            ],
+            [
+                "11-09-2026",
+                "Investigation and Search; Verify Document (registered document / digital e-stamp)",
             ],
         ],
         col_widths=[1.3, 5.5],
@@ -2253,6 +2272,999 @@ def build():
         "(Indian Succession Act, 1925) as a prerequisite for post-death will registration or opening of deposited sealed covers.",
     )
 
+    # =====================================================================
+    # 08-09-2026 (Sr.18) — Sec. 68(2) correction & Cross-reference Rule 123
+    # =====================================================================
+    page_break(doc)
+    add_heading_custom(
+        doc,
+        "7. 08-09-2026 — Sec. 68(2) correction & Cross-reference Rule 123",
+        level=1,
+    )
+    add_meta_table(
+        doc,
+        [
+            ["Date", "08-09-2026"],
+            [
+                "Topics",
+                "Sec. 68(2) correction and Cross-reference Rule 123 — Schedule Sr.18; modules #14, #15",
+            ],
+            [
+                "Attendees",
+                "Kaveri IT Cell, AIGR Computers team, Domain Expert and committee members",
+            ],
+            [
+                "Version",
+                "1.1 (15-09-2026) — Acts, sections, Rules, notifications, pain points and user stories for Sec. 68(2) correction and Rule 123 cross-reference",
+            ],
+            [
+                "Source",
+                "Document_Registration_requirement_08092026_v1.1.docx",
+            ],
+        ],
+    )
+    add_para(
+        doc,
+        "Scope: (1) Sec. 68(2) correction of errors regarding the book or office in which a document was "
+        "registered (wrong book / wrong office / related rectification under District Registrar’s order); "
+        "(2) Cross-reference under Rule 123 when a later document or communication revokes, cancels, "
+        "rectifies or modifies a previously registered or Rule 17-filed entry, including index notes.",
+        size=10.5,
+        space_after=8,
+    )
+
+    add_heading_custom(doc, "7.1 Primary Acts", level=2)
+    add_table(
+        doc,
+        ["Act / instrument", "Role", "Relevance to topics"],
+        [
+            [
+                "The Registration Act, 1908 (Central Act 16 of 1908)",
+                "Primary — Sec. 68(2) correction",
+                "Sec. 68(2) — DR may order rectification of any error regarding the book or office of registration; Sec. 68(1) — SRO under DR control; Secs. 51, 54–55 — books and indexes after correction",
+            ],
+            [
+                "The Karnataka Registration Rules, 1965",
+                "Primary (Rules) — 68(2) correction & Rule 123 cross-reference",
+                "Ch. XXIII Rules 167–169 — wrong book / wrong office under Sec. 68; Rule 123 — mutual footnotes and index notes; Rule 165 — memorandum erratum and index cross-references",
+            ],
+        ],
+        col_widths=[2.4, 1.8, 2.6],
+    )
+
+    add_heading_custom(doc, "7.2 Relevant sections", level=2)
+    add_heading_custom(doc, "7.2.1 Sec. 68(2) correction", level=3)
+    add_table(
+        doc,
+        ["Section", "Topic", "BRD / system relevance"],
+        [
+            [
+                "Sec. 68(1)",
+                "Registrar superintendence and control of Sub-Registrars",
+                "DR owns oversight of SRO acts / omissions feeding correction cases",
+            ],
+            [
+                "Sec. 68(2)",
+                "Registrar’s order to rectify error regarding book or office of registration",
+                "Core 68(2) correction module — DR order (complaint or suo motu) for wrong book / wrong office / related error",
+            ],
+            [
+                "Sec. 51",
+                "Register-books to be kept",
+                "Target book / volume / page after correction must match statutory books",
+            ],
+            [
+                "Secs. 54–55",
+                "Indexes Nos. I–IV",
+                "Index entries corrected / cross-referenced when book or particulars are rectified",
+            ],
+            [
+                "Secs. 64–66",
+                "Memoranda / copies to other offices",
+                "Wrong-office / wrong-book corrections may require free re-forwardal (Rules 168–169)",
+            ],
+        ],
+        col_widths=[1.4, 2.6, 2.8],
+    )
+    add_heading_custom(doc, "7.2.2 Cross-reference Rule 123 (context)", level=3)
+    add_table(
+        doc,
+        ["Section", "Topic", "BRD / system relevance"],
+        [
+            [
+                "Sec. 89 / Rule 17 filing",
+                "Documents / returns filed under Sec. 89 and Rule 17 supplements",
+                "Rule 123 also applies when a later document/communication affects a Sec. 89 / Rule 17 filed paper",
+            ],
+            [
+                "Sec. 17 / optional & compulsory registration",
+                "Later deed that revokes, cancels, rectifies or modifies an earlier deed",
+                "New registration under ordinary rules; Rule 123 then places cross-notes on both entries",
+            ],
+        ],
+        col_widths=[1.8, 2.4, 2.6],
+    )
+
+    add_heading_custom(doc, "7.3 Relevant Rules — Karnataka Registration Rules, 1965", level=2)
+    add_heading_custom(doc, "7.3.1 Sec. 68(2) correction / Errors in Registration", level=3)
+    add_table(
+        doc,
+        ["Rule", "Requirement", "System feature"],
+        [
+            [
+                "Rule 167 (Ch. XXIII)",
+                "Wrong Book — DR sanction; fresh copy in proper book; red-ink footnotes both ways; indexes cross-referenced",
+                "68(2) wrong-book correction workflow",
+            ],
+            [
+                "Rule 168",
+                "Memo/copy under Secs. 64–67 for wrong Book — error notice / fresh memo free of cost",
+                "Cross-office memo repair after wrong-book registration",
+            ],
+            [
+                "Rule 169",
+                "Wrong office — apply to Registrar under Sec. 68; re-register without fee; free memo to proper office",
+                "Core 68(2) wrong-office correction path",
+            ],
+            [
+                "Rule 165",
+                "Memorandum corrections — erratum in Supplement Book 1 Part I; index cross-references",
+                "Memo / index correction supporting 68(2) consistency",
+            ],
+        ],
+        col_widths=[1.6, 2.8, 2.4],
+    )
+    add_heading_custom(doc, "7.3.2 Cross-reference Rule 123", level=3)
+    add_table(
+        doc,
+        ["Rule", "Requirement", "System feature"],
+        [
+            [
+                "Rule 123(i)",
+                "Mutual footnotes when a later document/communication revokes, cancels, rectifies or modifies an earlier registered / Rule 17-filed entry",
+                "Bidirectional cross-reference notes (Document No. / volume / page / supplement)",
+            ],
+            [
+                "Rule 123(ii)",
+                "Index No. II note for immovable property; index-item rectification notes in Indexes I–IV",
+                "Index cross-reference and item rectification",
+            ],
+            [
+                "Rule 124 (related)",
+                "Note when Court declares registered document a forgery / false personation",
+                "Related foot-note path (not primary Rule 123 revoke/modify track)",
+            ],
+            [
+                "Rule 17 (related)",
+                "Supplement parts that Rule 123 may point to",
+                "Cross-link targets include Rule 17 filed papers and Sec. 89 returns",
+            ],
+        ],
+        col_widths=[1.6, 2.8, 2.4],
+    )
+
+    add_heading_custom(doc, "7.4 Notifications / amendments", level=2)
+    add_table(
+        doc,
+        ["Instrument", "Effect", "Topics"],
+        [
+            [
+                "The Karnataka Registration Rules, 1965 (under Registration Act Sec. 69)",
+                "Parent rules for Errors in Registration (Ch. XXIII) and Rule 123 notes",
+                "Both topics",
+            ],
+            [
+                "RD 403 ESR 85 / RD/46/MNMU/2025 (Table of Fees under Sec. 78)",
+                "Fresh registration under Rule 169 after Sec. 68 direction is without fee",
+                "68(2) correction — fee exception",
+            ],
+            [
+                "ServiceDesk / Kaveri 2.0 68(2) correction module practice",
+                "Operational 68(2) correction, re-scan, index correction and verify steps — re-engineer in Kaveri 3.0",
+                "68(2) correction — as-is pain points",
+            ],
+        ],
+        col_widths=[2.6, 2.6, 1.6],
+    )
+
+    add_heading_custom(doc, "7.5 Pain points", level=2)
+    add_para(
+        doc,
+        "Source: ServiceDeskIssuesList.xlsx — tickets naming 68(2) / 68 correction.",
+        size=10.5,
+        space_after=4,
+    )
+    for rid, subj in [
+        ("8788", "68(2) note Re-scanning issue"),
+        ("15135", "68(2) correction module Hobli name not working"),
+        ("18321", "68(2) Verification issue"),
+        ("19748", "68 correction not able to verify document"),
+        ("20158", "68(2) Rescan completed but not reflecting in KOS while applying for CC"),
+        ("20763 / 20772", "68(2) correction module issue / MODULE error"),
+        ("21319 / 27261 / 28486", "68 correction error / unable to update / section correction issue"),
+        ("29418", "68(2) Index Correction"),
+        ("29586 / 31576", "68(2) correction Issue (e.g. SRO Nelamangala) / 68(2) correction"),
+    ]:
+        add_bullet(doc, subj, bold_prefix=f"{rid}: ")
+
+    add_heading_custom(doc, "7.6 User stories", level=2)
+    add_para(
+        doc,
+        "Taken from Document_Registration_requirement_08092026_v1.1.docx §6 "
+        "(Schedule Sr.18 — modules #14, #15).",
+        size=10,
+        space_after=8,
+    )
+    add_heading_custom(doc, "Sec. 68(2) correction", level=3)
+    for s in [
+        (
+            "US-682-01",
+            "citizen / executant / claimant",
+            "complain to the District Registrar under Sec. 68(2) that my document was registered in the wrong book or wrong office (or has a related registration error)",
+            "the Registrar can issue a rectification order consistent with the Act",
+        ),
+        (
+            "US-682-02",
+            "District Registrar",
+            "issue a Sec. 68(2) order (on complaint or otherwise) directing rectification of the book or office error, and track the case to closure",
+            "SRO action and status are auditable against the Registrar’s order",
+        ),
+        (
+            "US-682-03",
+            "Sub-Registrar",
+            "after DR sanction under Rule 167, re-copy a wrong-book entry into the proper book with red-ink footnotes both ways and create proper index entries with cross-references (without cancelling the original serial)",
+            "both books and indexes remain consistent and searchable",
+        ),
+        (
+            "US-682-04",
+            "Sub-Registrar / citizen",
+            "complete wrong-office correction under Rule 169 — advise parties, receive Sec. 68 direction, re-register without fee with endorsement citing the order, and forward free memo/copy to the proper office",
+            "the document is correctly recorded in the proper office without double fee",
+        ),
+        (
+            "US-682-05",
+            "Sub-Registrar / DEO",
+            "send an erratum for a memorandum/copy under Rule 165 / 168, file it in Supplement Book 1 Part I, correct indexes with cross-references, and re-scan / verify corrected pages where the module requires it",
+            "cross-office copies and citizen CC/EC views show the corrected record",
+        ),
+    ]:
+        add_story(doc, *s)
+
+    add_heading_custom(doc, "Cross-reference Rule 123", level=3)
+    for s in [
+        (
+            "US-123-01",
+            "Sub-Registrar / DEO",
+            "auto-prompt and save Rule 123(i) mutual footnotes on both entries (Document No., volume, page, supplement part) when registering a deed that revokes, cancels, rectifies or modifies an earlier registered or Rule 17-filed document",
+            "anyone reading either entry sees the linked revoke/modify relationship",
+        ),
+        (
+            "US-123-02",
+            "Sub-Registrar / DEO",
+            "on receipt of a Revenue Officer or Court communication that similarly revokes / cancels / rectifies / modifies a filed or registered paper, file the communication and apply the same Rule 123 cross-notes",
+            "institutional modifications are visible from both the old and new records",
+        ),
+        (
+            "US-123-03",
+            "Sub-Registrar / DEO",
+            "for immovable-property cases, write the corresponding Index No. II note, and when an index item is rectified write the note in Index I/II/III/IV under Rule 123(ii)",
+            "property and name indexes stay aligned with the register footnotes",
+        ),
+        (
+            "US-123-04",
+            "citizen / search user",
+            "see Rule 123 cross-references when I search, take EC, or view a certified copy of either the original or the later modifying document",
+            "I am not misled by an obsolete register entry that was later modified",
+        ),
+    ]:
+        add_story(doc, *s)
+
+    add_heading_custom(doc, "7.7 Open notes (from source)", level=2)
+    add_bullet(
+        doc,
+        "Rule 123 mutual footnotes are distinct from Sec. 68(2) rectification of wrong book/office.",
+    )
+    add_bullet(
+        doc,
+        "Pre-registration “send back for correction” in the SR approval workflow (28-08 discussion) is a separate intake path.",
+    )
+    add_bullet(
+        doc,
+        "Sec. 22-B/22-C forged/prohibited cancellation (Kar. Amd. 2023) is a parallel track, not the Rule 123 revoke/modify note.",
+    )
+
+    # =====================================================================
+    # 09-09-2026 to 10-09-2026 (Sr.19) — Integration / exemption / Court / Liability
+    # =====================================================================
+    page_break(doc)
+    add_heading_custom(
+        doc,
+        "8. 09-09-2026 to 10-09-2026 — Integration, Exemption, Court entry & Liability",
+        level=1,
+    )
+    add_meta_table(
+        doc,
+        [
+            ["Date", "09-09-2026 to 10-09-2026"],
+            [
+                "Topics",
+                "Integration module; Integration exemption; Court entry; Liability — Schedule Sr.19; modules #3, #16, #17, #18",
+            ],
+            [
+                "Attendees",
+                "Kaveri IT Cell, AIGR Computers team, Domain Expert and committee members",
+            ],
+            [
+                "Version",
+                "1.1 (15-09-2026) — Acts, sections, Rules, notifications, pain points and user stories for Integration, Integration exemption, Court entry and Liability",
+            ],
+            [
+                "Source",
+                "Document_Registration_requirement_09092026_v1.1.docx",
+            ],
+        ],
+    )
+    add_para(
+        doc,
+        "Scope: (1) Integration module — post-registration push to Bhoomi / RDPR / related systems via Integration Report; "
+        "(2) Integration exemption — deed / Sec. 90 / stamp-exempt classes that skip or specially handle external push; "
+        "(3) Court entry — Sec. 89 / Rule 17 Court certificates and Court-order capture; "
+        "(4) Liability — DR liability filing that must appear correctly on EC / property search.",
+        size=10.5,
+        space_after=8,
+    )
+
+    add_heading_custom(doc, "8.1 Primary Acts", level=2)
+    add_table(
+        doc,
+        ["Act / instrument", "Role", "Relevance to topics"],
+        [
+            [
+                "The Registration Act, 1908 (Central Act 16 of 1908)",
+                "Primary — Court entry; Integration context; Liability visibility",
+                "Sec. 89 — Court/revenue certificates filed in Book 1; Secs. 64–67 — outbound memo pattern for integration; Sec. 90–91 — Govt document exemption; Sec. 57 / EC — liability visibility",
+            ],
+            [
+                "The Karnataka Registration Rules, 1965",
+                "Primary (Rules)",
+                "Rule 17 Court/institutional supplements; Rules 148–154 EC; Rules 184/188 Court-ordered registration; Rule 166 Court decree copies",
+            ],
+            [
+                "The Karnataka Stamp Act, 1957 (+ Schedule)",
+                "Related — Integration exemption (stamp-exempt instruments)",
+                "Sec. 3 / Schedule exemptions — 100% stamp-exempt flows and receipt/integration handling",
+            ],
+        ],
+        col_widths=[2.4, 1.8, 2.6],
+    )
+
+    add_heading_custom(doc, "8.2 Relevant sections", level=2)
+    add_heading_custom(doc, "8.2.1 Integration module", level=3)
+    add_table(
+        doc,
+        ["Section", "Topic", "BRD / system relevance"],
+        [
+            ["Secs. 64–67", "Memoranda / copies to other offices", "Outbound transmission pattern for Bhoomi / RDPR J-slip / XML push"],
+            ["Sec. 60–61", "Certificate of registration; completion", "Integration trigger after registration complete"],
+            ["Sec. 51 / Indexes", "Register books and indexes", "Source of truth for Integration Report payloads"],
+        ],
+        col_widths=[1.4, 2.6, 2.8],
+    )
+    add_heading_custom(doc, "8.2.2 Integration exemption", level=3)
+    add_table(
+        doc,
+        ["Section", "Topic", "BRD / system relevance"],
+        [
+            ["Sec. 90", "Exemption of certain Govt documents from registration", "Candidates for Integration exemption / non-push"],
+            ["Sec. 91", "Inspection and copies of Sec. 90 documents", "Exempted records remain inspectable"],
+            ["Sec. 17 proviso / State exemptions", "State may exempt certain leases etc.", "Configurable exemption master"],
+            ["Stamp Act Sec. 3 + Schedule", "Stamp-exempt / remitted instruments", "Exempt registration without false challan/integration failure"],
+        ],
+        col_widths=[1.8, 2.4, 2.6],
+    )
+    add_heading_custom(doc, "8.2.3 Court entry", level=3)
+    add_table(
+        doc,
+        ["Section", "Topic", "BRD / system relevance"],
+        [
+            ["Sec. 89(2)", "Court certificate of sale — file in Book 1", "Primary Court entry statutory path"],
+            ["Sec. 89(1),(3),(4)", "Loan / Revenue sale certificates filed in Book 1", "Parallel institutional entry paths"],
+            ["Sec. 17", "Decrees and orders of Court", "Court decrees presented or filed as directed"],
+            ["Secs. 75 / 77", "Registrar or Court order directing registration", "Court-ordered registration status"],
+        ],
+        col_widths=[1.4, 2.6, 2.8],
+    )
+    add_heading_custom(doc, "8.2.4 Liability", level=3)
+    add_table(
+        doc,
+        ["Section", "Topic", "BRD / system relevance"],
+        [
+            ["Sec. 57 / Rules 148–154", "Search and Certificate of encumbrance", "Liability filings must appear/remove correctly on EC"],
+            ["Sec. 68 / Rule 123", "DR control; cross-notes on modification", "Liability order attach / remove under DR control"],
+            ["Stamp Act — charge context", "Rights/liabilities; undervaluation references", "Confirm exact statutory instrument for Liability Filing with Domain Expert"],
+        ],
+        col_widths=[1.8, 2.4, 2.6],
+    )
+
+    add_heading_custom(doc, "8.3 Relevant Rules — Karnataka Registration Rules, 1965", level=2)
+    add_table(
+        doc,
+        ["Rule", "Requirement", "System feature"],
+        [
+            ["Rule 17 (esp. Part I)", "Court / Revenue sale certificates; institutional filings", "Court entry + institutional intake"],
+            ["Rules 148–154", "Certificate of encumbrance", "Liability notes on EC"],
+            ["Rules 184 / 188", "Registration ordered by Registrar or Court", "Court-directed registration"],
+            ["Rule 166", "Copy of memo or decree of a Court", "Court decree copy handling"],
+            ["Rule 123", "Cross-notes when communication modifies earlier entry", "Related Court / liability communications"],
+            ["Rules 202 / Sec. 88", "Govt officers exempt from personal appearance", "Related institutional presentant exemption"],
+        ],
+        col_widths=[1.8, 2.6, 2.4],
+    )
+
+    add_heading_custom(doc, "8.4 Notifications / amendments", level=2)
+    add_table(
+        doc,
+        ["Instrument", "Effect", "Topics"],
+        [
+            [
+                "The Karnataka Registration Rules, 1965 (under Registration Act Sec. 69)",
+                "Parent rules for Rule 17 Court/institutional filing and EC rules",
+                "Court entry; Liability (EC)",
+            ],
+            [
+                "RD 403 ESR 85 / RD/46/MNMU/2025 (Table of Fees under Sec. 78)",
+                "Fees for filing / copies / EC; exempted instruments fee handling",
+                "Integration exemption; Court entry",
+            ],
+            [
+                "Bhoomi / RDPR / land-record integration MoU & technical specs",
+                "J-slip / XML push contracts, retry, partial upload",
+                "Integration module",
+            ],
+            [
+                "Stamp Schedule / exemption notifications",
+                "100% stamp-exempt document classes and receipt display rules",
+                "Integration exemption",
+            ],
+        ],
+        col_widths=[2.6, 2.6, 1.6],
+    )
+
+    add_heading_custom(doc, "8.5 Pain points", level=2)
+    add_para(doc, "Source: ServiceDeskIssuesList.xlsx (OverallList + Categorized).", size=10.5, space_after=4)
+    add_heading_custom(doc, "Integration module", level=3)
+    for rid, subj in [
+        ("11870 / 18110", "Integration Report / Document number not reflected"),
+        ("16847 / 19405 / 19669", "Unable to push to Bhoomi / J-slip not showing in Integration Report"),
+        ("23558 / 23977 / 29214 / 30472", "Document not in Integration Report"),
+        ("28334 / 30496 / 30742", "RDPR/XML/J-slip failures from Integration Report"),
+        ("Categorized Bhoomi", "J-slip not generated / partial upload / data not found (large pending counts)"),
+    ]:
+        add_bullet(doc, subj, bold_prefix=f"{rid}: ")
+    add_heading_custom(doc, "Integration exemption", level=3)
+    add_bullet(
+        doc,
+        "Stamp duty 100% exempted documents — challan reference not showing in receipt details",
+        bold_prefix="31768: ",
+    )
+    add_heading_custom(doc, "Court entry", level=3)
+    for rid, subj in [
+        ("5184", "Court entry not reflecting in citizen login after dept entry"),
+        ("21896", "Court entry to be cancelled"),
+        ("27219 / 27231", "Court Order Issue"),
+        ("29744", "Court order Sy. No. mismatch between FDA and SR login"),
+        ("94903 / 93570…", "OTP / cancel court case failures (Categorized)"),
+    ]:
+        add_bullet(doc, subj, bold_prefix=f"{rid}: ")
+    add_heading_custom(doc, "Liability", level=3)
+    for rid, subj in [
+        ("20687", "Liability Filing issue"),
+        ("29127", "Liability financial year issue / FY not reflecting in DR login"),
+        ("29332", "Liability need remove in EC"),
+        ("30317", "Liability Entry wrongly displaying for different Sy. No. / village"),
+        ("95242", "Wrong district SRO names while filing Liability Note"),
+        ("95253 / 94932…", "Kaveri 1 documents not fetched for Liability Filing"),
+        ("94109", "Unable to fetch liability data in SR and DR login"),
+    ]:
+        add_bullet(doc, subj, bold_prefix=f"{rid}: ")
+
+    add_heading_custom(doc, "8.6 User stories", level=2)
+    add_para(
+        doc,
+        "Taken from Document_Registration_requirement_09092026_v1.1.docx §6 "
+        "(Schedule Sr.19 — modules #3, #16, #17, #18).",
+        size=10,
+        space_after=8,
+    )
+    add_heading_custom(doc, "Integration module", level=3)
+    for s in [
+        (
+            "US-INT-01",
+            "Sub-Registrar / DEO",
+            "see a registered document in the Integration Report after registration completes and push it to Bhoomi / RDPR (or other configured systems) with correct survey, party and office payloads",
+            "land-record systems receive a complete J-slip / XML without manual rework",
+        ),
+        (
+            "US-INT-02",
+            "Sub-Registrar / support user",
+            "re-push or diagnose a failed / missing Integration Report entry (partial upload, reference number not generated, document not listed)",
+            "stuck integrations can be cleared without data loss",
+        ),
+        (
+            "US-INT-03",
+            "system / integration service",
+            "build outbound payloads from the registered Book 1 entry and indexes (Secs. 51, 60–61 pattern) and acknowledge success/failure per target system",
+            "audit trail shows what was sent and when",
+        ),
+    ]:
+        add_story(doc, *s)
+    add_heading_custom(doc, "Integration exemption", level=3)
+    for s in [
+        (
+            "US-IEX-01",
+            "Application Admin / Domain Expert",
+            "maintain an Integration exemption master (deed type / article / Sec. 90 class / stamp-exempt class) so selected registrations skip external push",
+            "exempt instruments do not clog Integration Report or fail on missing challan data",
+        ),
+        (
+            "US-IEX-02",
+            "Sub-Registrar / citizen",
+            "complete registration of a 100% stamp-duty exempt document with clear receipt details and without false challan / integration errors",
+            "exempt flows finish cleanly",
+        ),
+    ]:
+        add_story(doc, *s)
+    add_heading_custom(doc, "Court entry", level=3)
+    for s in [
+        (
+            "US-CRT-01",
+            "Court / departmental user",
+            "enter or file a Court sale certificate / Court order under Sec. 89(2) and Rule 17 so it is stored in the correct Book 1 supplement",
+            "the Court entry is searchable and linked to the right property",
+        ),
+        (
+            "US-CRT-02",
+            "Sub-Registrar / FDA",
+            "capture Court order property particulars (survey, village, parties) once so the same data appears consistently in citizen and SR logins",
+            "citizens see the Court entry and wrong Sy. No. mismatches are avoided",
+        ),
+        (
+            "US-CRT-03",
+            "Sub-Registrar",
+            "cancel or correct a Court entry when authorised, with OTP / audit where required",
+            "erroneous Court entries do not remain visible on citizen search",
+        ),
+        (
+            "US-CRT-04",
+            "citizen / presentant",
+            "re-present a document for registration when a Court (or Registrar) has ordered registration under Rules 184 / 188",
+            "Court-directed registration completes with the correct endorsement",
+        ),
+    ]:
+        add_story(doc, *s)
+    add_heading_custom(doc, "Liability", level=3)
+    for s in [
+        (
+            "US-LIA-01",
+            "District Registrar",
+            "file a Liability note / order against the correct district, SRO, village and survey number for a chosen financial year",
+            "the liability attaches only to the intended property",
+        ),
+        (
+            "US-LIA-02",
+            "Sub-Registrar / citizen (EC user)",
+            "see active Liability filings on Certificate of encumbrance / property search (Rules 148–154) and not see removed or wrong-property liabilities",
+            "EC reflects true departmental liability status",
+        ),
+        (
+            "US-LIA-03",
+            "District Registrar / Sub-Registrar",
+            "search Liability by document number or property number, including legacy Kaveri 1 records, and remove or correct a wrongly filed liability",
+            "FY / jurisdiction / fetch failures do not block liability maintenance",
+        ),
+    ]:
+        add_story(doc, *s)
+
+    add_heading_custom(doc, "8.7 Open notes (from source)", level=2)
+    add_bullet(
+        doc,
+        "Integration push to Bhoomi/RDPR is largely departmental/technical; statutory anchors are Secs. 64–67 (outbound memo pattern) and post–Sec. 60 completion.",
+    )
+    add_bullet(
+        doc,
+        "Confirm with Domain Expert (1) the authoritative exemption matrix for Integration exemption, and (2) the exact legal instrument governing Liability Filing beyond EC practice under Rules 148–154.",
+    )
+    add_bullet(
+        doc,
+        "FRUITS bank e-filing remains primarily Sr.16 / Rule 17 Part IV–V; only overlapping Court/institutional filing is in scope here.",
+    )
+
+    # =====================================================================
+    # 11-09-2026 — Investigation & Search; Verify Document
+    # =====================================================================
+    page_break(doc)
+    add_heading_custom(
+        doc,
+        "9. 11-09-2026 — Investigation and Search; Verify Document",
+        level=1,
+    )
+    add_meta_table(
+        doc,
+        [
+            ["Date", "11-09-2026"],
+            [
+                "Topics",
+                "Investigation and Search; Verify Document (registered document / issued digital e-stamp) — Schedule Sr.20; modules #20, #26",
+            ],
+            [
+                "Attendees",
+                "Kaveri IT Cell, AIGR Computers team, Domain Expert and committee members",
+            ],
+            [
+                "Version",
+                "1.1 (15-09-2026) — Acts, sections, Rules, notifications and user stories for Investigation & Search and Verify Document (registered deed / e-stamp)",
+            ],
+            [
+                "Source",
+                "Document_Registration_requirement_11092026_v1.1.docx",
+            ],
+        ],
+    )
+
+    add_para(
+        doc,
+        "Scope: (1) Investigation and Search of registration records (Books / indexes / EC / certified copies), "
+        "including access usable by Investigation agencies under Sec. 57; (2) Verify Document — verification of an "
+        "already-registered document and of an issued digital e-stamp certificate. EC functional issues (Sr.26) are "
+        "out of scope except as the search path under Rules 148–154.",
+        size=10.5,
+        space_after=8,
+    )
+
+    add_heading_custom(doc, "9.1 Primary Acts", level=2)
+    add_table(
+        doc,
+        ["Act / instrument", "Role", "Relevance to topics"],
+        [
+            [
+                "The Registration Act, 1908 (Central Act 16 of 1908)",
+                "Primary — Investigation & Search; Verify registered document",
+                "Sec. 57 — inspection of Books 1–2 / indexes and certified copies (open to any person, including Investigation agencies, for Book 1–2); Secs. 51, 54–55 — register-books and indexes; Secs. 78–79 — fees; Sec. 57(5) — certified copy admissible to prove contents",
+            ],
+            [
+                "The Karnataka Registration Rules, 1965",
+                "Primary (Rules) — Investigation & Search",
+                "Chapter XX (Rules 135–154) — Inspection, Searches and Grant of Certified Copies",
+            ],
+            [
+                "The Karnataka Stamp Act, 1957",
+                "Related — Verify e-stamp / stamp authenticity",
+                "Stamp / impressed-stamp framework; Sec. 10 payment modes; Secs. 33–34 examination of instruments not duly stamped",
+            ],
+            [
+                "Karnataka Stamp (Payment of Stamp Duty by means of e-Stamping) Rules, 2009",
+                "Primary — Verify Document (digital e-stamp)",
+                "Rule 11 — CRA software (UIN, search/view, lock); Rule 24 — details on CRA website; Rules 29–30 — SRO/DR/DC verify UIN and lock certificate",
+            ],
+        ],
+        col_widths=[2.4, 1.8, 2.6],
+    )
+
+    add_heading_custom(doc, "9.2 Relevant sections", level=2)
+    add_heading_custom(doc, "9.2.1 Investigation and Search", level=3)
+    add_table(
+        doc,
+        ["Section", "Topic", "BRD / system relevance"],
+        [
+            [
+                "Sec. 57(1)",
+                "Inspection of Books 1 & 2 and Index to Book 1; certified copies",
+                "Core Investigation & Search — any person (incl. Investigation agencies) may inspect / obtain copies on payment of fee",
+            ],
+            [
+                "Sec. 57(2)–(3)",
+                "Copies from Book 3 and Book 4 — restricted persons",
+                "Search/copy for Investigation agencies limited unless applicant is executant / claimant / agent / representative",
+            ],
+            [
+                "Sec. 57(4)",
+                "Search of Book 3 / 4 entries only by registering officer",
+                "Officer-mediated search workflow for restricted books",
+            ],
+            [
+                "Sec. 57(5)",
+                "Certified copies signed & sealed; admissible to prove contents",
+                "Legal effect of Verify Document / certified extract of a registered deed",
+            ],
+            [
+                "Sec. 51",
+                "Register-books to be kept in the several offices",
+                "Book structure that Investigation & Search and Verify Document query",
+            ],
+            [
+                "Secs. 54–55",
+                "Indexes to be prepared and their particulars",
+                "Name / property indexes used in search and EC preparation",
+            ],
+            [
+                "Secs. 78–79",
+                "Fees table; publication; remittance",
+                "Search / inspection / copy fee masters (Table of Fees under Sec. 78)",
+            ],
+            [
+                "Sec. 91",
+                "Inspection and copies of maps / surveys / certain Govt documents",
+                "Related public-record inspection path (fee as notified)",
+            ],
+        ],
+        col_widths=[1.4, 2.6, 2.8],
+    )
+
+    add_heading_custom(
+        doc,
+        "9.2.2 Verify Document (registered document / digital e-stamp)",
+        level=3,
+    )
+    add_table(
+        doc,
+        ["Section", "Topic", "BRD / system relevance"],
+        [
+            [
+                "Sec. 57 (Registration Act)",
+                "Certified copy / inspection as proof of registered document",
+                "Citizen / officer / agency verifies that a deed was registered and reads its registered contents",
+            ],
+            [
+                "Sec. 60 (Registration Act)",
+                "Certificate of registration endorsed on the document",
+                "Verify that the instrument bears a valid registration certificate (number, book, page)",
+            ],
+            [
+                "Stamp Act — Sec. 10 / payment modes",
+                "How stamp duty may be paid (incl. e-stamp)",
+                "Context for verifying that duty was paid by an issued digital e-stamp certificate",
+            ],
+            [
+                "Stamp Act — Secs. 33–34",
+                "Examination / impounding; inadmissibility if not duly stamped",
+                "SRO must satisfy that the instrument (incl. via e-stamp) is duly stamped before acting on / registering it",
+            ],
+        ],
+        col_widths=[1.8, 2.4, 2.6],
+    )
+
+    add_heading_custom(doc, "9.3 Relevant Rules", level=2)
+    add_heading_custom(
+        doc,
+        "9.3.1 Investigation and Search — Karnataka Registration Rules, 1965",
+        level=3,
+    )
+    add_table(
+        doc,
+        ["Rule", "Requirement", "System feature"],
+        [
+            [
+                "Rule 135–136 (Ch. XX)",
+                "Applications in writing; no inspection of unregistered documents",
+                "Investigation / search intake; block search of documents still under registration",
+            ],
+            [
+                "Rule 137–139",
+                "Search fee in advance; Form No. 22 applications; fee registers",
+                "Search application, fee collection and unsuccessful-search handling",
+            ],
+            [
+                "Rule 140–142",
+                "Endorsement on copies under Sec. 57; post forwardal; copy fee rules",
+                "Certified-copy issue path used for Verify Document of registered deeds",
+            ],
+            [
+                "Rule 144",
+                "Grant of copies of deeds in Book No. 4",
+                "Restrict copy grant to persons interested as per Sec. 57(3)",
+            ],
+            [
+                "Rule 146–147",
+                "Application for making a search; no Court-fee stamp on search apps",
+                "Party vs office-assisted search; result notation on application",
+            ],
+            [
+                "Rules 148–154",
+                "Certificate of encumbrance — particulars, language, multi-office, dual search",
+                "EC search workflow (property / person list) feeding Investigation & Search",
+            ],
+            [
+                "Rules 155–156",
+                "Production of Register books in Court; safe-custody fees via Court",
+                "Court / agency production of original register books when required",
+            ],
+        ],
+        col_widths=[1.8, 2.6, 2.4],
+    )
+
+    add_heading_custom(
+        doc,
+        "9.3.2 Verify Document — e-Stamping Rules, 2009 & Registration Rules",
+        level=3,
+    )
+    add_table(
+        doc,
+        ["Rule", "Requirement", "System feature"],
+        [
+            [
+                "e-Stamp Rules — Rule 11(a),(j),(n),(o)",
+                "Unique identification number; barcode/security; departmental search/view; details on CRA server",
+                "Verify Document — lookup of issued digital e-stamp by UIN / barcode",
+            ],
+            [
+                "e-Stamp Rules — Rule 11(l)–(m)",
+                "Disable/lock e-stamp; cancel spoiled/unused certificates",
+                "Prevent reuse after verification; cancel unused certificates",
+            ],
+            [
+                "e-Stamp Rules — Rule 24",
+                "Details of issued e-stamp Certificate to be on website / CRA server",
+                "Public / authorised online verification of issued e-stamp",
+            ],
+            [
+                "e-Stamp Rules — Rule 28",
+                "UIN of e-stamp to be written on each page of the instrument",
+                "Capture / display UIN on the deed for verification at presentation",
+            ],
+            [
+                "e-Stamp Rules — Rule 29",
+                "Registering officer to verify details of e-stamp certificate",
+                "Core Verify Document step — SRO / DR / DC of Stamps enters UIN and matches certificate details",
+            ],
+            [
+                "e-Stamp Rules — Rule 30",
+                "Locking of e-stamp certificate after verification",
+                "After successful verify, lock UIN to prevent repeated use",
+            ],
+            [
+                "Registration Rules — Rule 140 / Sec. 57(5)",
+                "True-copy endorsement on certified copies of registered deeds",
+                "Verify registered document via certified copy with statutory seal",
+            ],
+        ],
+        col_widths=[2.0, 2.5, 2.3],
+    )
+
+    add_heading_custom(doc, "9.4 Notifications / amendments", level=2)
+    add_table(
+        doc,
+        ["Instrument", "Effect", "Topics"],
+        [
+            [
+                "The Karnataka Registration Rules, 1965 (under Registration Act Sec. 69)",
+                "Parent subordinate legislation for Inspection, Searches and Certified Copies",
+                "Investigation & Search",
+            ],
+            [
+                "RD 403 ESR 85 / RD/46/MNMU/2025 (registration fee table under Sec. 78)",
+                "Search / inspection / certified-copy / EC fees",
+                "Investigation & Search — fee masters",
+            ],
+            [
+                "Karnataka Stamp (Payment of Stamp Duty by means of e-Stamping) Rules, 2009",
+                "Digital e-stamp issue, website publication, SRO verify & lock",
+                "Verify Document (e-stamp)",
+            ],
+            [
+                "Registration Act Sec. 57 practice / CC workflow",
+                "Certified copies and Book 1–2 inspection as the statutory verify path for already-registered documents",
+                "Verify Document (registered deed)",
+            ],
+        ],
+        col_widths=[2.6, 2.6, 1.6],
+    )
+
+    add_heading_custom(doc, "9.5 Pain points", level=2)
+    add_para(
+        doc,
+        "Limited direct ServiceDesk mapping for this topic; one related ticket noted:",
+        size=10.5,
+        space_after=4,
+    )
+    add_bullet(
+        doc,
+        "68 correction not able to verify document (Request ID 19748) — verify-document step failing in a correction flow.",
+        bold_prefix="Verify Document: ",
+    )
+
+    add_heading_custom(doc, "9.6 User stories", level=2)
+    add_para(
+        doc,
+        "Taken from Document_Registration_requirement_11092026_v1.1.docx §5 "
+        "(derived from Schedule Sr.20 Acts, sections and Rules).",
+        size=10,
+        space_after=8,
+    )
+
+    add_heading_custom(doc, "Investigation and Search", level=3)
+    for s in [
+        (
+            "US-IS-01",
+            "citizen / Investigation agency / other authorised person",
+            "apply for inspection or search of Book 1–2 and Index to Book 1 under Sec. 57(1) and Rules 135–139 (Form No. 22), paying search fee in advance",
+            "I can locate registered entries affecting a person or property",
+        ),
+        (
+            "US-IS-02",
+            "Sub-Registrar / DEO",
+            "run office-assisted search under Rule 146, record the result on the application, and issue a certificate of encumbrance or person-wise list under Rules 148–154",
+            "search results and EC / list outputs are complete and auditable",
+        ),
+        (
+            "US-IS-03",
+            "citizen / Investigation agency",
+            "obtain a signed and sealed certified copy under Sec. 57(5) and Rule 140 when I am entitled",
+            "the copy is admissible to prove the contents of the registered document",
+        ),
+        (
+            "US-IS-04",
+            "Sub-Registrar",
+            "refuse inspection of unregistered documents (Rule 136) and mediate Book 3/4 searches only for entitled persons (Sec. 57(2)–(4); Rule 144)",
+            "restricted books stay protected while public books remain searchable",
+        ),
+        (
+            "US-IS-05",
+            "Court / Investigation agency (via Court)",
+            "requisition production of register books under Rules 155–156 when originals are required",
+            "safe custody and return of books are tracked",
+        ),
+    ]:
+        add_story(doc, *s)
+
+    add_heading_custom(doc, "Verify Document (registered document / digital e-stamp)", level=3)
+    for s in [
+        (
+            "US-VD-01",
+            "citizen / officer / Investigation agency",
+            "verify that a document was registered by inspecting Book 1–2 or obtaining a Sec. 57 certified copy, and check the Sec. 60 registration certificate particulars",
+            "I can confirm authenticity of an already-registered deed",
+        ),
+        (
+            "US-VD-02",
+            "Sub-Registrar / District Registrar / DC of Stamps",
+            "verify an issued digital e-stamp by entering its unique identification number under e-Stamp Rule 29 and matching details on the CRA system / website (Rules 11, 24)",
+            "duty payment on the instrument is confirmed before registration proceeds",
+        ),
+        (
+            "US-VD-03",
+            "Sub-Registrar / District Registrar / DC of Stamps",
+            "lock the e-stamp certificate after successful verification under Rule 30 (and Rule 11(l))",
+            "the same UIN cannot be reused on another instrument",
+        ),
+        (
+            "US-VD-04",
+            "presentant / DEO",
+            "capture the e-stamp UIN on each page of the instrument as required by Rule 28 so that verification can be completed at presentation",
+            "verify-and-lock can run without missing UIN data",
+        ),
+        (
+            "US-VD-05",
+            "authorised CRA / departmental user",
+            "search and view any e-stamp certificate and cancel spoiled/unused certificates under Rule 11(n),(m)",
+            "e-stamp inventory and authenticity checks are available to authorised officers",
+        ),
+    ]:
+        add_story(doc, *s)
+
+    add_heading_custom(doc, "9.7 Open notes (from source)", level=2)
+    add_bullet(
+        doc,
+        "Investigation agencies are not a separate named class in Acts_Rules/Document; Book 1–2 inspection under Sec. 57(1) applies to any person. Book 3/4 remain restricted.",
+    )
+    add_bullet(
+        doc,
+        "Stamp Act Secs. 67 / 67-B (departmental stamp inspection / premises search) are revenue-officer powers, not Investigation-agency search, and were not expanded in the daily note.",
+    )
+    add_bullet(
+        doc,
+        "EC current issues & process improvements remain Schedule Sr.26; only the Rules 148–154 search path is referenced under Sr.20.",
+    )
+
     # ----- End note -----
     page_break(doc)
     add_heading_custom(doc, "Appendix — Scope note", level=1)
@@ -2266,11 +3278,11 @@ def build():
     )
     add_bullet(
         doc,
-        "User stories for 25-08 are aligned to BRD_User_Management_v4.23 (ID | Actor | Story | Acceptance). User stories for 27-08, 28-08 and 07–08 Sep were derived from discussion sections / Acts-Rules where the source notes did not include a User Stories section; 01-09 and 02-09 user stories are taken from the source documents.",
+        "User stories for 25-08 are aligned to BRD_User_Management_v4.23 (ID | Actor | Story | Acceptance). User stories for 27-08, 28-08 and 07–08 Sep were derived from discussion sections / Acts-Rules where the source notes did not include a User Stories section; 01-09, 02-09, 08-09 (Sr.18), 09–10 Sep (Sr.19) and 11-09 user stories are taken from the source documents.",
     )
     add_bullet(
         doc,
-        "Pain-point ticket numbers are as recorded in the source daily reports / ServiceDesk mapping (not supplied for 07–08 Sep 2026).",
+        "Pain-point ticket numbers are as recorded in the source daily reports / ServiceDesk mapping (limited for 07–08 Sep Appeal/Will; detailed for 08-09 Sr.18, 09–10 Sep Sr.19 and 11-09).",
     )
 
     try:

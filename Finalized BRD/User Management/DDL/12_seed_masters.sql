@@ -1,7 +1,7 @@
 -- =============================================================================
 -- 12 · Seed data — admin-maintained reference masters
--- Companion to ERD-K3-UM-001 v2.2 / BRD_User_Management_v4.18
--- Source: exact seed / example rows quoted in the BRD (Sections 6.5.1–6.5.7).
+-- Companion to ERD-K3-UM-001 v2.3 / BRD_User_Management_v1.0 (11-Sep-2026)
+-- Source: exact seed / example rows quoted in the BRD (Sections 4.5.1–4.5.7).
 -- Safe to (re-)run: every statement uses ON CONFLICT DO NOTHING.
 -- =============================================================================
 
@@ -127,7 +127,7 @@ INSERT INTO um.post_office_type_allowed (post_code, office_type_code) VALUES
   ('POST-JD-TP', 'HEAD_OFFICE')
 ON CONFLICT (post_code, office_type_code) DO NOTHING;
 
--- Role Master — Role Category = Citizen (Section 6.5.4)
+-- Role Master — Role Category = Citizen (Section 4.5.4)
 INSERT INTO um.role_master (role_name, role_category, division_code, description, is_active) VALUES
   ('Citizen', 'CITIZEN', NULL, 'Default role assigned on instant self-registration; access to citizen portal services', true),
   ('Marriage Applicant', 'CITIZEN', NULL, 'Apply for Hindu Marriage / Special Marriage registration and related citizen actions', true),
@@ -137,7 +137,7 @@ INSERT INTO um.role_master (role_name, role_category, division_code, description
   ('Stamp Duty / Challan Payer', 'CITIZEN', NULL, 'Pay stamp duty / registration fees and view payment history for citizen transactions', true)
 ON CONFLICT (role_name) DO NOTHING;
 
--- Role Master — Role Category = Other Department (Section 6.5.4)
+-- Role Master — Role Category = Other Department (Section 4.5.4)
 INSERT INTO um.role_master (role_name, role_category, division_code, description, is_active) VALUES
   ('Revenue Verification Officer', 'OTHER_DEPARTMENT', NULL, 'Verify land / revenue particulars linked to registration applications (typical parent department: Revenue)', true),
   ('Bhoomi Cross-check User', 'OTHER_DEPARTMENT', NULL, 'Cross-check Bhoomi / RTC data against registration records (typical parent department: Revenue)', true),
@@ -151,7 +151,7 @@ INSERT INTO um.role_master (role_name, role_category, division_code, description
   ('Inter-Department Enquiry User', 'OTHER_DEPARTMENT', NULL, 'Raise / respond to inter-department enquiries on applications (typical parent department: Any (cross-department))', true)
 ON CONFLICT (role_name) DO NOTHING;
 
--- Role Master — Role Category = DSR (Section 6.5.4) — unique role names
+-- Role Master — Role Category = DSR (Section 4.5.4) — unique role names
 INSERT INTO um.role_master (role_name, role_category, division_code, description, is_active) VALUES
   ('ACS / Principal Secretary / Secretary', 'DSR', 'DIV-SECRETARIAT', 'Additional Chief Secretary / Principal Secretary / Secretary — hierarchy root', true),
   ('IGR', 'DSR', 'DIV-TOP-MGMT', 'Inspector General of Registration & Commissioner of Stamps', true),
@@ -242,7 +242,7 @@ SELECT v.post_code, r.role_id FROM (VALUES
 JOIN um.role_master r ON r.role_name = v.role_name
 ON CONFLICT (post_code, role_id) DO NOTHING;
 
--- Sanctioned Posts Master — illustrative example rows (Section 6.5.3)
+-- Sanctioned Posts Master — illustrative example rows (Section 4.5.3)
 INSERT INTO um.sanctioned_post (post_code, office_code, sanctioned_strength, occupied_count) VALUES
   ('POST-ACS-SEC', 'OFF-MS-BLDG', 1, 1),
   ('POST-SR', 'OFF-SRO-YESH', 1, 1),
@@ -328,7 +328,7 @@ BEGIN
   END LOOP;
 END $$;
 
--- Module Master (Section 6.5.6)
+-- Module Master (Section 4.5.6)
 INSERT INTO um.module_master (module_code, module_name, description, is_active) VALUES
   ('MOD-DOC-REG', 'Registration of Documents', 'Registration of documents', true),
   ('MOD-MARRIAGE', 'Marriage Registration', 'Marriage registration (Hindu Marriage and Special Marriage)', true),
@@ -407,13 +407,5 @@ JOIN um.role_master r ON r.role_name = v.role_name
 JOIN um.module_function mf ON mf.function_code = v.function_code
 ON CONFLICT (role_id, function_id) DO NOTHING;
 
--- Security Question predefined list (FR-UM-055) — illustrative; Domain Expert to confirm final wording
-INSERT INTO um.security_question (question_text, is_active, display_order) VALUES
-  ('What is your mother''s maiden name?', true, 1),
-  ('What was the name of your first school?', true, 2),
-  ('What is your favourite teacher''s name?', true, 3),
-  ('What is the name of the town where you were born?', true, 4),
-  ('What was your childhood nickname?', true, 5),
-  ('What is your favourite book?', true, 6),
-  ('What was the make of your first vehicle?', true, 7),
-  ('What is your pet''s name?', true, 8);
+-- FR-UM-055 retired: security questions are not captured. Citizen identity
+-- proofing is Aadhaar e-KYC (FR-UM-085) — no seed rows.

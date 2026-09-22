@@ -1,0 +1,725 @@
+1.1 Functional Architecture
+The diagram below outlines the functional view of the New KAVERI application. The detailed description of each module, process flow and other information of the various modules are given in the latter part of the section. The detailed process flow maps of functional modules are given in Annexure 2.
+ Figure  5: Overview of the Functional Architecture
+
+The various components that shall be exposed to the citizen over the internet/BangaloreOne, Karnataka One/Nemmadi are as follows:
+a. Data Entry - This shall facilitate online basic data entry for the registration of documents, firms and marriages
+b. Scheduling of Appointments - This shall facilitate scheduling of appointments for registration of documents, firms, societies and marriages
+c. Encumbrance Certificate - This shall facilitate online application for Encumbrance Certificate and Online Encumbrance Search
+d. Certified Copies - This shall facilitate online application for certified copies.
+e. Market Valuation and Stamp Duty (SD) & Registration Fee (RF) estimation - This module shall facilitate calculation of Estimated Market Value for the property and also estimate the Stamp Duty and Registration Fee for registration of documents.
+f. Tracking of application status can also be done using the internet.
+The following table describes the relations of services with various channels of delivery.
+Sl.ServiceInputsOutputChannel1Document Registration1. Document / Deed
+2. Stamp duty in the form of cash, DD, Bank Challans, e-Stamping
+3. Registration fees in form of cash, DD, Bank Challans1. Receipt
+2. Registered document 
+3. Certified Copy
+For data entry and appointment scheduling:
+Portal/SRO/B1, K1/Nemmadi
+
+For Registration, Payment and delivery of output:
+SRO/DRO2Marriage Registration1. Application in prescribed form
+2. Declaration (in case of Special Marriage)
+3. Memorandum of Marriages 1. Marriage Certificate
+For application and appointment scheduling:
+Portal/SRO/B1, K1/Nemmadi/Post
+
+For Registration, Payment and delivery of output:
+SRO3
+
+a
+
+
+bIssue of Encumbrance Certificate
+
+As Information
+
+
+As Certificate
+
+
+Form 22 duly filled by applicant
+
+
+Form 22 duly filled by applicant
+
+Encumbrance Records (Unsigned by SR)
+
+
+Encumbrance Certificate (Signed by SR)
+
+Both for application and Delivery:
+Portal/B1, K1/Nemmadi/SRO
+
+For application and Payment:
+Portal/SRO/B1, K1/Nemmadi
+
+For delivery of output:
+SRO/Post/B1, K1/Nemmadi4
+
+a
+
+
+
+bIssue of Certified Copy
+
+As Information
+
+
+
+As Certificate
+
+
+Form 22 duly filled by applicant
+
+
+Form 22 duly filled by applicant
+
+Document Copy (Unsigned)
+
+
+
+Certified Copy (Signed by SR)
+
+Both for application and Delivery:
+Portal/B1, K1/Nemmadi/SRO
+
+For application and Payment:
+Portal/SRO/B1, K1/Nemmadi
+
+For delivery of output:
+SRO/Post/B1, K1/Nemmadi5Firm Registration1. Application form for the service required
+2. Partnership deed copy 
+3. Declaration duly attested1. Certificate of Registration of Firm
+2. Receipt / Acknowledgement
+
+For data entry and appointment scheduling:
+Portal/DRO/B1, K1/Nemmadi
+
+For Registration, Payment and delivery of output:
+DRO6Society Registration1. Application form for the service required
+2. Partnership deed copy 
+3. Declaration duly attested1. Certificate of Registration of society
+2. Receipt / Acknowledgement
+
+For data entry and appointment scheduling:
+Portal/DRO/B1, K1/Nemmadi
+
+For Registration, Payment and delivery of output:
+DROTable 8:  Output, Input and delivery channels for various Citizen Services
+
+1.2 
+List of Modules
+This section details the list of modules to be provided in the Core KAVERI Application and functional requirements for each of them. The proposed process maps and detailed descriptions for individual modules/processes are provided in separately in this document.
+No		Module NameMOD 01Document Registration ModuleMOD 02Marriage Registration ModuleMOD 03Firm Registration ModuleMOD 04Market Valuation, SD & RF Estimation ModuleMOD 05Encumbrance Search ModuleMOD 06Certified Copies ModuleMOD 07Accounting ModuleMOD 08Grievance Redressal Module MOD 09Society Registration ModuleTable 9:  List of Modules
+
+MOD 01: Document Registration1. The system should estimate Estimated Market Value (EMV), stamp duty (SD) and Registration Fee (RF) and generate valuation slip on entry of required parameters.2. The system should display EMV/SD estimation sheet on request by authorized users.3. The system should accept service request at Kiosks in SRO and generate the service token with running serial number. The running serial number will be displayed on the operator's system as well as electronic display board.4. The system should log the service request to the SR in the system.5. The system should display the application processing status both on department system as well as on portal.6. The system should record application details. (Both through web portal as well as system running at SROs). The system should allow upload of e-Form for Registration filled up offline as well.7. The system should notify status of the process to applicants through display on electronic board.8. The system should display application on query. 9. The system should capture payment details. It should detect duplicate entries of payment through same instrument. It should generate and print receipt in duplicate for payment received. System should support integration with any third party payment gateway.10. In case the parties decide to withdraw from the registration process before completion, the system should have the provision for recording the same.11. The system should have the provision for mandatorily Recording reasons for refusal of documents by the SR for registration in case such a situation arises12. The system should display the application details to the SR on his system for scrutiny. It should facilitate the SR scrutiny through appropriate user interface. It should display the checklist of various scrutiny and validations that SR is required to do in course of Registration. The system should record the scrutiny conducted and remarks thereby of the SR against each item in the checklist. The system should not enable further process unless all required checks are conducted by the SR and approved by him. All critical validations and approvals must be reaffirmed by the SR through his response to system generated alerts and messages before moving on to the next step in the process (Such Reaffirmations through system generated alerts is applicable wherever critical validations, authorizations and approvals are built in any process in the new Kaveri system.). The system must automatically and necessarily pop up the encumbrance certificate for at least last 13 years on screen of the SR before admission of the document.13. The system should retrieve data from external databases of Bhoomi, SSLR, ULBs and IT department on providing appropriate input by the SR for validation of property schedule and identification of owner. Web services should be created to do such validation through the proposed application.14. The system should retrieve e-Stamp payment detail from e-Stamp server for validation. Web services should be created to do such validation through the proposed application. 15. The system should capture thumb impression and photograph of parties. It shall record full address of witnesses. The system will match the thumb impression of the current seller against that of the buyer in previous encumbrance record pertaining to transfer of property under registration. It should pop up error message in case of mismatch.16. The system should generate printable summary report based on the entered registration data in read only format with date, place and time stamp. The system should allow generation of printable summary report only on acknowledgement of both presenter and FDA/SDA through scanning of their thumb impressions and subsequent verifications with master in the system. On acknowledgement, system should automatically mail the read only summary report, with date, place and time stamp, to official e-mail id of the department (compulsory) as well as presenter's e-mail id (optional) as provided in the form. The system should also maintain audit trail of the summary report for every registration process with date, place and time stamp along with editor's name and official id.17. The system should generate endorsement as per department's format with Name of SR, time and date stamp. The system should maintain audit trail of the endorsement for every registration process. Printing of the registration Endorsement should be compact and as far as possible it should be printed on single sheet of paper.  There shall not be any scope for keeping unnecessary gap in the sheet on which endorsement is printed. 18. The system should generate unique registration number ending with current financial year for a registration process if successfully completed and after authorization of SR through the system. The authorization by SR will require him to enter his thumb impression in the system which gets validated with master data storing his personal profile including the thumb impression and photograph. Once a registration number is generated the transaction details are locked for editing. It will require a special permission from the administrator to edit a registered data however through appropriate channel and authorization from department.19. The system should enable scan and upload of registered document to the central server (both real time as well as in batch mode at set time periods). The document must be well indexed for easy storage, retrieval and management. When an amendment is made to a registered document through another registered document or filing (under Book 1 - part 1, 3, 4 and 5), a link should be established between the two documents in the system. Whenever an amended document is displayed or printed, the footnote should appear that 'particular document is amended through another document with given reference number as the case may be'. (Such amendment provision is applicable for all kind of registered documents produced as an outcome of firm, marriage and document registration.)20. The system should capture number of pages in the document to be registered and scanned. It should have built in control to ensure exact number of pages in the document to be scanned. It should generate alert in case number of pages scanned vary with original number entered and verified by SR. Similarly, exact number of pages of copy of a registered document must be printed whenever required. Else, error message must be generated. The number of prints and scans associated with a registration must be in direct tight-couple relation with number of registrations. All such prints and scans must be accounted and reconciled through the system on daily basis with the related inventory. (To be managed through Asset/Inventory management module, provided by separate vendor). Wastages, if any, must be accounted under separate head.21. The system should also capture the Scanning Fee based on the number of pages scanned and generate the receipt accordingly through the accounting module. 22. The system should be able to consume data from Bhoomi, MOJINI, urban local bodies, Treasury and Income Tax databases and also transmit 'J-slip' (summary registration data in the form of xml) to Bhoomi database (in case of agricultural property) and Nirmal Nagar/Other ULB/UPOR  or other appropriate database in case of non- agricultural property in the required standard formats. 23. The system should automatically enter respective transaction data into A-Register and appropriate books, index registers and other required registers as soon as a registration process is completed. System should generate a unique running serial number ending with the year for every entry made in the A-Register. (Every service or transactions at SROs are entered in the A-Register.)24. The system should create index of registrations as prescribed for Index I and II. Additionally, it should create index of registrations based on jurisdictions.25. The system should generate MIS reports based on data captured. There should be authorization mechanism for role based access to reports for generation and view. 26. The system should have the provision for calculating any fine / penalty that might be applicable based on relevant business rules and generate receipts for payment through the accounting module.27. The delivery details of registered document must also be captured in the system after returning of original registered document to the concerned party. An acknowledgement form will be generated and printed through the system.
+
+MOD 02: Marriage Registration1.The system should record application details. (Online through web as well as Offline at Marriage Office).2The system should accept payment and captures payment detail.3The system should have mechanism to validate furnished details with external databases (UID, Personal Identification, marriage registers, birth records) 4The system should allow modification/deletion of entered data before registration and after registration with orders from the MO5The system should allow Approval/Rejection of application with mechanism for entering the mandatory remarks in the system and generation of endorsement against the same.6The system should notify MO/FDA/Applicants if application is rejected through e-mail, SMS, notification or endorsement.7The system should record notice of intended marriage in the system both online and offline. 8The system should Display the notice on public portal after authorization of the MO in the system.9The system should generate marriage certificate10The system should capture delivery details once the certificate is issued.11The system should show status of application.12The system should display the application filed for editing by the applicant before registration.13The system should display marriage records on query.14The system should display available date and time for solemnization in case of special marriage.15The system should book a slot for solemnization on request.17The system should capture photographs of couple.18The system should generate MIS reports based on data captured in the system. There should be authorization mechanism for role based access to reports for generation and view.19The system should generate Summary Report for verification of data entered and make provision for correction if any changes found.
+
+MOD 03: Firm Registration / Amendment / Dissolution1The system should record application details. (Online through web as well as Offline at DRO).2The system should Search Firms name and address in its database and give alert if firm with same name as applied for exists. It should not allow registration with existing name and address. The online application form will have the mechanism for the applicant to check for Firms' names that are not feasible.3The system should calculate Firm registration Fee on basis of department's business rules. 4The system should print Acknowledgement and Fee Receipt on updating of payment details in the system.5The system should generate unique Firm Registration Number once the registration process is completed. The authorization by DR will require him to enter his thumb impression in the system which gets validated with master data storing his personal profile including the thumb impression and photograph.6The system should enable updating in register of firms and it's Index in case of request for amendment / dissolution.7The system should enable printing of respective endorsements and certificate based on application type whether registration, amendment or dissolution of Firm.8The system should enable scan and upload of the documents attached with the application.9The system should make automatic accounting entry for each transaction in A-Register10The system should generate MIS reports based on data captured in the system. There should be authorization mechanism for role based access to reports for generation and view.11The system should generate Summary Report for verification of data entered and make provision for correction if any changes found before registration.12The system should also allow filing of documents/information like returns, etc both through web portal as well as offline at DRO.
+
+MOD 04: Market Valuation and Stamp Duty Estimation1The system should fetch survey map from SSLR database on basis of entered property details.2The system should fetch Record of Rights from Bhoomi as well as proposed UPOR database on basis of entered property details.3The system should fetch guidance value from department database for selected location.4The system should Estimate EMV based on guidance value and other parameters declared by the citizen in the online form.5The system should display Questionnaire as online form for classification of document.6The system should capture user responses for classification7The system should classify automatically based on user responses8The system should estimate SD and RF on basis of classification9The system should generate Guidance slip based on estimations. 10The system should accept payment online if fees is prescribed for the information service11The system should record transaction in A Register12The system should generate MIS reports based on data captured in the system. There should be authorization mechanism for role based access to reports for generation and view.
+
+MOD 05: Issue of Encumbrance Certificate (EC)1The system should record EC application details. (Online through web as well as Offline at SRO). The application can be made for information EC which has to be processed instantly through the system search else the application for authenticated EC can be filed through the system. The system should generate application number and log an entry in the view list of concerned SR.2The system should be able to search Index-II database on basis of one or more property identification parameters for generating relevant encumbrance records. The system will maintain index II records for the period where information is available in digital format. The search option should be available both on the intranet as well as the internet.3The system should be able to calculate and collect the fees required for the service on basis of search period. It should generate receipt against the payment.4The system should display the relevant encumbrance records for specified period with an option to the applicant to select one or more entries in the displayed list. On basis of the selection, the system generates EC in the specific format of the department.5The system should allow save / print of generated EC.6The system should automatically make an accounting entry for each fees receipt in A-Register for the service provided.7The system should generate MIS reports based on data captured in the system. There should be authorization mechanism for role based access to reports for generation and view.8The system should have built in authorization by SR through digital signature before generation of authenticated EC. 9The system should be able to generate intimation for the applicant through email/sms/notice.10The system should accept service request at Kiosks in SRO and generate the service token for direct applicants at SRO.
+
+MOD 06: Issue of Certified Copy (CC)1The system should accept service request at Kiosks in SRO and generate the service token.2The system should log the service requests to the SR in the system for both online and direct applicants.3The system should display the application processing status on electronic display board (for direct applicants) and on portal (for online applicants).4The system should record application (Online as well as that manually entered)5The system should calculates fee and postal charges for postal mode of delivery6The system should capture payment details in A-Register in the system.7The system should generate receipt for payment received.8The system should search and retrieve copy of the required document from the central server.9The system should print copy only on confirmation of payment receipt. It should notify applicants through email/sms (for online applicants) /display on electronic board (for direct applicants).10The system should captures delivery details of the certified copy.11The system should enable authorization through digital signature of SR on the retrieved copy which can be accessed at point of request such as Portal/B1, K1/Nemmadi. The system should also allow digital signing of the registered documents for future use so that digitally signed documents are available on the server for remote access and download.12The system should automatically make an accounting entry for each fees receipt for the service provided.13The system should generate MIS reports based on data captured in the system. There should be authorization mechanism for role based access to reports for generation and view. 
+
+MOD 07: Accounting1The system should Post Entry in A-Register whenever a transaction occurs at SRO or through Portal. The transaction status must be recorded in the system. It should record various modes and channels of payments. 2The system should generate Remittance Register on basis of the collections made. The system should be able to segregate the revenue collected on basis of detailed head of accounts, mode of payment etc. specified by the department. 3The system should generate and print challans in pre-defined format for deposit in agency Bank. The system should generate alerts if a recorded payment is not remitted through a challan. 4The system should facilitate entry of bank acknowledgement details such as scroll voucher number, date of realization etc. corresponding to a challan.5The system should ensure remittance tracking using Challan Number, Token No and Bank Scroll Voucher Number.6The system should allow preparation of Account Statement on basis of transaction data recorded in the system.7The system should generate MIS reports based on data captured in the system. There should be authorization mechanism for role based access to reports for generation and view.8The system should reconcile the remittances with the KTC 25 form issued by treasury and in case of discrepancy issue alerts.
+
+MOD 08: Grievance Redressal1The system should record grievance redressal application both through intranet at SRO/DRO as well as through internet via the portal.2The system should route application to corresponding officer based on type of grievance. It should be escalated to appropriate authority based on department business rules and escalation matrix.3The system should display status of the application at processing stages. 4In case of inaction beyond certain period, the system should generate alerts.5The system should record the responses of the addressing officers with appropriate time stamp and audit trail mechanism. The application and responses must be retrievable for post-facto audit if needed.6The System must generate unique identification number for each of the grievances.7The system should generate MIS reports based on data captured in the system. There should be authorization mechanism for role based access to reports for generation and view.
+
+MOD 09: Society Registration / Amendment / Dissolution1 The system should record application details. (Online through web portal as well as Offline at DRO).2 The system should search Society name and address in its database and give alert if society with same name as applied for exists. It should not allow registration with existing name and address. The online application form will have the mechanism for the applicant to check for Societies' names that are not feasible.3 The system should calculate Society registration Fee on basis of department's business rules. 4 The system should print Acknowledgement and Fee Receipt on up-dation of payment details in the system.5 The system should generate unique Society Registration Number once the registration process is completed. The authorization by DR will require him to enter his thumb impression in the system which gets validated with master data storing his personal profile including the thumb impression and photograph.6 The system should enable updation in register of societies and it's Index in case of request for amendment / dissolution.7 The system should enable printing of respective endorsements and certificate based on application type whether registration, amendment or dissolution of Society.8 The system should also allow filing of documents/information like returns, etc both through web portal as well as offline at DRO.
+
+1.3 Detailed Functional Requirements
+This section details the functional requirements for each of the modules listed in the table above and DS&R has made all possible efforts to ensure that the requirements are captured completely. However, there could be few changes (both additions and deletions) to the stated requirements and final functional and system requirements specifications shall be signed-off between the DS&R and the SP prior to commencement of the system development and at the time of approval of SRS. In the initial stages of implementation, department may need to issue requests for some changes and small enhancements despite the sign-off of SRS document. The SP shall cater to such change requests till Go-live stage with no additional cost. 
+1.4 MOD 01 - Document Registration Module 
+
+Functional Requirement SpecificationsStakeholder/ InterfaceRole/ ResponsibilitiesApplicant* Obtains the correct EMV , SD and RF by self through online EMV/SD/RF estimation module on portal
+* Submits the application along with the e-Form and other required details through the portal, makes the payment for appointment fee through the payment gateway and books an appointment in the chosen SRO for registration. He makes a service request in the Kiosk if he avails the service in person at SRO. He has the option to apply in person or online or at BangaloreOne, Karnataka One/Nemmadi centres as well. 
+* Furnishes the document for registration along with required attachments at SR/DR office.
+* The applicant obtains appointment using the portal or BangaloreOne, Karnataka One
+* Presents the document with required testimonials to the SR along with witnesses.
+* Makes the payment of stamp duty and registration fees. If he has paid the stamp duty through Challans or e-Stamp, he produces the proof for same.
+* Signs the summary report, the endorsement, Form 60 - 61, and 81 A declarations.
+* Collects the original signed and sealed copy of the registered document, endorsement and the print out of the scanned document from the system and also the Encumbrance Certificate of the TransactionOperator /FDA/SDA* FDA/SDA/Operator does preliminary verification of document and enclosures. If application is incomplete or incorrect, he refuses the document with proper entries of reasons in system.
+* FDA/SDA/Operator will enter the application data in system, once directed by the SR, if it is not submitted online. 
+* He captures photographs and thumb impressions of the parties.
+* Prints summary report and copy of scanned document
+* Scans the registered document and other relevant documents to be saved along with the registered document.
+* Digitally signs the scanned copy of the registered document along with the other scanned documents to be stored for future reference 
+* Stores the application and other testimonials in SRO SR* Verifies the applications and requests made online/ in person.
+* Directs the FDA/SDA/Operator to enter the application data in the system for applicants in the SRO. The same can be done by SR himself if he so desires.
+* Examines the document and the testimonials.
+* Checks appropriate classification of document.
+* Confirms correctness of EMV, SD and RF.
+* Collects stamp duty and registration fees and updates payment detail. In case of payment of Stamp duty through e-Stamping, the SR will validate the same by entering unique e-Stamp number in the system and fetching the payment detail from e-Stamp server. 
+* Confirms valid presentation of the document, voluntary execution of deed and admission of execution by parties and party identity by the witnesses
+* Verifies the correctness of the photos, thumb impressions of the parties and witnesses, affixed on to the document and registration endorsement, before check and registration of the document.
+* Admits/refuses document for registration.
+* Records reasons in 'Book II' to be maintained in the system, in case the document is refused.
+* Records reasons in 'Minute Book' to be maintained in the system, if the documesnt is kept pending.
+* Registers the document through system.
+* Signs summary report, registration endorsement and the registration certificate.
+* Digitally signs the scanned copy of the registered document which is stored in the system.
+* Returns the registered document to the concerned party after obtaining signed acknowledgement.System* Generates and Displays Estimated Market Value/ valuation slip, stamp duty/Registration Fee.
+* Accepts required information through e-forms in the portal. 
+* Uploads filled up e-Forms 
+* Provides payment gateway to pay Appointment Fee 
+* Shows the available slots for appointment in each SRO and allows for booking of appointments. 
+* Sends the confirmation details of appointment booked through SMS/e-mail etc.
+* Accepts service request at Kiosks in SRO and generates the service token
+* Logs the requests to the SR in the system
+* Displays the application processing status on electronic display board
+* Records application (Online as well as manually entered)
+* Notifies Applicants through display on electronic board
+* Shows status of application offline/online
+* Sends notification through SMS/e-mail on incomplete or incorrect application, cancellation of appointment due to disruptions in service, etc.
+* Displays application on query
+* Captures payment detail
+* Generates receipt for payment received, summary report, unique registration number/Refusal number/pending number/Withdrawal number and endorsement 
+* Captures documents delivery details
+* Print, Scan and Store Form 60,61, 81-A, Affidavit, Form - 1.
+* Retrieve data from external databases of Bhoomi, SSLR, ULB's and Income Tax department
+* Retrieve e-Stamp payment detail from e-Stamp server
+* Enter transaction into A Register and appropriate books and index register.
+* Transmits J-slip to Bhoomi application of the Revenue Department hosted in State Data Centre (SDC)  for agricultural propertyProcess Triggers* Application online 
+* Request for service in Kiosk when applied in person in SRO
+* Application online at B1, K1/Nemmadi centresProcess FlowDocument Registration - Online Application
+1. The applicant will be able to register on the portal with login/password and some basic information including e-mail etc, or use a guest login to initiate any form of application.
+2. The applicant will be allowed to save incomplete applications and access them again through the portal using their login and password and complete the application within a time period.
+3. The applicant logs on to the service delivery portal of the department. He selects the service "Document Registration" from the list of available services. He selects from the list, the SRO in whose jurisdiction the property belongs as well as the SRO where he wants to register the document. The online e-Form for entering the data is displayed. The instruction to fill the application online is available on the page.
+4. The online form will have separate tabs for entering different information type such as Personal detail of parties and witnesses, document details, property details and schedules. The applicant fills up the form and submits online.
+5. The system will validate the application. If the application is invalid or incomplete, or the land is barred from registration as per data received from Bhoomi (Govt land, granted land, etc) system will reject application (before initiating process for booking appointment) and notify the reason through a pop-up message giving the option to the applicant to modify application or exit. If the applicant wants to modify the application, he is redirected to the online form for resubmission. Else he will save/print the "notification for rejection" and exit. 
+6. In case the property to be registered is agricultural the system will retrieve the details of seller name (present owner), extent, etc from Bhoomi database in the backend and display it to the applicant for confirmation. After confirmation the details will be auto populated in the e-forms. 
+7. The applicant can check available time slots in the relevant SROs on the portal and opt for suitable date, time and SRO available for appointment. 
+8. The applicant will then have to pay the required Appointment Fee through the payment gateway provided in the portal for confirmation of appointment.
+9. Upon confirmation the system displays the details of the Appointment and a unique appointment code for printing. The appointment details will also be sent through sms/e-mail.
+10. The citizen can obtain Estimated Market Value, stamp duty and registration fee online before or while filing an application. 
+11. The SR will log on to the system in the SRO. He will find the list of online applications logged to his screen scheduled for the particular day. The parties will visit the SR on specified time and date. They will enter the application number/appointment code in the Kiosk at SRO and mark their presence for presentation of document. The SR will call the parties to present the document on scheduled time. The parties will present to the SR with the documents and required enclosures.
+12. The SR using a checklist prompted by the system will do the following checks:
+o Date of execution and presentation of the deed
+o Admission by parties for voluntary execution of the deed
+o Classification of the document
+o Property locations and schedules mentioned in the deed
+o Check for any Court Orders related to the said property as indicated by the Court Order Module.
+o Verify Estimated Market Value and stamp duty for the given property details (which must be same as mentioned  in deed)
+o Validate payment in case of e-Stamping from the SHCIL server
+o Validation of the testimonials - RTC, Khata, PAN, Revenue sketch, affidavit and Form 1
+o Verify Data entered in the system vis-à-vis the physical documents and testimonials
+o Check for impersonation by matching of thumb records/photograph (current seller with previous buyer in index II record).
+o The system should also be able to integrate with Aadhar system (developed by Unique Identification Authority of India - UIDAI) and interface with it to utilize authentication services/APIs provided by the Aadhar system wherein the biometric/thumb impression captured in the New Kaveri system is sent securely to the Aadhar system and the authentication information is received back for verification. (The details of the requirements for the New Kaveri application to integrate with the Aadhar/UID system are provided in Annexure 4 of this document).
+o Checks for duplicate and multiple registration done through index II validation online for the same schedule of property
+o Check if the property is banned from registration by law or court order by checking the information provided by the Court Order Entry Module.
+o The SR will also validate the data furnished in RTC, survey sketches, Khata and PAN through online access of databases of Bhoomi, SSLR, concerned ULB and IT department. (However, this integration is subject to readiness of the databases of concerned departments. The system should have the feature to validate the document with these external databases whenever they are made available.)
+13. On complete validation, the SR will admit the document for registration and ask the parties to pay the stamp duty and registration fees. The payment details are entered in A-Register in the system by SR and the generated receipt is given to the presenters. The buyer signs the Form 60/61 and Form 81-A as applicable and submits it to SRO. SR asks the FDA/SDA/operator to capture photograph and thumb impression of the parties.
+14. The SR will not accept/admit the document for registration in following scenarios:
+In case:
+a. The document is refused for registration as the SR finds it barred from registration after his Scrutiny. An entry is made in book 2 as reason for refusal. He endorses the word "Registration Refused" on the document. On application made by executants or claimants, SR gives him a copy of the reason so recorded without any payment. The entry is also made in the minute book. In case of refusal to accept the document, the system shall generate the refusal number and mandatorily record the reason for refusal in the system. The SR shall record presentation and endorsement. 
+b. In case of refusal to admit the document is kept pending as it deviates from normal registration. System generates a unique pending number along with the entry of reasons for pendency in the minute book.
+c. The document shall be impounded/kept pending if the presenter does not pay the stamp duty payable as per the Karnataka Stamp Act 1957/ estimated by SR respectively.  In case of undervaluation, SR makes an entry in the undervaluation register (Register of Section 45A) and keeps the document pending. System generates a pending number along with the entry of reasons for pendency in the minute book. In that case the valuation endorsement slip is given to the presenter and the case is referred to the concerned DR for determination of the proper Market Value.
+d. In case the presenter withdraws the document before final registration, except in case of impounded documents kept pending, the request may be honoured by making an entry in the withdrawal register. (Unless proper stamp duty and penalty is paid, impounded documents are not returned)
+System will have the provision to enable all such functionalities.
+15. The FDA/SDA/operator captures the thumb impression (through scanner) and photograph (through webcam) in the system. The SR then generates the summary report and asks the parties to verify the data contained in it. If any valid error is pointed, SR will check and make necessary corrections in the system. The corrected summary report is again printed by SR and shown to the parties. On affirmation of the parties and upon SR's own satisfaction, the summary report is signed by both the parties and the SR. It is also signed by the FDA/SDA/operator. As directed by SR, FDA/SDA/operator prints the endorsement and give to the parties to verify and sign it. Parties and witnesses sign the endorsement in front of the SR. The SR also signs the endorsement and puts his office seal. 
+16. The SR completes the registration in the system by authenticating using both his digital signature and thumb impression which shall be matched against the database. A unique registration number is generated in the system. An entry is made in the A Register by the system. Index I, Index II Index III and Index IV records (as the case may be) are also populated with registration data. The endorsement signed and sealed by the SR is attached with the document and then sent for scanning. 
+           The scanned document is stored locally on the basis of book type, date of registration and location of property. The print out of scanned document along with entry of the registered document in the form of EC is also given to the party along with the original document. The Index data shall be pushed to the central server at SDC on a real time basis. The scanned images are digitally signed by the SR and pushed to the central server on periodic basis as applicable. (End of Day, twice a day, etc) Scanned supporting documents can be moved to tape backup or other permanent storage devices and stored in a separate directory structure with proper naming and indexing conventions. They should be accessible through the Document Management System whenever required.
+17. J Forms are forwarded to the Bhoomi application hosted in the SDC in case of registered documents related to agricultural land and acknowledgement from Bhoomi system is obtained as a response and stored for future reference.
+Document Registration - Apply in Person
+1. The applicant visits the SRO and opts for the service in Kiosk. He selects the service "Document Registration" from the list of available services. He selects from the list, the SRO in whose jurisdiction the property belongs in case the office visited is not the one where property belongs. The service request is generated and forwarded to the SR. service token is printed at Kiosk printer and retained by the presenter.
+2. SR forwards the request to SR/FDA/SDA through the system for preliminary verification of the documents and data entry. Parties are asked to approach SR/FDA/SDA through message flashed on electronic display. Parties approach SR/FDA/SDA and submit all documents. SR/FDA/SDA will examine the deed, date of execution and other testimonials. On being satisfied, operator enters the details of document, parties, property, witnesses in the system. The application is then forwarded to the SR through the system. 
+3. The SR will call the parties to present the document on scheduled time through electronic display message. The parties will approach SR on being called with the deed, payment of stamp duty and registration fees, witnesses, and required testimonials and affidavit.
+4. The SR will do the following checks:
+o Date of execution and presentation of the deed
+o Admission by parties for voluntary execution of the deed
+o Classification of the document
+o Property locations and schedules mentioned in the deed
+o Check for any Court Orders related to the said property as indicated by the Court Order Module.
+o Verify Estimated Market Value and stamp duty for the given property details (which must be same as mentioned  in deed)
+o Validate payment in case of e-Stamping from the SHCIL server
+o Validation of the testimonials - RTC, Khata, PAN, Revenue sketch, affidavit and Form 1
+o Verify Data entered in the system vis-à-vis the physical documents and testimonials
+o Check for impersonation by matching of thumb records/photograph (current seller with previous buyer in index II record).
+o The system should also be able to integrate with Aadhar system (developed by Unique Identification Authority of India - UIDAI) and interface with it to utilize authentication services/APIs provided by the Aadhar system wherein the biometric/thumb impression captured in the New Kaveri system is sent securely to the Aadhar system and the authentication information is received back for verification. (The details of the requirements for the New Kaveri application to integrate with the Aadhar/UID system are provided in Annexure 4 of this document).
+o Checks for duplicate and multiple registration done through index II validation online for the same schedule of property
+o Check if the property is banned from registration by law or court order by checking the information provided by the Court Order Entry Module.
+o The SR will also validate the data furnished in RTC, survey sketches, Khata and PAN through online access of databases of Bhoomi, SSLR, concerned ULB and IT department. (However, this integration is subject to readiness of the databases of concerned departments. The system should have the feature to validate the document with these external databases whenever they are made available.)
+SR confirms and records these checks, conducted during scrutiny of document, in the software system. In case of alteration, remarks are posted by him against the corresponding checks.
+5. On satisfactory check, the SR will admit the document for registration and ask the parties to pay the stamp duty and registration fees. The payment details are entered in the system by SR and the generated receipt is given to the presenter. The buyer signs the Form 60/61, in case PAN is not available, and Form 81-A as applicable and submits it to SRO. SR asks the FDA/SDA/operator to capture photograph and thumb impression of the parties.
+6. The SR will not admit the document for registration in following scenarios:
+a. The document is refused for registration as the SR finds it barred from registration after his Scrutiny. An entry is made in book 2 as reason for refusal. He endorses the word "Registration Refused" on the document. On application made by executants or claimants, SR gives him a copy of the reason so recorded without any payment. The entry is also made in the minute book. In case of refusal to accept the document, the system shall generate the refusal number and mandatorily record the reason for refusal in the system. The SR shall record presentation and endorsement. 
+b. In case of refusal to admit the document is kept pending as it deviates from normal registration. System generates a unique pending number along with the entry of reasons for pendency in the minute book.
+c. The document shall be impounded/kept pending if the presenter does not pay the stamp duty payable as per the Karnataka Stamp Act 1957/ estimated by SR respectively.  In case of undervaluation, SR makes an entry in the undervaluation register (Register of Section 45A) and keeps the document pending. System generates a pending number along with the entry of reasons for pendency in the minute book. In that case the valuation endorsement slip is given to the presenter and the case is referred to the concerned DR for determination of the proper Market Value.
+d. In case the presenter withdraws the document before final registration, except in case of impounded documents kept pending, the request may be honoured by making an entry in the withdrawal register. (Unless proper stamp duty and penalty is paid, impounded documents are not returned)
+System will have the provision to enable all such functionalities.
+7. The FDA/SDA/operator captures the thumb impression (through scanner) and photograph (through webcam) in the system. The SR generates the summary report and asks the parties to verify the data contained in it. If any valid error is pointed, SR will check and make necessary corrections in the system. The corrected summary report is again printed by SR and shown to the parties. On affirmation of the parties and after getting signatures and upon SR's own satisfaction, the summary report is signed by the claimant and the SR. It is also signed by the FDA/SDA/operator. As directed by SR, FDA/SDA/operator prints the registration endorsement and gives to the parties to verify and sign it. Parties and witnesses sign the endorsement in front of the SR. The SR also signs the endorsement with date and put his office seal. 
+8. The SR completes the registration in the system by authenticating using both his digital signature and his thumb impression which shall be matched against the database and a unique registration number is generated in the system. An entry is made in the A Register by the system. Index I and II records are also generated/ populated with registration data. The endorsement is signed by the SR and seal is affixed with the document. After final check by the SR, the Section 60 certificate is signed by SR & Round Seal affixed and then sent for scanning. The print out of scanned document and encumbrance entry is also given to the citizen along with the original document. 
+The scanned document is stored locally on the basis of book type, date of registration and location of property. The Index data shall be pushed to the central server at SDC on a real time basis. The scanned images are digitally signed by the SR and pushed to the central server on periodic basis as applicable. (End of Day, twice a day, etc) Scanned supporting documents should be moved to tape backup and not stored in system or database.
+9. J Forms are forwarded to the Bhoomi application hosted in the SDC in case of registered documents related to agricultural land and acknowledgement from Bhoomi system is obtained as a response and stored for future reference.Data/ Information requirements* Executed document drafted by self, deed writer or advocates; may be hand written or typed
+* Stamp duty in the form of cash, DD, Bank Challans, e-Stamping
+* Registration fees in form of cash, DD, Bank Challans
+Enclosures - 
+* RTC (in case of Agricultural land)
+* Khatha Certificate/Khatha Extract/Tax Paid Receipts (issued by the Local Bodies in case of sites/buildings)
+* Form 60/61 in case PAN is not available, as per IT Act
+* Affidavit signed by the executants in case of agricultural land 
+* 81 - A declaration
+* 11-e Sketch of the agricultural property whose transaction is being effected
+* Form - 1 (Rule-3 of Karnataka Stamp Act - Prevention of Undervaluation etc, Rules 1977) detailing the schedule description of the property.
+* Database of thumb register of the department officialsAlternate Scenario 1Network (Both KSWAN and Alternate Network) Link is down* Status of revised service availability and time slot  is updated on central server based on severity of the breakdown
+* SMS/e-mail is automatically triggered (Phone call through help-desk) to the applicants who had prior appointments with appropriate direction based on expected down-time
+* Option to Register with pending status
+* Option to re-schedule the appointment
+* Option to register at other SROs
+* Message is flashed on electronic display board at the public waiting area
+* System will switch to offline mode
+* Limited Functionality Application (LFA) will be operated by the SR with a temporary file storage system with back up option
+* Application data will be entered by FDA/SDA as the case may be. (Through LFA)
+* SR will do the scrutiny with following checks -
+* Date of execution of the deed
+* Admission by parties for voluntary execution of the deed
+* Classification of the document (Through LFA)
+* Property locations and schedules mentioned in the deed
+* Market valuation, stamp duty and registration fee estimation for the given property details same as in deed (Through LFA)
+* Data entered in the system vis-à-vis the physical documents and testimonials
+* Manual examination of the testimonials - RTC, Khata, revenue sketch, affidavit and Form 1
+* SR does the required scrutiny and updates the LFA system.
+* Other activities such as payment updating, receipt generation, Summary Report and endorsements, their signing and capturing of photo and thumb impression is completed. (Through LFA)
+* Pending Registration number is generated
+* The registration data are stored locally till KSWAN is up. (Scanned document, Image, others as specified by department)
+* The locally stored data are transmitted to the central server and synchronized with the database when KSWAN link is restored subject to following checks done successfully.
+* Validate payment in case of e-Stamping from the corresponding server
+* Check if the property is barred under law for registration by law or court order 
+* Check for impersonation by matching of thumb records (current seller with previous buyer in index II record)
+* Checks for duplicate and multiple registration done through index II validation online
+* The SR will also validate the data furnished in RTC, survey sketches, Khata and PAN through online access of databases of respective departments. (However, this integration is subject to readiness of the databases of concerned departments. The system will have the feature to validate the document with these external databases whenever they are made available.)
+* Registration number is generated against the pending number
+* Parties are intimated through e-mail / SMS and directed to collect the registered document with permanent registration number.Alternate Scenario 2SR is not available for service* The SR hands over the charge to FDA/SDA through intimation to concerned DR
+* The DR will also have the right to delegate authority of SR to FDA/SDA on his own in case SR is not available for delegating. 
+* In the system, the SR initiates a request for handover to concerned FDA/SDA for specific period.
+* The request is triggered to concerned DR (with copy to HO) and approved by him or approval can be given by the concerned SR himself
+* Once approved, the system provides access of views authorized to the delegating SR to the concerned FDA/SDA for that particular office.
+* System maintains audit trail of the hand over with time-stamp.
+* Office charge is handed over to FDA/SDA. The role of FDA/SDA shall be temporarily changed to that of SR for authentication and registration purpose and shall be reverted back to the original upon return of SR. Alternate Scenario 3Citizen does not appear for Registration on scheduled slot* The slot is given to the willing applicants available in person at SRO
+* The online application fee is forfeitedAlternate Scenario 4Previously registered document is modified/cancelled by a subsequent document (Rule 123 of the KR Rules 1965)* The subsequent document will follow the same process of registration as that followed for normal registration.
+* A cross-reference or link shall be established through the system between the amending/cancelling document and the amended/cancelled document.
+* Whenever a linked document is viewed or printed, the system shall display/print the information that the said document is amended/cancelled by the referred document having the specified document number and vice-versa.
+* Such links must also be established through the system in Index II table. Whenever, the linked document in index II is referred for encumbrance information, the reference to amending/cancelling document and vice-versa must also appear in the search result. Alternate Scenario 5Document is presented after due date but before eight months (due date is within 4 months from date of execution) (Section 25 of Registration Act 1908, read with Rule 52 of the Karnataka Registration Rules 1965)* The document presented after due date but within eight months of date of execution will follow the same process of registration as that followed for normal registration.
+* The system should be able to determine the delay period and the corresponding condonation fee (fine) as per Rule 52 of Karnataka Registration (KR) Rules, 1965.
+* The presenter has to file a separate application with reasons in compliance with Section 25 of the Registration Act 1908 for such delayed presentation, along with prescribed delay condonation fees and the document is kept pending till delay condoned by DR.
+* The system should not allow the registration of the document without the payment of the applicable delay condonation fine and the appropriate order of the DR condoning the delay. The order of delay condonation given by the DR must be scanned and linked to the document in the system during registration.
+* The system must have provision to admit the document presented on such delay with acceptance of the delay condonation fees.
+* The document presented after eight months of execution should not be admitted for registration.
+* Delay in Presentation shall not apply to Wills.Alternate Scenario 6Denoting Stamp Duty on previously registered document as per Sec 16 of KSA 1957* The document presented will follow the same process of registration as that followed for normal registration.
+* The party should produce the original document for denoting duty
+* If the stamp duty has been paid earlier for a previous document (either registered or unregistered) between the same parties for same transaction being registered now, the stamp duty paid on earlier document has to be denoted on to the current document.
+* Endorsement of denoting 
+* The system should establish link between the two registered documents if the previous document is registered. The Accounting module should record the denotation (reduced payment of stamp duty) in the current registration for reconciliation.
+* If the previous document is unregistered or registered before implementation of Kaveri application (before computerization) it should be scanned and stored in the system with the document being registered now.
+* The system should be able to prepare a report of all such transactions along with the various documents and fees involved with denotation so that the same can be reviewed/audited by the concerned.Alternate Scenario 7Power of Attorney Holder presents a document on behalf of the principal for registration.* The SR should mandatorily obtain the authenticated / attested Special Power of Attorney for filing in the office. The same will also be scanned and stored in the system with link to the document to be registered.
+* In case of authenticated/attested General Power of Attorney, copy of the same should be submitted to the SR for filing in the office. The same will also be scanned and stored in the system with link to the document to be registered if the GPA is not registered. If the GPA is already registered the document number is used to link the GPA to the present registration.
+* Entry shall be made in the Power of Attorney Register with respect to the presentation of the document on the basis of the authenticated / attested Special/General Power of Attorney as the case may be.
+* The document presented will follow the same process of registration as that followed for normal registration.
+* The endorsement will record in the details of the presenter that the document was presented on behalf of the principal by the PoA holder.
+* The power of attorney details are entered in the system and the scanned copy is uploaded along with the main  document
+* The system enables the SR to view the power of attorney register for any SRO in the state.Alternate Scenario 8Registration of executed Will after death of the Testator* SR should endorse the presentation endorsement on to the document.
+* SR keeps the presented Will pending for registration after entering the data in the system and generating the Pending number. 
+* SR does the enquiry and records the witness statement.
+* SR makes note of the findings and records it in the system.
+* If he decides to register the Will, he records the enquiry proceedings on the registration endorsement and registers as usual.
+* Else, he records the refusal endorsement after the enquiry proceedings endorsement and refuses the registration as usual.Alternate Scenario 9Private attendance in case of parties being unable to register at SRO.* The party or representative should be able to apply for 'Private Attendance' through the online portal (or other means like in person at SRO) along with the payment of the prescribed private attendance fee.
+* SR should be able to capture the details (thumb impression, photo, etc) through offline system on his laptop by visiting the party at their place.
+* SR will do the manual scrutiny on the spot.
+* SR will follow the pending registration process and generate a pending number for the transaction.
+* Back in SRO, SR will upload data on the central system and run the validation checks after capturing all the other required details from other parties who will visit the SRO and carry out the processes as per normal registration.
+* On successful validation, a final registration number is generated and the parties are intimated through e-mail/sms/notice to collect the registered document. 
+* The final document is scanned and uploaded on the system as per normal registration processes.Alternate Scenario 10Issue of commission for private attendance of the executant in area of jurisdiction outside the SRO where the document is presented.* SR generates a commission through the system which is issued to the SR of concerned jurisdiction where the party is attended. The document is also sent to the concerned SR.
+* Concerned SR of that jurisdiction attends the party and obtains admission of execution. He then sends the document back to the original SRO.
+* The document is kept pending till the other SR sends the document back and is then registered as usual.Alternate Scenario 11Issue of Memo under section 65/67 of registration Act 1908 when two properties in different jurisdiction area are transacted through same document between same parties.* The SR will do the registration as usual  in his jurisdiction area
+* A memorandum containing the registration details of the property of the other jurisdiction area is generated through the system with intimation to the concerned SR & DR in case of other jurisdictional district.
+* The memorandum is filed in Book I - Part 1 of concerned SR automatically, same is also indexed in Index I and II through the system.Alternate Scenario 12Re-registration on order of DR after appeal and enquiry.* SR will register the document as usual after such order is issued by DR.
+* The system should not mandate for delay condonation in such cases if the document is presented for re-registration within 4 months of the DR order/Court Order. 
+* Date of execution clause is not valid in such case
+* Reference to the DR order is made in the Registration mandatorily.
+* As per section 74 and 75 of the Registration Act, if the DR orders to register the document earlier refused by the SR, it can be re-presented before the SR for Registration within 30 days from the Date of DR's approval Alternate Scenario 13Data entry error in registration is noticed* DR order is sought for making the corrections by the concerned SR u/s 68 of Registration Act, 1908.
+* DR issues the order after considering the case.
+* Intimation with order is issued through the system to DIGR [Administration] as well as system administrator for making the required corrections.
+* DIGR [Administration] approves the same through the system
+* System administrator makes the corrections with intimation to DR, SR and DIGR [Administration].
+* System maintains the audit trails.Alternate Scenario 14Under-valuation cases causing deficit in stamp duty* MV endorsement is recorded on the document through the system after the DR determines the correct MV along with the DR order.
+* The document is the registered as usual. Alternate Scenario 15Deficit Stamp duty (DSD) other than under-valuation* DSD endorsement is recorded on order of the DR/SR.
+* On collection of the DSD, the SR generates SD certificate endorsement and records it on the document through the system.
+* The document is then registered as usual if it is not already registered.
+* If the document is already registered the endorsement is to be generated and printed on the previously registered document and document is rescanned and stored in the system under reference to the previously registered document.Alternate Scenario 16Entry in Adjudication Register in case of SD collection on unregistered document.* The SR collects the SD on application of presenter on non-registered document.
+* Entry of collected amount is made in A-Register as well as Adjudication Register through the system.Alternate Scenario 17Maintenance of Deposition Register*  SR at times needs to preserve the self-attested depositions of parties and witnesses in Deposition Register for reference in future. 
+* The system should create such deposition register.
+* The scanned copy of deposition must be uploaded on the system, digitally signed and stored in the Deposition Register with specific link to the concerned registered document.
+* The same should be available for viewing and printing in future by referencing the relevant registered document.Alternate Scenario 18Impersonation cases*  SR, if in doubt or if there is a complaint can do an enquiry for party identification
+* He can record the attested statements of the witnesses in deposition Register as per previous Scenario.
+* If the SR finds on enquiry that the document is being presented by an impersonating party then the document will be refused for registration along with proper refusal order with proper reasons. 
+* The system should generate a complaint form which can be filled by the SR to lodge a complaint with police for further action and also handover the person for police custody.
+* If the document is already registered the SR lodges a complaint and records endorsement on the registered document after the court passes an order in the case.Alternate Scenario 19Registration of document by DR u/s 30 of the Registration Act, 1908.*  DR can accept and Register any document pertaining to areas under  his jurisdictional district
+* The features to enable the registration process must be extended at DRO
+* Memorandum u/s 67 to be sent to concerned SR of the jurisdictional district through the system.
+* If the document registered also involves properties belonging to other jurisdictional district memorandum u/s 67 to be sent to concerned SR and DR of the particular jurisdictional district through the system and also filed in Book I - Part 1 of concerned SR automatically, same is also indexed in Index I and II through the system.
+* The applicable Memorandum fee must be collected from the party.Alternate Scenario 20Registration of duplicate or triplicate document* Same process as regular registration with the following exceptions
+* On the endorsement of the original document reference to the number of duplicates registered should be printed.
+* Appropriate stamp duty should be denoted on the duplicate or triplicate or as many as presented. 
+* On the endorsement of the duplicate and triplicate, it shall be printed that there is no difference between original and the duplicates and triplicates as the case may be.
+* If there is difference those shall be recorded on the duplicates and triplicates as the case may be and registration of such duplicates and triplicates should be refused with the appropriate reasons in the refusal endorsement.Alternate Scenario 21Partial Registration and Partial Refusal* Same process as regular registration with the following exceptions
+* On the endorsement it shall be printed stating that one of the executant has not appeared before the SR to give admission of execution or he may be present but may refuse to admit execution of the document
+* Alternatively, the document may be kept pending for appearance of other executants and can be registered if the all concerned  executants appear and admit execution or partially registered if they do not appear at all or appear but refuse admission of execution.Alternate Scenario 22Delay in Appearance of parties for admission of execution (Section 34 of the Registration Act 1908, read with Rule 52 of the KR Rules, 1965)* As per Section 34 of the Registration Act the parties are to appear before the Sub-Registrar for admission of execution of document within the time allowed for presentation of document as per section 23 of the Registration Act.
+* On payment of appropriate fine, the delay up to 4 months can be condoned and party may be allowed to admit the execution of the document and registration can be done after approval from the DR. 
+*  The system should not allow the registration of the document without the payment of the applicable fine and the appropriate order of the DR. The order given by the DR must be scanned and linked to the document in the system.Alternate Scenario 23Registration of Documents after appeal* As per section 74 and 75 of the Registration Act, if the DR orders to register the document earlier refused by the SR, it can be re-presented within 30 days from the Date of DR's approval before the SR for RegistrationKey Performance Indicators* Chances of error
+* Processing Time           
+* Number of visits 
+* Number of channels for service access
+* Waiting Time at SRO 
+* Access to transaction records
+* Time to access transaction recordsInterfaces and PurposeSystemInformation ReceivedInformation SentProposed software
+Accounting Module
+e-Stamping System
+
+Bhoomi Database
+
+SSLR database
+ULB database
+IT DatabaseDocument copy
+Transaction Data
+
+Verification and blocking
+
+Survey Number, extent and village name
+11/e Sketch number
+Khata No.
+PANRegistered document
+Account Statement
+
+e-Stamping number
+
+J- Form
+RTC 
+11e Sketch
+Khata extract
+PAN holder identityRedesigned Forms and Registers* Online Form for application for document registration
+* Online form for estimation of EMV , SD and RF
+* Form for request of service at Kiosk in SRO for token
+* Online form for issue of EC/Copy of documentMIS Reports* Documents registered  in various SRO's classified under book and articles and revenue realized
+* Number of documents registered article wise
+* Application for registration through various channels of delivery
+* Request for service in order of entries
+* Average time taken in processing of an application, maximum and minimum time
+* Stamp duty/Registration Fee collected through cash/DD/Challan/bank receipt/e-stamp, etc.
+* Revenue generated on various days in various SRO's
+* Revenue generated on various days through various channels
+* Performance efficiency - SLA report
+* Impounded documents at various SRO and Registration fees , SD and RF collected at impounding
+* Pending application at Various SRO
+* Details of undervaluation case referred to DR
+* Transactions with denoting of duty.
+* Documents Rejected with reasons.
+* Documents Withdrawn with related information.
+* The MIS specifications will be discussed commonly for various processes in separate section. Roles, Hierarchy and ResponsibilitiesSR:   Forwards requests for data entry; Examines document, MV assessment stamp duty and RF; Validate testimonials; Identify parties, admits and registers documents, Put document for pending, Receives payment and update system, Sign and seal, Returns registered document, under proper acknowledgement. Refusal to registration
+FDA/SDA: Enters manually filed applications in system after being directed by SR; Captures photo and thumb impression, print summary report, scans and print scanned document.
+DR: Undervaluation cases, etc.
+DIGR (Admin): Data entry errors.1.5 MOD 03 - Firm Registration Module
+Functional Requirement SpecificationsStakeholder/ InterfaceRole/ ResponsibilitiesApplicant* File the application for registration/ Amendment/ Dissolution of firm
+* Online Data Entry and seeking appointment
+* Payment of fees
+* Collect Acknowledgement  and Fee Receipt 
+* Collect the Certificate of Registration under acknowledgementDistrict Registrar * Verification of the documents submitted
+* Data Entry in the System (May be performed by FDA/Operator if authorised by DR)
+* Approval of Registration in the system
+* Authentication of Certificate of Registration System* Data Entry for the application online and at DRO
+* Firms name Search
+* Calculation of Fee
+* Print Acknowledgement and Fee Receipt
+* Updation in register of firms and its Index
+* Printing of respective Certificate/ printing of acknowledgement 
+* Accounting entry for each transaction in A-Register
+* MIS preparationProcess TriggersReceipt of application at DR office Process FlowApplication Filing: 
+Online Application Filling: 
+1. Application to be filed on the department portal. 
+2. Select the DRO of the jurisdiction where the firm is located.  
+3. Select the service required. The services provided are Registration of new firm, Amendment to the constitution of firm and Dissolution of firm.
+4. For new firm registration, enter the name of firm and address for place of business and duration of firm.
+5. System searches in the index of register of firms for registered firms with same name and address. If found in search, or if name of firm is objectionable, the system shall ask for change in name of firm. 
+6. System provides the list of enclosures to be submitted.
+7. For Amendment/ dissolution of firm, accept the registration number of the firm and selects the type of amendment or dissolution required. 
+8. System populates & displays on the screen with the details of the firm.
+9. System prompts for new entry as per the selected amendment. 
+10. If it is a new name for the firm, the system checks if a firm with the new name exist. 
+11. The system then populates and displays the application form and final validation is done by applicant.
+12. System prompts for taking an appointment with DR
+Appointment with DR:
+13. Prompt the applicant to chose the date and time of visit to DRO.
+14. Generate an application form with a unique number and send an intimation mail to the DR.
+15. Applicant prints the form containing the details of the application. 
+Manual Application filing at DRO:
+16. The applicant submits completely filled in application in the formats prescribed for registration of firms/ amendment/ dissolution of firm.
+17. The enclosures shall include the attested the partnership deed copy, Affidavit and respective form signed by all witnesses and attested. 
+18. DR/Authorised Official checks in the system if firm with same name and address is already registered or objectionable words used in the name of firm.
+19. If found, check if applicant is willing to change, if yes return application and re-accept corrected application. If not willing to change, print the endorsement for rejection and give back the application, its enclosures and endorsement to the applicant, under acknowledgement.
+Processing and Fee Calculation:
+20. The details of documents received are entered into the system. The details will be a combination of the following depending on the type of service requested for:
+a. Name of the Firm
+b. Registration number of the Firm
+c. Duration of Firm
+d. Type of Application
+e. Names of Partners
+f. Date of Joining of Partners
+g. Permanent Address of Partners
+h. Places of Business
+i. Date of Application
+j. Names and details of Witnesses
+k. Type of Business activities
+21. The System calculates the fee for processing the application as per the type of application.
+22. System generates Acknowledgement receipt. 
+23. DR/Authorised Official will handover Acknowledgement receipt to the applicant
+24. Scrutiny of forms, affidavit, deed copy and other enclosures is done by the DR.  
+25. DR verifies if the registration can be done; if yes DR collects Fee from the applicant and proceeds to next step. Else, DR/Authorised Official  generates endorsement with reason for rejection and returns the application, its enclosures and the endorsement to the applicant.
+26. DR completes final check and register in the system by authenticating using both his digital signature and his thumb impression which shall be matched against a centrally maintained database.
+27. The system generates Registration Number, makes entry/updates in the register of firms depending on the service requested and generates Fee Receipt. It scans and uploads the attached document, if any.
+Accounting:
+28. System then updates the Index of Firms and A-Register
+29. Details logged in the A-Register are as follows:
+a. Registration Number
+b. Date of Registration
+c. Duration of Firm
+d. Fee Collected
+e. Fee Receipt Number
+f. Stamp duty paid on the deed document
+g. Date of Stamping
+Issue of Certificate of Registration:
+30. DR/Authorised Official prints out the Certificate as per the application received, authenticates the print out with signature and seal of DR, handover the Certificate of registration and Fee Receipt to the Applicant.
+31. Send application and enclosures for storage in office.
+32. Incase any changes to be done to the Register of firms due to erroneous data entry, the same shall be done in the system with approval from DRData/ Information requirements* Application form for the service required
+* Index  of Register of Firms
+* Partnership deed copy 
+* Declaration duly attestedKey Performance Indicators* Registration of Firm to be completed in 10 minutes
+Interfaces and PurposeSystemInformation Received Information Sent A-RegisterRegistration Number, Fee Collected, Fee Receipt Number, Duration of Firm Date and Time of Registration.Fee Collected,
+Stamp Duty paid on the deed/ document Register of Firms  and its indexDetails of Firms registered/ amended/ dissolved as follows:
+Name of the Firm
+Name of the Partners
+Place of Business
+Duration of Firm 
+Registration Number and Year and Date of Registration Names and addresses of Firm for Query 
+Redesigned Forms and Registers* Application Form
+* Register of Firms and its index
+* A-Register for accounting
+* Endorsement FormMIS ReportsDaily, Weekly, Monthly and annual statement of Following:
+* Number of Firms Registered, amended and dissolution application wise and in total
+* Amount of Fee Collected
+* Type of Business
+* Amount of stamp duty of the attached deed documents application wiseRoles, Hierarchy and Responsibilities* As discussed in stakeholders and Interface section above1.6 MOD 04 - Estimated Market Value and Stamp Duty Estimation Module
+Functional Requirement SpecificationsStakeholder/ InterfaceRole/ ResponsibilitiesCitizen* Log in to portal
+* Enters property location and schedule
+* Selects property from displayed survey maps from SSLR database in case of agricultural property 
+* Prints guidance slip
+* Pay fees through payment gateway if fees is prescribed by the department
+* Fills up questionnaire in the e-form to classify the documentSystem* Fetch survey map from SSLR database, RoR from Bhoomi database, guidance value from department database for the property
+* Returns EMV based on guidance value and other parameters declared by the citizen in the e-Form
+* Returns type of transaction based on response of citizen to classification questionnaire in the e-Form
+* Generate Guidance slip on confirmation of payment of fees if prescribed
+* Receives payment online if prescribed
+* Record transaction in A Register if paid service
+* Generate MISProcess FlowProcess flow:
+The citizen can avail the information service to obtain Estimated Market Value, stamp duty and registration fee online.
+Online:
+1. Citizens login to the portal and select EMV estimation as service needed
+2. Property schedule form gets displayed
+3. Citizen selects the location details like district, taluka, village and street as applicable. 
+4. Part of the screen displays the corresponding survey maps from SSLR records showing the demarcated survey numbers, streets and key landmarks.
+5. The citizen can either select the survey number by moving the cursor over the property, demarcated in the survey map, he wants to value or he enters the corresponding survey number in the text box in the form.
+6. The form will also display the list of survey numbers, along with the Right-holder's detail, available in Bhoomi Database for the specified location details mentioned above. 
+7. The citizen can see the boundaries and extent of the properties in displayed survey maps on the screen. With the help of the map and list of survey numbers, the citizen is able to identify the property in case he is not having the Survey number with him. 
+8. As the property is selected either on map or through survey number, the remaining property schedule like extent, boundaries, complete location and other details are fetched from SSLR database and populated in the Form.
+9. The System fetches the guidance value for the specified location and survey number from master table. 
+10. The other factors needed to value the property are declared by the citizen in the online form.
+11. Based on the entered data, the system calculates the EMV of the property and generates the guidance slip. 
+12. Once the citizen knows the EMV, he can estimate the SD/RF payable by running the SD/RF estimation module. The citizen will select the type of transaction that he wants to enter into.  The form will display a list containing various type of transaction. The citizen can read through the descriptions of each transaction type for more clarity. The information is available in Kannada and English font in a simple layman language. The citizen will select the transaction type relevant to him. Else, he can fill up his response to the classification questionnaire.
+13. The system will return the stamp duty/registration fee payable.
+
+At SRO/DRO:
+1. The citizen submits filled up Form 1 during registration at SRO/DRO as schedule of property for estimation of EMV. For knowing the SD/RF payable, he needs to submit the copy of document to be registered as well.
+2. The SR/DR or his FDA/SDA opens the EMV module in the system. He will select the location such as District, Taluka, Village, Street name in the displayed form available for market valuation. The survey map/RTC of specified location is fetched from Bhoomi database, through the system, and displayed in the part of the Form. The described property is selected on the map and the complete schedule as found in Bhoomi database with extent, boundaries and other relevant information for that property is populated on the screen. 
+3. In case, the citizen furnishes the Survey number, the SR or his FDA/SDA will simply enter survey number in the Form and retrieve relevant data from Bhoomi/UPR database as the case may be.
+4. In case, the survey number is not furnished and provided details are not enough to identify the property from SSLR survey map/ Bhoomi Database and list of displayed survey number for the specified locations, the application is rejected at discretion of the SR and the citizen is asked to furnish complete and correct details.
+5. The guidance value for the entered survey number or selected property is returned by the system on the screen. 
+6. The SR/DR or his FDA/SDA selects the appropriate parameters as declared by the applicant.
+7. The system calculates the EMV of the property.
+8. SR/DR approves the calculation on the system and guidance slip is generated. 
+9. For SD/RF estimation, the document is referred by SR/DR and it is then classified. Based on classification in the system, the SD/RF payable is returned and generated by the system which is then issued to the applicant along with guidance slip.Key Performance Indicators* Process time
+* Error in EMV , SD and RF estimation
+* Access optionRedesigned Forms and Registers* Log in and authorization interface
+* Search Forms for property
+* Session and user logs
+* Service level logs
+* Online application formMIS Reports* Day-wise and office wise log of transaction
+* Day-wise and office wise view of Survey maps and RoR
+* Day-wise and office wise applications processed
+* User and date wise access to external databases1.7 MOD 05 - Encumbrance Search Module
+Functional Requirement SpecificationsStakeholder/ InterfaceRole/ ResponsibilitiesApplicant* Files the application for EC
+* Payment of fees and collection of Fee Receipt 
+* Collect/Print the EC FDA/SDA/Operator* Receives Application from the SR for entry in the system
+* Data entry for the application 
+* Generates Acknowledgement cum fee receipt
+* Processing of application
+* Scrutinizes the ECSub-Registrar* Receive application 
+* Collection of fee
+* Forwards application to FDA/SDA for data entry
+* Verifies the EC
+* Approves and Authenticates the EC System* Receive Application for EC
+* Access Index 2 Database for generating EC
+* Generate EC
+* Calculates the search fee depending upon the period of search and number of properties
+* Print EC on confirmation of payment of fees
+* Accounting entry for each transaction
+* MIS preparationProcess TriggersReceipt of EC application at SRO/ online EC application in system Process FlowApplication Filing:
+Online Application:
+1. Applicant accesses the department portal for EC application filing. 
+2. System displays steps for filing the application
+3. Applicant enters Name, email address, phone number and address.
+4. Applicant selects type of EC (Information or Authenticated), District, and SRO of the jurisdiction of Property. 
+5. Applicant enter the Schedule of the property which shall be a combination of Old/New Door number, Plot number, Flat number or name, Extent of property, the boundaries, Ward number, Block number, Survey Number or Hissa number, etc, Description of Property. Applicant can apply for EC for more than one property. 
+6. Applicant enters the period for which EC is required. If data is not available online for that period, the system shall inform the applicant that data is not digitized for the period and the EC for that period can be collected in person or shall be sent by post within seven days.
+7. If the applicant requires Authenticated EC, he selects mode of receipt of EC (Post/Person).  If EC is to be collected in person, the system will allow applicant to enter the date and time of visit to SRO for collection of EC.  Applicant enters date and time of visit to SRO.
+8. System calculates the fee for EC based on the application type and number of years and number of properties for which EC is required.
+9. The System shall display list of possible payment gateway options.
+10. Applicant selects the payment gateway mode and completes the payment process.
+11. If payment is successful, System generates application number; makes entry in A-Register for accounting purposes. 
+12. If not successful, system rejects application and ask for filing fresh application
+13. After generation of application number, system shall access Index 2 database and search for the matching entry for the property details entered by the applicant.
+14. System displays the list of matching property records identified by the system.
+15. Applicant selects the appropriate entries of the property requested.
+16. If the applicant has requested an Information EC, the system accesses Index 2 data and generates the list of transactions on the property mentioned. If no transactions are found, system generates nil EC.
+17. System displays the EC generated. 
+18. System prints the EC. 
+19. System saves the EC generated and sends an email notification to the applicant. The EC can be retrieved later by the applicant using the application number.
+20. If the applicant needs an authenticated EC, system sends an intimation mail to the SR, to prepare the EC. 
+21. The Sub registrar approves the request for preparation of EC.
+22. The FDA/SDA searches in index 2 database with the search criteria specified in the application. 
+23. The system displays the list of matching property entries in the database.
+24. If period of EC is beyond the date of digitization, the system prompts for a manual search of index 2 records.
+25. After the search the system asks for entry of any transactions identified during manual search
+26. System generates a consolidated list of entries both prepared manually and by system
+27. The FDA/SDA scrutinizes the EC entries and checks in the system
+28. The system assigns EC number and associates it with the application number and intimates the SRO 
+29. SR verifies and authenticates the EC on the EC generated,
+30. SR checks or system shall prompt if there is deficit fee to be collected, if yes the application is flagged for collection of deficit fee.
+31. If the request for EC is by post, and there is no deficit fee to be collected, SR prints, seals and authenticates the EC and forwards to FDA/SDA. The FDA/SDA sends the EC through registered post.
+32. If the request for EC is by post and the status for application is flagged to collect deficit fee, the system sends intimation to the applicant.
+33. Upon receipt of the intimation, the Applicant can pay the fee either online or in person at the SRO. If its online payment, the system collects the deficit fee payment against the application number through payment gateway, updates A-Register and sends intimation to SR about successful payment. If the request for EC is by post, SR prints, seals and authenticates the EC and forwards to FDA/SDA. The FDA/SDA sends the EC through registered post.
+34. If the EC is to be collected in person, the applicant shall submit the fee receipt. 
+35. The FDA/SDA checks if there is deficit fee to be collected
+36. If yes, the applicant pays the SR the required deficit fee and receives fee receipt 
+37. SR prints, seals and authenticates the EC and forwards to FDA/SDA
+38. The FDA/SDA delivers the EC under proper acknowledgment of receipt from the applicant 
+39. Applicant collects the EC.
+Application Receipt at SRO:
+1. The applicant submits duly filled up Form 22 to SR
+2. SR acknowledges the receipt in system and forwards to FDA/SDA
+3. FDA/SDA selects the application on FIFO basis in the system and does the data entry for the form. 
+4. FDA/SDA enters the schedule of property in the system
+5. FDA/SDA enters the period for which EC is required. If data is not digitized for that period, the system shall inform the applicant that data is not digitized for the period and the EC for that period can be collected in person or shall be sent by post within seven days.
+6. System calculates the fee for the EC issuance and generates and prints acknowledgement cum fee receipt.
+7. Applicant pays the fees to the SR and SR acknowledges the receipt of fees in the system and approves for processing of application
+8. System updates the A-Register
+9. The FDA/SDA searches in index 2 database with search criteria specified in the application. 
+10. The system displays the list of matching property entries in the system
+11. If period of EC is beyond the date of digitization, the system prompts for a manual search of index 2 records.
+12. After the search the system asks for entry of any transactions identified during manual search
+13. System generates a consolidated list of entries both prepared manually and by the system
+14. The FDA/SDA scrutinizes the EC and checks the same in the system
+15. The system assigns EC number and associates it with the application number and intimates the SRO 
+16. SR verifies and authenticates the generate EC
+17. SR checks/System displays if there is deficit fee to be collected, if yes the application is flagged for collection of deficit fee.
+18. The applicant shall submit the application cum fee receipt for collecting the EC.
+19. The FDA/SDA checks if there is deficit fee to be collected. If yes the applicant pays the SR the requisite deficit fee. The SR updates the A-Register, prints, seals and authenticates the Encumbrance Certificate and issues to the FDA/SDA.
+20.  The FDA/SDA delivers the EC under acknowledgment 
+21. Applicant collects the EC.Data/ Information requirements* Property Schedule
+* Index 2 Database 
+* Period of SearchKey Performance Indicators* Ratio of online application to application received at SRO
+* Error in EC captured through Correction requests
+* Time required for issue of EC, average, max, min- for each of the In Person/ By Post/ Online methods
+* SRO wise performance
+* Number of Grievances filed/ Action Taken/ Irregularities tracedInterfaces and PurposeSystemInformation ReceivedInformation SentIndex 2 DatabaseProperty Schedule
+Period of SearchTransaction detailsRedesigned Forms and RegistersForm 22 - Application for Encumbrance Certificates
+Encumbrance CertificateMIS ReportsDaily, Weekly, Monthly and annual statement of following SRO wise, District wise and state wide:
+* Number of EC generated, Types of ECs
+* Amount of Fee Collected
+* EC received online 
+* EC application received at SRORoles, Hierarchy and ResponsibilitiesAS discussed in stakeholders and Interface section above1.8 MOD 06 - Certified Copies Module
+Functional Requirement SpecificationsStakeholder/ InterfaceRole/ ResponsibilitiesApplicants* The applicant submits the application to avail the service in any of the SRO. He has the option to apply in person or online. He can avail the services at BangaloreOne, Karnataka One/Nemmadi centres as well.
+* Makes service request in the Kiosk if he avails the service in person at SRO
+* Makes the payment of requisite fees. The fees can be paid in cash at SRO/B1, K1/Nemmadi or in electronic transfer mode if applied online.
+* Collects the certified copy either in person or through post or electronic download at Nemmadi/ B1, K1FDA/SDA* FDA/SDA will enter the application data in system, once directed by the SR, if it is not submitted online or through Kiosk. 
+* Enters payment details in system when directed by SR and issues receipt to the applicant
+* He delivers certified copy to the applicant on verifying the receipts
+* He despatches the postal deliverables and updates the system with delivery detailsSR* The SR verifies the applications and requests made online/through Kiosks/ in person.
+* He directs the FDA/SDA to enter the manual application data in the system; the same can be done by SR himself if he so desires. SR collects the requisite fees updating the system with payment details.
+* Retrieves requested registered document from central server and prints it.
+* Notifies applicant through system generated email/SMS/flashed message on electronic display board in SRO
+* He certifies the copy of the registered document before delivery
+* He puts his digital signature on the copy of registered documents requested at B1, K1/Nemmadi centres
+* He sends digitally signed copy of the registered document to the B1, K1/Nemmadi centre authorities for delivery.System* Accepts service request at Kiosks in SRO and generates the service token
+* Logs the requests to the SR in the system
+* Displays the application processing status on electronic display board
+* Records application (Online as well as manually entered)
+* Calculates Fees and postal charges for postal mode of delivery
+* Captures payment detail
+* Generates receipt for payment received
+* Search and retrieves copy from central server
+* Prints copy only on confirmation of payment receipt
+* Notifies Applicants through email/sms/display on electronic board
+* Captures delivery details
+* Shows status of application offline/online
+* Displays application on query
+* Digitally sign the retrieved copy and send to B1, K1/Nemmadi
+* Generates MIS
+* Enter transaction into A RegisterProcess Triggers* Application in Form 22 when applied online 
+* Request for service in Kiosk when applied in person
+* Application in Form 22 at B1, K1/Nemmadi centresProcess FlowIssue of certified copy - Online Application
+1. The applicant logs on to the service delivery portal of the department. He selects the service "Issue of certified copy" from the list of available services. He selects from the list, the SRO in whose jurisdiction the registered document belongs. The online Form 22 for CC is displayed. The instruction to fill the application online is available on the page. The citizen who needs assistance for online application can visit nearest B1, K1/Nemmadi centres and submit his form with requisite fees.
+2. The applicant fills up the form and submits online. The required fields to be filled are same as in physical form 22 such as Name and address of the applicant, Names and addresses of the Executants and Claimants, Document registration number, year of registration and the corresponding Book Type, Volume no., Page and date. The email address and mobile number of the applicant will also be recorded for notification of the status, if opted for. The citizen will specify the mode of delivery of certified copy (Post/In Person).
+3. The system will validate the application. If the application is invalid or incomplete, it will reject application and notify the reason through a pop-up message giving the option to the applicant to modify application or exit. If the applicant wants to modify the application, he is redirected to the online form for resubmission. Else he will save/print the "notification for rejection", endorsement and exit. In case of successful application, the system will calculate fees based on number of pages in the document (retrieved by system) and open the available payment gateways. The applicant will select the suitable payment option, enter the payment details and pay the fees online.
+4. If payment is not successful, the transaction and application is rejected and the reason is notified through a pop-up message giving the option to the applicant to retry the payment option through payment gateway or exit. If the payment is successful, the application number is generated along with a receipt in printable form. The applicant can save or print the receipt for future reference. The application is now logged to the SR in the system in order of entries. The entry of transaction is made in A Register automatically.
+5. The SR will log on to the system in the SRO. He will find the list of online applications, for which payment is received, logged to his screen in accordance with First in First Out principle. He services in the application in order and searches the requested document in the system. System returns the copy of the requested document in printable form. SR verifies the document with respect to the request made in the application. On confirmation, he prints the copy.  (For B1, K1/Nemmadi applications, the copy is digitally signed and mailed at concerned B1, K1/Nemmadi centres) He writes his name (as in office record), signs the copy and puts his seal on it. He then forwards the certified copy to his FDA/SDA for delivery.
+6. The FDA/SDA will deliver the certified copy through mode specified by the applicant (Post/In Person). The postal charges are recovered in the fees and collected online at the time of application. He updates the system with delivery details. An e-mail and SMS is triggered to the applicant about delivery of the certified copy along with the postal details.  In case the applicant has opted to collect the certified copy in person, he will visit SRO on being notified through SMS or email, to collect the certified copy. He can also check the status online or by calling the helpdesk.
+
+Issue of certified copy - Apply in Person
+1. The applicant visits any of the SRO and selects a service in the Kiosk outside the SRO. The mini-printer attached to the Kiosk will generate a service token with running serial number for the applicant. The service request is forwarded to the SR through the system. The applicant fills up Form 22 in the SRO and waits in the lounge for display of token number on the electronic display board. 
+2. The service requests are logged in the system in order of token number and displayed to the SR on real-time. The SR accepts the service request in order and forwards the request to his FDA/SDA (FDA/SDA), through the system, directing him to do the data entry. The token number is displayed on the electronic display board and the applicant approaches the FDA/SDA with the filled up form 22. 
+3. The FDA/SDA checks the application for correctness and completeness. If it is incorrect or incomplete, he rejects the application and enters the reason in the system updating it. He asks the applicant to make necessary changes if he wants to apply again. The citizen modifies the form and resubmits to the FDA/SDA. 
+4. If the application is found complete, the FDA/SDA, on behalf of SR, enters the application into the system and directs the party to pay the fees to the SR. After the applicant pays fees to SR, SR or FDA/SDA will enter the payment detail in the system. The system saves the application, generates a unique application number and prints the receipt. Entry in A Register is simultaneously made by the system. The applicant will collect the receipt and wait in the lounge. 
+5. The application is forwarded to SR in order of entry in the system. He will cater to the requests in order. He selects a particular application and searches the requested document in the system. System returns the copy of the requested document in printable form. SR verifies the document with respect to the request made in the application. On confirmation of the request and payment of fees, he prints the copy. He writes his official name, signs the copy and puts his seal on it. He notifies the applicant through system to collect the certified copy from FDA/SDA. He then forwards the certified copy to his FDA/SDA for delivery.
+6. A system generated endorsement is sent to applicant in form of SMS and message flashed on electronic display board to collect the copy. The citizen collects the certified copy from the FDA/SDA. The FDA/SDA updates the delivery status in the system.
+Data/ Information requirements* Application in prescribed Form 22.Key Performance Indicators* Number of channels for service access
+* Waiting time for citizens during the process
+* Time to access the registered document
+* Chances of error
+* Chance of data lossesInterfaces and PurposeSystemInformation ReceivedInformation SentNew KAVERI  software
+A RegisterDocument Registration number
+
+Transaction DataRegistered document
+
+Account StatementRedesigned Forms and Registers* Online Form for application of certified copy
+* Form for request of service at Kiosk in SROMIS Reports* Certified copies issued in various SRO's in different periods
+* Certified copies issued through various channels of delivery
+* Request for service in order of entries
+* Average time taken in processing of an application, maximum and minimum time
+* Number and duration of applications pending at various SRO's
+* Revenue generated on various days in various SRO's
+* Revenue generated on various days through various channels
+* Performance efficiency of various channels
+* Information services accessed through various channels
+* Rejected applications through various channels
+* Delivery details for various channels on specified datesRoles, Hierarchy and ResponsibilitiesSR:   Verifies and forwards requests for data entry; Retrieves registered documents from central server; Prints copy; Certifies copy by sign and seal; Issues.
+FDA/SDA: Enters manually filed applications in system after being directed by SR; updates system after being directed by SR; Delivers certified copy to the applicant through the mode specified and update the system.
+2 
+New Kaveri Functional Requirement Specifications
+
+
+Page 2 of 2
+
+

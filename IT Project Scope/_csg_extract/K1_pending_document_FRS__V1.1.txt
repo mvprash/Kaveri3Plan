@@ -1,0 +1,190 @@
+P0|Karnataka Valuation & E-Registration (KAVERI - 2.0)
+P1|Government of Karnataka
+P3|Functional Requirement Specifications
+P5|For KAVERI 2.0
+P6|Department of Stamps & Registration
+P7|Government of Karnataka
+P9|Kaveri-1 pending document registration
+P15|Prepared by
+P16|Centre for Smart Governance (CSG)
+P17|3rd Floor, TTMC Yeshwanthapura, BMTC Bus station
+P18|Bangalore – 560022
+P26|Acronyms
+P48|Revision History
+P50|Introduction
+P52|The Department of Stamps and Registration (hereafter referred to as “department”) is the custodian of registered public records such as Registration of Marriages and Firms, Documents about transactions namely sale, transfer or gift of immovable properties, Mortgage, Power of Attorneys, wills and many more. Maintenance and preservation of these critical public records is the department's prime responsibility. The records or the information associated with registered records are to be made available to the public when requested through defined procedures. The department is also responsible for collecting stamp duty on behalf of the Government for specified transactions. The services are provided through 256 Sub-Registrar Offices (SROs), under the supervision of 34 District Registrar Offices, spread across the state.
+P53|The department has computerised the delivery of these services through the development of Kaveri software. KAVERI Online service is a web-based application of the department which provides an interface to the citizens required for documents, marriage and firm registration. It enables citizens to know the details of stamp duty, property guidelines value, data entry for document registration and marriage registration etc. The list of modules of Kaveri 2.0 is available in Annexure 1.
+P55|Document scope
+P56|This document is a Functional Requirement Specification (FRS) describing the functional feature of handling documents kept pending in Kaveri 1 and the applicant wants to continue the registration of such documents in Kaveri 2.0 using the Pending document registration module. The document is prepared by the Centre for Smart Governance (CSG). The intended audience of the document is the departmental approving authority and the development team.
+P57|The document was prepared through document/data analysis and departmental consultation. The high-level requirements were shared by the department (Annexure 2).
+P60|Overview of the function
+P61|The Pending Document Registration module is an integral component of the Document Registration system, enabling the registration of documents previously marked as pending in the Kaveri 1 system and transferred to the minute book. In the current workflow, citizens can resume the registration process in Kaveri 2 for a document that is pending in Kaveri 1 by entering the associated P-number and submitting the application via the Pending Document Registration module.
+P63|Using this module, the SR can release such documents for registration in Kaveri 2, provided the citizen submits a DR order (if required). However, if the SR encounters issues retrieving specific details from Kaveri 1 such as document details, stamp information, receipts, index village, boundary, valuation, schedules, property information, or party details— the SR can update the missing details and the application will be forwarded to the DR for approval.
+P65|Upon receiving the DR’s approval, SR can release the document from the minute book, allowing the registration process to proceed in Kaveri 2.
+P67|Figure 1 explains the high-level process of documents where the data is not fetched and Figure 2 explains high level process flows when the data is fetched for the application.
+P69|11
+P71|Figure : Interaction diagram of K1 pending document module (missing data)
+P73|Figure : Interaction diagram of K1 pending document module (no missing details)
+P74|Description of the functional requirement
+P76|4.1 Missing data scenarios
+P78|As per the department, the data can be missing in below mentioned categories,
+P79|Document Details.
+P80|Previous Stamp Details.
+P81|Previous Receipt Details (payment details).
+P82|Index Village details.
+P83|Boundary details.
+P84|Valuation details.
+P85|Schedule descriptions
+P86|Property number details.
+P87|Party details.
+P89|The below table shows the details of the data analysis,
+P92|4.2 Workflow
+P94|4.3 Actors and their roles
+P99|4.4 Process description
+P100|Application Submission
+P101|The applicant enters the pending document details and clicks the "Proceed" button.
+P102|If the details are successfully fetched then the system will give a success message and the system will allow the applicant to proceed further.
+P103|Else the system will show a pop-up message about the missing details; the system will allow you to proceed further.
+P104|The applicant uploads the DR order (if required) and applies.
+P105|Upon submission the system moves the applications as follows,
+P106|If all the details are fetched then the applications are pushed to the “Minute” tab.
+P107|Else the applications are pushed to the "Minute book - others" tab.
+P108|Request from SR to edit application
+P109|SR verifies the application in the Minute book – others tab.
+P110|Selects the fields to be edited and send the application to DR for approval.
+P111|Approval/ Rejection of edited application by DR
+P112|DR reviews the edited application submitted by SR in the dashboard.
+P113|The system displays the old document summaries with SR’ requested fields and remarks.
+P114|DR verifies the application summary.
+P115|If discrepancies are identified, DR adds remarks and sends them to the SR for corrections and these applications will be available in the SR dashboard “Minute book- Others” tab, SR can send them back for verification again after making the necessary changes.
+P116|Else rejects the application and these applications will be visible in the SR dashboard “Minute book- Others” tab.
+P117|The system notifies the applicant of the rejection.
+P118|IF there are not discrepancies the DR approves the application for editing and uploads the order.
+P119|Upon approval, the system allows the SR to edit application.
+P120|Application Edit by SR
+P121|SR clicks on the ‘Start’ button to edit the application.
+P122|The system will show all the fields and should allow the SR to edit the fields approved by DR, rest other fields will be non-editable like
+P123|Document details:
+P124|Nature of Document (Dropdown): list of registration articles.
+P125|Article (Dropdown): list of registration articles.
+P126|Article (Dropdown): list of registration articles.
+P127|Pending Document Places Details:
+P128|District (Dropdown).
+P129|Taluka (Dropdown).
+P130|Hobli/Town (Dropdown).
+P131|Index II: Village (Dropdown).
+P132|Pending Document Property Details:
+P133|Property Number Type (Dropdown).
+P134|Present Property Number (Dropdown).
+P135|Additional field to be captured as below,
+P136|Pending Payment Property Details:
+P138|Enters the details of the application as per Kaveri 2:
+P139|Property Schedule.
+P140|Party details.
+P141|Schedules Allocation.
+P142|There will not be any market valuation as well as fee calculation.
+P143|The system generates the updated document summary report.
+P144|SR views the summary and sends it to DR for approval.
+P145|The system forwards the edited application into Minute book.
+P146|Release the application from the minute book by SR
+P147|The SR verifies the application recorded in the minute book.
+P148|The SR documents the challan details.
+P149|The SR releases the application from the minute book and continues with the standard document registration process.
+P150|The detailed wireframes are available here.
+P152|Assumptions
+P153|Applications with missing data will be added to the Minute Book only after all missing details are entered by the SR and approved by DR. Until then, such applications will remain under the Minute Book-others tab.
+P154|The application rejected by the DR will be pushed back to the Minute Book Others tab.
+P155|No fee will be charged to the applicant for submitting the application to the SR for editing the missing fields.
+P156|The SR will not have the option to withdraw an application after the DR rejects the edited submission.
+P157|K1 pending applications will follow the typical K2 pending applications flow after releasing from the Minute book.
+P158|J-slip should be sent for the transaction.
+P159|Limitations
+P160|K1 pending applications follow the same process as K2 pending applications; therefore, no appointment booking is provided.
+P161|Handling multiple pending reasons apart from the party's late appearance not is possible.
+P163|Integration with other systems/modules
+P165|7. 1 External integration
+P167|This module has no integration with external systems other than what already exists in the document registration module.
+P169|7.2 Internal integration with other modules
+P170|This function integrates internally with the existing Pending Document Registration module in Kaveri 2.0.
+P173|Annexure – 1 – List of modules of Kaveri 2.0
+P178|Annexure- 2 – Requirements as shared by the department
+---TABLE 0---
+T0R0|CSG || Centre for Smart Governance
+T0R1|DR || District Registrar
+T0R2|SRO || Sub Registrar
+---TABLE 1---
+T1R0|Date || Version || Prepared by || Approved by || Reason for Changes
+T1R1|04-02-2025 || 1.0 || Pavan Deshapande ||  || 
+T1R2|18-02-2025 || 1.1 || Pavan Deshapande ||  || Addition of DR send back flow.
+---TABLE 2---
+T2R0|Actor/Interface || Role/Responsibilities
+T2R1|Applicant || Enters pending document details. / Upload the DR order (if applicable). / Applies to SR.
+T2R2|System || Fetches the existing document details (if available). / Displays a pop-up error message, if any missing details. / Sends application into Minute book - others, if any missing details. / Sends application into Minute book, if no missing details. / Stores the details entered by the SR. / Forward the edited application to the DR for approval.
+T2R3|SR || Verifies the application in Minute book - others. / Send to DR for approval. / Enters the missing details. / Verify the application in the Minute book. / Record the challan details (if applicable). / Releases the application from the minute book. / Proceeds with the typical registration flow.
+T2R4|DR || Verifies the application edited by SR. / Send back application for correction with remarks  / Upload order and approve to edit the application. / Upload order and reject the edited application.
+T2R5|Process Triggers || When SR clicks on the verify button.
+T2R6|Data/Information Required || legacy document data that were kept pending in the Kaveri 1 system
+T2R7|Output documents generated || Updated document summary report
+---TABLE 3---
+T3R0|Field Name || Field Type || Limit
+T3R1|Total Area || Number with decimal || 5 digits
+T3R2|Hobli/Town || Alphanumeric || 20 digits
+---TABLE 4---
+T4R0|Field Name || Field Type || Limit
+T4R1|Consideration Amount || Numeric || 20 digits
+T4R2|Government Amount || Numeric || 20 digits
+T4R3|Market Value || Numeric || 20 digits
+T4R4|Scanned page count || Numeric || 3 digits
+T4R5|Additional Amount || Numeric || 6 digits
+T4R6|Cess Amount || Numeric || 6 digits
+T4R7|Paid Stamp duty || Numeric || 10 digits
+T4R8|Paid registration fee || Numeric || 10 digits
+---TABLE 5---
+T5R0|Sl No || Module No || Main Module || Sub-Module
+T5R1|1 || 1.1 || Registration || Registration
+T5R2|2 || 1.2 || Registration || Appointment
+T5R3|3 || 1.3 || Registration || Integration module
+T5R4|4 || 1.4 || Registration || Stamp duty and Registration fee calculation
+T5R5|5 || 1.5 || Registration || Guideline value calculation
+T5R6|6 || 1.6 || Registration || Rule 17 (2) filing
+T5R7|7 || 1.7 || Registration || Rule 17 (3) filing
+T5R8|8 || 1.8 || Registration || Old pending release module
+T5R9|9 || 1.9 || Registration || Re-Registration module
+T5R10|10 || 1.1 || Registration || Will after Death
+T5R11|11 || 1.11 || Registration || Filing documents (FRUITS)
+T5R12|12 || 1.12 || Registration || Scanning
+T5R13|13 || 1.13 || Registration || Memo transmission and filing
+T5R14|14 || 1.14 || Registration || 68(2) correction
+T5R15|15 || 1.15 || Registration || Cross-reference Rule 123
+T5R16|16 || 1.16 || Registration || Integration exemption
+T5R17|17 || 1.17 || Registration || Court entry
+T5R18|18 || 1.18 || Registration || Liability
+T5R19|19 || 1.19 || Registration || Status tracking
+T5R20|20 || 1.2 || Registration || Investigation and Search
+T5R21|21 || 1.21 || Registration || Valuation Module (CVC)
+T5R22|22 || 2 || EC || 
+T5R23|23 || 3 || CC || 
+T5R24|24 || 4 || Verify Document || 
+T5R25|25 || 5 || Power of attorney Authentication Module || 
+T5R26|26 || 6 || Refund Module || 
+T5R27|27 || 7.1 || Marriage || Hindu Marriage
+T5R28|28 || 7.2 || Marriage || Special Marriage
+T5R29|29 || 7.3 || Marriage || Special Marriage in Other Forms
+T5R30|30 || 8 || Legacy Record digitisation || 
+T5R31|31 || 9 || Audit || 
+T5R32|32 || 10 || Accounts || 
+T5R33|33 || 11.1 || MIS || Statutory (44)
+T5R34|34 || 11.2 || MIS || Statistical (54)
+T5R35|35 || 11.3 || MIS || Integration (15)
+T5R36|36 || 11.4 || MIS || Computer related (4)
+T5R37|37 || 11.5 || MIS || Reconciliation (5)
+T5R38|38 || 11.6 || MIS || HR (5)
+T5R39|39 || 12.1 || DRO || Firm Registration
+T5R40|40 || 12.2 || DRO || Undervaluation
+T5R41|41 || 12.3 || DRO || Deposit of will
+T5R42|42 || 12.4 || DRO || Adjudication of documents
+T5R43|43 || 13 || IGRO || Appeal
+T5R44|44 || 14 || Master Data Management || 
+T5R45|45 || 15 || User Management || 
+T5R46|46 || 16 || Mobile application || 
+T5R47|47 || 17 || Training Module || Master Trainer, Training Plan

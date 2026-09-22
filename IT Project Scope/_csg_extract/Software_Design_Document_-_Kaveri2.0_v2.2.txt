@@ -1,0 +1,929 @@
+P0|Software Design Document
+P1|Kaveri2.0
+P27|Document Control
+P31|Introduction
+P32|Purpose
+P33|This architecture addresses the requirements of the case study- Kaveri Online Services. The purpose of this architecture document is to provide basic artifacts and views to be used by business, system, and architect and development team as initial start up document.
+P34|Scope
+P35|This document will focus on implementation approach, packaging and deployment of the Kaveri Online Services project.
+P36|Project Description
+P37|KAVERI Online service is a web based application of Department of Stamps & Registration, Government of Karnataka which provides interface to the citizen required for document & marriage registration. It enables citizens to know the details of stamp duty, property guidelines value, data entry for the document registration and marriage registration etc.. These services are divided into two parts one is for Guest Users and other is for registered users.
+P40|Software Architecture
+P42|Software application architecture is the process of defining a structured solution that meets all of the technical and operational requirements, while optimizing common quality attributes such as performance, security, and manageability. It involves a series of decisions based on a wide range of factors, and each of these decisions can have considerable impact on the quality, performance, maintainability, and overall success of the application.
+P44|Key Principles of Software Architecture
+P46|The key principles are:
+P47|Separation of concerns. Divide your application into distinct features with as little overlap in functionality as possible. The important factor is minimization of interaction points to achieve high cohesion and low coupling. However, separating functionality at the wrong boundaries can result in high coupling and complexity between features even though the contained functionality within a feature does not significantly overlap.
+P48|Single Responsibility principle. Each component or module should be responsible for only a specific feature or functionality, or aggregation of cohesive functionality. l Principle of Least Knowledge (also known as the Law of Demeter or LoD). A component or object should not know about internal details of other components or objects.
+P49|Don’t repeat yourself (DRY). You should only need to specify intent in one place. For example, in terms of application design, specific functionality should be implemented in only one component; the functionality should not be duplicated in any other component.
+P50|Minimize upfront design. Only design what is necessary. In some cases, you may require upfront comprehensive design and testing if the cost of development or a failure in the design is very high. In other cases, especially for agile development, you can avoid big design upfront (BDUF). If your application requirements are unclear, or if there is a possibility of the design evolving over time, avoid making a large design effort prematurely.
+P54|2.2.	Design Practices
+P56|lKeep design patterns consistent within each layer. Within a logical layer, where possible, the design of components should be consistent for a particular operation. For example, if you choose to use the Table Data Gateway pattern to create an object that acts as a gateway to tables or views in a database,  should not include another pattern such as Repository, which uses a different paradigm for accessing data and initializing business entities. However, you may need to use different patterns for tasks in a layer that have a large variation in requirements, such as an application that contains business transaction and reporting functionality.
+P58|Do not duplicate functionality within an application. There should be only one component providing a specific functionality—this functionality should not be duplicated in any other component. This makes the components cohesive and makes it easier to optimize the components if a specific feature or functionality changes. Duplication of functionality within an application can make it difficult to implement changes, decrease clarity, and introduce potential inconsistencies.
+P60|Prefer composition to inheritance. Wherever possible, use composition over inheritance when reusing functionality because inheritance increases the dependency between parent and child classes, thereby limiting the reuse of child classes. This also reduces the inheritance hierarchies, which can become very difficult to deal with.
+P62|Establish a coding style and naming convention for development. Follow the below Coding conventions explained. This provides a consistent model that makes it easier for team members to review code they did not write, which leads to better maintainability.
+P64|Maintain system quality using automated QA techniques during development. Use unit testing and other automated Quality Analysis techniques, such as dependency analysis and static code analysis, during development. Define clear behavioral and performance metrics for components and sub-systems, and use automated QA tools during the build process to ensure that local design or implementation decisions do not adversely affect the overall system quality.
+P66|Consider the operation of your application. Determine what metrics and operational data are required by the IT infrastructure to ensure the efficient deployment and operation of your application. Designing your application’s components and sub-systems with a clear understanding of their individual operational requirements will significantly ease overall deployment and operation. Use automated QA tools during development to ensure that the correct operational data is provided by your application’s components and sub-systems.
+P69|C# Coding Conventions
+P70|To create a consistent look to the code, so that readers can focus on content, not layout.
+P71|and also enable readers to understand the code more quickly by making assumptions based on previous experience. The primary objectives are consistency and readability within your project, team, organization, or company source code
+P72|Naming conventions
+P73|There are several naming conventions to consider when writing C# code.
+P74|Pascal case
+P75|Use pascal casing ("PascalCasing") when naming a class, record, or struct.
+P76|C#
+P78|public record UserRegistrationRequest(
+P79|string User,
+P80|string City,
+P81|string StateOrProvince,
+P82|string ZipCode);
+P84|When naming an interface, use pascal casing in addition to prefixing the name with an I. This clearly indicates to consumers that it's an interface
+P85|public interface IWorkerQueue
+P86|{
+P87|}
+P95|When naming public members of types, such as fields, properties, events, methods, and local functions, use pascal casing.
+P96|public class UserRegistrationRequest
+P97|{
+P98|// A public field, these should be used sparingly
+P99|public bool IsValid;
+P100|public string UserName { get; set; }
+P101|public string EmailID { get; set; }
+P102|public int MobileNumber { get; set; }
+P103|public int EnterOTP { get; set; }
+P104|}
+P105|Camel case
+P106|Use camel casing ("camelCasing") when naming private or internal fields, and prefix them with _
+P107|public class DataService
+P108|{
+P109|private IWorkerQueue _workerQueue;
+P110|}
+P111|When working with static fields that are private or internal, use the s_ prefix and for thread static use t_.
+P112|public class DataService
+P113|{
+P114|private static IWorkerQueue s_workerQueue;
+P116|[ThreadStatic]
+P117|private static TimeSpan t_timeSpan;
+P118|}
+P119|When writing method parameters, use camel casing.
+P120|public T SomeMethod<T>(int someNumber, bool isValid)
+P121|{
+P122|}
+P123|Commenting conventions
+P124|Place the comment on a separate line, not at the end of a line of code.
+P125|Begin comment text with an uppercase letter.
+P126|End comment text with a period.
+P127|Insert one space between the comment delimiter (//) and the comment text, as shown in the following example.
+P128|// The following declaration creates a query. It does not run
+P129|// the query.
+P130|Don't create formatted blocks of asterisks around comments.
+P131|Ensure all public members have the necessary XML comments providing appropriate descriptions about their behavior.
+P132|try-catch and using statements in exception handling
+P133|Use a try-catch statement for most exception handling.
+P134|static string GetValueFromArray(string[] array, int index)
+P135|{
+P136|try
+P137|{
+P138|return array[index];
+P139|}
+P140|catch (System.IndexOutOfRangeException ex)
+P141|{
+P142|Console.WriteLine("Index is out of range: {0}", index);
+P143|throw;
+P144|}
+P145|}
+P146|Simplify your code by using the C# using statement. If you have a try-finally statement in which the only code in the finally block is a call to the Dispose method, use a using statement instead.
+P147|In the following example, the try-finally statement only calls Dispose in the finally block.
+P148|Font font1 = new Font("Arial", 10.0f);
+P149|try
+P150|{
+P151|byte charset = font1.GdiCharSet;
+P152|}
+P153|finally
+P154|{
+P155|if (font1 != null)
+P156|{
+P157|((IDisposable)font1).Dispose();
+P158|}
+P159|}
+P161|You can do the same thing with a using statement.
+P162|using (Font font2 = new Font("Arial", 10.0f))
+P163|{
+P164|byte charset2 = font2.GdiCharSet;
+P165|}
+P166|In C# 8 and later versions, use the new using syntax that doesn't require braces:
+P167|using Font font3 = new Font("Arial", 10.0f);
+P168|byte charset3 = font3.GdiCharSet;
+P170|Architecture Context
+P171|Common Application Architecture
+P173|Software architecture is often described as the organization or structure of a system, where the system represents a collection of components that accomplish a specific function or set of functions. Below diagram depicts the application architecture with components grouped by different areas of concern.
+P178|In addition to the grouping of components, other areas of concern focus on interaction between the components and how different components work together.
+P180|Presentation Layer (UI Layer)
+P181|Presentation Layer (UI : User Interface Layer)  in web application is the entry point for the application
+P182|Types of UI Layer - Angular
+P184|Modules: Module refers to a place where you can group the components, directives, pipes, and services, which are related to the application.
+P185|In case you are developing a website, the header, footer, left, center and the right section become part of a module
+P186|Components: Components are the most basic UI building block. A component controls a patch of screen called a view(UI).
+P187|Each component consists of :
+P188|An HTML template that declares what renders on the page
+P189|A Typescript class that defines behaviour
+P190|A CSS selector that defines how the component is used in a template
+P191|Optionally, CSS styles applied to the template
+P193|Templates: A template is a form of HTML that tells how to render the component. Views are typically arranged hierarchically, allowing you to modify or show and hide entire UI sections or pages as a unit.
+P194|Services: Services are singleton objects that get instantiated only once during the lifetime of an application. They contain methods that maintain data throughout the life of an application, i.e. data does not get refreshed and is available all the time.
+P195|Dependency Injection: Dependency Injection (DI) is a design pattern in which a class requests dependencies from external sources rather than creating them. DI framework provides dependencies to a class upon instantiation. DI is used to increase flexibility and modularity in the applications.
+P199|API Gateway
+P200|In a microservices architecture, the client apps usually need to consume functionality from more than one microservice. If that consumption is performed directly, the client needs to handle multiple calls to microservice endpoints. Having an intermediate level or tier of indirection (Gateway) can be convenient for microservice-based applications. If we don't have API Gateways, the client apps must send requests directly to the microservices and that raises problems, such as the following issues:
+P201|Coupling: Without the API Gateway pattern, the client apps are coupled to the internal microservices. The client apps need to know how the multiple areas of the application are decomposed in microservices. When evolving and refactoring the internal microservices, those actions impact maintenance because they cause breaking changes to the client apps due to the direct reference to the internal microservices from the client apps. Client apps need to be updated frequently, making the solution harder to evolve.
+P202|Too many round trips: A single page/screen in the client app might require several calls to multiple services. That approach can result in multiple network round trips between the client and the server, adding significant latency. Aggregation handled in an intermediate level could improve the performance and user experience for the client app.
+P203|Security issues: Without a gateway, all the microservices must be exposed to the "external world", making the attack surface larger than if you hide internal microservices that aren't directly used by the client apps. The smaller the attack surface is, the more secure your application can be.
+P204|Cross-cutting concerns: Each publicly published microservice must handle concerns such as authorization and SSL. In many situations, those concerns could be handled in a single tier so the internal microservices are simplified.
+P205|API Gateway pattern
+P206|API Gateway pattern is a service that provides a single-entry point for certain groups of microservices. It's similar to the Facade pattern from object-oriented design, but in this case, it's part of a distributed system. The API Gateway pattern is also sometimes known as the "backend for frontend" (BFF) because you build it while thinking about the needs of the client app.
+P210|Therefore, the API gateway sits between the client apps and the microservices. It acts as a reverse proxy, routing requests from clients to services. It can also provide other cross-cutting features such as authentication, SSL termination, and cache.
+P211|Features in the API Gateway pattern
+P213|Reverse proxy or gateway routing.
+P214|The API Gateway offers a reverse proxy to redirect or route requests to the endpoints of the internal microservices. The gateway provides a single endpoint or URL for the client apps and then internally maps the requests to a group of internal microservices. This routing feature helps to decouple the client apps from the microservices but it's also convenient when modernizing a monolithic API by sitting the API Gateway in between the monolithic API and the client apps, enables add new APIs as new microservices while still using the legacy monolithic API until it's split into many microservices in the future.
+P216|Cross-cutting concerns or gateway offloading
+P217|Depending on the features offered by each API Gateway product, you can offload functionality from individual microservices to the gateway, which simplifies the implementation of each microservice by consolidating cross-cutting concerns into one tier. This approach is especially convenient for specialized features that can be complex to implement properly in every internal microservice, such as the following functionality:
+P218|Authentication and authorization
+P219|Service discovery integration
+P220|Response caching
+P221|Retry policies, circuit breaker, and QoS
+P222|Rate limiting and throttling
+P223|Load balancing
+P224|Logging, tracing, correlation
+P225|Headers, query strings, and claims transformation
+P226|IP allowlisting
+P229|Service Layer
+P230|Service layer is the middle layer between presentation and data access. It abstracts business logic and data access. The service layer defines a boundary for your system where external systems can interact with it.
+P231|Services layer components provide other clients and applications with a way to access business logic in the application, and make use of the functionality of the application by passing messages to and from it over a communication channel.
+P232|Service Interface: Services expose a service interface to which all inbound messages are sent. The definition of the set of messages that must be exchanged with a service in order for the service to perform a specific business task constitutes a contract.
+P233|Service Controller: Service controllers are responsible for application flow control logic.
+P234|Message Type: When exchanging data across the service layer, data structures are wrapped by message structures that support different types of operations. These message types are the message contracts for communication between service consumers and providers.
+P235|One option for implementing this scenario is for the calling back-end microservice to make direct HTTP requests to the microservices it needs to query.
+P237|Business Layer
+P238|Business logic is defined as an application logic that is concerned with the retrieval, processing, transformation, and management of application data. Business rules and policies described in BL helps to reuse opportunities and business logic components to ensure data consistency and validity.
+P239|Business logic components can be further subdivided into the following three categories
+P240|Business Workflow: Business workflow components define and coordinate long-running, multistep business processes, and can be implemented using business process management tools. Business workflow components work with business process components that instantiate and perform operations on workflow components.
+P241|Business Components: Business components implement the core functionality of the system and encapsulate the relevant business logic. This layer includes business workflow components for processing and business entity components to manage business data.
+P242|Business Entities: Business entities or business objects, encapsulate the business logic and data necessary to represent real world elements within your application. They store data values and expose them through properties that contain and manage business data used by the application and provide stateful programmatic access to the business data and related functionality. Business entities also validate the data contained within the entity and encapsulate business logic to ensure consistency and to implement business rules and behavior.
+P244|Data Layer
+P245|Data Layer provides simplified access to data stored in persistent storage of some kind, such as an entity-relational database. The data layer manages the physical storage and retrieval of data
+P246|Data Access Components: These components abstract the logic required to access the underlying data stores. Most data access tasks require common logic that can be extracted and implemented in separate reusable helper components or a suitable support framework.
+P247|Data Helpers/Utilities: Data Helper is a core of layered architecture, it contains methods to identify a primitive data type and map the primitive type
+P248|DBHelper class is created with the intension to reduce the coding effort by using the DB Provider Factory concepts. This class provides a set of methods for 
+    ExecuteNonQuery
+     ExecuteScalar
+     ExecuteReader
+     DataAdapter
+P249|Service Agents: When a business component must use functionality provided by an external service, there might be need to implement code to manage the semantics of communicating with that particular service. Service agents isolate the idiosyncrasies of calling diverse services from respective application and provide additional services such as caching, offline support and basic mapping between the format of the data exposed by the service and the format application requires.
+P250|Centralized Layer:
+P251|We should consider implementing centralized or common solutions for the following:
+P253|A logging mechanism that allows each layer to log to a common store, or log to
+P254|separate stores in such a way that the results can be correlated afterwards.
+P256|A mechanism for authentication and authorization that passes identities across
+P257|multiple layers to permit granting access to resources.
+P259|An exception management framework that will work within each layer, and
+P260|across the layers as exceptions are propagated to the system boundaries.
+P262|A communication approach that you can use to communicate between the
+P263|layers.
+P265|A common caching infrastructure that allows you to cache data in the presentation
+P266|layer, the business layer, and the data access layer.
+P284|Service oriented Architecture
+P288|Microservices architecture
+P289|A microservices architecture consists of a collection of small, autonomous services. Each service is self-contained and should implement a single business capability within a bounded context. A bounded context is a natural division within a business and provides an explicit boundary within which a domain model exists.
+P291|Microservices :
+P292|Microservices are small, independent, and loosely coupled. A single small team of developers can write and maintain a service.
+P293|Each service is a separate codebase, which can be managed by a small development team.
+P294|Services can be deployed independently. A team can update an existing service without rebuilding and redeploying the entire application.
+P295|Services are responsible for persisting their own data or external state. This differs from the traditional model, where a separate data layer handles data persistence.
+P296|Services communicate with each other by using well-defined APIs. Internal implementation details of each service are hidden from other services.
+P297|Supports polyglot programming. For example, services don't need to share the same technology stack, libraries, or frameworks.
+P298|Benefits:
+P299|Agility: It's easier to manage bug fixes and feature releases. You can update a service without redeploying the entire application, and roll back an update if something goes wrong. In many traditional applications, if a bug is found in one part of the application, it can block the entire release process. New features may be held up waiting for a bug fix to be integrated, tested, and published.
+P300|Small, focused teams. A microservice should be small enough that a single feature team can build, test, and deploy it.
+P301|Small code base. In a monolithic application, there is a tendency over time for code dependencies to become tangled. Adding a new feature requires touching code in a lot of places. By not sharing code or data stores, a microservices architecture minimizes dependencies, and that makes it easier to add new features.
+P302|Mix of technologies. Teams can pick the technology that best fits their service, using a mix of technology stacks as appropriate.
+P303|Fault isolation. If an individual microservice becomes unavailable, it won't disrupt the entire application, as long as any upstream microservices are designed to handle faults correctly (for example, by implementing circuit breaking).
+P304|Scalability. Services can be scaled independently, letting you scale out subsystems that require more resources, without scaling out the entire application. Using an orchestrator such as Kubernetes or Service Fabric, you can pack a higher density of services onto a single host, which allows for more efficient utilization of resources.
+P305|Data isolation. It is much easier to perform schema updates, because only a single microservice is affected. In a monolithic application, schema updates can become very challenging, because different parts of the application may all touch the same data, making any alterations to the schema risky.
+P306|Best Practices:
+P307|Model services around the business domain.
+P308|Decentralize everything. Individual teams are responsible for designing and building services. Avoid sharing code or data schemas.
+P309|Data storage should be private to the service that owns the data. Use the best storage for each service and data type.
+P310|Services communicate through well-designed APIs. Avoid leaking implementation details. APIs should model the domain, not the internal implementation of the service.
+P311|Avoid coupling between services. Causes of coupling include shared database schemas and rigid communication protocols.
+P312|Offload cross-cutting concerns, such as authentication and SSL termination, to the gateway.
+P313|Keep domain knowledge out of the gateway. The gateway should handle and route client requests without any knowledge of the business rules or domain logic. Otherwise, the gateway becomes a dependency and can cause coupling between services.
+P314|Services should have loose coupling and high functional cohesion. Functions that are likely to change together should be packaged and deployed together. If they reside in separate services, those services end up being tightly coupled, because a change in one service will require updating the other service. Overly chatty communication between two services may be a symptom of tight coupling and low cohesion.
+P315|Isolate failures. Use resiliency strategies to prevent failures within a service from cascading.
+P317|API gateway pattern versus the Direct client-to-microservice communication
+P319|API Gateway:
+P320|The API gateway is the entry point for clients. Instead of calling services directly, clients call the API gateway, which forwards the call to the appropriate services on the back end.
+P321|Advantages of using an API gateway include:
+P322|It decouples clients from services. Services can be versioned or refactored without needing to update all of the clients.
+P323|Services can use messaging protocols that are not web friendly, such as AMQP.
+P324|The API Gateway can perform other cross-cutting functions such as authentication, logging, SSL termination, and load balancing.
+P325|Out-of-the-box policies, like for throttling, caching, transformation, or validation.
+P327|Main features in the API Gateway pattern:
+P328|Reverse proxy or gateway routing.
+P329|The API Gateway offers a reverse proxy to redirect or route requests (layer 7 routing, usually HTTP requests) to the endpoints of the internal microservices. The gateway provides a single endpoint or URL for the client apps and then internally maps the requests to a group of internal microservices. This routing feature helps to decouple the client apps from the microservices but it’s also convenient when modernizing a monolithic API by sitting the API Gateway in between the monolithic API and the client apps, then you can add new APIs as new microservices while still using the legacy monolithic API until it’s split into many microservices in the future. Because of the API Gateway, the client apps won’t notice if the APIs being used are implemented as internal microservices or a monolithic API and more importantly, when evolving and refactoring the monolithic API into microservices, thanks to the API Gateway routing, client apps won’t be impacted with any URI change.
+P331|Requests aggregation:
+P332|As part of the gateway pattern you can aggregate multiple client requests (usually HTTP requests) targeting multiple internal microservices into a single client request. This pattern is especially convenient when a client page/screen needs information from several microservices. With this approach, the client app sends a single request to the API Gateway that dispatches several requests to the internal microservices and then aggregates the results and sends everything back to the client app. The main benefit and goal of this design pattern is to reduce chattiness between the client apps and the backend API, which is especially important for remote apps out of the datacenter where the microservices live, like mobile apps or requests coming from SPA apps that come from JavaScript in client remote browsers. For regular web apps performing the requests in the server environment (like an ASP.NET Core MVC web app), this pattern is not so important as the latency is very much smaller than for remote client apps. Depending on the API Gateway product you use, it might be able to perform this aggregation. However, in many cases it’s more flexible to create aggregation microservices under the scope of the API Gateway, so you define the aggregation in code (that is, C# code):
+P334|Cross-cutting concerns or gateway offloading:
+P336|Depending on the features offered by each API Gateway product, you can offload functionality from individual microservices to the gateway, which simplifies the implementation of each microservice by consolidating cross-cutting concerns into one tier. This approach is especially convenient for specialized features that can be complex to implement properly in every internal microservice, such as the following functionality:
+P337|• Authentication and authorization
+P338|• Service discovery integration
+P339|• Response caching
+P340|• Retry policies, circuit breaker, and QoS
+P341|• Rate limiting and throttling
+P342|• Load balancing
+P343|• Logging, tracing, correlation
+P344|• Headers, query strings, and claims transformation
+P345|• IP allowlisting
+P348|Direct client-to-microservice communication:
+P349|A possible approach is to use a direct client-to-microservice communication architecture. In this approach, a client app can make requests directly to some of the microservices.
+P351|A direct client-to-microservice communication architecture could be good enough for a small microservice-based application, especially if the client app is a server-side web application like an ASP.NET MVC app. However, when you build large and complex microservice-based applications (for example, when handling dozens of microservice types).
+P354|Why consider API Gateways instead of direct client-to-microservice communication:
+P355|In a microservices architecture, the client apps usually need to consume functionality from more than one microservice. If that consumption is performed directly, the client needs to handle multiple calls to microservice endpoints. What happens when the application evolves and new microservices are introduced or existing microservices are updated? If your application has many microservices, handling so many endpoints from the client apps can be a nightmare. Since the client app would be coupled to those internal endpoints, evolving the microservices in the future can cause high impact for the client apps.
+P356|Coupling: Without the API Gateway pattern, the client apps are coupled to the internal microservices. The client apps need to know how the multiple areas of the application are decomposed in microservices. When evolving and refactoring the internal microservices, those actions impact maintenance because they cause breaking changes to the client apps due to the direct reference to the internal microservices from the client apps. Client apps need to be updated frequently, making the solution harder to evolve.
+P357|Too many round trips: A single page/screen in the client app might require several calls to multiple services. That approach can result in multiple network round trips between the client and the server, adding significant latency. Aggregation handled in an intermediate level could improve the performance and user experience for the client app.
+P358|Security issues: Without a gateway, all the microservices must be exposed to the “external world”, making the attack surface larger than if you hide internal microservices that aren’t directly used by the client apps. The smaller the attack surface is, the more secure your application can be.
+P359|Cross-cutting concerns: Each publicly published microservice must handle concerns such as authorization and SSL. In many situations, those concerns could be handled in a single tier so the internal microservices are simplified.
+P361|Communication in a microservice architecture
+P362|In a monolithic application running on a single process, components invoke one another using language-level method or function calls. These can be strongly coupled if you’re creating objects with code (for example, new ClassName()), or can be invoked in a decoupled way if you’re using Dependency Injection by referencing abstractions rather than concrete object instances. Either way, the objects are running within the same process. The biggest challenge when changing from a monolithic application to a microservices-based application lies in changing the communication mechanism. A direct conversion from in-process method calls into RPC calls to services will cause a chatty and not efficient communication that won’t perform well in distributed environments.
+P363|A microservices-based application is a distributed system running on multiple processes or services, usually even across multiple servers or hosts. Each service instance is typically a process. Therefore, services must interact using an inter-process communication protocol such as HTTP, AMQP, or a binary protocol like TCP, depending on the nature of each service.
+P364|Communication Types:
+P365|Client and services can communicate through many different types of communication, each one targeting a different scenario and goals. Initially, those types of communications can be classified in two axes. The first axis defines if the protocol is synchronous or asynchronous:
+P366|• Synchronous protocol:
+P368|HTTP is a synchronous protocol. The client sends a request and waits for a response from the service. That’s independent of the client code execution that could be synchronous (thread is blocked) or asynchronous (thread isn’t blocked, and the response will reach a callback eventually). The important point here is that the protocol (HTTP/HTTPS) is synchronous and the client code can only continue its task when it receives the HTTP server response.
+P370|• Asynchronous protocol:
+P371|Other protocols like AMQP (a protocol supported by many operating systems and cloud environments) use asynchronous messages. The client code or message sender usually doesn’t wait for a response. It just sends the message as when sending a message to a RabbitMQ queue or any other message broker.
+P373|The second axis defines if the communication has a single receiver or multiple receivers:
+P374|Single receiver: Each request must be processed by exactly one receiver or service. An example of this communication is the Command pattern.
+P376|• Multiple receivers: Each request can be processed by zero to multiple receivers. This type of communication must be asynchronous. An example is the publish/subscribe mechanism used in patterns like Event-driven architecture. This is based on an event-bus interface or message broker when propagating data updates between multiple microservices through events; it’s usually implemented through a service bus or similar artifact like Azure Service Bus by using topics and subscriptions.
+P377|Asynchronous message-based communication
+P378|Asynchronous messaging and event-driven communication are critical when propagating changes across multiple microservices and their related domain models.
+P379|When using messaging, processes communicate by exchanging messages asynchronously. A client makes a command or a request to a service by sending it a message. If the service needs to reply, it sends a different message back to the client. Since it’s a message-based communication, the client assumes that the reply won’t be received immediately, and that there might be no response at all.
+P380|The preferred infrastructure for this type of communication in the microservices community is a lightweight message broker, which is different than the large brokers and orchestrators used in SOA. In a lightweight message broker, the infrastructure is typically “dumb,” acting only as a message broker, with simple implementations such as RabbitMQ or a scalable service bus in the cloud like 55 CHAPTER 3 | Architecting container and microservice-based applications Azure Service Bus. In this scenario, most of the “smart” thinking still lives in the endpoints that are producing and consuming messages-that is, in the microservices.
+P381|Single-receiver message-based communication:
+P382|Message-based asynchronous communication with a single receiver means there’s point-to-point communication that delivers a message to exactly one of the consumers that’s reading from the channel, and that the message is processed just once. However, there are special situations. For instance, in a cloud system that tries to automatically recover from failures, the same message could be sent multiple times. Due to network or other failures, the client has to be able to retry sending messages, and the server has to implement an operation to be idempotent in order to process a particular message just once.
+P383|Multiple-receivers message-based communication:
+P384|As a more flexible approach, you might also want to use a publish/subscribe mechanism so that your communication from the sender will be available to additional subscriber microservices or to external applications. Thus, it helps you to follow the open/closed principle in the sending service. That way, additional subscribers can be added in the future without the need to modify the sender service.
+P385|Asynchronous event-driven communication:
+P386|When using asynchronous event-driven communication, a microservice publishes an integration event when something happens within its domain and another microservice needs to be aware of it, like a price change in a product catalog microservice. Additional microservices subscribe to the events so they can receive them asynchronously. When that happens, the receivers might update their own domain entities, which can cause more integration events to be published. This publish/subscribe system is performed by using an implementation of an event bus. The event bus can be designed as an abstraction or interface, with the API that’s needed to subscribe or unsubscribe to events and to publish events. The event bus can also have one or more implementations based on any inter-process and messaging broker, like a messaging queue or service bus that supports asynchronous communication and a publish/subscribe model.
+P387|Technology Stack
+P389|A technology stack is the collection of tools, platforms, apps, and pieces of software used to build products, carry out business operations, and monitor the performance metrics. A tech stack can also include coding languages.
+P399|Angular
+P401|Angular is a development platform, built on TypeScript. As a platform, Angular includes:
+P402|A component-based framework for building scalable web applications
+P403|A collection of well-integrated libraries that cover a wide variety of features, including routing, forms management, client-server communication, and more
+P404|A suite of developer tools to help you develop, build, test, and update your code
+P405|With Angular, you're taking advantage of a platform that can scale from single-developer projects to enterprise-level applications.
+P406|2.4.2	Angular CLI
+P407|The Angular CLI is the fastest, straightforward, and recommended way to develop Angular applications. The Angular CLI makes a number of tasks trouble-free. Here are some examples:
+P408|You'll find the Angular CLI a valuable tool for building out your applications.
+P409|2.4.3	 Angular Workspace and project file structure
+P410|A workspace contains the files for one or more projects. A project is the set of files that comprise a standalone application or a shareable library.
+P417|2.4.4	Workspace configuration files
+P418|All projects within a workspace share a CLI configuration context. The top level of the workspace contains workspace-wide configuration files, configuration files for the root-level application, and subfolders for the root-level application source and test files.
+P420|2.4.5	Application project files
+P421|By default, the CLI command ng new my-app creates a workspace folder named "my-app" and generates a new application skeleton in a src/ folder at the top level of the workspace. A newly generated application contains source files for a root module, with a root component and template.
+P422|When the workspace file structure is in place, we can use the ng generate command on the command line to add functionality and data to the application. This initial root-level application is the default app for CLI commands (unless you change the default after creating additional apps).
+P423|Besides using the CLI on the command line, you can also manipulate files directly in the application's source folder and configuration files.
+P424|For a single-application workspace, the src/ subfolder of the workspace contains the source files (application logic, data, and assets) for the root application. For a multi-project workspace, additional projects in the projects/ folder contain a project-name/src/ subfolder with the same structure.
+P426|2.2.6	Application source files
+P427|Files at the top level of src/ support testing and running your application. Subfolders contain the application source and application-specific configuration.
+P429|2.5 Introduction to Containers and Docker
+P431|Containerization is an approach to software development in which an application or service, its dependencies, and its configuration (abstracted as deployment manifest files) are packaged together as a container image. The containerized application can be tested as a unit and deployed as a container image instance to the host operating system (OS).
+P433|Containerization is an approach to software development in which an application or service, its dependencies, and its configuration (abstracted as deployment manifest files) are packaged together as a container image. The containerized application can be tested as a unit and deployed as a container image instance to the host operating system (OS).
+P435|Containers also isolate applications from each other on a shared OS. Containerized applications run on top of a container host that in turn runs on the OS (Linux or Windows). Containers therefore have a significantly smaller footprint than virtual machine (VM) images.
+P437|Each container can run a whole web application or a service, as shown in Figure below. In this example, Docker host is a container host, and App1, App2, Svc 1, and Svc 2 are containerized applications or services.
+P439|Multiple containers running on a container host
+P440|Another benefit of containerization is scalability. You can scale out quickly by creating new containers for short-term tasks. From an application point of view, instantiating an image (creating a container) is similar to instantiating a process like a service or a web app. For reliability, however, when you run multiple instances of the same image across multiple host servers, you typically want each container (image instance) to run in a different host server or VM in different fault domains.
+P441|In short, containers offer the benefits of isolation, portability, agility, scalability, and control across the whole application lifecycle workflow. The most important benefit is the environment’s isolation provided between Dev and Ops.
+P442|2.5.1 What is Docker?
+P443|Docker is an open-source project for automating the deployment of applications as portable, self-sufficient containers that can run on the cloud or on-premises. Docker is also a company that promotes and evolves this technology, working in collaboration with cloud, Linux, and Windows vendors, including Microsoft.
+P447|Docker deploys containers at all layers of the hybrid cloud.
+P449|Docker containers can run anywhere, on-premises in the customer datacenter, in an external service provider or in the cloud, on Azure. Docker image containers can run natively on Linux and Windows. However, Windows images can run only on Windows hosts and Linux images can run on Linux hosts and Windows hosts (using a Hyper-V Linux VM, so far), where host means a server or a VM.
+P451|Developers can use development environments on Windows, Linux, or macOS. On the development computer, the developer runs a Docker host where Docker images are deployed, including the app and its dependencies. Developers who work on Linux or on macOS use a Docker host that is Linux based, and they can create images only for Linux containers. (Developers working on macOS can edit code or run the Docker CLI from macOS, but as of the time of this writing, containers don’t run directly on macOS.) Developers who work on Windows can create images for either Linux or Windows Containers.
+P452|To host containers in development environments and provide additional developer tools, Docker ships Docker Community Edition (CE) for Windows or for macOS. These products install the necessary VM (the Docker host) to host the containers. Docker also makes available Docker Enterprise Edition (EE), which is designed for enterprise development and is used by IT teams who build, ship, and run large business-critical applications in production.
+P457|To run Windows Containers, there are two types of runtimes:
+P459|• Windows Server Containers provide application isolation through process and namespace isolation technology. A Windows Server Container shares a kernel with the container host and with all containers running on the host.
+P460|• Hyper-V Containers expand on the isolation provided by Windows Server Containers by running each container in a highly optimized virtual machine. In this configuration, the kernel of the container host isn’t shared with the Hyper-V Containers, providing better isolation.
+P462|The images for these containers are created the same way and function the same. The difference is in how the container is created from the image running a Hyper-V Container requires an extra parameter. For details, see Hyper-V Containers.
+P463|2.5.2 Comparing Docker containers with virtual machines
+P472|2.5.3 Docker terminology
+P473|Container image: A package with all the dependencies and information needed to create a container. An image includes all the dependencies (such as frameworks) plus deployment and execution configuration to be used by a container runtime. Usually, an image derives from multiple base images that are layers stacked on top of each other to form the container’s filesystem. An image is immutable once it has been created.
+P475|Dockerfile: A text file that contains instructions for building a Docker image. It’s like a batch script, the first line states the base image to begin with and then follow the instructions to install required programs, copy files, and so on, until you get the working environment you need.
+P477|Build: The action of building a container image based on the information and context provided by its Dockerfile, plus additional files in the folder where the image is built. You can build images with the following Docker command:
+P478|docker build
+P480|Container: An instance of a Docker image. A container represents the execution of a single application, process, or service. It consists of the contents of a Docker image, an execution environment, and a standard set of instructions. When scaling a service, you create multiple instances of a container from the same image. Or a batch job can create multiple containers from the same image, passing different parameters to each instance.
+P482|Volumes: Offer a writable filesystem that the container can use. Since images are read-only but most programs need to write to the filesystem, volumes add a writable layer, on top of the container image, so the programs have access to a writable filesystem. The program doesn’t know it’s accessing a layered filesystem, it’s just the filesystem as usual. Volumes live in the host system and are managed by Docker.
+P483|Tag: A mark or label you can apply to images so that different images or versions of the same image (depending on the version number or the target environment) can be identified.
+P485|Multi-stage Build: Is a feature, since Docker 17.05 or higher, that helps to reduce the size of the final images. In a few sentences, with multi-stage build you can use, for example, a large base image, containing the SDK, for compiling and publishing the application and then using the publishing folder with a small runtime-only base image, to produce a much smaller final image.
+P487|Repository (repo): A collection of related Docker images, labeled with a tag that indicates the image version. Some repos contain multiple variants of a specific image, such as an image containing SDKs (heavier), an image containing only runtimes (lighter), etc. Those variants can be marked with tags. A single repo can contain platform variants, such as a Linux image and a Windows image.
+P489|Registry: A service that provides access to repositories. The default registry for most public images is Docker Hub (owned by Docker as an organization). A registry usually contains repositories from multiple teams. Companies often have private registries to store and manage images they’ve created. Azure Container Registry is another example.
+P491|Multi-arch image: For multi-architecture, it’s a feature that simplifies the selection of the appropriate image, according to the platform where Docker is running. For example, when a Dockerfile requests a base image mcr.microsoft.com/dotnet/sdk:5.0 from the registry, it actually gets 5.0-nanoserver-1909, 5.0-nanoserver-1809 or 5.0-buster-slim, depending on the operating system and version where Docker is running.
+P493|Docker Hub: A public registry to upload images and work with them. Docker Hub provides Docker image hosting, public or private registries, build triggers and web hooks, and integration with GitHub and Bitbucket.
+P495|Azure Container Registry: A public resource for working with Docker images and its components in Azure. This provides a registry that’s close to your deployments in Azure and that gives you control over access, making it possible to use your Azure Active Directory groups and permissions.
+P497|Docker Trusted Registry (DTR): A Docker registry service (from Docker) that can be installed on-premises so it lives within the organization’s datacenter and network. It’s convenient for private images that should be managed within the enterprise. Docker Trusted Registry is included as part of the Docker Datacenter product. For more information, see Docker Trusted Registry (DTR).
+P499|Docker Community Edition (CE): Development tools for Windows and macOS for building, running, and testing containers locally. Docker CE for Windows provides development environments for both Linux and Windows Containers. The Linux Docker host on Windows is based on a Hyper-V virtual machine. The host for Windows Containers is directly based on Windows. Docker CE for Mac is based on the Apple Hypervisor framework and the hypervisor, which provides a Linux Docker host virtual machine on macOS X. Docker CE for Windows and for Mac replaces Docker Toolbox, which was based on Oracle VirtualBox.
+P501|Docker Enterprise Edition (EE): An enterprise-scale version of Docker tools for Linux and Windows development.
+P502|Compose: A command-line tool and YAML file format with metadata for defining and running multi-container applications. You define a single application based on multiple images with one or more .yml files that can override values depending on the environment. After you’ve created the definitions, you can deploy the whole multi-container application with a single command (docker-compose up) that creates a container per image on the Docker host.
+P506|Cluster: A collection of Docker hosts exposed as if it were a single virtual Docker host, so that the application can scale to multiple instances of the services spread across multiple hosts within the cluster. Docker clusters can be created with Kubernetes, Azure Service Fabric, Docker Swarm and Mesosphere DC/OS.
+P508|Orchestrator: A tool that simplifies management of clusters and Docker hosts. Orchestrators enable you to manage their images, containers, and hosts through a command-line interface (CLI) or a graphical UI. You can manage container networking, configurations, load balancing, service discovery, high availability, Docker host configuration, and more. An orchestrator is responsible for running, distributing, scaling, and healing workloads across a collection of nodes. Typically, orchestrator products are the same products that provide cluster infrastructure, like Kubernetes and Azure Service Fabric, among other offerings in the market.
+P509|2.6 Reusable Components and Frameworks
+P510|Below are the lists of components identified which can be reused in this web application.
+P512|2.7.1	Npgsql - .NET Access to PostgreSQL
+P513|Npgsql is an open source ADO.NET Data Provider for PostgreSQL, it allows programs written in C#, Visual Basic, F# to access the PostgreSQL database server. It is implemented in 100% C# code, is free and is open source.
+P514|In addition, providers have been written for Entity Framework Core and for Entity Framework 6.x.
+P515|License
+P516|Npgsql is licensed under the PostgreSQL License, a liberal OSI-approved open source license.
+P517|Getting Started
+P518|The best way to use Npgsql is to install its nuget package.
+P519|Npgsql aims to be fully ADO.NET-compatible, its API should feel almost identical to other .NET database drivers. Here's a basic code snippet to get you started.
+P520|var connString = "Host=myserver;Username=mylogin;Password=mypass;Database=mydatabase";
+P522|await using var conn = new NpgsqlConnection(connString);
+P523|await conn.OpenAsync();
+P525|// Insert some data
+P526|await using (var cmd = new NpgsqlCommand("INSERT INTO data (some_field) VALUES (@p)", conn))
+P527|{
+P528|cmd.Parameters.AddWithValue("p", "Hello world");
+P529|await cmd.ExecuteNonQueryAsync();
+P530|}
+P532|// Retrieve all rows
+P533|await using (var cmd = new NpgsqlCommand("SELECT some_field FROM data", conn))
+P534|await using (var reader = await cmd.ExecuteReaderAsync())
+P535|while (await reader.ReadAsync())
+P536|Console.WriteLine(reader.GetString(0));
+P538|Nuget Package Installation in Visual Studio Projects:
+P539|Npgsql is the open source .NET data provider for PostgreSQL.
+P540|Power Shell Command:
+P541|PM> Install-Package Npgsql -Version 5.0.7
+P543|Connection String/Database Connectivity :
+P544|The application connection string specifies parameters such as the host, the username, the password, etc to connect Database. Connection strings have the form keyword1=value; keyword2=value; and are case-insensitive. Values containing special characters (e.g. semicolons) can be double-quoted. For more information, see the official doc page on connection strings.
+P545|Below are the connection string parameters which Npgsql understands, as well as some standard PostgreSQL environment variables.
+P547|Security and encryption:
+P550|Connection Pooling:
+P553|Timeouts and keepalive:
+P556|Performance:
+P558|Failover and load balancing:
+P561|Misc:
+P564|Compatibility:
+P565|Security and Encryption
+P566|Logging in:
+P567|The simplest way to log into PostgreSQL is by specifying a Username and a Password in your connection string. Depending on how your PostgreSQL is configured (in the pg_hba.conf file), Npgsql will send the password in MD5 or in cleartext (not recommended).
+P568|If a Password is not specified and your PostgreSQL is configured to request a password (plain or MD5), Npgsql will look for a standard PostgreSQL password file. If you specify the Passfile connection string parameter, the file it specifies will be used. If that parameter isn't defined, Npgsql will look under the path taken from PGPASSFILE environment variable. If the environment variable isn't defined, Npgsql will fall back to the system-dependent default directory which is $HOME/.pgpass for Unix and %APPDATA%\postgresql\pgpass.conf for Windows.
+P569|NpgsqlConnection can also be configured with a ProvidePasswordCallback. This will be executed when new database connections are opened to generate a password in code. This can be useful if you are using Amazon Web Services RDS for Postgres which can be configured to use short lived tokens generated based on access credentials. The ProvidePasswordCallback delegate is executed when both password and Passfile connection string parameters are not specified.
+P570|For documentation about all auth methods supported by PostgreSQL, see this page. Note that Npgsql supports Unix-domain sockets (auth method local), simply set your Host parameter to the absolute path of your PostgreSQL socket directory, as configured in your postgresql.conf.
+P571|Integrated Security (GSS/SSPI/Kerberos)
+P572|Logging in with a username and password may not be ideal, since your application must have access to your password, and raise questions around secret management. An alternate way of authenticating is "Integrated Security", which uses GSS or SSPI to negotiate Kerberos. The advantage of this method is that authentication is handed off to your operating system, using your already-open login session. Your application never needs to handle a password. You can use this method for a Kerberos login, Windows Active Directory or a local Windows session. Note that since 3.2, this method of authentication also works on non-Windows platforms.
+P573|Instructions on setting up Kerberos and SSPI are available in the PostgreSQL auth methods docs. Some more instructions for SSPI are available here.
+P574|Once your PostgreSQL is configured correctly, simply include Integrated Security=true in your connection string and drop the Password parameter. However, Npgsql must still send a username to PostgreSQL. If you specify a Username connection string parameter, Npgsql will send that as usual. If you omit it, Npgsql will attempt to detect your system username, including the Kerberos realm. Note that by default, PostgreSQL expects your Kerberos realm to be sent in your username (e.g. username@REALM); you can have Npgsql detect the realm by setting Include Realm to true in your connection string. Alternatively, you can disable add include_realm=0 in your PostgreSQL's pg_hba.conf entry, which will make it strip the realm. You always have the possibility of explicitly specifying the username sent to PostgreSQL yourself.
+P575|Encryption (SSL/TLS)
+P576|By default PostgreSQL connections are unencrypted, but you can turn on SSL/TLS encryption if you wish. First, you have to set up your PostgreSQL to receive SSL/TLS connections as described here. Once that's done, specify SSL Mode in your connection string, setting it to either Require (connection will fail if the server isn't set up for encryption), or Prefer (use encryption if possible but fallback to unencrypted otherwise).
+P577|By default, Npgsql will validate your server's certificate; if you're using a self-signed certificate, this will fail. You can instruct Npgsql to ignore this by specifying Trust Server Certificate=true in the connection string. To precisely control how the server's certificate is validated, you can register UserCertificateValidationCallback on NpgsqlConnection (this works just like on .NET's SslStream).
+P578|If you need provide client certificates as part of authentication, you can point Npgsql to a certificate file by setting the Client Certificate connection string parameter. Npgsql will also implement the standard PostgreSQL behavior and will recognize the PGSSLCERT environment variable, as well as ~/.postgresql/postgresql.crt (%APPDATA%\postgresql\postgresql.crt on Windows). Finally, you can set the ProvideClientCertificatesCallback on NpgsqlConnection to further customize how client certificates are provided (this works just like on .NET's SslStream).
+P579|2.7.2 Dapper Transaction
+P580|Dapper Transaction is exactly like Dapper but extend the IDbTransaction interface instead and use Dapper under the hood.
+P581|It's a simple library to make it easier to work with a transaction. Dapper Transaction support whatever Dapper support (Its only new extension method calling Dapper).
+P582|Here are some reference links:
+P583|NuGet: https://www.nuget.org/packages/Dapper.Transaction/
+P584|Supported Methods:
+P585|Execute
+P586|ExecuteAsync
+P587|ExecuteReader
+P588|ExecuteReaderAsync
+P589|ExecuteScalar
+P590|ExecuteScalarAsync
+P591|Query
+P592|QueryAsync
+P593|QueryFirst
+P594|QueryFirstAsync
+P595|QueryFirstOrDefault
+P596|QueryFirstOrDefaultAsync
+P597|QuerySingle
+P598|QuerySingleAsync
+P599|QuerySingleOrDefault
+P600|QuerySingleOrDefaultAsync
+P601|QueryMultiple
+P602|QueryMultipleAsync
+P604|Dapper Methods:
+P605|Bulk Insert
+P606|INSERT entities using the Bulk Operation.
+P607|Insert single
+P608|Insert many
+P609|Insert with relation (One to One)
+P610|Insert with relation (One to Many)
+P612|Example to INSERT a single entity with Bulk Operation
+P613|DapperPlusManager.Entity<Customer>().Table("Customers");
+P615|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P616|{
+P617|connection.BulkInsert(new List<Customer>() { new Customer() { CustomerName = "ExampleBulkInsert", ContactName = "Example Name :" +  1}});
+P618|}
+P620|Example to INSERT many entities with Bulk Operation
+P621|DapperPlusManager.Entity<Customer>().Table("Customers");
+P623|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P624|{
+P625|connection.BulkInsert(customers);
+P626|}
+P628|Example INSERT entities with a one to one relation with Bulk Operation
+P629|DapperPlusManager.Entity<Supplier>().Table("Suppliers").Identity(x => x.SupplierID);
+P630|DapperPlusManager.Entity<Product>().Table("Products").Identity(x => x.ProductID);
+P632|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P633|{
+P634|connection.BulkInsert(suppliers).ThenForEach(x => x.Product.SupplierID = x.SupplierID).ThenBulkInsert(x => x.Product);
+P635|}
+P637|Example to INSERT entities with a one to many relations with Bulk Operation.
+P638|DapperPlusManager.Entity<Supplier>().Table("Suppliers").Identity(x => x.SupplierID);
+P639|DapperPlusManager.Entity<Product>().Table("Products").Identity(x => x.ProductID);
+P641|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P642|{
+P643|connection.BulkInsert(suppliers).ThenForEach(x => x.Products.ForEach(y => y.SupplierID =  x.SupplierID)).ThenBulkInsert(x => x.Products);
+P644|}
+P646|Insert and keep identity value
+P647|Your entity has an identity property, but you want to force it to insert a specific value instead. The InsertKeepIdentity option allows you to keep the identity value of your entity.
+P648|DapperPlusManager.Entity<Customer>().Table("Customers");
+P650|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P651|{
+P652|connection.UseBulkOptions(options => options.InsertKeepIdentity = true).BulkInsert(customers);
+P653|}
+P655|Insert without returning the identity value
+P656|By default, the BulkInsert method already returns the identity when inserting.
+P657|However, such behavior impacts performance. For example, when the identity must be returned, a temporary table is created in SQL Server instead of directly using SqlBulkCopy into the destination table.
+P658|You can improve your performance by turning off the AutoMapOutput option.
+P659|DapperPlusManager.Entity<Customer>().Table("Customers");
+P661|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P662|{
+P663|connection.UseBulkOptions(options => options.AutoMapOutputDirection = false).BulkInsert(customers);
+P665|FiddleHelper.WriteTable("1 - Customers (from list)", customers);
+P666|}
+P672|Bulk Update
+P673|UPDATE entities using Bulk Operation.
+P674|Update single
+P675|Update many
+P676|Update with relation (One to One)
+P677|Update with relation (One to Many)
+P679|Example to UPDATE a single entity with Bulk Operation.
+P680|DapperPlusManager.Entity<Customer>().Table("Customers");
+P682|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P683|{
+P684|connection.BulkUpdate(customers);
+P685|}
+P687|Example to UPDATE many entities with Bulk Operation.
+P688|DapperPlusManager.Entity<Customer>().Table("Customers");
+P690|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P691|{
+P692|connection.BulkUpdate(customers);
+P693|}
+P695|Example to UPDATE entities with a one to one relation with Bulk Operation.
+P696|DapperPlusManager.Entity<Supplier>().Table("Suppliers").Identity(x => x.SupplierID);
+P697|DapperPlusManager.Entity<Product>().Table("Products").Identity(x => x.ProductID);
+P699|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P700|{
+P701|connection.BulkUpdate(suppliers, x => x.Product);
+P702|}
+P704|Example to UPDATE entities with a one to many relations with Bulk Operation.
+P705|DapperPlusManager.Entity<Supplier>().Table("Suppliers").Identity(x => x.SupplierID);
+P706|DapperPlusManager.Entity<Product>().Table("Products").Identity(x => x.ProductID);
+P708|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P709|{
+P710|connection.BulkUpdate(suppliers, x => x.Products);
+P711|}
+P712|Bulk Delete
+P713|DELETE entities using Bulk Operation.
+P715|Delete single
+P716|Delete many
+P717|Delete with relation (One to One)
+P718|Delete with relation (One to Many)
+P720|Example to DELETE a single entity with Bulk Operation.
+P721|DapperPlusManager.Entity<Customer>().Table("Customers").Key("CustomerID");
+P723|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P724|{
+P725|connection.BulkDelete(connection.Query<Customer>("Select * FROM CUSTOMERS WHERE CustomerID in (53,57) ").ToList());
+P726|}
+P728|Example to DELETE many entities with Bulk Operation.
+P729|DapperPlusManager.Entity<Customer>().Table("Customers").Key("CustomerID");
+P731|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P732|{
+P733|connection.BulkDelete(connection.Query<Customer>("Select * FROM CUSTOMERS WHERE CustomerID in (53,57) ").ToList());
+P734|}
+P736|Example to DELETE entities with a one to one relation with Bulk Operation.
+P737|DapperPlusManager.Entity<Supplier>().Table("Suppliers").Identity(x => x.SupplierID);
+P738|DapperPlusManager.Entity<Product>().Table("Products").Identity(x => x.ProductID);
+P740|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P741|{
+P742|connection.BulkDelete(suppliers.Select(x => x.Product)).BulkDelete(suppliers);
+P743|}
+P745|Example to DELETE entities with a one to many relations with Bulk Operation.
+P746|DapperPlusManager.Entity<Supplier>().Table("Suppliers").Identity(x => x.SupplierID);
+P747|DapperPlusManager.Entity<Product>().Table("Products").Identity(x => x.ProductID);
+P749|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P750|{
+P751|connection.BulkDelete(suppliers.SelectMany(x => x.Products)).BulkDelete(suppliers);
+P752|}
+P754|Bulk Merge
+P755|MERGE entities using Bulk Operation.
+P756|Merge single
+P757|Merge many
+P758|Merge with relation (One to One)
+P759|Merge with relation (One to Many)
+P761|Example to MERGE a single entity with Bulk Operation.
+P762|DapperPlusManager.Entity<Customer>().Table("Customers");
+P764|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P765|{
+P766|connection.BulkMerge(new List<Customer>() { new Customer() { CustomerName = "ExampleBulkMerge", ContactName = "Example Name :" +  1}});
+P767|}
+P769|Example to MERGE many entities with Bulk Operation.
+P770|DapperPlusManager.Entity<Customer>().Table("Customers");
+P772|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P773|{
+P774|connection.BulkMerge(customers);
+P775|}
+P777|Example MERGE entities with a one to one relation with Bulk Operation.
+P778|DapperPlusManager.Entity<Supplier>().Table("Suppliers").Identity(x => x.SupplierID);
+P779|DapperPlusManager.Entity<Product>().Table("Products").Identity(x => x.ProductID);
+P781|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P782|{
+P783|connection.BulkMerge(suppliers).ThenForEach(x => x.Product.SupplierID = x.SupplierID).ThenBulkMerge(x => x.Product);
+P784|}
+P786|Example to MERGE entities with a one to many relations with Bulk Operation.
+P787|DapperPlusManager.Entity<Supplier>().Table("Suppliers").Identity(x => x.SupplierID);
+P788|DapperPlusManager.Entity<Product>().Table("Products").Identity(x => x.ProductID);
+P790|using (var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServerW3Schools()))
+P791|{
+P792|connection.BulkMerge(suppliers).ThenForEach(x => x.Products.ForEach(y => y.SupplierID =  x.SupplierID)).ThenBulkMerge(x => x.Products);
+P793|}
+P803|Database Architecture and Migration Plan
+P805|Existing Kaveri_1 Database – is using SQL Server Database running on Windows server.
+P806|There are different databases created on the same or different server.
+P807|File Server – is storing all images, files and documents and thumb images.
+P817|Kaveri_2 Database – is using Postgres Database and will be running on Linux server.
+P818|Kaveri_ to Migration DB >>
+P819|As per the proposed migration plan, a Postgres staging\migration database needs to be set up, which will be replica of Kaveri_1 database and needs to complete migrated at once using ETL tool and incrementally updated all daily transactions.
+P820|Note – All new and daily transactions need to be inserted in staging DB using SQL script, which has to be provided by department on a daily basis.
+P821|Migration DB to Kaveri_2 Production DB >>
+P822|After completed migration in staging\migration DB, an ETL tool needs to be used to create design and mapping between Kaveri_1 and Kaveri_2 table\column level mappings.
+P823|ETL needs to cover table\column level mapping, logs and statistic, reconciliation.
+P824|The ETL jobs will be scheduled using schedular which will do complete migration and also pull and insert daily transactions from Kaveri_2 Migration DB to Kaveri_2 Production DB.
+P825|Kaveri_2 Production database is going to use the same file server used in Kaveri_1.
+P835|Kaveri_2 Production to Kaveri_2 Archive DB >> production data will be syncing on real time basis in archive database using EDB tool provided by Postgres enterprise version.
+P839|DevOps
+P840|DevOps is the combination of cultural philosophies, practices, and tools that increases an organization’s ability to deliver applications and services at high velocity: evolving and improving products at a faster pace than organizations using traditional software development and infrastructure management processes.
+P842|4.1	DevOps and the application lifecycle
+P843|DevOps influences the application lifecycle throughout its plan, develop, deliver, and operate phases. Each phase relies on the others, and the phases are not role-specific. In a true DevOps culture, each role is involved in each phase to some extent.
+P855|DevOps and agile result in the development of software, they have different approaches, involve different groups and departments and structure production differently.
+P856|The most important thing to know about DevOps versus agile is that they are not mutually exclusive. DevOps is a culture, fostering collaboration amongst all participants involved in the development and maintenance of software. Agile can be described as a development methodology designed to maintain productivity and drive releases with the common reality of changing needs. Although DevOps and agile are different, when used together these two methodologies lead to greater efficiency and more reliable results.
+P861|4.2 The benefits of DevOps
+P862|Adopting DevOps culture, practices, and tools enable teams to perform high, building better products faster for greater customer satisfaction. This improved collaboration and productivity is also integral to achieving business goals as below
+P863|Accelerating time to market
+P864|Adapting to the market and competition
+P865|Maintaining system stability and reliability
+P866|Improving the mean time to recovery
+P868|4.3	DevOps Practices
+P869|The following are DevOps best practices:
+P870|Code Review
+P871|Continuous Integrations
+P872|Continuous Delivery
+P873|4.3.1	Code Review
+P874|Developers working on projects should conduct peer code reviews on every pull request before merging to destination branch
+P875|Goals
+P876|Code review is a way to have a conversation about the code where participants will:
+P877|Improve code quality by identifying and removing defects before they can be introduced into shared code branches.
+P878|Learn and grow by having others review the code, we get exposed to unfamiliar design patterns or languages among other topics, and even break some bad habits.
+P879|Shared understanding between the developers over the project's code.
+P884|Changes to any main codebase - main branch in Git repository, for example - must be done using pull requests (PR).
+P885|Pull requests enable:
+P886|Code inspection
+P887|Running automated qualification of the code
+P888|Linters
+P889|Compilation
+P890|Unit tests
+P891|Integration tests etc.
+P895|4.3.2	Continuous Integration
+P896|Continuous integration is a software development practice where developers regularly merge their code changes into a central repository, after which automated builds and tests are run. The key goals of continuous integration are to find and address bugs quicker, improve software quality, and reduce the time it takes to validate and release new software updates.
+P897|4.3.3	Continuous Delivery
+P898|Continuous delivery is a software development practice where code changes are automatically built, tested, and prepared for a release to production. It expands upon continuous integration by deploying all code changes to a testing environment and/or a production environment after the build stage. When continuous delivery is implemented properly, developers will always have a deployment-ready build artifact that has passed through a standardized test process.
+P900|4.4	Feature Branching Strategy
+P901|Feature Branch Workflow signifies that all development should take place in a dedicated branch instead of the Development (Default) branch. This encapsulation makes it easy for multiple developers to work on a particular feature without disturbing the Development codebase. It also means the Development branch will never contain broken code, which is a huge advantage for continuous integration environments.
+P906|4.4.1	Develop and Staging branches
+P907|Instead of single Main Branch, this workflow uses two branches to record history of the project. The staging branch stores the official release history, and the development branch serves as an integration branch for features.
+P908|4.4.2	Start with the Development branch
+P909|All feature branches are created off the latest code state of a project.
+P910|git checkout development
+git fetch origin 
+git reset --hard origin/development
+P911|This switches the repo to the development branch, pulls the latest commits and resets the repo's local copy of development to match the latest version.
+P913|4.4.3	Create a new-branch
+P914|Use a separate branch for each feature or issue you work on. After creating a branch, check it out locally so that any changes you make will be on that branch.
+P915|git checkout -b new-feature
+P916|This checks out a branch called new-feature based on main, and the -b flag tells Git to create the branch if it doesn’t already exist.
+P918|4.4.4	Update, add, commit, and push changes
+P920|On this branch, edit, stage, and commit changes, building up the feature with as many commits as necessary. Work on the feature and make commits like you would any time you use Git. When ready, push your commits, updating the feature branch on to Azure DevOps.
+P921|git status
+git add <some-file>
+git commit
+P923|Test Driven Development
+P925|Test-driven development (TDD) is a software development process relying on software requirements being converted to test cases before software is fully developed, and tracking all software development by repeatedly testing the software against all test cases. This is as opposed to software being developed first and test cases created later.
+P927|Figure: A graphical representation of the Test-Driven Development (TDD) lifecycle
+P929|Test-driven development cycle
+P930|The following sequence is based on the book Test-Driven Development by Example: -
+P931|1. Add a test
+P932|The adding of a new feature begins by writing a test that passes, if the feature's specifications are met. The developer can discover these specifications by asking about use cases and user stories. A key benefit of test-driven development is that it makes the developer focus on requirements before writing code. This is in contrast with the usual practice, where unit tests are only written after code.
+P933|2. Run all tests. The new test should fail for expected reasons
+P934|This shows that new code is actually needed for the desired feature. It validates that the test harness is working correctly. It rules out the possibility that the new test is flawed and will always pass.
+P935|3. Write the simplest code that passes the new test
+P936|Inelegant or hard code is acceptable, as long as it passes the test. The code will be honed anyway in Step 5. No code should be added beyond the tested functionality.
+P937|4. All tests should now pass
+P938|If any fail, the new code must be revised until they pass. This ensures the new code meets the test requirements and does not break existing features.
+P939|5. Refactor as needed, using tests after each refactor to ensure that functionality is preserved
+P940|Code is refactored for readability and maintainability. In particular, hard-coded test data should be removed. Running the test suite after each refactor helps ensure that no existing functionality is broken.
+P941|Examples of refactoring:
+P942|moving code to where it most logically belongs
+P943|removing duplicate code
+P944|making names self-documenting
+P945|splitting methods into smaller pieces
+P946|re-arranging inheritance hierarchies
+P947|6. Repeat
+P948|The cycle above is repeated for each new piece of functionality. Tests should be small and incremental, and commits made often. That way, if new code fails some tests, the programmer can simply undo or revert rather than debug excessively. When using external libraries, it is important not to write tests that are so small as to effectively test merely the library itself, unless there is some reason to believe that the library is buggy or not feature-rich enough to serve all the needs of the software under development.
+P950|Test Automation: Robot Framework
+P952|About Robot Framework
+P953|Robot Framework is a generic open source automation framework. It can be used for test automation and robotic process automation (RPA). Robot Automation Framework is a wonder in the testing business. The system is open source and above all, it understands test and HTML!
+P954|It has easy-to-use, unimaginable test data language structure and it utilizes the Keyword driven testing approach.
+P955|Robot Framework is supported by Robot Framework Foundation. Many industry-leading companies use the tool in their software development. Companies reportedly use Robot Framework stacks, including Trivago, Ruangguru, Zé Delivery, Mews, Ericsson, Samsviran, Mobikwik, Kumparan, etc.
+P956|Robot Framework is open and extensible. Robot Framework can be integrated with virtually any other tool to create powerful and flexible automation solutions. Robot Framework is free to use without licensing costs.
+
+Robot Framework has an easy syntax, utilizing human-readable keywords. Its capabilities can be extended by libraries implemented with Python, Java or many other programming languages. Robot Framework has a rich ecosystem around it, consisting of libraries and tools that are developed as separate projects.
+P957|Robot Test Framework Features:
+P958|All the features, referenced underneath guarantee that Robot Automation Framework can be utilized to automate test cases in a speedy and capable form.
+P959|Simple CI/CD Integrations
+P960|Data-driven Test Cases
+P961|High-Level Architecture
+P962|Basic Tabular and Declarative Syntax
+P963|Separate Test Data Editor
+P964|Point by point logs
+P965|Clear Reports
+P966|Generic and remote test libraries and dedicated modules which are easily extendable.
+P967|Vast Text editor support
+P968|Supports Windows, Mobile and Web applications
+P969|WHAT ARE SOME ALTERNATIVES TO ROBOT FRAMEWORK?
+P970|Selenium: -
+P971|Selenium automates browsers. That's it! What you do with that power is entirely up to you. Primarily, it is for automating web applications for testing purposes, but is certainly not limited to just that. Boring web-based administration tasks can (and should!) also be automated as well.
+P972|Cucumber: -
+P973|Cucumber is a tool that supports Behavior-Driven Development (BDD) - a software development process that aims to enhance software quality and reduce maintenance costs.
+P974|Cypress: -
+P975|Cypress is a front end automated testing application created for the modern web. Cypress is built on a new architecture and runs in the same run-loop as the application being tested. As a result, Cypress provides better, faster, and more reliable testing for anything that runs in a browser. Cypress works on any front-end framework or website.
+P976|TestNG: -
+P977|It is a testing framework designed to simplify a broad range of testing needs, it covers all categories of tests: unit, functional, end-to-end, integration, etc. Run your tests in arbitrarily big thread pools with various policies available (all methods in their own thread, one thread per test class, etc.
+P978|Gauge: -
+P979|Gauge is created by Thought Works. Gauge let you write tests in plain-speak and refactor fearlessly. Gauge’s pluggable architecture allows you to customize your environment so you can write tests in the language and IDE of your choice.
+P981|Installation and Configuration
+P982|Robot Framework is implemented with Python, so you need to have Python (Python 3.10.5) installed.
+P983|On Windows machines, make sure to add Python to PATH during installation. Use Download link to download and install Python(https://www.python.org/downloads/)
+P984|To check what Python version you have installed, you can run python --version command in a terminal:
+P986|python --version
+P987|Installing Robot Framework with pip is simple:
+P988|pip install robotframework
+P989|To check that the installation was successful, run it should be (Robot Framework 5.0.1 (Python 3.10.5 on win32))
+P990|robot –version
+P991|Please refer Robot Framework Quick Start Guide
+P992|https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst
+P995|Security Architecture
+P996|Security architecture is defined as the architectural design that includes all the threats and potential risks which can be present in the environment or that particular scenario.  Security architecture include all the security specifications and include all the detailed information about the architecture. The organization uses for their system, and it is mainly used because the architecture is affordable and cost-effective and can be used easily by the organization.
+P997|Below figure descried detailed security architecture and design based on two fundamental categories to implement security best practices which is further sub-categories into Data, Integration point (Web APIs) and Application level information security. The proposed design also indented to address technology focused based security on Data, Application and Integration Technology along with various platform (Linux OS, Device Drivers, .NET Core, Postgreas, Development tools, Libraries, etc.) and Network level treats.
+P999|Figure: Security Architecture Approach
+P1000|Threat Components and Categorization
+P1001|As security is ongoing process following table denotes the major components of the threats along with its categorization to be address in security architecture: -
+P1003|Table:  Thread Components and Categorization
+P1006|Authorization and Authentication
+P1007|Authorization (sometimes abbreviated as AuthZ) is used to set permissions that enable evaluation of access to resources or functionality. In contrast, authentication (sometimes abbreviated as AuthN) is focused on proving that an entity like a user or service is indeed who they claim to be.
+P1008|Authorization can include specifying the functionality, resources, or data an entity is allowed to access. Authorization also specifies what can be done with the data. This authorization action is often referred to as access control.
+P1009|Authentication and authorization are concepts that aren't limited to only users. Services or daemon applications are often built to make requests for resources as themselves rather than on behalf of a specific user. In this article, the term "entity" is used to refer to either a user or an application.
+P1010|Authentication as authorization
+P1011|Possibly the simplest form of authorization is to grant or deny access based on whether the entity making a request has been authenticated. If the requestor can prove they're who they claim to be, they can access the protected resources or functionality.
+P1012|Access control lists
+P1013|Authorization by using access control lists (ACLs) involves maintaining explicit lists of specific entities who do or don't have access to a resource or functionality. ACLs offer finer control over authentication-as-authorization but become difficult to manage as the number of entities increases.
+P1014|Role-based access control
+P1015|Role-based access control (RBAC) is possibly the most common approach to enforcing authorization in applications. When using RBAC, roles are defined to describe the kinds of activities an entity may perform. An application developer grants access to roles rather than to individual entities. An administrator can then assign roles to different entities to control which ones have access to what resources and functionality.
+P1016|In advanced RBAC implementations, roles may be mapped to collections of permissions, where a permission describes a granular action or activity that can be performed. Roles are then configured as combinations of permissions. Compute the overall permission set for an entity by intersecting the permissions granted to the various roles the entity is assigned.
+P1018|To mitigate most of the Application level security threats following features have been incorporated in Kaveri 2.0: -
+P1019|Password Hashing and Authentication
+P1020|The Kaveri 2.0 platform store all the password in hashed form into the database. we learned that storing passwords in plaintext must never be an option. Instead, we want to provide a one-way road to security by hashing passwords.
+P1021|Storing Hashed Passwords
+P1022|When a user signs up, they will typically enter a loginname and password in plaintext along with other details. When they click “submit,” the username and password are sent to your server (hopefully, over an encrypted SSL connection) where you should:
+P1023|Validate that the password meets the password requirements
+P1024|Hash the password using hashing algorithm
+P1025|Save the hashed password, salt is randomly generated with round level 16 for highest security and username to your database
+P1026|Return a success message to the user
+P1027|Plain password is sms to user via sms/email, making sure that the user is the sole owner of the password.
+P1031|Figure: Storing Hashed Passwords
+P1032|Validating Hashed Passwords
+P1033|Once you’ve stored a user’s hashed password, you are ready to validate it next time they log in. Typically, the password validation flow looks like this:
+P1034|User enters loginname and password on the login page
+P1035|The loginname and plaintext password is sent to your server over an encrypted SSL connection
+P1036|You retrieve a user (with their password and random salt) from the database by their unique loginname.
+P1037|You hash the plaintext password using the same salt
+P1038|You compare the hashed password stored in your database with the one submitted on the login page
+P1039|If they match exactly you can safely proceed with user authentication
+P1041|Figure: Validating Hashed Passwords
+P1042|There are plenty of cryptographic functions to choose from such as the SHA2 family and the SHA-3 family. However, one design problem with the SHA families is that they were designed to be computationally fast. How fast a cryptographic function can calculate a hash has an immediate and significant bearing on how safe the password is.
+P1043|Faster calculations mean faster brute-force attacks, for example. Modern hardware in the form of CPUs and GPUs could compute millions, or even billions, of SHA-256 hashes per second against a stolen database. Instead of a fast function, we need a function that is slow at hashing passwords to bring attackers almost to a halt. We also want this function to be adaptive so that we can compensate for future faster hardware by being able to make the function run slower and slower over time.
+P1044|At CSG, the integrity and security of our data are one of our highest priorities. We use the industry-grade and battle-tested bcrypt algorithm to securely hash and salt passwords. bcrypt allows building a password security platform that can evolve alongside hardware technology to guard against the threats that the future may bring, such as attackers having the computing power to crack passwords twice as fast.
+P1046|Figure: - Hash Algorithm Performance on different number of nodes
+P1047|The platform ensures the hardest level of hashing recovery for brute-force attackers.
+P1049|JWT Token based Authentication and Session Management
+P1050|JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
+P1052|Here are some scenarios where JSON Web Tokens are useful:
+P1054|Authorization
+P1055|This is the most common scenario for using JWT. Once the user is logged in, each subsequent request will include the JWT, allowing the user to access routes, services, and resources that are permitted with that token. Single Sign On is a feature that widely uses JWT nowadays, because of its small overhead and its ability to be easily used across different domains.
+P1057|Information Exchange
+P1058|JSON Web Tokens are a good way of securely transmitting information between parties. Because JWTs can be signed—for example, using public/private key pairs—you can be sure the senders are who they say they are. Additionally, as the signature is calculated using the header and the payload, you can also verify that the content hasn't been tampered with
+P1060|Role-Based Access Control (RBAC)
+P1061|Role-based access control (RBAC) allows users or groups to have specific permissions to access and manage resources. Typically, implementing RBAC to protect a resource includes protecting either a web application, a single-page application (SPA), or an API. In Kaveri 2.0 this protection is for the entire application or API, specific areas and features, or API methods.
+P1062|HTTPS Communication over SSL/TLC
+P1063|Hypertext Transfer Protocol Secure (HTTPS) is an extension of the Hypertext Transfer Protocol (HTTP). It is used for secure communication over a computer network, and is widely used on the Internet. In HTTPS, the communication protocol is encrypted using Transport Layer Security (TLS) or, formerly, Secure Sockets Layer (SSL). The protocol is therefore also referred to as HTTP over TLS, or HTTP over SSL.
+P1064|SSL stands for Secure Sockets Layer and, in short, it's the standard technology for keeping an internet connection secure and safeguarding any sensitive data that is being sent between two systems, preventing criminals from reading and modifying any information transferred, including potential personal details. The two systems can be a server and a client (for example, a shopping website and browser) or server to server (for example, an application with personal identifiable information or with payroll information).
+P1066|It does this by making sure that any data transferred between users and sites, or between two systems remain impossible to read. It uses encryption algorithms to scramble data in transit, preventing hackers from reading it as it is sent over the connection. This information could be anything sensitive or personal which can include credit card numbers and other financial information, names and addresses.
+P1068|TLS (Transport Layer Security) is just an updated, more secure, version of SSL. We still refer to our security certificates as SSL because it is a more commonly used term.
+P1069|The principal motivations for HTTPS are authentication of the accessed website, and protection of the privacy and integrity of the exchanged data while in transit. It protects against man-in-the-middle attacks, and the bidirectional encryption of communications between a client and server protects the communications against eavesdropping and tampering. The authentication aspect of HTTPS requires a trusted third party to sign server-side digital certificates. This was historically an expensive operation, which meant fully authenticated HTTPS connections were usually found only on secured systems on the World Wide Web.
+---TABLE 0---
+T0R0|Version || Date of Revision || Author/Modified By || Description for Change || Affected Sections || Approved By
+T0R1|1.0 || 27-AUG-2021 || Arun Siripuram || Draft || Project Overview / Tools / Architectural Representations || 
+T0R2|1.1 || 28-AUG-2021 || Arun Siripuram || User Case View / Class Diagrams || Software Design || 
+T0R3|1.2 || 06-Sept-2021 || Arun Siripuram || User Account and Login Class Diagrams || Software Design || 
+T0R4|1.3 || 06-Sept-2021 || Arun Siripuram || Updated Microservices section || Software Design || 
+T0R5|1.4 || 27-March-2022 || Arun Siripuram || Updated all Kaveri Search Class diagram || Software Design || 
+T0R6|1.5 || 27-May-2022 || Arun Siripuram || Updated all Kaveri Search Class diagram || Software Design || 
+T0R7|1.6 || 05-July-2022 || Arun Siripuram || Updated DevOps Practices || DevOps || 
+T0R8|1.7 || 07-July-2022 || Drupad || Updated  Database Architecture || DB Architecture || 
+T0R9|1.8 || 07-July-2022 || Drupad || Updated  Database Architecture || DB Architecture || 
+T0R10|1.9 || 10-July-2022 || Mahendra || Updated TDD and Security || Security || 
+T0R11|2.0 || 16-July-2022 || Arun Siripuram || Updated Common Application Architecture, DevOps || Architecture Context and DevOps || 
+T0R12|2.1 || 18-July-2022 || Arun Siripuram || Updated Service Oriented Architecture and Technology Stack || Architecture Context || 
+T0R13|2.2 || 19-July-2022 || Arun Siripuram || Excluded Logical Object Model || Architecture Context || 
+---TABLE 1---
+T1R0|Tech stack components || Technologies || Description
+T1R1|Frontend UI || HTML, CSS || HTML is a language used for structuring and presenting content on the Web consistently, across web browsers. Cascading Style Sheets’ CSS and is the language of design for web pages, giving site design
+T1R2|Frontend styling || Bootstrap || Bootstrap is an open-source CSS framework designed to come up with mobile-friendly, responsive front-end web development. It consists of enormous versatile and reusable pieces of code written in HTML,
+T1R3|Frontend frameworks || Angular 11 || Angular is a development platform, built on TypeScript. As a platform, Angular includes: /  / A component-based framework for building scalable web applications / A collection of well-integrated libra
+T1R4|Programming languages || Typescript || TypeScript is a superset of JavaScript, a statically aggregated language to compose straight forward JavaScript code. TypeScript gives discretionary static composing, classes, and interface, and is th
+T1R5|Microservices || C#, WebAPI, .Net 5 || Microservices are small, modular, and independently deployable services. Docker containers (for Linux and Windows) simplify deployment and testing by bundling a service and its dependencies into a sin
+T1R6|Database || PostGreSQL 12.8 || PostgreSQL offers the following modern features: Possibility of complex queries / Foreign keys for linking data in two tables / Triggers that are automatically triggered on input and check, confirm, c
+T1R7|Infrastructure || KSDC || State Data Centre (SDC) provides the infrastructure required for consolidating state level applications at a central facility.  / Augmentation of Servers, Storage and other necessary infrastructure to
+---TABLE 2---
+T2R0|ng build || Compiles an Angular app into an output directory.
+T2R1|ng serve || Builds and serves your application, rebuilding on file changes.
+T2R2|ng generate || Generates or modifies files based on a schematic.
+T2R3|ng test || Runs unit tests on a given project.
+T2R4|ng e2e || Builds and serves an Angular application, then runs end-to-end tests.
+---TABLE 3---
+T3R0|WORKSPACE CONFIG FILES || PURPOSE
+T3R1|editorconfig || Configuration for code editors. See EditorConfig.
+T3R2|.gitignore || Specifies intentionally untracked files that Git should ignore.
+T3R3|README.md || Introductory documentation for the root application.
+T3R4|angular.json || CLI configuration defaults for all projects in the workspace, including configuration options for build, serve, and test tools that the CLI uses, such as TSLint, Karma, and Protractor. For details, se
+T3R5|package.json || Configures npm package dependencies that are available to all projects in the workspace. See npm documentation for the specific format and contents of this file.
+T3R6|package-lock.json || Provides version information for all packages installed into node_modules by the npm client. See npm documentation for details. If you use the yarn client, this file will be yarn.lock instead.
+T3R7|src/ || Source files for the root-level application project.
+---TABLE 4---
+T4R0|APP SUPPORT FILES || PURPOSE
+T4R1|app/ || Contains the component files in which your application logic and data are defined.
+T4R2|assets/ || Contains image and other asset files to be copied as-is when you build your application.
+T4R3|environments/ || Contains build configuration options for particular target environments. By default there is an unnamed standard development environment and a production ("prod") environment. You can define additiona
+T4R4|favicon.ico || An icon to use for this application in the bookmark bar.
+T4R5|index.html || The main HTML page that is served when someone visits your site. The CLI automatically adds all JavaScript and CSS files when building your app, so you typically don't need to add any <script> or <lin
+T4R6|main.ts || The main entry point for your application. Compiles the application with the JIT compiler and bootstraps the application's root module (AppModule) to run in the browser. You can also use the AOT compi
+T4R7|polyfills.ts || Provides polyfill scripts for browser support.
+T4R8|styles.sass || Lists CSS files that supply styles for a project. The extension reflects the style preprocessor you have configured for the project.
+T4R9|test.ts || The main entry point for your unit tests, with some Angular-specific configuration. You don't typically need to edit this file.
+T4R10|APP SUPPORT FILES || PURPOSE
+T4R11|app/ || Contains the component files in which your application logic and data are defined.
+---TABLE 5---
+T5R0|Virtual Machines  / || Docker Containers  /
+---TABLE 6---
+T6R0|Virtual Machines || Docker Containers
+T6R1|Virtual machines include the application, the required libraries or binaries, and a full guest operating system. Full virtualization requires more resources than containerization. || Containers include the application and all its dependencies. However, they share the OS kernel with other containers, running as isolated processes in user space on the host operating system. (Except 
+---TABLE 7---
+T7R0|Candidate Components || Benefits List
+T7R1|Exception Handling || Capture error during different stages of services. Capture exceptions and notify mechanism based on metadata defined.
+T7R2|Logging || Logging success data during different stages of service which can later be used for reporting/reconciliation etc.
+---TABLE 8---
+T8R0|Parameter || Description || Default
+T8R1|Host || Specifies the host name - and optionally port - on which PostgreSQL is running. Multiple hosts may be specified, see the docs for more info. If the value begins with a slash, it is used as the directo || Required
+T8R2|Port || The TCP port of the PostgreSQL server. || 5432
+T8R3|Database || The PostgreSQL database to connect to. || Same as Username
+T8R4|Username || The username to connect with. Not required if using IntegratedSecurity. || PGUSER
+T8R5|Password || The password to connect with. Not required if using IntegratedSecurity. || PGPASSWORD
+T8R6|Passfile || Path to a PostgreSQL password file (PGPASSFILE), from which the password is taken. || PGPASSFILE
+---TABLE 9---
+T9R0|Parameter || Description || Default
+T9R1|SSL Mode || Controls whether SSL is used, depending on server support. Can be Require, Disable, or Prefer. See docs for more info. || Disable
+T9R2|Trust Server Certificate || Whether to trust the server certificate without validating it. || FALSE
+T9R3|Client Certificate || Location of a client certificate to be sent to the server. || PGSSLCERT
+T9R4|Client Certificate Key || Location of a client key for a client certificate to be sent to the server. || PGSSLKEY
+T9R5|Root Certificate || Location of a CA certificate used to validate the server certificate. || PGSSLROOTCERT
+T9R6|Check Certificate Revocation || Whether to check the certificate revocation list during authentication. False by default. || FALSE
+T9R7|Integrated Security || Whether to use integrated security to log in (GSS/SSPI), currently supported on Windows only. || FALSE
+T9R8|Persist Security Info || Gets or sets a Boolean value that indicates if security-sensitive information, such as the password, is not returned as part of the connection if the connection is open or has ever been in an open sta || FALSE
+T9R9|Kerberos Service Name || The Kerberos service name to be used for authentication. See docs for more info. || postgres
+T9R10|Include Realm || The Kerberos realm to be used for authentication. See docs for more info. || 
+T9R11|Include Error Detail || When enabled, PostgreSQL error and notice details are included on PostgresException.Detail and PostgresNotice.Detail. These can contain sensitive data. || FALSE
+T9R12|Log Parameters || When enabled, parameter values are logged when commands are executed. || FALSE
+---TABLE 10---
+T10R0|Parameter || Description || Default
+T10R1|Pooling || Whether connection pooling should be used. || TRUE
+T10R2|Minimum Pool Size || The minimum connection pool size. || 0
+T10R3|Maximum Pool Size || The maximum connection pool size. || 100 since 3.1, 20 previously
+T10R4|Connection Idle Lifetime || The time (in seconds) to wait before closing idle connections in the pool if the count of all connections exceeds Minimum Pool Size. || 300
+T10R5|Connection Pruning Interval || How many seconds the pool waits before attempting to prune idle connections that are beyond idle lifetime (see Connection Idle Lifetime). || 10
+T10R6|ConnectionLifetime || The total maximum lifetime of connections (in seconds). Connections which have exceeded this value will be destroyed instead of returned from the pool. This is useful in clustered configurations to fo || 0 (disabled)
+---TABLE 11---
+T11R0|Parameter || Description || Default
+T11R1|Timeout || The time to wait (in seconds) while trying to establish a connection before terminating the attempt and generating an error. || 15
+T11R2|Command Timeout || The time to wait (in seconds) while trying to execute a command before terminating the attempt and generating an error. Set to zero for infinity. || 30
+T11R3|Internal Command Timeout || The time to wait (in seconds) while trying to execute an internal command before terminating the attempt and generating an error. -1 uses CommandTimeout, 0 means no timeout. || -1
+T11R4|Cancellation Timeout || The time to wait (in milliseconds) while trying to read a response for a cancellation request for a timed out or cancelled query, before terminating the attempt and generating an error. -1 skips the w || 2000
+T11R5|Keepalive || The number of seconds of connection inactivity before Npgsql sends a keepalive query. || 0 (disabled)
+T11R6|Tcp Keepalive || Whether to use TCP keepalive with system defaults if overrides isn't specified. || FALSE
+T11R7|Tcp Keepalive Time || The number of milliseconds of connection inactivity before a TCP keepalive query is sent. Use of this option is discouraged, use KeepAlive instead if possible. Supported only on Windows. || 0 (disabled)
+T11R8|Tcp Keepalive Interval || The interval, in milliseconds, between when successive keep-alive packets are sent if no acknowledgement is received. Tcp KeepAlive Time must be non-zero as well. Supported only on Windows. || value of Tcp Keepalive Time
+---TABLE 12---
+T12R0|Parameter || Description || Default
+T12R1|Max Auto Prepare || The maximum number SQL statements that can be automatically prepared at any given point. Beyond this number the least-recently-used statement will be recycled. Zero disables automatic preparation. || 0
+T12R2|Auto Prepare Min Usages || The minimum number of usages an SQL statement is used before it's automatically prepared. || 5
+T12R3|Read Buffer Size || Determines the size of the internal buffer Npgsql uses when reading. Increasing may improve performance if transferring large values from the database. || 8192
+T12R4|Write Buffer Size || Determines the size of the internal buffer Npgsql uses when writing. Increasing may improve performance if transferring large values to the database. || 8192
+T12R5|Socket Receive Buffer Size || Determines the size of socket receive buffer. || System-dependent
+T12R6|Socket Send Buffer Size || Determines the size of socket send buffer. || System-dependent
+T12R7|No Reset On Close || Improves performance in some cases by not resetting the connection state when it is returned to the pool, at the cost of leaking state. Use only if benchmarking shows a performance improvement || FALSE
+---TABLE 13---
+T13R0|Parameter || Description || Default
+T13R1|Target Session Attributes || Determines the preferred PostgreSQL target server type. || PGTARGETSESSIONATTRS, Any
+T13R2|Load Balance Hosts || Enables balancing between multiple hosts by round-robin. || FALSE
+T13R3|Host Recheck Seconds || Controls for how long the host's cached state will be considered as valid. || 10
+---TABLE 14---
+T14R0|Parameter || Description || Default
+T14R1|Options || Specifies any valid PostgreSQL connection options, surrounded by single ticks. || PGOPTIONS
+T14R2|Application Name || The optional application name parameter to be sent to the backend during connection initiation. || 
+T14R3|Enlist || Whether to enlist in an ambient TransactionScope. || TRUE
+T14R4|Search Path || Sets the schema search path. || 
+T14R5|Client Encoding || Gets or sets the client_encoding parameter. || PGCLIENTENCODING
+T14R6|Encoding || Gets or sets the .NET encoding that will be used to encode/decode PostgreSQL string data. || UTF8
+T14R7|Timezone || Gets or sets the session timezone. || PGTZ
+T14R8|EF Template Database || The database template to specify when creating a database in Entity Framework. || template1
+T14R9|EF Admin Database || The database admin to specify when creating and dropping a database in Entity Framework. || template1
+T14R10|Load Table Composites || Load table composite type definitions, and not just free-standing composite types. || FALSE
+T14R11|Array Nullability Mode || Configure the way arrays of value types are returned when requested as object instances. Possible values are: Never (arrays of value types are always returned as non-nullable arrays), Always (arrays o || Never
+---TABLE 15---
+T15R0|Parameter || Description || Default
+T15R1|Server Compatibility Mode || A compatibility mode for special PostgreSQL server types. Currently "Redshift" is supported, as well as "NoTypeLoading", which will bypass the normal type loading mechanism from the PostgreSQL catalog || none
+T15R2|Convert Infinity DateTime || Makes MaxValue and MinValue timestamps and dates readable as infinity and negative infinity. || FALSE
+---TABLE 16---
+T16R0|KAVERI 1.0 Data Repositories (As of June 2022) || KAVERI 1.0 Data Repositories (As of June 2022) || KAVERI 1.0 Data Repositories (As of June 2022)
+T16R1|Name || DB Name || Size
+T16R2|Centralized Data || EC Data || 2 TB
+T16R3|Online User Data (KAVERI Online) || KAIGR_Online || 5 GB
+T16R4|Valuation DB || KAIGR_Val || 300 MB
+T16R5|Kaveri 2 Firm Registration || KAIGR_Central || 1 GB
+T16R6|SR/DR Database || KAIGR_Reg || 2.5 TB
+T16R7|Image & Document Data || SAN || 50 TB
+T16R8|Photo and Thumb || CDs || /  File Server  /   /
+T16R9|Online EC/CC Copies || File Structure - SAN || /  File Server  /   /
+T16R10|Form 22 Application || File Structure - SAN || /  File Server  /   /
+T16R11|Enclosures || File Structure - SAN || /  File Server  /   /
+T16R12|Pending Status of Transitions || PEN_DOCS || 5 GB
+T16R13|Reporting Database || KAIGR_SEARCHDB || 1 TB
+---TABLE 17---
+T17R0|SNo. || Category || Sub-Category || Threat
+T17R1|1 || Runtime Environment Threat || System Threats || Operating System Vulnerabilities
+T17R2|1 || Runtime Environment Threat || System Threats || Hardware Vulnerabilities
+T17R3|1 || Runtime Environment Threat || System Threats || HDD Storage Threat
+T17R4|1 || Runtime Environment Threat || System Threats || Insecure Device Drivers
+T17R5|1 || Runtime Environment Threat || System Threats || Infected/Compromised System
+T17R6|1 || Runtime Environment Threat || Language Related Threats || Vulnerable Language Execution Environment
+T17R7|1 || Runtime Environment Threat || Language Related Threats || Vulnerable Language Feature
+T17R8|1 || Runtime Environment Threat || Language Related Threats || Vulnerable Language API
+T17R9|1 || Runtime Environment Threat || Language Related Threats || Untested Code
+T17R10|1 || Runtime Environment Threat || Runtime Environment Threats || Code Fork Vulnerabilities
+T17R11|1 || Runtime Environment Threat || Runtime Environment Threats || Vulnerable Execution Environment
+T17R12|1 || Runtime Environment Threat || Runtime Environment Threats || Endpoint Vulnerabilities
+T17R13|2 || Communication Protocol Threat || Network Threats || DDoS Attack
+T17R14|2 || Communication Protocol Threat || Network Threats || Routing Attacks
+T17R15|2 || Communication Protocol Threat || Network Threats || DNS Attack
+T17R16|2 || Communication Protocol Threat || Network Threats || Open IP Access Attack
+T17R17|2 || Communication Protocol Threat || Network Threats || Open Port Attack
+T17R18|2 || Communication Protocol Threat || Network Threats || File, Storage and Ransomware
+T17R19|2 || Communication Protocol Threat || Protocol Threats || Transaction Malleability Attack
+T17R20|2 || Communication Protocol Threat || Protocol Threats || SSL, TCP/IP Vulnerabilities
+T17R21|2 || Communication Protocol Threat || Protocol Threats || Time-jacking Attack
+T17R22|2 || Communication Protocol Threat || Protocol Threats || Transaction Privacy Leakage
+T17R23|3 || Cryptographic Threat || Algorithmic Threats || Quantum Computing Threat
+T17R24|3 || Cryptographic Threat || Algorithmic Threats || Algorithm Vulnerabilities
+T17R25|3 || Cryptographic Threat || Security Key Threats || Private Key Security
+T17R26|3 || Cryptographic Threat || Security Key Threats || Flawed Key Generation, Weak Key, Vulnerable Signature
+T17R27|4 || NIST Risk-based Security || For Known/Unknown Threat || Prepare and Categorize
+T17R28|4 || NIST Risk-based Security || For Known/Unknown Threat || Asset Valuation
+T17R29|4 || NIST Risk-based Security || For Known/Unknown Threat || Threats and Vulnerabilities Identification
+T17R30|4 || NIST Risk-based Security || For Known/Unknown Threat || Risk profiling
+T17R31|4 || NIST Risk-based Security || For Known/Unknown Threat || Implementation and Risk treatment
+T17R32|4 || NIST Risk-based Security || For Known/Unknown Threat || Authorize and Monitor

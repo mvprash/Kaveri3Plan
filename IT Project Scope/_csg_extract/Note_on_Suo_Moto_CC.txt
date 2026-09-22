@@ -1,0 +1,38 @@
+P0|Karnataka Valuation & E-Registration (KAVERI - 2.0)
+P1|Government of Karnataka Functional Requirement Specifications
+P3|For KAVERI 2.0
+P4|Department of Stamps & Registration
+P5|Government of Karnataka
+P7|Note on Suo moto CC search
+P8|for
+P9|Book-3 and Book-4
+P14|Prepared by
+P15|Centre for Smart Governance (CSG)
+P16|3rd Floor, TTMC Yeshwanthapura, BMTC Bus station
+P17|Bangalore – 560022
+P22|Why is Suo moto EC?
+P23|Applicants can get the EC and CC of a registered document via the Kaveri 2.0 portal, since the documents registered under Book 3 and Book 4 are classified in nature, so applicants are not allowed to apply for the CC of these documents. The applicants are now approaching the SR to obtain a certified copy of such documents. The SR/FDA/SDA can search the CC; the CC which are fetched in the department login will have a watermark on them, and these documents cannot be used for any legal requirements.
+P24|Document scope
+P25|This document describes the functional features of the Suo Moto Certified Copy (CC) search within the Kaveri 2.0 system. The implementation of this feature enables citizens to obtain Certified Copies of Book-3 and Book-4 documents.
+P26|Prepared by the Centre for Smart Governance (CSG) in collaboration with the department, this document is intended for the departmental approving authority and the development team.
+P28|Description of the functional requirement
+P29|Interaction Diagram
+P31|Activity Diagram
+P34|To-Be: Suo moto CC search
+P35|The citizen visits to SRO to get a certified copy of Book-3 or Book-4 with the relevant original document.
+P36|The SDA logs into the CC search module and enters relevant document details, such as the Book number, district, taluk, and hobli.
+P37|The system fetches the CC document without any watermarks.
+P38|The SDA verifies the details of the original documents and details fetched in the CC copy.
+P39|If the details are matching then, the SDA clicks on prepare CC, digitally signs the fetched CC document and sends it to the FDA for verification.
+P40|The system forwards the application to the FDA for verification.
+P41|The FDA validates the CC details.
+P42|If any remarks are found, the FDA adds them and sends the application back to the SDA for correction.
+P43|The SDA view the remarks, prepares CC and sends it back again for verification.
+P44|If no remarks are found, the FDA digitally signs the CC document and sends it to the SR for approval.
+P45|The SR validates the CC details with the original records carried by the citizen.
+P46|If any remarks are found, the SR adds them and sends the application back to the SDA for correction.
+P47|The SDA views the remarks, prepares the CC, and sends it back for verification.
+P48|If no remarks are found, the SR digitally signs the CC document and sends it to the SDA for print.
+P49|The SDA prints the CC document of book 3 or book 4 and hands it over to the citizen.
+P50|Assumptions
+P51|Payment mode will same as Suo Moto EC.

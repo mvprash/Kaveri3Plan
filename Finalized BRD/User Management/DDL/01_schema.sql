@@ -5,7 +5,7 @@
 CREATE SCHEMA IF NOT EXISTS um;
 
 COMMENT ON SCHEMA um IS
-  'KAVERI 3.0 User Management & RBAC — logical model ERD-K3-UM-001 v2.1';
+  'KAVERI 3.0 User Management & RBAC — logical model ERD-K3-UM-001 v2.3 / BRD v1.0';
 
 SET search_path TO um, public;
 

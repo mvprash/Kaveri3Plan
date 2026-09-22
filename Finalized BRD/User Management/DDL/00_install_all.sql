@@ -1,6 +1,6 @@
 -- =============================================================================
 -- KAVERI 3.0 · User Management · DDL installer
--- Companion to ERD-K3-UM-001 v2.2 / BRD_User_Management_v4.18
+-- Companion to ERD-K3-UM-001 v2.3 / BRD_User_Management_v1.0 (11-Sep-2026)
 -- Usage:  psql -v ON_ERROR_STOP=1 -f 00_install_all.sql
 -- =============================================================================
 

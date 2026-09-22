@@ -1,0 +1,2189 @@
+P0|Karnataka Valuation & E-Registration (KAVERI - 2.0)
+P2|Government of Karnataka
+P4|Functional Requirement Specifications
+P6|For KAVERI 2.0
+P7|Department of Stamps & Registration
+P8|Government of Karnataka
+P9|Version 4.0
+P10|July 20th, 2026
+P13|Marriage Registration
+P22|Prepared by
+P23|Centre for Smart Governance (CSG)
+P24|3rd Floor, TTMC Yeshwanthapura, BMTC Bus station
+P25|Bangalore – 560022
+P32|Revision History
+P36|MARRIAGE REGISTRATION MODULE
+P37|Introduction
+P38|Marriage is “a religious sacrament in which a man and a woman are bound in a permanent relationship for the physical, social, spiritual, procreation and sexual needs; a formal union and social and legal contract between two individuals that unites their lives legally, economically, and emotionally”. The contractual marriage agreement usually implies that the couple has legal obligations to each other throughout their lives or until they divorce. Being married also gives legitimacy to sexual relations within the marriage.
+P39|Overview
+P40|Any citizen can use the service. This service generates a certificate that is accepted as legal proof of marriage. The SR is authorized to issue a Marriage certificate and solemnize the marriage. This service can be used at the SRO.
+P41|Marriages are registered under the following acts:
+P42|Hindu Marriage Act, 1955
+P43|Special Marriage Act, 1954
+P44|Parsi Marriage and Divorce Act, 1936
+P45|Karnataka Marriage (Registration and Miscellaneous provision) Act, 1976
+P46|Under the Hindu Marriage Act, you can register your marriage at the Registrar of Marriages in the jurisdiction where the marriage occurred or where the bride or groom resides. While the actual marriage rituals can be performed elsewhere, the filing or registration of the marriage is done at the SRO. In the case of a unique marriage, it is done through a notice of the intended marriage, and the SR solemnizes the marriage in his office.
+P48|Actors & Roles
+P51|Key Performance Indicators
+P52|Number of channels for service access
+P53|Waiting time for citizens
+P54|Cost of service access by citizen
+P55|Cost of service delivery by department
+P57|Interfaces and Purpose
+P59|Designed Forms and Registers
+P60|Form for application of marriage registration
+P61|Form for filing a notice of intended marriage
+P62|Form for requesting duplicate copies
+P63|Declaration Forms
+P64|Certificate of Marriage
+P66|MIS Reports
+P67|Marriages registered under various categories.
+P68|Marriages registered in various SROs.
+P69|Marriages registered date-wise.
+P70|Revenue generated on various days in various SROs.
+P71|Marriage applications come through various channels.
+P72|Information services through various channels.
+P73|Rejected applications in various SROs.
+P74|Any other if required.
+P76|Roles, Hierarchy and Responsibilities
+P77|SR: Verifies and Approves/Rejects applications; Puts Seal and Signs on certificates
+P78|FDA/SDA: Checks completeness of application and documents entered in the system; Prints and delivers approved certificates
+P80|Types of Marriage
+P84|Hindu Marriage
+P85|Brief Description
+P86|The applicant chooses the ‘Hindu Marriage’ from among the three types of marriages if the following conditions are satisfied:
+P88|If the applicants (bride & bridegroom) are of Hindu religion, and
+P89|Marriage has already occurred (post-marriage)
+P91|Hindu Marriage Online
+P92|Process Flow
+P94|Figure 1: Registration of Hindu Marriage (Online).
+P95|Functional Step-by-Step Process:
+P96|Steps taken by Citizens/ Applicant to file a Marriage Registration Online
+P98|Applicant Login
+P99|To apply online, the applicant shall browse for Kaveri Online Services, i.e., Kaveri2.0
+P100|The applicant shall register as a user by creating a user ID and password
+P101|The applicant shall now login in the Kaveri2.0 portal
+P102|The applicant shall click on ‘Start a New Application.’
+P103|The applicant shall click on ‘Marriage Registration’ on the screen
+P104|The applicant shall select the ‘Type of Marriage.’
+P105|Note:
+P106|The applicant shall select among the three types of marriage options per the requirement (satisfying certain conditions).
+P107|The following types of marriage options are available to the applicant:
+P108|Hindu Marriage Online or Offline (Pre-requisite for Online and Offline marriage will be shown)
+P109|Special Marriage (Intended Marriage Notice) Offline
+P110|Special Marriage of Other Forms Online or Offline
+P111|The applicant shall select ‘Hindu Marriage Online’ from among the three options (mandatory field)
+P112|Note:
+P113|The applicant shall choose ‘Hindu Marriage Online’ from among the three options if the following conditions are satisfied:
+P114|If the applicants (both bride & bridegroom) are Hindu and
+P115|Marriage has already taken place (post-marriage)
+P116|Applicant wishes to do the process Online
+P117|The system requests the applicant to fill in the following entry fields (in general):
+P119|Marriage details:
+P120|The applicant must fill in the following entry fields for Marriage Details
+P121|Declarations must be accepted by the Applicant unless the system will not allow the Applicant to proceed to further steps.
+P122|Date of Marriage Ceremony (signifies the date on which the marriage took place) (mandatory field)
+P123|Address of Marriage Venue (Place of Marriage) - State, District, Taluka, Hobli/Ward, Village/City, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P124|Joint Photo of the Bridegroom and Bride (upload) (mandatory field)
+P125|A joint photo of the bridegroom and the bride should be in jpg format; size shouldn’t exceed 2 MB
+P126|The uploaded Joint photo of the bridegroom and the bride shall be verified by the SR/MO/ FDA/SDA before proceeding with the payment (The Hindu Marriage Act, 1955)
+P127|Bridegroom Details
+P128|The applicant has to fill in the following entry fields for Bridegroom Details:
+P129|The applicant can enter the relevant details manually or click on e-KYC to fetch further information using their Aadhaar number (optional).
+P130|Data is fetched from e-KYC using Aadhaar information (all details are available in Aadhar).
+P131|First Name
+P132|Date of Birth
+P133|Age
+P134|State
+P135|District (within Revenue districts)
+P136|House no. and Street address
+P137|Pin code
+P138|Status of Marriage at the time of marriage – Unmarried/ Divorced/ Widower (mandatory field)
+P139|Note:
+P140|1. If any one of the Divorcee/Widow is chosen, it should say ‘please upload the supporting document in the upload page’ while uploading the other documents
+P141|(then the corresponding document supporting the same should be uploaded at a later stage while uploading the forms and enclosures in the ‘Upload Document’ screen), i.e.,
+P142|For unmarried – no need to upload any document;
+P143|for Divorcee – certificate of divorce from the court;
+P144|for Widow(er) – widow(er)/death certificate of spouse)
+P145|Manual Data entry to fill out the application
+P146|Salutation (mandatory field)
+P147|First Name, Middle Name, Last Name (only First Name is mandatory field)
+P148|Date of Birth (DoB) (Mandatory field)
+P149|Age (in years) (should auto-fetch once DoB is entered; the system should register only if age>=21 years for bridegroom) (mandatory field)
+P150|Note:
+P151|1. The age of the bridegroom must be greater than or equal to 21 years;
+P152|2. The age must be rounded off to the lower whole number,
+P153|i.e. if the age is 21.3 years, then the system should take 21 years only;
+P154|if the age is 21.9 years, then the system should take 21 years only,
+P155|i.e. the system must always take the lower side value until it is a whole number;
+P156|Mobile Number (mandatory field)
+P157|Email ID
+P158|Current Place of Residence (Current Address) – State, District, Taluka, Hobli/Ward, City/Village, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P159|Permanent Place of Residence (Permanent Address) –
+P160|The citizens will be prompted with the question “Are you a resident of India?” citizen has to choose a selection with radio buttons ‘Yes’ or ‘No’
+P161|If Yes, collect the address as below,
+P162|State, District, Taluka, Hobli/Ward, City/Village, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P163|If No, the applicant must enter the following:
+P164|Country
+P165|House No/Building Name
+P166|Street address
+P167|State/ Province
+P168|Zip/ Postal code
+P169|Note:
+P170|A ‘Checkbox’ saying ‘Permanent address is same as Current address’ has to be given after Current Place of Residence (and before Permanent Place of Residence); if checked, then the exact details as entered in the Current Place of Residence should be auto-filled in place of Permanent Place of Residence; if not checked, then the applicant has to manually enter the required details
+P171|Father Details – Salutation, First Name, Middle Name, Last Name
+P172|Mother Details - Salutation, First Name, Middle Name, Last Name
+P174|Bride details
+P175|The applicant has to fill in the following entry fields for Bride Details:
+P176|The applicant can enter the relevant details manually or click on e-KYC to fetch further information using their Aadhaar number (optional).
+P177|Data is fetched from e-KYC using Aadhaar information (all details are available in Aadhar).
+P178|First Name
+P179|Date of Birth
+P180|Age
+P181|State
+P182|District (within Revenue districts)
+P183|House no. and Street address
+P184|Pin code
+P185|Status of Marriage at the time of marriage – Unmarried/ Divorced/ Widower (mandatory field)
+P186|Note:
+P187|1. If any one of the Divorcee/Widow is chosen, it should say ‘Please upload the supporting document on the upload page’ while uploading the other documents
+P188|(then the corresponding document supporting the same should be uploaded at a later stage while uploading the forms and enclosures in the ‘Upload Document’ screen), i.e.,
+P190|For unmarried – no need to upload any document;
+P191|for Divorcee – certificate of divorce from the court;
+P192|for Widow(er) – widow(er)/death certificate of spouse)
+P193|Manual Data entry to fill the application
+P194|Salutation (mandatory field)
+P195|First Name, Middle Name, Last Name (only First Name is mandatory field)
+P196|Date of Birth (DoB) (optional field)
+P197|Age (in years) (should auto-fetch once DoB is entered; the system should register only if age>=18 years for bridegroom) (mandatory field)
+P198|Note:
+P199|1. The age of the bridegroom must be greater than or equal to 18 years;
+P200|2. The age must be rounded off to the lower whole number,
+P201|i.e., if the age is 18.3 years, then the system should take 18 years only;
+P202|if the age is 18.9 years, then the system should take 18 years only, i.e., the system must always take the lower side value until it is a whole number;
+P203|3. If DoB is fed, then the age should auto-fetch
+P204|Mobile Number (mandatory field)
+P205|Email ID
+P206|Current Place of Residence (Current Address) –
+P207|State, District, Taluka, Hobli/Ward, City/Village, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P208|Permanent Place of Residence (Permanent Address) The citizens will be prompted with the question “Are you a resident of India?” citizen has to choose a selection with radio buttons ‘Yes’ or ‘No’
+P209|If Yes, collect the address as below,
+P210|State, District, Taluka, Hobli/Ward, City/Village, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P211|If No, the applicant must enter the following:
+P212|Father Details – Salutation, First Name, Middle Name, Last Name.
+P213|Mother Details - Salutation, First Name, Middle Name, Last Name.
+P215|Witnesses' Details
+P216|The applicant has to fill in the following entry fields for Witnesses Details.
+P217|Note: 3 witnesses are mandatory
+P218|Applicant has to click on the checkbox “All Witnesses were present during the time of marriage.” and proceed.
+P220|Witness Details to be captured as below,
+P221|The applicant can enter the relevant details manually or click on e-KYC to fetch details using their Aadhaar number (optional).
+P222|Data is fetched from e-KYC using Aadhaar information (all details are available in Aadhar).
+P223|First Name
+P224|Date of Birth
+P225|Age
+P226|State
+P227|District (within Revenue districts)
+P228|House no. and Street address
+P229|Pin code
+P230|Manual Data entry to fill the application
+P231|Salutation (mandatory field)
+P232|First Name, Middle Name, Last Name (only First Name is mandatory field)
+P233|Date of Birth (DoB) (optional field)
+P234|Age (in years) (should auto-fetch once DoB is entered; the system should register only if age>=18) (mandatory field)
+P235|Mobile Number (mandatory field)
+P236|Email ID (optional field)
+P237|Current Place of Residence (Current Address) (mandatory field)
+P238|Permanent Place of Residence (Permanent Address) (mandatory field)
+P239|Note:
+P240|A ‘Checkbox’ saying ‘Permanent address is same as Current address’ has to be given after the Current Place of Residence
+P241|(and before Permanent Place of Residence); if checked, then the exact details as entered in the Current Place of Residence should be auto-filled in place of Permanent Place of Residence; isn't checked, then the applicant has to manually enter the required details)
+P242|Whether related to bride or bridegroom; also specify the relation (as others) (mandatory field)
+P244|SRO Selection
+P245|The applicant shall select the SRO as mentioned in Step 14
+P246|The applicant selects the jurisdictional SRO (Marriage Office) by selecting the required SRO from the dropdown menu
+P247|Select SRO: the applicant shall select the SRO from the dropdown list
+P248|The Options in the dropdown menu are:
+P249|SRO falling within the Address (Place) of Marriage
+P250|SRO falling within the Current Address of the Bridegroom
+P251|SRO falling within the Permanent Address of the Bridegroom
+P252|SRO falling within the Current Address of the Bride
+P253|SRO falling within the Permanent Address of Bride
+P255|Generation of Application Summary and Forms I & I-A
+P256|After filling out the application form, the applicant can review it. The Applicant must click on the Declaration check box mentioned and then proceed.
+P257|The system shows the Application draft Summary and form 1-A, and the applicant can click proceed.
+P258|Applicant uploads all relevant documents of the Bride and Bridegroom
+P259|If the Applicant chooses to Edit the application, the system shall take the Applicant back to the marriage details screen (Keep all previously filled data)
+P260|When clicked on ‘View Form I and Form I-A’, the Form I (marriage application) & I-A (memorandum of marriage) shall be auto-fetched in the below format
+P261|(which should be auto-fetched from the data entry captured earlier) to the
+P262|applicant by the system
+P263|The applicant must add the e-signatures of the bride, groom, and three witnesses on Form I before proceeding further.
+P267|Upload of Annexures/Enclosures by the Applicant
+P268|For Bridegroom
+P269|Identity proof (dropdown menu) (mandatory field)
+P270|Age proof (dropdown menu) (mandatory field)
+P271|Address proof (dropdown menu) (mandatory filed)
+P272|Proof of Divorcee/Widow (optional) (if mentioned earlier while filling the bridegroom details) (dropdown menu) (mandatory filed)
+P273|For Bride
+P274|Identity proof (dropdown menu) (mandatory filed)
+P275|Age proof (dropdown menu) (mandatory filed)
+P276|Address proof (dropdown menu) (mandatory filed)
+P277|Proof of Divorcee/Widow (optional) (if mentioned earlier while filling the bride details) (dropdown menu) (mandatory filed)
+P278|For Marriage
+P279|Marriage Proof (dropdown menu) (mandatory filed)
+P280|List of permitted documents for Age proof:
+P281|Birth Certificate
+P282|School Leaving Certificate (SSLC)
+P283|School Cumulative Record
+P284|Doctor Certificate with Affidavit
+P285|Others
+P286|List of permitted documents for ID proof:
+P287|Employee ID
+P288|Ration Card
+P289|Driving License
+P290|Passport
+P291|PAN
+P292|Bank Passbook
+P293|Voter ID (EPIC Card)
+P294|Aadhar Card
+P295|List of permitted documents for Address proof:
+P296|Employee ID
+P297|Ration Card
+P298|Driving License
+P299|Passport
+P300|Bank Passbook
+P301|Voter ID (EPIC Card)
+P302|Aadhar Card
+P303|List of permitted documents for Marriage proof:
+P304|Wedding Invitation Card
+P306|Temple Marriage Receipt
+P307|Choultary/Marriage Hall/Kalyana Mantapa Receipt
+P308|Others (relevant document only)
+P309|Note: 1. All the uploaded documents should be in pdf format and their size shouldn’t exceed 5 MB for each document (except for the Divorce Certificate, which can run for pages as it is a court order)
+P311|Display of Fee Structure
+P312|The system Calculates the Fee and shall display on the screen:
+P313|Application Fee = ₹ 5 (fixed)
+P314|Marriage Certificate Fee = ₹ 20 (fixed)
+P315|Total Payable Amount = ₹ 25 (i.e. i+ii)
+P316|Note:
+P317|At this stage, the system has to show the calculation of (breakup of) the fee, and the applicant doesn’t make any payment; at a later stage, after verification and approval of data entered by the applicant by FDA/SDA/SR/RoM only, the applicant has to make the payment; the breakup fee calculation is being shown to ensure that the applicant has to be kept informed about the fee they are supposed to pay (transparency)
+P319|Submission of Application Form
+P320|The applicant clicks the ‘Submit’ button to apply online. The applicant will get an application number generated as acknowledgement and receive an email/SMS as a notification
+P321|On submission of the application, a dialogue box/ flash message should appear stating, ‘Your application has been successfully submitted.’
+P322|Note:
+P323|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login) on Kaveri2.0; the application gets logged in in order in the SR login)
+P326|Steps taken by SR/RoM, FDA/SDA, at SR Office to Register Marriage and to secure Marriage Certificate to the Applicant(s)
+P327|FDA/SDA Login and Verification by the FDA/SDA
+P328|The FDA/SDA shall log into the Kaveri 2.0 application
+P329|New applications are Auto allotted to the FDA/SDA
+P330|All applications, regardless of type, should be shown on the FDA/SDA dashboard.
+P331|The FDA/SDA shall start the verification process by selecting the ‘Start Verification’ button.
+P332|The FDA/SDA Application Verification screen is split into two sides:
+P334|LHS (Left-hand side of the page) – the Summary sheet containing all the details which the applicant has entered (marriage details, bridegroom details, bride details, witness details, fee details), a section to add his Remarks and a button to send it back to the SR/RoM
+P335|RHS (Right-hand side of the page) – contains the Uploads by the applicant, which are Form I and 1-A, and the Enclosures/Annexures
+P336|The FDA/SDA shall crosscheck the applications and the enclosures thoroughly; the FDA/SDA fills a Checklist mentioning Remarks for each category – marriage details, bridegroom details, bride details, witnesses’ details, uploaded documents; sends to the SR/RoM with Remarks by clicking on ‘Send to Register of Marriage’ button
+P338|Verification & Approval by the SR/RoM
+P339|After the application is received from FDA/SDA, the SR/RoM shall log in and view the remarks made by FDA/SDA by clicking on ‘View’ (to view the remarks) and shall add their remarks and shall send it back to the applicant for either to attend to the comments made and resend the application (in the applicant login, ‘Your application cannot be registered as it is, Kindly Refer to the Sub Registrar Remarks to know more’ message shall be displayed) or to proceed to ‘Make Payment.’
+P340|The SR/RoM has an additional checkbox which, if ticked, takes the applicant to the ‘Make Payment’ option; if not ticked, it will request the applicant to make changes (as per remarks made by SR/RoM) in the application and re-submit the application. (Note: 1. When the changes (attend to SR/RoM remarks) are requested by the SR/RoM to the applicant, the system takes the applicant to the ‘Marriage Details’ screen with the pre-filled data being retained as earlier, over which he can over-write to make changes and then shall send back to the SR/RoM by pressing the ‘Submit’ button; 2. If the applicant wants to change the type of marriage, then they have to re-apply)
+P341|On the Remarks section, there is a checklist - If the checkbox is ticked, the remarks are voluntary; if not, the remarks are mandatory.
+P342|Note:
+P343|1. In either case, the applicant receives an email/SMS; the applicant receives a notification on the Kaveri2.0 dashboard; also, the application status gets updated in the applicant (and department) login/dashboard on Kaveri2.0;
+P344|2. Until ‘Can Proceed to Make Payment’ is checked, the applicant can’t proceed to make the payment)
+P345|3. If the applicant is willing to attend to the remarks made by SR/RoM, then resend the application after corrections are made. If not willing to participate in the comments made by SR/RoM, the system shall generate the Endorsement with a Reason for Rejection; 2. Based on the remarks made by the FDA/SDA, the SR/RoM
+P346|Has the option to change (modify) the number of pages to be scanned)
+P348|Payment of Fee by the Applicant
+P349|After SR/RoM accepts and approves the application, the applicant shall log in to the Kaveri 2.0 portal and make the Payment of Fee (Total Payable Amount) online through the K2 portal by clicking on the ‘Make Payment’ button
+P350|Note:
+P351|The system should show the calculated fee (freeze it, and the applicant can make no changes at this stage) before the applicant makes the payment and then gives the ‘Make Payment’ option
+P352|Application Fee = ₹5 (fixed)
+P353|Marriage Certificate Fee = ₹ 20 (fixed)
+P354|Total Payable Amount = ₹ 25
+P355|The applicant shall receive an Acknowledgement from the K2 for making the online payment.
+P356|After making the payment, a dialogue box/ flash message should appear stating, ‘Your payment has been successfully made’ and, “The Digital Marriage Certificate will be sent to your Digi locker.”
+P357|The applicant can print the receipt from the dashboard.
+P358|The applicant can view the draft certificate of marriage certificate
+P360|Digital Marriage Certificate
+P361|SR/RoM will digitally sign the Marriage certificate.
+P362|Once SR/RoM does the digital sign, a dialogue box/ flash message should appear stating ‘Success the Certificate is sent to the applicant’.
+P363|The Digital Marriage Certificate will be sent to the Digi lockers of both applicants, the Bride and the Bridegroom.
+P364|Note:
+P365|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login) on Kaveri2.0
+P366|The Sakala gets Updated.
+P368|Hindu Marriage Offline
+P370|Process flow
+P373|Figure 2: Registration of Hindu Marriage (Offline).
+P377|Steps taken by Citizens/Applicants to file a Marriage Registration Offline
+P378|Applicant Login
+P379|To apply offline, the applicant shall browse for Kaveri Online Services, i.e., Kaveri2.0
+P380|The applicant shall register as a user by creating a user ID and password
+P381|The applicant shall now login in the Kaveri2.0 portal
+P382|The applicant shall click on ‘Start a New Application.’
+P383|The applicant shall click on ‘Marriage Registration’ on the screen
+P384|The applicant shall select the ‘Type of Marriage.’
+P385|Note:
+P386|The applicant shall select among the three types of marriage options per the requirement (satisfying certain conditions).
+P387|The following types of marriage options are available to the applicant:
+P388|Hindu Marriage Online or Offline
+P389|Special Marriage (Intended Marriage Notice) Offline
+P390|Special Marriage of Other Forms Online or Offline
+P391|The applicant shall select ‘Hindu Marriage Offline’ from among the three options (mandatory field)
+P392|Note:
+P393|The applicant shall choose the ‘Hindu Marriage Offline’ from among the three options if the following conditions are satisfied:
+P394|If the applicants (both bride & bridegroom) are Hindu and
+P395|Marriage has already taken place (post-marriage))
+P396|Applicant wishes to do the process Offline
+P397|The system requests the applicant to fill in the following entry fields (in general
+P399|Marriage Details
+P400|The applicant must fill in the following entry fields for Marriage Details:
+P401|Applicant must accept declarations unless the system will not allow the applicant to proceed for further steps.
+P402|Date of Marriage Ceremony (signifies the date on which the marriage took place) (mandatory field)
+P403|Address of Marriage Venue (Place of Marriage) - State, District, Taluka, Hobli/Ward, Village/City, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P404|Joint Photo of the Bridegroom and Bride (upload) (mandatory field)
+P405|A joint photo of the bridegroom and the bride should be in jpg format; size shouldn’t exceed 2 MB
+P406|The uploaded Joint photo of the bridegroom and the bride shall be verified by the SR/MO/ FDA/SDA before proceeding with the payment and booking appointment at SRO
+P408|Bridegroom Details
+P409|The applicant has to fill in the following entry fields for Bridegroom Details:
+P410|Status of Marriage at the time of marriage – Unmarried/ Divorced/ Widower (mandatory field)
+P411|Note:
+P412|1. If any one of the Divorcee/Widow is chosen, it should say ‘Please upload the supporting document on the upload page’ while uploading the other documents (then the corresponding document supporting the same should be uploaded at a later stage while uploading the forms and enclosures in the ‘Upload Document’ screen), i.e.,
+P413|For unmarried – no need to upload any document;
+P414|for Divorcee – certificate of divorce from the court;
+P415|for Widow(er) – widow(er)/death certificate of spouse)
+P416|Manual Data entry to fill out the application
+P417|Salutation (mandatory field)
+P418|First Name, Middle Name, Last Name (only First Name is mandatory field)
+P419|Date of Birth (DoB) (Mandatory field)
+P420|Age (in years) (should auto-fetch once DoB is entered; the system should register only if age>=21 years for bridegroom) (mandatory field)
+P421|Note:
+P422|1. The age of the bridegroom must be greater than or equal to 21 years;
+P423|2. The age must be rounded off to the lower whole number,
+P424|i.e. if the age is 21.3 years, then the system should take 21 years only;
+P425|if the age is 21.9 years, then the system should take 21 years only,
+P426|i.e. the system must always take the lower side value until it is a whole number;
+P428|Mobile Number (mandatory field)
+P429|Email ID
+P430|Current Place of Residence (Current Address) – State, District, Taluka, Hobli/Ward, City/Village, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P431|Permanent Place of Residence (Permanent Address) –
+P432|The citizens will be prompted with the question “Are you a resident of India?” citizen has to choose a selection with radio buttons ‘Yes’ or ‘No’
+P433|If Yes, collect the address as below,
+P434|State,
+P435|District,
+P436|Taluka,
+P437|Hobli/Ward, City/Village,
+P438|Street Address,
+P439|House No./Building Name,
+P440|Pin code (all are mandatory fields)
+P441|If No, the applicant must enter the following:
+P442|Country
+P443|House No/Building Name
+P444|Street address
+P445|State/ Province
+P446|Zip/ Postal code
+P447|Note:
+P448|A ‘Checkbox’ saying ‘Permanent address is same as Current address’ has to be given after Current Place of Residence (and before Permanent Place of Residence); if checked, then the exact details as entered in the Current Place of Residence should be auto-filled in place of Permanent Place of Residence; if not checked, then the applicant has to manually enter the required details
+P449|Father Details – Salutation, First Name, Middle Name, Last Name
+P450|Mother Details - Salutation, First Name, Middle Name, Last Name
+P452|Bride Details
+P453|The applicant must fill in the following entry fields for Bride Details:
+P454|Status of Marriage at the time of marriage – Unmarried/ Divorced/ Widower (mandatory field)
+P455|Note:
+P456|1. If any one of the Divorcee/Widow is chosen, it should say ‘Please upload the supporting document to the upload page’ while uploading the other documents (then the corresponding document supporting the same should be uploaded at a later stage while uploading the forms and enclosures in the ‘Upload Document’ screen), i.e.,
+P457|For unmarried – no need to upload any document;
+P458|For Divorcee – certificate of divorce from the court;
+P459|For Widow(er) – widow(er)/death certificate of spouse.
+P460|Salutation (mandatory field)
+P461|First Name, Middle Name, Last Name (only First Name is mandatory field)
+P462|Date of Birth (DoB) (optional field)
+P463|Age (in years) (should auto-fetch once DoB is entered; the system should register only if age>=18 years for bridegroom) (mandatory field)
+P464|Note:
+P465|1. The age of the bridegroom must be greater than or equal to 18 years;
+P466|2. The age must be rounded off to the lower whole number,
+P467|i.e., if the age is 18.3 years, then the system should take 18 years only;
+P468|if the age is 18.9 years, then the system should take 18 years only,
+P469|i.e., the system must always take the lower side value until it is a whole number;
+P470|3. If DoB is fed, then the age should auto-fetch;)
+P472|Mobile Number (mandatory field)
+P473|Email ID
+P474|Current Place of Residence (Current Address) – State, District, Taluka, Hobli/Ward, City/Village, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P475|Permanent Place of Residence (Permanent Address) –
+P476|State,
+P477|District,
+P478|Taluka, Hobli/Ward,
+P479|City/Village,
+P480|Street Address,
+P481|House No./Building Name,
+P482|Pin code (all are mandatory fields)
+P483|Note:
+P484|1. The citizens will be prompted with the question “Are you a resident of India?” citizen has to choose a selection with radio buttons ‘Yes’ or ‘No’
+P485|If Yes, collect the address as below,
+P486|State,
+P487|District,
+P488|Taluka,
+P489|Hobli/Ward, City/Village,
+P490|Street Address,
+P491|House No./Building Name,
+P492|Pin code (all are mandatory fields)
+P493|If No, the applicant must enter the following:
+P494|Country
+P495|House No/Building Name
+P496|Street address
+P497|State/ Province
+P498|Zip/ Postal code
+P499|Note: A ‘Checkbox’ saying ‘Permanent address is same as Current address’ has to be given after Current Place of Residence (and before Permanent Place of Residence); if checked, then the exact details as entered in the Current Place of Residence should be auto-filled in place of Permanent Place of Residence; if not checked, then the applicant has to manually enter the required details
+P500|Father Details – Salutation, First Name, Middle Name, Last Name
+P501|Mother Details - Salutation, First Name, Middle Name, Last Name
+P503|Witnesses Details
+P504|The applicant has to fill in the following entry fields for Witnesses Details:
+P505|Note: 3 witnesses are mandatory
+P506|The applicant must click on the checkbox “All Witnesses were present during the time of marriage” and proceed.
+P507|Salutation (mandatory field)
+P508|First Name, Middle Name, Last Name (only First Name is mandatory field)
+P509|Date of Birth (DoB) (optional field)
+P510|Age (in years) (should auto-fetch once DoB is entered; the system should register only if age>=18) (mandatory field)
+P511|Mobile Number (mandatory field)
+P512|Email ID (optional field)
+P513|Current Place of Residence (Current Address) (mandatory field)
+P514|Permanent Place of Residence (Permanent Address) (mandatory field)
+P515|Note:
+P516|A ‘Checkbox’ saying ‘Permanent address is same as Current address’ has to be given after Current Place of Residence (and before Permanent Place of Residence); if checked, then the exact details as entered in the Current Place of Residence should be auto-filled in place of Permanent Place of Residence; isn't checked, then the applicant has to manually enter the required details
+P517|Whether related to bride or bridegroom; also specify the relation (as others) (mandatory field)
+P519|SRO Selection
+P520|The applicant shall select the SRO as mentioned in the below steps
+P521|The applicant selects the jurisdictional SRO (Marriage Office) by choosing the required SRO from the dropdown menu
+P522|Select SRO: the applicant shall select the SRO from the dropdown list and the Options in the dropdown menu are:
+P523|SRO falling within Address (Place) of Marriage
+P524|SRO falling within the Current Address of the Bridegroom
+P525|SRO falling within the Permanent Address of the Bridegroom
+P526|SRO falling within the Current Address of the Bride
+P527|SRO falling within the Permanent Address of Bride
+P529|Generation of Application Summary and Forms I & I-A
+P530|After filling out the application form, the applicant can review it. The Applicant must then click the Declaration check box and proceed.
+P531|The system shows the application draft Summary along with form 1-A, and the applicant can click on proceed.
+P532|Applicant uploads all relevant documents of the Bride and Bridegroom
+P533|If the Applicant chooses to Edit the application, the system shall take the Applicant back to the marriage details screen (Keep all previously filled data)
+P534|When clicked on ‘View Form I and Form I-A’, the Form I (marriage application) & I-A (memorandum of marriage) shall be auto-fetched in the below format
+P535|(which should be auto-fetched from the data entry captured earlier) to the applicant by the system
+P543|Upload of Annexures/Enclosures by the Applicant
+P544|For the Bridegroom
+P545|Identity proof (dropdown menu) (mandatory field)
+P546|Age proof (dropdown menu) (mandatory field)
+P547|Address proof (dropdown menu) (mandatory filed)
+P548|Proof of Divorcee/Widow (optional) (if mentioned earlier while filling the bridegroom details) (dropdown menu) (mandatory filed)
+P549|For Bride
+P550|Identity proof (dropdown menu) (mandatory field)
+P551|Age proof (dropdown menu) (mandatory field)
+P552|Address proof (dropdown menu) (mandatory filed)
+P553|Proof of Divorcee/Widow (optional) (if mentioned earlier while filling the bride details) (dropdown menu) (mandatory filed)
+P554|For Marriage
+P555|Marriage Proof (dropdown menu) (mandatory filed)
+P556|List of permitted documents for Age proof:
+P557|Birth Certificate
+P558|School Leaving Certificate (SSLC)
+P559|School Cumulative Record
+P560|Doctor Certificate with Affidavit
+P561|Others
+P562|List of permitted documents for ID proof:
+P563|Employee ID
+P564|Ration Card
+P565|Driving License
+P566|Passport
+P567|PAN
+P568|Bank Passbook
+P569|Voter ID (EPIC Card)
+P570|Aadhar Card
+P571|List of permitted documents for Address proof:
+P572|Employee ID
+P573|Ration Card
+P574|Driving License
+P575|Passport
+P576|Bank Passbook
+P577|Voter ID (EPIC Card)
+P578|Aadhar Card
+P579|List of permitted documents for Marriage proof:
+P580|Wedding Invitation Card
+P581|Temple Marriage Receipt
+P583|Choultary/Marriage Hall/Kalyana Mantapa Receipt
+P584|Others (relevant document only)
+P585|Note:
+P586|1. All the uploaded documents should be in pdf format and their size shouldn’t exceed 5 MB for each document (except for the Divorce Certificate, which can run for pages as it is a court order)
+P588|Display of Fee Structure
+P589|The system Calculates the Fee and shall display on the screen:
+P590|Application Fee = ₹ 5 (fixed)
+P591|Marriage Certificate Fee = ₹ 20 (fixed)
+P592|Scanning Fee = ₹ 35 (per page)
+P593|Hindu marriage additional marriage certificate copy = ₹ 10 (per page) (Optional)
+P594|Total Payable Amount = Rs (70)
+P595|Note:
+P596|At this stage, the system has to show the calculation of (breakup of) the fee, and the applicant doesn’t make any payment; at a later stage, after verification and approval of data entered by the applicant by FDA/SDA/SR/RoM only, the applicant has to make the payment; the breakup fee calculation is being shown to ensure that the applicant has to be kept informed about the fee they are supposed to pay (transparency).
+P598|Submission of Application Form
+P599|The applicant clicks the ‘Submit’ button to apply online. The applicant will get an application number generated as acknowledgement and receive an email/SMS as a notification.
+P600|When the application is submitted, a dialogue box/ flash message should appear stating, ‘You can make the payment after your application returns from the sub-register office.’
+P601|Note:
+P602|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login) on Kaveri2.0; the application gets logged in in order in the SR login)
+P604|Steps taken by SR/RoM, FDA/SDA, at SR Office to Register Marriage and to secure Marriage Certificate to the Applicant(s)
+P605|FDA/SDA Login and Verification by the FDA/SDA
+P606|The FDA/SDA shall log into the Kaveri 2.0 application
+P607|New applications are Auto allotted to the FDA/SDA
+P608|All applications, regardless of type, should be shown on the FDA/SDA dashboard.
+P609|The FDA/SDA shall start the verification process by selecting the ‘Start Verification’ button.
+P610|The FDA/SDA Application Verification screen is split into two sides:
+P611|LHS (Left-hand side of the page) – the Summary sheet containing all the details which the applicant has entered (marriage details, bridegroom details, bride details, witness details, fee details), a section to add his Remarks and a button to send it back to the SR/RoM
+P612|RHS (Right-hand side of the page) – contains the Uploads by the applicant, which are Form I and 1-A, and the Enclosures/Annexures
+P613|The FDA/SDA shall crosscheck the applications and the enclosures thoroughly; the FDA/SDA fills a Checklist mentioning Remarks for each category – marriage details, bridegroom details, bride details, witnesses’ details, uploaded documents; sends to the SR/RoM with Remarks by clicking on ‘Send to Register of Marriage’ button
+P615|Verification & Approval by the SR/RoM
+P616|After the application is received from FDA/SDA, the SR/RoM shall log in and view the remarks made by FDA/SDA by clicking on ‘View’ (to view the remarks) and shall add their remarks and shall send it back to the applicant for either to attend to the remarks made and resend the application (in the applicant login, ‘Your application cannot be registered as it is, Kindly Refer to the Sub Registrar Remarks to know more’ message shall be displayed) or to proceed to ‘Make Payment.’
+P617|The SR/RoM has an additional checkbox which, if ticked, takes the applicant to the ‘Make Payment’ option; if not ticked, it will request the applicant to make changes (as per remarks made by SR/RoM) in the application and re-submit the application. (Note: 1. When the changes (attend to SR/RoM remarks) are requested by the SR/RoM to the applicant, the system takes the applicant to the ‘Marriage Details’ screen with the pre-filled data being retained as earlier, over which he can over-write to make changes and then shall send back to the SR/RoM by pressing the ‘Submit’ button; 2. If the applicant wants to change the type of marriage, then they have to re-apply)
+P618|On the Remarks section, there is a checklist - If the checkbox is ticked, the remarks are voluntary; if not, the remarks are mandatory. (Note: 1. In either case, the applicant receives an email/SMS; the applicant receives a notification on the Kaveri2.0 dashboard; also, the status of the application gets updated in the applicant (and department) login/dashboard on Kaveri2.0; 3. Until ‘Can Proceed to Make Payment’ is checked, the applicant can’t proceed to make the payment).
+P620|Note:
+P621|1. If the applicant is willing to attend to the remarks made by SR/RoM, then resend the application after corrections are made. If not willing to participate in the comments made by SR/RoM, then the system shall generate the Endorsement with a Reason for Rejection; 2. Based on the remarks made by the FDA/SDA, the SR/RoM Has the option to change (modify) the number of pages to be scanned.
+P623|Payment of Fee by the Applicant
+P624|After SR/RoM accepts and approves the application, the applicant shall log in to the Kaveri 2.0 portal and make the Payment of Fee (Total Payable Amount) online through the K2 portal by clicking on the ‘Make Payment’ button
+P625|Note:
+P626|The system should show the calculated fee (freeze it, and the applicant can make no changes at this stage) before the applicant makes the payment and then gives the ‘Make Payment’ option
+P627|Application Fee = ₹5 (fixed)
+P628|Marriage Certificate Fee = ₹20 (fixed)
+P629|Scanning Fee = ₹ 35 (per page)
+P630|Hindu marriage additional marriage certificate copy = ₹ 10 (per page) (Optional)
+P631|Total Payable Amount = ₹ 70
+P632|The applicant shall receive an Acknowledgement from the K2 for making the online payment.
+P633|On making the payment, a dialogue box/ flash message should appear stating, ‘Your payment has been successfully made.’
+P634|The applicant can print the receipt from the dashboard.
+P636|Scheduling an Appointment with the SR/MO by the Applicant
+P637|Once payment is made, the applicant shall Schedule an Appointment (date and time) with the SR/RoM by clicking on the ‘Schedule Appointment’ button.
+P638|The applicant can ‘Book Appointment’ by selecting the dates from the calendar displayed.
+P639|The applicant selects the date of appointment for the Marriage Certificate; once the applicant selects the date, a dialogue box/ flash message should appear stating, ‘Ex: Your appointment for 24th February 2023 is successfully scheduled.’
+P640|Note:
+P641|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login) on Kaveri2.0
+P643|Marriage Registration at SRO on the Day of Appointment
+P644|On the day of appointment, the Applicants (bridegroom, bride) along with witnesses shall appear before SR/RoM and shall present the physical application forms and memorandum of declaration
+P645|The SR shall view the certificate and forms generated and approve the application in the system by clicking the ‘Check & Register’ button.
+P646|The system generates a Marriage Registration Certificate with the Registration Number (Note: the pop-up message should appear once he clicks on ‘Check and Register’ saying ‘Are you sure to Register? You cannot change later’ for which the SR/RoM has to confirm)
+P647|Note:
+P648|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login).
+P649|In the back end, the Index of Marriage are stored in the Index Register (Forms V & VI for wife and husband separately)
+P650|After Approval by SR/RoM, the marriage registration certificate is pushed back to the DEO dashboard
+P651|The DEO shall click on the ‘Print Certificate and Forms’ button to Print the Marriage Certificate (with Registration Number) (and other forms wherever required) and shall get them signed by the applicants and the witnesses (if/wherever needed)
+P652|The DEO shall get a Seal and Signature affixed by the SR/RoM on the Marriage Certificate (with Registration Number) (and other forms wherever required)
+P653|The DEO shall click on the ‘Upload’ button
+P654|The DEO upload screen shall display the following:
+P655|Details: Application Number, Application Type, Date of Marriage
+P656|Scan and Preview buttons: to scan and preview Certificates & Forms,
+P657|Annexures/Enclosures
+P658|‘Upload’ button
+P659|The DEO shall Scan and Preview (by clicking the ‘Scan’ and ‘Preview’ buttons respectively) the following documents:
+P660|Marriage Application Form (i.e., Memorandum of Marriage) (Form I)
+P661|Declaration of Memorandum (i.e., Application for filing of Marriage Memorandum) signed by bride and bridegroom (Form I-A)
+P662|Form II (Endorsement – having received a memorandum of marriage by SRO and having registered in the system)
+P663|Form II-A Signed Marriage Certificate (i.e., Certificate of Registration of Hindu Marriage)
+P664|Form III (Certificate Affixed to Memorandum – to be sent to RGoM)
+P665|Enclosures/Annexures
+P666|After upload, a pop-up message should appear: ‘Success sent to the Registrar for Digital Signing’.
+P667|The SR will log in and click on the ‘View’ button once DEO has uploaded the documents
+P668|The SR shall view the documents uploaded by DEO, then click on the ‘Digital Sign’ button to put his digital signature, encrypt and upload all the saved documents.
+P669|Note:
+P670|the pop-up message should appear once he clicks on the ‘Digital Sign’ button, saying, ‘Are you sure to sign and upload digitally? Once uploaded, the details cannot be changed for which the SR/RoM has to confirm
+P671|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login))
+P673|Once SR clicks on Digital Sign, an up message will appear: ‘Success. The certificate is signed’
+P674|A digitally signed marriage certificate will be forwarded to DEO to print and issue to applicants.
+P675|Any Additional Payment by the applicant(s)/objector(s) is made through Cash; the applicant(s)/objector(s) receives an Acknowledgement (a copy of the Fee Receipt has to be generated by the DEO on receipt of cash)
+P676|The scanned documents are sent to RGoM (Registrar General of Marriage)
+P677|The Marriage Registration Certificate is handed over physically by DEO to the applicant after receiving the acknowledgement, and the applicant shall collect the Marriage Certificate from DEO.
+P678|The Sakala is updated
+P681|Note:
+P682|1. If applied for CC (Certified Copy) for the Marriage Certificate, then a Digitally Signed Copy from SR/RoM may be issued by filling out the appropriate form
+P685|Special Marriage (Intended Marriage Notice)
+P687|Brief Description
+P688|The applicant chooses the ‘Special Marriage (Intended Marriage Notice)’ from among the options if the following conditions are satisfied:
+P690|If the applicant/s (bride &/or bridegroom) are of a different religion (other than Hindu religion) or a combination of Hindu with another religion, and
+P692|Marriage hasn’t happened yet (pre-marriage)
+P694|Special Marriage Intended Marriage Notice – Offline
+P695|Process Flow
+P698|Figure 3: Registration of Special Marriage (Intended Marriage Notice) (Page 1)
+P701|Figure 4: Registration of Special Marriage (Intended Marriage Notice) (Page 2)
+P705|Functional Step-by-Step Process:
+P706|Steps taken by Citizens/ Applicant to file a Marriage Registration Online
+P708|Applicant Login
+P709|To apply online, the applicant shall browse for Kaveri Online Services,
+P710|i.e., Kaveri2.0
+P711|The applicant shall register as a user by creating a user id and password
+P712|The applicant shall now login in the Kaveri2.0 portal
+P713|The applicant shall click on ‘Start a New Application.’
+P714|The applicant shall click on ‘Marriage Registration’ on the screen
+P715|The applicant shall select the ‘Type of Marriage.’
+P716|Note:
+P717|The applicant shall select among the three types of marriage options per the requirement (satisfying certain conditions). The following types of marriage options are available to the applicant:
+P718|Hindu Marriage,
+P719|Special Marriage (Intended Marriage Notice) and
+P720|Special Marriage of Other Forms
+P721|The applicant shall select ‘Special Marriage (Intended Marriage Notice)’ from among the three options (mandatory field)
+P722|Note:
+P723|The applicant shall choose the ‘Special Marriage (Intended Marriage Notice)’ from among the three options if the following conditions are satisfied:
+P724|If the applicant/s (bride or bridegroom) are of a different religion (other than Hindu religion) or a combination of Hindu with another religion, and
+P725|Marriage is yet to happen (pre-marriage)
+P727|Marriage Details
+P728|The system requests the applicant to fill in the following entry fields (in general):
+P729|The applicant must fill in the following entry fields for Marriage Details:
+P730|The applicant must accept the declarations mentioned on the page unless the applicant cannot continue for the below steps.
+P731|Is the Applicant Bridegroom or Bride? (Radio button) (mandatory field)
+P732|Photo of the Bridegroom (upload) (mandatory field)
+P733|Photo of the Bride (upload) (mandatory field)
+P734|Note:
+P735|1. Passport-size photos of the bridegroom and the bride should be in jpg format; size shouldn’t exceed 2 MB;
+P736|2. The uploaded pictures of the bridegroom and the bride shall be manually verified by the SR/MO/ FDA/SDA/DEO before proceeding with the payment and booking appointment and also physically during the day of appointment at SRO)
+P737|Bridegroom Details
+P738|The applicant must fill in the following entry fields for Bridegroom Details:
+P739|Status of Marriage (at the time of marriage) – Unmarried/ Divorcee/ Widow(er) (mandatory field)
+P740|Note:
+P741|1. If any one of the Divorcee/Widow is chosen, it should say ‘Please upload the supporting document in the upload page’ while uploading the other documents
+P742|(then the corresponding document supporting the same should be uploaded at a later stage while uploading the forms and enclosures in the ‘Upload Document’ screen) i.e.,
+P743|For unmarried – no need to upload any document;
+P744|for Divorcee – certificate of divorce from the court;
+P745|for Widow(er) – widow(er)/death certificate of spouse)
+P746|Salutation (mandatory field)
+P747|First Name, Middle Name, Last Name (only First Name is mandatory field)
+P748|Date of Birth (DoB) (optional field)
+P749|Age (in years) (should auto-fetch once DoB is entered; the system should register only if age>=21 years for bridegroom) (mandatory field)
+P750|Note:
+P751|1. The bridegroom's age must be greater than or equal to 21 years;
+P752|2. The age must be rounded off to the lower whole number, i.e.,
+P753|if the age is 21.3 years, then the system should take 21 years only;
+P754|if the age is 21.9 years, then the system should take 21 years only, i.e.,
+P755|the system must always take the lower side value until it is a whole number;
+P756|3. If DoB is fed, then the age should auto-fetch
+P758|Occupation (mandatory field)
+P759|Mobile Number (mandatory field)
+P760|Email ID (mandatory field)
+P761|Current Place of Residence (Current Address) – State, District, Taluka, Hobli/Ward, City/Village, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P762|Permanent Place of Residence (Permanent Address) – State, District, Taluka, Hobli/Ward, City/Village, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P763|Note:
+P764|For NRIs, the UI includes two radio buttons, Yes or No, for the question "Are you a resident of India?"
+P765|If yes, proceed with the address mentioned above information.
+P766|If no, the applicant must enter the following:
+P767|Country
+P768|House No/Building Name
+P769|Street address
+P770|State/ Province
+P771|Zip/ Postal code
+P773|Note:
+P774|A ‘Checkbox’ saying ‘Permanent address is same as Current address’ has to be given after Current Place of Residence (and before Permanent Place of Residence); if checked, then the exact details as entered in the Current Place of Residence should be auto-filled in place of Permanent Place of Residence; if not checked, then the applicant has to manually enter the required details
+P775|Duration of Residence at Current Address (Length of Residence) (calendar) (in days/months/years) (mandatory field)
+P776|Father Details – Salutation, First Name, Middle Name, Last Name (Salutation and First Name are mandatory fields)
+P777|Mother Details – Salutation, First Name, Middle Name, Last Name (Salutation and First Name are mandatory fields)
+P779|Bride Details
+P780|The applicant must fill in the following entry fields for Bride Details:
+P781|Status of Marriage (at the time of marriage) – Unmarried/ Divorcee/ Widow(er) (mandatory field)
+P783|Note:
+P784|1. If any one of the Divorcee/Widow is chosen, it should say ‘Please upload the supporting document in the upload page’ while uploading the other documents
+P785|(then the corresponding document supporting the same should be uploaded at a later stage while uploading the forms and enclosures in the ‘Upload Document’ screen) i.e.,
+P786|For unmarried – no need to upload any document;
+P787|for Divorcee – certificate of divorce from the court;
+P788|for Widow(er) – widow(er)/death certificate of spouse)
+P789|Salutation (mandatory field)
+P790|First Name, Middle Name, Last Name (only First Name is mandatory field)
+P791|Date of Birth (DoB) (optional field)
+P792|Age (in years) (should auto-fetch once DoB is entered; the system should register only if age>=18 years for bridegroom) (mandatory field)
+P793|Note:
+P794|1. The age of the bridegroom must be greater than or equal to 18 years;
+P795|2. The age must be rounded off to the lower whole number, i.e.,
+P796|if the age is 18.3 years, then the system should take 18 years only;
+P797|if the age is 18.9 years, then the system should take 18 years only, i.e.,
+P798|the system must always take the lower side value until it is a whole number;
+P799|3. If DoB is fed, then the age should auto-fetch.
+P801|Occupation (mandatory field)
+P802|Mobile Number (mandatory field)
+P803|Email ID (mandatory field)
+P804|Current Place of Residence (Current Address) –
+P805|State,
+P806|District,
+P807|Taluka,
+P808|Hobli/Ward,
+P809|City/Village,
+P810|Street Address,
+P811|House No./Building Name,
+P812|Pin code (all are mandatory fields)
+P813|Permanent Place of Residence (Permanent Address) –
+P814|State,
+P815|District,
+P816|Taluka,
+P817|Hobli/Ward,
+P818|City/Village,
+P819|Street Address,
+P820|House No./Building Name,
+P821|Pin code (all are mandatory fields)
+P822|Note:
+P823|For NRIs, the UI includes two radio buttons, Yes or No, for the question "Are you a resident of India?"
+P824|If yes, proceed with the address mentioned above information.
+P825|If no, the applicant must enter the following:
+P826|Country
+P827|House No/Building Name
+P828|Street address
+P829|State/ Province
+P830|Zip/ Postal code
+P831|Note:
+P832|A ‘Checkbox’ saying ‘Permanent address is same as Current address’ has to be given after Current Place of Residence (and before Permanent Place of Residence); if checked, then the exact details as entered in the Current Place of Residence should be auto-filled in place of Permanent Place of Residence; isn't checked, then the applicant has to enter the required details manually.
+P833|Duration of Residence at Current Address (Length of Residence) (calendar) (in days/months/years) (mandatory field)
+P834|Father Details – Salutation, First Name, Middle Name, Last Name (Salutation and First Name are mandatory fields)
+P835|Mother Details – Salutation, First Name, Middle Name, Last Name (Salutation and First Name are mandatory fields)
+P836|Witnesses Details
+P837|The applicant must fill in the following entry fields for Witnesses Details:
+P838|Note: 3 witnesses are mandatory
+P839|The applicant must click on the checkbox “All Witnesses were present during the time of marriage” and proceed (Special Marriage Karnataka Rules, 1961).
+P840|The applicant can enter the relevant details manually or click on e-KYC to fetch details using their Aadhaar number (optional).
+P841|Data is fetched from e-KYC using Aadhaar information (all details are available in Aadhar).
+P842|i.	First Name
+P843|ii.	Date of Birth
+P844|iii.	Age
+P845|iv.	State
+P846|v.	District (within Revenue districts)
+P847|vi.	House no. and Street address
+P848|vii.	Pin code
+P849|Applicant should fill up the data manually if he/she’s not willing to do e-KYC
+P850|Salutation (mandatory field)
+P851|First Name, Middle Name, Last Name (only First Name is mandatory field)
+P852|Date of Birth (DoB) (optional field)
+P853|Age (in years) (should auto-fetch once DoB is entered; the system should register only if age>=18) (mandatory field)
+P854|Mobile Number (mandatory field)
+P855|Email ID (optional field)
+P856|Current Place of Residence (Current Address) (mandatory field)
+P857|Permanent Place of Residence (Permanent Address) (mandatory field)
+P858|Note:
+P859|A ‘Checkbox’ saying ‘Permanent address is same as Current address’ has to be given after Current Place of Residence (and before Permanent Place of Residence); if checked, then the same details as entered in the Current Place of Residence should be auto-filled in place of Permanent Place of Residence; isn't checked, then the applicant has to enter the required details manually
+P860|Whether related to bride or bridegroom; also specify the relation (as others) (Radio button & dropdown; also have to manually enter the relation if ‘Others’ is chosen) (mandatory field)
+P861|Note:
+P862|Although the marriage hasn’t yet happened, an option to capture the details of 3 witnesses must be provided at the beginning (i.e., while filling up the application form of notice), but the SDA/FDA must be given with an ‘Edit Option’ to change the witnesses’ details keeping in mind the objection period of 30 days (in case of difficulties (death, cancellation, busy schedule, etc.)) at a later date when the party along with witnesses are physically present at SRO during the appointment date and time
+P864|SRO Selection
+P865|The applicant shall select the SRO as mentioned in Step 14
+P866|The applicant selects the jurisdictional SRO (Marriage Office) by selecting the required SRO from the dropdown menu
+P867|Select SRO: the applicant shall select the SRO from the dropdown list
+P868|The Options in the dropdown menu are:
+P869|SRO falling within the Address (Place) of Marriage.
+P870|SRO falling within the Current Address of Bridegroom.
+P871|SRO falling within the Permanent Address of Bridegroom.
+P872|SRO falling within the Current Address of Bride.
+P873|SRO falling within the Permanent Address of Bride.
+P874|(i.e., may be bridegroom or bride, which is asked in the Marriage Details screen)
+P875|Note:
+P876|If the Applicant chooses SRO falling within the Current Address, then the condition that the applicant must have stayed for at least 30 days before the submission of the application applies, and the applicant must produce (upload) the corresponding document supporting the same at a later stage while uploading the forms and enclosures in the ‘Upload Documents’ screen
+P878|Generation of Application Summary and Notice of Intended Marriage Form
+P879|The applicant after filling up the application form, the Application Summary is shown by the system.
+P880|The applicant accepts the ‘Declaration’ and either click on ‘Preview Notice’ or the ‘Edit’ option to make any changes to the application
+P881|If the Applicant chooses to Edit, the system shall take the Applicant back to the marriage details screen (Keep all previously filled data)
+P882|When clicked on ‘Preview Notice’, the Application Form of Notice (i.e., the 2nd schedule, i.e., Notice of Intended Marriage Form) shall be auto-fetched in the below-said format (which should be auto-fetched from the data entry captured earlier) to the applicant by the system
+P883|Applicant clicks on the continue button to proceed further.
+P884|Scan & Upload of Annexures/Enclosures by the Applicant
+P885|The applicant shall Scan and Upload the below-mentioned documents:
+P886|For Bridegroom
+P887|Identity proof (dropdown menu) (mandatory filed)
+P888|Age proof (dropdown menu) (mandatory filed)
+P889|Address proof (dropdown menu) (mandatory filed)
+P890|Proof of Divorcee/Widow (mandatory, if mentioned earlier while filling the bridegroom details)
+P891|For Bride
+P892|Identity proof (dropdown menu) (mandatory filed)
+P893|Age proof (dropdown menu) (mandatory filed)
+P894|Address proof (dropdown menu) (mandatory filed)
+P895|Proof of Divorcee/Widow (mandatory, if mentioned earlier while filling the bride details)
+P896|List of permitted documents for Age proof:
+P897|Birth Certificate
+P898|School Leaving Certificate (SSLC)
+P899|School Cumulative Record
+P900|Doctor Certificate with Affidavit
+P901|Others
+P902|List of permitted documents for ID proof:
+P903|Employee ID
+P904|Ration Card
+P905|Driving License
+P906|Passport
+P907|PAN
+P908|Bank Passbook
+P909|Voter ID (EPIC Card)
+P910|Aadhar Card
+P911|List of permitted documents for Address proof:
+P912|Employee ID
+P913|Ration Card
+P914|Driving License
+P915|Passport
+P916|Bank Passbook
+P917|Voter ID (EPIC Card)
+P918|Aadhar Card
+P920|Display of Fee Structure of 1st Payment
+P921|The system displays the breakup of the Total Payable Fee:
+P922|Application Form of Notice Fee (or just Notice Fee) = ₹3
+P923|Marriage Registration Fee = ₹25 (fixed)
+P924|Total Payable Amount = ₹ 28
+P925|Note:
+P926|1. At this stage, the system has to show the calculation (breakup of the fee and the applicant doesn’t make any payment; at a later stage, after verification and approval of data entered by the applicant by FDA/SDA/SR/MO only, the applicant has to make the payment; the fee calculation is being shown to ensure that the applicant has to be kept informed about the fee they are supposed to pay (transparency))
+P927|2. The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant (and department) login/dashboard on Kaveri2.0)
+P929|Submission of Application Form of Notice
+P930|The applicant clicks the ‘Submit’ button to apply online.
+P931|On submission of the application form of notice (without signatures of bride and groom), a dialogue box/ flash message should appear stating, ‘You can make the payment after your application returns from the Sub Registrar's office.’
+P932|The applicant will get an Application Number generated as Acknowledgement. (Note: The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant (and department) login/dashboard on Kaveri2.0; the application gets logged in in order in the SR login)
+P934|Steps taken by SR/MO/FDA/SDA at SR Office to Register Marriage and to secure Marriage Certificate to the Applicant(s)
+P935|SR/MO/FDA/SDA Login and Verification by SR/MO/FDA/SDA
+P936|Sub Registrar (SR)/ Marriage Officer (MO)/FDA/SDA shall log in to the Kaveri 2.0 system
+P937|The system allocates the application to the FDA/SDA
+P938|From the menu on his dashboard, the SR/MO/FDA/SDA shall click on ‘Start Verification
+P939|The SR/MO/FDA/SDA receives all marriage applications, regardless of their type, in one place.
+P940|The Application Verification screen is split into two sides:
+P941|LHS (Left-hand side of the page) – the Summary sheet containing all the details which the applicant has entered (marriage details, bridegroom details, bride details, witness details, fee details), a section to add his Remarks and a button to send to the SR/MO
+P942|RHS (Right-hand side of the page) – contains the Uploads by the applicant, which are the Application Form and the Enclosures/Annexures
+P943|The FDA/SDA shall crosscheck the applications and the enclosures thoroughly; the FDA/SDA fills a checklist mentioning Remarks for each category – marriage details, bridegroom details, bride details, witnesses’ details, uploaded documents; sends it back to the SR/MO with Remarks by clicking on ‘Send to SR/MO’ button
+P945|Verification & Approval by the SR/MO
+P946|After the application is received from FDA/SDA, the SR/MO shall log in and view the remarks made by FDA/SDA by clicking on ‘View’ (to view the remarks) and shall add his/her remarks and shall send it back to the applicant for either to attend to the remarks made and resend the application (in the applicant login, ‘Your application cannot be registered as it is, Kindly Refer to the Sub Registrar Remarks to know more’ message shall be displayed) or to ‘Can proceed to make payment’.
+P947|In the Remarks section, there is a checklist - If the checkbox in the checklist is ticked, the remarks are voluntary; if not ticked, then the remarks are mandatory
+P948|Note:
+P949|1. In either case, the applicant receives an email/SMS; the applicant receives a notification on the Kaveri2.0 dashboard; also, the status of the application gets updated in the applicant (and department) login/dashboard on Kaveri2.0; 3. Unless ‘Can proceed to make payment’ is checked, the applicant can’t make the payment and book an appointment.
+P952|1st Payment of Fee for Notice and scheduling 1st Appointment with the SR/MO by the Applicant
+P954|In the applicant login, if the applicant has the remark ‘Your application cannot be registered as it is. Kindly Refer to the Sub Registrar Remarks to know more,’ and then the applicant has to check the remarks received from SR/MO. The applicant must resubmit the application.
+P955|Once the application details are approved by the SR/MO, the applicant shall proceed to payment by clicking on the ‘Proceed to payment’ button.
+P956|Once the applicant successfully makes the payment, the applicant can Schedule an Appointment (date & time) with the SR/MO by clicking on the ‘Book Appointment’ button.
+P957|The applicant shall select the Date and Time
+P958|Once the schedule is booked, a dialogue box/ flash message should appear stating, ‘Your appointment has been scheduled for {#Date #} at {#SRO#} for notice filing. Visit the Sub-Registrar Office at the scheduled time with all the relevant documents and witnesses. From: Department of Stamp and Registration.’
+P959|The screen displays the applicant’s date, time, and venue; and two buttons:
+P960|Cancel Appointment and
+P961|Re-schedule Appointment
+P962|Note:
+P963|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login) on Kaveri2.0
+P964|The applicant can print the receipt from the dashboard.
+P966|Generation of Display of Notice
+P967|On the day of the appointment, the Applicant (bridegroom and bride) shall appear before SR/MO. After the application is verified by SR/MO, the FDA/SDA shall log in and click on ‘Generate Notice’. The FDA/SDA shall verify applicant details and generate a notice.
+P968|Notice and the third schedule preview should be shown. SR will click on check and register. DEO will print the notice and the third schedule.
+P969|DEO will take the signatures of the bridegroom and bride.
+P970|The signed notice and third schedule will be scanned and uploaded in the application and sent for digital sign of SR/MO.
+P971|The Signed Notice is displayed on the notice board (by DEO) in the marriage office, and a copy is also sent to the Concerned Jurisdictional SR/MOs.
+P972|(the notice shall be displayed on these concerned jurisdictional SR/MOs’ notice boards, too), in case the domicile of the applicant(s) is other than the approached SR/MO.
+P973|Note:
+P974|1. In either case, the applicant receives an email/SMS; the applicant receives a notification on the Kaveri2.0 dashboard; also, the status of the application gets updated in the applicant (and department) login/dashboard on Kaveri2.0.
+P975|The Signed Notice will be displayed on the notice board of the concerned jurisdictional SR/MOs for 30 days.
+P977|SR Receives & Reviews the Objection
+P978|Objections, if any, shall be filed within 30 days from the date of filing the notice.
+P979|In case someone wants to object to the marriage, then the objector (said person) shall visit the SRO and complain to the concerned SR/MO.
+P980|The SR/MO must resolve the objection within 30 days of receiving it.
+P981|SRO shall log in and add the objections from the objector as below.
+P982|A form shall be displayed with the following:
+P983|Applicants’ Name and Application Number
+P984|Form: the objector shall fill in the following details:
+P985|Salutation, First Name, Middle Name, Last Name, Alias (only Salutation and First Name are mandatory fields)
+P986|Date of Birth and Age (in years) (only Age is a mandatory field) (Note: Age should auto-fetch once DoB is entered)
+P987|Mobile Number and Email ID (mandatory fields)
+P988|A textbox for Objection (mandatory field)
+P989|A section to Upload supporting documents (this may be a photo, document, or video) (mandatory field)
+P990|Select Date for Enquiry
+P991|The SR/MO checks if the objection is valid
+P992|If an objection is valid, then SR/MO shall start an Enquiry
+P993|The system allocates the application's objections to the FDA/SDA.
+P994|Both the applicants and the objector(s) receive an Email/SMS (notification) from the system stating that the objector has raised an objection (mentioning the objector's details) and citing the reasons for the objection.
+P995|The SR/MO shall Schedule a Date and Time and shall Generate Form I Notice (Note: The Form I Notice generated has to be sent to the Applicants and Objector(s) through Post & Email/SMS/calling for all the concerned parties (the Applicants, Objector(s) and their Witness(es)) to be present for the Enquiry)
+P996|If an objection is not valid, (Note: The applicants & objector(s) receive an email/SMS as a notification; also, the status gets updated in the applicant login)
+P997|Note:
+P998|After the end of the 30 days (objection notice period), and in case (i) no objection is filed or (ii) objection is over-ruled, then the SR/MO shall approve the application, and the applicant receives an email/SMS as notification and can proceed to make payment option.
+P1000|SR Issues Notice/Summons and Conducts Enquiry
+P1001|If an objection is valid, then SR/MO shall Schedule a Date and Time for an Enquiry and shall Generate a Form I Notice.
+P1002|Note:
+P1003|The Form I Notice generated has to be sent to the Applicants and Objector(s) through Post & Email/SMS calling for all the concerned parties (the Applicants, Objector(s) and their Witness(es)) to be present for the Enquiry.
+P1004|On the scheduled date and time summoned by the SR/MO, in the presence of both Applicants & Objector(s), the SR/MO Conducts an Enquiry
+P1005|Both the Applicants & the Objector(s) are given an opportunity to put forth their defense.
+P1006|‘Appointment for Enquiry’ is on the marriage appointment screen
+P1007|He clicks on the ‘Start Enquiry’ button
+P1008|The screen displays the following:
+P1009|Objection Number
+P1010|Objector Name
+P1011|Applicant Number
+P1012|Applicant Name
+P1013|Two Textboxes – one for each of the Depositions (Objector(s) & Applicants)
+P1014|One Textbox for SR Order
+P1015|Two buttons – Over-rule Objection, Sustain Objection
+P1016|An option to Print (and download) an Enquiry Order
+P1017|If the witnesses won’t turn up on the scheduled date and time summoned by the SR/MO or if the party/objector(s) request for an official summons to be issued by the SR/MO for the witness(es) to be present for the enquiry, then the SR/MO issues summons to the required/requested witness(es) (see Form II – Summons to Witness(es)
+P1018|On request, the SR/MO can issue summons to witness(es) from either/both party and objector side; 3. The party/objector should first make a payment, i.e., Fee for issuing Summons to the Witnesses to be paid by Objector = ₹0.50 (for each witness) through K2 and should inform the SR/MO, then only the SR/MO will Issue Summons to the witness(es) and schedules for another date and time calling them for an Enquiry; for this enquiry (2nd sitting), no official form I notice will be sent again to the applicants and the objector(s)
+P1019|After the enquiry, the SR/MO writes the Enquiry Results (Enquiry Order/ Speaking Order) based on the merits and Records Inquiry Results & Scans the Order. The SR/MO can either Over-rule or Sustain the objection
+P1020|If the objection is sustained, then the marriage application can’t be registered; the marriage shall not be solemnized, and the Refusal Order (Enquiry Results) shall be printed by FDA/SDA and given to the parties.
+P1021|Note:
+P1022|1. The marriage applications status in the system is to be changed to ‘Objection Raised and Sustained’ with an option to view the ‘Inquiry Order’
+P1023|If the objection is over-ruled, then the marriage application is unaffected; then the step below shall be followed
+P1024|Note:
+P1025|1. The applicant & objector receive an email/SMS as a notification; also, the status gets updated in the applicant login; 2. Both the applicants and the objector(s) receive a scanned copy of the Inquiry Order via email (downloadable form) and post and physically handed over just after the enquiry
+P1026|2. After the end of the 30 days (objection notice period), and in case no objections are filed, the applicants, along with three witnesses, shall appear before the SR/MO for solemnization of their marriage within the next two calendar months (Total period shall not exceed three calendar months from the date of filing of notice)
+P1027|After the end of the 30 days (objection notice period), and in case no objections are filed, or in case the objection is over-ruled (i.e., not sustained), then the SR/MO shall approve the application and the applicant receives an email/SMS as notification and can proceed to make payment option
+P1029|Note:
+P1030|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login) on Kaveri2.
+P1031|2nd Payment of Fee by the Applicant
+P1032|The applicant shall enter the Number of Additional Copies (of the Final Marriage Registration Certificate) if required. Hence, an option must be provided for the same
+P1033|Note:
+P1034|For each additional copy of the marriage registration certificate, ₹10 per copy will be charged, which gets reflected in the Display of Fee Structure page
+P1035|After SR/MO accepts and approves the application, the applicant logins into the Kaveri 2.0 portal and makes the 2nd Payment of the Fee (Total Payable Amount) online through the K2 portal by clicking on the ‘Make Payment’ button
+P1036|Note:
+P1037|The system should show the calculated fee (freeze it and the applicant can make no changes at this stage) before the applicant makes the payment and then gives the ‘Make Payment’ option
+P1038|Fee for Solemnizing/ registering marriage   = ₹10 (fixed)
+P1039|Scanning Fee = ₹35 (per page of scanning)
+P1040|(Note: Shall show the Names of the Forms and Annexures that need to be scanned)
+P1041|No. of Additional Copies (of Marriage Registration Certificate) = ₹10 (per copy)
+P1042|Total Payable Amount = ₹…. (a + b + c)
+P1043|The applicant shall receive an Acknowledgement from the K2 for making the online payment
+P1044|On making the payment, a dialogue box/ flash message should appear stating, ‘Your payment has been successfully made.
+P1045|Note:
+P1046|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login on Kaveri2.0
+P1047|The applicant can choose ‘Print Challan’, ‘Go to Home’ or ‘Book Appointment’.
+P1048|The applicant can print the receipt from the dashboard.
+P1049|Scheduling 2nd Appointment with the SR/MO by the Applicant
+P1050|Once payment is made, the applicant shall Schedule an Appointment (for Oath & Solemnization) with the SR/MO by clicking on the ‘Schedule Appointment’ button.
+P1051|The applicant shall select the Date and Time.
+P1052|Once the schedule is booked, a dialogue box/ flash message should appear stating, ‘Your appointment for XXth Month Name 20__ is successfully scheduled. Please reach the office 15 minutes early for a smooth registration experience.’
+P1053|The screen displays the applicant’s date, time, and venue and two buttons:
+P1054|Cancel Appointment and
+P1055|Re-schedule Appointment
+P1056|Note:
+P1057|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant (department) login on Kaveri2.0
+P1059|Steps taken by SRO (SR/MO) to Register Marriage and to secure Marriage Certificate to the Applicant(s)
+P1060|On the day of the appointment, the Applicants (bridegroom and bride), along with witnesses, shall appear before SR/MO and present the physical application forms and memorandum of declaration.
+P1062|Oath & Solemnization of Marriage by SR/MO
+P1063|The parties (bridegroom, bride) along with three witnesses shall appear before SR/MO and shall get the marriage Solemnized as per the prescribed procedures:
+P1064|SR/MO will seek to confirm that the applicants are about to enter a marriage of their own free will,
+P1065|Applicants will take the Solemn and Binding Marriage Oaths,
+P1066|The Marriage Oath is signed by the bride, and bridegroom and counter-signed by SR/MO and
+P1067|The Marriage Declaration Document is signed by the bride, bridegroom, and three witnesses and counter-signed by SR/MO
+P1068|Steps Taken to Process the Marriage Registration Certificate
+P1069|SR allocates the application to DEO to capture a Joint photo of the bride and groom on the Memorandum Form.
+P1070|The allocated marriage applications must be displayed on the DEO dashboard.
+P1071|The DEO shall click on the ‘Capture Photo’ button
+P1072|The DEO shall Review the Physical Documents, Application Summary and if everything is in order
+P1073|The DEO shall Capture/Modify/Edit the basic details of the 3 Witnesses
+P1074|(if changes are required)
+P1075|Note:
+P1076|1. The age of the witnesses should be >= 18 years; 2. Capture the details of 3 witnesses at the beginning (i.e., while filling up the application form of notice); but later, SDA/FDA should be given an ‘Edit Option’ to change the witness details, keeping in mind the objection period of 30 days (in case of difficulties (death, cancellation, busy schedule, not showing up on a particular day, etc.
+P1077|2. In the case where the FDA/SDA edits the witness(es)’ details, then the marriage application form (if any & if required) has to be printed again and the signatures of the bridegroom, bride, and three witnesses have to be retaken)
+P1078|The DEO Screen displays the following:
+P1079|Application Details – Application Number, Date of Submission, Application (Marriage) Type, Date of Marriage (whichever is applicable)
+P1080|Marriage Details – Date and Place (Address) of Marriage
+P1081|Applicant Details – Bridegroom Details, Bride Details, Witness Details
+P1082|The DEO shall Capture the photo of the bride and bridegroom by clicking the ‘capture’ button
+P1083|The FDA/SDA shall send it to the SR/MO for approval by clicking on the ‘Generate Certificate’ button
+P1084|The SR/MO shall view the Memorandum form generated by the DEO and shall approve the application in the system by clicking on the ‘Check & Register’ button
+P1085|The system generates a Marriage Registration Certificate with a Registration Number (Note: a pop-up message should appear once he clicks on ‘Check and Register’, saying ‘, Are you sure to Register? You cannot change later for which the SR/MO confirm
+P1086|Note:
+P1087|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login)
+P1088|In the back end, the Index of Marriage are stored in the Index Register (Forms V & VI for wife and husband separately)
+P1089|After Approval by SR/MO, the firm registration certificate is pushed back to the DEO dashboard
+P1090|After approval, the DEO shall click on the ‘Print Certificate and Forms’ button to Print the Marriage Certificate (with Registration Number) (and other forms wherever required) and shall get them signed by the applicants and the witnesses (if/wherever needed)
+P1091|The DEO shall get the cross-signatures of the bridegroom, bride and three witnesses on the Certificate.
+P1092|The DEO shall get a Seal and Signature affixed by the SR/MO on the Marriage Certificate (with Registration Number) (and other forms wherever required)
+P1093|The DEO shall click on the ‘Upload’ button
+P1094|The DEO upload screen shall display the following:
+P1095|Details: Application Number, Application Type, Date of Marriage
+P1096|Scan and Preview buttons: to scan and preview Certificates & Forms,
+P1097|Annexures/Enclosures
+P1098|‘Send to SR/MO for digital signing’ button
+P1099|The DEO shall Scan and Preview (by clicking the ‘Scan’ and ‘Preview’ buttons respectively) the following documents:
+P1100|Application Form of Notice
+P1101|Declaration & Oath
+P1102|Signed Marriage Certificate
+P1103|Enclosures/Annexures
+P1104|The SR shall view the documents uploaded by DEO, then shall click on the ‘View’ button and click on ‘Digital Sign’ to put his digital signature, encrypt, and upload all the saved documents
+P1105|Note:
+P1106|1. the pop-up message should appear once he clicks on the ‘Digital Sign & Complete’ button saying, ' Are you sure to sign and upload digitally? Once uploaded, the details cannot be changed for which the SR/MO has to confirm
+P1107|2. The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login)
+P1108|Any Additional Payment by the applicant(s)/objector(s) is made through Cash; the applicant(s)/objector(s) receives an Acknowledgement (a copy of the Fee Receipt has to be generated by the DEO on receipt of cash)
+P1109|The scanned documents are sent to RGoM (Registrar General of Marriage)
+P1110|The Marriage Registration Certificate is handed over physically to the applicant after receiving the acknowledgement, and the applicant shall collect the Marriage Certificate
+P1111|The Sakala is updated
+P1115|Note:
+P1116|1. If applied for CC (Certified Copy) for the Marriage Certificate, then a Digitally/Physically Signed Copy from SR/MO may be issued by filling out the appropriate form;
+P1117|2. In case any changes are to be made to the Registration of Marriage due to erroneous data entry, the same shall be done in the system with approval from SR.
+P1120|Special Marriage of Other Forms
+P1121|Brief Description
+P1122|The applicant chooses the ‘Special Marriage of Other Forms’ from among the three options if the following conditions are satisfied:
+P1123|If the applicant/s (bride &/or bridegroom) are of a different religion (other than Hindu religion) or a combination of Hindu with other religion, and
+P1124|Marriage has already occurred (post-marriage)
+P1126|Special Marriage of Other Forms - Online
+P1127|Process Flow
+P1130|Figure 5: Registration of Special Marriage of Other Forms (Page 1)
+P1134|Figure 6: Registration of Special Marriage of Other Forms (Page 2)
+P1138|Functional Step-by-Step Process:
+P1139|Steps taken by Citizens/ Applicant to file a Marriage Registration Online
+P1140|Applicant Login
+P1141|To apply online, the applicant shall browse for Kaveri Online Services, i.e., Kaveri2.0
+P1142|The applicant shall register as a user by creating a user ID and password
+P1143|The applicant shall now login in the Kaveri2.0 portal
+P1144|The applicant shall click on ‘Start a New Application.’
+P1145|The applicant shall click on ‘Marriage Registration’ on the screen
+P1146|The applicant shall select the ‘Type of Marriage’.
+P1147|Note:
+P1148|The applicant shall select among the three types of marriage options per the requirement (satisfying certain conditions).
+P1149|The following types of marriage options are available to the applicant:
+P1150|Hindu Marriage,
+P1151|Special Marriage (Intended Marriage Notice) and
+P1152|Special Marriage of Other Forms
+P1153|The applicant shall select ‘Special Marriage of Other Forms - Online’ from among the three options (mandatory field)
+P1154|Note:
+P1155|The applicant shall choose the ‘Special Marriage of Other Forms – Online’ from among the three options if the following conditions are satisfied:
+P1156|If the applicant/s (bride &/or bridegroom) are of a different religion (other than Hindu) or a combination of Hindu with another religion and
+P1157|Marriage has happened (post-marriage)
+P1158|The system requests the applicant to fill in the following entry fields (in general):
+P1159|The applicant has to accept the declarations mentioned unless they can’t proceed to the below steps.
+P1161|Marriage Details
+P1162|The applicant has to fill in the following entry fields for Marriage Details:
+P1163|Is the Applicant Bridegroom or Bride? (Radio button) (mandatory field)
+P1164|Date of Marriage (signifies the date on which the marriage took place)
+P1165|Address of Marriage Venue (Place of Marriage) - House No./Building Name, Street Address, State, District, Taluka, Hobli/Ward, Village/City, Pin code (all are mandatory fields)
+P1166|Joint Photo of the Bridegroom and Bride (upload) (mandatory field)
+P1167|Note:
+P1168|1. B2 size (500 mm*707 mm) Joint photo of the bridegroom and the bride should be in jpg format; size shouldn’t exceed 2 MB; 2. The uploaded joint photo of the bridegroom and the bride shall be manually verified by the SR/MO/FDA/SDA before proceeding with the payment and booking appointment and also physically during the day of appointment at SRO
+P1170|Bridegroom Details
+P1171|The applicant has to fill in the following entry fields for Bridegroom Details:
+P1172|The applicant can enter the relevant details manually or click on e-KYC to fetch further information using their Aadhaar number (optional).
+P1173|Data is fetched from e-KYC using Aadhaar information (all details are available in Aadhar).
+P1174|First Name
+P1175|Date of Birth
+P1176|Age
+P1177|State
+P1178|District (within Revenue districts)
+P1179|House no. and Street address
+P1180|Pin code
+P1181|Status of Marriage (at the time of marriage) – Unmarried/ Divorcee/ Widow(er) (mandatory field)
+P1182|Note:
+P1183|1. If any one of the Divorcee/Widow is chosen, it should say ‘Please upload the supporting document to the upload page’ while uploading the other documents,
+P1184|(then the corresponding document supporting the same should be uploaded at a later stage while uploading the forms and enclosures in the ‘Upload Document’ screen), i.e.,
+P1185|For unmarried – no need to upload any document;
+P1186|For Divorcee – certificate of divorce from the court;
+P1187|For Widow(er) – widow(er)/death certificate of spouse)
+P1189|Salutation (mandatory field)
+P1190|First Name, Middle Name, Last Name (only First Name is mandatory field)
+P1191|Date of Birth (DoB) (optional field)
+P1192|Age (in years) (should auto-fetch once DoB is entered; the system should register only if age>=21 years for bridegroom) (mandatory field)
+P1193|Note:
+P1194|1. The age of the bridegroom must be greater than or equal to 21 years;
+P1195|2. The age must be rounded off to the lower whole number, i.e.,
+P1196|if the age is 21.3 years, then the system should take 21 years;
+P1197|if the age is 21.9 years, then the system should take 21 years only,
+P1198|i.e., the system must always take the lower side value until it is a whole number;
+P1199|3. If DoB is fed, then the age should auto-fetch
+P1201|Mobile Number (mandatory field)
+P1202|Email ID (optional field)
+P1203|Current Place of Residence (Current Address) – State, District, Taluka, Hobli/Ward, City/Village, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P1204|Permanent Place of Residence (Permanent Address) – State, District, Taluka, Hobli/Ward, City/Village, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P1205|Note:
+P1206|1. For NRIs, the UI includes two radio buttons, Yes or No, for the question "Are you a resident of India?"
+P1207|If yes, proceed with the address as mentioned in the earlier information.
+P1208|If no, the applicant must enter the following:
+P1209|Country
+P1210|House No/Building Name
+P1211|Street address
+P1212|State/ Province
+P1213|Zip/ Postal code
+P1214|2. A ‘Checkbox’ saying ‘Permanent address is same as Current address’ has to be given after Current Place of Residence (and before Permanent Place of Residence); if checked, then the exact details as entered in the Current Place of Residence should be auto-filled in place of Permanent Place of Residence; isn't checked, then the applicant has to enter the required details manually
+P1215|Duration of Residence at Current Address (Length of Residence) (calendar) (in days/months/years) (mandatory field)
+P1216|Father Details – Salutation, First Name, Middle Name, Last Name (Salutation and First Name are mandatory fields)
+P1217|Mother Details – Salutation, First Name, Middle Name, Last Name (Salutation and First Name are mandatory fields)
+P1219|Bride Details
+P1220|The applicant has to fill in the following entry fields for Bride Details:
+P1221|The applicant can enter the relevant details manually or click on e-KYC to fetch further information using their Aadhaar number (optional).
+P1222|Data is fetched from e-KYC using Aadhaar information (all details are available in Aadhar).
+P1223|First Name
+P1224|Date of Birth
+P1225|Age
+P1226|State
+P1227|District (within Revenue districts)
+P1228|House no. and Street address
+P1229|Pin code
+P1231|Status of Marriage (at the time of marriage) – Unmarried/ Divorcee/ Widow(er) (mandatory field)
+P1232|Note:
+P1233|1. If any one of the Divorcee/Widow is chosen, it should say ‘Please upload the supporting document in the upload page’ while uploading the other documents (then the corresponding document supporting the same should be uploaded at a later stage while uploading the forms and enclosures in the ‘Upload Document’ screen) i.e.,
+P1234|For unmarried – no need to upload any document;
+P1235|For Divorcee – certificate of divorce from the court;
+P1236|For Widow(er) – widow(er)/death certificate of spouse)
+P1238|Salutation (mandatory field)
+P1239|First Name, Middle Name, Last Name (only First Name is mandatory field)
+P1240|Date of Birth (DoB) (optional field)
+P1241|Age (in years) (should auto-fetch once DoB is entered; the system should register only if age>=21 years for bridegroom) (mandatory field)
+P1242|Note:
+P1243|1. The bridegroom's age must be over or equal to 21 years;
+P1244|2. The age must be rounded off to the lower whole number, i.e., if the age is 21.3 years, then the system should take 21 years only; if the age is 21.9 years, then the system should take 21 years only, i.e., the system must always take the lower side value until it is a whole number;
+P1245|3. If DoB is fed, then the age should auto-fetch
+P1246|Mobile Number (mandatory field)
+P1247|Email ID (optional field)
+P1248|Current Place of Residence (Current Address) – State, District, Taluka, Hobli/Ward, City/Village, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P1249|Permanent Place of Residence (Permanent Address) – State, District, Taluka, Hobli/Ward, City/Village, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P1250|Note:
+P1251|1. For NRIs, the UI includes two radio buttons, Yes or No, for the question "Are you a resident of India?"
+P1252|If Yes, proceed with the address mentioned above information.
+P1253|If No, the applicant must enter the following:
+P1254|Country
+P1255|House No/Building Name
+P1256|Street address
+P1257|State/ Province
+P1258|Zip/ Postal code
+P1259|2. A ‘Checkbox’ saying ‘Permanent address is same as Current address’ has to be given after Current Place of Residence (and before Permanent Place of Residence); if checked, then the exact details as entered in the Current Place of Residence should be auto-filled in place of Permanent Place of Residence; isn't checked, then the applicant has to enter the required details manually
+P1260|Duration of Residence at Current Address (Length of Residence) (calendar) (in days/months/years) (mandatory field)
+P1261|Father Details – Salutation, First Name, Middle Name, Last Name (Salutation and First Name are mandatory fields)
+P1262|Mother Details – Salutation, First Name, Middle Name, Last Name (Salutation and First Name are mandatory fields)
+P1264|Witnesses Details
+P1265|The applicant has to fill the following entry fields for Witnesses Details: (Note: 3 witnesses are mandatory)
+P1266|The applicant must click on the checkbox “All Witnesses were present during the time of marriage” and proceed (Special Marriage Karnataka Rules, 1961).
+P1267|The applicant can enter the relevant details manually or click on e-KYC to fetch further information using their Aadhaar number (optional).
+P1268|Data is fetched from e-KYC using Aadhaar information (all details are available in Aadhar).
+P1269|First Name
+P1270|Date of Birth
+P1271|Age
+P1272|State
+P1273|District (within Revenue districts)
+P1274|House no. and Street address
+P1275|Pin code
+P1276|Salutation (mandatory field)
+P1277|First Name, Middle Name, Last Name (only First Name is mandatory field)
+P1278|Date of Birth (DoB) (optional field)
+P1279|Age (in years) (should auto-fetch once DoB is entered; the system should register only if age>=21) (mandatory field)
+P1280|Mobile Number (mandatory field)
+P1281|Email ID (optional field)
+P1282|Current Place of Residence (Current Address) (mandatory field)
+P1283|Permanent Place of Residence (Permanent Address) (mandatory field)
+P1284|Note:
+P1285|A ‘Checkbox’ saying ‘Permanent address is same as Current address’ has to be given after Current Place of Residence (and before Permanent Place of Residence); if checked, then the exact details as entered in the Current Place of Residence should be auto-filled in place of Permanent Place of Residence; isn't checked, then the applicant has to enter the required details manually.
+P1286|Whether related to bride or bridegroom; also specify the relation (as others) (Radio button & dropdown; also have to enter the relation if ‘Others’ is chosen manually) (mandatory field)
+P1287|Note:
+P1288|Although the applicant has to fill in the details of 3 witnesses at the beginning (i.e., while filling up the application form of notice), an option must be given for the SDA/FDA with an ‘Edit Option’ to change the witnesses’ details keeping in mind the objection period of 30 days (in case of difficulties (death, cancellation, busy schedule, etc.)) at a later date when the party along with witnesses are physically present at SRO during the appointment date and time
+P1289|SRO Selection
+P1290|The applicant shall select the SRO as mentioned in step 14
+P1291|The applicant selects the jurisdictional SRO (Marriage Office) by selecting the required SRO from the dropdown menu
+P1292|Select SRO: the applicant shall select the SRO from the dropdown list
+P1293|The Options in the dropdown menu are:
+P1294|SRO falling within Address (Place) of Marriage
+P1295|SRO falling within the Permanent Address of the Bridegroom
+P1296|SRO falling within the Permanent Address of Bride
+P1297|SRO falling within the Current Address of Applicant (i.e., may be bridegroom or bride, which is asked in the Marriage Details screen)
+P1298|Note:
+P1299|If the Applicant chooses SRO falling within the Current Address, then the condition that the applicant must have stayed for at least 30 days before the submission of the application applies, and the applicant must produce (upload) the corresponding document supporting the same at a later stage while uploading the forms and enclosures in the ‘Upload Documents’ screen
+P1300|Generation of Application Summary and Notice of Intended Marriage Form
+P1301|The applicant after filling up the application form, the Application Summary is shown by the system.
+P1302|The applicant either Accepts the ‘Declaration’ and clicks on ‘View Application Form of Notice’ or the ‘Edit’ option to make any changes to the application.
+P1303|If the Applicant chooses to Edit the application, the system shall take the Applicant back to the marriage details screen (Keep all previously filled data).
+P1304|When clicked on ‘View Application Form of Notice’, the Application Form of Notice (Form III, i.e., Application Form of Notice for Special Marriage of Other Forms) shall be auto-fetched in the below format (which should be auto-fetched from the data entry captured earlier) to the applicant by the system.
+P1305|The generated notice will be submitted to SR for further processing.
+P1307|Upload of Annexures/Enclosures by the Applicant
+P1308|The applicant shall Upload the below-mentioned documents:
+P1309|For Bridegroom
+P1310|Identity proof (dropdown menu) (mandatory filed)
+P1311|Age proof (dropdown menu) (mandatory filed)
+P1312|Address proof (dropdown menu) (mandatory filed)
+P1313|Proof of Divorcee/Widow (mandatory, if mentioned earlier while filling the Bridegroom details)
+P1314|For Bride
+P1315|Identity proof (dropdown menu) (mandatory filed)
+P1316|Age proof (dropdown menu) (mandatory filed)
+P1317|Address proof (dropdown menu) (mandatory filed)
+P1318|Proof of Divorcee/Widow (mandatory, if mentioned earlier while filling the Bride details)
+P1319|List of permitted documents for Age proof:
+P1320|Birth Certificate
+P1321|School Leaving Certificate (SSLC)
+P1322|School Cumulative Record
+P1323|Doctor Certificate with Affidavit
+P1324|Others
+P1325|List of permitted documents for ID proof:
+P1326|Employee ID
+P1327|Ration Card
+P1328|Driving License
+P1329|Passport
+P1330|PAN
+P1331|Bank Passbook
+P1332|Voter ID (EPIC Card)
+P1333|Aadhar Card
+P1334|List of permitted documents for Address proof:
+P1335|Employee ID
+P1336|Ration Card
+P1337|Driving License
+P1338|Passport
+P1339|Bank Passbook
+P1340|Voter ID (EPIC Card)
+P1341|Aadhar Card
+P1342|List of permitted documents for Marriage proof:
+P1343|Wedding Invitation Card
+P1344|Temple/Mosque/Church/etc. Marriage Receipt
+P1345|Choultary/Marriage Hall/Kalyana Mantapa Receipt
+P1346|Others (relevant document only)
+P1347|Note:
+P1348|1. All the uploaded documents should be in PDF format and their size shouldn’t exceed 5 MB for each document (except for the Divorce Certificate, which can run for pages as it is a court order);
+P1349|2. Scanning Fee is calculated for All uploaded documents (including Enclosures);
+P1350|3. The system should Auto-calculate the number of pages for All the documents uploaded
+P1352|Display of Fee Structure of 1st Payment
+P1353|The system displays the breakup of the Total Payable Fee:
+P1354|Application Form of Notice Fee (or just Notice Fee) = ₹3
+P1355|Marriage Registration Fee = ₹25 (fixed)
+P1356|Total Payable Amount = Rs 28
+P1357|Note:
+P1358|At this stage, the system has just to show the calculation (breakup of the fee and the applicant doesn’t make any payment; at a later stage, after verification and approval of data entered by the applicant by FDA/SDA/SR/MO only, the applicant has to make the payment; the fee calculation is being shown to ensure that the applicant has to be kept informed about the fee they are supposed to pay (transparency)
+P1360|Submission of Application Form of Notice
+P1361|The applicant clicks on the ‘Submit’ button to apply online.
+P1362|On submission of the application form of notice, a dialogue box/ flash message should appear stating, ‘Your application has been successfully submitted.’
+P1363|The applicant will get an Application Number generated as an Acknowledgement.
+P1364|Note:
+P1365|1. The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant (and department) login/dashboard on Kaveri2.0; the application gets logged in in order in the SR login)
+P1366|2. Once the applicant submits the application and after the application is verified & approved by FDA/SDA/SR/MO, the ‘URL and Barcode’ should be generated on the Application Form of Notice so that later, it would be helpful for the Objector to file an Objection on payment of Objection Fee.
+P1368|Steps taken by SR/MO at SR Office to Register Marriage and to secure Marriage Certificate to the Applicant(s)
+P1369|FDA/SDA Login and Verification
+P1370|System auto allocates the application to FDA/SDA.
+P1371|FDA/SDA shall login to the Kaveri 2.0 system
+P1372|From the menu on his dashboard, the FDA/SDA/ shall click on ‘Start Verification’ button
+P1373|The FDA/SDA Application Verification screen is split into 2 sides:
+P1374|LHS (Left-hand side of the page) – the Summary sheet containing all the details which the applicant has entered (marriage details, bridegroom details, bride details, witness details, fee details), a section to add his Remarks and a button to send it back to the SR/MO
+P1375|RHS (Right-hand side of the page) – contains the Uploads by the applicant which are the Application Form and the Enclosures/Annexures
+P1376|The FDA/SDA shall crosscheck the applications and the enclosures thoroughly; FDA/SDA fills a checklist mentioning Remarks for each category – marriage details, bridegroom details, bride details, witnesses’ details, uploaded documents; sends it back to the SR/MO with Remarks by clicking on ‘Send to SR/MO’ button.
+P1378|Verification & Approval by the SR/MO
+P1379|After the application is received from the FDA/SDA, the SR/MO shall log in and view the remarks made by the FDA/SDA by clicking on ‘View’ (to view the remarks) and shall add his/her remarks and shall send it back to the applicant for either to attend to the remarks made and resend the application (in the applicant login, ‘Your application cannot be registered as it is, Kindly Refer to the Sub Registrar Remarks to know more’ message shall be displayed) or to proceed to ‘Make Payment’.
+P1380|The SR/MO has an additional checkbox which if ticked, then it takes the applicant to make the ‘Can Proceed to Make Payment option; if not ticked will request the applicant to make changes (as per remarks made by SR/MO) in the application and re-submit the application
+P1382|Note:
+P1383|1. When the changes (attend to SR/MO remarks) are requested by the SR/MO to the applicant, the system takes the applicant to the ‘Marriage Details’ screen with the pre-filled data being retained as earlier over which he can over-write to make changes and then shall send back to the SR/MO by pressing the ‘Submit’ button;
+P1384|2. If the applicant wants to change the type of marriage, then he/she has to re-apply.
+P1385|On the Remarks section, there is a checklist - If the checkbox in the checklist is ticked, the remarks are voluntary; isn’t ticked, then the remarks are mandatory
+P1386|Note:
+P1387|1. In either case, the applicant receives an email/SMS; the applicant receives a notification on the Kaveri2.0 dashboard; also, the status of the application gets updated in the applicant (and department) login/dashboard on Kaveri2.0; 3. Until unless ‘Can proceed to make Payment is checked, the applicant can’t proceed.
+P1388|2. If the applicant is willing to attend to the remarks made by SR/MO, then resend the application after corrections are made. If not willing to attend to the remarks made by SR/MO, then the system shall generate the Endorsement with a Reason for Rejection;
+P1389|3. Based on the remarks made by the FDA/SDA, the SR/MO has the option to change (make modifications) the number of pages to be scanned)
+P1391|The applicant can print the receipt from the dashboard after successful payment.
+P1393|Generation and Display of Notice
+P1394|In SR login, SR clicks on ‘Generate Notice’, after verifying applicant details
+P1395|Notice Preview is shown. SR will click on check and register. Notice will be printed, and the Applicant (bridegroom and/or bride), SR/MO shall physically present and sign on the notice, which must be displayed.
+P1396|The signed notice will be scanned and uploaded in the application by DEO and sent for a digital sign of SR/MO.
+P1397|The Signed Notice is displayed on the notice board (by DEO) in the marriage office and a copy of the notice is also sent to the Concerned Jurisdictional SR/MOs (the notice shall be displayed on these concerned jurisdictional SR/MOs’ notice boards too), in case the domicile of the applicant(s) is other than the approached SR/MO.
+P1398|Note:
+P1399|1. In either case, the applicant receives an email/SMS; the applicant receives a notification on the Kaveri2.0 dashboard; also, the status of the application gets updated in the applicant (and department) login/dashboard on Kaveri2.0.
+P1401|The Signed Notice will be displayed on the notice board for 30 days on the concerned jurisdictional SR/MOs notice board.
+P1403|SR Receives & Reviews the Objection
+P1404|Objections, if any shall be filed within 30 days, from the date of filing the notice.
+P1405|In case someone wants to object to the marriage, then the objector (said person) shall visit the SRO and complain to the concerned SR/MO.
+P1406|The objection has to be resolved by the SR/MO within 30 days of the date of receiving the objection.
+P1407|SRO shall log in and add the objections from the objector as below.
+P1408|A form shall be displayed with the following:
+P1409|Applicants’ Name and Application Number
+P1410|Form: the objector shall fill in the following details:
+P1411|Salutation, First Name, Middle Name, Last Name, Alias (only Salutation and First Name are mandatory fields)
+P1412|Date of Birth and Age (in years) (only Age is mandatory field) (Note: Age should auto-fetch once DoB is entered)
+P1413|Mobile Number and Email ID (mandatory fields)
+P1414|A textbox for Objection (mandatory field)
+P1415|A section to Upload supporting documents (this may be a photo, document, or video) (mandatory field)
+P1416|Select Date for Enquiry
+P1417|The SR/MO checks if the objection is valid
+P1418|If the objection is valid, then SR/MO shall start an Enquiry
+P1419|The system auto-allocates the objections to the FDA/SDA in the application.
+P1420|Both the applicants & the objector(s) receive an Email/SMS s(notification) from the system that an objection has been raised by the objector (mentioning objector details) citing the reasons for the objection.
+P1421|The SR/MO shall Schedule a Date and Time and shall Generate Form I Notice (Note: The Form I Notice generated has to be sent to the Applicants and Objector(s) through Post & Email/SMS calling for all the concerned parties (the Applicants, Objector(s) and their Witness(es)) to be present for the Enquiry)
+P1422|If the objection is not valid, (Note: The applicants & objector(s) receive an email/SMS as a notification; also, the status gets updated in the applicant login)
+P1423|Note:
+P1424|After the end of the 30 days (objection notice period), and in case (i) no objection is filed or (ii) objection is over-ruled, then the SR/MO shall approve the application and the applicant receives an email/SMS as notification and can proceed to make payment option.
+P1426|SR Issues Notice/Summons and Conducts Enquiry
+P1427|If an objection is valid, then SR/MO shall Schedule a Date and Time for an Enquiry
+P1428|and shall Generate Form I Notice
+P1429|Note:
+P1430|The Form I Notice generated has to be sent to the Applicants and Objector(s) through Post & Email/SMS calling for all the concerned parties (the Applicants, Objector(s) and their Witness(es)) to be present for the Enquiry.
+P1431|On the scheduled date and time summoned by the SR/MO, in the presence of both Applicants & Objector(s), the SR/MO Conducts an Enquiry
+P1432|Both the Applicants & the Objector(s) are given an opportunity to put forth their defense
+P1433|‘Appointment for Enquiry’ is on the marriage appointment screen
+P1434|He clicks on the ‘Start Enquiry’ button
+P1435|The screen displays the following:
+P1436|Objection Number
+P1437|Objector Name
+P1438|Applicant Number
+P1439|Applicant Name
+P1440|Two Textboxes – one for each of the Depositions (Objector(s) & Applicants)
+P1441|One Textbox for SR Order
+P1442|Two buttons – Over-rule Objection, Sustain Objection
+P1443|An option to Print (and download) Enquiry Order
+P1444|If the witnesses won’t turn up on the scheduled date and time summoned by the SR/MO or if the party/objector(s) request for an official summons to be issued by the SR/MO for the witness(es) to be present for the enquiry, then the SR/MO issues summons to the required/requested witness(es) (see Form II – Summons to Witness(es)
+P1445|On request, the SR/MO can issue summons to witness(es) from either/both party and objector side; 3. The party/objector should first make a payment, i.e., Fee for issuing Summons to the Witnesses to be paid by the Objector = ₹0.50 (for each witness) through K2 and should inform the SR/MO, then only the SR/MO will Issue Summons to the witness(es) and schedules for another date and time calling them for an Enquiry; for this enquiry (2nd sitting), no official form I notice will be sent again to the applicants and the objector(s)
+P1446|After the enquiry, the SR/MO writes the Inquiry Results (Inquiry Order/ Speaking Order) based on the merits and Records Inquiry Results & Scans the Order. The SR/MO can either Over-rule or Sustain the objection
+P1447|If the objection is sustained, then the marriage application can’t be registered; the marriage shall not be solemnized, and the Refusal Order (Inquiry Results) shall be printed by FDA/SDA and given to the parties.
+P1448|Note:
+P1449|1. The marriage application status in the system is to be changed to ‘Objection Raised and Sustained’ with an option to view the ‘Inquiry Order’
+P1451|If the objection is overruled, then the marriage application is unaffected; then step 83 shall be followed.
+P1452|Note:
+P1453|1. The applicant & objector receive an email/SMS as a notification; also, status gets updated in the applicant login;
+P1454|2. Both the applicants and the objector(s) receive a scanned copy of the Inquiry Order via email (downloadable form) and/or post and/or physically handed over just after the inquiry)
+P1455|3. After the end of the 30 days (objection notice period), and in case no objections are filed, the applicants along with 3 witnesses shall appear before the SR/MO for solemnization of their marriage (NO restrictions on marriage solemnization period of 90 days for registration of marriage as in case of special marriage (intended marriage notice) i.e., Total period can exceed 3 calendar months from the date of filing of the notice.
+P1456|After the end of the 30 days (objection notice period), and in case no objections are filed or in case the objection is over-ruled (i.e., not sustained), then the SR/MO shall approve the application and the applicant receives an email/SMS as notification and can proceed to make payment option
+P1457|Note:
+P1458|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login) on Kaveri2.0
+P1460|2nd Payment of Fee by the Applicant
+P1461|The applicant shall enter the Number of Additional Copies (of the Final Marriage Registration Certificate) if required. Hence an option must be provided for the same
+P1462|Note:
+P1463|For each additional copy of the marriage registration certificate, ₹10 per copy will be charged; which is reflected in the Display of Fee Structure page.
+P1465|After SR/MO accepts and approves the application, the applicant logins in to the Kaveri 2.0 portal and makes the 2nd Payment of the Fee (Total Payable Amount) online through the K2 portal by clicking on the ‘Make Payment’ button
+P1466|Note:
+P1467|The system should show the calculated fee (freeze it and no changes can be made by the applicant at this stage) before the applicant makes the payment and then give the ‘Make Payment’ option
+P1468|Scanning Fee = ₹35 (per page of scanning)
+P1469|Note:
+P1470|Shall show the Names of the Forms and Annexures that need to be scanned
+P1471|Total Payable Amount = ₹ 35
+P1472|The applicant shall receive an Acknowledgement from the K2 for making the online payment.
+P1473|On making the payment, a dialogue box/ flash message should appear stating ‘Your payment has been successfully made’.
+P1474|Note:
+P1475|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login on Kaveri2.0
+P1476|The applicant can print the receipt from the dashboard.
+P1478|Scheduling 2nd Appointment with the SR/MO by the Applicant
+P1479|Once payment is being made, the applicant shall Schedule an Appointment (for Oath & Solemnization) with the SR/MO by clicking on the ‘Schedule Appointment’ button
+P1480|The applicant shall select the Date and Time
+P1481|Once the schedule is booked, then a dialogue box/ flash message should appear stating ‘Your appointment for 15th November 2021 is successfully scheduled. Please reach the office 15 minutes early for a smooth registration experience
+P1482|The screen displays the applicant’s date, time and venue; and two buttons:
+P1483|Cancel Appointment and
+P1484|Re-schedule Appointment
+P1485|Note:
+P1486|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant (department) login on Kaveri2.0
+P1488|Steps taken by SRO (SR/MO) to Register Marriage and to secure Marriage Certificate to the Applicant(s)
+P1489|On the day of appointment, the Applicants (bridegroom, bride) along with witnesses shall appear before SR/MO and shall present the physical application forms and memorandum of declaration.
+P1491|Steps taken to Process the Marriage Registration Certificate
+P1492|The SR/MO shall view the forms and approve the application in the system by clicking on the ‘Check & Register’ button
+P1493|The system generates a Marriage Registration Certificate with the Registration Number
+P1494|Note:
+P1495|1. The pop-up message should appear once he clicks on ‘Check and Register’ saying that ‘Are you sure to Register? You cannot change later for which the SR/MO confirm
+P1496|2.  The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login)
+P1498|In the back end, the Index of Marriage is stored in the Index Register (Forms V & VI for wife and husband separately)
+P1499|After Approval by SR/MO, the application is pushed back to the DEO dashboard
+P1500|The DEO shall get the cross-signatures of the bridegroom, the bride and 3 witnesses on the Certificate.
+P1501|The DEO shall click on the ‘Upload’ button
+P1502|The DEO upload screen shall display the following:
+P1503|Details: Application Number, Application Type, Date of Marriage
+P1504|Scan and Preview buttons: to scan and preview Certificates & Forms,
+P1505|Annexures/Enclosures
+P1506|‘Send to SR/MO for digital signing’ button
+P1507|The DEO shall Scan and Preview (by clicking the ‘Scan’ and ‘Preview’ buttons respectively) the following documents:
+P1508|Application Form of Notice
+P1509|Declaration & Oath
+P1510|Signed Marriage Certificate
+P1511|Enclosures/Annexures
+P1512|The SR shall view the documents uploaded by DEO, then shall click on the ‘View’ button and click on ‘Digital Sign’ to put his digital signature, encrypt and upload all the saved documents
+P1513|Note:
+P1514|1. A pop-up message should appear once he clicks on the ‘Digital Sign & Complete’ button saying ‘Are you sure to digitally sign and upload? Once uploaded, the details cannot be changed for which the SR/MO has to confirm)
+P1515|2. The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login)
+P1517|Any Additional Payment by the applicant(s)/objector(s) is made through Cash; the applicant(s)/objector(s) receives an Acknowledgement (a copy of the Fee Receipt has to be generated by the FDA/SDA on receipt of cash)
+P1518|The scanned documents are sent to RGoM (Registrar General of Marriage)
+P1519|The Marriage Registration Certificate will be forwarded to the applicant’s dashboard.
+P1520|The Sakala is updated
+P1522|Special Marriage of Other Forms -Offline
+P1523|Process flow
+P1526|Figure 7: Registration of Special Marriage of Other Forms - Offline (Page 1)
+P1528|Figure 8: Registration of Special Marriage of Other Forms - Offline (Page 2)
+P1534|Functional Step-by-Step Process:
+P1535|Steps taken by Citizen/Applicants to file a Marriage Registration Offline
+P1536|Applicant Login
+P1537|To apply online, the applicant shall browse for Kaveri Offline Services
+P1538|i.e., Kaveri2.0
+P1539|The applicant shall register as a user by creating user id and password
+P1540|The applicant shall now login in the Kaveri2.0 portal
+P1541|The applicant shall click on ‘Start a New Application’
+P1542|The applicant shall click on ‘Marriage Registration’ on the screen
+P1543|The applicant shall select the ‘Type of Marriage’
+P1544|Note:
+P1545|1. The applicant shall select among the three types of marriage options as per the requirement (satisfying certain conditions).
+P1546|The following types of marriage options are available to the applicant:
+P1547|Hindu Marriage,
+P1548|Special Marriage (Intended Marriage Notice)
+P1549|Special Marriage of Other Forms
+P1550|The applicant shall select ‘Special Marriage of Other Forms - Offline’ from among the 3 options (mandatory field)
+P1551|2. The applicant shall choose the ‘Special Marriage of Other Forms – Offline’ from among the three options if the following conditions are satisfied:
+P1553|If the applicant/s (bride &/or bridegroom) are of a different religion (other than Hindu) or a combination of Hindu with another religion, and
+P1554|Marriage has happened (post-marriage)
+P1555|The system requests the applicant to fill in the following entry fields (in general):
+P1556|The applicant has to accept the declarations mentioned unless can’t proceed to the below steps.
+P1558|Marriage Details
+P1559|The applicant has to fill the following entry fields for Marriage Details:
+P1560|Whether the Applicant is Bridegroom or Bride? (Radio button) (mandatory field)
+P1561|Date of Marriage (signifies the date on which the marriage took place)
+P1562|Address of Marriage Venue (Place of Marriage) - House No./Building Name, Street Address, State, District, Taluka, Hobli/Ward, Village/City, Pin code (all are mandatory fields)
+P1563|Joint Photo of the Bridegroom and Bride (upload) (mandatory field).
+P1564|Note:
+P1565|1. B2 size (500mm*707mm) Joint photo of the bridegroom and the bride should be in jpg format; size shouldn’t exceed 2 MB;
+P1566|2. The uploaded joint photo of the bridegroom and the bride shall be manually verified by the SR/MO/FDA/SDA before proceeding with the payment and booking appointment and also physically during the day of appointment at SRO.
+P1568|Bridegroom Details
+P1569|The applicant has to fill in the following entry fields for Bridegroom Details:
+P1570|Status of Marriage (at the time of marriage) – Unmarried/ Divorcee/ Widow(er) (mandatory field)
+P1571|Note:
+P1572|1. If any one of the Divorcee/Widow is chosen, it should say ‘Please upload the supporting document in the upload page’ while uploading the other documents (then the corresponding document supporting the same should be uploaded at a later stage while uploading the forms and enclosures in the ‘Upload Document’ screen) i.e.,
+P1573|For Unmarried – no need to upload any document;
+P1574|For divorcees – certificate of divorce from the court;
+P1575|for Widow(erg) – widow(er)/death certificate of spouse
+P1576|Salutation (mandatory field)
+P1577|First Name, Middle Name, Last Name (only First Name is mandatory field)
+P1578|Date of Birth (DoB) (optional field)
+P1579|Age (in years) (should auto-fetch once DoB is entered; system should register only if age>=21 years for bridegroom) (mandatory field)
+P1580|Note:
+P1581|1. The age of the bridegroom must be greater than or equal to 21 years;
+P1582|2. The age must be rounded off to the lower whole number i.e.,
+P1583|if the age is 21.3 years, then the system should take 21 years only;
+P1584|if the age is 21.9 years, then the system should take 21 years only
+P1585|i.e., the system must always take the lower side value until it is a whole number;
+P1586|3. If DoB is fed, then the age should auto-fetch.
+P1587|Mobile Number (mandatory field)
+P1588|Email ID (optional field)
+P1589|Current Place of Residence (Current Address) – State, District, Taluka, Hobli/Ward, City/Village, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P1590|Permanent Place of Residence (Permanent Address) – State, District, Taluka, Hobli/Ward, City/Village, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P1591|Note:
+P1592|1. For NRIs, the UI includes two radio buttons, Yes or No, for the question "Are you a resident of India?"
+P1593|If Yes, proceed with the above-mentioned address information.
+P1594|If No, the applicant must enter below details:
+P1595|Country
+P1596|House No/Building Name
+P1597|Street address
+P1598|State/ Province
+P1599|Zip/ Postal code
+P1600|2. A ‘Checkbox’ saying ‘Permanent address is same as Current address’ has to be given after Current Place of Residence (and before Permanent Place of Residence); if checked, then the same details as entered in the Current Place of Residence should be auto-filled in place of Permanent Place of Residence; isn't checked, then the applicant has to manually enter the required details.
+P1601|Duration of Residence at Current Address (Length of Residence) (calendar) (in days/months/years) (mandatory field)
+P1602|Father Details – Salutation, First Name, Middle Name, Last Name (Salutation and First Name are mandatory fields)
+P1603|Mother Details – Salutation, First Name, Middle Name, Last Name (Salutation and First Name are mandatory fields)
+P1605|Bride Details
+P1606|The applicant has to fill in the following entry fields for Bride Details:
+P1607|Status of Marriage (at the time of marriage) – Unmarried/ Divorcee/ Widow(er) (mandatory field)
+P1608|Note:
+P1609|1. If any one of the Divorcee/Widow is chosen, it should say ‘Please upload the supporting document to the upload page’ while uploading the other documents (then the corresponding document supporting the same should be uploaded at a later stage while uploading the forms and enclosures in the ‘Upload Document’ screen) i.e.,
+P1610|For Unmarried – no need to upload any document;
+P1611|For divorcees – certificate of divorce from the court;
+P1612|Salutation (mandatory field)
+P1613|First Name, Middle Name, Last Name (only First Name is mandatory field)
+P1614|Date of Birth (DoB) (optional field)
+P1615|Age (in years) (should auto-fetch once DoB is entered; the system should register only if age>=21 years for bridegroom) (mandatory field)
+P1616|Note:
+P1617|1. The age of the bridegroom must be greater than or equal to 21 years;
+P1618|2. The age must be rounded off to the lower whole number i.e.,
+P1619|if the age is 21.3 years, then the system should take 21 years only;
+P1620|if the age is 21.9 years, then the system should take 21 years only i.e.,
+P1621|the system must always take the lower side value until it is a whole number;
+P1622|3. If DoB is fed, then the age should auto-fetch.
+P1623|Mobile Number (mandatory field)
+P1624|Email ID (optional field)
+P1625|Current Place of Residence (Current Address) – State, District, Taluka, Hobli/Ward, City/Village, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P1626|Permanent Place of Residence (Permanent Address) – State, District, Taluka, Hobli/Ward, City/Village, Street Address, House No./Building Name, Pin code (all are mandatory fields)
+P1627|Note:
+P1628|1. For NRIs, the UI includes two radio buttons, Yes or No, for the question "Are you a resident of India?"
+P1629|If Yes, proceed with the above-mentioned address information.
+P1630|If No, the applicant must enter below details:
+P1631|Country
+P1632|House No/Building Name
+P1633|Street address
+P1634|State/ Province
+P1635|Zip/ Postal code
+P1636|2. A ‘Checkbox’ saying ‘Permanent address is same as Current address’ has to be given after Current Place of Residence (and before Permanent Place of Residence); if checked, then the same details as entered in the Current Place of Residence should be auto-filled in place of Permanent Place of Residence; isn't checked, then the applicant has to manually enter the required details.
+P1637|Duration of Residence at Current Address (Length of Residence) (calendar) (in days/months/years) (mandatory field)
+P1638|Father Details – Salutation, First Name, Middle Name, Last Name (Salutation and First Name are mandatory fields)
+P1639|Mother Details – Salutation, First Name, Middle Name, Last Name (Salutation and First Name are mandatory fields)
+P1641|Witnesses Details
+P1642|The applicant has to fill in the following entry fields for Witnesses Details (Note: 3 witnesses are mandatory)
+P1643|Applicant has to click on the checkbox “All Witnesses were present during the time of marriage” and proceed.
+P1644|Salutation (mandatory field)
+P1645|First Name, Middle Name, Last Name (only First Name is mandatory field)
+P1646|Date of Birth (DoB) (optional field)
+P1647|Age (in years) (should auto-fetch once DoB is entered; the system should register only if age>=21) (mandatory field)
+P1648|Mobile Number (mandatory field)
+P1649|Email ID (optional field)
+P1650|Current Place of Residence (Current Address) (mandatory field)
+P1651|Permanent Place of Residence (Permanent Address) (mandatory field)
+P1652|Note:
+P1653|A ‘Checkbox’ saying ‘Permanent address is same as Current address’ has to be given after Current Place of Residence (and before Permanent Place of Residence); if checked, then the same details as entered in the Current Place of Residence should be auto-filled in place of Permanent Place of Residence; if not checked, then the applicant has to manually enter the required details.
+P1654|Whether related to bride or bridegroom; also specify the relation (as others) (Radio button & dropdown; also, must manually enter the relation if ‘Others’ is chosen) (mandatory field)
+P1655|Note:
+P1656|Although the applicant has to fill in the details of 3 witnesses at the beginning (i.e. while filling up the application form of notice), an option must be given for the SDA/FDA with an ‘Edit Option’ to change the witnesses’ details keeping in mind the objection period of 30 days (in case of difficulties (death, cancellation, busy schedule, etc.)) at a later date when the party along with witnesses are physically present at SRO during the appointment date and time
+P1658|SRO Selection
+P1659|The applicant shall select the SRO as mentioned in Step 14
+P1660|The applicant selects the jurisdictional SRO (Marriage Office) by selecting the required SRO from the dropdown menu.
+P1661|Select SRO: the applicant shall select the SRO from the dropdown list
+P1662|The Options in the dropdown menu are:
+P1663|SRO falling within Address (Place) of Marriage
+P1664|SRO falling within the Permanent Address of the Bridegroom
+P1665|SRO falling within the Permanent Address of Bride
+P1666|SRO falling within the Current Address of Applicant (i.e., may be bridegroom or bride which is asked in the Marriage Details screen)
+P1667|Note:
+P1668|If the Applicant chooses SRO falling within the Current Address, then the condition that the applicant must have stayed for at least 30 days before the submission of the application applies and the Applicant must produce (upload) the corresponding document supporting the same at a later stage while uploading the forms and enclosures in the ‘Upload Documents’ screen.
+P1669|Generation of Application Summary and Notice of Intended Marriage Form
+P1670|The applicant after filling up the application form, the Application Summary is shown by the system.
+P1671|The applicant either accepts the ‘Declaration’ and clicks on ‘View Application Form of Notice’; or the ‘Edit’ option to make any changes to the application.
+P1672|If the Applicant chooses to Edit the application, the system shall take the Applicant back to the marriage details screen (Keep all previously filled data)
+P1673|When clicked on ‘View Application Form of Notice’, the Application Form of Notice (Form III i.e., Application Form of Notice for Special Marriage of Other Forms) shall be auto-fetched in the below-said format (which should be auto-fetched from the data entry captured earlier) to the applicant by the system.
+P1674|The generated notice will be submitted to SRO for further processing.
+P1676|Upload of Annexures/Enclosures by the Applicant
+P1677|The applicant shall Upload the below-mentioned documents:
+P1678|For Bridegroom
+P1679|Identity proof (dropdown menu) (mandatory filed)
+P1680|Age proof (dropdown menu) (mandatory filed)
+P1681|Address proof (dropdown menu) (mandatory filed)
+P1682|Proof of Divorcee/Widow (mandatory, if mentioned earlier while filling the Bridegroom details)
+P1683|For Bride
+P1684|Identity proof (dropdown menu) (mandatory filed)
+P1685|Age proof (dropdown menu) (mandatory filed)
+P1686|Address proof (dropdown menu) (mandatory filed)
+P1687|Proof of Divorcee/Widow (mandatory, if mentioned earlier while filling the Bride details)
+P1688|List of permitted documents for Age proof:
+P1689|Birth Certificate
+P1690|School Leaving Certificate (SSLC)
+P1691|School Cumulative Record
+P1692|Doctor Certificate with Affidavit
+P1693|Others
+P1694|List of permitted documents for ID proof:
+P1695|Employee ID
+P1696|Ration Card
+P1697|Driving License
+P1698|Passport
+P1699|PAN
+P1700|Bank Passbook
+P1701|Voter ID (EPIC Card)
+P1702|Aadhar Card
+P1703|List of permitted documents for Address proof:
+P1704|Employee ID
+P1705|Ration Card
+P1706|Driving License
+P1707|Passport
+P1708|Bank Passbook
+P1709|Voter ID (EPIC Card)
+P1710|Aadhar Card
+P1711|Note:
+P1712|1. All the uploaded documents should be in PDF format and their size shouldn’t exceed 5 MB for each document (except for the Divorce Certificate which can run for pages as it is a court order);
+P1713|2. Scanning Fee is calculated for All the documents uploaded (including Enclosures);
+P1714|3. System should Auto-calculate the number of pages for All the documents uploaded
+P1715|Display of Fee Structure of 1st Payment
+P1716|The system displays the breakup of the Total Payable Fee:
+P1717|Application Form of Notice Fee (or just Notice Fee) = ₹3
+P1718|Marriage Registration Fee = ₹25(fixed)
+P1719|Total Payable Amount = ₹28
+P1720|Note:
+P1721|At this stage, the system has to just show the calculation (breakup of the fee and the applicant doesn’t make any payment; at a later stage, after verification and approval of data entered by the applicant by FDA/SDA/SR/MO only, the applicant has to make the payment; the fee calculation is being shown to ensure that the applicant has to be kept informed about the fee he/she is supposed to pay (transparency).
+P1723|Submission of Application Form of Notice
+P1724|The applicant clicks on the ‘Submit’ button to apply online.
+P1725|On submission of the application form of notice, a dialogue box/ flash message should appear stating ‘Your application has been successfully submitted’.
+P1726|The applicant will get an Application Number generated as an Acknowledgement.
+P1727|Note:
+P1728|1. The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant (and department) login/dashboard on Kaveri2.0; the application gets logged in in order in the SR login.
+P1729|2. Once the applicant submits the application and after the application is verified & approved by FDA/SDA/SR/MO, the ‘URL and Barcode’ should be generated on the Application Form of Notice so that later, it would be helpful for the Objector to file an Objection on payment of Objection Fee.
+P1731|Steps taken by SR/MO at SR Office to Register Marriage and to secure Marriage Certificate to the Applicant(s)
+P1732|FDA/SDA Login and Verification
+P1733|The system auto-allocates the application to the FDA/SDA.
+P1734|FDA/SDA shall login to the Kaveri 2.0 system
+P1735|From the menu on his dashboard, the FDA/SDA/ shall click on ‘Start Verification’ button
+P1736|The FDA/SDA Application Verification screen is split into 2 sides:
+P1737|LHS (Left-hand side of the page) – the Summary sheet containing all the details which the applicant has entered (marriage details, bridegroom details, bride details, witness details, fee details), a section to add his Remarks and a button to send it back to the SR/MO
+P1738|RHS (Right-hand side of the page) – contains the Uploads by the applicant, which are the Application Form and the Enclosures/Annexures
+P1739|The FDA/SDA shall crosscheck the applications and the enclosures thoroughly; the FDA/SDA fills a checklist mentioning Remarks for each category – marriage details, bridegroom details, bride details, witnesses’ details, uploaded documents; sends it back to the SR/MO with Remarks by clicking on ‘Send to SR/MO’ button.
+P1741|Verification & Approval by the SR/MO
+P1742|After the application is received from FDA/SDA, the SR/MO shall log in and shall view the remarks made by FDA/SDA by clicking on ‘View’ (to view the remarks) and shall add their remarks and shall send it back to the applicant for either to attend to the remarks made and resend the application (in the applicant login, ‘Your application cannot be registered as it is, Kindly Refer to the Sub Registrar Remarks to know more’ message shall be displayed) or to proceed to ‘Make Payment’.
+P1743|The SR/MO has an additional checkbox which if ticked, takes the applicant to make the ‘Can Proceed to Make Payment option; if not ticked, it will request the applicant to make changes (as per remarks made by SR/MO) in the application and re-submit the application
+P1744|Note:
+P1745|1. When the changes (attend to SR/MO remarks) are requested by the SR/MO to the applicant, the system takes the applicant to the ‘Marriage Details’ screen with the pre-filled data being retained as earlier over which he can over-write to make changes and then shall send back to the SR/MO by pressing the ‘Submit’ button;
+P1746|2. If the applicant wants to change the type of marriage, then they have to re-apply.
+P1748|On the Remarks section, there is a checklist - If the checkbox in the checklist is ticked, the remarks are voluntary; isn’t ticked, then the remarks are mandatory
+P1749|Note:
+P1750|1. In either case, the applicant receives an email/SMS; the applicant receives a notification on the Kaveri2.0 dashboard; also, the status of the application gets updated in the applicant (and department) login/dashboard on Kaveri2.0;
+P1752|Until the ‘Can proceed to make Payment is checked, the applicant can’t proceed.
+P1753|Note:
+P1754|1. If the applicant is willing to attend to the remarks made by SR/MO, then resend the application after corrections are made. If not willing to attend to the remarks made by SR/MO, then the system shall generate the Endorsement with a Reason for Rejection;
+P1755|2. Based on the remarks made by the FDA/SDA, the SR/MO has the option to change (modify) the number of pages to be scanned.
+P1757|Scheduling 1st Appointment with the SR/MO by the Applicant
+P1758|In the applicant login, in case the applicant has these remarks: ‘Your application cannot be registered as it is, Kindly Refer to the Sub Registrar Remarks to know more’, then the applicant has to check the remarks received from SR/MO. The applicant must resubmit the application.
+P1759|In the applicant login, If the applicant does not have any remarks from the SR/MO, the applicant can make payment. Once payment is made, the applicant has the provision to book an appointment.
+P1760|The applicant can print the receipt from the dashboard.
+P1761|Once the application form of notice is approved by the SR/MO, the applicant shall Schedule an Appointment (date & time) with the SR/MO by clicking on the ‘Book Appointment’ button
+P1762|The applicant shall select the Date and Time
+P1763|Once the schedule is booked, a dialogue box/ flash message should appear stating ‘Your appointment for 15th November 2021 is successfully scheduled. Please reach the SR office 15 minutes early for a smooth registration experience and physically hand over the application form of notice to the SR/MO.’
+P1764|The screen displays the applicant’s date, time, and venue and two buttons:
+P1765|Cancel Appointment and
+P1766|Re-schedule Appointment
+P1767|Note:
+P1768|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login) on Kaveri2.0.
+P1769|On the appointment day, the Applicant (bridegroom and bride) shall appear before SR/MO. After the application is verified by SR/MO, the FDA/SDA shall log in and click on ‘Generate Notice’; SR shall verify applicant details and generate notice and the third schedule.
+P1770|Notice and the third schedule should be previewed. SR will click on check and register. Notice will be printed by DEO, the Applicant (bridegroom and bride), SR/MO shall physically present and sign on the notice, which must be displayed.
+P1771|The signed notice and the third schedule will be scanned and uploaded to the application and sent for the digital signature of SR/MO.
+P1772|The Signed Notice is displayed on the notice board (by DEO) in the marriage office and a copy of the notice is also sent to the Concerned Jurisdictional SR/MOs (the notice shall be displayed on these concerned jurisdictional SR/MOs’ notice boards too), in case the domicile of the applicant(s) is other than the approached SR/MO.
+P1773|Note:
+P1774|1. In either case, the applicant receives an email/SMS; the applicant receives a notification on the Kaveri2.0 dashboard; also, the status of the application gets updated in the applicant (and department) login/dashboard on Kaveri2.0.
+P1775|The Signed Notice will be displayed on the notice board for 30 days on the concerned jurisdictional SR/MOs notice board.
+P1777|SR Receives & Reviews the Objection
+P1778|Objections, if any shall be filed within 30 days, from the date of filing the notice.
+P1779|In case someone wants to object to the marriage, then the objector (said person) shall visit the SRO and complain to the concerned SR/MO.
+P1780|The objection has to be resolved by the SR/MO within 30 days of date of receiving the objection.
+P1781|SRO shall login and add the objections from the objector as below.
+P1782|A form shall be displayed with the following:
+P1783|Applicants’ Name and Application Number
+P1784|Form: the objector shall fill in the following details:
+P1785|Salutation, First Name, Middle Name, Last Name, Alias (only Salutation and First Name are mandatory fields)
+P1786|Date of Birth and Age (in years) (only Age is mandatory field) (Note: Age should auto-fetch once DoB is entered)
+P1787|Mobile Number and Email ID (mandatory fields)
+P1788|A textbox for Objection (mandatory field)
+P1789|A section to Upload supporting documents (this may be a photo, document, video) (mandatory field)
+P1790|Select Date for Enquiry
+P1791|The SR/MO checks if the objection is valid,
+P1792|If objection is valid, then SR/MO shall start an Enquiry
+P1793|Both the applicants & the objector(s) receive an Email/SMS (notification) from the system that objection has been raised by the objector (mentioning objector details) citing the reasons for objection.
+P1794|The SR/MO shall Schedule a Date and Time and shall Generate Form I Notice
+P1795|Note:
+P1796|The Form I Notice generated has to be sent to the Applicants and Objector(s) through Post & Email/SMS calling for all the concerned parties (the Applicants, Objector(s) and their Witness(es)) to be present for the Enquiry.
+P1797|If objection is not valid, (Note: The applicants & objector(s) receive an email/SMS as notification; also, the status gets updated in the applicant login)
+P1798|Note:
+P1799|After the end of the 30 days (objection notice period), and in case (i) if no objection is filed or (ii) objection is over-ruled, then the SR/MO shall approve the application and the applicant receives an email/SMS as notification and can proceed to make payment option.
+P1802|SR Issues Notice/Summons and Conducts Enquiry
+P1803|If the objection is valid, then SR/MO shall Schedule a Date and Time for an Enquiry and shall Generate Form I Notice
+P1804|Note:
+P1805|1. The Form I Notice generated has to be sent to the Applicants and Objector(s) through Post & Email/SMS calling for all the concerned parties (the Applicants, Objector(s) and their Witness(es)) to be present for the Enquiry.
+P1806|On the scheduled date and time summoned by the SR/MO, in the presence of both Applicants & Objector(s), the SR/MO Conducts an Enquiry
+P1807|Both the Applicants & the Objector(s) are given an opportunity to put forth their defense
+P1808|‘Appointment for Enquiry’ is on the marriage appointment screen
+P1809|He clicks on the ‘Start Enquiry’ button
+P1810|The screen displays the following:
+P1811|Objection Number
+P1812|Objector Name
+P1813|Applicant Number
+P1814|Applicant Name
+P1815|Two Textboxes – one for each of the Depositions (Objector(s) & Applicants)
+P1816|One Textbox for SR Order
+P1817|Two buttons – Over-rule Objection, Sustain Objection
+P1818|An option to Print (and download) an Enquiry Order
+P1819|If the witnesses won’t turn up on the scheduled date and time summoned by the SR/MO or if the party/objector(s) request for an official summons to be issued by the SR/MO for the witness(es) to be present for the enquiry, then the SR/MO issues summons to the required/requested witness(es) (see Form II – Summons to Witness(es)
+P1820|On request, the SR/MO can issue summons to witness(es) from either/both party and objector side; 3. The party/objector should first make a payment i.e., Fee for issuing Summons to the Witnesses to be paid by Objector = ₹0.50 (for each witness) through K2 and should inform the SR/MO, then only the SR/MO will Issue Summons to the witness(es) and schedules for another date and time calling them for an Enquiry; for this enquiry (2nd sitting), no official form I notice will be sent again to the applicants and the objector(s)
+P1821|After the enquiry, the SR/MO writes the Inquiry Results (Inquiry Order/ Speaking Order) based on the merits and Records Inquiry Results & Scans the Order. The SR/MO can either Over-rule or Sustain the objection
+P1822|If the objection is sustained, then the marriage application can’t be registered; the marriage shall not be solemnized, and the Refusal Order (Inquiry Results) shall be printed by FDA/SDA and given to the parties.
+P1823|Note:
+P1824|1. The marriage application status in the system is to be changed to ‘Objection Raised and Sustained’ with an option to view the ‘Inquiry Order’ If the objection is overruled, the marriage application is unaffected; then, step 83 shall be followed.
+P1825|2. The applicant & objector receive an email/SMS as a notification; also, the status gets updated in the applicant login; 2. Both the applicants and the objector(s) receive a scanned copy of the Inquiry Order via email (downloadable form) and post and physically handed over just after the inquiry)
+P1826|3. After the end of the 30 days (objection notice period), and in case no objections are filed, the applicants, along with three witnesses, shall appear before the SR/MO for solemnization of their marriage (NO restrictions on marriage solemnization period of 90 days for registration of marriage as in case of extraordinary marriage (intended marriage notice), i.e., Total period can exceed three calendar months from the date of filing of the notice.
+P1828|After the end of the 30 days (objection notice period), and in case no objections are filed, or in case the objection is over-ruled (i.e., not sustained), then the SR/MO shall approve the application, and the applicant receives an email/SMS as notification and can proceed to make payment option
+P1829|Note:
+P1830|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login) on Kaveri2.0.
+P1832|2nd Payment of Fee by the Applicant
+P1833|If required, the applicant shall enter the Number of Additional Copies (of the Final Marriage Registration Certificate). Hence, an option must be provided for the same
+P1834|Note:
+P1835|For each additional copy of the marriage registration certificate, ₹10 per copy will be charged, which is reflected in the Display of Fee Structure page.
+P1836|After SR/MO accepts and approves the application, the applicant logins into the Kaveri 2.0 portal and makes the 2nd Payment of the Fee (Total Payable Amount) online through the K2 portal by clicking on the ‘Make Payment’ button
+P1837|Note:
+P1838|The system should show the calculated fee (freeze it, and the applicant can make no changes at this stage) before the applicant makes the payment and then give the ‘Make Payment’ option.
+P1839|Scanning Fee = ₹35 (per page of scanning)
+P1841|Note:
+P1842|1. Shall show the Names of the Forms and Annexures that need to be scanned.
+P1843|Special marriage additional certificate copy = ₹10 (per copy) (optional)
+P1844|Total Payable Amount = ₹45
+P1845|The applicant shall receive an Acknowledgement from the K2 for making the online payment.
+P1846|When making the p, payment, a dialogue box/ flash message should appear stating, ‘Your payment has been successfully made’.
+P1847|Note:
+P1848|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login on Kaveri2.0.
+P1849|The applicant can choose ‘Print Challan’ or ‘Book Appointment.
+P1850|The applicant can print the receipt from the dashboard.
+P1852|Scheduling 2nd Appointment with the SR/MO by the Applicant
+P1853|Once payment is made, the applicant shall Schedule an Appointment (for Oath & Solemnization) with the SR/MO by clicking on the ‘Schedule Appointment’ button
+P1854|The applicant shall select the Date and Time
+P1855|Once the schedule is booked, a dialogue box/ flash message should appear stating, ‘Your appointment for 15th November 2021 is successfully scheduled. Please reach the office 15 minutes early for a smooth registration experience.’
+P1856|The screen displays the applicant’s date, time and venue and two buttons:
+P1857|Cancel Appointment, and
+P1858|Re-schedule Appointment
+P1859|Note:
+P1860|The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant (department) login on Kaveri2.0.
+P1862|Steps taken by SRO (SR/MO) to Register Marriage and to secure Marriage Certificate to the Applicant(s)
+P1863|On the day of the appointment, the Applicants (bridegroom and bride), along with witnesses, shall appear before SR/MO and present the physical application forms and memorandum of declaration.
+P1865|Steps taken by the FDA/SDA to Process the Marriage Registration Certificate
+P1866|The SR/MO shall view the forms and approve the application in the system by clicking on the ‘Check & Register’ button
+P1867|The system generates a Marriage Registration Certificate with a Registration Number
+P1869|Note:
+P1870|1. A pop-up message should appear once he clicks on ‘Check and Register,’ saying, ‘Are you sure to Register? You cannot change later for which the SR/MO confirm
+P1871|2. The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login)
+P1872|In the back end, the Index of Marriage are stored in the Index Register (Forms V & VI for wife and husband separately)
+P1873|After Approval by SR/MO, the firm registration certificate is pushed back to the DEO dashboard
+P1874|The DEO shall get the cross-signatures of the bridegroom, the bride and three witnesses on the Certificate.
+P1875|The DEO shall click on the ‘Upload’ button
+P1876|The DEO upload screen shall display the following:
+P1877|Details: Application Number, Application Type, Date of Marriage
+P1878|Scan and Preview buttons: to scan and preview Certificates & Forms,
+P1879|Annexures/Enclosures
+P1880|‘Save and Send back to SR/MO’ button
+P1881|The DEO shall Scan and Preview (by clicking the ‘Scan’ and ‘Preview’ buttons respectively) the following documents:
+P1882|Application Form of Notice
+P1883|Signed Marriage Certificate
+P1884|Enclosures/Annexures
+P1885|The DEO shall click the ‘Save and Send to SR/MO’ button and forward it to the SR for the digital sign.
+P1886|The SR shall view the documents uploaded by DEO, then shall click on the ‘Digital Sign & Complete’ button to put his digital signature, encrypt and upload all the saved documents
+P1887|Note:
+P1888|1. A Pop-up message should appear once he clicks on the ‘Digital Sign & Complete’ button, saying, ‘Are you sure to sign and upload digitally? Once uploaded, the details cannot be changed which the SR/MO has to confirm.
+P1889|2. The applicant receives an email/SMS; the applicant receives a notification on Kaveri2.0; also, the status gets updated in the applicant login (and department login).
+P1891|Any Additional Payment by the applicant(s)/objector(s) is made through Cash; the applicant(s)/objector(s) receives an Acknowledgement (a copy of the Fee Receipt has to be generated by the DEO on receipt of cash)
+P1892|The scanned documents are sent to RGoM (Registrar General of Marriage)
+P1893|The Marriage Registration Certificate is handed over physically by DEO to the applicant after receiving the acknowledgement, and the applicant shall collect the Marriage Certificate
+P1896|The Sakala is updated
+P1898|Note:
+P1899|1. If applied for CC (Certified Copy) for the Marriage Certificate, then a Digitally Signed Copy from SR/MO may be issued by filling out the appropriate form;
+P1900|2. In case any changes to be made to the Registration of Marriage due to erroneous data entry, the same shall be done in the system with approval from SR.
+P1902|Validations and Controls
+P1903|The system should record application details online through the web.
+P1904|The system should accept payment and capture payment details.
+P1905|The system should allow modification/deletion of entered data before registration.
+P1906|The system should allow Approval/Rejection of applications with a mechanism for entering the mandatory remarks in the system and generation of endorsement against the same.
+P1907|The system should notify Applicants if the application is rejected through e-mail or SMS notification.
+P1908|The system should record a notice of intended marriage in the system online.
+P1909|The system should generate a marriage certificate.
+P1910|The system should capture delivery details once the certificate is issued.
+P1911|The system should show the status of the application.
+P1912|The system should display the application filed for editing by the applicant before registration.
+P1913|The system should display marriage records on the query.
+P1914|The system should display the available date and time for solemnization in case of an extraordinary marriage.
+P1915|The system should book a slot for solemnization on request.
+P1916|The system should capture photographs of the couple.
+P1917|The system should generate MIS reports based on the data captured. There should be an authorization mechanism for role-based access to reports for generation and view.
+P1918|The system should generate a Summary Report to verify data entered and make provision for correction if any changes are found.
+P1920|Annexures
+P1921|Annexure for Hindu Marriage Online and Offline
+P1922|Form I
+P1923|(See Rule: 4)
+P1924|MEMORANDUM OF MARRIAGE
+P1927|Joint photo of the bride and bridegroom (To be attested by bride and bridegroom)
+P1930|(Note: Marriage Application Form (i.e., Memorandum of Marriage) (Form I))
+P1931|(Note: Usual place of residence = Current Address; Address = Permanent Address)
+P1933|FORM I-A
+P1934|(See rule 4(2))
+P1935|Application for filling of Marriage Memorandum
+P1937|To:
+P1938|The Registrar of Marriage,
+P1939|Under the Hindu Marriage Act,
+P1940|…	(say, SRO Rajajinagar)
+P1942|Sir,
+P1943|Marriage by the provisions of the Hindu Marriage Act, 1955 (Act
+P1944|No.25 of 1955) has been solemnized between us, the undersigned parties on 12- 7-2000 and we request that the following particulars of our marriage be entered in the Hindu Marriages Register.
+P1946|We hereby declare,
+P1947|That a valid marriage was solemnized between us and that the marriage is, capable of being registered under section 8 of the marriage is, capable of being registered under section 8 of the Hindu Marriage Act, 1955 (Central Act 25 of 1955)
+P1948|That the conditions laid down in section 5 of the said Act have been satisfied and
+P1949|That the particulars given in application are true to the best of our knowledge and belief.
+P1950|Signature
+P1952|Husband (Name)
+P1953|Wife (Name)
+P1956|(Note: Declaration of Memorandum (i.e., Application for filing of Marriage Memorandum)
+P1959|FORM II
+P1960|[Karnataka Rule 4 (4) under Hindu Marriage Act, 1955] Endorsement to be made on the reverse of the memorandum and duplicate
+P1962|The memorandum was received by me on	19, and this memorandum is
+P1963|filed at Serial No....................... on page................. of volume .....................of the Register of Marriage maintained under the Hindu Marriage Act, 1955 (25 of 1955).
+P1964|Date.............
+P1965|(Signature) Registrar of Marriage
+P1969|-
+P1970|1. Inserted by Registration of Hindu Marriages (Karnataka) (Amendment) Rules, 1999 w.e.f. 8-6-2000
+P1972|(Note:
+P1973|1 Form II (Endorsement – having received a memorandum of marriage by SRO, stored in SRO and having registered in the system))
+P1977|GOVERNMENT OF KARNATAKA
+P1978|FORM II-A
+P1979|(See rule 4(5))
+P1980|CERTIFICATE OF REGISTRATION OF MARRIAGE
+P1981|(Under the Hindu Marriage Act, 1955) (Central Act, XXV of 1955)
+P1984|This is to certify that Smt...................................................…………………………………………….
+P1985|D/o................................................. and Sri ............................................……………………….
+P1986|S/o. ................................................. have furnished the particulars in a memorandum declaring that their marriage has been solemnized on .................. and that the same has been registered this day ..........of …..........200.......
+P1988|Registrar of Marriage,
+P1989|Station:	Seal
+P1990|Marriage Number:
+P1991|Date:
+P1993|(Note: Form II-A Signed Marriage Certificate (i.e., Certificate of Registration of Hindu Marriage))
+P1995|FORM III
+P1996|[Karnataka Rule 5(1) under Hindu Marriage Act, 1955]
+P1997|Certificate affixed to the memorandum
+P1999|Certified that the above, which contains Sl. No........ to Sl No	are duplicate copies
+P2000|of all the Memoranda filed in the Register maintained by me under the Hindu Marriage Act, 1955 (25 of 1955) during the month of	19
+P2001|Dated the ..................................day of	19
+P2002|Registrar of Marriage.
+P2006|1. Inserted by Registration of Hindu Marriages (Karnataka) (Amendment) Rules, 1999 w.e.f. 8-6-2000
+P2007|Note:
+P2008|1. Form III (Certificate Affixed to Memorandum – to be sent to RGoM)
+P2009|2. Form III – is to be sent to RGoM on the 5th of every month)
+P2011|Form IV Index of Register
+P2012|(See Rule 5(2) and Rule 6)
+P2013|Index No. I HUSBAND
+P2016|Form V Index of Register
+P2017|(See Rule 5(2) and Rule 6)
+P2018|Index No. II WIFE
+P2020|(Note: Form V & VI - Index of Register Forms – wife & husband wise separately)
+P2022|Special Intended Marriage Offline
+P2024|Application form of Notice for Special Marriage (Intended
+P2025|Marriage)
+P2026|Form I
+P2027|See. Rule 6 (4)
+P2028|Notice
+P2029|(Place)
+P2030|Before the Marriage Officer in the matter of the Special Marriage Act 1954.
+P2031|In the matter of the intended Marriage between.
+P2032|between: Application to register the Marriage AB
+P2033|and
+P2034|CD (Give names and Addresses) and  OBJECTOR
+P2035|To.............................
+P2036|Whereas notice of an Intended marriage an application for the registration of the marriage between AB and CD was received by the Marriage Officer on.....................
+P2037|EF has preferred certain objections (Set out overleaf) to the Solemnization of the marriage, whereas the Marriage Officer ................. registration.
+P2039|Will hold an enquiry into the matter of the said objections on	the day of
+P2040|......................19...................... A.M./P.M on the said day together with all documents on which you relay and any witness or witnesses whom you may desire to be examined on your behalf.
+P2041|Notice that in default of your appearance on the day above, the inquiry will be made and decided in your absence.
+P2043|(Set Out the objections on the reverse of this notice) should you apprehend that your witness will not attend unless summoned by the Marriage Officer, you should apply to the Marriage Officer for the issue of such summons sufficiently early, together with the prescribed process fee and the reasonable expense of travelling and subsistence allowance of the witness.
+P2045|Given under my hand and seal
+P2046|Station:	Signature
+P2047|Date:	Marriage Officer (Seal)
+P2049|(Note: SR sends this form to the bridegroom & bride)
+P2054|THE SECOND SCHEDULE
+P2055|(See Section 5)
+P2056|NOTICE OF INTENDED MARRIAGE
+P2057|To,
+P2059|The Marriage Officer …………………………………….. , District …………..……
+P2060|At this moment, we notify your kind self that under the provision of the Special Marriage Act, 1954, we both desire to solemnise our marriage within three months of this notification submitted.
+P2065|Witnessed this day of …….. date …….. month	year
+P2069|Signature of bridegroom
+P2072|Signature of bride
+P2074|Form II
+P2075|(see. Rule 6(4))
+P2076|Summons to Witness
+P2078|Before the Marriage Officer (place) in the matter of the Special Marriage Act 1954, and in the matter of the intended Marriage between/application to register the Marriage between:
+P2079|AB
+P2080|CD (Give names and addresses) and
+P2081|EF objector
+P2083|To ...............................................
+P2084|whereas your attendance is required to give evidence on behalf of ................................. in the above matter, you are hereby required to appear personally before me or to cause to be produced before me the document specified hereunder on the ........................... day of 19 A.M/P.M. A sum of Rs…………….. being your travelling and other expenses for one day is herewith sent.
+P2085|If you fail to comply with this summons without lawful.
+P2086|Notice that in default of your appearance on the day above, the inquiry will be made and decided in your absence.
+P2088|Given under my hand and seal.
+P2090|Station :	(Seal) Marriage Officer.
+P2091|Date :
+P2093|THE THIRD SCHEDULE
+P2094|(See Section 11)
+P2095|DECLARATION TO BE MADE BY THE BRIDEGROOM
+P2096|I, A.B., at this moment, declare as follows:-
+P2097|I am at present unmarried (or a widower or a divorcee, as the case may be).
+P2099|I have completed	years of age.
+P2101|I am not related to C.D. (the bride) within the degrees of prohibited relationship.
+P2103|I am aware that if any statement in this declaration is false, and if in making such statement I either know or believe it to be false or do not believe it to be accurate, I am liable to imprisonment and also to fine.
+P2104|(Signature)
+P2105|A.B.
+P2106|(the Bridegroom)
+P2107|DECLARATION TO BE MADE BY THE BRIDE
+P2108|I, C.D., at this moment, declare as follows: -
+P2109|I am at present unmarried (or a widow or a divorcee, as the case may be)
+P2111|I have completed years of age.
+P2113|I am not related to A.B. (the bridegroom) within the degrees of prohibited relationship
+P2115|I am aware that if any statement in this declaration is false, and if in making such statement I either know or believe it to be false or do not believe it to be accurate, I am liable to imprisonment and also to fine.
+P2116|(Signature)
+P2117|C.D. (the Bride).
+P2118|Signed in our presence by the A.B. mentioned earlier and C.D. so far as we are aware there is no lawful>
+P2119|Three witnesses
+P2120|(Signature) G.H.                                                     			  Marriage Officer.
+P2121|(Signature) I.J.							Countersigned E.F.,
+P2122|(Signature) K.L..
+P2124|Dated the ............................................... day of ................................... 20.........
+P2128|THE FOURTH SCHEDULE
+P2129|(See section 13)
+P2130|CERTIFICATE OF MARRIAGE
+P2132|I, E.F., hereby certify that on the ........................... day of .................... 20,
+P2133|the presence of three witnesses who have signed hereunder made the declarations required by section 11 and that a marriage under this Act was solemnized between them in my presence.
+P2135|(Signature) E.F., Marriage Officer for ………….
+P2137|(Signature) A.B., Bridegroom
+P2138|(Signature) C.D., Bride
+P2139|(Signature) (Signature) I.J.
+P2140|(Signature) K.L.
+P2141|Three witnesses
+P2142|Dated the .............................................day of ............................... 20.......................
+P2143|* Herein give particulars of the parties
+P2145|Form IV
+P2146|Index of Register
+P2147|(See Rule 5(2) and Rule 6) Index No. I HUSBAND
+P2149|Form V
+P2150|Index of Register
+P2151|(See Rule 5(2) and Rule 6)
+P2152|Index No. II WIFE
+P2154|(Note: Form V & VI - Index of Register Forms – wife & husband wise separately)
+P2157|Special Marriage Other Forms Online and Offline.
+P2159|Application form of Notice for Special Marriage of Other Forms
+P2160|Form III
+P2161|(See. Rule 7 (1))
+P2162|Application for Registration of a Marriage Under Sec. 15 of The Special Marriage Act, 1954 (Central Act 43 of 1954)
+P2164|Name of the parties:
+P2165|A.B (husband)
+P2166|C.D (wife)
+P2167|Age or date of Birth:
+P2168|A.B (husband)
+P2169|C.D (wife)
+P2170|Permanent dwelling place, if any,
+P2171|Present dwelling place
+P2172|Relationship,	if	any,	of	parties	before	marriage (Unmarried/Divorced/Widow(er))
+P2173|A ceremony of marriage was performed between AB and CD………………at
+P2174|.	and AB declare that we have been living together as husband and wife
+P2175|ever since the date noted above
+P2176|We hereby declare that:-
+P2177|Neither of us has more than one spouse living on the date mentioned in this application.
+P2178|Neither of us is an idiot or lunatic.
+P2179|Both of us have completed the age of 21 on the date of this application.
+P2180|We are not within the degree of prohibited relationship; our marriage was celebrated before the commencement of the Special Marriage Act, 1954 (Central Act 43 of 1954) and according to law, custom or usage having the force of law, governing each of us, a marriage between us is permitted. However, according to the aforesaid act, we are within the degrees of prohibited relationship.
+P2181|NOTE: Score out whichever is not applicable.
+P2182|We have been residing within the jurisdiction of	Marriage
+P2183|Officer at .................... for not less than thirty days immediately preceding the date of this application.
+P2184|We also declare that all the above particulars are accurate to the best of our knowledge and belief.
+P2185|Station:
+P2186|Date:	Signature: (A.B) Husband
+P2187|(C.D) Wife
+P2188|Form I
+P2189|See. Rule 6 (4)
+P2190|Notice
+P2191|(Place)
+P2192|Before the Marriage Officer in the matter of the Special Marriage Act 1954. In the matter of the intended Marriage between.
+P2193|between: Application to register the Marriage AB
+P2194|and
+P2195|CD (Give names and Addresses) and
+P2196|E F OBJECTOR
+P2197|To.............................
+P2198|Whereas notice of an intended marriage and an application for the registration of the marriage between AB and CD was received by the Marriage Officer on.....................
+P2200|EF has preferred certain objections (Set out overleaf) to the Solemnization of the marriage, whereas the Marriage Officer ................. registration.
+P2202|Will hold an enquiry into the matter of the said objections on	the day of
+P2203|......................19...................... A.M./P.M on the said day together with all documents on which you relay and any witness or witnesses whom you may desire to be examined on your behalf.
+P2204|Notice that in default of your appearance on the day above, the inquiry will be made and decided in your absence.
+P2206|(Set Out the objections on the reverse of this notice) should you apprehend that your witness will not attend unless summoned by the Marriage Officer, you should apply to the Marriage Officer for the issue of such summons sufficiently early, together with the prescribed process fee and the reasonable expense of travelling and subsistence allowance of the witness.
+P2208|Given under my hand and seal
+P2209|Station:	Signature
+P2210|Date:	Marriage Officer (Seal)
+P2212|(Note: SR sends this form to the bridegroom & bride)
+P2214|Form II
+P2215|(see. Rule 6(4))
+P2216|Summons to Witness
+P2218|Before the Marriage Officer (place) in the matter of the Special Marriage Act 1954, and	in the matter of the intended Marriage between/application to register the Marriage between :
+P2219|AB
+P2220|CD
+P2221|(Give names and addresses) and
+P2222|EF objector
+P2224|To ...............................................
+P2225|whereas your attendance is required to give evidence on behalf of ................................. in the above matter, you are hereby required to appear personally before me or to cause to be produced before me the document specified hereunder on the ........................... day of	19 A.M/P.M. a sum of Rs…………………	being your travelling and other expenses for one day is herewith sent.
+P2227|If you fail to comply with this summons without lawful.
+P2228|Take notice that in default of your appearance on the aforesaid day, the inquiry will be made and decided in your absence.
+P2230|Given under my hand and seal.
+P2232|Station :	(Seal) Marriage Officer.
+P2233|Date :
+P2241|THE FIFTH SCHEDULE
+P2242|(See Section16)
+P2243|CERTIFICATE OF MARRIAGE CELEBRATED IN OTHER FORMS
+P2245|I, E.F., at this moment, certify that A.B. and C.D.* appeared before me this...............................day of ......................... 20	and each of them, in
+P2246|my presence of three witnesses who have signed hereunder have declared that a ceremony of marriage has been performed between them that they have been living together as husband and wife since the time of their marriage, and that in accordance with their desire to have their marriage registered under this Act, the said marriage has,  this.............  day of  .......................................... 20	been registered under this Act, having effect as from.
+P2248|(Signature) E.F.,
+P2249|Marriage Officer for…...
+P2251|(Sd.)
+P2252|A.B., Husband
+P2254|(Sd.)
+P2255|C.D. Wife
+P2256|(Sd.) G.H.
+P2258|(Sd.) I.J.
+P2260|(Sd.) K.L.
+P2261|Three witnesses
+P2263|Dated the.................................................. day of ..................... 20................
+P2264|* Herein give particulars of the parties
+P2266|Form IV
+P2267|Index of Register
+P2268|(See Rule 5(2) and Rule 6) Index No. I HUSBAND
+P2271|Form V
+P2272|Index of Register
+P2273|(See Rule 5(2) and Rule 6)
+P2274|Index No. II WIFE
+P2276|(Note: Form V & VI - Index of Register Forms – wife & husband wise separately)
+P2278|Payment Receipts
+P2279|For Special Marriage Intended and Special Marriages Other Forms (Online and Offline) Notice generation
+P2283|For Registration of For Special Marriage Intended and Special Marriages Other Forms (Online and Offline)
+P2286|For Registration of Hindu Marriages Online and Offline
+P2314|Feedback from department dated 17/07/2026
+P2315|Purpose
+P2316|This document captures the department feedback received on 17/07/2026 concerning the Marriage Registration workflow in KAVERI 2.0, and translates each observation into a detailed requirement for the As-Is and To-Be process, the underlying rationale, and the business rules to be implemented. It covers four areas: Sakala initiation timing, mandatory Sub-Registrar (SR) declaration, Sakala completion timing, and appointment validity with the associated Sakala parking mechanism.
+P2318|Sakala Initiation Timing
+P2322|Description
+P2323|Currently, the Sakala service-delivery timer starts the moment the SR clicks 'Generate Certificate', regardless of whether the bride, bridegroom, and witnesses are actually present at the counter.
+P2324|In the offline Hindu Marriage, Intended Marriage, and Special Marriage flows, this means the SLA clock can run for the entire duration the application is pending — including time lost to no-shows or rescheduling — well before the DEO has even picked up the case. This creates an artificial SLA breach risk that does not reflect actual processing delay by the department.
+P2325|The revised flow decouples the Sakala trigger from the 'Generate Certificate' click and ties it instead to the point of allocation to the DEO, which is the first concrete processing step after the SR has confirmed party presence. This aligns the SLA clock with genuine department-side processing time. Hindu Marriage Online is excluded from this change because, in that flow, certificate generation and digital signature happen in immediate succession with no DEO handoff in between, so the existing trigger already reflects real processing time.
+P2326|From an implementation standpoint, this requires:
+P2327|Moving the Sakala-initiation API call/event from the 'Generate Certificate' action to the 'Allocate to DEO' action, for the three affected marriage types only.
+P2328|Ensuring the marriage-type check (Hindu Offline / Intended / Special vs. Hindu Online) is evaluated before deciding which trigger point to fire.
+P2329|No new screen or field is needed — this is a backend trigger-point change to the existing SR workflow.
+P2331|Business Rules
+P2333|Mandatory Declaration by Sub-Registrar
+P2336|Description
+P2337|This requirement introduces a formal, system-enforced accountability checkpoint for the Sub-Registrar. Today, an SR can generate a certificate, allocate it to the DEO, or digitally sign it without any explicit, recorded confirmation that the bride, bridegroom, and witness details have actually been reviewed. The new mandatory declaration closes this gap by requiring an affirmative action — a checkbox tied to a fixed declaration statement — before the SR can proceed to the next irreversible step (digital signature or DEO allocation).
+P2338|The placement of the checkbox differs by marriage type because the point of 'no return' differs: for Hindu Marriage Online, that point is the digital signature, so the declaration gates the 'Digital Sign' button. For the offline/Intended/Special Marriage flows, the first irreversible handoff is allocation to the DEO, so the declaration gates the 'Allocate to DEO' button instead. In both cases, the governing UI rule is the same — the next-step button is disabled by default and only enables once the declaration checkbox is ticked.
+P2339|Implementation considerations:
+P2340|Add a non-editable declaration label/text with an adjacent checkbox control on the 'Generate Certificate' screen (or the immediately following screen) for both flows.
+P2341|Digital Sign button (Hindu Marriage Online) and Allocate to DEO button (other three flows) must be disabled by default and enabled only on checkbox selection — this should be a client-side state check reinforced by a server-side validation to prevent bypass via direct API calls.
+P2342|The checkbox state and timestamp should ideally be logged for audit purposes, since this is a compliance/accountability control.
+P2343|Business Rules
+P2345|Completion of Sakala Application
+P2348|Description
+P2349|Marking Sakala as complete at the DEO's 'Ready for Issue' click currently serves an operational purpose — it keeps the DEO queue from accumulating unresolved items — but it misrepresents the actual point of service delivery. The digital signature by the SR is the legally and procedurally definitive act that completes the marriage registration; certificate issuance by the DEO afterward is an administrative follow-up, not the substantive service delivery event.
+P2350|The revised requirement moves the Sakala completion marker to coincide with the SR's digital signature. Consequently, for Intended Marriage and other marriage types where a post-signature DEO issuance step still exists, that step must be explicitly excluded from Sakala time computation — otherwise completion time and the SLA clock could fall out of sync, or the system might inadvertently double-count or continue counting after the true point of completion.
+P2351|Implementation considerations:
+P2352|Move the Sakala-completion event/flag from the DEO 'Ready for Issue' action to the SR digital-signature action.
+P2353|Explicitly exclude the DEO issuance step (post SR signature) from any Sakala timer/SLA calculation logic for Intended Marriage and other marriage types.
+P2354|Confirm with the department whether the existing DEO-queue-management benefit (applications not stacking up) needs a separate operational control now that it is decoupled from Sakala completion.
+P2356|Business Rules
+P2358|Appointment Validity
+P2361|Description
+P2362|Today's flow has no expiry on a scheduled appointment: an application can sit in the SR login well past the appointment date with no system-driven consequence, whether or not the parties ever showed up. This creates stale, indefinitely pending applications in the SR queue and offers no incentive for citizens to appear on the scheduled date, since a missed appointment carries no penalty and does not release the slot.
+P2363|The to-be requirement introduces a hard 24-hour validity window tied to the scheduled appointment date. If the parties do not appear within that window, the system shall automatically return the application to the citizen rather than leaving it pending in the SR queue. Critically, such returned applications are treated as terminated, not paused — the citizen must restart with a fresh application, rather than resuming from the stage they left off. This is a significant procedural requirement and should be clearly communicated to citizens at the time of appointment scheduling, since it affects fees already paid and documents already submitted.
+P2364|The department has additionally flagged a 'Sakala Parking' mechanism as a note for further discussion: instead of immediately returning a non-appearance case to the citizen, the application would first move to a parked state. This is presented as a note to the department rather than a finalized requirement, because the current KAVERI 2.0 / Sakala framework only supports two states — Initiated and Completed — with no intermediate 'parked' or 'paused' state. Introducing parking would require defining: how long an application may remain parked, whether the Sakala SLA clock pauses or continues while parked, what triggers a transition out of parking (resumption vs. auto-return to citizen), and whether a parked application still counts toward pending-application MIS metrics.
+P2365|Implementation considerations:
+P2366|Introduce a 24-hour validity timer keyed to the scheduled appointment date/time for the SR-login stage of offline Hindu Marriage, Intended Marriage, and Special Marriage applications.
+P2367|On expiry without party appearance, auto-trigger return-to-citizen and mark the application as non-resumable, requiring fresh submission.
+P2368|Sakala Parking should remain an open item requiring explicit sign-off from the department on state definition, SLA-clock behavior, and MIS/reporting treatment before it is built, since it is currently outside the Initiate/Complete model.
+P2370|Business Rules
+P2373|Wireframes:
+P2375|Below screen displays the note in the citizen schedule page for the Hindu marriage offline, special other marriages, intended marriages.
+P2378|Figure: Note to be mentioned before the citizen schedules the appointment
+P2381|Reschedule button to be disabled
+P2383|Figure: Reschedule button disabled after 60 days
+P2384|Note to be displayed upon clicking on the view button
+P2386|Figure: Note displayed reason for not allowing to reschedule
+---TABLE 0---
+T0R0|Date || Version || Prepared by || Description
+T0R1|10/11/2023 || 1.0 || Basanthi Prahlad / BA Kaveri 2.0 || First Version
+T0R2|10/07/2024 || 2.0 || Arugolli Subhash / Jr.BA Kaveri 2.0 || Second Version
+T0R3|05/11/2024 || 3.0 || Pavan Deshapande  / BA Kaveri 2.0 || Third Version
+T0R4|20/07/2026 || 4.0 || Kavyashree D / ABA, KAVERI 2.0 || Fourth version
+---TABLE 1---
+T1R0|Actors || Roles & Responsibilities
+T1R1|Applicant (Bride/Bride Groom) || Presents the relevant records/documents for registration. / Submit the application with the necessary documents, photos, etc / Pays requisite fees. / Schedules (books) an appointment with SR/MO/RoM. /
+T1R2|Witnesses || Witnessing the marriage. / Signing of declaration and Application.
+T1R3|Objector || One who objects to the marriage (special marriage intended notice & special marriage of other forms) / Files an objection to the marriage registration / Submit the application form along with the nece
+T1R4|SRO /Marriage Officer (MO) / Registrar of Marriage (ROM) (here, SR acts as MO/RoM) || Scrutinizes documents, admits for registration, signs the marriage certificate / Initial scrutiny of application and enclosures. / Verifies application and enclosures. / Issue a certificate and update
+T1R5|Operators (FDA/SDA/DEO) || Enters data, captures/attaches photos, generates registration number scans and archives documents / Prints the Marriage notice. / Captures digital photograph of the couple / Print the certificate afte
+T1R6|System (Kaveri 2.0) || Software used for registration / Records application (for both complete online and offline registration) / Accepts payment and captures payment detail / Allows modification/deletion of entered data be
+T1R7|Input Documents || Age proof / Proof of residence (both Permanent & Current) / Place of marriage (Marriage card) / Enclosures.
+T1R8|Output Documents || Application in prescribed form for Marriage Registration. / The Marriage Notice. / The Marriage Certificate is issued by the Sub Registrar (SR/MO/RoM) / Payment receipt. / Declaration by the Bride and
+T1R9|Process Triggers || Application by applicants in case of Hindu marriage / Notice of intended marriage in case of special marriages / Data/ Information requirements / Age proof / Proof of residence or place of marriage (m
+---TABLE 2---
+T2R0|System || Information Received || Information Sent
+T2R1|Marriage registration system || Marriage Application / Marriage Objections || Query for marriage records and data, Search Results
+T2R2|Marriage registers || Marriage Certificate || 
+---TABLE 3---
+T3R0|Type of Marriage || Hindu Marriage || Special Marriage / (Intended Notice) || Special Marriage of / Other Forms
+T3R1|1. Religion of Bride & Bridegroom || Bride and Groom should be Hindu || Any religion || Any religion
+T3R2|2. When to Apply || Post-marriage || Pre-marriage || Post-marriage
+T3R3|3. Age (years) || 18 for the bride, 21 for Bridegroom at the time of marriage || 18 for the bride, 21 for Bridegroom at the time of marriage || 21 years at the time of registration
+T3R4|4. Notice Period || Not applicable || 30 days allowable for any objections to be raised || 30 days allowable for any objections to be raised
+T3R5|5. Objection || Not applicable || Applicable || Applicable
+T3R6|6. Objection Period || Not applicable || Ruling has to be given by SR within 30 days from the objection / being raised || Ruling has to be given by SR within 30 days from the objection / being raised
+T3R7|7. Oath & / Solemnization by SR || Not applicable || Applicable || Not applicable
+T3R8|8. No. of Payments || 1 || 2 || 2
+T3R9|9. Photo upload by Applicant || Joint photo of Bride & Bridegroom || Individual photos of intended Bride & / Bridegroom || Joint photo of Bride & Bridegroom
+T3R10|10. No. of Witnesses || 3 || 3 || 3
+T3R11|11. No. of Objectors || Not applicable || >= 0 || >= 0
+T3R12|12. Location of / Marriage || Not applicable || Either at SRO or / outside SRO || Not applicable
+T3R13|13. Selection of SRO || SRO falling within the limits of: / The place of marriage. / The current address of the bride. / The permanent address of the bride. / The current address of the bride-groom. / The permanent address o || SRO falling within the limits of: / The place of marriage. / The current address of the bride. / The permanent address of the bride. / The current address of the bride-groom. / The permanent address o || SRO falling within the limits of: / The place of marriage. / The current address of the bride. / The permanent address of the bride. / The current address of the bride-groom. / The permanent address o
+T3R14|14. Marriage Code || HM || SM || OM
+T3R15|15. Photo capture by DEO || Yes, in the case of offline marriage registration || Yes || Yes
+T3R16|16. Physical Presence of Bridegroom & Bridge to submit Marriage Notice Form || Not Applicable || Have to personally appear and submit the Signed Application Form of Notice at SRO BEFORE Sub-Registrar / ONLY (as per the Rule Book) || Have to personally appear and submit the Signed Application Form of Notice at SRO, BEFORE Sub- / Registrar ONLY (as per the Rule Book)
+T3R17|17. Solemnization / Period || Not Applicable || Within 90 days || Not Applicable
+---TABLE 4---
+T4R0|Step || Workflow Status ID || Workflow Status Name || Sakala
+T4R1|SR - Step 8 || MR114 || Submitted for approval || Initiated
+T4R2|SR - Step 8 || MR115 || Registration Completed || Closed
+---TABLE 5---
+T5R0|Step || Workflow Status ID || Workflow Status Name || Sakala
+T5R1|SR - Step 5 || MR 124 || Submitted for approval || Initiated
+T5R2|SR - Step 8 || MR 126 || Registration Completed || Closed
+---TABLE 6---
+T6R0|Step || Workflow Status ID || Workflow Status Name || Sakala
+T6R1|SR - Step 5 || MR114 || Submitted for approval || Initiated
+T6R2|FDA/SDA - Step 3 || MR126 || Registration Completed || Closed
+---TABLE 7---
+T7R0|Step || Workflow Status ID || Workflow Status Name || Sakala
+T7R1|SR - Step 8 || MR124 || Generate certificate || Initiated
+T7R2|DEO - Step 3 || MR115 || Registration Completed || Closed
+---TABLE 8---
+T8R0|Step || Workflow Status ID || Workflow Status Name || Sakala
+T8R1|SR - Step 8 || MR124 || Generate certificate || Initiated
+T8R2|DEO - Step 3 || MR126 || Registration Completed || Closed
+---TABLE 9---
+T9R0|1. Date of Marriage || 
+T9R1|2. Place of Marriage (with sufficient / particulars to locate the place): || 
+T9R2|3. (a) Full name of the bridegroom || 
+T9R3|(b) Name of the Father || 
+T9R4|(c) Name of the Mother || 
+T9R5|(d) His age || 
+T9R6|(e) Usual place of residence || 
+T9R7|(f) Address || 
+T9R8|(g) Status of the bridegroom at the / time	of Marriage. Whether unmarried/ widower/ divorced: || 
+T9R9|(h) Signature of the bridegroom, with date: || 
+T9R10|4. (a) Full name of the bride || 
+T9R11|(b) Name of the Father || 
+T9R12|(c) Name of the Mother || 
+T9R13|(d) Her age || 
+T9R14|(e) Usual place of residence || 
+T9R15|(f) Address || 
+T9R16|(g) Status of the bride at the time of Marriage. Whether unmarried / widow / / divorced: || 
+T9R17|(h) Signature of the bride, with date: || 
+T9R18|5. (a) Full name of witness: (Specify the Blood relation, if any, with bride or / bridegroom) || 
+---TABLE 10---
+T10R0|(b) Their age || 
+T10R1|(c) Usual place of residence || 
+T10R2|(d) Address || 
+T10R3|(e) Signature of the witness with date: || 
+T10R4|6. (a) Full name of witness: (Specify the Blood relation, if any, with the bride or / bridegroom) || 
+T10R5|(b) Their age || 
+T10R6|(c) Usual place of residence || 
+T10R7|(d) Address || 
+T10R8|(e) Signature of the witness with date: || 
+T10R9|7. (a) Full name of witness: (Specify the Blood relation, if any with the bride or / bridegroom) || 
+T10R10|(b) Their age || 
+T10R11|(c) Usual place of residence || 
+T10R12|(d) Address || 
+T10R13|(e) Signature of the witness with date: || 
+---TABLE 11---
+T11R0|Name of / Husband || Place of / Residence || Name of / Wife || Place of / Residence || Place of / Marriage || Date of / Marriage || Marriage / Number
+T11R1|(1) || (2) || (3) || (4) || (5) || (6) || (7)
+T11R2|Ram ||  || Asha ||  ||  ||  || YPR-HM11- 2022-23 / 6-Apr-2022
+T11R3|Shyam ||  || Usha ||  ||  ||  || 
+T11R4|Bhim ||  || Nisha ||  ||  ||  || 
+---TABLE 12---
+T12R0|Name of / Wife || Place of / Residence || Name of / Husband || Place of / Residence || Place of / Marriage || Date of / Marriage || Marriage / Number
+T12R1|(1) || (2) || (3) || (4) || (5) || (6) || (7)
+T12R2|Asha ||  || Ram ||  ||  ||  || YPR-HM11- 2022-23 / 6-Apr-2022
+T12R3|Usha ||  || Shyam ||  ||  ||  || 
+T12R4|Nisha ||  || Bhim ||  ||  ||  || 
+---TABLE 13---
+T13R0|Name || Status of / marriage || Occupation || Age || Place of / residence || Permanent / address || Length of / residence
+T13R1|/  / Bridegroom || Unmarried Widower Divorcee ||  ||  ||  ||  || 
+T13R2|/  / Bride || Unmarried / Widow Divorcee ||  ||  ||  ||  || 
+---TABLE 14---
+T14R0|Name of / Husband || Place of / Residence || Name of / Wife || Place of / Residence || Place of / Marriage || Date of / Marriage || Marriage Number
+T14R1|(1) || (2) || (3) || (4) || (5) || (6) || (7)
+T14R2|Ram ||  || Asha ||  ||  ||  || YPR-HM11-2022-23 / 6-Apr-2022
+T14R3|Shyam ||  || Usha ||  ||  ||  || 
+T14R4|Bhim ||  || Nisha ||  ||  ||  || 
+---TABLE 15---
+T15R0|Name of / Wife || Place of / Residence || Name of / Husband || Place of / Residence || Place of / Marriage || Date of / Marriage || Marriage Number
+T15R1|(1) || (2) || (3) || (4) || (5) || (6) || (7)
+T15R2|Asha ||  || Ram ||  ||  ||  || YPR-HM11-2022-23 / 6-Apr-2022
+T15R3|Usha ||  || Shyam ||  ||  ||  || 
+T15R4|Nisha ||  || Bhim ||  ||  ||  || 
+---TABLE 16---
+T16R0|Name of / Husband || Place of / Residence || Name of / Wife || Place of / Residence || Place of / Marriage || Date of / Marriage || Marriage Number
+T16R1|(1) || (2) || (3) || (4) || (5) || (6) || (7)
+T16R2|Ram ||  || Asha ||  ||  ||  || YPR-HM11-2022-23 / 6-Apr-2022
+T16R3|Shyam ||  || Usha ||  ||  ||  || 
+T16R4|Bhim ||  || Nisha ||  ||  ||  || 
+---TABLE 17---
+T17R0|Name of / Wife || Place of / Residence || Name of / Husband || Place of / Residence || Place of / Marriage || Date of / Marriage || Marriage Number
+T17R1|(1) || (2) || (3) || (4) || (5) || (6) || (7)
+T17R2|Asha ||  || Ram ||  ||  ||  || YPR-HM11-2022-23 / 6-Apr-2022
+T17R3|Usha ||  || Shyam ||  ||  ||  || 
+T17R4|Nisha ||  || Bhim ||  ||  ||  || 
+---TABLE 18---
+T18R0|/ Government of Karnataka / Department of Stamps and Registration / Original Copy                                                                              Marriage officer / Print date:_____      
+---TABLE 19---
+T19R0|/ Government of Karnataka / Department of Stamps and Registration / Marriage officer / ______________ / Under Hindu Marriage Act, 1954  / Office Copy                          / Print date:_____        || / Government of Karnataka / Department of Stamps and Registration / Marriage officer / ______________ / Under Hindu Marriage Act, 1954  / Original Copy                          / Print date:_____     
+---TABLE 20---
+T20R0|/ Government of Karnataka / Department of Stamps and Registration / Form VI / (See Rule 9) / Marriage officer / ______________ / Under Hindu Marriage Act, 1955 (25 of 1955) / Office Copy               || / Government of Karnataka / Department of Stamps and Registration / Form VI / (See Rule 9) / Marriage officer / ______________ / Under Hindu Marriage Act, 1955 (25 of 1955) / Original Copy            
+---TABLE 21---
+T21R0|As-Is Flow || To-Be Flow
+T21R1|Sakala is initiated when the SR clicks 'Generate Certificate' at Step 8 of the SR login. / For Hindu Marriage (offline), Intended Marriage, and Special Marriage (other forms), Sakala continues running || For Hindu Marriage (offline), Intended Marriage, and Special Marriage (other forms), Sakala shall initiate only after the application is allocated to the Data Entry Operator (DEO). / Sakala shall no l
+---TABLE 22---
+T22R0|Rule ID || Business Rule
+T22R1|BR-01 || Sakala shall NOT initiate on click of 'Generate Certificate' for Hindu Marriage (Offline), Intended Marriage, and Special Marriage (other forms).
+T22R2|BR-02 || Sakala shall initiate only when the application is allocated to the DEO, for the above three marriage types.
+T22R3|BR-03 || For Hindu Marriage Online, the existing trigger (Sakala initiates on 'Generate Certificate' click) remains unchanged.
+---TABLE 23---
+T23R0|As-Is Flow || To-Be Flow
+T23R1|No declaration is currently captured from the SR before certificate generation or signing. / Hindu Marriage Online: SR clicks 'Generate Certificate' and directly proceeds to digitally sign. / Hindu Ma || Before 'Check and Register', the system shall mandatorily display: "I have reviewed and verified the details of the bride, bridegroom, and witnesses," which the SR must confirm via a checkbox. / Hindu
+---TABLE 24---
+T24R0|Rule ID || Business Rule
+T24R1|BR-04 || System shall mandatorily display the declaration "I have reviewed and verified the details of the bride, bridegroom, and witnesses" before the 'Check and Register' step, for all marriage types.
+T24R2|BR-05 || Hindu Marriage Online: 'Digital Sign' shall remain disabled until the declaration checkbox is selected; it shall enable only after selection.
+T24R3|BR-06 || Hindu Marriage Offline / Intended Marriage / Special Marriage: 'Allocate to DEO' shall remain disabled until the declaration checkbox is selected; it shall enable only after selection.
+---TABLE 25---
+T25R0|As-Is Flow || To-Be Flow
+T25R1|Sakala completion is currently recorded at the DEO login, when the DEO clicks 'Ready for Issue'. / This approach ensures applications do not stack up / remain pending indefinitely in the DEO login. || Sakala completion shall be recorded only when the Sub-Registrar successfully affixes the digital signature on the marriage certificate. / For Intended Marriage and other marriages, once the SR digital
+---TABLE 26---
+T26R0|Rule ID || Business Rule
+T26R1|BR-07 || Sakala application completion shall be recorded at the point the SR digitally signs the marriage certificate, not at DEO 'Ready for Issue'.
+T26R2|BR-08 || For Intended Marriage and other marriage types, the post-signature DEO certificate-issuance step shall not be included in Sakala time calculation.
+---TABLE 27---
+T27R0|As-Is Flow || To-Be Flow
+T27R1|For Hindu Marriage (offline), Intended Marriage, and Special Marriage, once the citizen submits the application, pays the fee, and schedules the appointment, there is no validity period on the appoint || Once an appointment is scheduled, party appearance shall be restricted to the scheduled appointment date only, valid for 24 hours / 1 day. / If the parties do not appear within this 24-hour validity w
+---TABLE 28---
+T28R0|Rule ID || Business Rule
+T28R1|BR-09 || Party appearance shall be valid only for the scheduled appointment date, with a validity window of 24 hours / 1 day.
+T28R2|BR-10 || If parties do not appear within the 24-hour validity window, the application shall be automatically returned to the citizen.
+T28R3|BR-11 || Applications returned due to non-appearance shall not be resumable — the citizen must submit a fresh application from the beginning. Within 60days after notice period is completed. No restriction on r
+T28R4|BR-12 || Sakala Parking is a department-proposed intermediate state, currently unsupported (system supports only Initiate/Complete). Requires department confirmation on state behavior, SLA-clock treatment, and

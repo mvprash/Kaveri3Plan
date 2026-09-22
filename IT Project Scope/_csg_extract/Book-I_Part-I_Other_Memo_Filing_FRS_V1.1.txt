@@ -1,0 +1,280 @@
+P0|Karnataka Valuation & E-Registration (KAVERI - 2.0)
+P1|Government of Karnataka
+P3|Functional Requirement Specifications
+P5|For KAVERI 2.0
+P6|Department of Stamps & Registration
+P7|Government of Karnataka
+P8|Version 1.0
+P9|July 20th, 2024
+P10|Book 1- Part I
+P11|Memo Filing
+P18|Prepared by
+P19|Centre for Smart Governance (CSG)
+P20|2nd Floor, TTMC Yeshwanthapura, BMTC Bus station
+P21|Bangalore – 560022
+P50|Revision History
+P54|Memo filing
+P55|Document scope
+P56|This document is a Functional Requirement Specification (FRS) describing the functional features of the Memo Filing for document registration. While Memo Filing is already available for documents that are registered on Kaveri 2.0, the current FRS describes the functionality when such memo filing must be done for document registrations that happen or have happened in Kaveri 1.0, Prior Kaveri 1 and Memos sent by SROs of other states.
+P58|Overview of the function
+P60|Figure :Memo Filing function after Document registration.
+P62|The functionalities mentioned above occur in the sub registrar’s office under the Department of Stamps and Registrations, Government of Karnataka, under the Karnataka Registration Rules, 1965. This document elaborates on these functions and seeks to be available online through the Filing module under Kaveri 2.0.
+P63|Documents must be registered in the jurisdictional SRO where the property is located. Memo filing is necessary if the properties are under different SROs' jurisdiction and this process facilitates internal communication between SROs for properties outside their jurisdiction.
+P65|This document refers to the Memo filing module that handles the following cases,
+P66|Kaveri 1 Memos – A memo generated in the Kaveri-1 system, and not filed yet, which is being filed in the present Kaveri 2 application.
+P67|Pre Kaveri-Memos – The memos generated before the Kaveri-1 application and not filed yet, which is being filed in the present Kaveri 2 application.
+P68|Other State to Kaveri 2— A memo shared by other states' SRO when a property from Karnataka is registered in other states.
+P69|Functional Requirement Description
+P70|Other Memos (Kaveri 1/ Prior Kaveri/ Other state) to Kaveri 2.0
+P72|Figure : Interaction diagram of the Memo Filing process
+P85|Workflow
+P88|Actors and their roles
+P91|Process Description
+P92|Once the registration is completed, registering SRO (Kaveri 1/ prior Kaveri/ other state) generates a hard copy of the memo (Form 25) manually.
+P93|A hard copy memo shall be shared with the Kaveri 2 jurisdiction SRO for filing.
+P94|Start process
+P95|Kaveri 2 jurisdiction SRO receives the memo (hard copy) and initiates the filing process by clicking the Other Memo sub-tab under the Memo filing tab.
+P96|SR should select where the document is registered using the radio buttons (in Karnataka or Other States).
+P97|If the document is registered in Karnataka, then SR selects whether the document is registered before 2004 or after 2004 using the radio buttons.
+P98|Based on the selection the SR should be able to key in the following details:
+P99|Select the DEO from the drop-down.
+P100|Clicks on the ‘Assign to DEO’.
+P101|The system generates an application with the application number.
+P102|Allocation to DEO
+P103|The system displays the list of DEOs’ in a dropdown to select and allocate the application.
+P104|K2 jurisdiction SRO allocates application to DEO to key in the details as per received form-25
+P105|(Note: SR can re-allocate the application to another DEO if required)
+P106|The system forwards the application to the allocated DEO dashboard
+P107|Data entry by DEO
+P108|DEO receives the application in the dashboard.
+P109|DEO enters all the details as per received Form-25 based on the type of memo:
+P110|For K1 Memos below are details to be captured,
+P111|Document details should be auto-fetched:
+P112|Registered SRO.
+P113|date of execution.
+P114|date of presentation.
+P115|date of registration.
+P116|Property details should be auto-fetched,
+P117|District,
+P118|Taluk,
+P119|Hobli,
+P120|Index II Village
+P121|Property Type(dropdown): Agriculture & Non-Agriculture.
+P122|Property Number Details:
+P123|Property Type (dropdown): Agriculture and Non-Agriculture.
+P124|In the case of Agriculture, only the survey number is to be displayed.
+P125|In the case of Non-Agriculture, a list to be displayed
+P126|Boundary details (Text field with a maximum limit of 150 characters)
+P127|East.
+P128|West.
+P129|South.
+P130|North.
+P131|Description (Text field with a maximum limit of 1000 characters)
+P132|Area (Numeric field 6 digits with only allowed special character dot “.”)
+P133|Unit of measure (Dropdown) with list: Acers, Guntas, Cents, Sq. Mtrs,
+P134|Party Details should be auto-fetched,
+P135|Salutation (Dropdown) with list: Sri, Smt., Mr, Mrs, Kumar, Kumari, M/s.
+P136|First Name (Text Field with a maximum limit of 100 characters) and it’s a mandatory field.
+P137|Middle Name (Text Field with a maximum limit of 100 characters) and it’s an optional field.
+P138|Last Name (Text Field with a maximum limit of 100 characters) and it’s an optional field.
+P139|Party Type (dropdown) mandatory field with list: Executant and Claimant.
+P140|Age (Numeric field with a maximum limit of 3 digits) is a mandatory field.
+P141|Address (Alpha-Numeric field with a maximum limit of 200 characters) is a mandatory field.
+P142|(Note: A minimum of 1 claimant and 1 executant should be added without which the system should not allow continuing further)
+P143|For K1/Other Memos below are details to be captured,
+P144|Document details:
+P145|Registered SRO (Text Field with a limit of 50 characters) is a mandatory field.
+P146|The Date of execution (Calendar) is a mandatory field.
+P147|The date of presentation (Calendar) is a mandatory field.
+P148|The Date of registration (Calendar) is a mandatory field.
+P149|Property details,
+P150|District (Text Field with a limit of 50 characters) is a mandatory field.
+P151|Taluk (Text Field with a limit of 50 characters) is a mandatory field.
+P152|Hobli (Text Field with a limit of 50 characters) is a mandatory field.
+P153|Index II Village (Text Field with a limit of 50 characters) is a mandatory field.
+P154|Property Type(dropdown): Agriculture & Non-Agriculture.
+P155|Property Number Details:
+P156|Property Type (dropdown): Agriculture and Non-Agriculture.
+P157|In the case of Agriculture, only the survey number is to be displayed.
+P158|In the case of Non-Agriculture, a list to be displayed
+P159|Boundary details (Text field with a maximum limit of 150 characters)
+P160|East.
+P161|West.
+P162|South.
+P163|North.
+P164|Description (Text field with a maximum limit of 1000 characters)
+P165|Area (Numeric field 6 digits with only allowed special character dot “.”)
+P166|Unit of measure (Dropdown) with list: Acers, Guntas, Cents, Sq. Mtrs.
+P167|Party Details should be auto-fetched,
+P168|Salutation (Dropdown) with list: Sri, Smt., Mr, Mrs, Kumar, Kumari, M/s.
+P169|First Name (Text Field with a maximum limit of 100 characters) and it’s a mandatory field.
+P170|Middle Name (Text Field with a maximum limit of 100 characters) and it’s an optional field.
+P171|Last Name (Text Field with a maximum limit of 100 characters) and it’s an optional field.
+P172|Party Type (dropdown) mandatory field with list: Executant and Claimant.
+P173|Age (Numeric field with a maximum limit of 3 digits) is a mandatory field.
+P174|Address (Alpha-Numeric field with a maximum limit of 200 characters) is a mandatory field.
+P175|(Note: A minimum of 1 claimant and 1 executant should be added without which the system should not allow continuing further)
+P176|DEO can add multiple parties.
+P177|DEO generates the report and sends it to SR.
+P178|The system forwards the report to the SR’s dashboard.
+P179|K2 jurisdiction SR receives the report in the dashboard.
+P180|K2 jurisdiction SR can either self-verify (or) allocate it to the FDA/SDA for verification.
+P181|Verification by FDA/SDA:
+P182|The system displays the list of FDA/SDA in a dropdown to select and click on the ‘Allocate’ button to allocate the application.
+P183|SR allocates the report for verification to FDA/SDA.
+P184|(Note: SR can re-allocate the application to another FDA/SDA).
+P185|FDA/SDA receives, verifies the report, and sends it back to SR for approval
+P186|Remarks
+P187|FDA/SDA can add the remarks in the remarks section (if any) and send it back to DEO for correction.
+P188|DEO: Correction
+P189|DEO receives the application with remarks from the FDA/SDA, updates the details based on the comments, and sends it back to the FDA/SDA
+P190|FDA/SDA receives the report with corrections from DEO, verifies and sends it back to SR for approval
+P191|SR Self-verification:  Kaveri 2 – Jurisdiction SRO
+P192|Click on the ‘Verify’ button to verify the report received from DEO
+P193|Remarks
+P194|SR adds the remarks in the remarks section (if any) and sends it back to DEO for correction.
+P195|DEO: Correction
+P196|DEO receives the application with remarks from SR, updates the details based on the remarks, and sends it back to SR.
+P197|SR receives the report after corrections from DEO to ‘Check and Register’.
+P198|Check and Register
+P199|SR receives the report from FDA/SDA or self-verified application for check and register.
+P200|Verify the report, and click on the ‘Check and register’.
+P201|SR should allocate to DEO to print the certificate and upload the documents.
+P202|Print Certificate and Upload Documents,
+P203|DEO should print the certificate and take the SR’s signature on the certificate.
+P204|Upload the Signed certificate, Memo copy and other documents for digital signature.
+P205|SR Digital Signature
+P206|SR Should digitally sign on the uploaded documents.
+P207|Form-26: Intimation slip
+P208|SR generates Form 26: intimation slips as acknowledgement.
+P209|(Note: A print option will be available to print Form-26).
+P210|Index II (EC)
+P211|Upon completing the filing process, the system updates the index II(EC) with the final registration number and filing number for the filed property and updates MIS.
+P212|Provide a note on EC with the registration number and SRO.
+P214|Prototype
+P215|https://www.figma.com/proto/GsOceuX4OPMs9BVPjQrF2u/Memo-Filing-Others?page-id=0%3A1&node-id=1-3049&viewport=1163%2C374%2C0.03&t=dI6RjYvjBNU2Z7jc-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=1%3A3049
+P216|Validations
+P217|Workflow validations
+P218|SRO should be able to select and allocate to DEO for data entry.
+P219|SRO should be able to select and allocate to FDA/SDA for verification.
+P220|In case of DEO or FDA/SDA’s absence, the system should have the provision of suggested in-charge
+P221|The system provides a unique Filing number with a date for the submitted application
+P222|All entries in each book shall be numbered in a consecutive series, which shall commence and terminate with the year; a fresh series commenced at the beginning of each year.
+P223|Integration with other systems/modules
+P224|External integration
+P225|No
+P226|Internal integration with other modules
+P227|MIS
+P228|Index II: EC Search
+P229|Implications for MIS
+P230|After the memo is filed and details are recorded in Book 1 Part 1, MIS Reports (in Statutory reports) have to be generated in the below-mentioned format.
+P233|Assumptions and Dependencies
+P234|Assumptions
+P235|Legacy Memos are available in manual or hard copy for all scenarios.
+P236|As the memo filing will be done on the department side, no fees including scanning fees will not be collected/calculated.
+P237|A certificate should be generated.
+P238|J-slip will be sent to only documents registered in K1.
+P239|Intimation slips to other states' SROs will be sent manually (if required).
+P240|Dependencies
+P241|No
+P243|Annexures
+P244|Annexure – 1: List of modules of Kaveri 2.0
+P246|Annexure- 2: Requirements as shared by the department
+P247|Requirements were shared verbally, and workflows were verbally approved in August 2023
+P249|Workflows
+P250|Kaveri 1 to Kaveri 2
+P253|Pre - Kaveri to Kaveri 2
+P256|Other states to Kaveri 2
+P262|Annexure – 3: Clarificatory questions and departmental response
+P263|Kaveri 1
+P264|How will it impact the EC search against the property? Should the date in EC reflect the original document registration or memo filing data?
+P265|Once the Memo filing process is complete, the Original Date of Execution will be reflected in the EC search against the property.
+P267|How do we handle cases where the nature of property has changed? Since these are left-out cases that might be outdated, property ownership might have changed. How should EC be managed?
+P268|We are not handling any such cases during the memo filing process.
+P270|Annexure – 4: Output documents
+P272|Form 25
+P278|Form 26
+P282|Form 15: EC
+P285|Annexure – 5: MOM of Review Meeting.
+P286|Points discussed during the discussion on 21-08-2024
+---TABLE 0---
+T0R0|Version || Date || Description || Modification || Prepared/Revised by
+T0R1|1.0 || 08-08-2024 || Draft Version ||  || Arugolli Subhash
+T0R2|1.1 || 27-08-2024 ||  || Change in the flow. / Addition of printing the certificate. / Addition of scanning and uploading the documents. || Pavan Kumar
+---TABLE 1---
+T1R0|Functional Requirement Specifications || Functional Requirement Specifications
+T1R1|Stakeholder/ Interface || Role/Responsibilities
+T1R2|SRO || Kaveri 1/ Prior Kaveri/ other state – Registration SRO / Sends Form 25 (manually) to Kaveri 2 Jurisdiction SRO / Kaveri 2 – Jurisdiction SRO / Receives form 25 and initiates memo process. / Select the type of memo from the radio buttons. / Enters the details and allocates them to DEO to key in the details as per Form 25 (physical copy). / Self-verify the report and add remarks (if any). / Allocates the report for verification to FDA/SDA / Approve the report by clicking Check and Register. / Physically signs on the Certificate. / Digitally sign on the documents uploaded.
+T1R3|DEO || Enters all the details as per received Form 25 (physical copy) / Upload the document. / Send report to SRO for verification. / Updates the details based on the remarks and sends reports back to SR/FDA/SDA (if any). / Generates the certificate. / Takes the physical signature of SR on the certificate, and uploads documents. / Send the uploaded document for digital signature.
+T1R4|FDA/SDA || Verifies the details allotted by SR. / Adds remarks (if any, during verification). / Verifies the report generated by DEO after remarks. / Send back the verified report to SRO for approval.
+T1R5|System || Allows the DEO to key in all the memo details (manual copy). / Based on the details entered, the system should populate the report. / Store data and reflect in Book 1 Part I / Generates filing number with date. / Generates From 26. / Updates Index II(EC) / Should show a note “This document is registered in <<SRO Name>> with final registration number << Final Registration Number>>”
+T1R6|Process Triggers || The Kaveri 1 Registration SRO has a legacy Memo which has to be filed
+T1R7|Data/Information Required || legacy Memo/Kaveri 1 Memo/ Other state memo: Form 25 (memorandum hard copy)
+T1R8|Output documents generated || Form 26 – Intimation slip form
+T1R9|Internal changes || Book-1 Part I - Filing Number with Date
+T1R10|Impact on other modules || Index II: EC Search / MIS
+---TABLE 2---
+T2R0|For K 1 documents || For Prior K1 || For Other States
+T2R1|Enter the Final registration number (NMG-1-XXXXX-XXXX-XX). || Enter the Registration Number. || Enter the State. / Enter the District. / Enter the SRO Name. / Enter the Registration Number.
+---TABLE 3---
+T3R0|Sl No || Module No || Main Module || Sub-Module
+T3R1|1 || 1.1 || Registration || Registration
+T3R2|2 || 1.2 || Registration || Appointment
+T3R3|3 || 1.3 || Registration || Integration module
+T3R4|4 || 1.4 || Registration || Stamp duty and Registration fee calculation
+T3R5|5 || 1.5 || Registration || Guideline value calculation
+T3R6|6 || 1.6 || Registration || Rule 17 (2) filing
+T3R7|7 || 1.7 || Registration || Rule 17 (3) filing
+T3R8|8 || 1.8 || Registration || Old pending release module
+T3R9|9 || 1.9 || Registration || Re-Registration module
+T3R10|10 || 1.1 || Registration || Will after Death
+T3R11|11 || 1.11 || Registration || Filing documents (FRUITS)
+T3R12|12 || 1.12 || Registration || Scanning
+T3R13|13 || 1.13 || Registration || Memo transmission and filing
+T3R14|14 || 1.14 || Registration || 68(2) correction
+T3R15|15 || 1.15 || Registration || Cross-reference Rule 123
+T3R16|16 || 1.16 || Registration || Integration exemption
+T3R17|17 || 1.17 || Registration || Court entry
+T3R18|18 || 1.18 || Registration || Liability
+T3R19|19 || 1.19 || Registration || Status tracking
+T3R20|20 || 1.2 || Registration || Investigation and Search
+T3R21|21 || 1.21 || Registration || Valuation Module (CVC)
+T3R22|22 || 2 || EC || 
+T3R23|23 || 3 || CC || 
+T3R24|24 || 4 || Verify Document || 
+T3R25|25 || 5 || Power of attorney Authentication Module || 
+T3R26|26 || 6 || Refund Module || 
+T3R27|27 || 7.1 || Marriage || Hindu Marriage
+T3R28|28 || 7.2 || Marriage || Special Marriage
+T3R29|29 || 7.3 || Marriage || Extraordinary Marriage in Other Forms
+T3R30|30 || 8 || Legacy Record digitisation || 
+T3R31|31 || 9 || Audit || 
+T3R32|32 || 10 || Accounts || 
+T3R33|33 || 11.1 || MIS || Statutory (44)
+T3R34|34 || 11.2 || MIS || Statistical (54)
+T3R35|35 || 11.3 || MIS || Integration (15)
+T3R36|36 || 11.4 || MIS || Computer related (4)
+T3R37|37 || 11.5 || MIS || Reconciliation (5)
+T3R38|38 || 11.6 || MIS || HR (5)
+T3R39|39 || 12.1 || DRO || Firm Registration
+T3R40|40 || 12.2 || DRO || Undervaluation
+T3R41|41 || 12.3 || DRO || Deposit of will
+T3R42|42 || 12.4 || DRO || Adjudication of documents
+T3R43|43 || 13 || IGRO || Appeal
+T3R44|44 || 14 || Master Data Management || 
+T3R45|45 || 15 || User Management || 
+T3R46|46 || 16 || Mobile application || 
+T3R47|47 || 17 || Training Module || Master Trainer, Training Plan
+---TABLE 4---
+T4R0|Sl. No. || Memo || Index II || Cross-reference
+T4R1|1 || Kaveri 1 to Kaveri 2 || Yes || No
+T4R2|2 || Pre-Kaveri to Kaveri 2 || Yes || No
+T4R3|3 || Other states to Kaveri 2 || Yes || No
+---TABLE 5---
+T5R0|Sl. No. || Points Discussed
+T5R1|1 || Need options to select whether the document is registered in Karnataka or Outside Karnataka, provide radio buttons to select the options.
+T5R2|2 || If the document is registered in Karnataka then need options to select whether the document is registered before 2004 or after 2004, provide radio buttons to select the options.
+T5R3|3 || If the document is registered in Karnataka / Before 2004: The system should allow DEO to key in all the details. / After 2004: The system should fetch the details based on the final registration number entered by SR.
+T5R4|4 || Remove the below-mentioned Unit of Measurements / Sq. Feet / Hectors
+T5R5|5 || DEO should have a provision to print the certificate and upload it for SR’s digital signature after taking the physical signature of SR.
+T5R6|6 || J-slips are to be sent for all the documents registered after 2004 in the old method.

@@ -1,0 +1,497 @@
+---PAGE 1---
+Department of Stamps and Registration, Government of Karnataka  CSG   
+ 
+1 
+ 
+Karnataka Valuation & E -Registration (KAVERI - 2.0) 
+Government of Karnataka  
+ 
+Functional Requirement Specifications  
+ 
+For KAVERI 2.0  
+Department of Stamps & Registration  
+Government of Karnataka  
+ 
+ 
+ 
+ 
+Re-registration  of Refused Documents  
+ 
+ 
+ 
+ 
+ 
+Prepared by  
+Centre for Smart Governance (CSG)  
+2nd Floor, TTMC Yeshwanthapura, BMTC Bus station  
+Bangalore – 560022  
+ 
+  
+---PAGE 2---
+Department of Stamps and Registration, Government of Karnataka  CSG   
+ 
+2 
+ 
+Contents  
+1 Introduction  ................................ ................................ ................................ ................................ .......  4 
+2 Document scope  ................................ ................................ ................................ ................................  4 
+3 Overview of the function  ................................ ................................ ................................ ...................  5 
+4 Description of the functional requirement  ................................ ................................ ........................  6 
+4.1 Actors and their roles  ................................ ................................ ................................ .........  6 
+4.2 Workflow and Process Description  ................................ ................................ ....................  8 
+4.2.1  Scenario 1: Documents which are refused in Kaveri 2 are being registered by the order 
+of the District Registrar,  ................................ ................................ ................................ .....................  8 
+4.2.2  Scenario 2: Documents which are refused in Kaveri 2 are being registered by the order 
+of the Cou rt ................................ ................................ ................................ ................................ ...... 10 
+4.2.3  Scenario 3: Documents which are refused in Kaveri 1 are being registered by the order 
+of the District Registrar  ................................ ................................ ................................ ....................  12 
+4.2.4  Scenario 4: Documents which are refused in Kaveri 1 are being registered by order of 
+the Court  14 
+4.2.5  Scenario 5: Documents refused before  Kaveri and being registered by the order of the 
+District Registrar  ................................ ................................ ................................ ..............................  16 
+4.2.6  Scenarios 6: Documents refused before  Kaveri and being registered by the order of the 
+Court.  18 
+4.3 Input and Output Descriptions  ................................ ................................ ........................  19 
+4.4 Integration with other systems/mod ules ................................ ................................ ........  20 
+4.4.1  External integration  ................................ ................................ ................................ .........  20 
+4.4.2  Internal integration with other modules  ................................ ................................ .........  20 
+4.4.3  Implications for MIS  ................................ ................................ ................................ .........  20 
+4.4.4  Assumptions  ................................ ................................ ................................ .....................  21 
+4.4.5  Dependencies  ................................ ................................ ................................ ...................  21 
+4.5 Annexures  ................................ ................................ ................................ ........................  22 
+4.5.1  Annexure  – 1: List of modules of Kaveri 2.0  ................................ ................................ .... 22 
+4.5.2  Annexure - 2: Requirements as shared by the department  ................................ .............  23 
+4.5.3  Annexure – 3: Clarificatory questions and departmental response  ................................  25 
+4.5.4  Annexure – 4: Excerpts of relevant statutory sections  ................................ ....................  27 
+4.5.5  Annexure – 5: Reference Templates  ................................ ................................ ................  28 
+4.5.6  Annexure – 6: Additional requirements to conside r the refused documents of Kaveri 1 
+and Prior Kaveri.  ................................ ................................ ................................ ...............................  29 
+ 
+ 
+  
+---PAGE 3---
+Department of Stamps and Registration, Government of Karnataka  CSG   
+ 
+3 
+ 
+Acronyms  
+CSG Centre for Smart Governance  
+DR District Registrar  
+EC Encumbrance Certificate  
+MIS Management Information System  
+SR Sub-Registrar  
+SRO Sub-Registrar Office  
+DEO  Data entry operator  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Revi sion History  
+Date  Version  Prepared by  Reviewed by  Description  
+24-06-2024  1.0 Arugolli 
+Subhash  Rajesh Hanbal  Submitted for approval of the nodal 
+officer of the department  
+11-11-2024  1.1 Pavan 
+Deshapande  Rajesh Hanbal  Revised the flow to handle the 
+documents  refused in Kaveri 1 and 
+before Kaveri . 
+22-05-2025  1.2 Pavan 
+Deshapande  Rajesh Hanbal  Changes to the flow as suggested in 
+the mail d ated 16 -01-2025.  
+02-06-2025  1.3 Pavan 
+Deshapande   Incorporated the changes suggested 
+in the meeting chaired by the 
+principal secretary.  
+16-06-2025  1.4 Pavan 
+Deshapande   Incorporated the changes suggested 
+in the meeting conducted on 09 -06-
+2025  
+---PAGE 4---
+Department of Stamps and Registration, Government of Karnataka  CSG   
+ 
+4 
+ 
+1 Introduction  
+The Department of Stamps and Registration  (henceforth referred to as “department”)  is the 
+custodian of registered public records such as Regist ration  of Marriages and Firms, Documents 
+about transactions , namely sale, transfer or gift of immova ble properties, Mortgage, Power of 
+Attorney , wills and many more.  Maintenance and preservation of these critical public records is the 
+prime responsibility of the department. The records or the information associated with registered 
+records are to be made available to the public when requested through defined procedures. The 
+department is also responsible for collecting stamp duty on behalf of the Government for specified 
+transactions. The services are provided through 25 9 Sub-Registrar Offices (SROs), unde r the 
+supervision  of 35 District Registrar Offices, spread across the state.  
+The department has computerised  the delivery of these services through the development of 
+Kaveri software. The department's KAVERI Online service is a web -based application that provides 
+an interface to Applicant s required for documents, marriage , and firm registration. It enables 
+Applicant s to know the details of stamp duty, property guidelines value, data ent ry for document 
+registration and marriage registration , etc. The list of modules of Kaveri 2.0 is available in Annexure 
+1.  
+ 
+ 
+ 
+ 
+ 
+ 
+2 Document scope  
+This document is a Functional Requirement Specification ( FRS) describing the functional features 
+of the re-registration module  in Kaveri 2.0. The document is prepared by the Centre for Smart 
+Governance ( CSG) and has been submitted for department  approval . The intended audience of the 
+document is the departmental approving authority and the development team.  
+ 
+The document was prepared through document analysis and departmental consultation. The 
+department shared the high -level requirements (Annexure 2). Following this, the CSG team 
+analysed the requirements  and prepared clarificatory questions, which were discu ssed with the 
+department on 26/10/2023 , 22/10/2024  and 20/05/2025 . The questions and responses are 
+documented in Annexure 3.  
+  
+---PAGE 5---
+Department of Stamps and Registration, Government of Karnataka  CSG   
+ 
+5 
+ 
+3 Overview of the function  
+ 
+Fig: Re-registration function in Document registration . 
+The re -registration function is part of the d ocument registration module. In the normal course of 
+document registration, upon presentation of the document for registration, the document is 
+registered , and the SR makes an entry in Book 1. However, a  Sub-Register can refuse to register a 
+document upon its presentation1. In such cases, an entry is made in Book 2 , and the document is 
+not registered. However, the applicant can appeal against such an order to the District Registrar  
+(DR)2/Any competent court  within 30 days from the date of refusal . Upon the instructions of the 
+DR/Court , the document is registered by the SR as if it were  presented for the first time , with the 
+usual procedure of document registration3. Re -registration specifically concerns document 
+registrations previously refused by SR but now  permitted by the DR4/Court .   
+The re -registration of a refused document has the following scenarios, and they are covered within 
+the scope of this document, as outlined below,  
+1. Order issuing authority  
+a. District registrar.  
+b. Court  
+2. Document refus al timeline  
+a. Documents refused in Kaveri 2 : The documents refused by the SR in Kaveri 2 will be 
+shown in Book 2.  
+b. Documents refused in Kaveri 1 : Documents refused by the SR in Kaveri 1 will appear in 
+Book 2. This includes two specific scenarios:  
+A. Document status : Documents listed in Book 2 as refused documents and 
+Book 1 that are pending with the 'refused' flag set to true.  
+B. Data Quality : Condition of the d ata availab le in the database ( Complete  and 
+Partial) . 
+the table below  explains  the scenarios . 
+ Document  Status  
+Book 2  Book1  
+Data  
+Quality  Complete  Yes No 
+Partial  No Yes 
+ 
+                                                           
+1 Vide section 71 of the Karnataka Act,1908 from the Karnataka Registration manual 2023.  
+2 Vide section 72 of the Karnataka Act,1908 from the Karnataka Registration manual 2023.  
+3 Vide sections 58 -60 of the Karnataka Act,1908 from the Karnataka Registration manual 2023.  
+4 The appellate order can also be from the courts apart from the district registrar.  Refusal by SR to 
+register
+Applicants's 
+appeal to 
+DR/CourtDR/Court decision
+Upload Order and 
+Deed documentRe-
+registraiton
+---PAGE 6---
+Department of Stamps and Registration, Government of Karnataka  CSG   
+ 
+6 
+ 
+ 
+C. Documents refused before Kaveri : The documents which are refused by an 
+SR before Kaveri 1 will be shown under a sub -menu as ‘Book 2 others’ 
+documents in Book 2.  As these documents/applications are not in the 
+system, to bring them under Kaveri 2, the  SR has to key in the details  to 
+complete the application.  
+4 Description of the functional requirement  
+4.1 Actors and their roles  
+Actor/Interface  Role/Responsibilities  
+Applic ant • Appeal to DR/Court  within 30 days from the date of refusal  (Offline) . 
+• The applicant re-presents  the document along with the order of the 
+DR/Court.   
+SR • Seek the DR’s approval to add missing data.  
+• Upload the DR /Court  order to release the document.  
+• Allocate the applications to the DEO to add the details of the prior 
+Kaveri 1 refused application s. 
+• Verify the details,  release from Book 2  and re -register the documents.  
+DR • Approve/Reject SR’s data addition request.  
+• Issue the order to re -register the document.  
+Court  • Issue the order to re -register the document.  
+DEO  • Print the endorsements and annexure, take the physical signature of SR 
+and upload them for Digital Signature.  
+• Print and hand over the re -registered document to the applicant.  
+System  • If the  data is fetched, move the application to book 2.  
+• Else, if data  is not fetched , move such application s to Book 2 -others.  
+• After adding the missing data in the application, move the application 
+to Book 2.  
+• The system should mark the document in Book 2 as regi stered with the 
+final document number  for cross -reference . 
+• The system should  make an entry in Book 1  after the re-registration .  
+Process Triggers  • The SR will select the application in Book 2  and initiate a re -registration 
+from the SR login5.  
+Data/Information 
+Required  • Application  number/P -Number  which is being re -registered  
+• DR/Court  order number . 
+• DR/Court  order copy . 
+• Date of DR /Court  Order .  
+• Name of Presenter (Re -presented by) . 
+                                                           
+5 Since the DR suite is yet to be developed at the time of writing of this FRS , the triggers are from the SR login. 
+However, after the integration with DR suite, the trigger will be the DR order overruling the refusal to register by 
+SR.  
+---PAGE 7---
+Department of Stamps and Registration, Government of Karnataka  CSG   
+ 
+7 
+ 
+Output documents 
+generated  Endorsement : 
+Contains  the details which are  typically available in a document registration 
+process . 
+• 10-A Certificate . 
+• Registration Summary , 
+o Exemption/denoting (if any) . 
+o Presentation Endorsement . 
+o Party Information . 
+o Identifying witness information . 
+• Section 60 Certificate . 
+In addition to the above, the following document is specific to the re-
+registration process  
+• Schedule B FORM 1 Note(ii)  is to be added along with the above -
+mentioned  details . 
+Internal changes  • Book -2  
+• Book -1  
+• MIS Statutory: Form 2  
+Impact on other 
+modules  • EC Search  
+ 
+  
+---PAGE 8---
+Department of Stamps and Registration, Government of Karnataka  CSG   
+ 
+8 
+ 
+4.2 Workflow  and Process Description  
+Below are the scenarios which are in scope for th is document.  
+Sl. No.  Order source  Data Source  Description  
+1 District Registration  Kaveri 2  Document refused in Kaveri 2, and is being registered in 
+Kaveri 2.  
+2 Court  Kaveri 2  Document refused in Kaveri 2, and is being registered in 
+Kaveri 2.  
+3 District Registration  Kaveri 1  Document refused in Kaveri 1, and is being registered in 
+Kaveri 2  (Cases where the documents have complete 
+and missing data ). 
+4 Court  Kaveri 1  Document refused in Kaveri 1, and the document is 
+being registered in Kaveri 2  (Cases where the 
+documents have complete and missing data).  
+5 District Registration  Prior Kaveri  Document refused before  Kaveri, and the document is 
+being registered in Kaveri 2.  
+6 Court  Prior Kaveri  Document refused in Kaveri 1, and the document is 
+being registered in Kaveri 2.  
+ 
+4.2.1 Scenario 1: Documents which are refused in Kaveri 2 are being registered by the order 
+of the District Registrar,  
+ 
+Figure 1:Activity diagram to re-regist er a document  refused in Kaveri 2  with DR order  
+
+---PAGE 9---
+Department of Stamps and Registration, Government of Karnataka  CSG   
+ 
+9 
+ 
+Appeal to DR:  
+The applicant collects the refusal endorsement from the SR, makes an appeal to the DR for 
+verification of the d etails, and requests that the DR issue an order to re -register the document.  
+i) DR views the document in Book 2.  
+ii) Verifies the details and issues an order in favour of the applicant.  
+iii) DR enters the following details  
+(1) Year of Registration: Mandatory field (drop -down) starting with 1980 -81. 
+(2) Appeal Date: Mandatory field (calendar).  
+(3) DR Order Date: Mandatory field (calendar).  
+iv) DR allocates to DEO to upload  the documents.  
+(1) DR Order: Provision to upload DR order, A PDF of max size 5 MB.  
+(2) Original Deed: Provision to upload the Original Deed copy, A PDF of max size 5 MB.  
+v) DEO sends  back to DR for verification.  
+vi) DR verifies the details and completes the process . 
+vii) Applicant visits the SR office and re -presents the document once again.  
+viii) Request SR to Re -register the document.  
+Re-registration:  
+i) The applicant visits the SRO with the DR order and other required documents.  
+ii) SR opens the ‘ Book 2 ’ dashboard, locates the document in the list, and clicks on the  release 
+button.  
+iii) The system will prompt SR to verify and following details.  
+(1) Year of Registration.  
+(2) Appeal Date  
+(3) DR Order Number.  
+(4) DR Order Date.  
+iv) The SR Keys in the presenter’s name and Remarks, and clicks on Re -register to proceed 
+further.  
+(1) Represented by: Mandatory field, a  text box with a  limit of 100 characters.  
+(2) Remarks: Mandatory field, alphanumeric field with a limit of 1000 characters.  
+v) After keying in the details, SR clicks the  ‘Save and Continue’ button, and the application will 
+proceed to Step 7 of SR.  
+vi) Then, the typical registration flow is  to be followed  
+---PAGE 10---
+Department of Stamps and Registration, Government of Karnataka  CSG   
+ 
+10 
+ 
+4.2.2 Scenario 2: Documents which are refused in Kaveri 2 are being registered by the order 
+of the Court  
+ 
+Figure 2:Activity diagram to re -register a document refused in Kaveri 2 with a Court order  
+Appeal to Court : 
+The applicant collects the refusal endorsement  from the SR, makes an appeal to the court for 
+verification of the details, and requests that the DR issue an order to re -register the document.  
+i) The Court verifies and issues an order to re -register.  
+ii) Applicant visits the SR office and re -presents the docum ent once again.  
+iii) Request SR to Re -register the document.  
+ 
+Re-registration:  
+i) The applicant visits the SRO with the Court order and other required documents.  
+ii) SR opens the ‘ Book 2 ’ dashboard, locates the document in the list, and clicks on the  release 
+button.  
+
+---PAGE 11---
+Department of Stamps and Registration, Government of Karnataka  CSG   
+ 
+11 
+ 
+iii) The system will prompt SR to enter the following details.  
+(1) Year of Registration: Mandatory field (drop -down) starting with 1980 -81. 
+(2) Appeal Date: Mandatory Field (Calendar)  
+(3) Court Order Number: Mandatory field, the  alphanumeric field with a  limit of 25 
+characters.  
+(4) Court Order Date: Mandatory field, calendar.  
+(5) Represented by: Mandatory field, a  text box with a  limit of 100 characters.  
+(6) Remarks: Mandatory field, alphanumeric field with a limit of 1000 characters.  
+iv) After keying in the details, SR allocates to  DEO to upload  the documents.  
+(1) Court  Order: Provision to upload the Court order, A PDF of max size 5 MB.  
+(2) Original Deed: Provision to upload the Original Deed copy, A PDF of max size 5 MB.  
+v) DEO sends back to SR for verification.  
+vi) SR verifies the details and clicks the  ‘Save and Continue’ button, and the application will 
+proceed to Step 7 of SR.  
+vii) Then, the typical registration flow is  to be followed.  
+---PAGE 12---
+Department of Stamps and Registration, Government of Karnataka  CSG   
+ 
+12 
+ 
+4.2.3 Scenario 3: Documents which are refused in Kaveri 1 are being registered by  the order 
+of the District Registrar  
+ 
+Figure 3: Activity diagram to re -register a document refused in Kaveri 1 with the DR order . 
+Appeal to DR:  
+The applicant collects the refusal endorsement from the SR, makes an appeal to the court for 
+verification of the details, and  requests that the DR issue an order to re -register the document.  
+i) DR tries to fetch the document using the final registration number.  
+ii) The system will create an application book 2.  
+iii) DR enters the following details  
+(1) Year of Registration: Mandatory field (drop -down) starting with 1980 -81. 
+(2) Appeal Date: Mandatory field (calendar).  
+(3) DR Order Date: Mandatory field (calendar).  
+
+---PAGE 13---
+Department of Stamps and Registration, Government of Karnataka  CSG   
+ 
+13 
+ 
+iv) DR allocates to DEO to upload  the documents.  
+(1) DR Order: Provision to upload DR order, A PDF of max size 5 MB.  
+(2) Original Deed: Provision to upload the Original Deed copy, A PDF of max size 5 MB.  
+v) DEO sends back to DR for verification.  
+vi) DR verifies the details and completes the process . 
+vii) Applicant visits the SR office and re -presents the document once again.  
+viii) Request SR to Re -register the document.  
+Re-registration:  
+i) The applicant visits the SRO with the DR order and other required documents.  
+ii) SR opens the ‘ Book 2 ’ dashboard, locates the document in the list, and clicks on the  release 
+button.  
+(1) If the data is fetched, then the system will prompt SR to ve rify the following details.  
+(a) Year of Registration.  
+(b) Appeal Date.  
+(c) The DR Order Number.  
+(d) The DR Order Date.  
+(2) Else, the system will prompt the SR to add the missing details.  
+(a) Property details.  
+(b) Schedule details.  
+(c) The system displays a summary. The SR clicks on the finalise button to complete the 
+data addition.  
+(3) Then the SR will verify the following  
+(a) Year of Registration.  
+(b) Appeal Date.  
+(c) The DR Order Number.  
+(d) The DR Order Date.  
+(4) Then the SR keys enter the following details.  
+(a) Represented by: Mandatory field, a  text box with a limit of 100 characters.  
+(b) Remarks: Mandatory field, alphanumeric field with a limit of 1000 characters.  
+iii) After keying in the details, SR clicks the  ‘Save and Continue’ button, and the application will 
+proceed to Step 7 of SR.  
+  
+---PAGE 14---
+Department of Stamps and Registration, Government of Karnataka  CSG   
+ 
+14 
+ 
+4.2.4 Scenario 4: Documents which are refused in Kaveri 1 are being registered by order of 
+the Court  
+ 
+Figure 4:Activity diagram to re -register a document refused in Kaveri 2 with the Court order  
+Appeal to Court : 
+The applicant collects the refusal endorsement from th e SR, makes an appeal to the court for 
+verification of the details, and requests that the DR issue an order to re -register the document.  
+i) The Court verifies and issues an order to re -register.  
+
+---PAGE 15---
+Department of Stamps and Registration, Government of Karnataka  CSG   
+ 
+15 
+ 
+ii) Applicant visits the SR office and re -presents the document once  again.  
+iii) Request SR to Re -register the document.  
+Re-registration:  
+i) The applicant visits the SRO with the Court order and other required documents.  
+ii) The SR tries to fetch the details using the final registration number  
+iii) The system will create an application in  Book 2.  
+iv) The SR clicks on the release button to proceed further.  
+(1) If the data is fetched, then the system will prompt SR to enter the following details.  
+(a) Appeal Date: Mandatory Field (Calendar)  
+(b) The Court Order Number: Mandatory field, the  alphanumeric field with a  limit of 25 
+characters.  
+(c) The Court Order Date: Mandatory field, calendar.  
+(2) Else, the system will prompt the SR to add the missing details.  
+(a) Property details.  
+(b) Schedule details.  
+(c) The system displays a summary. The SR clicks on the finalise button to comp lete the 
+data addition.  
+(d) After verifying the summary, the SR will enter the following  
+(e) Appeal Date: Mandatory Field (Calendar)  
+(f) The Court Order Number: Mandatory field, the  alphanumeric field with a  limit of 25 
+characters.  
+(g) The Court Order Date: Mandatory fiel d, calendar.  
+(3) Then the SR keys enter the following details.  
+(a) Year of Registration: Mandatory field (drop -down) starting with 1980 -81. 
+(b) Represented by: Mandatory field, a  text box with a  limit of 100 characters.  
+(c) Remarks: Mandatory field, alphanumeric field with a limit of 1000 characters.  
+v) After keying in the details, SR allocates to DEO to upload  the documents.  
+(1) Court Order: Provision to upload the Court order, A PDF of max size 5 MB.  
+(2) Original Deed: Provision to upload the Original Deed copy, A PDF of max siz e 5 MB.  
+vi) DEO sends back to SR for verification.  
+vii) SR verifies the details and clicks the  ‘Save and Continue’ button, and the application will 
+proceed to Step 7 of SR.  
+ 

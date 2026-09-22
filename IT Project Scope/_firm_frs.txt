@@ -1,0 +1,501 @@
+Karnataka Valuation & E-Registration (KAVERI - 2.0)
+Government of Karnataka
+Functional Requirement Specifications
+For KAVERI 2.0
+Department of Stamps & Registration
+Government of Karnataka
+Version 1.7
+___________________
+Firm Registration Module
+Prepared by
+Centre for Smart Governance (CSG)
+2nd Floor, TTMC Yeshwanthapura, BMTC Bus station
+Bangalore – 560022
+Acronyms
+Revision History
+Introduction
+The Department of Stamps and Registration (hereafter referred to as “department”) is the custodian of registered public records such as Registration of Marriages and Firms, Documents pertaining to transactions, namely sale, transfer, or gift of immovable properties, Mortgage, Power of Attorneys, wills and many more. The department's prime responsibility is to maintain and preserve these critical public records. The records or the information associated with registered records are to be made avai
+The department has computerised the delivery of these services through the development of KAVERI software. KAVERI Online service is a web-based application of the department which provides an interface to the citizens required for documents, marriage, and firm registration. It enables citizens to know the details of stamp duty, property guidelines value, data entry for document registration and marriage registration, etc. The list of modules of KAVERI 2.0 is available in Annexure 1.
+Document scope
+This document is a Functional Requirement Specification (FRS) describing the functional features of the Firm Registration, Amendment, Reconstitution, and Dissolution Module in document registration via Kaveri 2.0. The draft document is prepared by the Centre for Smart Governance (CSG) and has to be approved by the department. The intended audience of the document is the departmental approving authority and the development team of CSG.
+The document was prepared through document analysis and departmental consultation. The high-level requirements were shared by the department.
+Overview
+Partnership is the relation between persons who have agreed to share the profits of a business carried on by all or any of them acting for all. Persons who have entered into partnership with one another are called individual Partners and collectively a Firm, and the name under which their business is carried on is called the Firm Name.
+The module on firm registration seeks to enable the online registration of firms within Kaveri 2.0. The following functions are required as part of the firm module.
+New Firm Registration: The Constitution or declaration of terms and conditions of a firm signed by two or more individuals to carry out a business or an institution.
+Re-Constitution of the Firm: Change in the constitution of the firm – Incoming/ Outgoing Partner.
+Amendment of the Firm: Any change to the Firm such as name or location of the principal place of business, change in the place of business, alteration in the name or permanent address of the partners, notice of election by a person admitted to the benefit of partnership on attaining majority.
+Dissolution of the Firm: The dissolution of a partnership between all the partners of a firm is called the “dissolution of the firm”.
+Protest Entry: Any partner or other person interested makes a protest in writing to the Registrar disputing any entry made in the Register of Firms
+Apart from these functionalities, the inspection of the indexes to the register of firms and of original documents and also the access to certified copies are to be provided.
+4. Overall Functional Flow
+The above-mentioned functionalities take place in the office of the District Registrar under the Department of Stamps and Registrations, Government of Karnataka under the Indian Partnership Act 1932. These functions are sought to be made available online through the Firm Registration module under Kaveri 2.0 and are elaborated in this document.
+However, the functionalities of firm registration, reconstitution, and dissolution are also related to The Karnataka Stamp Act, 1957, for stamp duty collection. Firm registration, for instance, involves the registration of a partnership deed in the office of the sub-registrar, which is part of the document registration module of Kaveri 2.0 and has already been implemented. Thus, registration of a new firm involves two steps (Figure 1)
+Document registration of a partnership deed in the Office of the Sub-Registrar
+Registration of the new firm in the Office of the District Registrar.
+Figure 1: Typical flow of new firm registration
+Similarly, the reconstitution and dissolution of the firm requires the concerned documents to be registered and due payment of stamp duty in the office of the sub-registrar upon which they are filed in the office of the district registrar.
+5. Functional Description
+5.1 Registration of Firm
+The registration of firms consists of two distinct steps (Table 1). Citizens can register the partnership deed for the constitution of the firm in Kaveri 2.0. The registration process follows the typical document registration flow at SRO. After registering the partnership deed, citizens can file their firm at Kaveri 2.0 by submitting the application.
+Table 1: Steps for registration of a firm
+Figure 2: New Firm Registration process.
+Process Flow:
+Figure 3: Process flow for new firm registration
+5.2 Amendment of Registered Firm
+There are four different types of amendments (Table 2) that can be done to a registered firm. Only the partners or their specially authorized agents can apply for the amendments.
+Table 2: Types of Amendment
+Amendment I: Recording of Alterations in Firm-Name and Principal Place of Business:
+When an alteration is made in the firm name or the location of the principal place of business of a registered firm, a statement shall be sent to the Registrar within 90 days from the date of making such alteration, accompanied by the prescribed fee, specifying the alteration and signed and verified in the manner required under section 59.
+Amendment II: Noting of Closing and Opening of other places of business:
+When a registered firm discontinues business at any place or begins to carry on business at any place, such place not being its principal place of business, any partner or agent of the firm shall send intimation thereof to the Registrar within 90 days from the date of such discontinuance or, as the case may be, from the date on which the firm begins to carry on business at such place. The Registrar shall then make a note of such intimation in the entry relating to the firm in the Register of Fir
+Amendment III: Noting of Changes in Names and addresses of Partners:
+When any partner in a registered firm alters his/her name or permanent address, an intimation of the alteration shall be sent, within 90 days from the date of making such alteration, by any partner or agent of the firm to the Registrar, who shall deal with it in the manner provided in section 61.
+Amendment IV: Notice of election by a person admitted to the benefit of partnership on attaining majority:
+When a minor who has been admitted to the benefits of partnership in a firm attains majority and elects to become or not to become a partner, and the firm is then a registered firm, he or his agent specially authorized on this behalf, shall within 90 days from the date of his election, give notice to the Registrar that he has or has not become a partner, and the Registrar shall deal with the notice in the manner provided in subsection 63(2).
+Process Flow
+Figure 4: Process flow for Amendments
+5.3 Reconstitution of firm
+The Reconstitution of firms consists of two distinct steps (Table 4). Citizens can register the reconstitution of the partnership deed for the reconstitution of the firm in Kaveri 2.0. The registration process follows the typical document registration flow at SRO. After registering the partnership deed, citizens can file their firm at Kaveri 2.0 by submitting the application.
+The registration process follows the Typical document registration Flow at SRO (Figure 3).
+Table 4 Firm Re-constitution
+Figure 3 Reconstitution of firm
+Process Flow
+Figure 5: Process flow for Reconstitution
+5.4 Dissolution of firm
+Citizens can register the Dissolution of the partnership deed of the firm in Kaveri 2.0. The registration process follows the Typical document registration Flow at SRO (Figure 4).
+Table 4 Dissolution of firm
+Figure 4 Dissolution of firm
+Process Flow
+Figure 6: Process flow for Dissolution
+5.5 Protest Entry
+Where any partner or other person interested makes a protest in writing to the Registrar disputing any entry made in the Register of Firms, the Registrar shall record such protest and make a reference thereto in red ink in the remark’s column against the disputed entry
+Table 5 Protest Entry
+Process Flow
+5.6 Index Search
+If any partner or any person interested knows the firm details then they’ll search the index of registered firms
+Process Flow
+Figure 7: Process flow for Index search
+5.7 Certified copy - CC
+The Registrar shall, on application, furnish to any person, on payment of such fee as may be prescribed, a copy, certified under his hand, of any entry or portion thereof in the Register of Firms.
+Process Flow
+Figure 8: Process flow for Certified copy.
+Integration with other systems/modules
+External integration
+This module has an integration with the external system Digi locker data centres for E-sign.
+Data migration from Kavari-1 to Kaveri-2.
+Integration with SAKALA
+Assumptions and Dependencies
+Assumptions:
+Dependencies:
+This feature depends on the Aadhaar database.
+Limitations
+Certified copies:
+Registration Certificates (Form C) of firms registered in Kaveri 1 will be shown as is.
+Providing All input forms (form 1 to form 6) and Form A for Kaveri 1 registered in firms is not possible.
+Annexure – 1 – List of modules of Kaveri 2.0
+Annexure 2: Objectionable Names or Emblems
+THE EMBLEMS AND NAMES (PREVENTION OF IMPROPER USE) ACT, 1950
+ACT NO. 12 OF 1950
+United Nations Organization -UNO
+World Health Organization - WHO
+The Indian National Flag
+Government of India or of any State, or any other insignia or coat-of-arms used by any such Government or by a Department of any such Government
+The President, Governor, [Sadar-i-Riyasat] or Republic or Union of India
+Any name which may suggest or be calculated to suggest—
+(i) the patronage of the Government of India or the Government of a State; or
+(ii) connection with any local authority or any corporation or body constituted by the Government under any law for the time being in force
+United Nations Educational, Scientific and Cultural Organisation - UNESCO
+Rashtrapati, Rashtrapati Bhavan, Raj Bhavan
+8A. Mahatma Gandhi, Shrimati Indira Gandhi, Chatrapati Shivaji Maharaj or the Prime Minister of India, Gandhi, Nehru, Shivaji
+8B. Shri Lal Bahadur Shastri
+Ashoka Chakra, Shourya Chakra, Vir Chakra, Bharat Ratna, Gallantry Awards, Padmasri, Padma Bhushan, Padma Vibhushana, Jnanapith, Dhyanachand, Dadasaheb Phalke, Tensing Norgay or any other name of the awards given by the Government
+International Civil Aviation Organisation
+Interpol - International Criminal Police Organisation
+World Meteorological Organisation - WMO
+Tuberculosis Association of India
+International Atomic Energy Agency
+The names “Ashoka Chakra” or “Dharma Chakra”
+The name of the Parliament or the Legislature of any State, or the Supreme Court, or the High Court of any State, or the Central Secretariat, or the Secretariat of any State Government or any other Government Office
+Rama Krishna Math and Mission
+Sri Sarda Math and Ramakrishna Sarda Mission
+The Bharat Scouts and Guides
+International Olympic Committee
+National Youth Emblem
+Auroville
+Sri Sathya Sai Central Trust
+Sri Sathya Sai, Sarve Bhavantu Sukhinah
+NHRC/nhrc: National Human Rights Commission
+FIFA: Federation Internationale de Football Association
+Annexure 3:  Checklist under DRO Login
+Below mentioned points are to be provided with a check box to tick whether the documents were received or not:
+Support Document Description:
+Form I: Registration form for the incorporation of a Partnership Firm
+Memorandum/Rules/ Member Information
+ID Proof
+Address Proof
+Below mentioned questions below are to be provided with a check box to tick the Yes or No options and Remarks Column to enter DR remarks.
+I. Firm Details
+Whether the application is presented with proper authorisation?
+Whether all corrections in the application form are attested?
+II. Name & Address
+Whether Name of the Firm do not contain prohibited words?
+Whether Name of the Firm is as per Law?
+Whether the Address of the Firm is as per Partnership Deed/
+Whether the Principal Place of Business is in the jurisdiction of the Registrar?
+III. Partner Details
+Whether Name, Age and Address are as per the Partnership Deed?
+Whether the date of joining is as per the Partnership Deed?
+Whether the duration of the firm is as per the Partnership Deed?
+Whether the copy of the deed of partnership is submitted for the verification?
+Whether Date of Execution is mentioned in the partnership deed?
+Whether Name and Address of all the members are forthcoming in the partnership deed?
+Whether Stamp Duty is paid as per the Stamp Act?
+Annexure 4: Input and Output Forms
+Annexure 5: Clarificatory questions and Answer from Department,
+Feedback provided by Department, dated: 19-07-2024
+New Firm Registration:
+During a New Firm registration date of the constitution and the date of partners joining the firm should be the same or different.
+Answer: Same
+What details should be captured at the interfaces and purpose section?
+Answer: As per FORM 1 all details
+Amendments:
+Do we need to capture the date of amendment?
+Answer: Yes
+In amendment 1 can we change the nature of business.
+Answer: Yes
+Is there any time limit to notify the amendments to DR?
+Answer: 15 days, as per rule 4(2) of Karnataka Partnership (Registration of FIRMS) rules, 1954.
+If the amendment is notified after the prescribed time what is the penalty amount?
+Answer: No provision for penalty
+For amendments 2,3 and 4 do we need to take the sign of all partners or only the relevant partner's sign is acceptable?
+Answer: All Partners
+As per the below image we can see that there is an attestation, is it the witness attestation?
+Do we need to collect witness details and signature to all the amendments?
+Answer: Yes
+For amendment 4 do we need to take the date of election to become a partner once he/she attains majority?
+Answer: Yes
+Reconstitution:
+What is the document for to be collected by reconstitution of firm?
+Answer: 1. FORM V
+2. Reconstitution deed
+3. Self-attested ID and Address Proof of the Incoming parties
+4. IF the Retiring partner has not contributed any immovable property to the firm and has not taken away any immovable property from the firm, a notarised affidavit on rs. 100/- E Stamp paper swearing that he has not contributed any immovable property to the firm and not taking away any immovable property from the firm.
+Dissolutions
+While dissolving a firm what happens to other existing partners? Do they exit first and then dissolution happens or both reconstitution and dissolution will take place together?
+Answer: Dissolution takes place at a time.
+Certified copy:
+Do we have any application format to apply for CC?
+Answer: No
+For which documents can an applicant apply for CC on the firm registration module?
+As per the below image, we have observed only form A and along with this document, which are the other documents applicants can get as certified copies
+Answer: Form 1 to 6, From A, C, D
+What is the fee for a CC application? I need clarification on the queries below:
+As per act it says INR 1 for Form C (registration certificate)
+For any other document 50 ps for each 100 words and part thereof.
+Do we need to collect any application fee?
+Answer: FORM A, C and D
+For what duration an applicant can apply for CC? is it for a financial year or between a particular period?
+Answer: A particular period
+The CC should be verified and Digitally signed by DR or it should be verified by any DFDA/DSDA and digitally signed by both?
+Answer: Both
+Do we need to get the E-sign done by an applicant to apply for CC?
+Answer: Yes
+Index Search:
+What details should be displayed in these fields of Form B: File name and Volume number, 1st page entry,
+Answer: Registration number, FIRM Name and address, date of registration, duration and partners details.
+Please share a copy of the index of the firm (form B).
+Answer: 1. Firm Name
+2. Serial number borne on register.
+3. Volume number of register
+4. First page of entry in the volume
+5. Remarks
+6. Signatures/of Registrar
+Is the index to the firm to be updated regularly for all the transactions (like Form A or A-register)
+Answer: Yes
+Protest Entry:
+Need clarification on protest entry flow, what happens if protest is accepted and what happens if protest is rejected?
+Answer: As per rule 7 of Karnataka Partnership (Registration of FIRMS) Rules, 1954, where any partner or other person interested makes a protest in writing, disputing any entry made in the register of firms, the registrar shall record such protest and make a reference thereto in red ink in the remarks column against the disputed entry.
+Once the protest is accepted or rejected by the DR, does the protester get any intimation?
+Answer No
+For protest entry, what are the fees to be collected?
+Answer:  No fee.
+What details should system capture and make note in Register A, when an applicant applies for Index search, protest entry and certified copy?
+Answer: Register Number, FIRM Name and address, date of registration, Duration and Partner details
+SAKALA Integration:
+Do we need to integrate with SAKALA and send intimation to applicants via SMS?
+Answer: Yes
+If yes then please share the SMS templets if you have.
+Answer:
+Submission of Application
+Your FIRM application (FORM I /II/III/IV/V/ VI ) is submitted successfully to DRO Office name with application number xxx.  From : Department of stamps and registration.
+Send back with remarks:
+Your FIRM application xxx (FORM I /II/III/IV/V/ VI ) submitted to DRO Office name has sent back with remarks.  From : Department of stamps and registration.
+Payment:
+Your FIRM application xxx (FORM I /II/III/IV/V/ VI ) submitted to DRO Office name has been verified and sent for payment.  From : Department of stamps and registration.
+Submission Template post payment:
+Your FIRM application xxx (FORM I /II/III/IV/V/ VI )  is submitted to DRO Office name with Sakala number IGxxxx it will be processed in x working days.  From : Department of stamps and registration.
+Post Dsign message:
+Your FIRM application xxx (FORM I /II/III/IV/V/ VI ) is been registered successfully with number xxx at DRO Office name. Please login to your account to download the certificate.  From : Department of stamps and registration.
+Feedback provided by the Department, dated: 26-07-2024
+FORM 1
+1. There is no provision for print receipt in Department login
+2. Identification of witness, identifier can identify one or more partners. If single witness identify both witness then no need of additional witnesses.
+3. Form 1, E-sign of witness should be captured in all the place holders asking for E-sign.
+FORM 2,3,4,5,6
+1. Change in the name of the firm or in the location of the principal place of business for FORM 2
+2. Do not provide option to change Nature of Business for FORM 2.
+3. Partners and agent screen is not been displayed for FORM 2.
+4. Witness screens are not required for FORM 3,4,5,6
+5. Esign is enough for any one of partner/agent for FORM 3,4
+6. For FORM 5 only esign should be captured for incoming and outgoing partner/agent,
+7. If FORM 5 is for disolution then signature for one of partner/agent in existing partners is sufficient.
+8. For FORM 6 esign should be captured for partner who has atained as major or by its agent. Please refer section 30(5) logic is been validated.
+9. Protest entry - Post successfull acceptence of protest entry should be captured in remarks column in report of "Index to the register of firms".
+10. Index and Certified copy seach- taluk is not required.
+Fee required details
+FORM 1
+Registration fee 100
+Filing fee 3
+FORM 2
+Registration fee 50
+Filing fee 1
+FORM 3
+Registration fee 25
+Filing fee 1
+FORM 4
+Registration fee 25
+Filing fee 1
+FORM 5
+Registration fee 25
+Filing fee 1
+FORM 6
+Registration fee 25
+Filing fee 1
+NOTE:
+1. No offline flow if E-Sign is getting failed from citizen in FRS.
+2. No workflow to handle Kaveri 1 FIRM registered documents for Amendments, Dissolution and Reconstitution
+Feedback provided by the Department, dated 21-08-2024
+What is the process flow for applicants who are not willing to do an E-sign/ In case of E-Sign Failure cases (offline flow)?
+Ans: Two options should be given to Sign one: Sign online(E-sign) and Sign Offline; applications with E-sign will be submitted to DR after successful payment for registration, and applications with manual signatures, duly signed applications should be submitted to the District Registrar Office for registration.
+Do we need to differentiate between the online and offline modes of input and output documents?
+Ans: There should not be any differentiation in either flow.
+Recommendations/Suggestions from the department
+Annexure 6: Input Forms
+Application of new firm Registration Form- I
+Amendment -I:  Form II
+Amendment -II: Form III
+Amendment -III: Form IV
+Amendment -IV: Form VI
+Re-Constitution: Form V
+Dissolution: Form V
+Annexure 7: Output forms
+Form B Index to the Register of Firms
+Form D Memorandum Acknowledging Receipts of Documents
+Form A Register of Firms
+Form C Acknowledgement of Registration of Firms
+Form E Receipt of Fees
+Annexure 8: Services to be provided for firms registered in Kaveri 1
+The below table explains the type of data and nature of data available.
+After analysing the data, Kaveri 2 will handle the below mentioned service for firms registered in Kaveri 1 with limitations.
+Amendment 1:
+Name of the firm can be amended.
+Address of the firm: Existing firm address will be fetched and displayed in the 1st cell of Address section, applicant has to enter all the subfields in address field.
+And typical flow continues.
+Amendment 2:
+Address of the firm: Existing firm address will be fetched and displayed in the 1st cell of Address section, applicant has to enter all the subfields in address field.
+As we’ve not seen any details of other places of business in the data shared with us hence applicant will be show addition of new place of business.
+And typical flow continues
+Amendment 3:
+Name of the Partners can be amended.
+Address of the Partners: Existing firm address will be fetched and displayed in the 1st cell of Address section, applicant has to enter all the subfields in address field.
+And typical flow continues.
+Amendment 4:
+Recording of withdrawal of a minor: When a minor who has been admitted to the benefits of partnership in a firm attains majority and elects to become or not to become a partner.
+Record the choice: Record the choice of partner.
+And typical flow continues.
+---TABLE 0---
+CSG | Centre for Smart Governance
+DEO | Data Entry Operator
+DR | District Registrar
+DRO | District Registrar Office
+DFDA | District First Division Assistant
+DSDA | District Second Division Assistant
+SRO | Sub Registrar Office
+---TABLE 1---
+Date | Version | Prepared by | Approved by | Reason for Changes
+26.03.2023 | 1.0 | Basanti Prahlad | Department | 
+16.03.2024 | 1.1 | Arugolli Subhash | Saurabh Bhattacharya | 
+05.04.2024 | 1.2 | Vani P M |  | 
+29.06-2024 | 1.3 | Pavan Kumar |  | Addition of amendments.
+10-07-2024 | 1.4 | Pavan Kumar |  | Updating the FRS based on answers to the clarificatory questions.
+01-08-2024 | 1.5 | Pavan Kumar |  | Updating the FRS-based feedback received.
+23-08-2024 | 1.6 | Pavan Kumar |  | Addition of offline flow and integration with Kaveri 1 data.
+20-07-2026 | 1.7 | Kavyashree D |  | K1 Data correction, capture deceased partner details and provision to upload the supporting document
+---TABLE 2---
+Sl. No | Action required | Actors | Statutory provisions
+1 | Document Registration of Partnership Deed / Under 40(A) of Stamp Act | Partner or Agent, / SRO | The Karnataka Registration Act, 1908 / Karnataka Stamp Act, 1957
+2 | Registration of firm / Under Sections 59&59A-1 of the Partnership Act | Partner or Agent, / DRO | The Indian Partnership Act, 1932
+---TABLE 3---
+Functional Requirement Specifications | Functional Requirement Specifications
+Stakeholder/ Interface | Role/ Responsibilities
+Applicant (Partner or Agent) | File the application for Registration of firm / Online Data Entry / Submits the application form -1 (With or Without E-sign) / Upload Relevant Documents / Payment of fees / Collect Fee Receipt / Colle
+DFDA/DSDA | Verification of allotted application / Verification of the documents Submitted / Add Remarks (If Any) / Send back to DR after verification.
+DR | Verification of the application / Allocate applications for verification of summary to DFDA/DSDA / Verification of the documents Submitted / Re-verify the DFDA/DSDA verified applications. / Add Remark
+System | Validations including Firm name, Age of partners, agents, guardians, witness, date of joining of a partner, and date of appointment of agent  / Select the DRO of the jurisdiction where the principal p
+Process Triggers | Receiving application at DR Office
+Process Description | Bird view of New firm registrations /  / New firm registration consists of 8 screens for applicants to submit the application, which captures details as shown below table: /  / New firm registration c
+Interfaces and purpose | 
+---TABLE 4---
+Sl. No. | Type of Amendment | Actors | Statutory provisions
+1 | Recording of Alterations in Firm-Name, Nature of Business, and Principal Place of Business. | Partners or agents / DRO | The Indian Partnership Act, 1932. Section 60
+2 | Noting of Closing and Opening of other places of business. | Partners or Agents / DRO | The Indian Partnership Act, 1932. Section 61
+3 | Noting of Changes in Names and addresses of Partners. | Partners or Agents / DRO | The Indian Partnership Act, 1932. Section 62
+4 | Notice of election by a person admitted to the benefit of partnership on attaining majority. | Partners or Agents / DRO | The Indian Partnership Act, 1932. Section 63 (2)
+---TABLE 5---
+Functional Requirement Specifications | Functional Requirement Specifications | Functional Requirement Specifications
+Stakeholder/ Interface | Role/ Responsibilities
+Applicant (Partner or Agent) | Login, enter the Firm registration number and fetch the details. / Verify and change the necessary details. / E-Sign on Summary:  / For amendment I:    Form - II / For amendment II:   Form - III / For
+DFDA/DSDA | Verification of the Application Summary. / Verification of the documents Submitted. / Add Remarks (If Any). / Send back to DR for verification.
+DR | Verification of the Application Summary. / Verification of the documents Submitted. / Add Remarks (If Any). / Send it back to the applicant for payment. / Approval of Registration in the System. / Iss
+System | Validations including Firm name (the system should check the name as per objectionable names and emblem act), fee payment, and place of firm / Select the DRO of the jurisdiction where the principal pl
+Process Triggers | Receiving application at DR Office
+Process Description | Bird's view of the amendment of the registered firm  /  / Amendment of registered firms has eight screens for the applicant to submit the application, which captures details as shown below table: /  /
+Interfaces and purpose | 
+---TABLE 6---
+Sl. No. | Action required | Actors | Statutory provisions
+1 | Document Registration of Reconstitution Deed / Under 40(B) of Stamp Act | SRO | The Karnataka Registration Act, 1908 / Karnataka Stamp Act, 1957
+2 | Reconstitution of firm / Under section 31&32 of the Partnership Act | DRO | The Indian Partnership Act, 1932
+---TABLE 7---
+Functional Requirement Specifications | Functional Requirement Specifications
+Stakeholder/ Interface | Role/ Responsibilities
+Applicant / (Partner or agent) | File the application for Reconstitution of the firm / Online Data Entry / E-Sign on Summary: Form – V / Upload Relevant Documents / Make the necessary changes as per DR remarks. / Fees Payment  / Down
+DFDA/DSDA | Verification of the application Summary / Verification of the documents Submitted / Add Remarks (If Any) / Send back to DR for verification.
+DR | Verification of the application Summary or allocation of application to DFDA/DSDA for verification. / Verification of the documents Submitted / Reverification of DFDA/DSDA Verified applications. / Add
+System | Retrieve the Firm details upon entering the Final registration number or Firm Name. / Select the DRO of the Jurisdiction where the principal place of the firm is located. / Calculation of Fees. / Gene
+Process Triggers | Receiving application at DR Office
+Process Description | Application Filing: / Application to be filed in the Kaveri 2.0 Portal / Select the Service required. The services provided are  / Registration of New Firm / Amendment of firm / Re-Constitution of Fir
+Interfaces and purpose | 
+---TABLE 8---
+Sl. No. | Action required | Actors | Statutory provisions
+1 | Document Registration of Dissolution Deed / Under 40(C) of Stamp Act | Partner or Agent / SRO | The Karnataka Registration Act, 1908 / Karnataka Stamp Act, 1957
+2 | Dissolution of firm / Under section 39 of the Partnership Act | Partner or Agent / DRO | The Indian Partnership Act, 1932
+---TABLE 9---
+Functional Requirement Specifications | Functional Requirement Specifications
+Stakeholder/ Interface | Role/ Responsibilities
+Applicant | Apply for Dissolution of firm / Online Data Entry / E-Sign on Summary: Form – V / Upload Relevant Documents / Payment of fees / Collect Digitally Signed Acknowledgment and Fee Receipt
+DFDA/DSDA | Verification of the application Summary / Verification of the documents Submitted
+DR | Verification of the application Summary / Verification of the documents Submitted / Add Remarks (If Any) / Send back to applicant for Payment / Approval of Registration in the System / Authentication 
+System | Retrieve the Firm Details upon Final registration number / Select the DRO of the Jurisdiction where the Principal place of the firm is Located / Calculation of Fee / Print Acknowledgment and Fee Recei
+Process Triggers | Receiving application at DR Office
+Process Description | Application Filing: / Application to be filed in the Kaveri 2.0 Portal / Select the Service required. The services provided are  / Registration of New Firm / Amendment of firm / Re-Constitution of Fir
+Interfaces and purpose | 
+---TABLE 10---
+Sl. No. | Action required | Actors | Statutory provisions
+1 | Protest in writing to the Registrar (Protest letter) | Protestor | As per rule 7 of Karnataka Partnership (Registration of Firms) Rules 1954.
+2 | Highlighting the disputed firms with ‘Red’ font | DRO | As per rule 7 of Karnataka Partnership (Registration of Firms) Rules 1954
+---TABLE 11---
+Functional Requirement Specifications | Functional Requirement Specifications
+Stakeholder/ Interface | Role/ Responsibilities
+Applicant (Protester) | File the application for protest (Protest Letter) / Online Data Entry / Protest Letter / Upload Relevant Documents
+DR | Verification of the Protest Letter. / Verification of the documents Submitted / Add Remarks (If Any) / Accept/reject the protest. / Authentication of protest entry.
+System | Retrieve the Firm Details upon Final registration number / Collect the protester details. / Prepare a protest letter. / Highlight the firm with Red colour if the protest is valid. / Updating in the Re
+Process Triggers | Receiving application at DR Office
+Process Description | Application Filing: / Application to be filed in the Kaveri 2.0 Portal / Select the Service required. The services provided are  / Registration of New Firm / Amendment of firm / Re-Constitution of Fir
+Interfaces and purpose | 
+---TABLE 12---
+Sl. No. | Action required | Actors | Statutory provisions
+1 | Applicant searching the firm details | Applicant | As per rule 9(a) Karnataka Partnership (Registration of Firms) Rules 1954
+2 | Details of firms | DRO | As per rule 9(a) Karnataka Partnership (Registration of Firms) Rules 1954
+---TABLE 13---
+Functional Requirement Specifications | Functional Requirement Specifications
+Stakeholder/ Interface | Role/ Responsibilities
+Applicant | File the application for index search. / Online Data Entry / Payment of fees / Collect Fee Receipt and Index for the Registers of the firm (Form B)
+System | Retrieve the Firm Details upon Final registration number / Fetches the details of firms / Print Acknowledgment and Fee Receipt / Updating in the Register of Firms and Its Index / Accounting entry for 
+Process Triggers | Making the payment and applying.
+Process Description | Application Filing: / Application to be filed in the Kaveri 2.0 Portal / Select the Service required. The services provided are  / Registration of New Firm / Amendment of firm / Re-Constitution of Fir
+Interfaces and purpose | 
+---TABLE 14---
+Sl. No. | Action required | Actors | Statutory provisions
+1 | Applicant applied for certified copies | Applicant | Section 67 of Karnataka Partnership (Registration of Firms) Act 1932 and as per rule 17 Karnataka Partnership (Registration of Firms) Rules 1954
+2 | Provide a List of forms requested | DRO | Section 67 of Karnataka Partnership (Registration of Firms) Act 1932 and as per rule 17 Karnataka Partnership (Registration of Firms) Rules 1954
+---TABLE 15---
+Functional Requirement Specifications | Functional Requirement Specifications
+Stakeholder / Interface | Role/ Responsibilities
+Applicant | File the application for a Certified copy / Online Data Entry / Verify the entered details before submission. / Payment of fees / Collect Digitally Signed Certified copy and Fee Receipt
+DR | Verification of the digitally signed certified copy. / Reject CC applications and notify the citizen / Authentication of certified copy with digital sign
+System | Retrieve the Firm Details upon Final registration number/Name / Calculation of Fee / Generate Fee Receipt / Updating in the Register of Firms and Its Index / Accounting entry for each transaction in A
+Process Triggers | Receiving application at DR Office
+Process Description | Application for Certified copy: / Application to be filed in the Kaveri 2.0 Portal / Select the Service required. The services provided are  / Registration of New Firm / Amendment of firm / Re-Constit
+Interfaces and purpose | 
+---TABLE 16---
+Sl No | Module No | Main Module | Sub-Module
+1 | 1.1 | Registration | Registration
+2 | 1.2 | Registration | Appointment
+3 | 1.3 | Registration | Integration module
+4 | 1.4 | Registration | Stamp duty and Registration fee calculation
+5 | 1.5 | Registration | Guideline value calculation
+6 | 1.6 | Registration | Rule 17 (2) filing
+7 | 1.7 | Registration | Rule 17 (3) filing
+8 | 1.8 | Registration | Old pending release module
+9 | 1.9 | Registration | Re-Registration module
+10 | 1.1 | Registration | Will after Death
+11 | 1.11 | Registration | Filing documents (FRUITS)
+12 | 1.12 | Registration | Scanning
+13 | 1.13 | Registration | Memo transmission and filing
+14 | 1.14 | Registration | 68(2) correction
+15 | 1.15 | Registration | Cross-reference Rule 123
+16 | 1.16 | Registration | Integration exemption
+17 | 1.17 | Registration | Court entry
+18 | 1.18 | Registration | Liability
+19 | 1.19 | Registration | Status tracking
+20 | 1.2 | Registration | Investigation and Search
+21 | 1.21 | Registration | Valuation Module (CVC)
+22 | 2 | EC | 
+23 | 3 | CC | 
+24 | 4 | Verify Document | 
+25 | 5 | Power of attorney Authentication Module | 
+26 | 6 | Refund Module | 
+27 | 7.1 | Marriage | Hindu Marriage
+28 | 7.2 | Marriage | Special Marriage
+29 | 7.3 | Marriage | Special Marriage in Other Forms
+30 | 8 | Legacy Record digitisation | 
+31 | 9 | Audit | 
+32 | 10 | Accounts | 
+33 | 11.1 | MIS | Statutory (44)
+34 | 11.2 | MIS | Statistical (54)
+35 | 11.3 | MIS | Integration (15)
+36 | 11.4 | MIS | Computer related (4)
+37 | 11.5 | MIS | Reconciliation (5)
+38 | 11.6 | MIS | HR (5)
+39 | 12.1 | DRO | Firm Registration
+---TABLE 17---
+Sl. No. | Module | Description | Input | Output
+1 | New Firm | New Firm Registration | Form I | Form C
+2 | Amendment | Change in name of firm or principal place of business | Form II | Form D
+3 | Amendment | Intimation of change in place of business other than Principal Place of Business | Form III | Form D
+4 | Amendment | Intimation of alteration in the name or permanent address of partners | Form IV | Form D
+5 | Amendment | Notice of election by a person admitted to the benefits of partnership attaining majority | Form VI | Form D
+6 | Reconstitution / Dissolution of firm | notice of changes in the constitution of the firm or of the dissolution of the firm | Form V | Form D
+7 | Protest entry | Provision made in the application (Rule 7) | NA | NA
+8 | Index Search | Provision Made under application (Rule 9a) | NA | Form B
+9 | Certified Copy | All the input and output forms of Firm Registration/Amendment/Reconstitution or Dissolution and Form A | NA | Filled Form I to VI, Form A, Form C and Form D
+---TABLE 18---
+Mandatory Fields | Good to have features
+We need to provide an option to view the application form in the DR/DFDA/DSDA login for verification. | A view widget in RHS is to be provided in the DR/DFDA/DSDA login to verify the details in the application form with uploaded documents.
+Once the payment is done a receipt should be made available in all the logins. | A QR code will be provided in the certificate to scan and download the certificate.
+ | Label changes:  / ‘Can proceed to payment’ button label to be changed to ‘Send for payment’ / ‘Correction’ button label to be changed to ‘Send for correction’ / ‘Firm registration penalty’ label to be
+ | Check for feasibility to validate the Mobile number.
+---TABLE 19---
+Service | Comment | Name of the firm | Address of the firm | Partner Name | Partner Address | Branch details | Result
+New Firm | Name matching with existing firm master | Available | Not required | Not required | Not required | Not required | 
+Amendment-1 | Name / Address of the principal place of business | Available | Available | Available | Available | Not required | Can be Done
+Amendment-2 | Addition/Deletion of other place of business | Available | Available | Available | Available | Not available | It is not possible to remove branches as the details are not available.
+Amendment-3 | Change the name/ permanent address of the partner | Available | Available | Available | Available | Not required | Can be Done
+Amendment-4 | Election of minor partner after becoming major | Available | Available | Available | Available | Not required | Can be Done
+Reconstitution | Name and address of incoming or outgoing partners | Available | Available | Available | Available | Not required | Can be Done
+Dissolution |  | Available | Available | Available | Available | Not required | Can be Done
+CC: form 1 to form 6 | All the application forms |  |  |  |  |  | It’s not possible, as data is not available.
+CC: Form A | Details extract copy |  |  |  |  |  | It’s not possible, as data is not available.
+CC: Form C | Firm Registration Certificate |  |  |  |  |  | It can be provided.
+CC: Form D | Acknowledgement |  |  |  |  |  | It’s not possible, as data is not available.
