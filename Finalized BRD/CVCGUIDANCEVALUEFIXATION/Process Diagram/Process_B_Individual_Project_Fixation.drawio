@@ -1,0 +1,146 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="Process B - Individual Project" name="Process B - Individual Project">
+    <mxGraphModel dx="1030" dy="561" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1540" pageHeight="1964" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lane_cit" parent="1" style="swimlane;horizontal=1;html=1;startSize=64;whiteSpace=wrap;fillColor=#dae8fc;swimlaneFillColor=#fcfcfc;fontSize=13;fontStyle=1;" value="Citizen / Developer&lt;br&gt;&lt;span style=&#39;font-weight:normal;font-size:11px&#39;&gt;Applicant&lt;/span&gt;" vertex="1">
+          <mxGeometry height="1684" width="250" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_sys" parent="1" style="swimlane;horizontal=1;html=1;startSize=64;whiteSpace=wrap;fillColor=#d5e8d4;swimlaneFillColor=#fcfcfc;fontSize=13;fontStyle=1;" value="Kaveri System&lt;br&gt;&lt;span style=&#39;font-weight:normal;font-size:11px&#39;&gt;with ULMS&lt;/span&gt;" vertex="1">
+          <mxGeometry height="1684" width="240" x="250" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_dr" parent="1" style="swimlane;horizontal=1;html=1;startSize=64;whiteSpace=wrap;fillColor=#fff2cc;swimlaneFillColor=#fcfcfc;fontSize=13;fontStyle=1;" value="District Registrar (DR)" vertex="1">
+          <mxGeometry height="1684" width="500" x="490" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="b3x" parent="lane_dr" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" value="Reject with written reasons and inform the applicant" vertex="1">
+          <mxGeometry height="100" width="190" x="237" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_sec" parent="1" style="swimlane;horizontal=1;html=1;startSize=64;whiteSpace=wrap;fillColor=#ffe6cc;swimlaneFillColor=#fcfcfc;fontSize=13;fontStyle=1;" value="CVC Secretary&lt;br&gt;&lt;span style=&#39;font-weight:normal;font-size:11px&#39;&gt;DIGR (Valuation)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="1684" width="260" x="990" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_igr" parent="1" style="swimlane;horizontal=1;html=1;startSize=64;whiteSpace=wrap;fillColor=#f8cecc;swimlaneFillColor=#fcfcfc;fontSize=13;fontStyle=1;" value="IGR&lt;br&gt;&lt;span style=&#39;font-weight:normal;font-size:11px&#39;&gt;Chairman, CVC&lt;/span&gt;" vertex="1">
+          <mxGeometry height="1684" width="250" x="1250" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="title" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;" value="&lt;b style=&quot;font-size:20px&quot;&gt;Process B — Fixing Guidance Value for a New Individual Project&lt;/b&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="1500" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="b_start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontStyle=1;" value="Start" vertex="1">
+          <mxGeometry height="70" width="70" x="90" y="199" as="geometry" />
+        </mxCell>
+        <mxCell id="b1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="&lt;b&gt;1.&lt;/b&gt; Apply online or at the DR office for the new property / project, with ULPIN, documents and fee" vertex="1">
+          <mxGeometry height="100" width="190" x="30" y="344" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="&lt;b&gt;2.&lt;/b&gt; Fetch the property boundary (map) from ULMS using the ULPIN" vertex="1">
+          <mxGeometry height="100" width="190" x="275" y="504" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="&lt;b&gt;3.&lt;/b&gt; Check application: complete and eligible under Sec. 45-B?" vertex="1">
+          <mxGeometry height="124" width="196" x="510" y="652" as="geometry" />
+        </mxCell>
+        <mxCell id="b3r" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Fix the missing items and resubmit" vertex="1">
+          <mxGeometry height="100" width="190" x="30" y="664" as="geometry" />
+        </mxCell>
+        <mxCell id="b_end_x" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;fontSize=11;fontStyle=1;" value="End" vertex="1">
+          <mxGeometry height="70" width="70" x="917" y="679" as="geometry" />
+        </mxCell>
+        <mxCell id="b4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="&lt;b&gt;4.&lt;/b&gt; Visit the site (spot inspection) and propose the guidance value" vertex="1">
+          <mxGeometry height="100" width="190" x="513" y="824" as="geometry" />
+        </mxCell>
+        <mxCell id="b5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="&lt;b&gt;5.&lt;/b&gt; Review the proposal using past registrations, GIS maps, RTC, khata, town-planning and developer data; finalise the value" vertex="1">
+          <mxGeometry height="100" width="190" x="1025" y="984" as="geometry" />
+        </mxCell>
+        <mxCell id="b5d" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Proposal acceptable?" vertex="1">
+          <mxGeometry height="124" width="196" x="1022" y="1132" as="geometry" />
+        </mxCell>
+        <mxCell id="b6" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="&lt;b&gt;6.&lt;/b&gt; Approve the final guidance value?" vertex="1">
+          <mxGeometry height="124" width="196" x="1277" y="1292" as="geometry" />
+        </mxCell>
+        <mxCell id="b7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="&lt;b&gt;7.&lt;/b&gt; Approve and fix the date from which the rate applies" vertex="1">
+          <mxGeometry height="100" width="190" x="1280" y="1464" as="geometry" />
+        </mxCell>
+        <mxCell id="b8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="&lt;b&gt;8.&lt;/b&gt; Add the approved rate to Kaveri from that date and inform the applicant" vertex="1">
+          <mxGeometry height="100" width="190" x="275" y="1624" as="geometry" />
+        </mxCell>
+        <mxCell id="b_end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;fontSize=11;fontStyle=1;" value="End" vertex="1">
+          <mxGeometry height="70" width="70" x="90" y="1639" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b_start_b1_20" edge="1" parent="1" source="b_start" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=11;labelBackgroundColor=#ffffff;" target="b1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b1_b2_21" edge="1" parent="1" source="b1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=11;labelBackgroundColor=#ffffff;" target="b2" value="Application submitted">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b2_b3_22" edge="1" parent="1" source="b2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="b3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b3_b3r_23" edge="1" parent="1" source="b3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;strokeColor=#b85450;fontColor=#b85450;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="b3r" value="Needs changes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b3r_b2_24" edge="1" parent="1" source="b3r" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;entryX=0;entryY=0.5;" target="b2" value="Resubmit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b3_b3x_25" edge="1" parent="1" source="b3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;strokeColor=#b85450;fontColor=#b85450;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="b3x" value="Not eligible">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b3x_b_end_x_26" edge="1" parent="1" source="b3x" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="b_end_x" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b3_b4_27" edge="1" parent="1" source="b3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="b4" value="Accepted">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b4_b5_28" edge="1" parent="1" source="b4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="b5" value="Proposal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b5_b5d_29" edge="1" parent="1" source="b5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=11;labelBackgroundColor=#ffffff;" target="b5d" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b5d_b4_30" edge="1" parent="1" source="b5d" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;strokeColor=#b85450;fontColor=#b85450;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="b4" value="No — return with remarks">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1008" y="1194" />
+              <mxPoint x="1008" y="874" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_b5d_b6_31" edge="1" parent="1" source="b5d" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=11;labelBackgroundColor=#ffffff;" target="b6" value="Yes — send to IGR">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b6_b5_32" edge="1" parent="1" source="b6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;strokeColor=#b85450;fontColor=#b85450;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="b5" value="No — return">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1482" y="1354" />
+              <mxPoint x="1482" y="1034" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_b6_b7_33" edge="1" parent="1" source="b6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=11;labelBackgroundColor=#ffffff;" target="b7" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b7_b8_34" edge="1" parent="1" source="b7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=11;labelBackgroundColor=#ffffff;" target="b8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b8_b_end_35" edge="1" parent="1" source="b8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=11;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="b_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_t" parent="1" style="text;html=1;align=left;" value="&lt;b&gt;Legend&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="120" y="1804" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_0" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontStyle=1;" value="Start" vertex="1">
+          <mxGeometry height="70" width="70" y="1834" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Step done by the actor in that lane" vertex="1">
+          <mxGeometry height="56" width="150" x="94" y="1834" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_2" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Decision / check" vertex="1">
+          <mxGeometry height="56" width="150" x="268" y="1834" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" value="Rejection" vertex="1">
+          <mxGeometry height="56" width="150" x="442" y="1834" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;fontSize=11;fontStyle=1;" value="End" vertex="1">
+          <mxGeometry height="70" width="70" x="616" y="1834" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
