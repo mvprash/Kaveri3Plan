@@ -9,7 +9,7 @@ from pathlib import Path
 from xml.sax.saxutils import quoteattr
 
 OUT_DIR = Path(__file__).resolve().parent
-BRD = "BRD User Management (Simplified) v1.5"
+BRD = "BRD User Management (Simplified) v1.8"
 
 LANE_HEADER_H = 60
 ROW_H = 140
@@ -144,28 +144,31 @@ SYS = lane("sys", "Kaveri System")
 
 def citizen_registration():
     d = Diagram("UM_4_01_Citizen_Registration", "4.1 Citizen Registration", "UM-CIT-01 to 07",
-                [lane("cit", "Citizen"), SYS], rows=12)
+                [lane("cit", "Citizen"), SYS], rows=13)
     n = d.node
     n("s", "cit", 0, "start", "Start")
     n("c1", "cit", 1, "task", label("1", "Open Kaveri and choose Register (any time, no approval needed)", "UM-CIT-01"))
     n("c2", "cit", 2, "task", label("2", "Choose a Username", "UM-CIT-02"))
     n("c2d", "sys", 3, "decision", label("", "Is the Username free?", "UM-CIT-02, 06"))
     n("c3", "cit", 4, "task", label("3", "Enter email and mobile number (no password, no security questions)", "UM-CIT-03, 05"))
-    n("c4", "sys", 5, "task", label("4", "Send an OTP to the email and to the mobile", "UM-CIT-03"))
-    n("c5", "cit", 6, "task", label("5", "Enter both OTPs", "UM-CIT-03"))
-    n("c5d", "sys", 7, "decision", "Both OTPs correct?")
-    n("c6", "sys", 8, "task", label("6", "Create the account. The Username can never be changed", "UM-CIT-03, 07"))
-    n("c7", "cit", 9, "task", label("7", "Sign in for the first time and complete Aadhaar e-KYC", "UM-CIT-04"))
-    n("c7d", "sys", 10, "decision", label("", "e-KYC successful?", "UM-CIT-04"))
-    n("c8", "sys", 11, "task", label("8", "Allow the citizen to use all services", "UM-CIT-04"))
-    n("e", "cit", 11, "end", "End")
+    n("c3d", "sys", 5, "decision", label("", "Is the email free?", "UM-CIT-03, 06"))
+    n("c4", "sys", 6, "task", label("4", "Send an OTP to the email and to the mobile", "UM-CIT-03"))
+    n("c5", "cit", 7, "task", label("5", "Enter both OTPs", "UM-CIT-03"))
+    n("c5d", "sys", 8, "decision", "Both OTPs correct?")
+    n("c6", "sys", 9, "task", label("6", "Create the account. The Username can never be changed", "UM-CIT-03, 07"))
+    n("c7", "cit", 10, "task", label("7", "Sign in for the first time and complete Aadhaar e-KYC", "UM-CIT-04"))
+    n("c7d", "sys", 11, "decision", label("", "e-KYC successful?", "UM-CIT-04"))
+    n("c8", "sys", 12, "task", label("8", "Allow the citizen to use all services", "UM-CIT-04"))
+    n("e", "cit", 12, "end", "End")
     e = d.edge
     e("s", "c1")
     e("c1", "c2")
     e("c2", "c2d")
     d.loop("c2d", "c2", "No — taken; system suggests other names", side="right")
     e("c2d", "c3", "Yes")
-    e("c3", "c4")
+    e("c3", "c3d")
+    d.loop("c3d", "c3", "No — already registered; enter another email", side="right")
+    e("c3d", "c4", "Yes")
     e("c4", "c5")
     e("c5", "c5d")
     d.loop("c5d", "c5", "No — try again", side="right")
@@ -219,7 +222,7 @@ def odu_registration():
     n("s", "adm", 0, "start", "Start")
     n("o1", "adm", 1, "task", label("1", "Select the department", "UM-ODU-01, 02"))
     n("o2", "adm", 2, "task", label("2", "Enter Employee ID or KGID, official email and mobile", "UM-ODU-02"))
-    n("o2d", "sys", 3, "decision", label("", "Official email allowed?", "UM-ODU-03"))
+    n("o2d", "sys", 3, "decision", label("", "Official email allowed and not already registered?", "UM-ODU-02, 03"))
     n("o3", "adm", 4, "task", label("3", "Choose one Other Department role; add an End Date if needed", "UM-ODU-04, 05"))
     n("o4", "sys", 5, "task", label("4", "Create the account. Username = department code + ID (e.g. REV-12345)", "UM-ODU-02"))
     n("o5", "odu", 6, "task", label("5", "Sign in with Username, Captcha and OTP", "UM-LOG-02"))
@@ -229,7 +232,7 @@ def odu_registration():
     e("s", "o1")
     e("o1", "o2")
     e("o2", "o2d")
-    e("o2d", "o2", "No — personal email refused", back=True, extra="exitX=0.5;exitY=0;entryX=1;entryY=0.5;")
+    e("o2d", "o2", "No — personal or already-registered email refused", back=True, extra="exitX=0.5;exitY=0;entryX=1;entryY=0.5;")
     e("o2d", "o3", "Yes")
     e("o3", "o4")
     e("o4", "o5")
@@ -535,7 +538,7 @@ def migration():
     n("m1", "it", 1, "task", label("1", "Pick Kaveri 2.0 citizens whose e-KYC is completed (others register afresh)", "UM-MIG-01"))
     n("m2", "it", 2, "task", label("2", "Do trial runs first", "UM-MIG-09"))
     n("m3", "sys", 3, "task", label("3", "Move only email ID, mobile, email and e-KYC status (no passwords)", "UM-MIG-02"), cx=130)
-    n("m3d", "sys", 4, "decision", label("", "Record correct? (email ID unique, mobile valid)", "UM-MIG-07"), cx=130)
+    n("m3d", "sys", 4, "decision", label("", "Record correct? (email ID and email unique, mobile valid)", "UM-MIG-07"), cx=130)
     n("rej", "sys", 4, "reject", label("", "Set aside for correction", "UM-MIG-07"), cx=375)
     n("m4", "sys", 5, "task", label("4", "Create the account: email ID becomes the Username; old records stay linked", "UM-MIG-03, 08"), cx=130)
     n("m5", "sys", 6, "task", label("5", "Send SMS / email in Kannada and English asking the citizen to activate", "UM-MIG-10"), cx=130)

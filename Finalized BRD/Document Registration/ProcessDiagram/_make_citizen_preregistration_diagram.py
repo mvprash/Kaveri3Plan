@@ -16,7 +16,7 @@ from pathlib import Path
 from xml.sax.saxutils import quoteattr
 
 OUT_DIR = Path(__file__).resolve().parent
-STEM = "Citizen_PreRegistration_Entry_Process_v4"
+STEM = "Citizen_PreRegistration_Entry_Process_v12"
 CHROME = Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe")
 SCALE = 2
 BORDER = 10
@@ -84,10 +84,11 @@ class Diagram:
             f'<mxGeometry x="{x}" y="{y}" width="{w}" height="{h}" as="geometry"/></mxCell>'
         )
 
-    def node(self, cid, lane, row, kind, value, cx: int | None = None, box_h: int | None = None):
+    def node(self, cid, lane, row, kind, value, cx: int | None = None, box_h: int | None = None,
+             box_w: int | None = None):
         """Place a node in a lane at a row; cx is the centre offset inside the lane (default: lane centre)."""
         if kind == "decision":
-            w, h = DIA_W, DIA_H
+            w, h = box_w or DIA_W, box_h or DIA_H
         elif kind in ("start", "end"):
             w, h = 70, 70
         else:
@@ -97,6 +98,10 @@ class Diagram:
         y = TITLE_H + LANE_HEADER_H + row * ROW_H + (ROW_H - h) // 2
         self.nodes[cid] = (x, y, w, h)
         self._vertex(cid, value, STYLE[kind], x, y, w, h)
+
+    def cxn(self, cid):
+        x, _, w, _ = self.nodes[cid]
+        return x + w // 2
 
     def cy(self, cid):
         _, y, _, h = self.nodes[cid]
@@ -148,18 +153,20 @@ LEGEND = [
 def citizen_pre_registration() -> Diagram:
     cit_w = 920
     left_cx, mid_cx, right_cx, far_cx, movable_cx = 140, 270, 400, 600, 805
+    pan_cx = 450
     lanes = [
         ("cit", lane_title("Citizen / Applicant", "Party or document writer"), cit_w),
         ("sys", lane_title("Kaveri System", "Kaveri Online Services"), 480),
-        ("ext", lane_title("External Systems", "E-Swathu, BBMP E-Aasthi, E-Aasthi, BDA, KHB, Bhoomi, Mojini, UIDAI"), 270),
+        ("ms", lane_title("Kaveri Microservices", "Separate services"), 280),
+        ("ext", lane_title("External Systems", "E-Swathu, BBMP E-Aasthi, E-Aasthi, BDA, KHB, Bhoomi, Mojini, UIDAI, Protean, Income Tax"), 270),
         ("sro", lane_title("Registration Office", "Sub-Registrar / Admin"), 270),
     ]
     d = Diagram(
         "Citizen Pre-Registration Entry",
-        "Document Registration — Citizen Pre-Registration Entry Process (v4)",
+        "Document Registration — Citizen Pre-Registration Entry Process (v12)",
         "How a citizen prepares and submits a document registration application online in Kaveri, "
         "up to submission for scrutiny",
-        lanes, rows=36,
+        lanes, rows=45,
     )
     d.lane_centre["cit"] = mid_cx
     n = d.node
@@ -167,7 +174,7 @@ def citizen_pre_registration() -> Diagram:
     n("login", "cit", 1, "task", label("1", "Log in to Kaveri Online Services and start a new document registration application"))
     n("appno", "sys", 2, "task", label("2", "Create a unique application number"))
     n("txn", "cit", 3, "task", label("3", "Select the type of transaction (for example Sale)"))
-    n("rules", "sys", 4, "task", label("4", "From the transaction type, find whether property is needed and which kind is allowed: immovable, movable or both"))
+    n("rules", "sys", 4, "task", label("4", "From the transaction type, find whether property is needed, which kind is allowed (immovable, movable or both) and the labels for executants and claimants", "e.g. Sale: Seller / Purchaser; Gift: Donor / Donee"), box_h=130)
     n("prop_req", "sys", 5, "decision", label("5", "Property needed for this transaction?"))
     n("kind", "cit", 6, "decision", label("6", "Add which property? (only the allowed kind)"))
     n("movable", "cit", 6, "task", label("7", "Movable: enter the movable property details (description and value)"), cx=movable_cx)
@@ -176,35 +183,45 @@ def citizen_pre_registration() -> Diagram:
     n("agri", "cit", 8, "decision", label("10", "Agriculture or non-agriculture property?"))
     n("nonagri_in", "cit", 9, "task", label("11a", "Non-agriculture: give the location (District, Taluk, Hobli, Village) and the Property ID"), cx=left_cx)
     n("agri_in", "cit", 9, "task", label("11b", "Agriculture: give the location, Survey No. and Hissa No.; say whether the full or a part extent is sold"), cx=right_cx)
-    n("fetch", "ext", 10, "task", label("12", "Import the owners from the source of truth<br>Non-agriculture: E&#8209;Swathu, BBMP&nbsp;E&#8209;Aasthi, E&#8209;Aasthi, BDA, KHB<br>Agriculture: Bhoomi RTC", "Owners are saved automatically in Kaveri"), box_h=130)
+    n("fetch", "ext", 10, "task", label("12", "Import the owners from the source of truth<br>Non-agriculture: E&#8209;Swathu, BBMP&nbsp;E&#8209;Aasthi, E&#8209;Aasthi, BDA, KHB<br>Agriculture: Bhoomi RTC", "Owners are saved automatically in Kaveri as executants"), box_h=130)
     n("partial", "cit", 11, "decision", label("13", "Agriculture land sold in part?"))
-    n("sketch", "ext", 12, "task", label("14", "Import the purchasers (transferees) for the sketch from Mojini", "Purchasers are saved automatically in Kaveri"))
+    n("sketch", "ext", 12, "task", label("14", "Import the transferees for the sketch from Mojini", "Transferees are saved automatically in Kaveri as claimants"))
     n("transferee", "cit", 13, "task", label("15", "Select the transferee; the sketch details are added to the property schedule"), cx=right_cx)
     n("owners", "cit", 14, "task", label("16", "Select the owners; enter boundaries, consideration amount and property numbers"))
-    n("gv", "sys", 15, "task", label("17", "Calculate the guidance value of the property from the approved rates"))
+    n("gv", "ms", 15, "task", label("17", "Guidance Value service: calculate the guidance value of the property from the approved rates", "Separate microservice; gets the data from other services"), box_h=120)
     n("more_prop", "cit", 16, "decision", label("18", "Save property. Add another property?"))
-    n("stays", "sys", 17, "task", label("19", "Check each immovable property in Karnataka for government / court stays, 22-B stays and liabilities", "Not checked for properties outside Karnataka"))
+    n("stays", "ms", 17, "task", label("19", "Stays &amp; Liabilities service: check each immovable property in Karnataka for government / court stays, 22-B stays and liabilities", "Separate microservice; gets the data from other services. Not checked for properties outside Karnataka"), box_h=140)
     n("stay22b", "sys", 18, "decision", label("20", "Any 22-B stay found?"), cx=150)
     n("stop", "sys", 18, "reject", label("", "Stop: registration cannot continue. (Court stay = warning only; liabilities are added to the duty)"), cx=370)
     n("stop_end", "sys", 19, "end", "End", cx=370)
-    n("parties", "cit", 19, "task", label("21", "Party details: imported owners (sellers) and purchasers are already saved; add other parties, consenting witnesses and witnesses"))
-    n("rep", "cit", 20, "task", label("22", "For each party state who acts: self, Power of Attorney holder (registered PoA is verified), guardian of a minor, or institution representative"))
-    n("aadhaar", "cit", 21, "decision", label("23", "Does the person have Aadhaar?"))
-    n("ekyc", "ext", 22, "task", label("24a", "UIDAI e-KYC: return name, date of birth, address and photo"))
-    n("manual_id", "cit", 22, "task", label("24b", "Give Aadhaar Enrollment ID, Passport or PAN, and enter name, date of birth, phone, email and address"), cx=right_cx)
-    n("more_party", "cit", 23, "decision", label("25", "Save party. All parties and witnesses added?"))
-    n("fees", "sys", 24, "task", label("26", "Calculate stamp duty, surcharge, cess and registration fee under the correct Article"))
-    n("exempt", "cit", 25, "decision", label("27", "Claim an exemption?"))
-    n("exempt_pick", "cit", 26, "task", label("28", "Choose ONE exemption (Women 10%, Senior Citizen 20%, Physically Handicapped 30%)"), cx=right_cx)
-    n("exempt_sys", "sys", 27, "task", label("29", "Reduce the payable amount, mark the claim Pending Verification and hold payment until it is approved"))
-    n("recitals", "cit", 28, "task", label("30", "Enter the history of title (recitals) in order"))
-    n("payment", "cit", 29, "task", label("31", "Enter consideration payment details (mode, amount, date, reference) and covenants (terms)"))
-    n("draft", "sys", 30, "task", label("32", "Prepare the draft deed (PDF) for the applicant to review"))
-    n("draft_ok", "cit", 31, "decision", label("33", "Draft deed correct?"))
-    n("submit", "cit", 32, "task", label("34", "Submit the application for verification and approval"))
-    n("sent", "sys", 33, "task", label("35", "Send the application for scrutiny and tell the applicant they will be notified"))
-    n("scrutiny", "sro", 34, "ext", label("36", "Scrutiny of the application and approval of any exemption; then payment, eSign and appointment", "Next stage"))
-    n("e", "sro", 35, "end", "End")
+    n("parties", "cit", 19, "task", label("21", "Party details: imported executants and claimants are already saved; add more executants / claimants (if any), consenting witnesses and witnesses", "Shown with the labels for the transaction type, e.g. Seller / Purchaser, Donor / Donee"), box_h=130)
+    n("rep_q", "cit", 20, "decision", label("22", "Party represented by someone else?"))
+    n("rep", "cit", 21, "task", label("23", "State who acts for the party: Power of Attorney holder (registered PoA is verified), guardian of a minor, or institution representative", "Only if required"), cx=right_cx, box_h=120)
+    n("aadhaar", "cit", 22, "decision", label("24", "Does the person have Aadhaar?"))
+    n("ekyc", "ext", 23, "task", label("25a", "UIDAI e-KYC: return name, date of birth, address and photo"))
+    n("manual_id", "cit", 23, "task", label("25b", "Give Aadhaar Enrollment ID, Passport or PAN, and enter name, date of birth, phone, email and address"), cx=right_cx)
+    n("id_verify", "ext", 24, "task", label("25c", "Verify the ID:<br>Passport – Protean passport system<br>PAN – Income Tax Department"))
+    n("pan_need", "sys", 25, "decision", label("26", "PAN needed? Executant / claimant and value above ₹20 lakh", "Value = higher of consideration and guidance value; limit configurable; Govt. parties exempt"), box_w=260, box_h=150)
+    n("has_pan", "cit", 26, "decision", label("27", "Party has PAN?"), cx=pan_cx)
+    n("pan_verify", "ext", 27, "task", label("28a", "Verify the PAN with the Income Tax Department", "Minor: PAN of parent / guardian"))
+    n("form97", "cit", 27, "task", label("28b", "Give a Form 97 declaration (individuals only)", "Above ₹45 lakh: also proof of PAN application"), cx=pan_cx)
+    n("more_party", "cit", 28, "decision", label("29", "Save party. All parties and witnesses added?"))
+    n("denote_ok", "sys", 29, "decision", label("30", "Transaction type allows denoting of duty already paid?", "Sec. 16 Karnataka Stamp Act, Rule 18 — e.g. counterpart, duplicate, supplemental deed, further charge, collateral security, partition, settlement, sale to mortgagee"), box_w=280, box_h=156)
+    n("denote_q", "cit", 30, "decision", label("31", "Claim denoting?"))
+    n("denote_in", "cit", 31, "task", label("32", "Enter the earlier document: registration number, date and stamp duty paid"))
+    n("denote_chk", "sys", 32, "task", label("33", "Fetch the earlier document from Kaveri records and verify the duty paid on it"))
+    n("fees", "ms", 33, "task", label("34", "Fee Calculation service: calculate stamp duty, surcharge, cess and registration fee under the correct Article; set off any denoted duty", "Separate microservice; gets the data from other services"), box_h=130)
+    n("exempt", "cit", 34, "decision", label("35", "Claim an exemption?"))
+    n("exempt_pick", "cit", 35, "task", label("36", "Choose ONE exemption"), cx=right_cx)
+    n("exempt_sys", "sys", 36, "task", label("37", "Reduce the payable amount, mark the claim Pending Verification and hold payment until it is approved"))
+    n("recitals", "cit", 37, "task", label("38", "Enter the history of title (recitals) in order"))
+    n("payment", "cit", 38, "task", label("39", "Enter consideration payment details (mode, amount, date, reference) and covenants (terms)"))
+    n("draft", "sys", 39, "task", label("40", "Prepare the draft deed (PDF) for the applicant to review"))
+    n("draft_ok", "cit", 40, "decision", label("41", "Draft deed correct?"))
+    n("submit", "cit", 41, "task", label("42", "Submit the application for verification and approval"))
+    n("sent", "sys", 42, "task", label("43", "Send the application for scrutiny and tell the applicant they will be notified"))
+    n("scrutiny", "sro", 43, "ext", label("44", "Scrutiny of the application and approval of any exemption or denoting claim; then payment, eSign and appointment", "Next stage"))
+    n("e", "sro", 44, "end", "End")
 
     e = d.edge
     down = "exitX=0.5;exitY=1;entryX=0.5;entryY=0;"
@@ -234,9 +251,9 @@ def citizen_pre_registration() -> Diagram:
     e("agri", "agri_in", "Agriculture", extra="exitX=1;exitY=0.5;entryX=0.5;entryY=0;")
     e("nonagri_in", "fetch", "Property ID", extra="exitX=0.5;exitY=1;entryX=0;entryY=0.5;", label_pos=-0.85)
     e("agri_in", "fetch", "Survey No.", extra="exitX=0.5;exitY=1;entryX=0;entryY=0.5;", label_pos=-0.8)
-    e("fetch", "partial", "Owners imported", extra=down)
+    e("fetch", "partial", "Executants imported", extra=down)
     e("partial", "sketch", "Yes — send sketch", extra="exitX=1;exitY=0.5;entryX=0;entryY=0.5;")
-    e("sketch", "transferee", "Purchasers imported", extra="exitX=0.5;exitY=1;entryX=1;entryY=0.5;")
+    e("sketch", "transferee", "Claimants imported", extra="exitX=0.5;exitY=1;entryX=1;entryY=0.5;")
     e("partial", "owners", "No", extra=down)
     e("transferee", "owners", extra="exitX=0.5;exitY=1;entryX=0.85;entryY=0;")
     e("owners", "gv")
@@ -248,15 +265,40 @@ def citizen_pre_registration() -> Diagram:
     e("stay22b", "stop", "Yes", back=True, extra="exitX=1;exitY=0.5;entryX=0;entryY=0.5;")
     e("stop", "stop_end", extra=down)
     e("stay22b", "parties", "No", extra="exitX=0.5;exitY=1;entryX=1;entryY=0.5;")
-    e("parties", "rep")
-    e("rep", "aadhaar")
+    e("parties", "rep_q")
+    e("rep_q", "rep", "Yes", extra="exitX=1;exitY=0.5;entryX=0.5;entryY=0;")
+    e("rep_q", "aadhaar", "No — self", extra=down)
+    e("rep", "aadhaar", extra="exitX=0.5;exitY=1;entryX=0.5;entryY=0;")
     e("aadhaar", "ekyc", "Yes", extra="exitX=1;exitY=0.5;entryX=0.5;entryY=0;")
     e("aadhaar", "manual_id", "No", extra="exitX=0.5;exitY=1;entryX=0;entryY=0.5;")
-    e("ekyc", "more_party", "Details fetched", extra="exitX=0.5;exitY=1;entryX=1;entryY=0.5;")
-    e("manual_id", "more_party", extra="exitX=0.5;exitY=1;entryX=0.5;entryY=0;")
-    e("more_party", "rep", "No — next party", back=True,
-      points=[(loop_x, d.cy("more_party")), (loop_x, d.cy("rep"))], extra="exitX=0;exitY=0.5;entryX=0;entryY=0.5;")
-    e("more_party", "fees", "Yes — Next", extra="exitX=0.5;exitY=1;entryX=0;entryY=0.5;")
+    ekyc_x = d.lane_x["ext"] + d.lane_w["ext"] - 15
+    e("ekyc", "pan_need", "Details fetched", extra="exitX=1;exitY=0.5;entryX=1;entryY=0.5;",
+      points=[(ekyc_x, d.cy("ekyc")), (ekyc_x, d.cy("pan_need"))])
+    e("manual_id", "id_verify", "Passport / PAN", extra="exitX=0.75;exitY=1;entryX=0;entryY=0.5;")
+    mx, _, mw, _ = d.nodes["manual_id"]
+    enrol_y = d.nodes["pan_need"][1] - 22
+    e("manual_id", "pan_need", "Enrollment ID", extra="exitX=0.25;exitY=1;entryX=0.5;entryY=0;",
+      points=[(mx + mw // 4, enrol_y), (d.cxn("pan_need"), enrol_y)], label_pos=-0.5)
+    e("id_verify", "pan_need", "Verified", extra="exitX=0.5;exitY=1;entryX=1;entryY=0.5;")
+    e("pan_need", "more_party", "No", extra="exitX=0;exitY=0.5;entryX=0.5;entryY=0;",
+      points=[(d.lane_x["cit"] + mid_cx, d.cy("pan_need"))])
+    e("pan_need", "has_pan", "Yes", extra="exitX=0.5;exitY=1;entryX=0.5;entryY=0;")
+    e("has_pan", "pan_verify", "Yes — enter PAN", extra="exitX=1;exitY=0.5;entryX=0.5;entryY=0;")
+    e("has_pan", "form97", "No", extra=down)
+    e("form97", "more_party", extra="exitX=0.5;exitY=1;entryX=1;entryY=0.5;")
+    e("pan_verify", "more_party", "Verified", extra="exitX=0.5;exitY=1;entryX=1;entryY=0.5;")
+    e("more_party", "rep_q", "No — next party", back=True,
+      points=[(loop_x, d.cy("more_party")), (loop_x, d.cy("rep_q"))], extra="exitX=0;exitY=0.5;entryX=0;entryY=0.5;")
+    e("more_party", "denote_ok", "Yes — Next", extra="exitX=0.5;exitY=1;entryX=0;entryY=0.5;")
+    ms_cx = d.lane_x["ms"] + d.lane_w["ms"] // 2
+    e("denote_ok", "fees", "No", extra="exitX=1;exitY=0.5;entryX=0.5;entryY=0;",
+      points=[(ms_cx, d.cy("denote_ok"))])
+    e("denote_ok", "denote_q", "Yes", extra=down)
+    e("denote_q", "fees", "No", extra="exitX=1;exitY=0.5;entryX=0.5;entryY=0;",
+      points=[(ms_cx, d.cy("denote_q"))])
+    e("denote_q", "denote_in", "Yes", extra=down)
+    e("denote_in", "denote_chk", extra="exitX=1;exitY=0.5;entryX=0.5;entryY=0;")
+    e("denote_chk", "fees", "Duty already paid", extra="exitX=0.5;exitY=1;entryX=0;entryY=0.5;")
     e("fees", "exempt", extra="exitX=0.5;exitY=1;entryX=1;entryY=0.5;")
     e("exempt", "exempt_pick", "Yes", extra="exitX=0.5;exitY=1;entryX=0;entryY=0.5;")
     e("exempt_pick", "exempt_sys", extra="exitX=1;exitY=0.5;entryX=0;entryY=0.5;")
