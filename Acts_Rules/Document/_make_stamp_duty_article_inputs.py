@@ -131,12 +131,14 @@ def sheet_readme(wb, unreached):
                          "applied by the Department before configuring rates. Rows marked 'confirm with Department' had "
                          "illegible / omitted text in the source copy."),
         ("", ""),
-        ("How the system decides", "1. Ask GEN-01 Transaction intent -> filter GEN-02 Nature of document.\n"
+        ("How the system decides", "0. One application = one transaction. Documents covering several distinct matters "
+                                   "(Sec 5) are not handled by the system.\n"
+                                   "1. Ask GEN-01 Transaction intent -> filter GEN-02 Nature of document.\n"
                                    "2. Ask the questions in Decision_Flow for that nature, in step order.\n"
                                    "3. The first terminal answer ('=> rule') gives the Article / sub-clause (Article_Rules).\n"
                                    "4. Capture the Calculation inputs listed for that rule and compute the duty.\n"
                                    "5. Apply provisos / adjustments (earlier duty paid, caps) and exemptions.\n"
-                                   "6. Apply general rules (General_Rules sheet): several matters (Sec 5) = aggregate; "
+                                   "6. Apply general rules (General_Rules sheet): "
                                    "multiple descriptions (Sec 6) = highest; several instruments of one sale (Sec 4) = "
                                    "principal pays full, others Rs.100; Sec 45-A market value check."),
         ("", ""),
@@ -305,8 +307,6 @@ def sheet_flow(wb):
         ("ALL", "All documents", "0", "GEN-01", "What does this document primarily do?", "Intent INT-01..INT-12",
          "Filter Nature list"),
         ("ALL", "All documents", "0", "GEN-02", "Select nature of document", "DN-01..DN-59", "Go to that nature's steps"),
-        ("ALL", "All documents", "0", "GEN-10",
-         "Several distinct matters in one document?", "Yes", "Run the flow for each matter; duty = aggregate (Sec 5)"),
         ("ALL", "All documents", "0", "-", "Document matches two or more descriptions?", "Yes",
          "Compute each; charge the highest (Sec 6)"),
     ]
@@ -376,11 +376,12 @@ def sheet_slab(wb):
 def sheet_general(wb):
     ws = wb.create_sheet("General_Rules")
     rows = [
-        ("GR-01", "Sec 5", "Instrument relating to several distinct matters",
-         "Chargeable with the aggregate of duties for each matter as separate instruments.",
-         "Capture GEN-10; run Decision_Flow per matter; sum the duties."),
+        ("GR-01", "System scope", "One transaction per application",
+         "Each application covers one transaction (one Nature of document). Documents relating to several distinct "
+         "matters (Sec 5 - aggregate duty) are not handled by the system.",
+         "Step 3 allows selection of a single Nature of document only."),
         ("GR-02", "Sec 6", "Instrument falling under two or more descriptions",
-         "Chargeable only with the highest of such duties (subject to Sec 5).",
+         "Chargeable only with the highest of such duties.",
          "Evaluate each matching rule; select maximum."),
         ("GR-03", "Sec 4", "Several instruments for one sale / mortgage / settlement",
          "Principal instrument pays Schedule duty (highest of the set); every other instrument Rs. 100.",

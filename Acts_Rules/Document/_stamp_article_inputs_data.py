@@ -245,9 +245,6 @@ INPUTS = [
     ("GEN-09", "General", "Market value of property",
      "Market value of the property (system computed from Guidance Value / CVC; Sec 45-A)", "Amount",
      ">= 0", "System (Guidance Value module)", "C"),
-    ("GEN-10", "General", "Several distinct matters (Sec 5)",
-     "Does the document deal with more than one distinct matter (e.g., sale + POA, agreement + mortgage)?",
-     "Yes/No + list of matters", YN, "User", "I"),
     ("GEN-11", "General", "One of several instruments in a single sale / mortgage / settlement (Sec 4)",
      "Is this document one of several instruments used to complete one sale / mortgage / settlement? "
      "If yes, is it the principal instrument?", "Dropdown", "Not applicable / Principal instrument / Secondary instrument",
@@ -1122,7 +1119,7 @@ for _r in RULES:
     if _r["key"] in ("20(1)", "20(2)", "28(a)", "28(b)"):
         _r["calc_in"] = _r["calc_in"] + ["PRP-02"] if "PRP-02" not in _r["calc_in"] else _r["calc_in"]
 
-ALL_DOC_INPUTS = ["GEN-01", "GEN-02", "GEN-03", "GEN-04", "GEN-05", "GEN-06", "GEN-10"]
+ALL_DOC_INPUTS = ["GEN-01", "GEN-02", "GEN-03", "GEN-04", "GEN-05", "GEN-06"]
 
 # ---------------------------------------------------------------------------
 # Decision flow: (Nature code, Step, Question input, Question, Answer, Next / Result)
