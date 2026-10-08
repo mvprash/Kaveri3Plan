@@ -10,7 +10,7 @@ from __future__ import annotations
 import _make_citizen_preregistration_diagram as base
 from _make_citizen_preregistration_diagram import LEGEND, Diagram, label, lane_title
 
-STEM = "Citizen_Payment_eSign_Appointment_Process_v2"
+STEM = "Citizen_Payment_eSign_Appointment_Process_v3"
 JUMP = "jumpStyle=arc;jumpSize=12;"
 
 
@@ -22,15 +22,16 @@ def payment_esign() -> Diagram:
         ("party", lane_title("Party", "Executant / claimant / representative — portal or mobile"), 520),
         ("wit", lane_title("Witness", "Portal or mobile"), 520),
         ("sys", lane_title("Kaveri System", "Kaveri Online Services"), 420),
+        ("ms", lane_title("Kaveri Microservices", "Deed Generation service"), 300),
         ("ext", lane_title("External Systems", "Khajane-II / payment gateway, e-Sign service provider (UIDAI), DSC certifying authority"), 300),
     ]
     d = Diagram(
         "Payment eSign Appointment",
-        "Document Registration — Payment, Digital Signing and Appointment (v2)",
+        "Document Registration — Payment, Digital Signing and Appointment (v3)",
         "What the citizen does after the Sub-Registrar approves the application for payment: "
-        "full or partial payment, e-Sign / DSC by all parties and witnesses (the e-Sign date is the date of execution), "
-        "and appointment booking within the time allowed for presentation",
-        lanes, rows=36,
+        "full or partial payment, final deed from the Deed Generation service, e-Sign / DSC by all parties and witnesses "
+        "(the e-Sign date is the date of execution), and appointment booking within the time allowed for presentation",
+        lanes, rows=37,
     )
     d.lane_centre.update(cit=main_cx, party=sign_m, wit=sign_m)
     n = d.node
@@ -51,40 +52,42 @@ def payment_esign() -> Diagram:
     n("paid", "sys", 6.3, "decision", label("5", "Payment confirmed for the amount chosen?"))
     n("receipt", "sys", 7.3, "task", label("6", "Generate the payment receipt. Partial payment: record the amount paid, the deficit and the reason; mark for Sec. 45-A referral or Sec. 33 impounding"), box_w=300, box_h=130)
 
+    n("deed_gen", "ms", 8.3, "task", label("6a", "Deed Generation service: generate the final deed from the same template and version as the approved draft, adding the stamp duty paid, e-stamp certificate / challan details and the e-Sign field for each signer; remove the DRAFT watermark", "Separate microservice; deed text must match the approved draft"), box_w=270, box_h=156)
+
     # B. Signing by the parties
-    n("prep", "sys", 8.3, "task", label("7", "Prepare the final deed for signing and the signing list: executants, then claimants / representatives, then witnesses", "Applicant can track each signer: Pending, Link sent, Signed, Failed. Each party's e-Sign date is recorded as that party's date of execution (Sec. 23, 24, 34, Registration Act); the applicant is warned as 4 months from the first signature approaches"), box_w=320, box_h=150)
-    n("p_where", "cit", 9.5, "decision", label("8", "Next party signs in the portal or on a mobile?"), box_h=130)
-    n("p_link", "sys", 10.5, "task", label("9", "Send a secure, time-limited signing link to the party's registered mobile / email", "Applicant can resend an expired link"), box_w=240, box_h=120)
-    n("p_review", "party", 11.5, "task", label("10", "Open the deed (portal or mobile link), review it and agree to sign"))
-    n("p_how", "party", 12.5, "decision", label("11", "Sign with e-Sign or DSC?"))
-    n("p_esign", "party", 13.5, "task", label("12a", "e-Sign: enter Aadhaar number / Virtual ID and the OTP from UIDAI"), cx=sign_l)
-    n("p_dsc", "party", 13.5, "task", label("12b", "DSC: connect the DSC token and enter the PIN"), cx=sign_r)
-    n("p_ext", "ext", 14.5, "task", label("13", "e-Sign service provider returns the signed PDF; certifying authority confirms the DSC is valid and not revoked"), box_h=120)
-    n("p_ok", "sys", 15.5, "decision", label("14", "Signature valid and signer matches the party?"), box_w=220, box_h=130)
-    n("p_all", "sys", 16.5, "decision", label("15", "All parties signed?"))
+    n("prep", "sys", 9.3, "task", label("7", "Store the final deed and prepare the signing list: executants, then claimants / representatives, then witnesses", "Applicant can track each signer: Pending, Link sent, Signed, Failed. Each party's e-Sign date is recorded as that party's date of execution (Sec. 23, 24, 34, Registration Act); the applicant is warned as 4 months from the first signature approaches"), box_w=320, box_h=150)
+    n("p_where", "cit", 10.5, "decision", label("8", "Next party signs in the portal or on a mobile?"), box_h=130)
+    n("p_link", "sys", 11.5, "task", label("9", "Send a secure, time-limited signing link to the party's registered mobile / email", "Applicant can resend an expired link"), box_w=240, box_h=120)
+    n("p_review", "party", 12.5, "task", label("10", "Open the deed (portal or mobile link), review it and agree to sign"))
+    n("p_how", "party", 13.5, "decision", label("11", "Sign with e-Sign or DSC?"))
+    n("p_esign", "party", 14.5, "task", label("12a", "e-Sign: enter Aadhaar number / Virtual ID and the OTP from UIDAI"), cx=sign_l)
+    n("p_dsc", "party", 14.5, "task", label("12b", "DSC: connect the DSC token and enter the PIN"), cx=sign_r)
+    n("p_ext", "ext", 15.5, "task", label("13", "e-Sign service provider returns the signed PDF; certifying authority confirms the DSC is valid and not revoked"), box_h=120)
+    n("p_ok", "sys", 16.5, "decision", label("14", "Signature valid and signer matches the party?"), box_w=220, box_h=130)
+    n("p_all", "sys", 17.5, "decision", label("15", "All parties signed?"))
 
     # C. Signing by the witnesses
-    n("w_avail", "cit", 17.7, "decision", label("16", "Next witness available to sign?"))
-    n("w_replace", "cit", 18.6, "task", label("17", "Replace the witness: enter the new witness's details"), cx=right_cx)
-    n("w_where", "cit", 19.6, "decision", label("18", "Witness signs in the portal or on a mobile?"), box_h=130)
-    n("w_link", "sys", 20.6, "task", label("19", "Send a secure, time-limited signing link to the witness's registered mobile / email"), box_w=240)
-    n("w_review", "wit", 21.6, "task", label("20", "Open the deed, check the parties' signatures and agree to attest"))
-    n("w_how", "wit", 22.6, "decision", label("21", "Sign with e-Sign or DSC?"))
-    n("w_esign", "wit", 23.6, "task", label("22a", "e-Sign: enter Aadhaar number / Virtual ID and the OTP from UIDAI"), cx=sign_l)
-    n("w_dsc", "wit", 23.6, "task", label("22b", "DSC: connect the DSC token and enter the PIN"), cx=sign_r)
-    n("w_ext", "ext", 24.6, "task", label("23", "e-Sign service provider returns the signed PDF; certifying authority confirms the DSC is valid and not revoked"), box_h=120)
-    n("w_ok", "sys", 25.6, "decision", label("24", "Signature valid and signer matches the witness captured?"), box_w=230, box_h=136)
-    n("w_all", "sys", 26.6, "decision", label("25", "At least two witnesses signed?"))
-    n("lock", "sys", 27.6, "task", label("26", "Lock the fully signed deed so it cannot be changed; calculate the last date for presentation (4 months from the earliest e-Sign date); mark the application Signed – ready for appointment", "Sec. 23, Registration Act"), box_w=280, box_h=140)
+    n("w_avail", "cit", 18.7, "decision", label("16", "Next witness available to sign?"))
+    n("w_replace", "cit", 19.6, "task", label("17", "Replace the witness: enter the new witness's details"), cx=right_cx)
+    n("w_where", "cit", 20.6, "decision", label("18", "Witness signs in the portal or on a mobile?"), box_h=130)
+    n("w_link", "sys", 21.6, "task", label("19", "Send a secure, time-limited signing link to the witness's registered mobile / email"), box_w=240)
+    n("w_review", "wit", 22.6, "task", label("20", "Open the deed, check the parties' signatures and agree to attest"))
+    n("w_how", "wit", 23.6, "decision", label("21", "Sign with e-Sign or DSC?"))
+    n("w_esign", "wit", 24.6, "task", label("22a", "e-Sign: enter Aadhaar number / Virtual ID and the OTP from UIDAI"), cx=sign_l)
+    n("w_dsc", "wit", 24.6, "task", label("22b", "DSC: connect the DSC token and enter the PIN"), cx=sign_r)
+    n("w_ext", "ext", 25.6, "task", label("23", "e-Sign service provider returns the signed PDF; certifying authority confirms the DSC is valid and not revoked"), box_h=120)
+    n("w_ok", "sys", 26.6, "decision", label("24", "Signature valid and signer matches the witness captured?"), box_w=230, box_h=136)
+    n("w_all", "sys", 27.6, "decision", label("25", "At least two witnesses signed?"))
+    n("lock", "sys", 28.6, "task", label("26", "Lock the fully signed deed so it cannot be changed; calculate the last date for presentation (4 months from the earliest e-Sign date); mark the application Signed – ready for appointment", "Sec. 23, Registration Act"), box_w=280, box_h=140)
 
     # D. Appointment
-    n("slot", "cit", 28.6, "task", label("27", "Choose a date and time slot at the Sub-Registrar Office with jurisdiction; the last date for presentation is shown"), box_w=220, box_h=120)
-    n("slot_ok", "sys", 29.6, "decision", label("28", "Slot available?"))
-    n("late_chk", "sys", 30.6, "decision", label("29", "Slot after the last date for presentation?"), box_w=220, box_h=130)
-    n("late_ok", "cit", 31.6, "decision", label("30", "Warned: a late slot needs a condonation application and a delay fine at the office (Sec. 25; Rule 46). Keep this slot?"), cx=right_cx, box_w=300, box_h=156)
-    n("confirm", "sys", 32.6, "task", label("31", "Book the slot and send the appointment confirmation (application number, office, date, time, who and what to bring) by SMS, email and portal"), box_w=280, box_h=130)
-    n("next", "cit", 33.6, "ext", label("", "Present the document at the Sub-Registrar Office", "Next stage: presentation and registration (partial payment: Sec. 45-A referral / Sec. 33 impounding; late slot: condonation of delay)"), box_w=240, box_h=130)
-    n("e", "cit", 34.6, "end", "End")
+    n("slot", "cit", 29.6, "task", label("27", "Choose a date and time slot at the Sub-Registrar Office with jurisdiction; the last date for presentation is shown"), box_w=220, box_h=120)
+    n("slot_ok", "sys", 30.6, "decision", label("28", "Slot available?"))
+    n("late_chk", "sys", 31.6, "decision", label("29", "Slot after the last date for presentation?"), box_w=220, box_h=130)
+    n("late_ok", "cit", 32.6, "decision", label("30", "Warned: a late slot needs a condonation application and a delay fine at the office (Sec. 25; Rule 46). Keep this slot?"), cx=right_cx, box_w=300, box_h=156)
+    n("confirm", "sys", 33.6, "task", label("31", "Book the slot and send the appointment confirmation (application number, office, date, time, who and what to bring) by SMS, email and portal"), box_w=280, box_h=130)
+    n("next", "cit", 34.6, "ext", label("", "Present the document at the Sub-Registrar Office", "Next stage: presentation and registration (partial payment: Sec. 45-A referral / Sec. 33 impounding; late slot: condonation of delay)"), box_w=240, box_h=130)
+    n("e", "cit", 35.6, "end", "End")
 
     e = d.edge
     down = "exitX=0.5;exitY=1;entryX=0.5;entryY=0;"
@@ -102,7 +105,9 @@ def payment_esign() -> Diagram:
     e("paid", "full", "No / short — pay the difference", back=True, extra="exitX=0;exitY=0.5;entryX=0;entryY=0.5;" + JUMP,
       points=[(left_loop, d.cy("paid")), (left_loop, d.cy("full"))], label_pos=-0.4)
     e("paid", "receipt", "Yes", extra=down)
-    e("receipt", "prep", extra=down)
+    e("receipt", "deed_gen", "Payment details", extra="exitX=1;exitY=0.5;entryX=0.5;entryY=0;")
+    e("deed_gen", "prep", "Final deed PDF", extra="exitX=0.5;exitY=1;entryX=1;entryY=0.5;",
+      points=[(d.cxn("deed_gen"), d.cy("prep"))], label_pos=-0.3)
 
     e("prep", "p_where", extra="exitX=0;exitY=0.5;entryX=0.5;entryY=0;")
     e("p_where", "p_review", "Portal", extra="exitX=0.5;exitY=1;entryX=0;entryY=0.5;")

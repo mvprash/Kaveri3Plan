@@ -232,6 +232,9 @@ BLOCKS["K5"] = dict(name="Part IV - Witness details", part="Part IV", fields=[
 ])
 
 BLOCKS["K6"] = dict(name="Part V - Endorsement by Sub-Registrar", part="Part V", fields=[
+    F("execution_document_ref", "Digital execution document (Part I-IV) reference", src="SYS",
+      desc="Document id / SHA-256 of the e-Signed Part I-IV document to which this endorsement relates",
+      sample="DOC-740241-EXEC / 9f2c...e41a"),
     F("sro_office", "Sub-Registrar office", src="SRO", sample="Gandhinagara"),
     F("presentation_date", "Presentation date", "Date", "DD-MM-YYYY", src="SRO", sample="05-09-2026"),
     F("presentation_time", "Presentation time", "Time", "HH:MM AM/PM", src="SRO", sample="12:40 PM"),

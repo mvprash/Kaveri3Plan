@@ -10,9 +10,10 @@ import _make_citizen_preregistration_diagram as base
 from _make_citizen_preregistration_diagram import (LANE_HEADER_H, LEGEND, ROW_H, TITLE_H, Diagram, label,
                                                     lane_title)
 
-STEM = "Presentation_PhotoThumb_Registration_Process_v8"
+STEM = "Presentation_PhotoThumb_Registration_Process_v11"
 JUMP = "jumpStyle=arc;jumpSize=12;"
 TO_REFUSAL = "Refuse registration: go to D (step 40)"
+TO_WITHDRAW = "go to E (step 50)"
 DR_FLOW = "Separate flow: District Registrar Referral Process; resumes here with the order"
 
 
@@ -24,22 +25,24 @@ def presentation_registration() -> Diagram:
         ("sro", lane_title("Sub-Registrar", "Registration Office"), 620),
         ("deo", lane_title("Data Entry Operator", "Registration Office"), 420),
         ("sys", lane_title("Kaveri System", "Kaveri Online Services"), 440),
+        ("ms", lane_title("Kaveri Microservices", "Deed Generation service"), 340),
         ("ext", lane_title("External Systems", "UIDAI e-KYC, e-Sign service provider, DSC certifying authority"), 300),
     ]
     d = Diagram(
         "Presentation Photo Thumb Registration",
-        "Document Registration — Presentation, Photo &amp; Thumb Capture, Registration and Refusal (v8)",
+        "Document Registration — Presentation, Photo &amp; Thumb Capture, Registration, Refusal and Withdrawal (v11)",
         "What happens at the Sub-Registrar Office after the appointment: the Sub-Registrar presents the document, records admission "
         "(keeping it pending until every executant appears, by summons or commission if needed) and checks for delay in presentation or appearance, "
         "the Data Entry Operator captures photos, thumb impressions and e-Signs, and the Sub-Registrar registers the document, keeps it pending "
-        "for a Sec. 45-A referral or Sec. 33 impounding (decided in the District Registrar Referral Process), or refuses registration "
-        "(Part XII, Registration Act; Chapter XXIV, Karnataka Registration Rules)",
-        lanes, rows=58,
+        "for a Sec. 45-A referral or Sec. 33 impounding (decided in the District Registrar Referral Process), or refuses registration; "
+        "the Deed Generation service produces the endorsement and the registered document from the deed template "
+        "(Part XII, Registration Act; Chapter XXIV, Karnataka Registration Rules); the presenter may withdraw the document at any time before registration",
+        lanes, rows=67,
     )
     d.lane_centre["sro"] = main_cx
 
     for row, text in [(2, "A. PRESENTATION"), (23.6, "B. PHOTO, THUMB AND E-SIGN"), (33.6, "C. REGISTRATION"),
-                      (46.05, "D. REFUSAL TO REGISTER")]:
+                      (46.05, "D. REFUSAL TO REGISTER"), (58.05, "E. WITHDRAWAL BEFORE REGISTRATION")]:
         d._vertex(f"sec_{row}", f"<b>{text}</b>",
                   "text;html=1;align=left;verticalAlign=top;fontSize=13;fontColor=#1f4e79;",
                   d.lane_x["party"] + 12, TITLE_H + LANE_HEADER_H + row * ROW_H + 6, 380, 26)
@@ -55,7 +58,7 @@ def presentation_registration() -> Diagram:
     n("agreed", "sys", 5, "decision", label("4", "All checklist items agreed?", "Stamp duty shortfall marked for impounding counts as agreed"), cx=side_cx, box_w=210, box_h=140)
     n("ground", "sys", 6, "decision", label("5", "Disagree item is a refusal ground? (Rule 171, Sec. 22-B)"), cx=side_cx, box_w=210, box_h=140)
     n("to_d1", "sys", 6, "reject", TO_REFUSAL, cx=link_cx, box_w=170, box_h=80)
-    n("withdraw", "sys", 7, "reject", label("6", "Not presented: the parties cure the defect and return, or the presenter withdraws in writing", "Half the registration fee and all copying fees refunded (Rule 193); no appeal (Rule 190)"), cx=side_cx, box_w=220, box_h=150)
+    n("withdraw", "sys", 7, "reject", label("6", f"Not presented: the parties cure the defect and return, or the presenter withdraws in writing: {TO_WITHDRAW}", "No appeal (Rule 190)"), cx=side_cx, box_w=220, box_h=150)
     n("withdraw_end", "sys", 7, "end", "End", cx=link_cx + 20)
     n("present", "sro", 8, "task", label("7", "Select the presenter from the parties and present the document"))
     n("rec_pres", "sys", 9, "task", label("8", "Record the presentation: presenter, date, time and office", "Presenter cannot be changed once admission is recorded (Sec. 32, Registration Act)"), box_w=260, box_h=120)
@@ -91,7 +94,7 @@ def presentation_registration() -> Diagram:
     n("id_ok", "sys", 31, "decision", label("28", "Executants identified and agents' authority accepted? (Sec. 34(3))"), cx=side_cx, box_w=240, box_h=150)
     n("to_d3", "sys", 31, "reject", TO_REFUSAL, cx=link_cx, box_w=170, box_h=80)
     n("gen", "deo", 32, "task", label("29", "Generate the endorsement"))
-    n("gen_sys", "sys", 33, "task", label("30", "Generate the endorsement: presentation, fee details, presenter, admission by each executant with e-KYC details, photo, thumb and e-Sign, the identifiers and, if the delay was condoned, the Registrar's order number and date, fine and period of delay", "Rule 55(ii)"), box_w=300, box_h=156)
+    n("gen_sys", "ms", 33, "task", label("30", "Deed Generation service: generate the endorsement from the endorsement part of the deed template: presentation, fee details, presenter, admission by each executant with e-KYC details, photo, thumb and e-Sign, the identifiers and, if the delay was condoned, the Registrar's order number and date, fine and period of delay", "Rule 55(ii)"), box_w=300, box_h=156)
 
     # C. Registration
     n("review", "sro", 34, "task", label("31", "Review the endorsement together with the digitally executed deed"))
@@ -107,7 +110,9 @@ def presentation_registration() -> Diagram:
     n("dsc", "sro", 41, "task", label("36", "Sign the endorsement with the DSC: select the certificate and enter the password"), box_w=240)
     n("ca", "ext", 41, "task", label("37", "Certifying authority: certificate valid and not revoked"))
     n("register", "sro", 42, "task", label("38", "Register the document"))
-    n("reg_sys", "sys", 43, "task", label("39", "Generate the registration number (office–book–serial–financial year, e.g. GAN-1-00006-2026-27), attach the signed endorsement to the deed, mark Registration Completed and notify the applicant"), box_w=320, box_h=150)
+    n("reg_sys", "sys", 43, "task", label("39", "Generate the registration number (office–book–serial–financial year, e.g. GAN-1-00006-2026-27) and send it with the DSC-signed endorsement to the Deed Generation service"), box_w=320, box_h=150)
+    n("reg_doc", "ms", 43, "task", label("39a", "Deed Generation service: add the registration number, book number and the signed endorsement to the locked deed and return the registered document (PDF); the executed deed text is not changed"), box_w=300, box_h=150)
+    n("reg_done", "sys", 44, "task", label("39b", "Store the registered document with its hash, mark Registration Completed and notify the applicant"), box_w=280, box_h=110)
     n("final", "party", 44, "ext", label("", "Registered document available to the applicant for download", "Next stage: post-registration"), box_w=240)
     n("e", "party", 45, "end", "End")
 
@@ -129,6 +134,18 @@ def presentation_registration() -> Diagram:
     n("app72", "party", 56, "ext", label("", "District Registrar Referral Process — Sec. 72 appeal (within 30 days)", "Separate flow: District Registrar Referral Process, section D"), cx=315, box_w=190, box_h=150)
     n("d_end", "party", 57, "end", "End")
 
+    # E. Withdrawal before registration
+    n("w_in", "sro", 58, "reject", label("", "Presenter asks to withdraw at step 6, or while the document is pending at step 13, 14b, 14c, 18, 34a, 34b or 35 — any time before registration (step 38)"), box_w=320, box_h=100)
+    n("w_req", "party", 59, "task", label("50", "Presenter submits the written withdrawal request, signed, with the reason"), box_w=240, box_h=110)
+    n("w_check", "sro", 60, "task", label("51", "Verify the presenter's identity and the request; record the withdrawal, date and reason in the Minute Book and approve it with the DSC", "Rules 23(f), 193(i). Not a refusal: no Book 2 entry, no Sec. 71(2) block; no appeal (Rule 190)"), box_w=300, box_h=140)
+    n("w_dr", "sys", 61, "decision", label("52", "Document referred to the District Registrar (step 18, 34a or 34b)?"), cx=side_cx, box_w=210, box_h=140)
+    n("w_drn", "sys", 61, "ext", label("", "District Registrar Referral Process — intimation of withdrawal; an impounded document is released only on the District Registrar's order", "Stamp duty proceedings under Sec. 33 are not closed by the withdrawal"), cx=link_cx + 10, box_w=180, box_h=150)
+    n("w_sys", "sys", 62, "task", label("53", "Mark the application Withdrawn; cancel the pending appearance dates, summons, commission and appointment; remove it from the pending lists", "The document may be presented again later"), box_w=320, box_h=130)
+    n("w_notify", "sys", 63, "task", label("54", "Endorse \"Withdrawn\" on the document with the document number and date, notify the presenter and the parties, and return the document", "The endorsement is the evidence for the stamp duty refund"), box_w=300, box_h=130)
+    n("w_recv", "party", 64, "task", label("55", "Presenter receives the returned document"), box_w=240)
+    n("w_ref", "party", 65, "ext", label("", "Refund Process — half the registration fee and all copying fees (Rules 193–195), and the stamp duty (Sec. 47, Karnataka Stamp Act)", "Separate flow: Refund Process"), box_w=280, box_h=130)
+    n("w_end", "party", 66, "end", "End")
+
     e = d.edge
     down = "exitX=0.5;exitY=1;entryX=0.5;entryY=0;"
     right = "exitX=1;exitY=0.5;entryX=0;entryY=0.5;"
@@ -149,7 +166,7 @@ def presentation_registration() -> Diagram:
     e("agreed", "ground", "No", back=True, extra=down)
     e("ground", "to_d1", "Yes", back=True, extra=right)
     e("ground", "withdraw", "No", back=True, extra=down)
-    e("withdraw", "withdraw_end", extra=right)
+    e("withdraw", "withdraw_end", "Cure and return", extra=right)
     e("present", "rec_pres", extra=to_sys)
     e("rec_pres", "admit", extra=to_sro)
     e("admit", "denied", extra="exitX=1;exitY=0.3;entryX=0.5;entryY=0;")
@@ -201,8 +218,8 @@ def presentation_registration() -> Diagram:
     e("all_done", "id_ok", "Yes", extra=down)
     e("id_ok", "to_d3", "No", back=True, extra=right)
     e("id_ok", "gen", "Yes", extra=to_sro)
-    e("gen", "gen_sys", extra=to_sys)
-    e("gen_sys", "review", extra=to_sro)
+    e("gen", "gen_sys", "Endorsement data", extra=to_sys + JUMP, label_pos=-0.5)
+    e("gen_sys", "review", "Endorsement", extra=to_sro + JUMP, label_pos=-0.3)
     e("review", "review_ok", extra=to_sys)
     e("review_ok", "to_d4", "Yes", back=True, extra=right)
     e("review_ok", "partial", "No", extra=down)
@@ -220,7 +237,10 @@ def presentation_registration() -> Diagram:
     e("dsc", "ca", "Validate certificate", extra="exitX=1;exitY=0.3;entryX=0;entryY=0.3;startArrow=block;startFill=1;")
     e("dsc", "register", "DSC signed", extra=down)
     e("register", "reg_sys", extra=to_sys)
-    e("reg_sys", "final", "Registered", extra="exitX=0;exitY=0.5;entryX=0.5;entryY=0;")
+    e("reg_sys", "reg_doc", extra=right)
+    e("reg_doc", "reg_done", "Registered document", extra="exitX=0.5;exitY=1;entryX=1;entryY=0.5;",
+      points=[(d.cxn("reg_doc"), d.cy("reg_done"))], label_pos=-0.3)
+    e("reg_done", "final", "Registered", extra="exitX=0;exitY=0.5;entryX=1;entryY=0.5;")
     e("final", "e", extra=down)
 
     e("d_in", "juris", extra=down)
@@ -240,6 +260,17 @@ def presentation_registration() -> Diagram:
     e("denial", "app72", "No — Sec. 72 appeal", extra="exitX=0.5;exitY=1;entryX=1;entryY=0.5;", label_pos=-0.4)
     e("app73", "d_end", extra="exitX=0.5;exitY=1;entryX=0;entryY=0.5;")
     e("app72", "d_end", extra="exitX=0.5;exitY=1;entryX=1;entryY=0.5;")
+
+    e("w_in", "w_req", extra=to_sro)
+    e("w_req", "w_check", extra=to_sys)
+    e("w_check", "w_dr", extra=to_sys)
+    e("w_dr", "w_drn", "Yes", extra=right)
+    e("w_dr", "w_sys", "No", extra=f"exitX=0.5;exitY=1;entryX={entry_x('w_sys', d.cxn('w_dr'))};entryY=0;")
+    e("w_drn", "w_sys", "Intimated", extra=f"exitX=0.5;exitY=1;entryX={entry_x('w_sys', d.cxn('w_drn'))};entryY=0;")
+    e("w_sys", "w_notify", extra=down)
+    e("w_notify", "w_recv", extra=to_sro)
+    e("w_recv", "w_ref", "Claim refund", extra=down)
+    e("w_ref", "w_end", extra=down)
     d.legend(LEGEND)
     return d
 

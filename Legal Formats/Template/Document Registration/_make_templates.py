@@ -30,8 +30,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import _template_data as D  # noqa: E402
 
-SOURCE_ROOT = os.path.join(os.path.dirname(HERE), "LEGAL FORMATS")
-WORKBOOK = os.path.join(HERE, "Legal_Document_Template_Fields.xlsx")
+TEMPLATE_ROOT = os.path.dirname(HERE)
+SOURCE_ROOT = os.path.join(os.path.dirname(TEMPLATE_ROOT), "LEGAL FORMATS")
+WORKBOOK = os.path.join(TEMPLATE_ROOT, "Legal_Document_Template_Fields.xlsx")
 SAMPLE_DIR = os.path.join(HERE, "_Sample_Rendered")
 
 TPL = {t["id"]: t for t in D.TEMPLATES}
@@ -287,7 +288,7 @@ def specific_section(doc, t, title="Particulars of the Transaction"):
 
 
 # ---------------------------------------------------------------------------
-# Layout K - Kaveri registrable instrument (Part I - Part V)
+# Layout K - Kaveri registrable instrument: Digital Execution (Part I - IV) + Admission and Registration (Part V)
 # ---------------------------------------------------------------------------
 def part_i(doc):
     part_heading(doc, "Part I", "(Document Header)")
@@ -444,8 +445,17 @@ def part_iv(doc, t):
     end_of_part(doc, "Part IV")
 
 
-def part_v(doc):
-    doc.add_paragraph().add_run().add_break(WD_BREAK.PAGE)
+def part_v(doc, standalone=False):
+    if standalone:
+        kv_table(doc, [
+            ("Document", "{{ document_title }}"),
+            ("Kaveri application no.", "{{ kaveri_application_no }}"),
+            ("e-Stamp / stamp certificate no.", "{{ estamp_cert_no }}"),
+            ("Executed on / at", "{{ execution_date }} / {{ execution_place }}"),
+            ("Digital execution document (Part I-IV) reference", "{{ execution_document_ref }}"),
+        ])
+    else:
+        doc.add_paragraph().add_run().add_break(WD_BREAK.PAGE)
     part_heading(doc, "Part V", "Endorsement By Sub Registrar")
     heading(doc, "1. Presentation")
     para(doc, "Presented on {{ presentation_date }} at the Office of the {{ sro_office }} Sub-Registrar on "
@@ -475,13 +485,30 @@ def part_v(doc):
 
 
 def build_k(t):
+    """Part I - Part IV: digital execution template (parties execute by e-Sign before presentation)."""
     doc = new_document(t)
     part_i(doc)
     part_ii(doc, t)
     part_iii(doc, t)
     part_iv(doc, t)
-    part_v(doc)
     return doc
+
+
+def build_k_registration(t):
+    """Part V: admission and registration template (SRO presentation, admission, identification, registration)."""
+    doc = new_document(t)
+    hp = doc.sections[0].header.paragraphs[0]
+    r = hp.add_run(" - ADMISSION AND REGISTRATION")
+    r.bold = True
+    r.font.size = Pt(13)
+    part_v(doc, standalone=True)
+    return doc
+
+
+SPLIT_KINDS = OrderedDict([
+    ("exec", "Part I-IV Digital Execution"),
+    ("reg", "Part V Admission and Registration"),
+])
 
 
 # ---------------------------------------------------------------------------
@@ -738,9 +765,18 @@ def safe_name(s):
     return re.sub(r"[\\/:*?\"<>|]", "-", s).strip()
 
 
-def template_path(t):
+def template_path(t, kind=None):
     fam = f"{t['family']} {D.FAMILIES[t['family']]}"
-    return os.path.join(HERE, fam, f"{t['id']} {safe_name(t['name'])}.docx")
+    suffix = f" - {SPLIT_KINDS[kind]}" if kind else ""
+    return os.path.join(HERE, fam, f"{t['id']} {safe_name(t['name'])}{suffix}.docx")
+
+
+def template_files(t):
+    """{kind: (path, builder)} - layout K is split into digital execution and admission & registration."""
+    if t["layout"] == "K":
+        return OrderedDict([("exec", (template_path(t, "exec"), build_k)),
+                            ("reg", (template_path(t, "reg"), build_k_registration))])
+    return OrderedDict([(None, (template_path(t), BUILDERS[t["layout"]]))])
 
 
 # ---------------------------------------------------------------------------
@@ -797,6 +833,7 @@ def sale_deed_reference_context():
         "instrument_subtype": "Absolute sale", "sale_consideration": "100000.00", "advance_paid": "0.00",
         "agreement_reference": "-", "possession_date": "05-09-2026", "encumbrance_status": "Free from encumbrances",
         "previous_deed_reference": "title as recorded in e-Swathu (Khata No. 111)", "khata_transfer": "Yes",
+        "execution_document_ref": "UL0YR415HXISVBO-EXEC",
         "sro_office": "Gandhinagara", "presentation_date": "05-09-2026", "presentation_time": "12:40 PM",
         "presenter_name": "DHANUSH C V", "presenter_address": "345 Marathahalli, Bangalore, Karnataka",
         "presenter_esign": "SigPresenter_370520_Endorsement",
@@ -954,6 +991,16 @@ def build_workbook(mapping, generated):
          "Consideration / Terms, Part IV Executants & Witnesses, Part V Endorsement by Sub-Registrar."
          % (len(mapping), len({r[0].split(os.sep)[0] for r in mapping})), False),
         ("", False),
+        ("Document Registration flow - two templates per registrable instrument (layout K)", True),
+        ("1. Digital Execution template (Part I - Part IV): generated after data entry and stamp duty payment; the "
+         "executants, claimants and witnesses e-Sign it before presentation. File suffix '- %s'." % SPLIT_KINDS["exec"],
+         False),
+        ("2. Admission and Registration template (Part V): generated at the Sub-Registrar office after presentation, "
+         "fee collection, admission of execution and identification; signed by the SRO on registration. It carries "
+         "the application no., e-Stamp no. and the reference / hash of the e-Signed Part I-IV document so the two "
+         "are bound together in the registered record. File suffix '- %s'." % SPLIT_KINDS["reg"], False),
+        ("Other layouts (S, A, C, F, N, G, R) have no Part V and remain a single template file.", False),
+        ("", False),
         ("Sheets", True),
         ("Template_Index - one row per document type template, with stamp article, registration need, roles, file.", False),
         ("Layout_Blocks - which common field blocks apply to each template.", False),
@@ -996,20 +1043,32 @@ def build_workbook(mapping, generated):
     # Template_Index
     ws = wb.create_sheet("Template_Index")
     rows = []
+    def rel(t, kind):
+        p = generated.get(t["id"], {}).get(kind)
+        return os.path.relpath(p, TEMPLATE_ROOT) if p else "-"
+
     for t in D.TEMPLATES:
         sub = next((f["fmt"] for f in t["fields"] if f["key"] == "instrument_subtype"), "")
+        files = generated.get(t["id"], {})
+        if not files:
+            exec_file, reg_file = "(no template)", "-"
+        elif "reg" in files:
+            exec_file, reg_file = rel(t, "exec"), rel(t, "reg")
+        else:
+            exec_file, reg_file = rel(t, None), "- (no Part V for this layout)"
         rows.append((t["id"], t["name"], f"{t['family']} {D.FAMILIES[t['family']]}", t["layout"], t["title"], t["dn"],
                      t["article"], t["registration"], t["exec_role"] or "-", t["claim_role"] or "-",
                      {"immovable": "Required (immovable)", "movable": "Required (movable)", "optional": "Optional",
                       "none": "-"}[t["schedule"]] if t["layout"] == "K" else "-",
-                     "Yes" if t["consideration"] else "No", sub,
-                     os.path.relpath(generated[t["id"]], HERE) if t["id"] in generated else "(no template)",
+                     "Yes" if t["consideration"] else "No", sub, exec_file, reg_file,
                      counts.get(t["id"], 0), ", ".join(sorted(folders.get(t["id"], [])))))
     write_sheet(ws, ["Template ID", "Document type", "Family", "Layout", "Page header title", "Nature code (DN)",
                      "KSA Article", "Registration", "Executant role", "Claimant role", "Property schedule",
-                     "Consideration", "Sub-types (dropdown)", "Template file", "Source formats mapped",
+                     "Consideration", "Sub-types (dropdown)",
+                     "Digital Execution template (Part I-IV) / single template file",
+                     "Admission and Registration template (Part V) file", "Source formats mapped",
                      "Source folders"], rows,
-                [11, 38, 24, 7, 30, 10, 16, 34, 22, 22, 18, 12, 60, 55, 10, 60])
+                [11, 38, 24, 7, 30, 10, 16, 34, 22, 22, 18, 12, 60, 55, 55, 10, 60])
 
     # Layout_Blocks
     ws = wb.create_sheet("Layout_Blocks")
@@ -1056,12 +1115,18 @@ def build_workbook(mapping, generated):
     rows = []
     for t in D.TEMPLATES:
         for r in field_rows(t):
-            rows.append((t["id"], t["name"], r["part"], r["block"], r["block_name"], r["appl"], r["fid"],
+            if t["layout"] != "K":
+                tfile = "Single template"
+            elif r["part"] == "Part V":
+                tfile = "Admission and Registration"
+            else:
+                tfile = "Digital Execution"
+            rows.append((t["id"], t["name"], r["part"], tfile, r["block"], r["block_name"], r["appl"], r["fid"],
                          placeholder(r), r["group"] or "-", r["label"], r["dtype"], r["fmt"], r["req"], r["src"]))
-    write_sheet(ws, ["Template ID", "Document type", "Part / section", "Block", "Block name", "Block applicability",
-                     "Field ID", "Placeholder", "Repeating group", "Field label", "Data type",
+    write_sheet(ws, ["Template ID", "Document type", "Part / section", "Template file", "Block", "Block name",
+                     "Block applicability", "Field ID", "Placeholder", "Repeating group", "Field label", "Data type",
                      "Format / allowed values", "Req", "Source"], rows,
-                [11, 32, 13, 7, 30, 11, 13, 32, 12, 38, 12, 44, 6, 7], req_col=12, freeze="H2")
+                [11, 32, 13, 22, 7, 30, 11, 13, 32, 12, 38, 12, 44, 6, 7], req_col=13, freeze="I2")
 
     # Clauses
     ws = wb.create_sheet("Clauses")
@@ -1129,17 +1194,30 @@ def main():
         shutil.rmtree(os.path.join(HERE, fam_dir))
     generated = {}
     tmp = tempfile.mkdtemp(prefix="kaveri_tpl_")
+    n_files = 0
     for t in D.TEMPLATES:
         if t["layout"] == "X":
             continue
-        path = template_path(t)
-        os.makedirs(os.path.dirname(path), exist_ok=True)
-        BUILDERS[t["layout"]](t).save(path)
-        generated[t["id"]] = path
-        render(path, build_context(t), os.path.join(tmp, f"{t['id']}.docx"))
+        generated[t["id"]] = OrderedDict()
+        for kind, (path, builder) in template_files(t).items():
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+            builder(t).save(path)
+            generated[t["id"]][kind] = path
+            text = render(path, build_context(t), os.path.join(tmp, f"{t['id']}-{kind}.docx"))
+            has_v = "Part V" in text
+            if (kind == "reg") != has_v or (kind == "exec" and "Part IV" not in text):
+                raise RuntimeError(f"{t['id']} {kind}: unexpected parts in rendered output")
+            n_files += 1
     os.makedirs(SAMPLE_DIR, exist_ok=True)
-    sample_out = os.path.join(SAMPLE_DIR, "T-SAL-01 Sale Deed - rendered with Endorsement 740241 data.docx")
-    text = render(generated["T-SAL-01"], sale_deed_reference_context(), sample_out)
+    for f in os.listdir(SAMPLE_DIR):
+        os.remove(os.path.join(SAMPLE_DIR, f))
+    ctx = sale_deed_reference_context()
+    text = ""
+    sample_outs = []
+    for kind, label in SPLIT_KINDS.items():
+        out = os.path.join(SAMPLE_DIR, f"T-SAL-01 Sale Deed - {label} - rendered with Endorsement 740241 data.docx")
+        text += render(generated["T-SAL-01"][kind], ctx, out)
+        sample_outs.append(out)
     for must in ("UL0YR415HXISVBO", "PAY-20260905123811-639683", "150300300700820626", "SigClaim_370522_PartIV",
                  "SigWitness_140144_Endorsement", "121,460.00", "Gandhinagara"):
         if must not in text:
@@ -1151,12 +1229,16 @@ def main():
 
     c = Counter(r[3] for r in mapping)
     b = Counter(r[4] for r in mapping)
-    print(f"Templates generated : {len(generated)} (all rendered OK with StrictUndefined)")
+    n_split = sum(1 for v in generated.values() if "reg" in v)
+    print(f"Templates generated : {len(generated)} templates, {n_files} files "
+          f"({n_split} split into Part I-IV Digital Execution + Part V Admission and Registration); "
+          "all rendered OK with StrictUndefined")
     print(f"Source files mapped : {len(mapping)}  basis: {dict(b)}")
     unused = [t['id'] for t in D.TEMPLATES if c.get(t['id'], 0) == 0]
     print(f"Templates with no source file: {unused}")
     print(f"Workbook            : {WORKBOOK}")
-    print(f"Sale deed sample    : {sample_out}")
+    for s in sample_outs:
+        print(f"Sale deed sample    : {s}")
 
 
 if __name__ == "__main__":
